@@ -3,6 +3,7 @@ using Aiursoft.Canon.TaskQueue;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.Canon.ScheduledTasks;
 using Aiursoft.DbTools.Switchable;
+using Aiursoft.GitRunner;
 using Aiursoft.Scanner;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
@@ -28,6 +29,7 @@ public class Startup : IWebStartup
     {
         // AppSettings.
         services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
+        services.AddGitRunner();
 
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
@@ -62,12 +64,18 @@ public class Startup : IWebStartup
         // Background jobs
         services.RegisterBackgroundJob<DummyJob>();
         var orphanAvatarCleanupJob = services.RegisterBackgroundJob<OrphanAvatarCleanupJob>();
+        var syncHowToCookRepoJob = services.RegisterBackgroundJob<SyncHowToCookRepoJob>();
 
         // Scheduled tasks (attach a schedule to any registered background job)
         services.RegisterScheduledTask(
             registration: orphanAvatarCleanupJob,
             period:     TimeSpan.FromHours(6),
             startDelay: TimeSpan.FromMinutes(5));
+
+        services.RegisterScheduledTask(
+            registration: syncHowToCookRepoJob,
+            period:     TimeSpan.FromHours(4),
+            startDelay: TimeSpan.FromMinutes(1));
 
         // Controllers and localization
         services.AddControllersWithViews()

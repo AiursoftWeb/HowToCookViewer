@@ -12,6 +12,7 @@ public class SettingsMap
     public const string Icp = "Icp";
     public const string DummyNumber = "DummyNumber";
     public const string DummyChoice = "DummyChoice";
+    public const string HowToCookRepoUrl = "HowToCookRepoUrl";
 
     public class FakeLocalizer
     {
@@ -93,6 +94,14 @@ public class SettingsMap
                 { "A", "Option A" },
                 { "B", "Option B" }
             }
+        },
+        new GlobalSettingDefinition
+        {
+            Key = HowToCookRepoUrl,
+            Name = Localizer["HowToCook Repo URL"],
+            Description = Localizer["The Git repository URL to sync HowToCook recipes from."],
+            Type = SettingType.Text,
+            DefaultValue = "https://github.com/Anduin2017/HowToCook.git"
         }
     };
 }
