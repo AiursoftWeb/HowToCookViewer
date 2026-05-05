@@ -18,6 +18,7 @@ using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using System.Diagnostics.CodeAnalysis;
@@ -31,8 +32,28 @@ public class ViewModelArgsInjector(
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
     GlobalSettingsService globalSettingsService,
+    TemplateDbContext db,
     SignInManager<User> signInManager) : IScopedDependency
 {
+    /// <summary>
+    /// Maps HowToCook repo folder names to their Chinese display names.
+    /// The folder structure of the repo is stable, so this dictionary is
+    /// maintained once and covers all known categories.
+    /// </summary>
+    private static readonly Dictionary<string, string> CategoryDisplayNames = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["vegetable_dish"] = "素菜",
+        ["meat_dish"]      = "荤菜",
+        ["aquatic"]        = "水产",
+        ["breakfast"]      = "早餐",
+        ["staple"]         = "主食",
+        ["soup"]           = "汤品",
+        ["drink"]          = "饮料",
+        ["dessert"]        = "甜品",
+        ["condiment"]      = "调料",
+        ["semi-finished"]  = "半成品",
+        ["template"]       = "模板",
+    };
 
     [ExcludeFromCodeCoverage]
     // ReSharper disable once UnusedMember.Local
@@ -79,6 +100,9 @@ public class ViewModelArgsInjector(
         _ = localizer["Not Found"];
         _ = localizer["Permission Details"];
         _ = localizer["Register"];
+
+        _ = localizer["Recipes"];
+        _ = localizer["All Recipes"];
     }
 
     public void InjectSimple(
@@ -179,6 +203,49 @@ public class ViewModelArgsInjector(
                     Items = itemsForView.Select(t => (SideBarItem)t).ToList()
                 });
             }
+        }
+
+        // Dynamic recipes group: query distinct categories from DB,
+        // insert after the first group ("功能") so it appears second in the sidebar.
+        var recipeCategories = db.Recipes
+            .Select(r => r.Category)
+            .Distinct()
+            .OrderBy(c => c)
+            .ToList();
+
+        if (recipeCategories.Count > 0)
+        {
+            var categoryLinks = new List<CascadedLink>
+            {
+                new() { Text = localizer["All Recipes"], Href = "/Recipes/Index" }
+            };
+            categoryLinks.AddRange(recipeCategories.Select(cat => new CascadedLink
+            {
+                Text = CategoryDisplayNames.TryGetValue(cat, out var displayName) ? displayName : cat,
+                Href = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}"
+            }));
+
+            var recipesGroup = new NavGroup
+            {
+                Name = localizer["Recipes"],
+                Items =
+                [
+                    new CascadedSideBarItem
+                    {
+                        UniqueId = "recipes",
+                        Text = localizer["Recipes"],
+                        LucideIcon = "utensils",
+                        IsActive = string.Equals(currentViewingController, "Recipes", StringComparison.OrdinalIgnoreCase),
+                        Links = categoryLinks
+                    }
+                ]
+            };
+
+            // Insert after the first nav group (功能) if it exists, otherwise prepend.
+            if (navGroupsForView.Count > 0)
+                navGroupsForView.Insert(1, recipesGroup);
+            else
+                navGroupsForView.Add(recipesGroup);
         }
 
         toInject.Sidebar = new SidebarViewModel
