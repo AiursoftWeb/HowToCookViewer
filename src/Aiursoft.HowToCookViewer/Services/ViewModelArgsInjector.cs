@@ -36,24 +36,25 @@ public class ViewModelArgsInjector(
     SignInManager<User> signInManager) : IScopedDependency
 {
     /// <summary>
-    /// Maps HowToCook repo folder names to their Chinese display names.
+    /// Maps HowToCook repo folder names to (Chinese display name, Lucide icon slug).
     /// The folder structure of the repo is stable, so this dictionary is
     /// maintained once and covers all known categories.
     /// </summary>
-    private static readonly Dictionary<string, string> CategoryDisplayNames = new(StringComparer.OrdinalIgnoreCase)
-    {
-        ["vegetable_dish"] = "素菜",
-        ["meat_dish"]      = "荤菜",
-        ["aquatic"]        = "水产",
-        ["breakfast"]      = "早餐",
-        ["staple"]         = "主食",
-        ["soup"]           = "汤品",
-        ["drink"]          = "饮料",
-        ["dessert"]        = "甜品",
-        ["condiment"]      = "调料",
-        ["semi-finished"]  = "半成品",
-        ["template"]       = "模板",
-    };
+    private static readonly Dictionary<string, (string DisplayName, string Icon)> CategoryMeta =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            ["vegetable_dish"] = ("素菜",   "leaf"),
+            ["meat_dish"]      = ("荤菜",   "flame"),
+            ["aquatic"]        = ("水产",   "fish"),
+            ["breakfast"]      = ("早餐",   "sunrise"),
+            ["staple"]         = ("主食",   "wheat"),
+            ["soup"]           = ("汤品",   "soup"),
+            ["drink"]          = ("饮料",   "glass-water"),
+            ["dessert"]        = ("甜品",   "cake-slice"),
+            ["condiment"]      = ("调料",   "droplets"),
+            ["semi-finished"]  = ("半成品", "package"),
+            ["template"]       = ("模板",   "file-text"),
+        };
 
     [ExcludeFromCodeCoverage]
     // ReSharper disable once UnusedMember.Local
@@ -206,7 +207,8 @@ public class ViewModelArgsInjector(
         }
 
         // Dynamic recipes group: query distinct categories from DB,
-        // insert after the first group ("功能") so it appears second in the sidebar.
+        // each becomes its own LinkSideBarItem (no collapse nesting).
+        // Inserted after the first group ("功能") so it appears second in the sidebar.
         var recipeCategories = db.Recipes
             .Select(r => r.Category)
             .Distinct()
@@ -215,30 +217,40 @@ public class ViewModelArgsInjector(
 
         if (recipeCategories.Count > 0)
         {
-            var categoryLinks = new List<CascadedLink>
+            var isOnRecipesController = string.Equals(
+                currentViewingController, "Recipes", StringComparison.OrdinalIgnoreCase);
+            var currentCategory = context.Request.Query["category"].ToString(); // "" when absent
+
+            var categoryItems = new List<SideBarItem>
             {
-                new() { Text = localizer["All Recipes"], Href = "/Recipes/Index" }
+                new LinkSideBarItem
+                {
+                    LucideIcon = "utensils",
+                    Text = localizer["All Recipes"],
+                    Href = "/Recipes/Index",
+                    IsActive = isOnRecipesController && string.IsNullOrEmpty(currentCategory)
+                }
             };
-            categoryLinks.AddRange(recipeCategories.Select(cat => new CascadedLink
+
+            categoryItems.AddRange(recipeCategories.Select(cat =>
             {
-                Text = CategoryDisplayNames.TryGetValue(cat, out var displayName) ? displayName : cat,
-                Href = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}"
+                var (displayName, icon) = CategoryMeta.TryGetValue(cat, out var meta)
+                    ? meta
+                    : (cat, "circle-dot");
+                return (SideBarItem)new LinkSideBarItem
+                {
+                    LucideIcon = icon,
+                    Text = displayName,
+                    Href = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
+                    IsActive = isOnRecipesController &&
+                               string.Equals(currentCategory, cat, StringComparison.OrdinalIgnoreCase)
+                };
             }));
 
             var recipesGroup = new NavGroup
             {
                 Name = localizer["Recipes"],
-                Items =
-                [
-                    new CascadedSideBarItem
-                    {
-                        UniqueId = "recipes",
-                        Text = localizer["Recipes"],
-                        LucideIcon = "utensils",
-                        IsActive = string.Equals(currentViewingController, "Recipes", StringComparison.OrdinalIgnoreCase),
-                        Links = categoryLinks
-                    }
-                ]
+                Items = categoryItems
             };
 
             // Insert after the first nav group (功能) if it exists, otherwise prepend.
