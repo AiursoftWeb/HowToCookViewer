@@ -66,6 +66,7 @@ public class Startup : IWebStartup
         var orphanAvatarCleanupJob = services.RegisterBackgroundJob<OrphanAvatarCleanupJob>();
         var syncHowToCookRepoJob = services.RegisterBackgroundJob<SyncHowToCookRepoJob>();
         var indexRecipesJob = services.RegisterBackgroundJob<IndexRecipesJob>();
+        services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
         services.RegisterScheduledTask(

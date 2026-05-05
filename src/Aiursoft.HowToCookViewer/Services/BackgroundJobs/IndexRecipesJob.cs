@@ -278,11 +278,12 @@ public partial class IndexRecipesJob(
 
     private static List<RecipeImage> BuildImageEntities(List<string> logicalPaths)
     {
+        var lastIndex = logicalPaths.Count - 1;
         return logicalPaths
             .Select((path, index) => new RecipeImage
             {
                 LogicalPath = path,
-                IsCover = index == 0
+                IsCover = index == lastIndex
             })
             .ToList();
     }

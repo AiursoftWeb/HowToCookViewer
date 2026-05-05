@@ -27,7 +27,7 @@
             {
                 var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
                 var coverUrl = cover != null
-                    ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400&square=true"
+                    ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
                     : "/img/no-image.svg";
                 var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
 
@@ -36,7 +36,7 @@
                         <div class="card h-100 shadow-sm recipe-card">
                             <img src="@coverUrl"
                                  class="card-img-top"
-                                 style="height:180px;object-fit:cover;"
+                                 style="height:180px;object-fit:contain;background:#f8f9fa;"
                                  alt="@recipe.Name"
                                  onerror="this.src='/img/no-image.svg'">
                             <div class="card-body pb-2">
