@@ -65,6 +65,7 @@ public class Startup : IWebStartup
         services.RegisterBackgroundJob<DummyJob>();
         var orphanAvatarCleanupJob = services.RegisterBackgroundJob<OrphanAvatarCleanupJob>();
         var syncHowToCookRepoJob = services.RegisterBackgroundJob<SyncHowToCookRepoJob>();
+        var indexRecipesJob = services.RegisterBackgroundJob<IndexRecipesJob>();
 
         // Scheduled tasks (attach a schedule to any registered background job)
         services.RegisterScheduledTask(
@@ -76,6 +77,11 @@ public class Startup : IWebStartup
             registration: syncHowToCookRepoJob,
             period:     TimeSpan.FromHours(4),
             startDelay: TimeSpan.FromMinutes(1));
+
+        services.RegisterScheduledTask(
+            registration: indexRecipesJob,
+            period:     TimeSpan.FromHours(4),
+            startDelay: TimeSpan.FromMinutes(20));
 
         // Controllers and localization
         services.AddControllersWithViews()

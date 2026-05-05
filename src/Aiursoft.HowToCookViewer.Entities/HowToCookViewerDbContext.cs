@@ -10,6 +10,8 @@ namespace Aiursoft.HowToCookViewer.Entities;
 public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
     public DbSet<GlobalSetting> GlobalSettings => Set<GlobalSetting>();
+    public DbSet<Recipe> Recipes => Set<Recipe>();
+    public DbSet<RecipeImage> RecipeImages => Set<RecipeImage>();
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
