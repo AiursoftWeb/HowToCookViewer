@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="All Permissions" xml:space="preserve">
+    <value>모든 권한</value>
+  </data>
+  <data name="Assigned to Roles" xml:space="preserve">
+    <value>할당된 역할</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="No users" xml:space="preserve">
+    <value>사용자가 없습니다</value>
+  </data>
+  <data name="Not assigned" xml:space="preserve">
+    <value>할당되지 않음</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>권한명</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>권한</value>
+  </data>
+  <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
+    <value>권한은 애플리케이션에서 정의되며 수정하거나 삭제할 수 없습니다. 권한을 클릭하여 해당 권한을 가진 역할 및 사용자를 확인하세요.</value>
+  </data>
+  <data name="role(s)" xml:space="preserve">
+    <value>역할</value>
+  </data>
+  <data name="user(s)" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>권한이 있는 사용자</value>
+  </data>
+
+</root>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>.NET-versie</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>Een overzicht van de serveromgeving, het proces en de huidige aanvraagcontext van de applicatie.</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>Toegepast / Gedefinieerd</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>Weet u zeker dat u de toepassing wilt herstarten? Deze actie kan niet ongedaan worden gemaakt en zal alle actieve verbindingen beëindigen.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>Bevestig applicatieherstart</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Gemaakt</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Gevarenzone</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>Database-migraties</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>Aantal tabellen in database</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>Docker Container</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Koptekst</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>Is HTTPS</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>Lokale poort</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>Computernaam</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>Geheugengebruik</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Methode</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>Migratie</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Pad</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Eigenschap</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>Protocol</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>Pagina wordt herladen...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>Extern IP-adres</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>Externe poort</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>HTTP-headers van verzoek</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>Aanvraageigenschappen</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>Herstart aanvragen</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>Applicatie opnieuw starten</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>Bezig met opnieuw opstarten...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Rijen</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Protocol</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>Server- en Procesinformatie</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>Servertijd</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>Starttijd</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Systeem</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>Systeeminformatie</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>Hierdoor wordt de applicatie op een correcte manier afgesloten. Er wordt verwacht dat een procesmanager deze opnieuw opstart.</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Waarde</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>Werkproces</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>Ja, nu herstarten</value>
+  </data>
+
+</root>

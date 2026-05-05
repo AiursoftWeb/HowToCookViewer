@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add New Roles" xml:space="preserve">
+    <value>Aggiungi Nuovi Ruoli</value>
+  </data>
+  <data name="Add New Users" xml:space="preserve">
+    <value>Aggiungi Nuovi Utenti</value>
+  </data>
+  <data name="Allows assigning or removing roles for any user." xml:space="preserve">
+    <value>Consente di assegnare o rimuovere ruoli per qualsiasi utente.</value>
+  </data>
+  <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
+    <value>Consente la modifica dei nomi dei ruoli e dei permessi assegnati.</value>
+  </data>
+  <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
+    <value>Consente la modifica dei dettagli utente come email e ruoli, e può anche reimpostare le password degli utenti.</value>
+  </data>
+  <data name="Allows the permanent deletion of roles." xml:space="preserve">
+    <value>Consente l&apos;eliminazione permanente dei ruoli.</value>
+  </data>
+  <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
+    <value>Consente l&apos;eliminazione permanente degli account utente.</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Consente di visualizzare e modificare le impostazioni globali dell&apos;applicazione.</value>
+  </data>
+  <data name="Allows viewing system-level information and settings." xml:space="preserve">
+    <value>Consente di visualizzare informazioni e impostazioni a livello di sistema.</value>
+  </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Consente di visualizzare il dashboard dei processi in background e di gestire i processi.</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Consente di visualizzare l&apos;elenco di tutti i permessi e la loro assegnazione a ruoli e utenti.</value>
+  </data>
+  <data name="Allows viewing the list of all users." xml:space="preserve">
+    <value>Consente di visualizzare l&apos;elenco di tutti gli utenti.</value>
+  </data>
+  <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
+    <value>Consente di visualizzare l&apos;elenco dei ruoli e le relative autorizzazioni assegnate.</value>
+  </data>
+  <data name="Assign Roles to Users" xml:space="preserve">
+    <value>Assegna Ruoli agli Utenti</value>
+  </data>
+  <data name="Delete Roles" xml:space="preserve">
+    <value>Elimina Ruoli</value>
+  </data>
+  <data name="Delete Users" xml:space="preserve">
+    <value>Elimina utenti</value>
+  </data>
+  <data name="Edit Role Information" xml:space="preserve">
+    <value>Modifica Informazioni Ruolo</value>
+  </data>
+  <data name="Edit User Information" xml:space="preserve">
+    <value>Modifica Informazioni Utente</value>
+  </data>
+  <data name="Grants permission to create new roles." xml:space="preserve">
+    <value>Concede il permesso di creare nuovi ruoli.</value>
+  </data>
+  <data name="Grants permission to create new user accounts." xml:space="preserve">
+    <value>Concede il permesso di creare nuovi account utente.</value>
+  </data>
+  <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
+    <value>Concede il permesso di riavviare l&apos;istanza dell&apos;applicazione. Potrebbe causare interruzioni della disponibilità, ma tutte le impostazioni e la cache verranno ricaricate.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Gestisci Impostazioni Globali</value>
+  </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Leggere Permessi</value>
+  </data>
+  <data name="Read Roles" xml:space="preserve">
+    <value>Leggere i ruoli</value>
+  </data>
+  <data name="Read Users" xml:space="preserve">
+    <value>Leggere Utenti</value>
+  </data>
+  <data name="Reboot This App" xml:space="preserve">
+    <value>Riavvia Questa App</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Visualizza i processi in background</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Visualizza Contesto di Sistema</value>
+  </data>
+
+</root>

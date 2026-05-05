@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>.NET 版本</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>應用程式的伺服器環境、處理程序及目前請求內容的概觀。</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>已套用 / 已定義</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>您確定要重新啟動應用程式嗎？此操作無法復原，並將終止所有作用中的連線。</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>確認應用程式重新啟動</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>建立時間</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>危險區域</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>資料庫遷移</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>資料庫資料表數量</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>目前工作目錄</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>Docker 容器</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>標頭</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>主機</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>是否為 HTTPS</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>本機埠號</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>電腦名稱</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>記憶體使用量</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>方法</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>遷移</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>路徑</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>屬性</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>通訊協定</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>重新載入頁面中...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>遠端 IP</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>遠端連接埠</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>請求 HTTP 標頭</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>請求屬性</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>請求重新啟動</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>重新啟動應用程式</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>重新啟動中...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>列數</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>通訊協定</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>伺服器與處理程序資訊</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>伺服器時間</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>啟動時間</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>系統</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>資料表</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>這將會優雅地關閉應用程式。預期進程管理器會重新啟動它。</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>工作處理程序</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>是，立即重新啟動</value>
+  </data>
+
+</root>

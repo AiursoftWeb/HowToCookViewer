@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>이 사용자를 정말 삭제하시겠습니까?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>확실합니까?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>목록으로 돌아가기</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>생성 시간</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>사용자 삭제</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>이메일</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>이 작업은 되돌릴 수 없습니다. 다음 사용자와 관련된 모든 데이터를 영구적으로 삭제하려고 합니다:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>이 사용자 계정은 OpenID Connect(OIDC) 공급자가 관리합니다. 여기서 사용자를 삭제하면 이 애플리케이션에서의 접근 권한과 데이터만 제거됩니다. 계정은 귀하의 OIDC 공급자에 계속 존재하며, 다음 동기화 시 또는 사용자가 다시 로그인할 경우 다시 나타날 수 있습니다. 이 사용자를 영구적으로 삭제하려면 귀하의 OIDC 공급자에서 제거해야 합니다.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>사용자 이름</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>경고!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>예, 이 사용자를 삭제합니다</value>
+  </data>
+
+</root>

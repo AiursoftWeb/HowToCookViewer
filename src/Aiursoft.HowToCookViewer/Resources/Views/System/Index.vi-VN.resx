@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>Phiên bản .NET</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>Tổng quan về môi trường máy chủ, quy trình và ngữ cảnh yêu cầu hiện tại của ứng dụng.</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>Đã áp dụng / Đã xác định</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>Bạn có chắc chắn muốn khởi động lại ứng dụng không? Hành động này không thể hoàn tác và sẽ chấm dứt tất cả các kết nối đang hoạt động.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>Xác nhận Khởi động lại Ứng dụng</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Được tạo</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Khu Vực Nguy Hiểm</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>Chuyển đổi Cơ sở dữ liệu</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>Số lượng bảng cơ sở dữ liệu</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Thư mục</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>Container Docker</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Máy chủ</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>Có phải HTTPS</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>Cổng nội bộ</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>Tên Máy</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>Mức Sử Dụng Bộ Nhớ</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Phương thức</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>Chuyển đổi</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Đường dẫn</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Thuộc tính</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>Giao thức</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>Đang tải lại trang...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>Địa chỉ IP từ xa</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>Cổng từ xa</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>Tiêu đề HTTP của Yêu cầu</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>Thuộc tính Yêu cầu</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>Yêu cầu Khởi động Lại</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>Khởi động lại Ứng dụng</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>Đang khởi động lại...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Dòng</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Giao thức</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>Thông tin Máy chủ &amp; Tiến trình</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>Thời Gian Máy Chủ</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>Thời gian bắt đầu</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>Thông Tin Hệ Thống</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Bảng</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>Thao tác này sẽ tắt ứng dụng một cách an toàn. Trình quản lý tiến trình dự kiến sẽ khởi động lại nó.</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Giá trị</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>Tiến trình Worker</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>Có, Khởi Động Lại Ngay</value>
+  </data>
+
+</root>

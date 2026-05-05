@@ -1,0 +1,11 @@
+{
+  "name": "wwwroot",
+  "version": "1.0.0",
+  "description": "This is a server side application. This package is used to host the static files.",
+  "author": "Anduin Xue",
+  "license": "MIT",
+  "dependencies": {
+    "@aiursoft/uistack": "^1.0.8",
+    "dropify": "^0.2.2"
+  }
+}

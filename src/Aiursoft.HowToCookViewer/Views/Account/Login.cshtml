@@ -1,0 +1,51 @@
+@inject IOptions<AppSettings> AppSettings
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.AccountViewModels.LoginViewModel
+
+<div class="row justify-content-center">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="m-sm-3 text-center">
+                    <h1 class="h2">@Localizer["Welcome back!"]</h1>
+                    <p class="lead">
+                        @Localizer["Sign in to your account to continue"]
+                    </p>
+                </div>
+
+                <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+
+                    @* Validation summary is preserved and placed logically at the top of the form *@
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        @* The 'asp-for' tag links the label to the input, and we explicitly localize the visible text. *@
+                        <label asp-for="EmailOrUserName" class="form-label">@Localizer["Email or Username"]</label>
+                        <input asp-for="EmailOrUserName" class="form-control form-control-lg" placeholder="@Localizer["Enter your email or username"]" />
+                        <span asp-validation-for="EmailOrUserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">@Localizer["Password"]</label>
+                        <input asp-for="Password" class="form-control form-control-lg" placeholder="@Localizer["Enter your password"]" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-lg btn-primary">@Localizer["Login"]</button>
+                    </div>
+                </form>
+
+                @* The conditional register link is preserved and restyled *@
+                @if (AppSettings.Value.Local.AllowRegister)
+                {
+                    <div class="text-center mt-3">
+                        @Localizer["Don't have an account?"] <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@Localizer["Sign up"]</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

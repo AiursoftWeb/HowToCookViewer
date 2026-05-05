@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Details" xml:space="preserve">
+    <value>Kontodetails</value>
+  </data>
+  <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
+    <value>Eine Übersicht über das Benutzerprofil, die zugewiesenen Rollen und die effektiven Berechtigungen.</value>
+  </data>
+  <data name="Assigned Roles" xml:space="preserve">
+    <value>Zugewiesene Rollen</value>
+  </data>
+  <data name="Back to list" xml:space="preserve">
+    <value>Zurück zur Liste</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>Grundlegende Informationen</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Erstellungszeit</value>
+  </data>
+  <data name="Delete this User" xml:space="preserve">
+    <value>Diesen Benutzer löschen</value>
+  </data>
+  <data name="Edit this User" xml:space="preserve">
+    <value>Diesen Benutzer bearbeiten</value>
+  </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Effektive Berechtigungen</value>
+  </data>
+  <data name="Effective Permissions (from all roles)" xml:space="preserve">
+    <value>Effektive Berechtigungen (aus allen Rollen)</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profil-Details</value>
+  </data>
+  <data name="This user has no effective permissions." xml:space="preserve">
+    <value>Dieser Benutzer hat keine effektiven Berechtigungen.</value>
+  </data>
+  <data name="This user has not been assigned any roles." xml:space="preserve">
+    <value>Diesem Benutzer wurden keine Rollen zugewiesen.</value>
+  </data>
+  <data name="User Details:" xml:space="preserve">
+    <value>Benutzerdetails:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+
+</root>

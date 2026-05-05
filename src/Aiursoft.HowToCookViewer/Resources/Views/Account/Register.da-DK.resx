@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Already have an account?" xml:space="preserve">
+    <value>Har du allerede en konto?</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Bekræft adgangskode</value>
+  </data>
+  <data name="Confirm your password" xml:space="preserve">
+    <value>Bekræft din adgangskode</value>
+  </data>
+  <data name="Create a new account." xml:space="preserve">
+    <value>Opret en ny konto.</value>
+  </data>
+  <data name="Create a password" xml:space="preserve">
+    <value>Opret en adgangskode</value>
+  </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Opret konto</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-mail-adresse</value>
+  </data>
+  <data name="Enter your email address" xml:space="preserve">
+    <value>Indtast din e-mailadresse</value>
+  </data>
+  <data name="Get Started" xml:space="preserve">
+    <value>Kom i gang</value>
+  </data>
+  <data name="Join us now to start your journey." xml:space="preserve">
+    <value>Tilmeld dig nu for at begynde din rejse.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Adgangskode</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrer</value>
+  </data>
+  <data name="Sign in" xml:space="preserve">
+    <value>Log ind</value>
+  </data>
+
+</root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>Đã Xảy Ra Lỗi</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>Đã xảy ra lỗi trong quá trình xử lý yêu cầu của bạn.</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>Quay về Trang Chủ</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>Lỗi.</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Nếu bạn cho rằng mình nên có quyền truy cập, vui lòng liên hệ quản trị viên hệ thống. Hoặc thử đăng xuất rồi đăng nhập lại.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Vui lòng kiểm tra URL và thử lại. Nếu bạn cho rằng đây là lỗi máy chủ, vui lòng liên hệ bộ phận hỗ trợ.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Vui lòng kiểm tra yêu cầu của bạn và thử lại. Nếu bạn cho rằng đây là lỗi máy chủ, vui lòng liên hệ hỗ trợ.</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>Vui lòng liên hệ với quản trị viên để được trợ giúp.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Vui lòng thử lại sau hoặc liên hệ bộ phận hỗ trợ nếu sự cố vẫn tiếp diễn.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>Mã Yêu Cầu:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Xin lỗi, bạn không có quyền truy cập trang này.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Trang bạn đang tìm có thể đã bị xóa, tên của trang đã được đổi hoặc đang tạm thời không khả dụng.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Thử lại</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Chúng tôi thành thật xin lỗi, đã xảy ra lỗi trong quá trình xử lý yêu cầu của bạn.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Trình duyệt của bạn đã gửi một yêu cầu mà máy chủ này không thể hiểu được.</value>
+  </data>
+
+</root>

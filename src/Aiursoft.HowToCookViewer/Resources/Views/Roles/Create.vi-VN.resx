@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Quay lại Danh sách</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>Tạo Vai Trò Mới</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Tạo Vai trò</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>Nhập tên vai trò mới</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) đã được bật. Các vai trò được đồng bộ hóa từ một nhà cung cấp danh tính bên ngoài. Chúng tôi khuyến nghị nên tạo các vai trò hoặc nhóm mới trên nhà cung cấp OIDC của bạn để đảm bảo chúng được quản lý tập trung. Biểu mẫu này sẽ tạo ra một vai trò chỉ tồn tại cục bộ và chỉ có trong ứng dụng này.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Chi Tiết Vai Trò</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Tên Vai Trò</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Cảnh báo!</value>
+  </data>
+
+</root>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>목록으로 돌아가기</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>생성</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>새 역할 생성</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>역할 생성</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>새 역할 이름 입력</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect(OIDC)가 활성화되었습니다. 역할은 외부 신원 공급자로부터 동기화됩니다. 중앙에서 관리될 수 있도록 새로운 역할이나 그룹을 OIDC 공급자에서 생성할 것을 강력히 권장합니다. 이 양식은 이 애플리케이션 내에서만 존재하는 로컬 전용 역할을 생성합니다.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>역할</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>역할 세부 정보</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>역할 이름</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>경고!</value>
+  </data>
+
+</root>

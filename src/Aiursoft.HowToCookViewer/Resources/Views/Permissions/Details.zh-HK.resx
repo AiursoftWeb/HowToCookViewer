@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to Permissions" xml:space="preserve">
+    <value>返回權限</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>顯示名稱</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>電郵</value>
+  </data>
+  <data name="No roles have this permission." xml:space="preserve">
+    <value>沒有角色擁有此權限。</value>
+  </data>
+  <data name="No users have this permission." xml:space="preserve">
+    <value>沒有用戶擁有此權限。</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>權限詳細資料</value>
+  </data>
+  <data name="Permission Information" xml:space="preserve">
+    <value>權限資訊</value>
+  </data>
+  <data name="Permission Key" xml:space="preserve">
+    <value>權限金鑰</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>權限名稱</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>角色名稱</value>
+  </data>
+  <data name="Roles with this Permission" xml:space="preserve">
+    <value>具有此權限的角色</value>
+  </data>
+  <data name="The following roles have been granted this permission." xml:space="preserve">
+    <value>以下角色已獲此權限。</value>
+  </data>
+  <data name="The following users have this permission through their role memberships." xml:space="preserve">
+    <value>以下用戶通過他們的角色成員擁有此權限。</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="Users with this Permission" xml:space="preserve">
+    <value>擁有此權限的用戶</value>
+  </data>
+
+</root>

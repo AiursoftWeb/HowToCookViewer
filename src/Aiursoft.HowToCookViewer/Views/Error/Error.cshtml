@@ -1,0 +1,91 @@
+@model Aiursoft.HowToCookViewer.Models.ErrorViewModels.ErrorViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <div class="card">
+            <div class="card-body text-center p-4 p-sm-5">
+
+                <div class="mb-4">
+                    @if (Model.ErrorCode == 400)
+                    {
+                        <i class="align-middle text-warning" data-lucide="alert-circle" style="width: 64px; height: 64px;"></i>
+                    }
+                    else if (Model.ErrorCode == 404)
+                    {
+                        <i class="align-middle text-info" data-lucide="help-circle" style="width: 64px; height: 64px;"></i>
+                    }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        <i class="align-middle text-warning" data-lucide="shield-off" style="width: 64px; height: 64px;"></i>
+                    }
+                    else
+                    {
+                        <i class="align-middle text-danger" data-lucide="alert-triangle" style="width: 64px; height: 64px;"></i>
+                    }
+                </div>
+
+                <h1 class="h3 mb-3">@Localizer[Model.PageTitle ?? "Error"]</h1>
+
+                <p class="lead">
+                    @if (Model.ErrorCode == 400)
+                    {
+                        @Localizer["Your browser sent a request that this server could not understand."]
+                    }
+                    else if (Model.ErrorCode == 404)
+                    {
+                        @Localizer["The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."]
+                    }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        @Localizer["Sorry, you do not have the necessary permissions to access this page."]
+                    }
+                    else
+                    {
+                        @Localizer["We're sorry, something went wrong while processing your request."]
+                    }
+                </p>
+
+                <p class="text-muted">
+                    @if (Model.ErrorCode == 400)
+                    {
+                        @Localizer["Please check your request and try again. If you believe this is a server error, please contact support."]
+                    }
+                    else if (Model.ErrorCode == 404)
+                    {
+                        @Localizer["Please check the URL and try again. If you believe this is a server error, please contact support."]
+                    }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        @Localizer["If you believe you should have access, please contact your system administrator. Or try signing out and signing in again."]
+                    }
+                    else
+                    {
+                        @Localizer["Please try again later or contact support if the problem persists."]
+                    }
+                </p>
+
+                @if (Model.ShowRequestId)
+                {
+                    <div class="border rounded p-2 mt-4 bg-body-tertiary d-inline-block">
+                        <small>
+                            <strong>@Localizer["Request ID:"]</strong> <code>@Model.RequestId</code>
+                        </small>
+                    </div>
+                }
+
+                <div class="mt-4">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg">
+                        <i class="align-middle me-2" data-lucide="home"></i> @Localizer["Back to Home"]
+                    </a>
+                    @if (!string.IsNullOrEmpty(Model.ReturnUrl))
+                    {
+                        <a href="@Model.ReturnUrl" class="btn btn-secondary btn-lg">
+                            <i class="align-middle me-2" data-lucide="refresh-cw"></i> @Localizer["Try again"]
+                        </a>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

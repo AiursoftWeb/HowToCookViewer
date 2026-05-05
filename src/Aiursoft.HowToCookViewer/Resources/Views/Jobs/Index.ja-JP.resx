@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>バックグラウンドジョブ</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>キャンセル済み</value>
+  </data>
+  <data name="Creates test jobs in different queues (15-30s sleep, 10% failure rate). Jobs in different queues run in parallel." xml:space="preserve">
+    <value>異なるキューにテストジョブを作成します（15〜30秒のスリープ、10％の失敗率）。異なるキュー内のジョブは並列で実行されます。</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="Finished At" xml:space="preserve">
+    <value>完了時刻</value>
+  </data>
+  <data name="Job Name" xml:space="preserve">
+    <value>ジョブ名</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>過去1時間</value>
+  </data>
+  <data name="Last run" xml:space="preserve">
+    <value>直近の実行</value>
+  </data>
+  <data name="Monitor and manage background job queues and their execution status." xml:space="preserve">
+    <value>バックグラウンドのジョブキューとその実行状態を監視および管理します。</value>
+  </data>
+  <data name="Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically." xml:space="preserve">
+    <value>バックグラウンドジョブキューを監視および管理します。登録されたジョブを手動でトリガーするか、スケジューラーに自動的に実行させます。</value>
+  </data>
+  <data name="Never executed" xml:space="preserve">
+    <value>未実行</value>
+  </data>
+  <data name="New Job A" xml:space="preserve">
+    <value>新しいジョブ A</value>
+  </data>
+  <data name="New Job B" xml:space="preserve">
+    <value>新しいジョブ B</value>
+  </data>
+  <data name="No background jobs are registered. Add jobs using services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs." xml:space="preserve">
+    <value>バックグラウンドジョブが登録されていません。Startup.cs で services.AddBackgroundJob&lt;TJob&gt;() を使用してジョブを追加してください。</value>
+  </data>
+  <data name="No jobs" xml:space="preserve">
+    <value>ジョブがありません</value>
+  </data>
+  <data name="No jobs have run in the last hour." xml:space="preserve">
+    <value>直近1時間でジョブは実行されていません。</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>保留中</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>処理中</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>キュー</value>
+  </data>
+  <data name="Queue Name" xml:space="preserve">
+    <value>キュー名</value>
+  </data>
+  <data name="Queued At" xml:space="preserve">
+    <value>キュー登録日時</value>
+  </data>
+  <data name="Recent Execution History" xml:space="preserve">
+    <value>直近の実行履歴</value>
+  </data>
+  <data name="Registered Jobs" xml:space="preserve">
+    <value>登録済みジョブ</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Trigger Now" xml:space="preserve">
+    <value>今すぐ実行</value>
+  </data>
+
+</root>

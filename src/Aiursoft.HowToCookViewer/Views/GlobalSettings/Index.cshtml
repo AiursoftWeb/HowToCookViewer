@@ -1,0 +1,149 @@
+@using Aiursoft.HowToCookViewer.Models
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.GlobalSettingsViewModels.IndexViewModel
+@inject IStringLocalizer<SettingsMap> SettingsLocalizer
+@inject Aiursoft.HowToCookViewer.Services.FileStorage.StorageService Storage
+
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Global Settings"]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["System Configuration"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Manage global application settings. Configuration overrides are read-only."]</h6>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Setting"]</th>
+                <th>@Localizer["Description"]</th>
+                <th style="min-width: 200px;">@Localizer["Value"]</th>
+                <th class="text-end">@Localizer["Actions"]</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Settings)
+            {
+                <tr>
+                    <td>
+                        <div class="fw-bold">@SettingsLocalizer[item.Name]</div>
+                        <code class="small text-muted">@item.Key</code>
+                        @if (item.IsOverriddenByConfig)
+                        {
+                            <span class="badge bg-warning text-dark ms-1" title="@Localizer["This setting is overridden by configuration."]"><i class="align-middle" data-lucide="shield-alert"></i> CFG</span>
+                        }
+                    </td>
+                    <td>@SettingsLocalizer[item.Description]</td>
+                    <td>
+                        @if (item.IsOverriddenByConfig)
+                        {
+                            <span class="text-muted">@item.Value</span>
+                        }
+                        else
+                        {
+                            <form asp-action="Edit" method="post" id="form-@item.Key">
+                                <input type="hidden" name="Key" value="@item.Key" />
+                                @if (item.Type == SettingType.Bool)
+                                {
+                                    <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
+                                        <option value="True" selected="@(item.Value == "True" ? "selected" : null)">@Localizer["Enabled"]</option>
+                                        <option value="False" selected="@(item.Value == "False" ? "selected" : null)">@Localizer["Disabled"]</option>
+                                    </select>
+                                }
+                                else if (item.Type == SettingType.Choice && item.ChoiceOptions != null)
+                                {
+                                    <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
+                                        @foreach (var option in item.ChoiceOptions)
+                                        {
+                                            <option value="@option.Key" selected="@(item.Value == option.Key ? "selected" : null)">@SettingsLocalizer[option.Value]</option>
+                                        }
+                                    </select>
+                                }
+                                else if (item.Type == SettingType.Number)
+                                {
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" name="Value" value="@item.Value" class="form-control" />
+                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
+                                    </div>
+                                }
+                                else if (item.Type == SettingType.File)
+                                {
+                                    <div class="d-flex flex-column gap-2">
+                                        @if (!string.IsNullOrWhiteSpace(item.Value))
+                                        {
+                                            <div>
+                                                <a href="@Storage.RelativePathToInternetUrl(item.Value)" 
+                                                   target="_blank" 
+                                                   class="btn btn-sm btn-outline-info">
+                                                    <i class="align-middle" data-lucide="eye"></i> 
+                                                    @Localizer["View Current File"]
+                                                </a>
+                                            </div>
+                                        }
+                                        
+                                        <vc:file-upload 
+                                            asp-for="@item.Value" 
+                                            subfolder="@item.Subfolder" 
+                                            allowed-extensions="@item.AllowedExtensions"
+                                            max-size-in-mb="@item.MaxSizeInMb"
+                                            field-name="Value">
+                                        </vc:file-upload>
+                                        
+                                        <div>
+                                            <button class="btn btn-outline-secondary btn-sm" type="submit">@Localizer["Save"]</button>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" name="Value" value="@item.Value" class="form-control" />
+                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
+                                    </div>
+                                }
+                                @Html.AntiForgeryToken()
+                            </form>
+                        }
+                    </td>
+                    <td class="text-end">
+                        @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
+                        {
+                            <form asp-action="Edit" method="post" class="d-inline">
+                                <input type="hidden" name="Key" value="@item.Key" />
+                                <input type="hidden" name="Value" value="@item.DefaultValue" />
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]">
+                                    <i class="align-middle" data-lucide="rotate-ccw"></i> @Localizer["Reset"]
+                                </button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (ViewData.ModelState.Any(m => m.Value != null && m.Value.Errors.Any()))
+{
+    <div class="alert alert-danger mt-3">
+        <div asp-validation-summary="All"></div>
+    </div>
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+}

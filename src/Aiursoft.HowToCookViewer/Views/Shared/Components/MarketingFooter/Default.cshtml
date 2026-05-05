@@ -1,0 +1,91 @@
+@model Aiursoft.HowToCookViewer.Views.Shared.Components.MarketingFooter.MarketingFooterViewModel
+@using Microsoft.AspNetCore.Localization
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 col-lg-4">
+                <div class="mb-3">
+                    <img src="@Model.LogoUrl" alt="logo" style="width: 24px; height: 24px;" loading="lazy" />
+                </div>
+                <p class="text-white-50">
+                    @Localizer["Aiursoft Template - A modern, feature-rich, and highly extensible foundation for your next web application."]
+                </p>
+                <div class="dropdown mt-3 mb-3">
+                    @{
+                        var currentCulture = ViewContext.HttpContext.Features
+                            .Get<IRequestCultureFeature>()?
+                            .RequestCulture.Culture.Name;
+                    }
+                    <form asp-controller="Culture" asp-action="Set" method="post" class="d-inline" asp-route-returnUrl="@(Context.Request.Path + Context.Request.QueryString)">
+                        <select name="culture" onchange="this.form.submit()" class="form-select form-select-sm w-auto">
+                            @foreach (var culture in Aiursoft.WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures)
+                            {
+                                <option value="@culture.Key"
+                                        selected="@(culture.Key == currentCulture ? "selected" : null)">
+                                    @culture.Value
+                                </option>
+                            }
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
+                <h4 class="text-light fs-5">@Localizer["Resources"]</h4>
+                <ul class="list-unstyled ps-0 mb-0 mt-3">
+                    <li class="mt-2">
+                        <a href="https://template-docs.aiursoft.com/en/Tutorial/before.html" class="text-white-50">@Localizer["Get Started"]</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="https://template-docs.aiursoft.com/" class="text-white-50">@Localizer["Documentation"]</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="https://github.com/aiursoftweb/template/discussions" class="text-white-50">@Localizer["Community"]</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
+                <h4 class="text-light fs-5">@Localizer["Project"]</h4>
+                <ul class="list-unstyled ps-0 mb-0 mt-3">
+                    <li class="mt-2">
+                        <a href="https://github.com/aiursoftweb/template" class="text-white-50">@Localizer["Source Code"]</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="https://github.com/aiursoftweb/template/issues" class="text-white-50">@Localizer["Report an Issue"]</a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="https://github.com/aiursoftweb/template/pulls" class="text-white-50">@Localizer["Contributions"]</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
+                <h4 class="text-light fs-5">@Localizer["Legal"]</h4>
+                <ul class="list-unstyled ps-0 mb-0 mt-3">
+                    <li class="mt-2">
+                        <a href="https://github.com/aiursoftweb/template/blob/main/LICENSE" class="text-white-50">@Localizer["Licence"]</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
+                <h4 class="text-light fs-5">@Localizer["Social"]</h4>
+                <ul class="list-unstyled ps-0 mb-0 mt-3">
+                    <li class="mt-2">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/aiursoftweb" class="text-white-50" target="_blank">@Localizer["Github"]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-white-50 mt-4 text-center mb-0">
+                    © @DateTime.Now.Year <a href="@Model.BrandHomeUrl" target="_blank">@Model.BrandName</a>
+                    @if (!string.IsNullOrWhiteSpace(Model.Icp) && System.Globalization.CultureInfo.CurrentCulture.Name == "zh-CN")
+                    {
+                        <span> | </span>
+                        <a href="https://beian.miit.gov.cn/" target="_blank">@Model.Icp</a>
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,262 @@
+@model Aiursoft.HowToCookViewer.Models.BackgroundJobs.JobsIndexViewModel
+@using Aiursoft.WebTools
+@using Aiursoft.HowToCookViewer.Models.BackgroundJobs
+
+@{
+    ViewData["Title"] = "Background Jobs";
+
+    string ToFriendlyDuration(TimeSpan value)
+    {
+        if (value <= TimeSpan.Zero)
+        {
+            return "0s";
+        }
+
+        var parts = new List<string>();
+        if (value.Days > 0)
+        {
+            parts.Add($"{value.Days}d");
+        }
+        if (value.Hours > 0)
+        {
+            parts.Add($"{value.Hours}h");
+        }
+        if (value.Minutes > 0)
+        {
+            parts.Add($"{value.Minutes}m");
+        }
+        if (value.Seconds > 0)
+        {
+            parts.Add($"{value.Seconds}s");
+        }
+
+        return parts.Count == 0 ? "0s" : string.Join(" ", parts.Take(2));
+    }
+
+    var scheduledTaskByType = Model.ScheduledTasks
+        .GroupBy(t => t.JobType)
+        .ToDictionary(g => g.Key, g => g.First());
+
+    var lastRunAtByType = Model.LastRunAtByJobType;
+}
+
+<h1 class="h3 mb-1">@Localizer["Background Jobs"]</h1>
+<p class="lead mb-4">@Localizer["Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically."]</p>
+
+@* ── Registered Jobs ──────────────────────────────────────────────────────── *@
+<h5 class="mb-3 text-muted fw-semibold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.08em;">
+    <i class="align-middle me-1" data-lucide="layers" style="width:14px;height:14px;"></i>
+    @Localizer["Registered Jobs"]
+</h5>
+
+@if (Model.RegisteredJobs.Any())
+{
+    <div class="row g-3 mb-4">
+        @foreach (var job in Model.RegisteredJobs)
+        {
+            var hasSchedule = scheduledTaskByType.TryGetValue(job.JobType, out var schedule);
+            var scheduleText = hasSchedule
+                ? $"Every {ToFriendlyDuration(schedule!.Period)}, first run in {ToFriendlyDuration(schedule.StartDelay)}"
+                : "Never run";
+            var hasLastRun = lastRunAtByType.TryGetValue(job.JobType, out var lastRunAt);
+
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex align-items-start mb-2">
+                            <span class="badge bg-primary-subtle text-primary me-2 mt-1" style="font-size: 0.7rem;">JOB</span>
+                            <h6 class="card-title mb-0 fw-semibold">@job.Name</h6>
+                        </div>
+                        <p class="card-text text-muted small mb-3 flex-grow-1">@job.Description</p>
+                        <p class="card-text mb-3">
+                            <span class="badge @(hasSchedule ? "bg-info-subtle text-info" : "bg-secondary-subtle text-secondary")" style="font-size: 0.75rem;">
+                                @scheduleText
+                            </span>
+                        </p>
+                        <p class="card-text text-muted small mb-3">
+                            @Localizer["Last run"]:
+                            @if (hasLastRun)
+                            {
+                                <label data-utc-time="@lastRunAt.ToHtmlDateTime()" class="text-monospace mb-0"></label>
+                            }
+                            else
+                            {
+                                <span>@Localizer["Never executed"]</span>
+                            }
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <code class="text-muted" style="font-size: 0.75rem;">@job.JobType.Name</code>
+                            <form asp-action="Trigger" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="jobTypeName" value="@job.JobType.Name" />
+                                <button type="submit" class="btn btn-sm btn-outline-primary">
+                                    <i class="align-middle me-1" data-lucide="play" style="width:13px;height:13px;"></i>
+                                    @Localizer["Trigger Now"]
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="alert alert-info mb-4">
+        @Localizer["No background jobs are registered. Add jobs using services.AddBackgroundJob<TJob>() in Startup.cs."]
+    </div>
+}
+
+@* ── Execution History ────────────────────────────────────────────────────── *@
+<h5 class="mb-3 text-muted fw-semibold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.08em;">
+    <i class="align-middle me-1" data-lucide="history" style="width:14px;height:14px;"></i>
+    @Localizer["Recent Execution History"]
+    <small class="text-muted fw-normal ms-1" style="font-size: 0.7rem;">(@Localizer["last hour"])</small>
+</h5>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="table-responsive">
+                @if (Model.AllRecentJobs.Any())
+                {
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th style="width: 12%;">@Localizer["Queue"]</th>
+                                <th style="width: 20%;">@Localizer["Job Name"]</th>
+                                <th style="width: 25%;">@Localizer["Status"]</th>
+                                <th style="width: 15%;">@Localizer["Queued At"]</th>
+                                <th style="width: 15%;">@Localizer["Finished At"]</th>
+                                <th style="width: 13%;">@Localizer["Actions"]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var job in Model.AllRecentJobs)
+                            {
+                                <tr>
+                                    <td><code>@job.QueueName</code></td>
+                                    <td>@job.JobName</td>
+                                    <td>
+                                        @switch (job.Status)
+                                        {
+                                            case JobStatus.Processing:
+                                                <div>
+                                                    <span class="badge bg-primary">@Localizer["Processing"]</span>
+                                                    <div class="progress mt-2" style="height: 8px;">
+                                                        <div class="progress-bar bg-primary progress-bar-striped"
+                                                             role="progressbar" data-job-id="@job.JobId"
+                                                             data-started-at="@job.StartedAt?.ToString("o")" style="width: 0%; transition: none;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                break;
+                                            case JobStatus.Pending:
+                                                <span class="badge bg-warning text-dark">@Localizer["Pending"]</span>
+                                                break;
+                                            case JobStatus.Success:
+                                                if (job.StartedAt.HasValue && job.CompletedAt.HasValue)
+                                                {
+                                                    var duration = job.CompletedAt.Value - job.StartedAt.Value;
+                                                    <span class="badge bg-success">@Localizer["Success"]</span>
+                                                    <small class="text-muted ms-2">(@duration.TotalSeconds.ToString("F1")s)</small>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-success">@Localizer["Success"]</span>
+                                                }
+                                                break;
+                                            case JobStatus.Failed:
+                                                <div>
+                                                    <span class="badge bg-danger">@Localizer["Failed"]</span>
+                                                    @if (!string.IsNullOrEmpty(job.ErrorMessage))
+                                                    {
+                                                        <details class="mt-2">
+                                                            <summary class="text-danger" style="cursor: pointer; font-size: 0.85rem;">
+                                                                @job.ErrorMessage.Split('\n')[0].Trim()
+                                                            </summary>
+                                                            <pre class="mt-2 p-2 bg-light" style="font-size: 0.75rem; max-height: 150px; overflow-y: auto;">@job.ErrorMessage</pre>
+                                                        </details>
+                                                    }
+                                                </div>
+                                                break;
+                                            case JobStatus.Cancelled:
+                                                <span class="badge bg-secondary">@Localizer["Cancelled"]</span>
+                                                break;
+                                        }
+                                    </td>
+                                    <td><label data-utc-time="@job.QueuedAt.ToHtmlDateTime()" class="text-monospace mb-0"></label></td>
+                                    <td>
+                                        @if (job.CompletedAt.HasValue)
+                                        {
+                                            <label data-utc-time="@job.CompletedAt.Value.ToHtmlDateTime()" class="text-monospace mb-0"></label>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (job.Status == JobStatus.Pending)
+                                        {
+                                            <form asp-action="Cancel" method="post" class="d-inline">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="jobId" value="@job.JobId" />
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    <i class="align-middle" data-lucide="x-circle" style="width: 14px; height: 14px;"></i>
+                                                    @Localizer["Cancel"]
+                                                </button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="card-body text-muted">
+                        <i class="align-middle me-1" data-lucide="inbox" style="width:16px;height:16px;"></i>
+                        @Localizer["No jobs have run in the last hour."]
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+
+@section scripts {
+    <script>
+        // Progress bar calculation function
+        function calculateProgress(elapsedSeconds) {
+            var x = elapsedSeconds;
+            var k = 5; // Speed parameter (1-100, higher = slower growth)
+
+            // y = 100 * (x - k * sqrt(x)) / (x - k^2)
+            var y = 100 * (x - k * Math.sqrt(x)) / (x - k * k);
+
+            // Ensure progress is between 0 and 99.9
+            return Math.max(0, Math.min(99.9, y));
+        }
+
+        // Update progress bars
+        function updateProgressBars() {
+            var now = new Date();
+            document.querySelectorAll('.progress-bar[data-started-at]').forEach(function (progressBar) {
+                var startedAt = new Date(progressBar.getAttribute('data-started-at'));
+                var elapsedSeconds = (now - startedAt) / 1000;
+                var progress = calculateProgress(elapsedSeconds);
+                progressBar.style.width = progress + '%';
+            });
+        }
+
+        // Update progress bars immediately and every 500ms
+        updateProgressBars();
+        setInterval(updateProgressBars, 500);
+
+        // Auto-refresh page every 5 seconds
+        setTimeout(function () {
+            window.location.reload();
+        }, 5000);
+    </script>
+}

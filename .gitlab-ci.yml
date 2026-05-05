@@ -1,0 +1,150 @@
+stages:
+    - build
+    - lint
+    - test
+    - publish
+    - deploy
+
+before_script:
+    - "export PATH=$PATH:$HOME/.dotnet/tools"
+    - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d"
+    - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d"
+    - 'echo "Hostname: $(hostname)"'
+    - "dotnet --info"
+
+variables:
+    GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID"
+    MSBUILDDISABLENODEREUSE: "1"
+    DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+
+restore:
+    stage: build
+    script:
+        - |
+            dotnet restore --no-cache --configfile nuget.config || \
+            (echo "Restore failed. Retrying in 10 seconds..." && sleep 10 && dotnet restore --no-cache --configfile nuget.config) || \
+            (echo "Restore failed again. Retrying in 20 seconds..." && sleep 20 && dotnet restore --no-cache --configfile nuget.config)
+
+build:
+    stage: build
+    needs:
+        - restore
+    script:
+        - dotnet build -maxcpucount:1 --no-self-contained
+
+lint:
+    stage: lint
+    needs:
+        - build
+    script:
+        - chmod +x ./lint.sh
+        - ./lint.sh
+    artifacts:
+        when: always
+        expire_in: 1 day
+        paths:
+            - ./analyze_output.xml
+
+test:
+    stage: test
+    needs:
+        - build
+    coverage: '/TOTAL_COVERAGE=(\d+.\d+)/'
+    script:
+        - |
+            dotnet test *.sln --collect:"XPlat Code Coverage" --logger "junit;MethodFormat=Class;FailureBodyFormat=Verbose" || \
+            (echo "Test failed. Retrying in 10 seconds..." && sleep 10 && dotnet test *.sln --collect:"XPlat Code Coverage" --logger "junit;MethodFormat=Class;FailureBodyFormat=Verbose") || \
+            (echo "Test failed again. Retrying in 20 seconds..." && sleep 20 && dotnet test *.sln --collect:"XPlat Code Coverage" --logger "junit;MethodFormat=Class;FailureBodyFormat=Verbose")
+        - reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"." -reporttypes:"cobertura"
+        - COVERAGE_VALUE=$(grep -oPm 1 'line-rate="\K([0-9.]+)' "./Cobertura.xml")
+        - COVERAGE_PERCENTAGE=$(echo "scale=2; $COVERAGE_VALUE * 100" | bc)
+        - 'echo "TOTAL_COVERAGE=$COVERAGE_PERCENTAGE%"'
+    artifacts:
+        when: always
+        expire_in: 1 day
+        paths:
+            - ./**/TestResults.xml
+            - ./Cobertura.xml
+        reports:
+            junit:
+                - ./**/TestResults.xml
+            coverage_report:
+                coverage_format: cobertura
+                path: ./Cobertura.xml
+
+pack:
+    stage: publish
+    needs:
+        - lint
+        - test
+    script:
+        - dotnet build -maxcpucount:1 --configuration Release --no-self-contained *.sln
+        - dotnet pack -maxcpucount:1 --configuration Release *.sln || echo "Some packaging failed!"
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - "**/*.nupkg"
+
+deploy_local_nuget:
+    stage: deploy
+    environment: production
+    needs:
+        - pack
+    dependencies:
+        - pack
+    script:
+        - |
+            for file in $(find . -name "*.nupkg"); do
+              dotnet nuget push "$file" --api-key "$LOCAL_NUGET_API_KEY" --source "https://nuget.aiursoft.com/v3/index.json" --skip-duplicate || exit 1;
+            done
+    only:
+        - master
+
+deploy_public_nuget:
+    stage: deploy
+    environment: production
+    needs:
+        - pack
+        - deploy_local_nuget
+    dependencies:
+        - pack
+    script:
+        - |
+            for file in $(find . -name "*.nupkg"); do
+              dotnet nuget push "$file" --api-key "$NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate || exit 1;
+            done
+    only:
+        - master
+
+deploy_docker_all:
+    stage: deploy
+    environment: production
+    needs:
+        - lint
+        - test
+    script:
+        - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+        - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then HUB_NAMESPACE="anduin2019"; else HUB_NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
+        
+        - LOCAL_TARGET_COM="hub.aiursoft.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG"
+        - LOCAL_TARGET_CN="hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG"
+        - PUBLIC_TARGET="$HUB_NAMESPACE/$CI_PROJECT_NAME:$TAG"
+        
+        - echo "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
+        - echo "$CN_DOCKER_PASSWORD" | docker login hub.aiursoft.cn -u "$CN_DOCKER_USERNAME" --password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        
+        - docker buildx use aiur-global-builder
+        - echo "Building and pushing multi-arch to all registries..."
+        - |
+            docker buildx build . \
+              --platform linux/amd64,linux/arm64 \
+              -t $LOCAL_TARGET_COM \
+              -t $LOCAL_TARGET_CN \
+              -t $PUBLIC_TARGET \
+              --push
+
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "master"'
+          exists:
+              - Dockerfile

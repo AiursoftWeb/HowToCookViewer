@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Details" xml:space="preserve">
+    <value>Kontodetaljer</value>
+  </data>
+  <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
+    <value>Et overblik over brugerens profil, tildelte roller og effektive tilladelser.</value>
+  </data>
+  <data name="Assigned Roles" xml:space="preserve">
+    <value>Tildelte roller</value>
+  </data>
+  <data name="Back to list" xml:space="preserve">
+    <value>Tilbage til listen</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>Grundlæggende oplysninger</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Oprettelsestidspunkt</value>
+  </data>
+  <data name="Delete this User" xml:space="preserve">
+    <value>Slet denne bruger</value>
+  </data>
+  <data name="Edit this User" xml:space="preserve">
+    <value>Rediger denne bruger</value>
+  </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Effektive tilladelser</value>
+  </data>
+  <data name="Effective Permissions (from all roles)" xml:space="preserve">
+    <value>Effektive tilladelser (fra alle roller)</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profildetaljer</value>
+  </data>
+  <data name="This user has no effective permissions." xml:space="preserve">
+    <value>Denne bruger har ingen effektive tilladelser.</value>
+  </data>
+  <data name="This user has not been assigned any roles." xml:space="preserve">
+    <value>Denne bruger har ikke fået tildelt nogen roller.</value>
+  </data>
+  <data name="User Details:" xml:space="preserve">
+    <value>Brugerdetaljer:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Brugernavn</value>
+  </data>
+
+</root>

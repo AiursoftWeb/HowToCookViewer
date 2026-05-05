@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="All Permissions" xml:space="preserve">
+    <value>Alle Machtigingen</value>
+  </data>
+  <data name="Assigned to Roles" xml:space="preserve">
+    <value>Toegewezen aan rollen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Omschrijving</value>
+  </data>
+  <data name="No users" xml:space="preserve">
+    <value>Geen gebruikers</value>
+  </data>
+  <data name="Not assigned" xml:space="preserve">
+    <value>Niet toegewezen</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>Machtigingsnaam</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Machtigingen</value>
+  </data>
+  <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
+    <value>Machtigingen worden gedefinieerd door de applicatie en kunnen niet worden bewerkt of verwijderd. Klik op een machtiging om te zien welke rollen en gebruikers deze hebben.</value>
+  </data>
+  <data name="role(s)" xml:space="preserve">
+    <value>rol(len)</value>
+  </data>
+  <data name="user(s)" xml:space="preserve">
+    <value>gebruiker(s)</value>
+  </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Gebruikers met toestemming</value>
+  </data>
+
+</root>

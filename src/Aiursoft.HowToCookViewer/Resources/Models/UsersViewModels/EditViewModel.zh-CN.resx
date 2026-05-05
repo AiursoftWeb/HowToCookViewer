@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="All roles" xml:space="preserve">
+    <value>所有角色</value>
+  </data>
+  <data name="Avatar file" xml:space="preserve">
+    <value>头像文件</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>电子邮件地址</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>标识符</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
+    <value>重置密码（留空则保持原密码不变）</value>
+  </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} 不是有效的电子邮件地址。</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}是必填的。</value>
+  </data>
+  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
+    <value>{0} 的长度必须至少为 {1} 个字符。</value>
+  </data>
+  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
+    <value>{0} 最多不能超过 {1} 个字符。</value>
+  </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>头像文件无效，请重新上传。</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>头像文件是必需的。</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+
+</root>

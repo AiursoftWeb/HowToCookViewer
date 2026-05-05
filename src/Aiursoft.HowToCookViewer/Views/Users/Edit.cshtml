@@ -1,0 +1,122 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.UsersViewModels.EditViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* A standard page header that includes the user's name for context and primary navigation actions. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Edit User:"] <span class="text-muted">@Model.DisplayName</span></h3>
+    </div>
+    <div class="col-auto ms-auto mt-n1">
+        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-outline-primary">@Localizer["View Details"]</a>
+        <a asp-action="Index" class="btn btn-light">@Localizer["Back to Users List"]</a>
+    </div>
+</div>
+
+@* The critical OIDC warning is preserved and placed prominently at the top. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user's profile directly on your OIDC provider."]
+            </div>
+        </div>
+    </div>
+}
+
+@* Form 1: Basic Information. It is self-contained within its own form and card. *@
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="user"></i> @Localizer["Basic Information"]</h5>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="UserName" class="form-label">@Localizer["Username"]</label>
+                    <input asp-for="UserName" class="form-control form-control-lg" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DisplayName" class="form-label">@Localizer["Display Name"]</label>
+                    <input asp-for="DisplayName" class="form-control form-control-lg" />
+                    <span asp-validation-for="DisplayName" class="text-danger"></span>
+                </div>
+                <div class="col-12 mb-3">
+                    <label asp-for="Email" class="form-label">@Localizer["Email Address"]</label>
+                    <input asp-for="Email" class="form-control form-control-lg" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-12 mb-3">
+                    <label asp-for="Password" class="form-label">@Localizer["New Password"]</label>
+                    <input asp-for="Password" class="form-control form-control-lg" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <small class="form-text text-muted">@Localizer["Leave blank if you don't want to change the password."]</small>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="AvatarUrl" class="form-label">@Localizer["New avatar file"]</label>
+                    <vc:file-upload asp-for="@Model.AvatarUrl" subfolder="avatar" allowed-extensions="png bmp jpg" max-size-in-mb="10"></vc:file-upload>
+                    <span asp-validation-for="AvatarUrl" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">@Localizer["Save User Details"]</button>
+            <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+        </div>
+    </div>
+</form>
+
+@* Spacer for visual separation between the two cards/forms. *@
+<div class="mt-4"></div>
+
+@* Form 2: Role Assignments. It is also self-contained. *@
+<form asp-action="ManageRoles" asp-route-id="@Model.Id" method="post">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="shield"></i> @Localizer["Assigned Roles"]</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @for (var i = 0; i < Model.AllRoles.Count; i++)
+                {
+                    @* A responsive grid is used for a clean and adaptive layout of checkboxes. *@
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="form-check mb-2">
+                            @* The critical binding logic with hidden inputs is fully preserved. *@
+                            <input type="hidden" asp-for="@Model.AllRoles[i].RoleName" />
+                            <input asp-for="@Model.AllRoles[i].IsSelected" class="form-check-input" />
+                            <label class="form-check-label" for="@Html.IdFor(m => m.AllRoles[i].IsSelected)">
+                                @Model.AllRoles[i].RoleName
+                            </label>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">@Localizer["Save Role Assignments"]</button>
+            <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+        </div>
+    </div>
+</form>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+}

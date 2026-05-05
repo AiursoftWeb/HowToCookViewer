@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="All roles" xml:space="preserve">
+    <value>Wszystkie role</value>
+  </data>
+  <data name="Avatar file" xml:space="preserve">
+    <value>Plik awatara</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Adres e-mail</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Identyfikator</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
+    <value>Zresetuj hasło (pozostaw puste, aby zachować obecne hasło)</value>
+  </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>Pole {0} nie zawiera prawidłowego adresu e-mail.</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>Pole {0} jest wymagane.</value>
+  </data>
+  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
+    <value>{0} musi mieć co najmniej {1} znaków.</value>
+  </data>
+  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
+    <value>{0} może mieć maksymalnie {1} znaków.</value>
+  </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>Plik awatara jest nieprawidłowy. Prześlij go ponownie.</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>Plik awatara jest wymagany.</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+
+</root>

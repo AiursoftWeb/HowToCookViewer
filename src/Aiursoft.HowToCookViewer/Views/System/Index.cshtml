@@ -1,0 +1,316 @@
+@using System.Diagnostics
+@using Aiursoft.CSTools.Tools
+@using Aiursoft.HowToCookViewer.Authorization
+@using Aiursoft.WebTools
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+@{
+    var process = Process.GetCurrentProcess();
+}
+
+@* A standard page header provides a clear and consistent entry point. *@
+<h1 class="h3 mb-3">@Localizer["System Information"]</h1>
+<p class="lead">@Localizer["An overview of the application's server environment, process, and current request context."]</p>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                               data-lucide="server"></i>@Localizer["Server & Process Information"]</h5>
+            </div>
+            <div class="table-responsive">
+                @* By removing card-body and adding mb-0 to the table, it fits perfectly. *@
+                <table class="table table-striped table-hover table-sm mb-0">
+                    <tr>
+                        <th class="w-25">@Localizer["Property"]</th>
+                        <th>@Localizer["Value"]</th>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["System"]</td>
+                        <td>@Aiursoft.CSTools.Services.OperatingSystemExtensions.TryGetFullOsVersion() @(Environment.Is64BitOperatingSystem ? "(64-bit)" : "(32-bit)")</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Machine Name"]</td>
+                        <td>@Environment.MachineName</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["User Name"]</td>
+                        <td>@Environment.UserDomainName\@Environment.UserName</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Directory"]</td>
+                        <td>@Environment.CurrentDirectory</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer[".NET Version"]</td>
+                        <td>@Environment.Version</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Worker Process"]</td>
+                        <td>
+                            [@process.Id] @process.ProcessName @(Environment.Is64BitProcess ? "(64-bit)" : "(32-bit)")</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Start Time"]</td>
+                        <td>
+                            <label class="text-monospace" data-utc-time="@process.StartTime.ToHtmlDateTime()"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Server Time"]</td>
+                        <td>
+                            <label data-utc-time="@DateTime.UtcNow.ToHtmlDateTime()" class="text-monospace"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Memory Usage"]</td>
+                        <td>@(process.WorkingSet64 / 1024 / 1024) MB</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Docker Container"]</td>
+                        <td>@(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                               data-lucide="git-branch"></i>@Localizer["Database Migrations"]</h5>
+            </div>
+            <div class="table-responsive" style="max-height: 400px;">
+                <table class="table table-striped table-hover table-sm mb-0">
+                    <thead>
+                    <tr>
+                        <th>@Localizer["Migration"]</th>
+                        <th class="text-end">@Localizer["Created"]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var m in ((List<Aiursoft.HowToCookViewer.Models.SystemViewModels.MigrationEntry>)Model.AppliedMigrations))
+                    {
+                        <tr>
+                            <td>@m.Name</td>
+                            <td class="text-end text-monospace small">
+                                @if (m.AppliedAt.HasValue)
+                                {
+                                    <label data-utc-time="@m.AppliedAt.Value.ToString("o")"></label>
+                                }
+                                else
+                                {
+                                    @m.Id
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                    <tfoot class="table-group-divider">
+                    <tr class="fw-semibold">
+                        <td>@Localizer["Applied / Defined"]</td>
+                        <td class="text-end">@Model.AppliedMigrations.Count / @Model.TotalDefinedMigrations</td>
+                    </tr>
+                    @if (((List<string>)Model.PendingMigrations).Count > 0)
+                    {
+                        <tr class="table-warning">
+                            <td colspan="2">
+                                <i class="align-middle me-1" data-lucide="alert-triangle"></i>
+                                @string.Format(Localizer["Pending: {0}"].Value, string.Join(", ", (List<string>)Model.PendingMigrations))
+                            </td>
+                        </tr>
+                    }
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                               data-lucide="list-ordered"></i>@Localizer["Request HTTP Headers"]</h5>
+            </div>
+            <div class="table-responsive" style="max-height: 400px;">
+                <table class="table table-striped table-hover table-sm mb-0">
+                    <thead>
+                    <tr>
+                        <th>@Localizer["Header"]</th>
+                        <th>@Localizer["Value"]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Context.Request.Headers)
+                    {
+                        <tr>
+                            <td>@item.Key</td>
+                            <td>@item.Value.ToString().SafeSubstring(200)</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                               data-lucide="info"></i>@Localizer["Request Properties"]</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-sm mb-0">
+                    <tr>
+                        <th>@Localizer["Property"]</th>
+                        <th>@Localizer["Value"]</th>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Host"]</td>
+                        <td>@Context.Request.Host</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Path"]</td>
+                        <td>@Context.Request.Path</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Method"]</td>
+                        <td>@Context.Request.Method</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Protocol"]</td>
+                        <td>@Context.Request.Protocol</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Scheme"]</td>
+                        <td>@Context.Request.Scheme</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Is HTTPS"]</td>
+                        <td>@Context.Request.IsHttps</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Remote IP"]</td>
+                        <td>@Context.Connection.RemoteIpAddress?.ToString()</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Remote Port"]</td>
+                        <td>@Context.Connection.RemotePort</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Local Port"]</td>
+                        <td>@Context.Connection.LocalPort</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                               data-lucide="database"></i>@Localizer["Database Table Counts"]</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-sm mb-0">
+                    <thead>
+                    <tr>
+                        <th>@Localizer["Table"]</th>
+                        <th class="text-end">@Localizer["Rows"]</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var kv in ((Dictionary<string, long>)Model.TableCounts).OrderBy(kv => kv.Key))
+                    {
+                        <tr>
+                            <td>@kv.Key</td>
+                            <td class="text-end">@kv.Value.ToString("N0")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @if ((await AuthorizationService.AuthorizeAsync(User, AppPermissionNames.CanRebootThisApp)).Succeeded)
+        {
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title mb-0"><i class="align-middle me-2"
+                                                   data-lucide="alert-triangle"></i>@Localizer["Danger Zone"]</h5>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Localizer["Restart Application"]</h5>
+                    <p class="card-text small">
+                        @Localizer["This will gracefully shut down the application. A process manager is expected to restart it."]
+                    </p>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#restartConfirmModal">
+                        @Localizer["Request Restart"]
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@* The Modal is enhanced with a prominent warning icon for better visual communication. *@
+<div class="modal fade" id="restartConfirmModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="restartModalLabel">@Localizer["Confirm Application Restart"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-3">
+                    <i class="align-middle text-danger" data-lucide="alert-triangle"
+                       style="width: 48px; height: 48px;"></i>
+                </div>
+                <p class="text-center">@Localizer["Are you sure you want to restart the application? This action is irreversible and will terminate all active connections."]</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
+                <button type="button" class="btn btn-danger btn-restart">@Localizer["Yes, Restart Now"]</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const restartButton = document.querySelector('#restartConfirmModal .btn-restart');
+            if (!restartButton) return;
+
+            function startTimer(duration, displayElement) {
+                let timer = duration;
+                displayElement.textContent = `@Localizer["Restarting..."] (${timer}s)`;
+                const interval = setInterval(function () {
+                    timer--;
+                    displayElement.textContent = `@Localizer["Restarting..."] (${timer}s)`;
+                    if (timer <= 0) {
+                        clearInterval(interval);
+                        displayElement.textContent = `@Localizer["Reloading page..."]`;
+                    }
+                }, 1000);
+            }
+
+            restartButton.addEventListener('click', function () {
+                fetch('/System/Shutdown', {
+                    method: 'POST'
+                }).catch(error => console.error('Error sending shutdown request:', error));
+
+                restartButton.disabled = true;
+                const cancelButton = document.querySelector('#restartConfirmModal .btn-secondary');
+                if (cancelButton) {
+                    cancelButton.disabled = true;
+                }
+                startTimer(10, restartButton);
+                setTimeout(function () {
+                    window.location.reload();
+                }, 10000);
+            });
+        });
+    </script>
+}

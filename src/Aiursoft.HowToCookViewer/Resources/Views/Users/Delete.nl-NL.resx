@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>Weet u zeker dat u deze gebruiker wilt verwijderen?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Weet u het zeker?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Terug naar lijst</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Aanmaaktijd</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Gebruiker verwijderen</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Deze actie is onomkeerbaar. U staat op het punt om de volgende gebruiker en alle bijbehorende gegevens permanent te verwijderen:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>Dit gebruikersaccount wordt beheerd door een OpenID Connect (OIDC)-provider. Het verwijderen van de gebruiker hier zal alleen hun toegang en gegevens uit deze applicatie verwijderen. Het account blijft bestaan op uw OIDC-provider en kan opnieuw verschijnen na de volgende synchronisatie of als de gebruiker opnieuw inlogt. Om deze gebruiker permanent te verwijderen, moet u deze uit uw OIDC-provider verwijderen.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Gebruiker</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Waarschuwing!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ja, verwijder deze gebruiker</value>
+  </data>
+
+</root>

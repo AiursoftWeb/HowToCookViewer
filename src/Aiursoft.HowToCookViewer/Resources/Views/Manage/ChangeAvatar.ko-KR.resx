@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Avatar Settings" xml:space="preserve">
+    <value>아바타 설정</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Change avatar" xml:space="preserve">
+    <value>아바타 변경</value>
+  </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>아바타 변경</value>
+  </data>
+  <data name="Current Avatar" xml:space="preserve">
+    <value>현재 아바타</value>
+  </data>
+  <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
+    <value>최상의 결과를 얻으려면 정사각형 이미지를 .jpg 또는 .png 형식으로 사용하세요.</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>새 아바타 파일</value>
+  </data>
+  <data name="Save New Avatar" xml:space="preserve">
+    <value>새 아바타 저장</value>
+  </data>
+  <data name="Save the avatar" xml:space="preserve">
+    <value>아바타 저장</value>
+  </data>
+  <data name="Upload the new avatar file." xml:space="preserve">
+    <value>새 아바타 파일을 업로드하세요.</value>
+  </data>
+
+</root>

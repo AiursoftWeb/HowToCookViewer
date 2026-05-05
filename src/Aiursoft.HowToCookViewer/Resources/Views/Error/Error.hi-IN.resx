@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>एक त्रुटि हुई</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>आपके अनुरोध को प्रोसेस करते समय एक त्रुटि हुई।</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>होम पर वापस जाएं</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>त्रुटि।</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>यदि आपको लगता है कि आपको पहुंच के अधिकार होने चाहिए, तो कृपया अपने सिस्टम प्रबंधक से संपर्क करें। या फिर लॉग आउट करें और फिर से लॉग इन करने का प्रयास करें।</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>कृपया URL की जाँच करें और फिर से प्रयास करें। यदि आपको लगता है कि यह सर्वर त्रुटि है, तो कृपया सपोर्ट से संपर्क करें।</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>कृपया अपने अनुरोध की जाँच करें और फिर से प्रयास करें। यदि आपको लगता है कि यह सर्वर त्रुटि है, तो कृपया समर्थन से संपर्क करें।</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>कृपया सहायता के लिए व्यवस्थापक से संपर्क करें।</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>कृपया बाद में पुनः प्रयास करें या यदि समस्या बनी रहती है तो सहायता से संपर्क करें।</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>अनुरोध आईडी:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>क्षमा करें, इस पृष्ठ तक पहुँचने के लिए आपके पास आवश्यक अनुमतियाँ नहीं हैं।</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>आप जिस पृष्ठ की तलाश कर रहे हैं, उसे हटा दिया गया हो सकता है, उसका नाम बदल दिया गया हो सकता है, या अस्थायी रूप से उपलब्ध नहीं है।</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>फिर से प्रयास करें</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>हमें खेद है, आपके अनुरोध को संसाधित करते समय कुछ गलत हो गया।</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>आपका ब्राउज़र एक अनुरोध भेजा जो इस सर्वर को समझने में असमर्थ रहा।</value>
+  </data>
+
+</root>

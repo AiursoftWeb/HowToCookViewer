@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Assigned Roles" xml:space="preserve">
+    <value>Назначенные роли</value>
+  </data>
+  <data name="Back to Details" xml:space="preserve">
+    <value>Назад к деталям</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Назад к списку</value>
+  </data>
+  <data name="Back to Users List" xml:space="preserve">
+    <value>Назад к списку пользователей</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>Основная информация</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Отображаемое имя</value>
+  </data>
+  <data name="Edit User:" xml:space="preserve">
+    <value>Редактирование пользователя:</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>Оставьте пустым, если не хотите менять пароль.</value>
+  </data>
+  <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
+    <value>Измените данные пользователя или управляйте назначенными ему ролями ниже.</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Новый файл аватара</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Новый пароль</value>
+  </data>
+  <data name="Save Role Assignments" xml:space="preserve">
+    <value>Сохранить назначения ролей</value>
+  </data>
+  <data name="Save User Details" xml:space="preserve">
+    <value>Сохранить данные пользователя</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>Эта учётная запись синхронизирована с провайдером OpenID Connect (OIDC). Любые изменения, внесённые здесь (например, отображаемого имени или адреса электронной почты), могут быть перезаписаны во время следующей синхронизации данных. Для постоянных изменений, пожалуйста, обновите профиль пользователя непосредственно у вашего провайдера OIDC.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="View Details" xml:space="preserve">
+    <value>Просмотреть детали</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Внимание!</value>
+  </data>
+
+</root>

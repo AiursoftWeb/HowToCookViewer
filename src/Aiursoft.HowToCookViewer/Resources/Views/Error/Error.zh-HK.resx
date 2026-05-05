@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>發生錯誤</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>處理您的請求時發生錯誤。</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>返回主頁</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>錯誤。</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>如果您認為您應有權限存取，請聯絡您的系統管理員。或試試登出後再重新登入。</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>請檢查網址並再試一次。如果認為這是伺服器錯誤，請聯絡支援。</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>請檢查您的請求並再試一次。如果您認為這是伺服器錯誤，請聯絡支援。</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>請聯絡管理員以獲得協助。</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>如果問題持續，請稍後再試或聯絡支援。</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>請求編號：</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>抱歉，您沒有權限存取此頁面。</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>您尋找的網頁可能已被移除、名稱已更改，或暫時不可用。</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>再試一次</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>很抱歉，處理您的請求時出現錯誤。</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>您的瀏覽器傳送了一個此伺服器無法理解的請求。</value>
+  </data>
+
+</root>

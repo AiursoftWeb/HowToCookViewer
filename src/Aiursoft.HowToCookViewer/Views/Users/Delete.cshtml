@@ -1,0 +1,87 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Aiursoft.WebTools
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.UsersViewModels.DeleteViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title for consistency. *@
+<h1 class="h3 mb-3">@Localizer["Delete User"]</h1>
+
+@* The critical OIDC warning is preserved and placed prominently at the top. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider."]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+        <div class="card">
+            <div class="card-header text-center">
+                @* A large, prominent icon immediately signals a high-consequence action. *@
+                <i class="align-middle text-danger" data-lucide="shield-alert" style="width: 48px; height: 48px;"></i>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <h2 class="h4 card-title fw-bold">@Localizer["Are you sure?"]</h2>
+                    <p class="mb-3 text-muted">@Localizer["This action is irreversible. You are about to permanently delete the following user and all their associated data:"]</p>
+                </div>
+
+                @* A modern List Group is used to clearly display the user's details. *@
+                <div class="list-group list-group-flush my-4">
+                    <div class="list-group-item">
+                        <div class="row">
+                            <strong class="col-sm-3">@Localizer["User name"]</strong>
+                            <div class="col-sm-9">@Model.User.UserName</div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <strong class="col-sm-3">@Localizer["Name"]</strong>
+                            <div class="col-sm-9">@Model.User.DisplayName</div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <strong class="col-sm-3">@Localizer["Email"]</strong>
+                            <div class="col-sm-9">@Model.User.Email</div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <strong class="col-sm-3">@Localizer["Creation Time"]</strong>
+                            <div class="col-sm-9">
+                                @* Application-specific attributes like 'data-utc-time' are preserved. *@
+                                <label data-utc-time="@Model.User.CreationTime.ToHtmlDateTime()" class="text-monospace"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    @* The form now contains a clear, explicit confirmation button. *@
+                    <form asp-action="Delete" class="d-inline-block">
+                        @* The hidden input for the ID is critical and preserved. *@
+                        <input type="hidden" asp-for="@Model.User.Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="align-middle me-2" data-lucide="trash-2"></i> @Localizer["Yes, delete this user"]
+                        </button>
+                    </form>
+                    @* The "Cancel" action is styled as a safe, secondary option. *@
+                    <a asp-action="Index" class="btn btn-light">@Localizer["Cancel"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

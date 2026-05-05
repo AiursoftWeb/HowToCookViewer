@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่ว่าต้องการลบผู้ใช้นี้?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>กลับไปยังรายการ</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>เวลาที่สร้าง</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ลบผู้ใช้</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>อีเมล</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>การดำเนินการนี้ไม่สามารถย้อนกลับได้ คุณกำลังจะลบผู้ใช้รายต่อไปนี้และข้อมูลที่เกี่ยวข้องทั้งหมดอย่างถาวร:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>บัญชีผู้ใช้นี้ถูกจัดการโดยผู้ให้บริการ OpenID Connect (OIDC) การลบผู้ใช้ออกจากที่นี่จะเป็นการลบการเข้าถึงและข้อมูลของพวกเขาออกจากแอปพลิเคชันนี้เท่านั้น บัญชีจะยังคงอยู่บนผู้ให้บริการ OIDC ของคุณและอาจปรากฏขึ้นอีกครั้งหลังจากซิงค์ครั้งถัดไปหรือหากผู้ใช้เข้าสู่ระบบอีกครั้ง หากต้องการลบผู้ใช้นี้อย่างถาวร คุณต้องลบพวกเขาออกจากผู้ให้บริการ OIDC ของคุณ</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>ผู้ใช้</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>คำเตือน!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>ใช่ ลบผู้ใช้นี้</value>
+  </data>
+
+</root>

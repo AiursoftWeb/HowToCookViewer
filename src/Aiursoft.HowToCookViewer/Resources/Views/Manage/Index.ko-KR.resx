@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Management" xml:space="preserve">
+    <value>계정 관리</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>인증 공급자</value>
+  </data>
+  <data name="Avatar settings" xml:space="preserve">
+    <value>아바타 설정</value>
+  </data>
+  <data name="Change your account settings" xml:space="preserve">
+    <value>계정 설정 변경</value>
+  </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>아바타 변경</value>
+  </data>
+  <data name="Change your password" xml:space="preserve">
+    <value>비밀번호 변경</value>
+  </data>
+  <data name="Change your profile" xml:space="preserve">
+    <value>프로필 변경</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>비밀번호</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>프로필</value>
+  </data>
+  <data name="Success!" xml:space="preserve">
+    <value>성공!</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
+    <value>로컬 인증이 비활성화되어 비밀번호를 변경할 수 없습니다. 프로필은 다음에서 수정해 주세요.</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+    <value>로컬 인증이 비활성화되어 있기 때문에 비밀번호를 변경할 수 없습니다. 인증 제공업체에서 프로필을 수정해 주세요.</value>
+  </data>
+
+</root>

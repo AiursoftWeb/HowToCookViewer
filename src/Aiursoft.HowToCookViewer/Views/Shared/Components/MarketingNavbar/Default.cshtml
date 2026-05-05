@@ -1,0 +1,27 @@
+@model Aiursoft.HowToCookViewer.Views.Shared.Components.MarketingNavbar.MarketingNavbarViewModel
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark landing-navbar">
+    <div class="container">
+        <a class="navbar-brand landing-brand text-white" href="/">
+            <img src="@Model.LogoUrl" alt="logo" style="width: 24px; height: 24px;" />
+            @Model.ProjectName
+        </a>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item d-none d-md-inline-block">
+                <a class="nav-link active text-lg px-lg-3" href="https://template-docs.aiursoft.com/">@Localizer["Documentation"]</a>
+            </li>
+            <li class="nav-item d-none d-md-inline-block">
+                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template">@Localizer["Source Code"]</a>
+            </li>
+            <li class="nav-item d-none d-md-inline-block">
+                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template/discussions">@Localizer["Community"]</a>
+            </li>
+        </ul>
+        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-lg btn-primary btn-pill my-2 my-sm-0 ms-3">
+            <i class="align-middle" data-lucide="rocket"></i> @Localizer["Try the dashboard"]
+        </a>
+        <a href="https://github.com/aiursoftweb/template" target="_blank" rel="noreferer" class="btn btn-lg btn-outline-light btn-pill my-2 my-sm-0 ms-3">
+            <i class="fa-brands fa-github me-1"></i> @Localizer["GitHub"]
+        </a>
+    </div>
+</nav>

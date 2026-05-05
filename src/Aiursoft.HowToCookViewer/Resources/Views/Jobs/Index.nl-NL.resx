@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>Acties</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Achtergrondtaken</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Geannuleerd</value>
+  </data>
+  <data name="Creates test jobs in different queues (15-30s sleep, 10% failure rate). Jobs in different queues run in parallel." xml:space="preserve">
+    <value>Maakt testtaken aan in verschillende wachtrijen (15-30s slaap, 10% falen). Taken in verschillende wachtrijen worden parallel uitgevoerd.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Mislukt</value>
+  </data>
+  <data name="Finished At" xml:space="preserve">
+    <value>Afgerond op</value>
+  </data>
+  <data name="Job Name" xml:space="preserve">
+    <value>Taaknaam</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>laatste uur</value>
+  </data>
+  <data name="Last run" xml:space="preserve">
+    <value>Laatste uitvoering</value>
+  </data>
+  <data name="Monitor and manage background job queues and their execution status." xml:space="preserve">
+    <value>Monitor en beheer achtergrondtaakwachtrijen en hun uitvoeringsstatus.</value>
+  </data>
+  <data name="Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically." xml:space="preserve">
+    <value>Bewerk en beheer achtergrondtaakwachtrijen. Start elke geregistreerde taak handmatig of laat de scheduler deze automatisch uitvoeren.</value>
+  </data>
+  <data name="Never executed" xml:space="preserve">
+    <value>Niet uitgevoerd</value>
+  </data>
+  <data name="New Job A" xml:space="preserve">
+    <value>Nieuwe taak A</value>
+  </data>
+  <data name="New Job B" xml:space="preserve">
+    <value>Nieuwe taak B</value>
+  </data>
+  <data name="No background jobs are registered. Add jobs using services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs." xml:space="preserve">
+    <value>Er zijn geen achtergrondtaken geregistreerd. Voeg taken toe met services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs.</value>
+  </data>
+  <data name="No jobs" xml:space="preserve">
+    <value>Geen taken</value>
+  </data>
+  <data name="No jobs have run in the last hour." xml:space="preserve">
+    <value>Er zijn in het laatste uur geen taken uitgevoerd.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Wachten</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Bezig met verwerken</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>Wachtrij</value>
+  </data>
+  <data name="Queue Name" xml:space="preserve">
+    <value>Wachtrijnaam</value>
+  </data>
+  <data name="Queued At" xml:space="preserve">
+    <value>In wachtrij gezet op</value>
+  </data>
+  <data name="Recent Execution History" xml:space="preserve">
+    <value>Recent Execution History</value>
+  </data>
+  <data name="Registered Jobs" xml:space="preserve">
+    <value>Geregistreerde taken</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Succes</value>
+  </data>
+  <data name="Trigger Now" xml:space="preserve">
+    <value>Nu activeren</value>
+  </data>
+
+</root>

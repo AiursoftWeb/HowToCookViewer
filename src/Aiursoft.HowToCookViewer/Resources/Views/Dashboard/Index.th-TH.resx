@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>การสนับสนุนแบบ &quot;Fire-and-forget&quot; สำหรับงานที่ใช้เวลานาน (เช่น อีเมลหรือปัญญาประดิษฐ์) พร้อมด้วยอินเทอร์เฟซกราฟิกสำหรับการจัดการคิว การประมวลผลแบบขนาน และการยกเลิก</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>ระบบควบคุมการเข้าถึงตามบทบาท (RBAC) ในตัว สำหรับการจัดการสิทธิ์แบบละเอียด</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>โซลูชันที่สมบูรณ์สำหรับการยืนยันตัวตนผู้ใช้และการจัดการโปรไฟล์ที่พร้อมใช้งานทันที</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>โซลูชันครบวงจรสำหรับการยืนยันตัวตนของผู้ใช้และการจัดการโปรไฟล์</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>การออกแบบที่ตอบสนองอย่างสมบูรณ์ซึ่งดูดีทั้งบนเดสก์ท็อปและอุปกรณ์มือถือ</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>พื้นฐานที่ทันสมัย อุดมไปด้วยคุณสมบัติ และสามารถขยายได้สูงสำหรับเว็บแอปพลิเคชันถัดไปของคุณ</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>การแปลด้วยพลังปัญญาประดิษฐ์</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>การอ้างอิงทั้งหมดจะถูกลงทะเบียนโดยอัตโนมัติและพร้อมใช้งานเสมอผ่านการฉีดคอนสตรัคเตอร์</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>โหมดมืดอัตโนมัติ</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>การฉีดกำหนดการอัตโนมัติ</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>การจัดการเขตเวลาอัตโนมัติ</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>การแปลภาษาอัตโนมัติด้วยปัญญาประดิษฐ์ถึง 28 ภาษาเพื่อการเข้าถึงทั่วโลก</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>การแปลอัตโนมัติแบบขับเคลื่อนด้วยปัญญาประดิษฐ์ สำหรับ 28 ภาษา</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>การประมวลผลงานหลังบ้าน</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>การจัดการผู้ใช้ในตัว</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>มาพร้อมการรองรับ Docker สำหรับการจัดส่งที่ง่ายและสอดคล้องกัน</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>มาพร้อมการสนับสนุน Docker เต็มรูปแบบเพื่อให้การปรับใช้เป็นเรื่องง่าย สม่ำเสมอ และเชื่อถือได้</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>เอกสารประกอบที่ครอบคลุม</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>การตรวจสอบความสอดคล้อง</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>พัฒนาเฉพาะในเวลา UTC โดยระบบจะแปลงและแสดงวันที่โดยอัตโนมัติเป็นเขตเวลาท้องถิ่นของผู้ใช้</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>พร้อมใช้งานด้วย Docker</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>ใช้ Docker สำหรับการติดตั้งที่ง่าย</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>แถบนำทางแบบไดนามิก</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>สลับระหว่างผู้ให้บริการฐานข้อมูลได้อย่างง่ายดาย รวมถึง SQLite, MySQL, SQL Server และฐานข้อมูลในหน่วยความจำสำหรับการทดสอบ</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>สลับระหว่างผู้ให้บริการอย่าง SQLite, MySQL, SQL Server และฐานข้อมูลในหน่วยความจำสำหรับการทดสอบได้อย่างง่ายดาย</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>เขียนการทดสอบการผสานรวมได้อย่างง่ายดาย โดยใช้ฐานข้อมูลในหน่วยความจำ ระบบไฟล์ชั่วคราว การจำลองแบบที่มีอยู่ในตัว และการจำลองการร้องขอ HTTP แบบจริงในโลกแห่งความเป็นจริง</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>มีระบบจัดการไฟล์ภายในพร้อมการบีบอัดภาพประจำตัวอัตโนมัติและป้องกันความเป็นส่วนตัว</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>มีระบบจัดการไฟล์ในตัวพร้อมการบีบอัดภาพโปรไฟล์อัตโนมัติ</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>จัดการงานที่เกิดซ้ำ เช่น การทำความสะอาดและซิงค์ข้อมูล ด้วยอินเทอร์เฟซกราฟิกที่ครอบคลุมสำหรับติดตามประวัติการดำเนินงานและบันทึกการใช้งาน</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>สวัสดีชาวโลก!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>ประกอบด้วยเอกสารประกอบที่ครอบคลุมและตัวอย่างเชิงปฏิบัติเพื่อช่วยให้คุณเริ่มต้นได้อย่างรวดเร็ว</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>การจัดการไฟล์แบบบูรณาการ</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์ตามการตั้งค่าข้อมูล</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>การรองรับผู้ให้บริการฐานข้อมูลหลายตัว</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>รองรับหลายฐานข้อมูล</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>การผสานรวม OpenID Connect</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>การอนุญาตตามบทบาท RBAC</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>อ่านเอกสาร</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>การออกแบบที่ตอบสนอง</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>การทดสอบการผสานรวมที่มั่นคง</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>การจัดการงานที่กำหนดเวลา</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>ผสานรวมได้อย่างราบรื่นกับผู้ให้บริการ OpenID Connect ใดก็ได้ พร้อมการซิงโครไนซ์บทบาทอัตโนมัติ</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>การแทนที่การตั้งค่าอัจฉริยะ</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>โหมดมืดอัจฉริยะที่ปรับตัวตามการตั้งค่าระบบของผู้ใช้</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>โหมดมืดอัจฉริยะที่ปรับเปลี่ยนให้เข้ากับการตั้งค่าระบบของผู้ใช้โดยอัตโนมัติ</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>เริ่มต้นโปรเจกต์ใหม่</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>รองรับตัวแปรสภาพแวดล้อมและตั้งค่าที่เก็บไว้ในฐานข้อมูลทั้งสองแบบ โดยให้ลำดับความสำคัญอัตโนมัติแก่ตัวแปรสภาพแวดล้อมเพื่อให้สามารถแทนที่ได้อย่างราบรื่น</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>แถบนำทางจะปรับเปลี่ยนโดยอัตโนมัติตามบทบาทและสิทธิ์ของผู้ใช้</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>นี่คือโปรเจกต์เทมเพลต ซึ่งเป็นจุดเริ่มต้นของการเดินทางของเรา...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>ยินดีต้อนรับ</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>ทำไมต้องใช้ Aiursoft Template?</value>
+  </data>
+
+</root>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Tilbage til listen</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Opret</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>Opret en ny bruger</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Opret en adgangskode til den nye bruger</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Opret ny bruger</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Opret bruger</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Visningsnavn</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-mail-adresse</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Indtast visningsnavn</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>Indtast e-mailadresse</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Indtast brugernavn</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) er aktiveret. Brugerkonti synkroniseres fra en ekstern identitetsudbyder. Vi anbefaler på det kraftigste at oprette nye brugere på din OIDC-udbyder for at sikre, at de administreres centralt. Denne formular vil oprette en lokal konto, som kun eksisterer inden for denne applikation.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Adgangskode</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Bruger</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Brugerkontodetaljer</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Brugernavn</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Advarsel!</value>
+  </data>
+
+</root>

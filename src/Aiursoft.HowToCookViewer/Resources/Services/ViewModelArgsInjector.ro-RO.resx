@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>Acces respins</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administrare</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Șablon Aiursoft</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonim</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Joburi în fundal</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Cerere greșită</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Schimbă Avatarul</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Schimbare parolă</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Modifică Profilul</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>Apasă pentru a te autentifica</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Creează Rol</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Creează utilizator</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Panou de control</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Șterge Rol</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Șterge utilizator</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Editează Rol</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Editează Utilizator</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Eroare</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Caracteristici</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Setări globale</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Acasă</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informații</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Eroare internă a serverului</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Blocare</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Autentificare</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>Conectează-te pentru a accesa toate funcționalitățile.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Gestionează</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Nu a fost găsit</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detalii permisiuni</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permisiuni</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Setări Profil</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Înregistrare</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Detalii Rol</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roluri</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>Deconectare</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informații despre Sistem</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Șablon</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Neautorizat</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Detalii Utilizator</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilizatori</value>
+  </data>
+
+</root>

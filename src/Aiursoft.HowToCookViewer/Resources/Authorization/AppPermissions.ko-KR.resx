@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add New Roles" xml:space="preserve">
+    <value>새 역할 추가</value>
+  </data>
+  <data name="Add New Users" xml:space="preserve">
+    <value>새 사용자 추가</value>
+  </data>
+  <data name="Allows assigning or removing roles for any user." xml:space="preserve">
+    <value>모든 사용자에게 역할을 할당하거나 제거할 수 있습니다.</value>
+  </data>
+  <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
+    <value>역할 이름과 할당된 권한을 수정할 수 있습니다.</value>
+  </data>
+  <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
+    <value>사용자의 이메일 및 역할과 같은 세부 정보 수정을 허용하며, 사용자 비밀번호 재설정도 가능합니다.</value>
+  </data>
+  <data name="Allows the permanent deletion of roles." xml:space="preserve">
+    <value>역할을 영구적으로 삭제할 수 있습니다.</value>
+  </data>
+  <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
+    <value>사용자 계정의 영구 삭제를 허용합니다.</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>전역 애플리케이션 설정을 확인하고 수정할 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing system-level information and settings." xml:space="preserve">
+    <value>시스템 수준 정보 및 설정을 볼 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>백그라운드 작업 대시보드를 조회하고 작업을 관리할 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>모든 권한 목록과 해당 권한이 역할 및 사용자에게 할당된 내용을 볼 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing the list of all users." xml:space="preserve">
+    <value>모든 사용자 목록을 볼 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
+    <value>역할 목록과 할당된 권한을 볼 수 있습니다.</value>
+  </data>
+  <data name="Assign Roles to Users" xml:space="preserve">
+    <value>사용자에게 역할 할당</value>
+  </data>
+  <data name="Delete Roles" xml:space="preserve">
+    <value>역할 삭제</value>
+  </data>
+  <data name="Delete Users" xml:space="preserve">
+    <value>사용자 삭제</value>
+  </data>
+  <data name="Edit Role Information" xml:space="preserve">
+    <value>역할 정보 편집</value>
+  </data>
+  <data name="Edit User Information" xml:space="preserve">
+    <value>사용자 정보 편집</value>
+  </data>
+  <data name="Grants permission to create new roles." xml:space="preserve">
+    <value>새로운 역할을 생성할 수 있는 권한을 부여합니다.</value>
+  </data>
+  <data name="Grants permission to create new user accounts." xml:space="preserve">
+    <value>새로운 사용자 계정을 생성할 수 있는 권한을 부여합니다.</value>
+  </data>
+  <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
+    <value>애플리케이션 인스턴스를 재시작할 수 있는 권한을 부여합니다. 가용성 중단을 초래할 수 있으나 모든 설정과 캐시가 다시 로드됩니다.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>전역 설정 관리</value>
+  </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>권한 읽기</value>
+  </data>
+  <data name="Read Roles" xml:space="preserve">
+    <value>역할 읽기</value>
+  </data>
+  <data name="Read Users" xml:space="preserve">
+    <value>사용자 읽기</value>
+  </data>
+  <data name="Reboot This App" xml:space="preserve">
+    <value>이 앱 재시작</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>백그라운드 작업 보기</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>시스템 컨텍스트 보기</value>
+  </data>
+
+</root>

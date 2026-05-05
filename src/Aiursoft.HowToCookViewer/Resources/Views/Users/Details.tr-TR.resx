@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Details" xml:space="preserve">
+    <value>Hesap Detayları</value>
+  </data>
+  <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
+    <value>Kullanıcının profilinin, atanmış rollerin ve etkin izinlerin bir özeti.</value>
+  </data>
+  <data name="Assigned Roles" xml:space="preserve">
+    <value>Atanmış Roller</value>
+  </data>
+  <data name="Back to list" xml:space="preserve">
+    <value>Listeye Dön</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>Temel Bilgiler</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Oluşturulma Zamanı</value>
+  </data>
+  <data name="Delete this User" xml:space="preserve">
+    <value>Bu Kullanıcıyı Sil</value>
+  </data>
+  <data name="Edit this User" xml:space="preserve">
+    <value>Bu Kullanıcıyı Düzenle</value>
+  </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Etkin İzinler</value>
+  </data>
+  <data name="Effective Permissions (from all roles)" xml:space="preserve">
+    <value>Etkin İzinler (tüm rollerden)</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-posta</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profil Detayları</value>
+  </data>
+  <data name="This user has no effective permissions." xml:space="preserve">
+    <value>Bu kullanıcının etkin izinleri bulunmamaktadır.</value>
+  </data>
+  <data name="This user has not been assigned any roles." xml:space="preserve">
+    <value>Bu kullanıcıya herhangi bir rol atanmamıştır.</value>
+  </data>
+  <data name="User Details:" xml:space="preserve">
+    <value>Kullanıcı Detayları:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+  </data>
+
+</root>

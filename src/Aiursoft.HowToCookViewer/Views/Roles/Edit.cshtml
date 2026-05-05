@@ -1,0 +1,80 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Localization
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.RolesViewModels.EditViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title for consistency. *@
+<h1 class="h3 mb-3">@Localizer["Edit Role"]</h1>
+
+@* The critical OIDC warning is preserved and placed prominently at the top. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider."]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+        @* The form now wraps the entire card to ensure all inputs are submitted correctly. *@
+        <form asp-action="Edit" asp-route-id="@Model.Id">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["Role Details and Permissions"]</h5>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="RoleName" class="form-label">@Localizer["Role Name"]</label>
+                        <input asp-for="RoleName" class="form-control form-control-lg" />
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h5 class="mb-3">@Localizer["Manage Permissions for this Role"]</h5>
+                    @* A List Group is used for a cleaner and more structured presentation of claims. *@
+                    <div class="list-group list-group-flush border rounded">
+                        @for (var i = 0; i < Model.Claims.Count; i++)
+                        {
+                            <div class="list-group-item">
+                                <div class="form-check">
+                                    @* All hidden fields and the checkbox are preserved exactly as required for model binding. *@
+                                    <input type="hidden" asp-for="@Model.Claims[i].Key" />
+                                    <input type="hidden" asp-for="@Model.Claims[i].Name" />
+                                    <input type="hidden" asp-for="@Model.Claims[i].Description" />
+                                    <input asp-for="@Model.Claims[i].IsSelected" class="form-check-input" />
+
+                                    <label class="form-check-label" for="@Html.IdFor(m => m.Claims[i].IsSelected)">
+                                        <strong>@PermissionLocalizer[Model.Claims[i].Name]</strong>
+                                    </label>
+                                    <div class="text-muted ms-4">
+                                        <small>@PermissionLocalizer[Model.Claims[i].Description]</small>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">@Localizer["Save Changes"]</button>
+                    <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

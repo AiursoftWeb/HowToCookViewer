@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>브랜드 홈페이지 링크</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>테스트용 더미 선택 항목입니다.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>테스트용 가짜 번호입니다.</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>사용자 닉네임 조정 허용</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>프로필 관리 페이지에서 사용자가 닉네임을 수정할 수 있도록 허용합니다.</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>브랜드 홈 URL</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>브랜드 이름</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>임의 선택</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>임시 번호</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>ICP 번호</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>프로젝트 로고</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>프로젝트 이름</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>푸터에 표시되는 브랜드 이름</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>중국 대륙 사용자를 위한 ICP 라이선스 번호. 비워두면 숨깁니다.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>네비게이션 바와 푸터에 표시되는 프로젝트의 로고입니다. jpg, png, svg 형식을 지원합니다.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>프론트엔드에 표시되는 프로젝트 이름</value>
+  </data>
+
+</root>

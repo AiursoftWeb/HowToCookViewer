@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Ondersteuning voor &quot;fire-and-forget&quot; bij langlopende taken (zoals e-mails of AI), met een GUI voor wachtrijbeheer, parallelle verwerking en annulering.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>Een ingebouwd Role-Based Access Control (RBAC)-systeem voor gedetailleerd rechtenbeheer.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>Een complete oplossing voor gebruikersauthenticatie en profielbeheer, direct klaar voor gebruik.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>Een complete oplossing voor gebruikersauthenticatie en profielbeheer.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>Een volledig responsieve lay-out die er geweldig uitziet op zowel desktop- als mobiele apparaten.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>Een moderne, functierijke en zeer uitbreidbare basis voor uw volgende webapplicatie.</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>AI-gestuurde vertalingen</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>Alle afhankelijkheden worden automatisch geregistreerd en zijn altijd beschikbaar via constructorinjectie.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>Automatische Donkere Modus</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>Automatische Dependency Injection</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Automatische tijdzonebehandeling</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>Automatische, AI-gestuurde vertaling in 28 talen voor wereldwijd bereik.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Automatische, AI-gebaseerde vertaling in 28 talen.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Achtergrondtaakverwerking</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Ingebouwd gebruikersbeheer</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Kom met Docker-ondersteuning voor vereenvoudigde en consistente implementaties.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>Biedt volledige Docker-ondersteuning voor vereenvoudigde, consistente en betrouwbare implementaties.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>Uitgebreide documentatie</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Consistentievalidatie</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Ontwikkel uitsluitend in UTC terwijl het systeem data automatisch converteert en weergeeft in de lokale tijdzone van de gebruiker.</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>Gedockeriseerd voor implementatie</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Dockerized voor eenvoudige implementatie</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>Dynamische navigatiebalk</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Eenvoudig wisselen tussen databaseproviders, inclusief SQLite, MySQL, SQL Server en een in-memory database voor testen.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Schakel eenvoudig tussen providers zoals SQLite, MySQL, SQL Server en een in-memory database voor testen.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Schrijf eenvoudig integratietests met behulp van in-memory databases, tijdelijke bestandssystemen, ingebouwde mocking en realistische HTTP-aanvraag-simulatie.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Heeft een ingebouwd bestandsbeheersysteem met automatische avatarcompressie en privacybescherming.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>Beschikt over een ingebouwd bestandsbeheersysteem met automatische avatarcompressie.</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Verwerk herhalende taken zoals opschonen en synchronisatie met een uitgebreide GUI voor het bewaken van uitvoeringsgeschiedenis en logbestanden.</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>Hallo Wereld!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>Bevat uitgebreide documentatie en praktische voorbeelden om je snel op weg te helpen.</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>Geïntegreerd Bestandsbeheer</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>Modellen worden gevalideerd aan zowel de client- als de serverside op basis van dataannotaties.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Ondersteuning voor meerdere databaseproviders</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>Ondersteuning voor meerdere databases</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>OpenID Connect-integratie</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>RBAC-autorisatie</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Lees het document</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>Responsief Ontwerp</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Robuuste integratietests</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Geplande taakbeheer</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>Integreer naadloos met elke OpenID Connect-provider, met automatische rol-synchronisatie.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Slimme configuratie-overschrijvingen</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Slimme donkere modus die zich aanpast aan de systeeminstellingen van de gebruiker.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Slimme donkere modus die automatisch aanpast aan de systeeminstellingen van de gebruiker.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Start een nieuw project</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>De navigatiebalk past zich automatisch aan op basis van gebruikersrollen en machtigingen.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Dit is een sjabloonproject, waar we de verkenner starten...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welkom</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Waarom de Aiursoft Template gebruiken?</value>
+  </data>
+
+</root>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="A comprehensive overview of the role, its permissions, and assigned users." xml:space="preserve">
+    <value>해당 역할, 권한 및 할당된 사용자에 대한 포괄적인 개요입니다.</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>할당된 사용자</value>
+  </data>
+  <data name="Back to Roles List" xml:space="preserve">
+    <value>역할 목록으로 돌아가기</value>
+  </data>
+  <data name="Delete this Role" xml:space="preserve">
+    <value>이 역할 삭제</value>
+  </data>
+  <data name="Edit this Role" xml:space="preserve">
+    <value>이 역할 편집</value>
+  </data>
+  <data name="No users are currently assigned to this role." xml:space="preserve">
+    <value>현재 이 역할에 할당된 사용자가 없습니다.</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>부여된 권한</value>
+  </data>
+  <data name="Permissions Granted by this Role" xml:space="preserve">
+    <value>이 역할로 부여된 권한</value>
+  </data>
+  <data name="Role Details:" xml:space="preserve">
+    <value>역할 상세 정보:</value>
+  </data>
+  <data name="This role has no specific permissions assigned." xml:space="preserve">
+    <value>이 역할에 지정된 특정 권한이 없습니다.</value>
+  </data>
+  <data name="Users with this Role" xml:space="preserve">
+    <value>이 역할을 가진 사용자</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="View User" xml:space="preserve">
+    <value>사용자 보기</value>
+  </data>
+
+</root>

@@ -1,0 +1,78 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.RolesViewModels.DetailsViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+
+@* A standard page header that includes the role's name for context and all relevant action buttons. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Role Details:"] <span class="text-muted">@Model.Role.Name</span></h3>
+    </div>
+    <div class="col-auto ms-auto text-end mt-n1">
+        <a asp-action="Edit" asp-route-id="@Model.Role.Id" class="btn btn-primary">@Localizer["Edit this Role"]</a>
+        <a asp-action="Delete" asp-route-id="@Model.Role.Id" class="btn btn-danger">@Localizer["Delete this Role"]</a>
+        <a asp-action="Index" class="btn btn-light">@Localizer["Back to Roles List"]</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="shield-check"></i> @Localizer["Permissions Granted"]</h5>
+            </div>
+            @* The List Group component replaces the obsolete <dl> for a cleaner look. *@
+            <div class="list-group list-group-flush">
+                @if (Model.Permissions.Any())
+                {
+                    @foreach (var permission in Model.Permissions)
+                    {
+                        <div class="list-group-item">
+                            <strong>@PermissionLocalizer[permission.Name]</strong>
+                            <p class="text-muted mb-0">@PermissionLocalizer[permission.Description]</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["This role has no specific permissions assigned."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="users"></i> @Localizer["Assigned Users"]</h5>
+            </div>
+            @* The existing List Group structure is preserved but icons are updated. *@
+            <div class="list-group list-group-flush">
+                @if (Model.UsersInRole.Any())
+                {
+                    @foreach (var user in Model.UsersInRole)
+                    {
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>
+                                <i class="align-middle me-2" data-lucide="user"></i>
+                                @user.UserName
+                            </span>
+                            <a asp-controller="Users" asp-action="Details" asp-route-id="@user.Id" class="btn btn-sm btn-outline-primary">
+                                <i class="align-middle me-1" data-lucide="eye"></i>
+                                @Localizer["View"]
+                            </a>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["No users are currently assigned to this role."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

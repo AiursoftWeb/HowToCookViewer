@@ -1,0 +1,54 @@
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@model Aiursoft.HowToCookViewer.Models.ManageViewModels.ChangeAvatarViewModel
+@inject StorageService StorageService
+@* Standard page title, consistent with the rest of the template. *@
+<h1 class="h3 mb-3" xmlns="http://www.w3.org/1999/html">@Localizer["Change your avatar"]</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["Avatar Settings"]</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                @* UX Enhancement: Display the current avatar to provide context. The model's AvatarUrl is used here. *@
+                <p class="h5">@Localizer["Current Avatar"]</p>
+                <a href="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)" target="_blank" rel="noopener noreferrer">
+                    <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
+                </a>
+                <p class="text-muted"><small>@Localizer["For best results, use a square image in .jpg or .png format."]</small></p>
+            </div>
+            <div class="col-md-8">
+                <form asp-controller="Manage" asp-action="ChangeAvatar" method="post">
+
+                    @* Validation summary is preserved for clear error feedback. *@
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    @* The custom View Component is wrapped in the standard form structure. *@
+                    <div class="mb-3">
+                        <label asp-for="AvatarUrl" class="form-label">@Localizer["New avatar file"]</label>
+                        <vc:file-upload asp-for="@Model.AvatarUrl" subfolder="avatar" allowed-extensions="png bmp jpg" max-size-in-mb="10"></vc:file-upload>
+                        <span asp-validation-for="AvatarUrl" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">@Localizer["Save New Avatar"]</button>
+                        @* A "Cancel" button is added as a standard UX practice for settings pages. *@
+                        <a asp-controller="Manage" asp-action="Index" class="btn btn-light">@Localizer["Cancel"]</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>Versi .NET</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>Ringkasan lingkungan server aplikasi, proses, dan konteks permintaan saat ini.</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>Diterapkan / Didefinisikan</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>Apakah Anda yakin ingin memulai ulang aplikasi? Tindakan ini tidak dapat dibatalkan dan akan mengakhiri semua koneksi aktif.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>Konfirmasi Restart Aplikasi</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Dibuat</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Zona Bahaya</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>Migrasi Basis Data</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>Jumlah Tabel Basis Data</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Direktori</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>Kontainer Docker</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>Apakah HTTPS</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>Port Lokal</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>Nama Mesin</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>Penggunaan Memori</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Metode</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>Migrasi</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Jalur</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Properti</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>Protokol</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>Memuat ulang halaman...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>Alamat IP Remote</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>Port Remote</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>Header Permintaan HTTP</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>Properti Permintaan</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>Minta Restart</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>Mulai Ulang Aplikasi</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>Memulai ulang...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Baris</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Skema</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>Informasi Server &amp; Proses</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>Waktu Server</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>Waktu Mulai</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>Informasi Sistem</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>Ini akan mematikan aplikasi dengan lancar. Manajer proses diharapkan akan memulihkannya.</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Nama Pengguna</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Nilai</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>Proses Worker</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>Ya, Restart Sekarang</value>
+  </data>
+
+</root>

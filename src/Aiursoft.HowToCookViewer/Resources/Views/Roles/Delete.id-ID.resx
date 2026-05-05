@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this role?" xml:space="preserve">
+    <value>Apakah Anda yakin ingin menghapus peran ini?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Apakah Anda yakin?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Kembali ke Daftar</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Hapus</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Hapus Peran</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Peran</value>
+  </data>
+  <data name="Role name" xml:space="preserve">
+    <value>Nama Peran</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following role:" xml:space="preserve">
+    <value>Tindakan ini tidak dapat dibatalkan. Anda akan menghapus secara permanen peran berikut:</value>
+  </data>
+  <data name="This role is managed by an OpenID Connect (OIDC) provider. Deleting the role here will only remove it from this application. The role will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this role, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>Peran ini dikelola oleh penyedia OpenID Connect (OIDC). Menghapus peran di sini hanya akan menghapusnya dari aplikasi ini. Peran akan tetap ada di penyedia OIDC Anda dan mungkin muncul kembali setelah sinkronisasi berikutnya atau jika pengguna masuk lagi. Untuk menghapus peran ini secara permanen, Anda harus menghapusnya dari penyedia OIDC Anda.</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Peringatan!</value>
+  </data>
+  <data name="Yes, delete this role" xml:space="preserve">
+    <value>Ya, hapus peran ini</value>
+  </data>
+
+</root>

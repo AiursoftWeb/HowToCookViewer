@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
+  <data name="Aiursoft Template - A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>Aiursoft Template - आपके अगले वेब एप्लिकेशन के लिए एक आधुनिक, सुविधा-संपन्न और अत्यधिक विस्तार योग्य आधार।</value>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>समुदाय</value>
+  </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>योगदान</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>प्रलेखन</value>
+  </data>
+  <data name="Get Started" xml:space="preserve">
+    <value>शुरू हो जाओ</value>
+  </data>
+  <data name="Github" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="Legal" xml:space="preserve">
+    <value>कानूनी</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>लाइसेंस</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>प्रोजेक्ट</value>
+  </data>
+  <data name="Report an Issue" xml:space="preserve">
+    <value>एक समस्या रिपोर्ट करें</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>संसाधन</value>
+  </data>
+  <data name="Social" xml:space="preserve">
+    <value>सामाजिक</value>
+  </data>
+  <data name="Source Code" xml:space="preserve">
+    <value>सोर्स कोड</value>
+  </data>
+
+</root>

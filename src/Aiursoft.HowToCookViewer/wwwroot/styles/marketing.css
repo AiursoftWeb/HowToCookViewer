@@ -1,0 +1,177 @@
+/* =========================================
+   Immersive Section Styles
+   ========================================= */
+
+.immersive-section {
+    background-color: #161a27;
+    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Shared styles for background containers */
+.immersive-bg,
+.immersive-bg-right {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Specific positioning and masks */
+.immersive-bg {
+    left: 0;
+    padding-left: 2%;
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.immersive-bg-right {
+    right: 0;
+    padding-right: 2%;
+    -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
+    mask-image: linear-gradient(to left, black 85%, transparent 100%);
+}
+
+/* Shared styles for image wrappers */
+.immersive-bg .bg-image-wrapper,
+.immersive-bg-right .bg-image-wrapper {
+    width: 95%;
+    max-width: 900px;
+    transform-origin: center center;
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.8), 
+        0 0 40px rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    filter: blur(1px) brightness(0.85); 
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Individual Transforms */
+.immersive-bg .bg-image-wrapper {
+    transform: perspective(3000px) rotateX(4deg) rotateY(5deg) scale(0.95);
+}
+
+.immersive-bg-right .bg-image-wrapper {
+    transform: perspective(3000px) rotateX(4deg) rotateY(-5deg) scale(0.95);
+    filter: blur(1px) brightness(0.75); 
+}
+
+/* Shared Image Styles */
+.immersive-bg img,
+.immersive-bg-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Hover Effects */
+.immersive-section:hover .immersive-bg .bg-image-wrapper {
+    filter: blur(0px) brightness(0.95);
+    transform: perspective(3000px) rotateX(1deg) rotateY(2deg) scale(0.98);
+}
+
+.immersive-section:hover .immersive-bg-right .bg-image-wrapper {
+    filter: blur(0px) brightness(0.95);
+    transform: perspective(3000px) rotateX(1deg) rotateY(-2deg) scale(0.98);
+}
+
+.immersive-section:hover .immersive-bg .bg-image-wrapper,
+.immersive-section:hover .immersive-bg-right .bg-image-wrapper {
+    box-shadow: 
+        0 40px 100px rgba(0, 0, 0, 0.9), 
+        0 0 60px rgba(14, 165, 233, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .immersive-bg, 
+    .immersive-bg-right {
+        width: 100%; 
+        height: 100%;
+        opacity: 0.2; 
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 90%); 
+        mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+        left: 0;
+        right: auto; 
+    }
+    
+    .immersive-bg .bg-image-wrapper, 
+    .immersive-bg-right .bg-image-wrapper {
+        transform: none; 
+        filter: blur(4px) brightness(0.4);
+    }
+}
+
+/* Clean Wrapper (Removes border/shadow for transparent images) */
+.bg-image-wrapper.clean-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+
+.bg-dark-glass {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-dark-glass-sm {
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.hover-glow-purple:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(168, 85, 247, 0.3) !important;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.border-white-10 { border-color: rgba(255, 255, 255, 0.08) !important; }
+.bg-white-10 { background-color: rgba(255, 255, 255, 0.1); }
+
+.text-gray-300 { color: #cbd5e1 !important; }
+.text-gray-400 { color: #94a3b8 !important; }
+.text-gray-500 { color: #64748b !important; }
+
+.icon-box-sm {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracking-wider { letter-spacing: 0.05em; }
+
+.extra-small {
+    font-size: 0.65rem;
+    line-height: 1.2;
+    margin-top: 4px;
+}

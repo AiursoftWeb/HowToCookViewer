@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add New Roles" xml:space="preserve">
+    <value>Lisää uusia rooleja</value>
+  </data>
+  <data name="Add New Users" xml:space="preserve">
+    <value>Lisää uusia käyttäjiä</value>
+  </data>
+  <data name="Allows assigning or removing roles for any user." xml:space="preserve">
+    <value>Mahdollistaa roolien määrittämisen tai poistamisen mille tahansa käyttäjälle.</value>
+  </data>
+  <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
+    <value>Sallii roolien nimien ja niihin liitettyjen käyttöoikeuksien muokkaamisen.</value>
+  </data>
+  <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
+    <value>Sallii käyttäjätietojen, kuten sähköpostiosoitteen ja roolien, muokkaamisen sekä käyttäjien salasanojen nollaamisen.</value>
+  </data>
+  <data name="Allows the permanent deletion of roles." xml:space="preserve">
+    <value>Sallii roolien pysyvän poistamisen.</value>
+  </data>
+  <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
+    <value>Sallii käyttäjätilien pysyvän poistamisen.</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Salli näytön ja muokkaus yleiset sovelluksen asetukset.</value>
+  </data>
+  <data name="Allows viewing system-level information and settings." xml:space="preserve">
+    <value>Mahdollistaa järjestelmätason tietojen ja asetusten tarkastelemisen.</value>
+  </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Salli taustatehtävien hallintapaneelin tarkastelun ja tehtävien hallinnan.</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Mahdollistaa kaikkien käyttöoikeuksien ja niiden määritysten tarkastelemisen rooleille ja käyttäjille.</value>
+  </data>
+  <data name="Allows viewing the list of all users." xml:space="preserve">
+    <value>Mahdollistaa kaikkien käyttäjien luettelon katsomisen.</value>
+  </data>
+  <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
+    <value>Mahdollistaa rooliluettelon ja niihin liitettyjen käyttöoikeuksien tarkastelemisen.</value>
+  </data>
+  <data name="Assign Roles to Users" xml:space="preserve">
+    <value>Anna roolit käyttäjille</value>
+  </data>
+  <data name="Delete Roles" xml:space="preserve">
+    <value>Poista roolit</value>
+  </data>
+  <data name="Delete Users" xml:space="preserve">
+    <value>Poista käyttäjiä</value>
+  </data>
+  <data name="Edit Role Information" xml:space="preserve">
+    <value>Muokkaa roolitietoja</value>
+  </data>
+  <data name="Edit User Information" xml:space="preserve">
+    <value>Muokkaa käyttäjätietoja</value>
+  </data>
+  <data name="Grants permission to create new roles." xml:space="preserve">
+    <value>Antaa oikeuden luoda uusia rooleja.</value>
+  </data>
+  <data name="Grants permission to create new user accounts." xml:space="preserve">
+    <value>Antaa oikeuden luoda uusia käyttäjätilejä.</value>
+  </data>
+  <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
+    <value>Antaa luvan sovelluksen uudelleenkäynnistämiseen. Saattaa aiheuttaa käyttökatkoksia, mutta kaikki asetukset ja välimuisti ladataan uudelleen.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Hallinnoi yleisiä asetuksia</value>
+  </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Lue käyttöoikeudet</value>
+  </data>
+  <data name="Read Roles" xml:space="preserve">
+    <value>Lue roolit</value>
+  </data>
+  <data name="Read Users" xml:space="preserve">
+    <value>Lue käyttäjiä</value>
+  </data>
+  <data name="Reboot This App" xml:space="preserve">
+    <value>Käynnistä tämä sovellus uudelleen</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Näytä taustatehtävät</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Näytä järjestelmän konteksti</value>
+  </data>
+
+</root>

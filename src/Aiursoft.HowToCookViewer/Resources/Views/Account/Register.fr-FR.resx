@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Already have an account?" xml:space="preserve">
+    <value>Vous avez déjà un compte ?</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="Confirm your password" xml:space="preserve">
+    <value>Confirmez votre mot de passe</value>
+  </data>
+  <data name="Create a new account." xml:space="preserve">
+    <value>Créer un nouveau compte.</value>
+  </data>
+  <data name="Create a password" xml:space="preserve">
+    <value>Créer un mot de passe</value>
+  </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Créer un compte</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Adresse e-mail</value>
+  </data>
+  <data name="Enter your email address" xml:space="preserve">
+    <value>Saisissez votre adresse e-mail</value>
+  </data>
+  <data name="Get Started" xml:space="preserve">
+    <value>Commencer</value>
+  </data>
+  <data name="Join us now to start your journey." xml:space="preserve">
+    <value>Rejoignez-nous dès maintenant pour commencer votre aventure.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>S&apos;inscrire</value>
+  </data>
+  <data name="Sign in" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+
+</root>

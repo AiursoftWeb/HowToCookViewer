@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>백그라운드 작업</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>취소됨</value>
+  </data>
+  <data name="Creates test jobs in different queues (15-30s sleep, 10% failure rate). Jobs in different queues run in parallel." xml:space="preserve">
+    <value>다른 큐에 테스트 작업을 생성합니다 (15-30초 대기, 10% 실패율). 다른 큐에 있는 작업들은 병렬로 실행됩니다.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="Finished At" xml:space="preserve">
+    <value>완료 시각</value>
+  </data>
+  <data name="Job Name" xml:space="preserve">
+    <value>작업 이름</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>지난 1 시간</value>
+  </data>
+  <data name="Last run" xml:space="preserve">
+    <value>마지막 실행</value>
+  </data>
+  <data name="Monitor and manage background job queues and their execution status." xml:space="preserve">
+    <value>백그라운드 작업 큐 및 실행 상태를 모니터링하고 관리합니다.</value>
+  </data>
+  <data name="Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically." xml:space="preserve">
+    <value>백그라운드 작업 대기열을 모니터링하고 관리합니다. 등록된 작업을 수동으로 트리거하거나 스케줄러가 자동으로 실행되도록 할 수 있습니다.</value>
+  </data>
+  <data name="Never executed" xml:space="preserve">
+    <value>실행되지 않음</value>
+  </data>
+  <data name="New Job A" xml:space="preserve">
+    <value>새 작업 A</value>
+  </data>
+  <data name="New Job B" xml:space="preserve">
+    <value>새 작업 B</value>
+  </data>
+  <data name="No background jobs are registered. Add jobs using services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs." xml:space="preserve">
+    <value>등록된 백그라운드 작업이 없습니다. Startup.cs에서 services.AddBackgroundJob&lt;TJob&gt;()를 사용하여 작업을 추가하세요.</value>
+  </data>
+  <data name="No jobs" xml:space="preserve">
+    <value>작업 없음</value>
+  </data>
+  <data name="No jobs have run in the last hour." xml:space="preserve">
+    <value>지난 1 시간 동안 실행된 작업이 없습니다.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>대기 중</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>처리 중</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>대기열</value>
+  </data>
+  <data name="Queue Name" xml:space="preserve">
+    <value>큐 이름</value>
+  </data>
+  <data name="Queued At" xml:space="preserve">
+    <value>대기열에 추가된 시간</value>
+  </data>
+  <data name="Recent Execution History" xml:space="preserve">
+    <value>최근 실행 기록</value>
+  </data>
+  <data name="Registered Jobs" xml:space="preserve">
+    <value>등록된 작업</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>성공</value>
+  </data>
+  <data name="Trigger Now" xml:space="preserve">
+    <value>지금 실행</value>
+  </data>
+
+</root>

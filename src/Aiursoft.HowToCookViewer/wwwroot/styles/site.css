@@ -1,0 +1,29 @@
+.landing-intro-screenshot img {
+    transform: rotateY(-20deg) rotateX(2deg);
+    box-shadow: unset;
+}
+
+.row.py-4 {
+    position: relative;
+}
+
+.row.py-4 .col-sm-4:nth-child(1),
+.row.py-4 .col-sm-4:nth-child(3) {
+    z-index: 0;
+}
+
+nav.navbar {
+    display: block;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #4b4f5c;
+}
+
+.landing-intro {
+    padding-top: 160px !important;
+}
+
+.text-bg-dark {
+    background-color: #161a27 !important;
+}

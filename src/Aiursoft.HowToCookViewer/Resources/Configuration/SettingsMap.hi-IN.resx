@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>ब्रांड के होम पेज का लिंक</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>परीक्षण के लिए एक काल्पनिक विकल्प।</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>परीक्षण के लिए एक डमी संख्या।</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>उपयोगकर्ता नाम समायोजित करने की अनुमति दें</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>प्रोफ़ाइल प्रबंधन पृष्ठ पर उपयोगकर्ताओं को अपना निकनेम समायोजित करने की अनुमति दें।</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>ब्रांड होम URL</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>ब्रांड नाम</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>डमी चयन</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>डमी नंबर</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>ICP संख्या</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>प्रोजेक्ट लोगो</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>प्रोजेक्ट नाम</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>फुटर में दिखाई देने वाला ब्रांड नाम</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>चीन मुख्यभूमि के उपयोगकर्ताओं के लिए ICP लाइसेंस संख्या। छिपाने के लिए खाली छोड़ दें।</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>प्रोजेक्ट का लोगो नेवबार और फुटर में प्रदर्शित किया जाता है। jpg, png, svg समर्थित हैं।</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>फ्रंटएंड में प्रदर्शित प्रोजेक्ट का नाम।</value>
+  </data>
+
+</root>

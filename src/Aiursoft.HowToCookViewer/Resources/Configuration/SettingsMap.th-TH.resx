@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>ลิงก์ไปยังหน้าหลักของแบรนด์</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>ตัวเลือกตัวอย่างสำหรับการทดสอบ</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>หมายเลขตัวอย่างสำหรับการทดสอบ</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>อนุญาตให้ผู้ใช้ปรับชื่อเล่น</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>อนุญาตให้ผู้ใช้ปรับชื่อเล่นของตนเองได้ในหน้าจัดการโปรไฟล์</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>URL หน้าหลักของแบรนด์</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>ชื่อแบรนด์</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>ตัวเลือกจำลอง</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>หมายเลขตัวอย่าง</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>เลขที่ ICP</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>โลโก้โครงการ</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>ชื่อโปรเจกต์</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>ชื่อแบรนด์ที่แสดงไว้ในส่วนท้ายหน้า</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>หมายเลขใบอนุญาต ICP สำหรับผู้ใช้ในแผ่นดินใหญ่จีน ปล่อยว่างไว้เพื่อซ่อน</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>โลโก้ของโครงการที่แสดงในแถบเมนูและฟุตเตอร์ รองรับไฟล์ jpg, png, svg</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>ชื่อโปรเจกต์ที่แสดงในหน้าแสดงผล</value>
+  </data>
+
+</root>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Suport „fire-and-forget” pentru sarcini de lungă durată (cum ar fi emailurile sau AI), cu o interfață grafică pentru gestionarea cozii, procesare paralelă și anulare.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>Un sistem integrat de Control al Accesului Bazat pe Roluri (RBAC) pentru gestionarea granulară a permisiunilor.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>O soluție completă pentru autentificarea utilizatorilor și gestionarea profilului, gata de utilizare imediată.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>O soluție completă pentru autentificarea utilizatorilor și gestionarea profilurilor.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>Un layout complet responsive care arată excelent atât pe dispozitive desktop, cât și pe cele mobile.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>O fundație modernă, bogată în funcționalități și extrem de extensibilă pentru următoarea ta aplicație web.</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>Traduceri alimentate de Inteligență Artificială</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>Toate dependențele sunt înregistrate automat și sunt întotdeauna disponibile prin injectare în constructor.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>Mod Întunecat Automat</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>Injectare Automată de Dependințe</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Gestionare automată a fusurilor orare</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>Traducere automată, bazată pe inteligență artificială, în 28 de limbi pentru o acoperire globală.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Traducere automată, alimentată de inteligență artificială, în 28 de limbi.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Procesare sarcini în fundal</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Gestionare Utilizatori Integrată</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Include suport pentru Docker pentru implementări simplificate și consistente.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>Oferă suport complet pentru Docker pentru implementări simplificate, consistente și fiabile.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>Documentație Cuprinzătoare</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Validare de consistență</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Dezvoltați exclusiv în UTC, în timp ce sistemul convertește și afișează automat datele în fusul orar local al utilizatorului.</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>Containerizat pentru Implementare</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Dockerizat pentru implementare ușoară</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>Bara de Navigare Dinamică</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Schimbați ușor între furnizorii de baze de date, inclusiv SQLite, MySQL, SQL Server și o bază de date în memorie pentru testare.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Comută cu ușurință între furnizori precum SQLite, MySQL, SQL Server și o bază de date în memorie pentru testare.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Scrieți ușor teste de integrare folosind baze de date în memorie, sisteme de fișiere temporare, mocking integrat și simulare a cererilor HTTP din lumea reală.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Oferește un sistem integrat de gestionare a fișierelor cu comprimare automată a avatarelor și protecție a confidențialității.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>Dispune de un sistem integrat de gestionare a fișierelor cu compresie automată a avatarurilor.</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Gestionează sarcinile periodice, cum ar fi curățarea și sincronizarea, cu o interfață grafică completă pentru monitorizarea istoricului de execuție și a jurnalelor.</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>Salut Lume!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>Include documentație extinsă și exemple practice pentru a te pune rapid pe drum.</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>Gestionare Integrată a Fișierelor</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>Modelele sunt validate pe ambele părți, client și server, pe baza anotărilor de date.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Suport pentru mai multe furnizori de baze de date</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>Suport pentru Multiple Baze de Date</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>Integrare OpenID Connect</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>Autorizare RBAC</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Citește documentația</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>Design Responsiv</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Testare de integrare robustă</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Gestionarea sarcinilor programate</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>Integrați-vă fără probleme cu orice furnizor OpenID Connect, cu sincronizare automată a rolurilor.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Supravățuiri inteligente de configurare</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Mod întunecat inteligent care se adaptează la setările sistemului utilizatorului.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Mod întunecat inteligent care se adaptează automat la setările de sistem ale utilizatorului.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Începeți un proiect nou</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Suportă atât variabilele de mediu, cât și setările stocate în baza de date, cu prioritate automată acordată variabilelor de mediu pentru suprascrieri fără efort.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>Bara de navigare se ajustează automat în funcție de rolurile și permisiunile utilizatorului.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Acesta este un proiect tip, de unde începem călătoria...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bun venit</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>De ce să folosești Șablonul Aiursoft?</value>
+  </data>
+
+</root>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Don&apos;t have an account?" xml:space="preserve">
+    <value>Vous n&apos;avez pas de compte ?</value>
+  </data>
+  <data name="Email or Username" xml:space="preserve">
+    <value>E-mail ou nom d&apos;utilisateur</value>
+  </data>
+  <data name="Enter your email or username" xml:space="preserve">
+    <value>Saisissez votre e-mail ou nom d&apos;utilisateur</value>
+  </data>
+  <data name="Enter your password" xml:space="preserve">
+    <value>Saisissez votre mot de passe</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>S&apos;inscrire comme nouvel utilisateur</value>
+  </data>
+  <data name="Sign in to your account to continue" xml:space="preserve">
+    <value>Connectez-vous à votre compte pour continuer</value>
+  </data>
+  <data name="Sign up" xml:space="preserve">
+    <value>S&apos;inscrire</value>
+  </data>
+  <data name="Use a local account to log in." xml:space="preserve">
+    <value>Utilisez un compte local pour vous connecter.</value>
+  </data>
+  <data name="Welcome back!" xml:space="preserve">
+    <value>Content de vous revoir !</value>
+  </data>
+
+</root>

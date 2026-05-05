@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>アクセスが拒否されました</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>アカウント設定</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理者</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft テンプレート</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>バックグラウンドジョブ</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Bad Request</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>アバターを変更</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>パスワードの変更</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>プロフィール変更</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>ログインするにはクリック</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>ロールの作成</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>ユーザーを作成</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>ダッシュボード</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>ロールを削除</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ユーザーを削除</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>ディレクトリ</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>ロールを編集</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>ユーザー編集</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>機能</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>グローバル設定</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>インデックス</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>内部サーバーエラー</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>ロックアウト</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>すべての機能にアクセスするにはログインしてください。</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>権限の詳細</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>権限</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>個人</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>プロフィール</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>プロフィール設定</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>登録</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>ロール詳細</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>ロール</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>サインアウト</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>システム</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>システム情報</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>権限がありません</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>ユーザー詳細</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+
+</root>

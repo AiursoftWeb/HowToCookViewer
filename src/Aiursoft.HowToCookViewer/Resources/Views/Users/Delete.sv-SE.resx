@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>Är du säker på att du vill ta bort den här användaren?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Är du säker?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Tillbaka till listan</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Skapad</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Ta bort användare</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Namn</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Denna åtgärd går inte att ångra. Du håller på att permanent ta bort följande användare och all tillhörande data:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>Det här användarkontot hanteras av en OpenID Connect (OIDC)-leverantör. Att ta bort användaren här kommer endast att ta bort deras åtkomst och data från denna applikation. Kontot kommer fortfarande att finnas kvar hos din OIDC-leverantör och kan återkomma efter nästa synkronisering eller om användaren loggar in igen. För att permanent ta bort den här användaren måste du ta bort dem från din OIDC-leverantör.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Användare</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Användarnamn</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Varning!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ja, ta bort den här användaren</value>
+  </data>
+
+</root>

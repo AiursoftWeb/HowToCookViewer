@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>Akses Ditolak</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administrasi</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Template Aiursoft</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonim</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Pekerjaan Latar Belakang</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Permintaan Salah</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Ubah Avatar</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Ubah Kata Sandi</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Ubah Profil</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>Klik untuk masuk</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Buat Peran</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Buat Pengguna</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dasbor</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Hapus Peran</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Hapus Pengguna</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Direktori</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Edit Peran</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Edit Pengguna</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Kesalahan</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Fitur</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Pengaturan Global</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Beranda</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Indeks</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informasi</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Kesalahan Server Internal</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Kunci Keluar</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Masuk</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>Masuk untuk mendapatkan akses ke semua fitur.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Kelola</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Tidak Ditemukan</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detail Izin</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Izin</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Pribadi</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Pengaturan Profil</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Daftar</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Detail Peran</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Peran</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>Keluar</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informasi Sistem</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Tidak Diizinkan</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Detail Pengguna</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Pengguna</value>
+  </data>
+
+</root>

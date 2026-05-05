@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>دعم &quot;إطلاق ونسي&quot; للمهام الطويلة (مثل البريد الإلكتروني أو الذكاء الاصطناعي)، يشمل واجهة رسومية لإدارة الطابور، والمعالجة المتوازية، والإلغاء.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>نظام مضمن للتحكم في الوصول القائم على الأدوار (RBAC) لإدارة دقيقة للصلاحيات.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>حل متكامل لمصادقة المستخدم وإدارة الملفات الشخصية جاهز للاستخدام مباشرة.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>حل شامل لإدارة المصادقة للمستخدم وإدارة الملفات الشخصية.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>تصميم متجاوب بالكامل يبدو رائعًا على كل من أجهزة الكمبيوتر المكتبية والهواتف المحمولة.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>أساس حديث، غني بالميزات، وقابل للتوسعة بشكل كبير لتطبيق الويب القادم الخاص بك.</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>الترجمات المدعومة بالذكاء الاصطناعي</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>يتم تسجيل جميع التبعيات تلقائيًا وهي متاحة دائمًا عبر حقن المُنشئ.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>الوضع الداكن التلقائي</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>حقن التبعيات التلقائي</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>التعامل التلقائي مع نطاقات الزمن</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>ترجمة آلية مدعومة بالذكاء الاصطناعي إلى 28 لغة للوصول العالمي.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>ترجمة تلقائية، مدعومة بالذكاء الاصطناعي، إلى 28 لغة.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>معالجة المهام الخلفية</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>إدارة المستخدمين المدمجة</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>يأتي مع دعم دوكير لDeployment مبسطة وموحدة.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>يأتي مع دعم كامل لـ Docker لنشر مبسط، متسق، وموثوق.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>توثيق شامل</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>التحقق من الاتساق</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>طور بشكل حصري باستخدام التوقيت العالمي الموحد (UTC) بينما يقوم النظام تلقائيًا بتحويل وتظهر التواريخ بالتوقيت المحلي للمستخدم.</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>مُحَضَّرٌ باستخدام Docker للنشر</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>مُضمن بـ Docker لDeployment سهل</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>شريط التنقل الديناميكي</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>يمكنك بسهولة التبديل بين مزودي قواعد البيانات، بما في ذلك SQLite وMySQL وSQL Server وقاعدة بيانات داخل الذاكرة لاختبار البرامج.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>يمكنك التبديل بسهولة بين مزودي قواعد البيانات مثل SQLite وMySQL وSQL Server وقاعدة البيانات المؤقتة في الذاكرة لأغراض الاختبار.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>اكتب اختبارات التكامل بسهولة باستخدام قواعد بيانات الذاكرة المؤقتة، وأنظمة ملفات مؤقتة، ومحاكاة مدمجة، ومحاكاة طلبات HTTP الواقعية.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>يتميز بنظام إدارة ملفات مدمج مع ضغط تلقائي للصورة الرمزية وحماية الخصوصية.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>يتميز بنظام مدمج لإدارة الملفات مع ضغط تلقائي للصور الشخصية.</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>قم بإدارة المهام المتكررة مثل التنظيف والمزامنة باستخدام واجهة رسومية شاملة لمراقبة سجلات تاريخ التنفيذ والسجلات.</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>مرحباً أيها العالم!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>يحتوي على وثائق شاملة وأمثلة عملية لمساعدتك على البدء بسرعة.</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>إدارة الملفات المتكاملة</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>تتم مصادقة النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>دعم متعدد لمزودي قواعد البيانات</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>دعم قواعد بيانات متعددة</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>دمج OpenID Connect</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>الترخيص القائم على الأدوار (RBAC)</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>اقرأ المستند</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>تصميم متجاوب</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>اختبارات دمج قوية</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>إدارة المهام المجدولة</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>التكامل السلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>الإعادة تعيين الإعدادات الذكية</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>وضع داكن ذكي يتكيف مع إعدادات النظام الخاصة بالمستخدم.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>وضع الظلام الذكي الذي يتكيف تلقائيًا مع إعدادات نظام المستخدم.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>بدء مشروع جديد</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>يدعم متغيرات البيئة والإعدادات المخزنة في قاعدة البيانات، مع إعطاء الأولوية التلقائية لمتغيرات البيئة لتمكين التجاوزات السلسة.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>يتم تعديل شريط التنقل تلقائيًا بناءً على أدوار المستخدمين والأذونات.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>مرحباً</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>لماذا نستخدم قالب Aiursoft؟</value>
+  </data>
+
+</root>

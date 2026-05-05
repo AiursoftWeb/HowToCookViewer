@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Don&apos;t have an account?" xml:space="preserve">
+    <value>Har du inget konto?</value>
+  </data>
+  <data name="Email or Username" xml:space="preserve">
+    <value>E-post eller användarnamn</value>
+  </data>
+  <data name="Enter your email or username" xml:space="preserve">
+    <value>Ange din e-postadress eller användarnamn</value>
+  </data>
+  <data name="Enter your password" xml:space="preserve">
+    <value>Ange ditt lösenord</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Logga in</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lösenord</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>Registrera som ny användare</value>
+  </data>
+  <data name="Sign in to your account to continue" xml:space="preserve">
+    <value>Logga in på ditt konto för att fortsätta</value>
+  </data>
+  <data name="Sign up" xml:space="preserve">
+    <value>Registrera dig</value>
+  </data>
+  <data name="Use a local account to log in." xml:space="preserve">
+    <value>Använd ett lokalt konto för att logga in.</value>
+  </data>
+  <data name="Welcome back!" xml:space="preserve">
+    <value>Välkommen tillbaka!</value>
+  </data>
+
+</root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити цього користувача?</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Ви впевнені?</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Назад до списку</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Час створення</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Видалити користувача</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Електронна пошта</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ім&apos;я</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Цю дію не можна скасувати. Ви збираєтесь назавжди видалити наступного користувача та всі пов&apos;язані з ним дані:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>Цей обліковий запис керується провайдером OpenID Connect (OIDC). Видалення користувача тут лише призведе до видалення його доступу та даних з цього додатку. Обліковий запис все ще існуватиме у вашому провайдері OIDC і може з’явитися знову після наступної синхронізації або якщо користувач знову увійде в систему. Щоб остаточно видалити цього користувача, ви повинні видалити його з вашого провайдера OIDC.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Користувач</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Ім&apos;я користувача</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Увага!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Так, видалити цього користувача</value>
+  </data>
+
+</root>

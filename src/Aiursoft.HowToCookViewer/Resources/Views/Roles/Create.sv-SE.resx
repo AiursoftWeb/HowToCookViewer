@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Tillbaka till lista</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Skapa</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>Skapa ny roll</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Skapa roll</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>Ange det nya rollnamnet</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) är aktiverat. Roller synkroniseras från en extern identitetsleverantör. Vi rekommenderar starkt att du skapar nya roller eller grupper på din OIDC-leverantör för att säkerställa att de hanteras centralt. Det här formuläret kommer att skapa en roll som endast finns lokalt inom den här applikationen.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rollinformation</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Rollnamn</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Varning!</value>
+  </data>
+
+</root>

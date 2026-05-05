@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>Toegang geweigerd</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Beheerder</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Beheer</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anoniem</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Achtergrondtaken</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Ongeldige aanvraag</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Avatar wijzigen</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Wachtwoord wijzigen</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Profiel wijzigen</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>Klik om in te loggen</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Rol aanmaken</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Gebruiker aanmaken</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Rol verwijderen</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Gebruiker verwijderen</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Rol bewerken</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Gebruiker bewerken</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Functionaliteiten</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Algemene instellingen</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informatie</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Interne serverfout</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Blokkade</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Inloggen</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>Log in om toegang te krijgen tot alle functies.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Beheren</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Niet gevonden</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Toegangsdetails</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Machtigingen</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Persoonlijk</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profiel</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Profielinstellingen</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registreren</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rolgegevens</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rollen</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>Uitloggen</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Systeem</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Systeeminformatie</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Sjabloon</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Niet geautoriseerd</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Gebruikersgegevens</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Gebruikers</value>
+  </data>
+
+</root>

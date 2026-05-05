@@ -1,0 +1,58 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.RolesViewModels.DeleteViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title for consistency. *@
+<h1 class="h3 mb-3">@Localizer["Delete Role"]</h1>
+
+@* The critical OIDC warning is preserved and placed prominently at the top. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["This role is managed by an OpenID Connect (OIDC) provider. Deleting the role here will only remove it from this application. The role will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this role, you must remove them from your OIDC provider."]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+        <div class="card">
+            <div class="card-header text-center">
+                @* A large, prominent icon immediately signals a high-consequence action. *@
+                <i class="align-middle text-danger" data-lucide="shield-alert" style="width: 48px; height: 48px;"></i>
+            </div>
+            <div class="card-body text-center">
+                <h2 class="h4 card-title fw-bold">@Localizer["Are you sure?"]</h2>
+                <p class="mb-3 text-muted">@Localizer["This action is irreversible. You are about to permanently delete the following role:"]</p>
+
+                @* The data to be deleted is clearly and prominently displayed. *@
+                <div class="d-inline-block bg-body-tertiary rounded p-2 px-3 mb-4">
+                    <strong class="fs-5">@Html.DisplayFor(model => model.Role.Name)</strong>
+                </div>
+
+                <div>
+                    @* The form now contains a clear, explicit confirmation button. *@
+                    <form asp-action="Delete" class="d-inline-block">
+                        @* The hidden input for the ID is critical and preserved. *@
+                        <input type="hidden" asp-for="@Model.Role.Id" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="align-middle me-2" data-lucide="trash-2"></i> @Localizer["Yes, delete this role"]
+                        </button>
+                    </form>
+                    @* The "Cancel" action is styled as a safe, secondary option. *@
+                    <a asp-action="Index" class="btn btn-light">@Localizer["Cancel"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

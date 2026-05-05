@@ -1,0 +1,102 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@using Aiursoft.WebTools
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.UsersViewModels.DetailsViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+@inject StorageService StorageService
+
+<div class="row mb-2 mb-xl-3" xmlns="http://www.w3.org/1999/html">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["User Details:"] <span class="text-muted">@Model.User.UserName</span></h3>
+    </div>
+    <div class="col-auto ms-auto text-end mt-n1">
+        <a asp-action="Edit" asp-route-id="@Model.User.Id" class="btn btn-primary">@Localizer["Edit this User"]</a>
+        <a asp-action="Delete" asp-route-id="@Model.User.Id" class="btn btn-danger">@Localizer["Delete this User"]</a>
+        <a asp-action="Index" class="btn btn-light">@Localizer["Back to list"]</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-xl-3">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Profile Details"]</h5>
+            </div>
+            <div class="card-body text-center">
+                <a href="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)" target="_blank" rel="noopener noreferrer">
+                    <img src="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)?w=256&square=true" alt="@Model.User.DisplayName" class="img-fluid rounded-circle mb-2" width="128" height="128"/>
+                </a>
+                <h5 class="card-title mb-0">@Model.User.DisplayName</h5>
+                <div class="text-muted mb-2">@Model.User.Email</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 col-xl-9">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="user"></i> @Localizer["Account Details"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <div class="row">
+                        <strong class="col-sm-3">@Localizer["User name"]</strong>
+                        <div class="col-sm-9">@Model.User.UserName</div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row">
+                        <strong class="col-sm-3">@Localizer["Creation Time"]</strong>
+                        <div class="col-sm-9">
+                            <label data-utc-time="@Model.User.CreationTime.ToHtmlDateTime()" class="text-monospace"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flex-fill mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="award"></i> @Localizer["Assigned Roles"]</h5>
+            </div>
+            <div class="card-body">
+                @if (Model.Roles.Any())
+                {
+                    @foreach (var role in Model.Roles)
+                    {
+                        <a asp-controller="Roles" asp-action="Details" asp-route-id="@role.Id" class="badge badge-subtle-primary me-1 my-1 fs-6">
+                            @role.Name
+                        </a>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">@Localizer["This user has not been assigned any roles."]</p>
+                }
+            </div>
+        </div>
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="shield-check"></i> @Localizer["Effective Permissions"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @if (Model.Permissions.Any())
+                {
+                    @foreach (var permission in Model.Permissions)
+                    {
+                        <div class="list-group-item">
+                            <strong>@PermissionLocalizer[permission.Name]</strong>
+                            <p class="text-muted mb-0">@PermissionLocalizer[permission.Description]</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["This user has no effective permissions."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

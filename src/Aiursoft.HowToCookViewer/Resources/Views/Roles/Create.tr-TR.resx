@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Listeye Geri Dön</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Oluştur</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>Yeni Rol Oluştur</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Rol Oluştur</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>Yeni rol adını girin</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) etkinleştirilmiştir. Roller harici bir kimlik sağlayıcıdan senkronize edilmektedir. Rollerin merkezi olarak yönetilmesini sağlamak için yeni rollerin veya grupların OIDC sağlayıcınızda oluşturulmasını şiddetle tavsiye ederiz. Bu form, yalnızca bu uygulama içinde var olan ve yalnızca yerel olarak erişilebilen bir rol oluşturacaktır.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rol Detayları</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Rol Adı</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Uyarı!</value>
+  </data>
+
+</root>

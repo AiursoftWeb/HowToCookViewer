@@ -1,0 +1,75 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.UsersViewModels.CreateViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title for consistency. *@
+<h1 class="h3 mb-3">@Localizer["Create New User"]</h1>
+
+@* The critical OIDC warning is preserved and placed prominently at the top of the page. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application."]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["User Account Details"]</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    @* A nested grid is used to intelligently lay out related fields. *@
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="UserName" class="form-label">@Localizer["Username"]</label>
+                            <input asp-for="UserName" class="form-control form-control-lg" placeholder="@Localizer["Enter username"]" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="DisplayName" class="form-label">@Localizer["Display Name"]</label>
+                            <input asp-for="DisplayName" class="form-control form-control-lg" placeholder="@Localizer["Enter display name"]" />
+                            <span asp-validation-for="DisplayName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">@Localizer["Email Address"]</label>
+                        <input asp-for="Email" class="form-control form-control-lg" placeholder="@Localizer["Enter email address"]" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">@Localizer["Password"]</label>
+                        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="@Localizer["Create a password for the new user"]" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="align-middle me-2" data-lucide="user-plus"></i> @Localizer["Create User"]
+                        </button>
+                        @* "Back to List" is now a proper secondary button, creating a consistent action group. *@
+                        <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

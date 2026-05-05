@@ -1,0 +1,110 @@
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@model Aiursoft.HowToCookViewer.Models.UsersViewModels.IndexViewModel
+@inject StorageService StorageService
+@* The page-specific style is preserved. *@
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
+@* A standard page header, consistent with the Roles management page. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Manage Users"]</h3>
+    </div>
+
+    <div class="col-auto ms-auto mt-n1">
+        <a asp-action="Create" class="btn btn-primary">
+            @* Icon is updated to the theme's standard Lucide icon set. *@
+            <i class="align-middle" data-lucide="user-plus"></i> @Localizer["Create a new user"]
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["All Users"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["A list of all user accounts registered in the system."]</h6>
+    </div>
+    @* table-responsive is added as a best practice for tables on small screens. *@
+    <div class="table-responsive">
+        @* The mb-0 class ensures the table fits snugly within the card. *@
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Avatar"]</th>
+                <th>@Localizer["User name"]</th>
+                <th>@Localizer["Name"]</th>
+                <th>@Localizer["Email"]</th>
+                <th>@Localizer["Roles"]</th>
+                <th class="text-end">@Localizer["Actions"]</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Users)
+            {
+                @* The clickable-row class and data-href attribute are fully preserved. *@
+                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.Id })">
+                    <td>
+                        <img src="@StorageService.RelativePathToInternetUrl(item.AvatarRelativePath)?w=72&square=true" alt="@item.DisplayName" class="rounded-circle" width="36" height="36" />
+                    </td>
+                    <td>@item.UserName</td>
+                    <td>@item.DisplayName</td>
+                    <td>@item.Email</td>
+                    <td>
+                        @* The complex C# presentation logic for roles is identified and fully preserved. *@
+                        @{
+                            const int maxRolesToShow = 3;
+                            var roles = item.Roles;
+                            string displayRoles;
+                            if (roles.Count > maxRolesToShow)
+                            {
+                                displayRoles = string.Join(", ", roles.Take(maxRolesToShow)) + "...";
+                            }
+                            else
+                            {
+                                displayRoles = string.Join(", ", roles);
+                            }
+                        }
+                        @if (!string.IsNullOrWhiteSpace(displayRoles))
+                        {
+                            <label>@displayRoles</label>
+                        }
+                        else
+                        {
+                            <span class="text-muted">@Localizer["(no role assigned)"]</span>
+                        }
+                    </td>
+                    <td class="text-end">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                            <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
+                            <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function (event) {
+                    const target = event.target;
+                    // Prevent navigation if a link or button was clicked
+                    if (!target.matches('a, a *, button, button *')) {
+                        window.location.href = row.dataset.href;
+                    }
+                });
+            });
+        });
+    </script>
+}

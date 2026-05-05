@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="A comprehensive overview of the role, its permissions, and assigned users." xml:space="preserve">
+    <value>Детальний огляд ролі, її дозволів та призначених користувачів.</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>Призначені користувачі</value>
+  </data>
+  <data name="Back to Roles List" xml:space="preserve">
+    <value>Назад до списку ролей</value>
+  </data>
+  <data name="Delete this Role" xml:space="preserve">
+    <value>Видалити цю роль</value>
+  </data>
+  <data name="Edit this Role" xml:space="preserve">
+    <value>Редагувати цю роль</value>
+  </data>
+  <data name="No users are currently assigned to this role." xml:space="preserve">
+    <value>Наразі до цієї ролі не призначено жодного користувача.</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>Надані дозволи</value>
+  </data>
+  <data name="Permissions Granted by this Role" xml:space="preserve">
+    <value>Дозволи, надані цією роллю</value>
+  </data>
+  <data name="Role Details:" xml:space="preserve">
+    <value>Деталі ролі:</value>
+  </data>
+  <data name="This role has no specific permissions assigned." xml:space="preserve">
+    <value>Ця роль не має жодних конкретних дозволів.</value>
+  </data>
+  <data name="Users with this Role" xml:space="preserve">
+    <value>Користувачі з цією роллю</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Перегляд</value>
+  </data>
+  <data name="View User" xml:space="preserve">
+    <value>Переглянути користувача</value>
+  </data>
+
+</root>

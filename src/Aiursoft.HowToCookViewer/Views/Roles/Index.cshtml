@@ -1,0 +1,97 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.RolesViewModels.IndexViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+
+@* The page-specific style is preserved. *@
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
+@* A standard page header, separating the title from the main action button. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Manage Roles"]</h3>
+    </div>
+
+    <div class="col-auto ms-auto mt-n1">
+        <a asp-action="Create" class="btn btn-primary">
+            @* Icon is updated to the theme's standard Lucide icon set. *@
+            <i class="align-middle" data-lucide="plus"></i> @Localizer["Create a new role"]
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["All Roles"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Select a role to view its details, or use the actions to edit or delete."]</h6>
+    </div>
+    @* table-responsive is added as a best practice for tables on small screens. *@
+    <div class="table-responsive">
+        @* The mb-0 class ensures the table fits snugly within the card. *@
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Role Name"]</th>
+                <th>@Localizer["Permissions"]</th>
+                <th>@Localizer["User Count"]</th>
+                <th class="text-end">@Localizer["Actions"]</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Roles)
+            {
+                @* The clickable-row class and data-href attribute are fully preserved. *@
+                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.RoleId })">
+                    <td>@item.RoleName</td>
+                    <td>
+                        @if (item.PermissionCount > 0)
+                        {
+                            const int maxPermissionsToShow = 3;
+                            var displayPermissions = item.PermissionNames.Count > maxPermissionsToShow
+                                ? string.Join(", ", item.PermissionNames.Take(maxPermissionsToShow).Select(n => PermissionLocalizer[n].Value)) + "..."
+                                : string.Join(", ", item.PermissionNames.Select(n => PermissionLocalizer[n].Value));
+                            
+                            <span>@displayPermissions (@item.PermissionCount)</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">@Localizer["No permissions"]</span>
+                        }
+                    </td>
+                    <td>@item.UserCount</td>
+                    <td class="text-end">
+                        <a asp-action="Edit" asp-route-id="@item.RoleId" class="btn btn-sm btn-outline-primary">
+                            <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.RoleId" class="btn btn-sm btn-outline-danger">
+                            <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function (event) {
+                    // This is important: only navigate if the click was not on a link or a button inside the row
+                    const target = event.target;
+                    if (!target.matches('a, a *, button, button *')) {
+                        window.location.href = row.dataset.href;
+                    }
+                });
+            });
+        });
+    </script>
+}

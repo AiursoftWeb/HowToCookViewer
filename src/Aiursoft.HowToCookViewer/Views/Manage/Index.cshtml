@@ -1,0 +1,75 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.ManageViewModels.IndexViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title, consistent with the rest of the template. *@
+<h1 class="h3 mb-3">@Localizer["Account Management"]</h1>
+
+@* The StatusMessage logic is preserved, but the alert's icon and layout are enhanced. *@
+@if (!string.IsNullOrWhiteSpace(ViewData["StatusMessage"] as string))
+{
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                <i class="align-middle" data-lucide="check-circle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Success!"]</strong>
+                @ViewData["StatusMessage"]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="card col-md-6 col-lg-4">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["Change your account settings"]</h5>
+    </div>
+    @* The obsolete <dl> is replaced with a modern and responsive List Group. *@
+    <div class="list-group list-group-flush">
+        <a asp-controller="Manage" asp-action="ChangeAvatar" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span>
+                <i class="align-middle me-2" data-lucide="image"></i>
+                @Localizer["Change your avatar"]
+            </span>
+            <i class="align-middle" data-lucide="chevron-right"></i>
+        </a>
+
+        @* The server-side conditional logic is seamlessly integrated into the new component structure. *@
+        @if (AppSettings.Value.LocalEnabled)
+        {
+            if (Model.AllowUserAdjustNickname)
+            {
+                <a asp-controller="Manage" asp-action="ChangeProfile" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <span>
+                        <i class="align-middle me-2" data-lucide="user"></i>
+                        @Localizer["Change your profile"]
+                    </span>
+                    <i class="align-middle" data-lucide="chevron-right"></i>
+                </a>
+            }
+            <a asp-controller="Manage" asp-action="ChangePassword" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span>
+                    <i class="align-middle me-2" data-lucide="lock"></i>
+                    @Localizer["Change your password"]
+                </span>
+                <i class="align-middle" data-lucide="chevron-right"></i>
+            </a>
+        }
+        else
+        {
+            @* The warning message is now a styled list item, maintaining structural consistency. *@
+            <div class="list-group-item">
+                <div class="d-flex align-items-center text-warning">
+                    <i class="align-middle me-2" data-lucide="alert-triangle"></i>
+                    <span>
+                        @Localizer["You can't change your password because local authentication is disabled. Please edit your profile from the"]
+                        <a href="@AppSettings.Value.OIDC.GetAuthProviderHomePage()">@Localizer["auth provider"]</a>.
+                    </span>
+                </div>
+            </div>
+        }
+    </div>
+</div>

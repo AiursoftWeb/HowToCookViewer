@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Assigned Roles" xml:space="preserve">
+    <value>Zugewiesene Rollen</value>
+  </data>
+  <data name="Back to Details" xml:space="preserve">
+    <value>Zurück zu Details</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Zurück zur Liste</value>
+  </data>
+  <data name="Back to Users List" xml:space="preserve">
+    <value>Zurück zur Benutzerliste</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>Grundlegende Informationen</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Anzeigename</value>
+  </data>
+  <data name="Edit User:" xml:space="preserve">
+    <value>Benutzer bearbeiten:</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>Leer lassen, wenn Sie das Passwort nicht ändern möchten.</value>
+  </data>
+  <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
+    <value>Ändern Sie die Benutzerdetails oder verwalten Sie unten ihre zugewiesenen Rollen.</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Neue Avatar-Datei</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Neues Passwort</value>
+  </data>
+  <data name="Save Role Assignments" xml:space="preserve">
+    <value>Rollenverteilung speichern</value>
+  </data>
+  <data name="Save User Details" xml:space="preserve">
+    <value>Benutzerdetails speichern</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>Dieses Benutzerkonto wird mit einem OpenID Connect (OIDC)-Provider synchronisiert. Änderungen, die hier vorgenommen werden (z. B. am Anzeigenamen oder der E-Mail-Adresse), können bei der nächsten Datensynchronisation überschrieben werden. Für dauerhafte Änderungen aktualisieren Sie bitte das Benutzerprofil direkt bei Ihrem OIDC-Provider.</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="View Details" xml:space="preserve">
+    <value>Details anzeigen</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Warnung!</value>
+  </data>
+
+</root>

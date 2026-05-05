@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add New Roles" xml:space="preserve">
+    <value>新增角色</value>
+  </data>
+  <data name="Add New Users" xml:space="preserve">
+    <value>新增使用者</value>
+  </data>
+  <data name="Allows assigning or removing roles for any user." xml:space="preserve">
+    <value>允許為任何用戶分配或移除角色。</value>
+  </data>
+  <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
+    <value>允許修改角色名稱及其分配的權限。</value>
+  </data>
+  <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
+    <value>允許修改使用者詳細資料，例如電郵地址和角色，並可重設使用者密碼。</value>
+  </data>
+  <data name="Allows the permanent deletion of roles." xml:space="preserve">
+    <value>允許永久刪除角色。</value>
+  </data>
+  <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
+    <value>允許永久刪除用戶帳戶。</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>容許檢視及修改應用程式的全域設定。</value>
+  </data>
+  <data name="Allows viewing system-level information and settings." xml:space="preserve">
+    <value>允許查看系統級資訊和設定。</value>
+  </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>容許檢視背景作業儀表板及管理作業。</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>允許查看所有權限及其分配給角色和用戶的清單。</value>
+  </data>
+  <data name="Allows viewing the list of all users." xml:space="preserve">
+    <value>允許查看所有用戶列表。</value>
+  </data>
+  <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
+    <value>允許查看角色列表及其分配的權限。</value>
+  </data>
+  <data name="Assign Roles to Users" xml:space="preserve">
+    <value>為用戶分配角色</value>
+  </data>
+  <data name="Delete Roles" xml:space="preserve">
+    <value>刪除角色</value>
+  </data>
+  <data name="Delete Users" xml:space="preserve">
+    <value>刪除用戶</value>
+  </data>
+  <data name="Edit Role Information" xml:space="preserve">
+    <value>編輯角色資訊</value>
+  </data>
+  <data name="Edit User Information" xml:space="preserve">
+    <value>編輯用戶資料</value>
+  </data>
+  <data name="Grants permission to create new roles." xml:space="preserve">
+    <value>授予創建新角色嘅權限。</value>
+  </data>
+  <data name="Grants permission to create new user accounts." xml:space="preserve">
+    <value>授予建立新用戶帳戶的權限。</value>
+  </data>
+  <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
+    <value>授予重啟應用程式實例嘅權限。可能會導致服務中斷，但所有設定同快取將會重新載入。</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>管理全域設定</value>
+  </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>讀取權限</value>
+  </data>
+  <data name="Read Roles" xml:space="preserve">
+    <value>讀取角色</value>
+  </data>
+  <data name="Read Users" xml:space="preserve">
+    <value>讀取用戶</value>
+  </data>
+  <data name="Reboot This App" xml:space="preserve">
+    <value>重新啟動此應用程式</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>檢視背景作業</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>檢視系統內容</value>
+  </data>
+
+</root>

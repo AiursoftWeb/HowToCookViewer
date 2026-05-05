@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>오래 실행되는 작업(예: 이메일 또는 AI)에 대한 &quot;Fire-and-forget&quot; 지원, 대기열 관리, 병렬 처리 및 취소 기능이 있는 GUI를 특징으로 합니다.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>세분화된 권한 관리를 위한 내장형 역할 기반 접근 제어(RBAC) 시스템.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>사용자 인증 및 프로필 관리를 위한 완벽한 솔루션을 바로 사용할 수 있습니다.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>사용자 인증 및 프로필 관리에 대한 완전한 솔루션입니다.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>데스크톱과 모바일 기기 모두에서 훌륭하게 보이는 완전 반응형 레이아웃.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>현대적이고, 기능이 풍부하며, 매우 확장 가능한 기반을 제공하여 차세대 웹 애플리케이션을 구축할 수 있습니다.</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft 템플릿으로 더 많은 성과를 이루세요</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>관리 사이트 포함됨</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>AI 기반 번역</value>
+  </data>
+  <data name="AI Readable" xml:space="preserve">
+    <value>AI가 읽을 수 있는</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>AI 기반 번역</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template은 엔터프라이즈 프로젝트를 위한 최적의 선택입니다! 개발자를 위해 제작되었으며 가볍지만 강력한 성능을 자랑합니다. 인증 및 사용자 관리와 관련된 모든 상용구 코드를 생략할 수 있습니다.</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>모든 종속성은 자동으로 등록되며 생성자 주입을 통해 항상 사용할 수 있습니다.</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>안두인</value>
+  </data>
+  <data name="Anduin Xue" xml:space="preserve">
+    <value>Anduin Xue</value>
+  </data>
+  <data name="Artificial Intelligence Translation" xml:space="preserve">
+    <value>인공지능 번역</value>
+  </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>자동 압축 및 개인정보 보호</value>
+  </data>
+  <data name="Auto Deployment" xml:space="preserve">
+    <value>자동 배포</value>
+  </data>
+  <data name="Automatic AI translation into 28 languages." xml:space="preserve">
+    <value>자동 AI 번역 28개 언어 지원</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>자동 다크 모드</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>자동 의존성 주입</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>자동 역할 동기화</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>자동 시간대 처리</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>자동 UTC/현지 시간 변환</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>전 세계를 대상으로 28개 언어로 자동, AI 기반 번역을 제공합니다.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>자동, AI 기반 28개 언어로 번역</value>
+  </data>
+  <data name="Automatically deploy to Docker Swarm or Kubernetes clusters." xml:space="preserve">
+    <value>Docker Swarm 또는 Kubernetes 클러스터에 자동으로 배포합니다.</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>OpenID 역할을 자동으로 동기화합니다. 통합 규칙 관리.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>백그라운드 작업 처리</value>
+  </data>
+  <data name="Beginner Friendly" xml:space="preserve">
+    <value>초보자 친화적</value>
+  </data>
+  <data name="Bilingual Tutorials" xml:space="preserve">
+    <value>이중 언어 튜토리얼</value>
+  </data>
+  <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
+    <value>한 번 빌드하면 어디서나 실행 가능. 완전히 컨테이너화된 아키텍처.</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>당신의 다음 대형 프로젝트를 구축하세요,</value>
+  </data>
+  <data name="Built for engineers who care about quality." xml:space="preserve">
+    <value>품질을 중시하는 엔지니어들을 위해 제작되었습니다.</value>
+  </data>
+  <data name="Built with Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template으로 제작됨</value>
+  </data>
+  <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
+    <value>기업용 수준이지만 쉽게 배울 수 있는 네이티브 C#으로 제작됨</value>
+  </data>
+  <data name="Built-in" xml:space="preserve">
+    <value>내장된</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>내장 관리 패널</value>
+  </data>
+  <data name="Built-in Auth" xml:space="preserve">
+    <value>내장 인증</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>내장된 작업 대기열 GUI</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>내장된 사용자 관리</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Docker 지원을 제공하여 간편하고 일관된 배포가 가능합니다.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>완전한 Docker 지원을 통해 단순화되고 일관성 있으며 신뢰할 수 있는 배포가 가능합니다.</value>
+  </data>
+  <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
+    <value>엄격한 단위 테스트가 포함되어 있어 테스트 주도 개발이 쉬워집니다.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>포괄적인 문서</value>
+  </data>
+  <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
+    <value>영어와 중국어로 제공되는 포괄적인 사용 가이드</value>
+  </data>
+  <data name="Concise Docs" xml:space="preserve">
+    <value>간결한 문서</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>일관성 검증</value>
+  </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>편안하게 조율하세요</value>
+  </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>핵심 라우팅 및 DI</value>
+  </data>
+  <data name="Coverage Report" xml:space="preserve">
+    <value>커버리지 리포트</value>
+  </data>
+  <data name="Cross Platform" xml:space="preserve">
+    <value>크로스 플랫폼</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>사용자 정의 개발 필요</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>맞춤 개발 필요</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>배경 작업 대시보드</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>대시보드 웹사이트</value>
+  </data>
+  <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
+    <value>Day 1 준수성 및 보안.</value>
+  </data>
+  <data name="Day 1 Ready" xml:space="preserve">
+    <value>1일차 준비 완료</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>Authentik과의 심층 통합 테스트. Okta와 호환 가능.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>DotLang AI 와의 심층 통합</value>
+  </data>
+  <data name="Default SQLite database, no configuration needed." xml:space="preserve">
+    <value>기본 SQLite 데이터베이스, 설정 필요 없음</value>
+  </data>
+  <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
+    <value>모든 사람, 초보자부터 전문가까지를 위한 설계입니다.</value>
+  </data>
+  <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
+    <value>컨테이너 시대를 위해 설계되었습니다. GitLab용 사전 구성된 CI/CD 파이프라인을 포함합니다. 코드를 푸시하고 엄격한 린팅을 통과하며 자동 테스트를 수행한 후, Docker Swarm 또는 Kubernetes로 자동 배포합니다.</value>
+  </data>
+  <data name="Dev &amp; Prod" xml:space="preserve">
+    <value>개발 &amp; 운영</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>UTC에서만 개발하고 시스템이 자동으로 사용자의 로컬 시간대에 맞춰 날짜를 변환하고 표시합니다.</value>
+  </data>
+  <data name="Developer Experience" xml:space="preserve">
+    <value>개발자 경험</value>
+  </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>DevOps 네이티브</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>토론 페이지</value>
+  </data>
+  <data name="Docker Native" xml:space="preserve">
+    <value>Docker Native</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>배포를 위한 Docker화</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Docker를 사용한 간편 배포</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>동적 내비게이션 바</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>SQLite, MySQL, SQL Server 및 테스트용 메모리 데이터베이스를 포함하여 데이터베이스 공급자를 쉽게 전환할 수 있습니다.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>SQLite, MySQL, SQL Server 및 테스트용 인메모리 데이터베이스와 같은 프로바이더 간에 쉽게 전환할 수 있습니다.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>메모리 내 데이터베이스, 임시 파일 시스템, 내장된 모킹, 그리고 실제 웹 요청 시뮬레이션을 사용하여 통합 테스트를 쉽게 작성하세요.</value>
+  </data>
+  <data name="Enforced" xml:space="preserve">
+    <value>강제된</value>
+  </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>강제 품질 게이트</value>
+  </data>
+  <data name="Enterprise C#" xml:space="preserve">
+    <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>기업용 기능</value>
+  </data>
+  <data name="Enterprise Ready" xml:space="preserve">
+    <value>기업용 준비 완료</value>
+  </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>기업 보안</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core 포함됨</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>자주 묻는 질문</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>더 빠르게</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>기능</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>자동 아바타 압축 및 개인정보 보호 기능이 포함된 내장 파일 관리 시스템을 제공합니다.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>자동 아바타 압축 기능이 포함된 내장 파일 관리 시스템을 갖추고 있습니다.</value>
+  </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>파일 관리 및 최적화</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>세밀한 RBAC</value>
+  </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>유연한 API</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>문의 사항이 있거나 문제를 보고하려면</value>
+  </data>
+  <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
+    <value>Aiursoft의 설립자이자 아키텍트</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>프레임워크 대 솔루션</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>무료</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>상업적 사용에 무료</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>자유 소프트웨어</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>자주 묻는 질문</value>
+  </data>
+  <data name="From the Architect" xml:space="preserve">
+    <value>아키텍처에서</value>
+  </data>
+  <data name="Full RBAC" xml:space="preserve">
+    <value>전체 RBAC</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>풀 스택 오픈 소스</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>풀 스택 오픈소스. 완전히 무료 소프트웨어이며, 유료 기능이 없습니다. 완전히 오픈 표준 기반으로 구축되었습니다.</value>
+  </data>
+  <data name="Fully Offline" xml:space="preserve">
+    <value>완전 오프라인</value>
+  </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>일반 구성</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>일반 Dockerfile 만 제공</value>
+  </data>
+  <data name="GitLab CI" xml:space="preserve">
+    <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD 네이티브</value>
+  </data>
+  <data name="Global Scale" xml:space="preserve">
+    <value>글로벌 스케일</value>
+  </data>
+  <data name="Go global without extra effort." xml:space="preserve">
+    <value>글로벌로 확장하되 추가적인 노력을 하지 않아도 됩니다.</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>대시보드로 이동</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>정기적인 작업(예: 정리 및 동기화)을 처리하고 실행 이력 및 로그를 모니터링할 수 있는 포괄적인 GUI를 제공합니다.</value>
+  </data>
+  <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
+    <value>컴퓨터 과학 인턴을 위한 실습 중심의 튜토리얼</value>
+  </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>정책 기반으로 수동 작성</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>안녕하세요 세계!</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>여기에서 찾고 계신 답변 중 일부를 확인하실 수 있습니다.</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>커뮤니티 개발자들이 전하는 이야기입니다.</value>
+  </data>
+  <data name="High Quality" xml:space="preserve">
+    <value>높은 품질</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon 포함됨</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>어떻게 지원을 받을 수 있나요?</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>애플리케이션을 어떻게 배포하나요?</value>
+  </data>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>저는 매번 새로운 기업용 프로젝트를 시작할 때마다 동일한 인증(Auth), 로그(Log), CI/CD 파이프라인을 설정하는 데 지쳐서 Aiursoft Template을 만들었습니다. 이것은 단순한 템플릿이 아니라, 고성능 동시 처리 환경에서 수년간 쌓아온 최적의 실천 방법을 정제한 것입니다. 이 덕분에 제 팀은 지루한 설정 과정을 건너뛰고 바로 비즈니스 로직 개발에 집중할 수 있습니다.</value>
+  </data>
+  <data name="IDE Support" xml:space="preserve">
+    <value>IDE 지원</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>포함됨</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>풍부한 문서와 실용적인 예제를 포함하여 빠르게 시작할 수 있도록 합니다.</value>
+  </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>튜토리얼 포함</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>통합 파일 관리</value>
+  </data>
+  <data name="Intern Friendly" xml:space="preserve">
+    <value>인턴 친화적</value>
+  </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>상호 운용성</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>는 무료 소프트웨어입니다</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Aiursoft Template를 무료로 사용할 수 있나요?</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>토론 참여하기</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>커뮤니티에 참여하여 지금 바로 구축을 시작하세요!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>우리의 성장하는 개발자 커뮤니티에 가입하여 다음 세대의 웹 애플리케이션을 함께 만들어보세요.</value>
+  </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm 준비 완료</value>
+  </data>
+  <data name="Lint Check" xml:space="preserve">
+    <value>라인트 체크</value>
+  </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>높은 코드 품질 유지</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>관리 대시보드</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>마크다운을 HTML로 변환</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT 라이선스</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT 라이선스</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>모델은 데이터 주석을 기반으로 클라이언트 및 서버 측에서 모두 검증됩니다.</value>
+  </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>다중 시간대 처리</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>다중 데이터베이스 공급자 지원</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>다중 데이터베이스 지원</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>다중 프로젝트</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>음악 도구</value>
+  </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>CASL 또는 유사한 것 필요</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Celery + Flower 필요</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>복잡한 인증 로직이 필요합니다</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>설정 또는 플러그인 필요</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>ESLint/Prettier 설정 필요</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Jetstream 또는 Filament 필요</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Laravel Sail 필요</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>수동 구성 필요</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Medialibrary 필요</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Passport 또는 유사한 것이 필요합니다.</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Spatie 또는 유사한 패키지 필요</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Spring Security 구성 필요</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>서드파티 플러그인 필요</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>TypeORM 또는 유사한 것이 필요합니다</value>
+  </data>
+  <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
+    <value>클라우드 벤더에 의존하지 않습니다. 어디서나 언제나 실행 가능합니다.</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>오프라인 사용 가능</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC 및 SSO</value>
+  </data>
+  <data name="One Click Start" xml:space="preserve">
+    <value>한 번 클릭 시작</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>오픈 소스</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>OpenID Connect 연동</value>
+  </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>최적화된 Docker 및 K8s 설정</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM 및 마이그레이션</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>즉시 사용 가능</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>권한 검색 및 동기화</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>사전 구성 및 테스트 완료됨</value>
+  </data>
+  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
+    <value>GitLab 전용으로 사전 구성된 CI/CD 파이프라인</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>개발/운영을 위한 사전 설정된 파이프라인</value>
+  </data>
+  <data name="Quality Gate" xml:space="preserve">
+    <value>품질 게이트</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>RBAC 인증</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>문서 읽기</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Laravel Socialite 설정 필요</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Spring Security 구성 필요</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>반응형 디자인</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>리뷰</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>강력한 통합 테스트</value>
+  </data>
+  <data name="Runs without any internet connection required." xml:space="preserve">
+    <value>인터넷 연결 없이도 실행됩니다.</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>스케줄된 작업 관리</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>어떤 OpenID Connect 공급자와도 원활하게 통합되며, 자동 역할 동기화를 지원합니다.</value>
+  </data>
+  <data name="Shift with confidence" xml:space="preserve">
+    <value>자신 있게 전환하세요</value>
+  </data>
+  <data name="Simple &amp; Easy" xml:space="preserve">
+    <value>간단하고 쉬운</value>
+  </data>
+  <data name="Single Container" xml:space="preserve">
+    <value>싱글 컨테이너</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>스마트 구성 오버라이드</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>사용자 시스템 설정에 맞춰 조절되는 스마트 다크 모드</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>사용자의 시스템 설정에 자동으로 적응하는 스마트 다크 모드.</value>
+  </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>표준 구현. 컴파일 없이 제공자 전환 가능.</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>표준 OpenID</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>새 프로젝트 시작하기</value>
+  </data>
+  <data name="Start Shipping Value." xml:space="preserve">
+    <value>가치 전달 시작하기</value>
+  </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>단일 &apos;docker run&apos; 명령어로 시작하세요.</value>
+  </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>설정 없이 시작</value>
+  </data>
+  <data name="Stop Coding Boilerplate." xml:space="preserve">
+    <value>보일러플레이트 코딩 멈추기.</value>
+  </data>
+  <data name="Strict Lint Rules" xml:space="preserve">
+    <value>엄격한 린트 규칙</value>
+  </data>
+  <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
+    <value>기본적으로 엄격한 린팅 규칙과 경고 없이 작동합니다.</value>
+  </data>
+  <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
+    <value>기본 프로젝트에서 경고가 0개인 엄격한 린팅 규칙</value>
+  </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>엄격한 단위 테스트</value>
+  </data>
+  <data name="Strongly Consistent Linting" xml:space="preserve">
+    <value>강력한 일관성 있는 린팅</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>환경 변수와 데이터베이스 기반 설정을 모두 지원하며, 환경 변수에 자동 우선 순위가 부여되어 원활한 오버라이드를 가능하게 합니다.</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>JetBrains Rider 지원으로 코드 스타일 수정이 간편합니다.</value>
+  </data>
+  <data name="Task Runner" xml:space="preserve">
+    <value>작업 실행기</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>기술 리드</value>
+  </data>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>결정적인, 검증된 .NET 엔터프라이즈 기반입니다. 인증(Auth)부터 인공지능(AI)까지, 어려운 부분은 이미 해결했으므로 귀하께서는 그 부분을 신경 쓰지 않아도 됩니다.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>네비게이션 바는 사용자 역할과 권한에 따라 자동으로 조정됩니다.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>철학</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>이 템플릿은 손쉬운 배포를 위해 구축되었습니다. 완전한 Docker 지원을 포함하고 있어 앱을 컨테이너화하여 어디서나 실행할 수 있습니다. 또한 IIS, Azure App Service 또는 ASP.NET Core를 지원하는 모든 서버에 직접 배포할 수도 있습니다.</value>
+  </data>
+  <data name="This is a template project" xml:space="preserve">
+    <value>이것은 템플릿 프로젝트입니다.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>이것은 템플릿 프로젝트로, 여기서 우리의 항해를 시작합니다...</value>
+  </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>시간대 인식 필드</value>
+  </data>
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+    <value>AnduinOS, StatHub, Warp를 포함한 프로덕션 수준의 애플리케이션들에 의해 신뢰받고 있습니다. 우리는 단지 이 코드를 공유하는 것이 아니라, 우리의 전체 비즈니스를 이 코드 위에 운영하고 있습니다.</value>
+  </data>
+  <data name="Unified Env" xml:space="preserve">
+    <value>통합 환경</value>
+  </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>통합 식별자</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>사용법</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>SaaS의 기반, 모바일 앱의 백엔드, 기업 웹사이트 또는 개인 블로그로 활용하세요. 가능성은 무궁무진합니다.</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>GitHub에서 보기</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>환영합니다</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>시작하려면 무엇이 필요하나요?</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>개발자들의 평가</value>
+  </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>왜 Aiursoft Template 을 선택해야 합니까?</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Aiursoft 템플릿을 사용하는 이유</value>
+  </data>
+  <data name="Win/Lin/Mac" xml:space="preserve">
+    <value>윈/린/맥</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>네, Aiursoft Template은 MIT 라이선스 하에 완전히 무료이며 오픈 소스입니다. 개인 및 상업 프로젝트에 무료로 사용하실 수 있습니다.</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>GitHub Discussions를 통해 커뮤니티 지원을 받을 수 있습니다. 저희</value>
+  </data>
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>.NET 10 SDK, npm 그리고 Visual Studio나 JetBrains Rider와 같은 선호하는 IDE가 필요합니다. 전체 설정 가이드는 저희 문서에서 확인하실 수 있습니다.</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>기업 사용자는 반복적으로 등록할 필요가 없습니다.</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
+  </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>제로 설정 (SQLite)</value>
+  </data>
+  <data name="Zero Configuration" xml:space="preserve">
+    <value>제로 구성</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>허용되지 않는 린트</value>
+  </data>
+
+</root>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add New Roles" xml:space="preserve">
+    <value>Nieuwe rollen toevoegen</value>
+  </data>
+  <data name="Add New Users" xml:space="preserve">
+    <value>Nieuwe gebruikers toevoegen</value>
+  </data>
+  <data name="Allows assigning or removing roles for any user." xml:space="preserve">
+    <value>Stelt in staat om rollen toe te wijzen of te verwijderen voor elke gebruiker.</value>
+  </data>
+  <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
+    <value>Staat aanpassing van rolnamen en hun toegewezen machtigingen toe.</value>
+  </data>
+  <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
+    <value>Staat aanpassing van gebruikersgegevens zoals e-mailadres en rollen toe, en kan ook gebruikerswachtwoorden opnieuw instellen.</value>
+  </data>
+  <data name="Allows the permanent deletion of roles." xml:space="preserve">
+    <value>Staat het permanent verwijderen van rollen toe.</value>
+  </data>
+  <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
+    <value>Staat het permanent verwijderen van gebruikersaccounts toe.</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Staats het bekijken en wijzigen van globale toepassingsinstellingen toe.</value>
+  </data>
+  <data name="Allows viewing system-level information and settings." xml:space="preserve">
+    <value>Staat het bekijken van systeeminformatie en -instellingen toe.</value>
+  </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Staat het bekijken van het dashboard voor achtergrondtaken en het beheren van taken toe.</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Staat het bekijken van de lijst met alle machtigingen en hun toewijzingen aan rollen en gebruikers toe.</value>
+  </data>
+  <data name="Allows viewing the list of all users." xml:space="preserve">
+    <value>Staat het bekijken van de lijst met alle gebruikers toe.</value>
+  </data>
+  <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
+    <value>Maakt het mogelijk de lijst met rollen en hun toegewezen machtigingen te bekijken.</value>
+  </data>
+  <data name="Assign Roles to Users" xml:space="preserve">
+    <value>Rollen toewijzen aan gebruikers</value>
+  </data>
+  <data name="Delete Roles" xml:space="preserve">
+    <value>Rollen verwijderen</value>
+  </data>
+  <data name="Delete Users" xml:space="preserve">
+    <value>Gebruikers verwijderen</value>
+  </data>
+  <data name="Edit Role Information" xml:space="preserve">
+    <value>Rolinformatie bewerken</value>
+  </data>
+  <data name="Edit User Information" xml:space="preserve">
+    <value>Gebruikersinformatie bewerken</value>
+  </data>
+  <data name="Grants permission to create new roles." xml:space="preserve">
+    <value>Verleent toestemming om nieuwe rollen aan te maken.</value>
+  </data>
+  <data name="Grants permission to create new user accounts." xml:space="preserve">
+    <value>Verleent toestemming om nieuwe gebruikersaccounts aan te maken.</value>
+  </data>
+  <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
+    <value>Verleent toestemming om de applicatie-instantie opnieuw op te starten. Kan beschikbaarheidsonderbrekingen veroorzaken, maar alle instellingen en cache worden opnieuw geladen.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Algemene instellingen beheren</value>
+  </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Leesmachtigingen</value>
+  </data>
+  <data name="Read Roles" xml:space="preserve">
+    <value>Rollen lezen</value>
+  </data>
+  <data name="Read Users" xml:space="preserve">
+    <value>Gebruikers lezen</value>
+  </data>
+  <data name="Reboot This App" xml:space="preserve">
+    <value>Herstart deze app</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Achtergrondtaken weergeven</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Systeemcontext weergeven</value>
+  </data>
+
+</root>

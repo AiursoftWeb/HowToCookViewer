@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>存取被拒</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>帳戶設定</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理員</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft 模板</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>背景工作</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>錯誤的請求</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>更改頭像</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>更改密碼</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>更改個人資料</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>點擊登入</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>建立角色</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>建立用戶</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>儀表板</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>刪除角色</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>刪除用戶</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>目錄</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>編輯角色</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>編輯用戶</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>功能</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>全球設定</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>索引</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>內部伺服器錯誤</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>帳戶暫時停用</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>登入以使用所有功能。</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>找不到</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>權限詳情</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>權限</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>個人</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>個人檔案</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>檔案設定</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>註冊</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>角色詳情</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>系統</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>範本</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>未獲授權</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>用戶詳情</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>用戶</value>
+  </data>
+
+</root>

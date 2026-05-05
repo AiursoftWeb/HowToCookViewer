@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Details" xml:space="preserve">
+    <value>รายละเอียดบัญชี</value>
+  </data>
+  <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
+    <value>ภาพรวมของโปรไฟล์ผู้ใช้ บทบาทที่ได้รับมอบหมาย และสิทธิ์การเข้าถึงที่มีผล</value>
+  </data>
+  <data name="Assigned Roles" xml:space="preserve">
+    <value>บทบาทที่ได้รับมอบหมาย</value>
+  </data>
+  <data name="Back to list" xml:space="preserve">
+    <value>กลับไปยังรายการ</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>ข้อมูลพื้นฐาน</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>เวลาที่สร้าง</value>
+  </data>
+  <data name="Delete this User" xml:space="preserve">
+    <value>ลบผู้ใช้นี้</value>
+  </data>
+  <data name="Edit this User" xml:space="preserve">
+    <value>แก้ไขผู้ใช้นี้</value>
+  </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>สิทธิ์ที่มีผลจริง</value>
+  </data>
+  <data name="Effective Permissions (from all roles)" xml:space="preserve">
+    <value>สิทธิ์ที่แท้จริง (จากบทบาททั้งหมด)</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>อีเมล</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>รายละเอียดโปรไฟล์</value>
+  </data>
+  <data name="This user has no effective permissions." xml:space="preserve">
+    <value>ผู้ใช้นี้ไม่มีสิทธิ์การใช้งานที่มีผล</value>
+  </data>
+  <data name="This user has not been assigned any roles." xml:space="preserve">
+    <value>ผู้ใช้รายนี้ยังไม่ได้รับมอบหมายบทบาทใดๆ</value>
+  </data>
+  <data name="User Details:" xml:space="preserve">
+    <value>รายละเอียดผู้ใช้:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+
+</root>

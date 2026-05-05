@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>Länken till märkets hemsida.</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>Ett dummyval för testning.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Ett dummynummer för testning.</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>Tillåt Användare Ändra Smeknamn</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>Tillåt användare att ändra sitt smeknamn på sidan för profilhantering.</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>Hemsida för varumärke</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>Varumärke</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Dummyval</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Dummynummer</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>ICP-nummer</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>Projektlogotyp</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>Projektnamn</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Det varumärke som visas i sidfoten.</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>ICP-licensnummer för användare i Kina. Lämna tomt för att dölja.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Logotypen för projektet som visas i navigeringsfältet och sidfoten. Stöd för jpg, png, svg.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Projektets namn som visas i frontend</value>
+  </data>
+
+</root>

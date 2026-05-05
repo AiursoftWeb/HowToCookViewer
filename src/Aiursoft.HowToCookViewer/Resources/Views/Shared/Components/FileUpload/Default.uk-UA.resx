@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Drag and drop a file here or click" xml:space="preserve">
+    <value>Перетягніть файл сюди або натисніть</value>
+  </data>
+  <data name="Drag and drop or click to replace" xml:space="preserve">
+    <value>Перетягніть або клацніть, щоб замінити</value>
+  </data>
+  <data name="Ooops, something wrong happended." xml:space="preserve">
+    <value>Ой, щось пішло не так.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="The file is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>Файл не дозволено (лише {{ value }}).</value>
+  </data>
+  <data name="The file size is too big ({{ value }} max)." xml:space="preserve">
+    <value>Розмір файлу занадто великий (максимум {{ value }}).</value>
+  </data>
+  <data name="The image format is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>Формат зображення не підтримується (дозволені лише {{ value }}).</value>
+  </data>
+  <data name="The image height is too big ({{ value }}px max)." xml:space="preserve">
+    <value>Висота зображення занадто велика (максимум {{ value }} пікселів).</value>
+  </data>
+  <data name="The image height is too small ({{ value }}px min)." xml:space="preserve">
+    <value>Висота зображення занадто мала (мінімум {{ value }} пікселів).</value>
+  </data>
+  <data name="The image width is too big ({{ value }}px max)." xml:space="preserve">
+    <value>Ширина зображення занадто велика (максимум {{ value }}px).</value>
+  </data>
+  <data name="The image width is too small ({{ value }}px min)." xml:space="preserve">
+    <value>Ширина зображення занадто мала (мінімум {{ value }} пікселів).</value>
+  </data>
+
+</root>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Підтримка «відстрілюй і забудь» для довготривалих завдань (наприклад, електронних листів або штучного інтелекту), із графічним інтерфейсом для управління чергою, паралельною обробкою та скасуванням.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>Вбудована система контролю доступу на основі ролей (RBAC) для деталізованого управління дозволами.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>Повне рішення для автентифікації користувачів та управління профілями, готове до використання з коробки.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>Повний рішення для автентифікації користувачів та управління профілями.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>Адаптивна верстка, яка чудово виглядає як на настільних комп’ютерах, так і на мобільних пристроях.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>Сучасна, багатофункціональна та високо розширювана основа для вашої наступної веб-програми.</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>Переклади на основі ШІ</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>Усі залежності автоматично реєструються та завжди доступні через ін&apos;єкцію в конструктор.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>Автоматичний темний режим</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>Автоматична Ін&apos;єкція Залежностей</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Автоматичне управління часовими зонами</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>Автоматичний переклад за допомогою штучного інтелекту на 28 мов для глобального охоплення.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Автоматична, заснована на штучному інтелекті переклад у 28 мовах.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Обробка фонових завдань</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Вбудоване управління користувачами</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Містить підтримку Docker для спрощеного та узгодженого розгортання.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>Повністю підтримує Docker для спрощених, стабільних та надійних розгортань.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>Документація</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Перевірка сумісності</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Розробляйте виключно в UTC, тоді як система автоматично перетворює та відображає дати у часовому поясі користувача.</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>Підготовлено для розгортання в Docker</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Dockerized для легкого розгортання</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>Динамічна навігаційна панель</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Легко переключатися між постачальниками баз даних, включаючи SQLite, MySQL, SQL Server та вбудовану базу даних у пам&apos;яті для тестування.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Легко перемикайтеся між провайдерами, такими як SQLite, MySQL, SQL Server, та оперативною базою даних у пам&apos;яті для тестування.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Легко створюйте інтеграційні тести за допомогою ін-меморі баз даних, тимчасових файлових систем, вбудованого мокування та симуляції реальних HTTP-запитів.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Містить вбудовану систему управління файлами з автоматичною компресією аватарів та захистом приватності.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>Містить вбудовану систему керування файлами з автоматичним стисненням аватарів.</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Керуйте періодичними завданнями, такими як очищення та синхронізація, за допомогою комплексного графічного інтерфейсу для моніторингу історії виконання та журналів.</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>Привіт, Світе!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>Містить обширну документацію та практичні приклади, щоб ви могли швидко розпочати роботу.</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>Інтегроване управління файлами</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>Моделі перевіряються на клієнтській та серверній сторонах на основі анотацій даних.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Підтримка кількох постачальників баз даних</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>Підтримка кількох баз даних</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>Інтеграція OpenID Connect</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>Авторизація на основі ролей (RBAC)</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Прочитати документацію</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>Адаптивний дизайн</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Надійне тестування інтеграції</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Планування завдань</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>Безперешкодна інтеграція з будь-яким постачальником OpenID Connect із автоматичною синхронізацією ролей.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Розумні перевизначення конфігурації</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Розумний темний режим, який адаптується до налаштувань системи користувача.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Розумний темний режим, який автоматично адаптується до системних налаштувань користувача.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Розпочати новий проєкт</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Підтримує як змінні середовища, так і налаштування, зберігаються в базі даних, з автоматичним пріоритетом для змінних середовища для безперервного перекриття.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>Панель навігації автоматично адаптується відповідно до ролей та дозволів користувача.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Це шаблонний проект, з якого ми розпочинаємо нашу подорож...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Ласкаво просимо</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Чому варто використовувати шаблон Aiursoft?</value>
+  </data>
+
+</root>

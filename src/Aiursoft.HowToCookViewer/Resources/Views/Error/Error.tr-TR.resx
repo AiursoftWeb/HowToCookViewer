@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>Bir Hata Oluştu</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>İsteğiniz işlenirken bir hata oluştu.</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>Ana Sayfaya Dön</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>Hata.</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Eğer erişim hakkınız olması gerektiğini düşünüyorsanız, lütfen sistem yöneticinizle iletişime geçin. Veya çıkış yapıp tekrar giriş yapmayı deneyin.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Lütfen URL&apos;yi kontrol edip tekrar deneyin. Eğer bu bir sunucu hatası olduğuna inanıyorsanız, lütfen destek ekibiyle iletişime geçin.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Lütfen isteğinizi kontrol edin ve tekrar deneyin. Eğer bu bir sunucu hatası olduğuna inanıyorsanız, lütfen destek ekibiyle iletişime geçin.</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>Lütfen yardım için yönetici ile iletişime geçin.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Lütfen daha sonra tekrar deneyin veya sorun devam ederse destek ekibiyle iletişime geçin.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>İstek Kimliği:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Üzgünüz, bu sayfaya erişim için gerekli izniniz yok.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Aramakta olduğunuz sayfa kaldırılmış olabilir, ismi değiştirilmiş olabilir veya geçici olarak erişilemez durumda olabilir.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Tekrar deneyin</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Üzgünüz, isteğiniz işlenirken bir sorun oluştu.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Tarayıcınız, bu sunucunun anlayamayacağı bir istek gönderdi.</value>
+  </data>
+
+</root>

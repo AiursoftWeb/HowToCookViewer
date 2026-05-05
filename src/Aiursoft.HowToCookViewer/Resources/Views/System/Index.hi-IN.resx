@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>.NET संस्करण</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>एप्लिकेशन के सर्वर वातावरण, प्रक्रिया, और वर्तमान अनुरोध संदर्भ का एक अवलोकन।</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>लागू / परिभाषित</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>क्या आप वाकई एप्लिकेशन को पुनरारंभ करना चाहते हैं? यह क्रिया अपरिवर्तनीय है और सभी सक्रिय कनेक्शनों को समाप्त कर देगी।</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>एप्लिकेशन पुनरारंभ की पुष्टि करें</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>बनाया गया</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>खतरा क्षेत्र</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>डेटाबेस माइग्रेशन</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>डेटाबेस तालिका गणना</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>डायरेक्टरी</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>डॉकर कंटेनर</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>शीर्षक</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>होस्ट</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>क्या HTTPS है</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>स्थानीय पोर्ट</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>मशीन का नाम</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>मेमोरी उपयोग</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>विधि</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>प्रवास</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>पथ</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>संपत्ति</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>प्रोटोकॉल</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>पृष्ठ पुनः लोड हो रहा है...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>दूरस्थ आईपी</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>रिमोट पोर्ट</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>अनुरोध HTTP हेडर</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>अनुरोध गुण</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>पुनरारंभ का अनुरोध करें</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>एप्लिकेशन पुनः आरंभ करें</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>पुनः आरंभ हो रहा है...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>पंक्तियाँ</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>स्कीम</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>सर्वर और प्रक्रिया जानकारी</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>सर्वर समय</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>प्रारंभ समय</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>सिस्टम</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>सिस्टम जानकारी</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>टेबल</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>यह एप्लिकेशन को सुरुचिपूर्ण ढंग से बंद कर देगा। अपेक्षा है कि एक प्रक्रिया प्रबंधक इसे पुनः आरंभ करेगा।</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>उपयोगकर्ता नाम</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>मान</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>वर्कर प्रोसेस</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>हाँ, अब पुनरारंभ करें</value>
+  </data>
+
+</root>

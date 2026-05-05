@@ -1,0 +1,133 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.PermissionsViewModels.DetailsViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+
+@* The page-specific style is preserved. *@
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
+@* A standard page header with back button. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Permission Details"]</h3>
+    </div>
+    <div class="col-auto ms-auto mt-n1">
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="align-middle" data-lucide="arrow-left"></i> @Localizer["Back to Permissions"]
+        </a>
+    </div>
+</div>
+
+@* Permission Information Card *@
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="card-title">@PermissionLocalizer[Model.Permission.Name]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Permission Information"]</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">@Localizer["Permission Key"]</dt>
+            <dd class="col-sm-9"><code>@Model.Permission.Key</code></dd>
+
+            <dt class="col-sm-3">@Localizer["Permission Name"]</dt>
+            <dd class="col-sm-9">@PermissionLocalizer[Model.Permission.Name]</dd>
+
+            <dt class="col-sm-3">@Localizer["Description"]</dt>
+            <dd class="col-sm-9">@PermissionLocalizer[Model.Permission.Description]</dd>
+        </dl>
+    </div>
+</div>
+
+@* Roles with this Permission *@
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["Roles with this Permission"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["The following roles have been granted this permission."]</h6>
+    </div>
+    @if (Model.Roles.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                <tr>
+                    <th>@Localizer["Role Name"]</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var role in Model.Roles)
+                {
+                    <tr class="clickable-row" data-href="@Url.Action("Details", "Roles", new { id = role.Id })">
+                        <td>@role.Name</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="card-body">
+            <p class="text-muted">@Localizer["No roles have this permission."]</p>
+        </div>
+    }
+</div>
+
+@* Users with this Permission *@
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["Users with this Permission"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["The following users have this permission through their role memberships."]</h6>
+    </div>
+    @if (Model.Users.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                <tr>
+                    <th>@Localizer["User Name"]</th>
+                    <th>@Localizer["Display Name"]</th>
+                    <th>@Localizer["Email"]</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr class="clickable-row" data-href="@Url.Action("Details", "Users", new { id = user.Id })">
+                        <td>@user.UserName</td>
+                        <td>@user.DisplayName</td>
+                        <td>@user.Email</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="card-body">
+            <p class="text-muted">@Localizer["No users have this permission."]</p>
+        </div>
+    }
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function (event) {
+                    // This is important: only navigate if the click was not on a link or a button inside the row
+                    const target = event.target;
+                    if (!target.matches('a, a *, button, button *')) {
+                        window.location.href = row.dataset.href;
+                    }
+                });
+            });
+        });
+    </script>
+}

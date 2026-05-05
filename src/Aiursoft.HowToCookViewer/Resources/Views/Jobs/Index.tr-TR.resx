@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>Eylemler</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Arka Plan Görevleri</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>İptal Edildi</value>
+  </data>
+  <data name="Creates test jobs in different queues (15-30s sleep, 10% failure rate). Jobs in different queues run in parallel." xml:space="preserve">
+    <value>Farklı kuyruklarda test işleri oluşturur (15-30 saniye bekleme, %10 hata oranı). Farklı kuyruklardaki işler paralel olarak çalışır.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Başarısız</value>
+  </data>
+  <data name="Finished At" xml:space="preserve">
+    <value>Bitirildi Tarihi</value>
+  </data>
+  <data name="Job Name" xml:space="preserve">
+    <value>İş Adı</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>son saat</value>
+  </data>
+  <data name="Last run" xml:space="preserve">
+    <value>Son çalıştırılma</value>
+  </data>
+  <data name="Monitor and manage background job queues and their execution status." xml:space="preserve">
+    <value>Arka plan iş kuyruklarını ve yürütme durumlarını izleyin ve yönetin.</value>
+  </data>
+  <data name="Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically." xml:space="preserve">
+    <value>Arka plan iş kuyruklarını izleyin ve yönetin. Kayıtlı herhangi bir işi manuel olarak tetikleyin veya zamanlayıcının otomatik olarak çalıştırmasına izin verin.</value>
+  </data>
+  <data name="Never executed" xml:space="preserve">
+    <value>Hiç çalıştırılmadı</value>
+  </data>
+  <data name="New Job A" xml:space="preserve">
+    <value>Yeni Görev A</value>
+  </data>
+  <data name="New Job B" xml:space="preserve">
+    <value>Yeni Görev B</value>
+  </data>
+  <data name="No background jobs are registered. Add jobs using services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs." xml:space="preserve">
+    <value>Arka plan görevi kaydedilmedi. Jobs eklemek için Startup.cs dosyasında services.AddBackgroundJob&lt;TJob&gt;() kullanın.</value>
+  </data>
+  <data name="No jobs" xml:space="preserve">
+    <value>İş yok</value>
+  </data>
+  <data name="No jobs have run in the last hour." xml:space="preserve">
+    <value>Son saatte hiç iş çalıştırılmadı.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Beklemede</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>İşleniyor</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>Sıra</value>
+  </data>
+  <data name="Queue Name" xml:space="preserve">
+    <value>Kuyruk Adı</value>
+  </data>
+  <data name="Queued At" xml:space="preserve">
+    <value>Sıraya Alınan Tarih</value>
+  </data>
+  <data name="Recent Execution History" xml:space="preserve">
+    <value>Son Çalışma Geçmişi</value>
+  </data>
+  <data name="Registered Jobs" xml:space="preserve">
+    <value>Kayıtlı Görevler</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Başarılı</value>
+  </data>
+  <data name="Trigger Now" xml:space="preserve">
+    <value>Şimdi Tetikle</value>
+  </data>
+
+</root>

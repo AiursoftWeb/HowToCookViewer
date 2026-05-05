@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>“火速发送”支持长时间运行的任务（如邮件或AI），配备用于队列管理、并行处理和取消的图形化界面。</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>内置基于角色的访问控制（RBAC）系统，用于细粒度权限管理。</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>开箱即用的完整用户认证与个人资料管理解决方案。</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>用户身份验证和资料管理的完整解决方案</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>完全响应式布局，在桌面和移动设备上都能完美呈现。</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>一个现代化、功能丰富且高度可扩展的基础框架，为您的下一个Web应用程序奠定坚实基础。</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>AI驱动翻译</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>所有依赖项都会自动注册，并始终可通过构造函数注入方式使用。</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>自动深色模式</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>自动依赖注入</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>自动时区处理</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>支持28种语言的自动AI翻译，助力实现全球覆盖。</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>自动、由人工智能驱动的 28 种语言翻译。</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>后台任务处理</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>内置用户管理</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>自带 Docker 支持，实现简化且一致的部署。</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>提供完整的Docker支持，实现简化、一致且可靠的部署。</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>完整文档</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>一致性验证</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>在开发时仅使用 UTC，系统会自动将日期转换并显示为用户的本地时间。</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>容器化部署</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>支持 Docker，部署更轻松</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>动态导航栏</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>轻松在各种数据库提供者之间切换，包括 SQLite、MySQL、SQL Server，以及用于测试的内存数据库。</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>可轻松在 SQLite、MySQL、SQL Server 等数据库提供程序以及用于测试的内存数据库之间切换。</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>轻松编写集成测试，使用内存数据库、临时文件系统、内置模拟功能以及真实的 HTTP 请求模拟。</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>内置文件管理系统，支持自动头像压缩与隐私保护。</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>内置文件管理系统，支持头像自动压缩。</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>轻松处理如清理和同步等重复性任务，并通过功能全面的图形界面监控执行历史和日志。</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>你好，世界！</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>包含详尽的文档和实用示例，助您快速入门。</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>集成文件管理</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>多数据库提供者支持</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>多数据库支持</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>OpenID Connect 集成</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>基于角色的访问控制 (RBAC) 授权</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>阅读文档</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>响应式设计</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>强大的集成测试</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>定时任务管理</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>无缝集成任何 OpenID Connect 提供商，并自动同步角色信息。</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>智能配置覆盖</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>智能深色模式，可自动适配用户的系统设置。</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>智能深色模式，可自动适应用户系统设置。</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>开始新项目</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>支持环境变量和数据库配置，环境变量具有自动优先级，可实现无缝覆盖。</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>导航栏会根据用户角色和权限自动调整。</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>为何选择 Aiursoft 模板？</value>
+  </data>
+
+</root>

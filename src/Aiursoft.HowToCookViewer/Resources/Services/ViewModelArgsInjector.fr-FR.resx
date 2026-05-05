@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Access Denied" xml:space="preserve">
+    <value>Accès refusé</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Paramètres du compte</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administrateur</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Modèle Aiursoft</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonyme</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Travaux en arrière-plan</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Requête incorrecte</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Changer l&apos;avatar</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Modifier le mot de passe</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Modifier le profil</value>
+  </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>Cliquez pour vous connecter</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Créer un rôle</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Créer un utilisateur</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Tableau de bord</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Supprimer le rôle</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Supprimer l&apos;utilisateur</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Répertoire</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Modifier le rôle</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Modifier l&apos;utilisateur</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Fonctionnalités</value>
+  </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Paramètres globaux</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Erreur serveur interne</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Verrouillage</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>Connectez-vous pour accéder à toutes les fonctionnalités.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Gérer</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Non trouvé</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Détails des autorisations</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Paramètres du profil</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>S&apos;inscrire</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Détails du rôle</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rôles</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Système</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informations système</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Modèle</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Non autorisé</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Détails de l&apos;utilisateur</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+
+</root>

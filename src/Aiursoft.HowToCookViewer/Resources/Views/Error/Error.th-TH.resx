@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>เกิดข้อผิดพลาด</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>เกิดข้อผิดพลาดขณะประมวลผลคำขอของคุณ</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>กลับไปที่หน้าหลัก</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>ข้อผิดพลาด</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>หากคุณเชื่อว่าคุณควรมีสิทธิ์เข้าถึง โปรดติดต่อผู้ดูแลระบบของคุณ หรือลองออกจากระบบแล้วเข้าสู่ระบบอีกครั้ง</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>กรุณาตรวจสอบ URL และลองอีกครั้ง หากคุณเชื่อว่านี่เป็นข้อผิดพลาดของเซิร์ฟเวอร์ โปรดติดต่อฝ่ายสนับสนุน</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>กรุณาตรวจสอบคำขอของคุณและลองอีกครั้ง หากคุณเชื่อว่านี่เป็นข้อผิดพลาดของเซิร์ฟเวอร์ โปรดติดต่อฝ่ายสนับสนุน</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>กรุณาติดต่อผู้ดูแลระบบเพื่อขอความช่วยเหลือ</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>กรุณาลองใหม่อีกครั้งในภายหลัง หรือติดต่อฝ่ายสนับสนุนหากปัญหายังคงอยู่</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>รหัสคำขอ:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>ขออภัย คุณไม่มีสิทธิ์เข้าถึงหน้านี้</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>หน้าเว็บที่คุณกำลังมองหาอาจถูกลบ หรือมีการเปลี่ยนชื่อ หรือไม่สามารถใช้งานได้ชั่วคราว</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>ลองอีกครั้ง</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>ขออภัย เกิดข้อผิดพลาดบางอย่างในการประมวลผลคำขอของคุณ</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>เบราว์เซอร์ของคุณส่งคำขอที่เซิร์ฟเวอร์นี้ไม่สามารถเข้าใจได้</value>
+  </data>
+
+</root>

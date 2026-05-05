@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="All roles" xml:space="preserve">
+    <value>บทบาททั้งหมด</value>
+  </data>
+  <data name="Avatar file" xml:space="preserve">
+    <value>ไฟล์รูปโปรไฟล์</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>ที่อยู่อีเมล</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>รหัสประจำตัว</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
+    <value>รีเซ็ตรหัสผ่าน (ปล่อยว่างไว้เพื่อใช้รหัสผ่านเดิม)</value>
+  </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} ไม่ใช่ที่อยู่อีเมลที่ถูกต้อง</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>ต้องระบุ {0}</value>
+  </data>
+  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
+    <value>{0} ต้องมีอย่างน้อย {1} ตัวอักษร</value>
+  </data>
+  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
+    <value>{0} ต้องมีความยาวสูงสุด {1} ตัวอักษร</value>
+  </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>ไฟล์รูปภาพประจำตัวไม่ถูกต้อง กรุณาอัปโหลดใหม่อีกครั้ง</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>ไฟล์รูปโปรไฟล์จำเป็นต้องมี</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+
+</root>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>सूची पर वापस जाएं</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>बनाएं</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>नया भूमिका बनाएँ</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>भूमिका बनाएं</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>नया भूमिका नाम दर्ज करें</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) सक्षम किया गया है। भूमिकाएँ (Roles) एक बाहरी पहचान प्रदाता (external identity provider) से सिंक्रनाइज़ की जाती हैं। हम आपके OIDC प्रदाता पर नई भूमिकाएँ या समूह बनाने की दृढ़ता से सलाह देते हैं ताकि यह सुनिश्चित हो सके कि उनका प्रबंधन केंद्रीय रूप से होता है। यह फ़ॉर्म एक स्थानीय-केवल भूमिका (local-only role) बनाएगा जो केवल इसी एप्लिकेशन के भीतर मौजूद होगी।</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>भूमिका</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>भूमिका विवरण</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>भूमिका का नाम</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>चेतावनी!</value>
+  </data>
+
+</root>

@@ -1,0 +1,30 @@
+@model Aiursoft.HowToCookViewer.Models.ManageViewModels.ChangeProfileViewModel
+
+@* Standard page title, providing consistency across all settings pages. *@
+<h1 class="h3 mb-3">@Localizer["Edit your profile"]</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["Profile Information"]</h5>
+    </div>
+    <div class="card-body">
+        <form asp-controller="Manage" asp-action="ChangeProfile" method="post">
+
+            @* The validation summary is preserved for clear, top-level error feedback. *@
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">@Localizer["Display Name"]</label>
+                <input asp-for="Name" class="form-control form-control-lg" placeholder="@Localizer["Enter your display name"]" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+                <small class="form-text text-muted">@Localizer["This name will be displayed publicly across the application."]</small>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">@Localizer["Save changes"]</button>
+                @* A "Cancel" button is added as a standard UX best practice for consistent navigation. *@
+                <a asp-controller="Manage" asp-action="Index" class="btn btn-light">@Localizer["Cancel"]</a>
+            </div>
+        </form>
+    </div>
+</div>

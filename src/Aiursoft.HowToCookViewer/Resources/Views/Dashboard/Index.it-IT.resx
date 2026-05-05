@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Supporto &quot;fire-and-forget&quot; per attività a lungo termine (come email o IA), con interfaccia grafica per la gestione della coda, elaborazione parallela e annullamento.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>Un sistema RBAC (Role-Based Access Control) integrato per la gestione granulare delle autorizzazioni.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>Una soluzione completa per l&apos;autenticazione utente e la gestione del profilo, immediatamente utilizzabile.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>Una soluzione completa per l&apos;autenticazione utente e la gestione del profilo.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>Un layout completamente reattivo che appare eccellente sia su dispositivi desktop che mobili.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>Una base moderna, ricca di funzionalità e altamente estensibile per la tua prossima applicazione web.</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>Traduzioni Basate sull&apos;Intelligenza Artificiale</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>Tutte le dipendenze vengono registrate automaticamente e sono sempre disponibili tramite l&apos;iniezione tramite costruttore.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>Modalità Scura Automatica</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>Iniezione Automatica delle Dipendenze</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Gestione automatica dell&apos;ora locale</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>Traduzione automatica basata su intelligenza artificiale in 28 lingue per una portata globale.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Traduzione automatica, guidata dall&apos;IA, in 28 lingue.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Elaborazione dei processi in background</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Gestione Utenti Integrata</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Viene fornito con il supporto a Docker per distribuzioni semplificate e coerenti.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>Include il supporto completo per Docker per distribuzioni semplificate, coerenti e affidabili.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>Documentazione Completa</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Convalida della coerenza</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Sviluppa esclusivamente in UTC mentre il sistema converte e visualizza automaticamente le date nell&apos;ora locale dell&apos;utente.</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>Containerizzato per il Deployment</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Containerizzato per un deployment semplice</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>Barra di navigazione dinamica</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Passa facilmente da un provider di database all&apos;altro, inclusi SQLite, MySQL, SQL Server e un database in memoria per i test.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Passa facilmente tra provider come SQLite, MySQL, SQL Server e un database in memoria per i test.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Scriverli in modo semplice gli test di integrazione utilizzando database in memoria, sistemi di file temporanei, mock integrati e simulazione di richieste HTTP reali.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Offre un sistema di gestione file integrato con compressione automatica degli avatar e protezione della privacy.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>Include un sistema integrato di gestione dei file con compressione automatica degli avatar.</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Gestisci i compiti ricorrenti come pulizia e sincronizzazione con un&apos;interfaccia grafica completa per il monitoraggio della cronologia di esecuzione e dei log.</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>Ciao Mondo!</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>Include documentazione completa ed esempi pratici per iniziare rapidamente.</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>Gestione File Integrata</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>I modelli vengono convalidati sia lato client che lato server in base alle annotazioni dei dati.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Supporto per più provider di database</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>Supporto per Database Multipli</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>Integrazione OpenID Connect</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>Autorizzazione RBAC</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Leggi il documento</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>Design Reattivo</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Test di integrazione robusti</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Gestione dei compiti pianificati</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>Integrazione perfetta con qualsiasi provider OpenID Connect, con sincronizzazione automatica dei ruoli.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Sovrascrizioni Intelligenti alla Configurazione</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Modalità scura intelligente che si adatta alle impostazioni di sistema dell&apos;utente.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Modalità scura intelligente che si adatta automaticamente alle impostazioni di sistema dell&apos;utente.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Avvia un nuovo progetto</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Supporta sia le variabili d&apos;ambiente che le impostazioni basate sul database, con priorità automatica alle variabili d&apos;ambiente per sovrascritture senza interruzioni.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>La barra di navigazione si adatta automaticamente in base ai ruoli e alle autorizzazioni dell&apos;utente.</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Questo è un progetto template, da cui iniziamo il viaggio...</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Benvenuto</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Perché usare il Template Aiursoft?</value>
+  </data>
+
+</root>

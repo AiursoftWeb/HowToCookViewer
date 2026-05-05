@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Account Details" xml:space="preserve">
+    <value>アカウント詳細</value>
+  </data>
+  <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
+    <value>ユーザーのプロファイル、割り当てられたロール、および有効な権限の概要。</value>
+  </data>
+  <data name="Assigned Roles" xml:space="preserve">
+    <value>割り当てられたロール</value>
+  </data>
+  <data name="Back to list" xml:space="preserve">
+    <value>一覧に戻る</value>
+  </data>
+  <data name="Basic Information" xml:space="preserve">
+    <value>基本情報</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>作成日時</value>
+  </data>
+  <data name="Delete this User" xml:space="preserve">
+    <value>このユーザーを削除</value>
+  </data>
+  <data name="Edit this User" xml:space="preserve">
+    <value>このユーザーを編集</value>
+  </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>有効な権限</value>
+  </data>
+  <data name="Effective Permissions (from all roles)" xml:space="preserve">
+    <value>有効権限 (すべてのロールから)</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>メールアドレス</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>プロフィール詳細</value>
+  </data>
+  <data name="This user has no effective permissions." xml:space="preserve">
+    <value>このユーザーには有効な権限がありません。</value>
+  </data>
+  <data name="This user has not been assigned any roles." xml:space="preserve">
+    <value>このユーザーにはロールが割り当てられていません。</value>
+  </data>
+  <data name="User Details:" xml:space="preserve">
+    <value>ユーザー詳細:</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+
+</root>

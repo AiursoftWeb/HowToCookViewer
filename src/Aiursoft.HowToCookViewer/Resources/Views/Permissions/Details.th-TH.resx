@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to Permissions" xml:space="preserve">
+    <value>กลับไปยังสิทธิ์</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>คำอธิบาย</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>ชื่อที่แสดง</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>อีเมล</value>
+  </data>
+  <data name="No roles have this permission." xml:space="preserve">
+    <value>ไม่มีบทบาทใดที่มีสิทธิ์นี้</value>
+  </data>
+  <data name="No users have this permission." xml:space="preserve">
+    <value>ไม่มีผู้ใช้ที่มีสิทธิ์นี้</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>รายละเอียดสิทธิ์</value>
+  </data>
+  <data name="Permission Information" xml:space="preserve">
+    <value>ข้อมูลสิทธิ์</value>
+  </data>
+  <data name="Permission Key" xml:space="preserve">
+    <value>คีย์สิทธิ์</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>ชื่อสิทธิ์</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>ชื่อบทบาท</value>
+  </data>
+  <data name="Roles with this Permission" xml:space="preserve">
+    <value>บทบาทที่มีสิทธิ์นี้</value>
+  </data>
+  <data name="The following roles have been granted this permission." xml:space="preserve">
+    <value>บทบาทต่อไปนี้ได้รับสิทธิ์นี้แล้ว</value>
+  </data>
+  <data name="The following users have this permission through their role memberships." xml:space="preserve">
+    <value>ผู้ใช้ต่อไปนี้มีสิทธิ์นี้ผ่านการเป็นสมาชิกในบทบาทของพวกเขา</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+  <data name="Users with this Permission" xml:space="preserve">
+    <value>ผู้ใช้ที่มีสิทธิ์นี้</value>
+  </data>
+
+</root>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>品牌主頁的連結</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>測試用的虛擬選擇</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>一個用於測試的虛擬數字。</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>允許用戶更改暱稱</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>允許用戶在個人資料管理頁面調整其暱稱。</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>品牌首頁網址</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>品牌名稱</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>測試選項</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>測試用數字</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>ICP編號</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>項目標誌</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>項目名稱</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>顯示於頁尾的品牌名稱</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>適用於中國內地用戶的ICP許可證編號。留空則隱藏。</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>項目圖標顯示於導航列及頁腳。支援 jpg、png、svg 格式。</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>項目在前端顯示的名稱。</value>
+  </data>
+
+</root>

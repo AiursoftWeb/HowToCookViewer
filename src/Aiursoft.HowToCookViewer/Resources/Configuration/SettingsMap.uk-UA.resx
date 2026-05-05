@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>Посилання на головну сторінку бренду.</value>
+  </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>Прикладний вибір для тестування.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Псевдонімне число для тестування.</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>Дозволити користувачеві змінювати прізвисько</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>Дозволити користувачам змінювати свій прізвисько на сторінці керування профілем.</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>URL домашньої сторінки бренду</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>Назва бренду</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Спростована вибірка</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Псевдонім</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>Номер ICP</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>Логотип проекту</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>Назва проекту</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Назва бренду, що відображається в підвалі.</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>Номер ліцензії ICP для користувачів материкового Китаю. Залиште порожнім, щоб приховати.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Логотип проекту, який відображається в навбарі та футері. Підтримується jpg, png, svg.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Назва проекту, що відображається на фронтенді.</value>
+  </data>
+
+</root>

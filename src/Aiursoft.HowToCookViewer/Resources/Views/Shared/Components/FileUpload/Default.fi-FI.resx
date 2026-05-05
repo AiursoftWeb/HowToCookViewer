@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Drag and drop a file here or click" xml:space="preserve">
+    <value>Vedä ja pudota tiedosto tähän tai napsauta</value>
+  </data>
+  <data name="Drag and drop or click to replace" xml:space="preserve">
+    <value>Vedä ja pudota tai napsauta korvataksesi</value>
+  </data>
+  <data name="Ooops, something wrong happended." xml:space="preserve">
+    <value>Oho, jotain meni pieleen.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="The file is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>Tiedostoa ei hyväksytä (vain {{ value }}).</value>
+  </data>
+  <data name="The file size is too big ({{ value }} max)." xml:space="preserve">
+    <value>Tiedoston koko on liian suuri (enintään {{ value }}).</value>
+  </data>
+  <data name="The image format is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>Kuvaformaatti ei ole sallittu (vain {{ value }}).</value>
+  </data>
+  <data name="The image height is too big ({{ value }}px max)." xml:space="preserve">
+    <value>Kuvan korkeus on liian suuri (enintään {{ value }}px).</value>
+  </data>
+  <data name="The image height is too small ({{ value }}px min)." xml:space="preserve">
+    <value>Kuvan korkeus on liian pieni (vähintään {{ value }}px).</value>
+  </data>
+  <data name="The image width is too big ({{ value }}px max)." xml:space="preserve">
+    <value>Kuvan leveys on liian suuri (enintään {{ value }}px).</value>
+  </data>
+  <data name="The image width is too small ({{ value }}px min)." xml:space="preserve">
+    <value>Kuvan leveys on liian pieni (vähintään {{ value }}px).</value>
+  </data>
+
+</root>

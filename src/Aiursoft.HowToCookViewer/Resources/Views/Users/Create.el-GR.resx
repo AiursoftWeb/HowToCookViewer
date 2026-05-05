@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Επιστροφή στη λίστα</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Δημιουργία</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>Δημιουργία νέου χρήστη</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Δημιουργήστε έναν κωδικό πρόσβασης για τον νέο χρήστη</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Δημιουργία Νέου Χρήστη</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Δημιουργία Χρήστη</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Εμφανιζόμενο Όνομα</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Διεύθυνση Email</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Εισάγετε εμφανιζόμενο όνομα</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>Εισάγετε τη διεύθυνση email</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Εισάγετε όνομα χρήστη</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
+    <value>Το OpenID Connect (OIDC) είναι ενεργοποιημένο. Οι λογαριασμοί χρηστών συγχρονίζονται από έναν εξωτερικό πάροχο ταυτότητας. Συνιστούμε ανεπιφύλακτα τη δημιουργία νέων χρηστών στον πάροχο OIDC σας, ώστε να διασφαλιστεί ότι διαχειρίζονται κεντρικά. Αυτή η φόρμα θα δημιουργήσει έναν τοπικό λογαριασμό που υπάρχει αποκλειστικά εντός αυτής της εφαρμογής.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Κωδικός πρόσβασης</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Χρήστης</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Στοιχεία Λογαριασμού Χρήστη</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Όνομα χρήστη</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Προειδοποίηση!</value>
+  </data>
+
+</root>

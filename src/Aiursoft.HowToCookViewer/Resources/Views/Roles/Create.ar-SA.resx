@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>العودة إلى القائمة</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>إنشاء دور جديد</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>إنشاء دور</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>أدخل اسم الدور الجديد</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>تم تمكين OpenID Connect (OIDC). يتم مزامنة الأدوار من موفر هوية خارجي. نوصي بشدة بإنشاء أدوار أو مجموعات جديدة على موفر OIDC الخاص بك لضمان إدارتها مركزيًا. هذا النموذج سينشئ دورًا محليًا فقط موجودًا حصريًا داخل هذا التطبيق.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>الدور</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>تفاصيل الدور</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>اسم الدور</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>تحذير!</value>
+  </data>
+
+</root>

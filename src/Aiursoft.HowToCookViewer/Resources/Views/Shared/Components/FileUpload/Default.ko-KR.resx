@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Drag and drop a file here or click" xml:space="preserve">
+    <value>파일을 여기로 끌어다 놓거나 클릭하세요</value>
+  </data>
+  <data name="Drag and drop or click to replace" xml:space="preserve">
+    <value>파일을 끌어다 놓거나 클릭하여 교체</value>
+  </data>
+  <data name="Ooops, something wrong happended." xml:space="preserve">
+    <value>이런, 문제가 발생했습니다.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="The file is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>허용되지 않는 파일입니다 ({{ value }}만 가능).</value>
+  </data>
+  <data name="The file size is too big ({{ value }} max)." xml:space="preserve">
+    <value>파일 크기가 너무 큽니다(최대 {{ value }}).</value>
+  </data>
+  <data name="The image format is not allowed ({{ value }} only)." xml:space="preserve">
+    <value>지원하지 않는 이미지 형식입니다 ({{ value }}만 허용).</value>
+  </data>
+  <data name="The image height is too big ({{ value }}px max)." xml:space="preserve">
+    <value>이미지 높이가 너무 큽니다 (최대 {{ value }}px).</value>
+  </data>
+  <data name="The image height is too small ({{ value }}px min)." xml:space="preserve">
+    <value>이미지 높이가 너무 작습니다 (최소 {{ value }}px).</value>
+  </data>
+  <data name="The image width is too big ({{ value }}px max)." xml:space="preserve">
+    <value>이미지 너비가 너무 큽니다 (최대 {{ value }}px).</value>
+  </data>
+  <data name="The image width is too small ({{ value }}px min)." xml:space="preserve">
+    <value>이미지 너비가 너무 작습니다 (최소 {{ value }}px).</value>
+  </data>
+
+</root>

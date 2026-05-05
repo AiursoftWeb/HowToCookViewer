@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>&quot;Fire-and-forget&quot;-ondersteuning voor langdurige taken (zoals e-mails of AI), met een GUI voor wachtrijbeheer, parallelle verwerking en annulering.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+    <value>Een ingebouwd Role-Based Access Control (RBAC) systeem voor gedetailleerd rechtenbeheer.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
+    <value>Een complete oplossing voor gebruikersauthenticatie en profielbeheer, direct klaar voor gebruik.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>Een complete oplossing voor gebruikersverificatie en profielbeheer.</value>
+  </data>
+  <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
+    <value>Een volledig responsieve lay-out die er geweldig uitziet op zowel desktop- als mobiele apparaten.</value>
+  </data>
+  <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
+    <value>Een moderne, functierijke en zeer uitbreidbare basis voor uw volgende webapplicatie.</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Bereik meer met Aiursoft Template</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Admin-site inbegrepen</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>AI-gedreven vertaling</value>
+  </data>
+  <data name="AI Readable" xml:space="preserve">
+    <value>AI-leesbaar</value>
+  </data>
+  <data name="AI-Powered Translations" xml:space="preserve">
+    <value>AI-aangedreven vertalingen</value>
+  </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template is onze definitieve keuze voor enterprise projecten! Het is gebouwd voor ontwikkelaars en is lichtgewicht maar krachtig. We kunnen alle standaardcode voor authenticatie en gebruikersbeheer overslaan.</value>
+  </data>
+  <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
+    <value>Alle afhankelijkheden worden automatisch geregistreerd en zijn altijd beschikbaar via constructorinjectie.</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="Anduin Xue" xml:space="preserve">
+    <value>Anduin Xue</value>
+  </data>
+  <data name="Artificial Intelligence Translation" xml:space="preserve">
+    <value>Artificiële-intelligentievertaling</value>
+  </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Automatische compressie en privacy</value>
+  </data>
+  <data name="Auto Deployment" xml:space="preserve">
+    <value>Automatische implementatie</value>
+  </data>
+  <data name="Automatic AI translation into 28 languages." xml:space="preserve">
+    <value>Automatische AI-vertaling in 28 talen.</value>
+  </data>
+  <data name="Automatic Dark Mode" xml:space="preserve">
+    <value>Automatische Donkere Modus</value>
+  </data>
+  <data name="Automatic Dependency Injection" xml:space="preserve">
+    <value>Automatische Dependency Injection</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>Automatische rol synchronisatie</value>
+  </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Automatische tijdzoneafhandeling</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>Automatische UTC/Locale conversie</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
+    <value>Automatische, AI-gestuurde vertaling in 28 talen voor wereldwijde reikwijdte.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Automatische, AI-gevoede vertaling in 28 talen.</value>
+  </data>
+  <data name="Automatically deploy to Docker Swarm or Kubernetes clusters." xml:space="preserve">
+    <value>Automatisch implementeren naar Docker Swarm of Kubernetes-clusters.</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>OpenID-roles automatisch synchroniseren. Gecentraliseerd regelbeheer.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Achtergrondtaakverwerking</value>
+  </data>
+  <data name="Beginner Friendly" xml:space="preserve">
+    <value>Beginner Vriendelijk</value>
+  </data>
+  <data name="Bilingual Tutorials" xml:space="preserve">
+    <value>Twee-talige tutorials</value>
+  </data>
+  <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
+    <value>Eén keer bouwen, overal uitvoeren. Volledig gecontaineriseerde architectuur.</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Bouw je volgende grote ding,</value>
+  </data>
+  <data name="Built for engineers who care about quality." xml:space="preserve">
+    <value>Gebouwd voor ingenieurs die kwaliteit belangrijk vinden.</value>
+  </data>
+  <data name="Built with Aiursoft Template" xml:space="preserve">
+    <value>Gemaakt met Aiursoft Template</value>
+  </data>
+  <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
+    <value>Opgebouwd met een enterprise-grade, maar makkelijk te leren native C#.</value>
+  </data>
+  <data name="Built-in" xml:space="preserve">
+    <value>Ingebouwd</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Ingebouwde beheerpanel</value>
+  </data>
+  <data name="Built-in Auth" xml:space="preserve">
+    <value>Ingebouwde Auth</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>Ingebouwde GUI voor takenwachtlijst</value>
+  </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Ingebouwd gebruikersbeheer</value>
+  </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Komt met Docker-ondersteuning voor vereenvoudigde en consistente implementaties.</value>
+  </data>
+  <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
+    <value>Biedt volledige Docker-ondersteuning voor vereenvoudigde, consistente en betrouwbare implementaties.</value>
+  </data>
+  <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
+    <value>Komt met strikte eenheidstests, waardoor testgeleid ontwikkelen gemakkelijk is.</value>
+  </data>
+  <data name="Comprehensive Documentation" xml:space="preserve">
+    <value>Uitgebreide documentatie</value>
+  </data>
+  <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
+    <value>Uitgebreide gebruikstutorials in zowel Engels als Chinees.</value>
+  </data>
+  <data name="Concise Docs" xml:space="preserve">
+    <value>Korte Documentatie</value>
+  </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Consistency Validatie</value>
+  </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>Comfortabel coördineren</value>
+  </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>Kernrouting &amp; DI</value>
+  </data>
+  <data name="Coverage Report" xml:space="preserve">
+    <value>Coverage Rapport</value>
+  </data>
+  <data name="Cross Platform" xml:space="preserve">
+    <value>Kruisplatform</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>Aangepaste ontwikkeling vereist</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>Op maat ontwikkeling vereist</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>Dashboard voor achtergrondtaken</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Dashboardwebsite</value>
+  </data>
+  <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
+    <value>Dag 1 Compliance &amp; Beveiliging.</value>
+  </data>
+  <data name="Day 1 Ready" xml:space="preserve">
+    <value>Klaar vanaf dag 1</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>Diepe integratietesting met Authentik. Compatibel met Okta.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>Diepe integratie met DotLang AI</value>
+  </data>
+  <data name="Default SQLite database, no configuration needed." xml:space="preserve">
+    <value>Standaard SQLite-database, geen configuratie nodig</value>
+  </data>
+  <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
+    <value>Ontworpen voor iedereen, van beginners tot experts.</value>
+  </data>
+  <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
+    <value>Ontworpen voor de container-tijdperk. Inclusief vooraf geconfigureerde CI/CD-pijplijnen voor GitLab. Push code, slagen strikt voor linting, automatisch testen en automatisch deployen naar Docker Swarm of Kubernetes.</value>
+  </data>
+  <data name="Dev &amp; Prod" xml:space="preserve">
+    <value>Dev &amp; Prod</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Ontwikkel uitsluitend in UTC terwijl het systeem automatisch datums converteert en weergeeft in de lokale tijdzone van de gebruiker.</value>
+  </data>
+  <data name="Developer Experience" xml:space="preserve">
+    <value>Ontwikkelaarsexperientie</value>
+  </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>DevOps-natief</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Discussiespagina</value>
+  </data>
+  <data name="Docker Native" xml:space="preserve">
+    <value>Docker Native</value>
+  </data>
+  <data name="Dockerized for Deployment" xml:space="preserve">
+    <value>Gedockeriseerd voor implementatie</value>
+  </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Dockerized voor eenvoudige implementatie</value>
+  </data>
+  <data name="Dynamic Navigation Bar" xml:space="preserve">
+    <value>Dynamische navigatiebalk</value>
+  </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Schakel eenvoudig tussen databaseproviders, inclusief SQLite, MySQL, SQL Server en een in-memory database voor testdoeleinden.</value>
+  </data>
+  <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Schakel eenvoudig tussen providers zoals SQLite, MySQL, SQL Server en een in-memory database voor testen.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Schrijf integratietests zonder moeite met in-memory databases, tijdelijke bestandssystemen, ingebouwde mocking en simulatie van werkelijke HTTP-verzoeken.</value>
+  </data>
+  <data name="Enforced" xml:space="preserve">
+    <value>Afgedwongen</value>
+  </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>Gedwongen kwaliteitspoort</value>
+  </data>
+  <data name="Enterprise C#" xml:space="preserve">
+    <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>Ondernemingsfuncties</value>
+  </data>
+  <data name="Enterprise Ready" xml:space="preserve">
+    <value>Enterprise Klaar</value>
+  </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>Bedrijfsbeveiliging</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core inbegrepen</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>Veelgestelde vragen</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>sneller</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Functies</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Heeft een ingebouwd bestandsbeheersysteem met automatische avatarcompressie en privacybescherming.</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
+    <value>Beschikt over een ingebouwd bestandsbeheersysteem met automatische avatarcompressie.</value>
+  </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>Bestandsbeheer &amp; optimalisatie</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>Fijnkorrelige RBAC</value>
+  </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>Flexibele API</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>voor vragen of om problemen te melden.</value>
+  </data>
+  <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
+    <value>Stichter &amp; Architect bij Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>Framework vs. Oplossing</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Gratis</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>Gratis voor commercieel gebruik</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>Vrije software</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Veelgestelde vragen</value>
+  </data>
+  <data name="From the Architect" xml:space="preserve">
+    <value>Van de Architect</value>
+  </data>
+  <data name="Full RBAC" xml:space="preserve">
+    <value>Volledige RBAC</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>Volledige Stack Open Source</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>Volledige stack open source. Volledig gratis software, geen betaalde functies. Volledig gebouwd op open standaarden.</value>
+  </data>
+  <data name="Fully Offline" xml:space="preserve">
+    <value>Volledig offline</value>
+  </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>Generieke configuratie</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Alleen een generieke Dockerfile</value>
+  </data>
+  <data name="GitLab CI" xml:space="preserve">
+    <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD Native</value>
+  </data>
+  <data name="Global Scale" xml:space="preserve">
+    <value>Wereldwijde Schaal</value>
+  </data>
+  <data name="Go global without extra effort." xml:space="preserve">
+    <value>Globaal gaan zonder extra moeite.</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Ga naar dashboard</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Verwerk herhalende taken zoals opschonen en synchronisatie met een uitgebreide GUI voor het monitoren van uitvoeringsgeschiedenis en logs.</value>
+  </data>
+  <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
+    <value>Praktische opleidingen geschikt voor stagiairs in de informatica.</value>
+  </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>Handgeschreven op basis van Policies</value>
+  </data>
+  <data name="Hello World!" xml:space="preserve">
+    <value>Hallo Wereld!</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Hier zijn enkele antwoorden waar je mogelijk naar op zoek bent.</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Dit is wat ontwikkelaars uit onze community te zeggen hebben.</value>
+  </data>
+  <data name="High Quality" xml:space="preserve">
+    <value>Hoge kwaliteit</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon inbegrepen</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Hoe kan ik ondersteuning krijgen?</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Hoe implementeer ik mijn applicatie?</value>
+  </data>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>Ik heb Aiursoft Template gemaakt omdat ik het zat was om steeds dezelfde Auth, Log en CI/CD-pijplijnen in te stellen voor elk nieuwe enterprise-project. Dit is niet zomaar een sjabloon; het is de geconcentreerde beste praktijken uit jaren van productieomgevingen met hoge concurrentie. Het stelt mijn team in staat om de saaie setup over te slaan en direct aan de kern van de businesslogica te beginnen.</value>
+  </data>
+  <data name="IDE Support" xml:space="preserve">
+    <value>IDE-ondersteuning</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>Inbegrepen</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>Omvat uitgebreide documentatie en praktische voorbeelden om u snel op weg te helpen.</value>
+  </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>Inclusief handleidingen</value>
+  </data>
+  <data name="Integrated File Management" xml:space="preserve">
+    <value>Geïntegreerd Bestandsbeheer</value>
+  </data>
+  <data name="Intern Friendly" xml:space="preserve">
+    <value>Internvriendelijk</value>
+  </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>Interoperabiliteit</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>is Gratis Software</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Is Aiursoft Template gratis te gebruiken?</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Doe mee aan discussies</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Word lid van onze community en begin vandaag nog met bouwen!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>Sluit je aan bij onze groeiende community van ontwikkelaars die de volgende generatie webapplicaties bouwen.</value>
+  </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm-klant</value>
+  </data>
+  <data name="Lint Check" xml:space="preserve">
+    <value>Lintcontrole</value>
+  </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>Hoog codekwaliteit behouden</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Beheerdashboard</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown naar HTML</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT-licentie</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT License</value>
+  </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>Modellen worden gevalideerd aan de client- en serverzijde op basis van gegevensannotaties.</value>
+  </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>Omgaan met meerdere tijdzones</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Ondersteuning voor meerdere databaseproviders</value>
+  </data>
+  <data name="Multiple Database Support" xml:space="preserve">
+    <value>Ondersteuning voor meerdere databases</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>Meerdere projecten</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Muziekhulpmiddelen</value>
+  </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>Vereist CASL of vergelijkbaar</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Vereist Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Vereist complexe authenticatielogica</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Vereist configuratie/plugins</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>Vereist ESLint/Prettier-configuratie</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Vereist Jetstream of Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Vereist Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Vereist handmatige configuratie</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Vereist Medialibrary</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Vereist Passport of vergelijkbaar</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Vereist Spatie of vergelijkbaar</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Vereist Spring Security-configuratie</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Vereist plugins van derden</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>Vereist TypeORM of vergelijkbaar</value>
+  </data>
+  <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
+    <value>Geen afhankelijkheid van een cloudleverancier. Overal en op elk moment uitvoeren.</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>Offline Geschikt</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
+  </data>
+  <data name="One Click Start" xml:space="preserve">
+    <value>Eén-klik-start</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Open Source</value>
+  </data>
+  <data name="OpenID Connect Integration" xml:space="preserve">
+    <value>OpenID Connect-integratie</value>
+  </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>Geoptimaliseerde Docker &amp; K8s-configuratie</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM &amp; Migraties</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>Direct beschikbaar</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>Ontdekking en synchronisatie van machtigingen</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Vooraf geconfigureerd en getest</value>
+  </data>
+  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
+    <value>Voorgeconfigureerde CI/CD-pijpleidingen specifiek voor GitLab.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>Vooraf geconfigureerde pipelines voor dev/prod</value>
+  </data>
+  <data name="Quality Gate" xml:space="preserve">
+    <value>Kwaliteitscontrole</value>
+  </data>
+  <data name="RBAC Authorization" xml:space="preserve">
+    <value>RBAC-autorisatie</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Lees het document</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Vereist Laravel Socialite-configuratie</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Vereist Spring Security-configuratie</value>
+  </data>
+  <data name="Responsive Design" xml:space="preserve">
+    <value>Responsief Ontwerp</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Beoordelingen</value>
+  </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Robuuste integratietests</value>
+  </data>
+  <data name="Runs without any internet connection required." xml:space="preserve">
+    <value>Werkt zonder dat een internetverbinding vereist is.</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Geplande taakbeheer</value>
+  </data>
+  <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
+    <value>Integreer naadloos met elke OpenID Connect-provider, met automatische rollensynchronisatie.</value>
+  </data>
+  <data name="Shift with confidence" xml:space="preserve">
+    <value>Shift met vertrouwen</value>
+  </data>
+  <data name="Simple &amp; Easy" xml:space="preserve">
+    <value>Eenvoudig &amp; Gemakkelijk</value>
+  </data>
+  <data name="Single Container" xml:space="preserve">
+    <value>Single Container</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Slimme configuratie-overschrijvingen</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Slimme donkere modus die zich aanpast aan de systeeminstellingen van de gebruiker.</value>
+  </data>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Slimme donkere modus die automatisch aanpast aan de systeeminstellingen van de gebruiker.</value>
+  </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>Standaardimplementatie. Providers wisselen zonder compilatie.</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>Standaard OpenID</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Start een nieuw project</value>
+  </data>
+  <data name="Start Shipping Value." xml:space="preserve">
+    <value>Start met het leveren van waarde.</value>
+  </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Begin met een enkele &apos;docker run&apos; opdracht.</value>
+  </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>Start zonder configuratie</value>
+  </data>
+  <data name="Stop Coding Boilerplate." xml:space="preserve">
+    <value>Stop met het schrijven van standaardcode.</value>
+  </data>
+  <data name="Strict Lint Rules" xml:space="preserve">
+    <value>Strikte lintregels</value>
+  </data>
+  <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
+    <value>Strikte lintregels en nul waarschuwingen standaard.</value>
+  </data>
+  <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
+    <value>Strikt lintingregels met 0 waarschuwingen in het standaardproject.</value>
+  </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>Strikt eenheidstesting</value>
+  </data>
+  <data name="Strongly Consistent Linting" xml:space="preserve">
+    <value>Sterk consistente linting</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>Ondersteunt JetBrains Rider voor eenvoudige correcties van code-stijl.</value>
+  </data>
+  <data name="Task Runner" xml:space="preserve">
+    <value>Taakrunner</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Technisch Leider</value>
+  </data>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>De definitieve, bewezen .NET enterprise basis. Van Auth tot AI, hebben we de lastige onderdelen opgelost, zodat u dat niet hoeft te doen.</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>De navigatiebalk past zich automatisch aan op basis van gebruikersrollen en machtigingen.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>De filosofie</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>De template is gebouwd voor eenvoudige implementatie. Het bevat volledige Docker-ondersteuning, zodat je je app kunt containeriseren en overal kunt uitvoeren. Je kunt het ook direct implementeren naar IIS, Azure App Service of elke server die ASP.NET Core ondersteunt.</value>
+  </data>
+  <data name="This is a template project" xml:space="preserve">
+    <value>Dit is een sjabloonproject</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Dit is een templateproject, waar we de verkenning beginnen...</value>
+  </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Velden met tijdzone-informatie</value>
+  </data>
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+    <value>Vertrouwd door productie-gebaseerde toepassingen, waaronder AnduinOS, StatHub en Warp. We delen deze code niet alleen; we draaien onze hele bedrijfsactiviteiten erop.</value>
+  </data>
+  <data name="Unified Env" xml:space="preserve">
+    <value>Gecombineerde omgeving</value>
+  </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>Gecombineerde Identiteit</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Gebruik</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Gebruik het als basis voor je SaaS, als backend voor je mobiele app, als bedrijfswebsite of als persoonlijke blog. De mogelijkheden zijn eindeloos.</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>Bekijk op GitHub</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welkom</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>Wat heb ik nodig om te beginnen?</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Wat onze ontwikkelaars zeggen</value>
+  </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>Waarom Aiursoft Template kiezen?</value>
+  </data>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Waarom de Aiursoft Template gebruiken?</value>
+  </data>
+  <data name="Win/Lin/Mac" xml:space="preserve">
+    <value>Win/Lin/Mac</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Ja, Aiursoft Template is volledig gratis en open-source onder de MIT-licentie. Je kunt het zonder enige kosten gebruiken voor zowel persoonlijke als commerciële projecten.</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Je kunt gemeenschapsondersteuning krijgen via GitHub Discussions. Bezoek onze</value>
+  </data>
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Je hebt de .NET 10 SDK, npm en je favoriete IDE nodig, zoals Visual Studio of JetBrains Rider. Je kunt de volledige installatiehandleiding in onze documentatie vinden.</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>Uw bedrijfsgebruikers hoeven zich niet herhaaldelijk te registreren.</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
+  </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>Geen configuratie (SQLite)</value>
+  </data>
+  <data name="Zero Configuration" xml:space="preserve">
+    <value>Nul configuratie</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>Geen Tolerantie Lint</value>
+  </data>
+
+</root>

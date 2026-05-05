@@ -1,0 +1,55 @@
+@using Aiursoft.HowToCookViewer.Configuration
+@using Microsoft.Extensions.Options
+@model Aiursoft.HowToCookViewer.Models.RolesViewModels.CreateViewModel
+@inject IOptions<AppSettings> AppSettings
+
+@* Standard page title for consistency. *@
+<h1 class="h3 mb-3">@Localizer["Create New Role"]</h1>
+
+@* The critical OIDC warning is preserved and placed prominently at the top of the page. *@
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                @* Icon updated to the theme's standard Lucide icon set. *@
+                <i class="align-middle" data-lucide="alert-triangle"></i>
+            </div>
+            <div class="alert-message">
+                <strong>@Localizer["Warning!"]</strong>
+                @Localizer["OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application."]
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Role Details"]</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="RoleName" class="form-label">@Localizer["Role Name"]</label>
+                        <input asp-for="RoleName" class="form-control form-control-lg" placeholder="@Localizer["Enter the new role name"]" />
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="align-middle me-2" data-lucide="plus-circle"></i> @Localizer["Create Role"]
+                        </button>
+                        @* "Back to List" is now a proper secondary button. *@
+                        <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

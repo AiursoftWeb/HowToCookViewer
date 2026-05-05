@@ -1,0 +1,87 @@
+@using Aiursoft.HowToCookViewer.Authorization
+@using Microsoft.Extensions.Localization
+@model Aiursoft.HowToCookViewer.Models.PermissionsViewModels.IndexViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
+
+@* The page-specific style is preserved. *@
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
+@* A standard page header. *@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Permissions"]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["All Permissions"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it."]</h6>
+    </div>
+    @* table-responsive is added as a best practice for tables on small screens. *@
+    <div class="table-responsive">
+        @* The mb-0 class ensures the table fits snugly within the card. *@
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Permission Name"]</th>
+                <th>@Localizer["Description"]</th>
+                <th>@Localizer["Assigned to Roles"]</th>
+                <th>@Localizer["Users with Permission"]</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Permissions)
+                {
+                    @* The clickable-row class and data-href attribute are fully preserved. *@
+                    <tr class="clickable-row" data-href="@Url.Action("Details", new { key = item.PermissionKey })">
+                        <td>@PermissionLocalizer[item.PermissionName]</td>
+                        <td>@PermissionLocalizer[item.PermissionDescription]</td>
+                        <td>
+                            @if (item.RoleCount > 0)
+                            {
+                                    <span>@item.RoleCount @Localizer["role(s)"]</span>
+                            }
+                            else
+                            {
+                                    <span class="text-muted">@Localizer["Not assigned"]</span>
+                            }
+                        </td>
+                        <td>
+                            @if (item.UserCount > 0)
+                            {
+                                    <span>@item.UserCount @Localizer["user(s)"]</span>
+                            }
+                            else
+                            {
+                                    <span class="text-muted">@Localizer["No users"]</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const rows = document.querySelectorAll(".clickable-row");
+                rows.forEach(row => {
+                    row.addEventListener("click", function (event) {
+                        // This is important: only navigate if the click was not on a link or a button inside the row
+                        const target = event.target;
+                        if (!target.matches('a, a *, button, button *')) {
+                            window.location.href = row.dataset.href;
+                        }
+                    });
+                });
+            });
+        </script>
+}

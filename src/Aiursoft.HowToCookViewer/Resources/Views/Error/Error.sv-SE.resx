@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An Error Occurred" xml:space="preserve">
+    <value>Ett fel uppstod</value>
+  </data>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>Ett fel uppstod när din begäran behandlades.</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>Tillbaka till startsidan</value>
+  </data>
+  <data name="Error." xml:space="preserve">
+    <value>Fel.</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Om du tror att du bör ha åtkomst, vänligen kontakta din systemadministratör. Eller försök logga ut och logga in igen.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Vänligen kontrollera URL:en och försök igen. Om du tror att detta är ett serverfel, vänligen kontakta support.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Vänligen kontrollera din begäran och försök igen. Om du tror att detta är ett serverfel, vänligen kontakta support.</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>Vänligen kontakta administratören för hjälp.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Försök igen senare eller kontakta supporten om problemet kvarstår.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>Begäran-ID:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Det är tyvärr inte tillåtet att komma åt den här sidan.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Sidan du söker efter kan ha tagits bort, fått ett nytt namn eller vara tillfälligt otillgänglig.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Försök igen</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Vi ber om ursäkt, något gick fel när din förfrågan behandlades.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Din webbläsare skickade en förfrågan som denna server inte kunde förstå.</value>
+  </data>
+
+</root>

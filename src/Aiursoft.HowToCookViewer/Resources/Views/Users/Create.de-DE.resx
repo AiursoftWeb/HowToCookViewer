@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to List" xml:space="preserve">
+    <value>Zurück zur Liste</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>Benutzer erstellen</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Erstellen Sie ein Passwort für den neuen Benutzer</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Benutzer erstellen</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Benutzer erstellen</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Anzeigename</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Anzeigenamen eingeben</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>E-Mail-Adresse eingeben</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Benutzernamen eingeben</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) ist aktiviert. Benutzerkonten werden von einem externen Identitätsanbieter synchronisiert. Wir empfehlen dringend, neue Benutzer auf Ihrem OIDC-Anbieter zu erstellen, um eine zentrale Verwaltung zu gewährleisten. Dieses Formular erstellt ein rein lokales Konto, das ausschließlich innerhalb dieser Anwendung existiert.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Benutzerkontodetails</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Warnung!</value>
+  </data>
+
+</root>

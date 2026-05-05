@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Travaux en arrière-plan</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Annulé</value>
+  </data>
+  <data name="Creates test jobs in different queues (15-30s sleep, 10% failure rate). Jobs in different queues run in parallel." xml:space="preserve">
+    <value>Crée des tâches de test dans différentes files d&apos;attente (pause de 15 à 30 secondes, taux d&apos;échec de 10 %). Les tâches dans différentes files d&apos;attente s&apos;exécutent en parallèle.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Échoué</value>
+  </data>
+  <data name="Finished At" xml:space="preserve">
+    <value>Terminé à</value>
+  </data>
+  <data name="Job Name" xml:space="preserve">
+    <value>Nom de tâche</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>dernière heure</value>
+  </data>
+  <data name="Last run" xml:space="preserve">
+    <value>Dernière exécution</value>
+  </data>
+  <data name="Monitor and manage background job queues and their execution status." xml:space="preserve">
+    <value>Surveiller et gérer les files d&apos;attente de tâches en arrière-plan et leur état d&apos;exécution.</value>
+  </data>
+  <data name="Monitor and manage background job queues. Trigger any registered job manually or let the scheduler run it automatically." xml:space="preserve">
+    <value>Surveillez et gérez les files d&apos;attente des tâches en arrière-plan. Déclenchez manuellement n&apos;importe quelle tâche enregistrée ou laissez le planificateur l&apos;exécuter automatiquement.</value>
+  </data>
+  <data name="Never executed" xml:space="preserve">
+    <value>Jamais exécuté</value>
+  </data>
+  <data name="New Job A" xml:space="preserve">
+    <value>Nouveau travail A</value>
+  </data>
+  <data name="New Job B" xml:space="preserve">
+    <value>Nouveau travail B</value>
+  </data>
+  <data name="No background jobs are registered. Add jobs using services.AddBackgroundJob&lt;TJob&gt;() in Startup.cs." xml:space="preserve">
+    <value>Aucun job de fond n&apos;est enregistré. Ajoutez des jobs en utilisant services.AddBackgroundJob&lt;TJob&gt;() dans Startup.cs.</value>
+  </data>
+  <data name="No jobs" xml:space="preserve">
+    <value>Aucune tâche</value>
+  </data>
+  <data name="No jobs have run in the last hour." xml:space="preserve">
+    <value>Aucun job n&apos;a été exécuté au cours de la dernière heure.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>En attente</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>En cours</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>File d&apos;attente</value>
+  </data>
+  <data name="Queue Name" xml:space="preserve">
+    <value>Nom de file d&apos;attente</value>
+  </data>
+  <data name="Queued At" xml:space="preserve">
+    <value>Mis en file d&apos;attente le</value>
+  </data>
+  <data name="Recent Execution History" xml:space="preserve">
+    <value>Historique d&apos;exécution récent</value>
+  </data>
+  <data name="Registered Jobs" xml:space="preserve">
+    <value>Tâches enregistrées</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="Trigger Now" xml:space="preserve">
+    <value>Exécuter maintenant</value>
+  </data>
+
+</root>
