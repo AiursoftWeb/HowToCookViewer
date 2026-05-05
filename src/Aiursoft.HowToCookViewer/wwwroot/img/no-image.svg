@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <rect x="1" y="1" width="398" height="298" fill="none" stroke="#dee2e6" stroke-width="2" rx="4"/>
+  <text x="200" y="130" text-anchor="middle" font-family="sans-serif" font-size="48" fill="#adb5bd">🍽️</text>
+  <text x="200" y="175" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#adb5bd">暂无图片</text>
+</svg>

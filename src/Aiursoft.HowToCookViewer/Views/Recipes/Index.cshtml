@@ -1,0 +1,59 @@
+@model Aiursoft.HowToCookViewer.Models.RecipesViewModels.IndexViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+
+<div class="container-fluid p-4">
+    <div class="row mb-3">
+        <div class="col">
+            <h3>
+                <i class="align-middle me-2" data-lucide="utensils"></i>
+                @Model.CategoryDisplayName
+            </h3>
+            <p class="text-muted mb-0">共 @Model.TotalCount 道菜谱</p>
+        </div>
+    </div>
+
+    @if (Model.Recipes.Count == 0)
+    {
+        <div class="alert alert-info">
+            <i class="align-middle me-2" data-lucide="info"></i>
+            暂无菜谱，后台任务可能还未完成索引。
+        </div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var recipe in Model.Recipes)
+            {
+                var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
+                var coverUrl = cover != null
+                    ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400&square=true"
+                    : "/img/no-image.svg";
+                var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+
+                <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                    <a href="/Recipes/Detail/@recipe.Id" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm recipe-card">
+                            <img src="@coverUrl"
+                                 class="card-img-top"
+                                 style="height:180px;object-fit:cover;"
+                                 alt="@recipe.Name"
+                                 onerror="this.src='/img/no-image.svg'">
+                            <div class="card-body pb-2">
+                                <h6 class="card-title mb-1 fw-bold text-truncate">@recipe.Name</h6>
+                                <small class="text-warning">@difficultyStars</small>
+                                @if (!string.IsNullOrWhiteSpace(recipe.Description))
+                                {
+                                    <p class="card-text text-muted small mt-1 mb-0"
+                                       style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+                                        @recipe.Description
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</div>

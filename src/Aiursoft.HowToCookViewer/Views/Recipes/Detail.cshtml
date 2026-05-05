@@ -1,0 +1,53 @@
+@model Aiursoft.HowToCookViewer.Models.RecipesViewModels.DetailViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+
+<div class="container-fluid p-4">
+    <div class="row mb-3">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/Recipes/Index">全部菜谱</a></li>
+                    <li class="breadcrumb-item">
+                        <a href="/Recipes/Index?category=@Model.Recipe.Category">
+                            @Model.Recipe.Category
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active">@Model.Recipe.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+            <div class="card shadow-sm">
+                <div class="card-body p-4 p-md-5">
+                    <div class="recipe-markdown">
+                        @Html.Raw(Model.RenderedMarkdown)
+                    </div>
+                </div>
+                <div class="card-footer text-muted small">
+                    <i class="align-middle me-1" data-lucide="git-commit-horizontal"></i>
+                    最后更新：@Model.Recipe.FileLastModified.ToString("yyyy-MM-dd")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section styles {
+<style>
+.recipe-markdown img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.recipe-markdown h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+.recipe-markdown h2 { font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: .75rem; border-bottom: 1px solid #dee2e6; padding-bottom: .4rem; }
+.recipe-markdown ul, .recipe-markdown ol { padding-left: 1.5rem; }
+.recipe-markdown li { margin-bottom: .25rem; }
+.recipe-markdown p { line-height: 1.8; }
+</style>
+}

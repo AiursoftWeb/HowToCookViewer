@@ -56,8 +56,22 @@ public partial class IndexRecipesJob(
 
                 if (existing != null && existing.FileLastModified == lastModified)
                 {
-                    skipped++;
-                    continue;
+                    // Also verify all referenced image files still exist on disk.
+                    // If any are missing (e.g. Workspace was wiped), fall through and re-process.
+                    var workspaceRoot = featureFoldersProvider.GetWorkspaceFolder();
+                    var existingImages = await db.RecipeImages
+                        .AsNoTracking()
+                        .Where(i => i.RecipeId == existing.Id)
+                        .ToListAsync();
+                    var allImagesPresent = existingImages.Count == 0 ||
+                        existingImages.All(i => File.Exists(Path.Combine(workspaceRoot, i.LogicalPath)));
+                    if (allImagesPresent)
+                    {
+                        skipped++;
+                        continue;
+                    }
+                    logger.LogInformation(
+                        "IndexRecipesJob: image files missing for '{File}', re-processing.", relativeFilePath);
                 }
 
                 var markdown = await File.ReadAllTextAsync(absoluteFilePath);
