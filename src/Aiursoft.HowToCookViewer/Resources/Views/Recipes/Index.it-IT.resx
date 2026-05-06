@@ -21,6 +21,9 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Difficoltà</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>Caricamento…</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Nessuna ricetta ancora. Il lavoro di indicizzazione in background potrebbe essere ancora in corso.</value>
   </data>

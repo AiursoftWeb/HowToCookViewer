@@ -21,5 +21,14 @@
       <data name="Difficulty" xml:space="preserve">
     <value>ระดับความยาก</value>
   </data>
+  <data name="Favorited at" xml:space="preserve">
+    <value>เพิ่มในรายการโปรดเมื่อ</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>รายการโปรดของฉัน</value>
+  </data>
+  <data name="No favorites yet. Go to the recipes page and click ♥ to add some!" xml:space="preserve">
+    <value>ยังไม่มีรายการโปรด ไปที่หน้าสูตรอาหารแล้วคลิก ♥ เพื่อเพิ่มรายการโปรด!</value>
+  </data>
 
 </root>

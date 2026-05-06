@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Numele mărcii</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Coduri de limbă BCP-47 separate prin virgulă pentru a traduce rețetele în, de ex. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Alegere Dummy</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Număr ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Limbi de localizare</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Punctul final API Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Token API Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Model Ollama</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo Proiect</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Numele proiectului</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Numele modelului AI de utilizat pentru traducerea rețetelor, de ex. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Tokenul bearer pentru autentificarea cu endpoint-ul Ollama/OpenAI.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Numele mărcii afișat în subsol.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Numele proiectului afișat în interfața frontend</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Punctul final pentru completări chat compatibil cu OpenAI pentru traducerea rețetelor, de ex. https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

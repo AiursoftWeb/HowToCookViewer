@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Varumärke</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Kommaseparerade BCP-47-språkkoder för att översera recept till, t.ex. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Dummyval</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-nummer</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Språk för lokalisering</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Ollama API-slutpunkt</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Ollama API-token</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Ollama-modell</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projektlogotyp</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Projektnamn</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>AI-modellnamnet som ska användas för receptöversättning, t.ex. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Bearer-tokenet för autentisering mot Ollama/OpenAI-slutpunkten.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Det varumärke som visas i sidfoten.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Projektets namn som visas i frontend</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Slutpunkten för OpenAI-kompatibla chattkompletteringar för receptöversättning, t.ex. https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

@@ -21,6 +21,9 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Moeilijkheidsgraad</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>Laden…</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Nog geen recepten. De achtergrondindexeringstaak is mogelijk nog actief.</value>
   </data>

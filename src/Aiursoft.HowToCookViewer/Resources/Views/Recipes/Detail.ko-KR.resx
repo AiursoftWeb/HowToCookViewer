@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
+      <data name="All Recipes" xml:space="preserve">
+    <value>모든 레시피</value>
+  </data>
+  <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
     <value>이 댓글과 모든 대화를 삭제하시겠습니까?</value>
   </data>
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
@@ -33,6 +36,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>GitHub에서 편집</value>
   </data>
+  <data name="Last updated:" xml:space="preserve">
+    <value>최종 업데이트:</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>댓글을 남기려면 로그인하세요</value>
   </data>
@@ -41,6 +47,9 @@
   </data>
   <data name="Post Comment" xml:space="preserve">
     <value>댓글 작성하기</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>답글</value>
   </data>
   <data name="Send Reply" xml:space="preserve">
     <value>답장 보내기</value>

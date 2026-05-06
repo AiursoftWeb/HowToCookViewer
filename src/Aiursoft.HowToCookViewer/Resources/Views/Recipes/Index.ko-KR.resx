@@ -21,6 +21,9 @@
       <data name="Difficulty" xml:space="preserve">
     <value>난이도</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>로딩 중...</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>아직 레시피가 없습니다. 백그라운드 인덱싱 작업이 아직 진행 중일 수 있습니다.</value>
   </data>

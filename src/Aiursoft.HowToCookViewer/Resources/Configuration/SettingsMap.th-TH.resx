@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>ชื่อแบรนด์</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>รหัสภาษาแบบ BCP-47 ที่คั่นด้วยเครื่องหมายจุลภาค สำหรับแปลสูตรอาหาร เช่น en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>ตัวเลือกจำลอง</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>เลขที่ ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>ภาษาที่ใช้ในการแปล</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>จุดจบ API Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>โทเค็น API ของ Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>โมเดล Ollama</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>โลโก้โครงการ</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>ชื่อโปรเจกต์</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>ชื่อโมเดล AI ที่ใช้สำหรับการแปลสูตรอาหาร ตัวอย่างเช่น qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>โทเค็นแบบแบร์เออร์สำหรับการตรวจสอบสิทธิ์กับจุดปลาย Ollama/OpenAI</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>ชื่อแบรนด์ที่แสดงไว้ในส่วนท้ายหน้า</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>ชื่อโปรเจกต์ที่แสดงในหน้าแสดงผล</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>จุดสิ้นสุด API สำหรับสร้างบทสนทนาที่รองรับ OpenAI สำหรับการแปลสูตรอาหาร เช่น https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Tên thương hiệu</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Mã ngôn ngữ BCP-47 phân tách bằng dấu phẩy để dịch các công thức nấu ăn, ví dụ: en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Lựa chọn giả</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Số đăng ký ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Ngôn ngữ bản địa hóa</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Điểm cuối API Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Mã thông báo API Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Mô hình Ollama</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo dự án</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Tên dự án</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Tên mô hình AI để sử dụng cho việc dịch công thức, ví dụ: qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Mã thông báo bearer để xác thực với điểm cuối Ollama/OpenAI.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Tên thương hiệu được hiển thị trong chân trang.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Tên dự án được hiển thị trên giao diện người dùng</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Điểm cuối hoàn thành cuộc trò chuyện tương thích OpenAI để dịch công thức nấu ăn, ví dụ: https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
+      <data name="All Recipes" xml:space="preserve">
+    <value>Tất cả công thức</value>
+  </data>
+  <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
     <value>Bạn có chắc chắn muốn xóa bình luận này và tất cả các phản hồi của nó không?</value>
   </data>
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
@@ -33,6 +36,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Chỉnh sửa trên GitHub</value>
   </data>
+  <data name="Last updated:" xml:space="preserve">
+    <value>Cập nhật lần cuối:</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Đăng nhập để bình luận</value>
   </data>
@@ -41,6 +47,9 @@
   </data>
   <data name="Post Comment" xml:space="preserve">
     <value>Đăng bình luận</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Trả lời</value>
   </data>
   <data name="Send Reply" xml:space="preserve">
     <value>Gửi phản hồi</value>

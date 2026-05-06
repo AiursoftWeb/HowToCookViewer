@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>品牌名稱</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>用於翻譯食譜的以逗號分隔的 BCP-47 語言代碼，例如 en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>測試選項</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP編號</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>本地化語言</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Ollama API 端點</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Ollama API Token</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Ollama 模型</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>專案標誌</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>專案名稱</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>用於食譜翻譯的 AI 模型名稱，例如 qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>用於與 Ollama/OpenAI 端點進行身份驗證的載入者權杖。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>頁尾顯示的品牌名稱</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>專案在前端顯示的名稱。</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>用於食譜翻譯的 OpenAI 相容聊天完成端點，例如 https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

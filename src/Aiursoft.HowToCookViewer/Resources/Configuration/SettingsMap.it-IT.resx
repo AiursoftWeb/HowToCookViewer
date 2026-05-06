@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Nome del marchio</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Codici lingua BCP-47 separati da virgole per tradurre le ricette, ad es. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Scelta Fittizia</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Numero ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Lingue di localizzazione</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Endpoint API Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Token API di Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Modello Ollama</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo del Progetto</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Nome progetto</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Nome del modello AI da utilizzare per la traduzione delle ricette, ad es. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Il token bearer per l&apos;autenticazione con l&apos;endpoint Ollama/OpenAI.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Il nome del marchio visualizzato nel piè di pagina.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Il nome del progetto visualizzato nel frontend.</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>L&apos;endpoint per le chat completions compatibile con OpenAI per la traduzione delle ricette, ad esempio https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

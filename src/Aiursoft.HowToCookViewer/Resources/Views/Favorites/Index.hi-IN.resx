@@ -21,5 +21,14 @@
       <data name="Difficulty" xml:space="preserve">
     <value>कठिनाई</value>
   </data>
+  <data name="Favorited at" xml:space="preserve">
+    <value>पसंदीदा बनाया गया</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>मेरी पसंदीदा</value>
+  </data>
+  <data name="No favorites yet. Go to the recipes page and click ♥ to add some!" xml:space="preserve">
+    <value>अभी तक कोई पसंदीदा नहीं है। कुछ जोड़ने के लिए रेसिपी पेज पर जाएं और ♥ पर क्लिक करें!</value>
+  </data>
 
 </root>

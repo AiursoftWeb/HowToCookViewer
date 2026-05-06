@@ -21,5 +21,14 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Tingkat Kesulitan</value>
   </data>
+  <data name="Favorited at" xml:space="preserve">
+    <value>Difavoritkan pada</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Favorit Saya</value>
+  </data>
+  <data name="No favorites yet. Go to the recipes page and click ♥ to add some!" xml:space="preserve">
+    <value>Belum ada favorit. Pergi ke halaman resep dan klik ♥ untuk menambahkan!</value>
+  </data>
 
 </root>

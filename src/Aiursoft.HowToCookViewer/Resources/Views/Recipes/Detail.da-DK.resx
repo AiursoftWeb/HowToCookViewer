@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
+      <data name="All Recipes" xml:space="preserve">
+    <value>Alle opskrifter</value>
+  </data>
+  <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
     <value>Er du sikker på, at du vil slette denne kommentar og alle dens svar?</value>
   </data>
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
@@ -33,6 +36,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Rediger på GitHub</value>
   </data>
+  <data name="Last updated:" xml:space="preserve">
+    <value>Sidst opdateret:</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Log ind for at kommentere</value>
   </data>
@@ -41,6 +47,9 @@
   </data>
   <data name="Post Comment" xml:space="preserve">
     <value>Indlæg kommentar</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Svar</value>
   </data>
   <data name="Send Reply" xml:space="preserve">
     <value>Send svar</value>

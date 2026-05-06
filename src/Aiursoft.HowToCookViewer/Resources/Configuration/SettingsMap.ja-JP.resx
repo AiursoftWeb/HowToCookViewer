@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>ブランド名</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>レシピを翻訳するためのコンマ区切りのBCP-47言語コード、例: en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>ダミー選択</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP番号</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>ローカライズ言語</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Ollama APIエンドポイント</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Ollama APIトークン</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Ollama モデル</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>プロジェクトロゴ</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>プロジェクト名</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>レシピの翻訳に使用するAIモデル名（例：qwen3.5:27b-q8_0）</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Ollama/OpenAIエンドポイントへの認証に使用するベアラートークン。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>フッターに表示されるブランド名。</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>フロントエンドに表示されるプロジェクト名</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>レシピの翻訳用のOpenAI互換チャット完了エンドポイント（例：https://ollama.example.com/api/chat/completions）</value>
   </data>
 
 </root>

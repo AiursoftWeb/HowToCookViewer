@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Marka Adı</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Tarifleri çevirmek için virgülle ayrılmış BCP-47 dil kodları, örn. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Yanlış Seçim</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP Numarası</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Yerelleştirme Dilleri</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Ollama API Uç Noktası</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Ollama API Anahtarı</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Ollama Model</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Proje Logosu</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Proje Adı</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Tarif çevirisi için kullanılacak AI model adı, örn. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Ollama/OpenAI uç noktasıyla kimlik doğrulaması için taşıyıcı belirteci.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Footer&apos;da gösterilen marka adı.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Frontende görüntülenen proje adı.</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Tarif çevirisi için OpenAI uyumlu sohbet tamamlama uç noktası, örn. https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

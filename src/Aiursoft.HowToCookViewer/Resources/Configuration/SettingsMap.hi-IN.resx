@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>ब्रांड नाम</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>रेसिपी को अनुवाद करने के लिए कॉमा-अलग किए गए BCP-47 भाषा कोड, उदा. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>डमी चयन</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP संख्या</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>स्थानीयकरण भाषाएँ</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>ओलामा एपीआई एंडपॉइंट</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>ओलामा एपीआई टोकन</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>ओलामा मॉडल</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>प्रोजेक्ट लोगो</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>प्रोजेक्ट नाम</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>रेसिपी अनुवाद के लिए उपयोग करने के लिए AI मॉडल का नाम, उदाहरण के लिए qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Ollama/OpenAI एंडपॉइंट के साथ प्रमाणीकरण के लिए बीयरर टोकन।</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>फुटर में दिखाई देने वाला ब्रांड नाम</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>फ्रंटएंड में प्रदर्शित प्रोजेक्ट का नाम।</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>recipe अनुवाद के लिए OpenAI-संगत चैट पूर्णता एंडपॉइंट, उदाहरण के लिए https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

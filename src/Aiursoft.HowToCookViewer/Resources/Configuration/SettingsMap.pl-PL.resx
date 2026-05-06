@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Nazwa marki</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Kod języka BCP-47 oddzielone przecinkami do tłumaczenia przepisów, np. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Wybór testowy</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Numer ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Języki lokalizacji</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Punkt końcowy API Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Token API Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Model Ollamy</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo projektu</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Nazwa projektu</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Nazwa modelu AI do użycia przy tłumaczeniu przepisów, np. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Token nośnika do uwierzytelniania się z punktem końcowym Ollama/OpenAI.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Nazwa marki wyświetlana w stopce.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Nazwa projektu wyświetlana w interfejsie użytkownika</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Punkt końcowy do generowania odpowiedzi czatu zgodny z interfejsem OpenAI służący do tłumaczenia przepisów, np. https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>Brändin nimi</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Pilkuilla erotetut BCP-47-kielikoodit, joihin reseptit käännetään, esim. en-US, ja-JP, ko-KR, fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Väliaikainen valinta</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-numero</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Kieliasetukset</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>Ollama API -päätepiste</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>Ollama API -tunnus</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>Ollama-malli</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projektin logo</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Projektin nimi</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>Tehtävän kuvailu: Käytettävän tekoälymallin nimi reseptien kääntämiseen, esim. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Kantatunnus Ollama/OpenAI-päätepisteen todentamiseen.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Brändin nimi, joka näytetään alatunnisteessa.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Projektin nimi, joka näytetään käyttöliittymässä.</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>Avain OpenAI-yhteensopivaksi reseptien kääntämiseen, esim. https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

@@ -39,6 +39,9 @@
   <data name="Brand Name" xml:space="preserve">
     <value>اسم العلامة التجارية</value>
   </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>رموز لغة BCP-47 مفصولة بفاصلة لترجمة الوصفات، مثل en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>اختيار تجريبي</value>
   </data>
@@ -51,11 +54,29 @@
   <data name="ICP Number" xml:space="preserve">
     <value>رقم ICP</value>
   </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>لغات التعريب</value>
+  </data>
+  <data name="Ollama API Endpoint" xml:space="preserve">
+    <value>نقطة نهاية واجهة برمجة تطبيقات Ollama</value>
+  </data>
+  <data name="Ollama API Token" xml:space="preserve">
+    <value>رمز واجهة برمجة تطبيقات Ollama</value>
+  </data>
+  <data name="Ollama Model" xml:space="preserve">
+    <value>نموذج ألاما</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>شعار المشروع</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>اسم المشروع</value>
+  </data>
+  <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
+    <value>اسم نموذج الذكاء الاصطناعي المستخدم لترجمة الوصفات، على سبيل المثال: qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>رمز البearer المميز للمصادقة مع نقطة نهاية Ollama/OpenAI.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>اسم العلامة التجارية المُعرض في التذييل.</value>
@@ -71,6 +92,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>اسم المشروع المُعرض في الواجهة الأمامية.</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
+    <value>نقطة نهاية إكمال المحادثات المتوافقة مع OpenAI لترجمة الوصفات، على سبيل المثال: https://ollama.example.com/api/chat/completions</value>
   </data>
 
 </root>

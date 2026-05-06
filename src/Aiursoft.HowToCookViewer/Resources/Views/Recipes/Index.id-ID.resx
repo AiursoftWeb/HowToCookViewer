@@ -21,6 +21,9 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Tingkat Kesulitan</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>Memuat…</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Belum ada resep. Pekerjaan pengindeksan latar belakang mungkin masih berjalan.</value>
   </data>

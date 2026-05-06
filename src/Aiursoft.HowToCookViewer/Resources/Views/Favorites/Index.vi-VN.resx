@@ -21,5 +21,14 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Độ khó</value>
   </data>
+  <data name="Favorited at" xml:space="preserve">
+    <value>Đã thêm vào mục yêu thích lúc</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Yêu thích của tôi</value>
+  </data>
+  <data name="No favorites yet. Go to the recipes page and click ♥ to add some!" xml:space="preserve">
+    <value>Chưa có mục yêu thích nào. Hãy đến trang công thức nấu ăn và nhấp vào ♥ để thêm vào!</value>
+  </data>
 
 </root>
