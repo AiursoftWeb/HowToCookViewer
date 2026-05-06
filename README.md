@@ -15,7 +15,7 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 
 ## Try
 
-Try a running HowToCookViewer [here](https://howToCookViewer.aiursoft.com).
+Try a running HowToCookViewer [here](https://howtocook.aiursoft.com).
 
 ## Run in Ubuntu
 
