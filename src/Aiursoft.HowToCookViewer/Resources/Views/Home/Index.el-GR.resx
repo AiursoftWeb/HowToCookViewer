@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Μεταφράσεις με Τεχνητή Νοημοσύνη</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>Μετάφραση με Τεχνητή Νοημοσύνη</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Όλες οι εξαρτήσεις εγγράφονται αυτόματα και είναι πάντα διαθέσιμες μέσω της εισαγωγής από κατασκευαστή.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Όλες οι συνταγές προέρχονται από το έργο ανοιχτού κώδικα HowToCook. Οποιοσδήποτε μπορεί να συνεισφέρει, να βελτιώσει ή να δημιουργήσει fork.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Διγλωσσικά Μαθήματα</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Προβολή Όλων των Συνταγών</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Περιηγηθείτε στις συνταγές με όμορφες φωτογραφίες εξωφύλλου και λεπτομερείς οπτικές οδηγίες βήμα προς βήμα.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Δείτε τι αγαπά περισσότερο η κοινότητα.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Κατασκευάστε μία φορά, εκτελέστε παντού. Πλήρως ενσωματωμένη αρχιτεκτονική με δοχεία.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Περιλαμβάνει αυστηρούς δοκιμαστικούς ελέγχους μονάδας, κάνοντας την ανάπτυξη βασισμένη σε δοκιμές εύκολη.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Οδηγούμενο από την Κοινότητα</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Κοινοτικές Αγαπημένες</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Προέρχεται από την κοινότητα, μεταφράστηκε με τεχνητή νοημοσύνη και είναι δωρεάν για πάντα.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Πληρέστερη Τεκμηρίωση</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Εύκολη εναλλαγή μεταξύ παρόχων όπως SQLite, MySQL, SQL Server και μιας βάσης δεδομένων στη μνήμη για δοκιμές.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Επεξεργασία στο GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Εύκολα γράψτε δοκιμές ενοποίησης χρησιμοποιώντας βάσεις δεδομένων στη μνήμη, προσωρινά συστήματα αρχείων, ενσωματωμένη μοκινγκ και πραγματικές εξελίξεις HTTP αιτήσεων.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Περιλαμβάνεται το Entity Framework Core</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Κάθε συνταγή μεταφράζεται αυτόματα σε 27 γλώσσες με χρήση τεχνητής νοημοσύνης, ώστε να μπορείτε να μαγειρεύετε στη μητρική σας γλώσσα.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Ανακαλύψτε χιλιάδες δωρεάν συνταγές που προέρχονται από την κοινότητα</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Συχνές Ερωτήσεις</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Δωρεάν για εμπορική χρήση</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Δωρεόν για πάντα</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Ελεύθερο Λογισμικό</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Πλήρως Αποσυνδεδεμένο</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Πλήρως Ανοικτού Κώδικα</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Γενική διαμόρφωση</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Έτοιμο για K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Αγαπήστε, αποθηκεύστε και σχολιάστε τις συνταγές που σας αρέσουν. Μοιραστείτε την εμπειρία σας στο μαγείρεμα με την κοινότητα.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Ελέγχους Lint</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Τα μοντέλα ελέγχονται στην πλευρά του πελάτη και του διακομιστή βάσει των σημειώσεων δεδομένων.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Τα πιο αγαπημένα συνταγές</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Χειρισμός Πολλαπλών Ζωνών Ώρας</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Ανίχνευση και συγχρονισμός δικαιωμάτων</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Ισχυρή Αναζήτηση</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Προ-διαμορφωμένο και δοκιμασμένο</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Κριτικές</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Πλούσιο σε Φωτογραφίες</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Ενισχυμένος Έλεγχος Ολοκλήρωσης</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Απολαύστε απρόσκοπτη ενσωμάτωση με οποιονδήποτε πάροχο OpenID Connect, με αυτόματο συγχρονισμό ρόλων.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Αναζήτηση</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Αναζητήστε με βάση τη πρώτη ύλη, το όνομα του πιάτου ή την κατηγορία για να βρείτε ακριβώς αυτό που θέλετε να μαγειρέψετε σήμερα.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Αναζήτηση συνταγών (π.χ. ντομάτα, αυγό, τόφου…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Μετακινηθείτε με αυτοπεποίθηση</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Έξυπνη λειτουργία σκούρου θέματος που προσαρμόζεται αυτόματα στις ρυθμίσεις συστήματος του χρήστη.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Βρήκατε κάποιο λάθος ή θέλετε να βελτιώσετε μια συνταγή; Επεξεργαστείτε την απευθείας στο GitHub και βοηθήστε όλη την κοινότητα.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Πρότυπη υλοποίηση. Αλλάξτε προμηθευτές χωρίς μεταγλώττιση.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Τι χρειάζομαι για να ξεκινήσω;</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Τι το κάνει ειδικό</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Τι λένε οι προγραμματιστές μας</value>

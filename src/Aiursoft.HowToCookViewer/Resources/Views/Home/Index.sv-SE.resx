@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI-drivna översättningar</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI-översatt</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alla beroenden registreras automatiskt och är alltid tillgängliga via konstruktorinjektion.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Alla recept kommer från HowToCook-projektet. Alla kan bidra, förbättra eller fork:a det.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tvåspråkiga handledningar</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Visa alla recept</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Bläddra i recept med vackra omslagsbilder och detaljerade steg-för-steg visuella instruktioner.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Utforska vad gemenskapen älskar mest.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bygg en gång, kör överallt. Fullt containeriserad arkitektur.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Kommer med strikta enhetstester, vilket gör testdrivet utveckling enkelt.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Gemenskapdriven</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Gemensamhetsfavoriter</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Gemensamkällad, AI-översatt och gratis för alltid.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Omfattande dokumentation</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Enkelt växla mellan leverantörer som SQLite, MySQL, SQL Server och ett minnesbaserat databassystem för testning.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Redigera på GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Skriv integrerationstester utan ansträngning med minnesdatabaser, temporära filsystem, inbyggd mockning och simulation av verkliga HTTP-begäranden.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core ingår</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Varje recept översätts automatiskt till 27 språk med hjälp av AI, så att du kan laga mat på ditt modersmål.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Utforska tusentals gratis, community-baserade recept</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Vanliga frågor</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Gratis för kommersiellt bruk</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Gratis för alltid</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Fri mjukvara</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Fullständigt offline</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Helt öppen källkod</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Generisk konfiguration</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm-klar</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Gilla, spara och kommentera de recept du älskar. Dela din matlagningserfarenhet med communityt.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lintkontroll</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller valideras på både klient- och serversidan baserat på dataannotationer.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>De mest älskade recepten</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Hantering av flera tidszoner</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Upptäckt och synkronisering av behörigheter</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Kraftfull sökning</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Förkonfigurerat och testat</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Recensioner</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Rik på bilder</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Robust Integration Testing</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrera sömlöst med vilken OpenID Connect-leverantör som helst, med automatisk rollsynkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Sök efter ingrediens, rättningsnamn eller kategori för att hitta exakt vad du vill laga idag.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Sök recept (t.ex. tomater, ägg, tofu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Förskjut med självförtroende</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Smart mörkt läge som automatiskt anpassar sig efter användarens systeminställningar.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Hittade du ett misstag eller vill du förbättra ett recept? Redigera det direkt på GitHub och hjälpa hela gemenskapen.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Standardimplementering. Byt leverantörer utan kompilering.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Vad behöver jag för att komma igång?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Vad gör det särskilt</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Vad våra utvecklare säger</value>

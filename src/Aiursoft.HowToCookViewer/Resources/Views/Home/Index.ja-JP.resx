@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AIによる翻訳</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI翻訳</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>すべての依存関係は自動的に登録され、コンストラクタインジェクションを通じて常に利用可能です。</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>すべてのレシピはHowToCookオープンソースプロジェクトから提供されています。誰でも貢献し、改善し、フォークすることができます。</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>二か国語チュートリアル</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>すべてのレシピを閲覧</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>美しいカバー写真と詳細なステップバイステップのビジュアルガイド付きでレシピを閲覧しましょう。</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>コミュニティが最も愛するレシピを閲覧。</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>一度構築すれば、どこでも実行可能。完全にコンテナ化されたアーキテクチャ。</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>厳格なユニットテストが付属しており、テスト駆動開発を簡単にします。</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>コミュニティ主導</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>コミュニティのお気に入り</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>コミュニティ由来、AI翻訳、永久無料。</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>包括的なドキュメント</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>SQLite、MySQL、SQL Server、およびテスト用のインメモリデータベースなどのプロバイダーを簡単に切り替えられます。</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>GitHubで編集</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>インメモリデータベース、一時ファイルシステム、組み込みモック、そして現実のHTTPリクエストシミュレーションを使用して、簡単に統合テストを書くことができます。</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core 搭載</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>すべてのレシピはAIによって自動的に27の言語に翻訳されるため、母国語で料理を楽しむことができます。</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>無料のコミュニティ参加型レシピを数多く探す</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>よくある質問</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>商用利用に無料</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>永久無料</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>フリーソフトウェア</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>オフライン完全対応</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>完全なオープンソース</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>汎用設定</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm 対応済み</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>お気に入りのレシピに「いいね」をつけ、保存し、コメントを残しましょう。コミュニティと料理の体験を共有してください。</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lintチェック</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>モデルはデータ注釈に基づいて、クライアントおよびサーバーの両方で検証されます。</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>最も愛されるレシピ</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>マルチタイムゾーン処理</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>権限の検出と同期</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>強力な検索</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>事前設定済みかつテスト済み</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>レビュー</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>写真が豊富</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>堅牢な統合テスト</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>あらゆるOpenID Connectプロバイダーとシームレスに統合し、自動的なロール同期を実現します。</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>材料、料理名、またはカテゴリで検索して、今日作りたい料理を完璧に見つけましょう。</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>レシピを検索する（例：トマト、卵、豆腐…）</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>自信を持ってシフト</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>ユーザーのシステム設定に自動的に適応するスマートダークモード。</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>間違いを見つけたり、レシピを改善したいですか？GitHubで直接編集して、コミュニティ全体を支援しましょう。</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>標準実装。コンパイルなしでプロバイダを切り替えられます。</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>始めるには何が必要ですか？</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>なぜ特別なのか</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>開発者の声</value>

@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Yapay Zeka Destekli Çeviriler</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI ile Çevrildi</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tüm bağımlılıklar otomatik olere kaydedilir ve constructor injection yoluyla her zaman kullanılabilir.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Tüm tarifler HowToCook açık kaynaklı projesinden gelmektedir. Herkes katkıda bulunabilir, geliştirebilir veya çatallayabilir.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Çift Dilli Eğitimler</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Tüm Tarifleri Gözat</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Güzel kapak fotoğrafları ve detaylı adım adım görsel talimatlarla tarifleri keşfedin.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Topluluğun en çok sevdiği tariflere göz atın.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bir kez derle, her yerde çalıştır. Tamamen konteynerli mimari.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Katılıyordu sıkı birim testleri, test odaklı geliştirme kolay hale getiriyor.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Topluluk Odaklı</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Topluluğun Favorileri</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Topluluk kaynaklı, yapay zeka ile çevrilmiş ve sonsuza kadar ücretsiz.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Kapsamlı Dokümantasyon</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>SQLite, MySQL, SQL Server gibi sağlayıcılar ile testler için kullanılan bellek içi veritabanı arasında kolayca geçiş yapın.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>GitHub&apos;da Düzenle</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Anımsatmadan entegrasyon testleri yazın, bellek içi veritabanları, geçici dosya sistemleri, yerleşik mocklama ve gerçek dünya HTTP isteği simülasyonu kullanarak.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core dahil</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Her tarif, yapay zeka kullanılarak otomatik olarak 27 dile çevrilir, böylece anadilinizde yemek pişirebilirsiniz.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Binlerce Ücretsiz, Topluluk Kaynaklı Tarifi Keşfedin</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>SSS</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Ticari Kullanım İçin Ücretsiz</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Sonsuza Kadar Ücretsiz</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Serbest Yazılım</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Tamamen Çevrimdışı</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Tamamen Açık Kaynak</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Genel yapılandırma</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm Hazır</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Beğendiğiniz tarifleri beğenin, kaydedin ve yorum yapın. Yemek deneyiminizi toplulukla paylaşın.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint Kontrolü</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller, veri eklemelerine dayalı olarak hem istemci hem de sunucu tarafında doğrulanır.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>En Çok Sevilen Tarifler</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Çoklu Saat Dilimi Yönetimi</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>İzin keşfi ve senkronizasyonu</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Güçlü Arama</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Ön yapılandırılmış ve test edilmiş</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>İncelemeler</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Fotoğraflarla Dolu</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Güçlü Entegrasyon Testi</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Herhangi bir OpenID Connect sağlayıcısıyla sorunsuz bir şekilde entegre olun, otomatik rol senkronizasyonu ile.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Malzeme, yemek adı veya kategoriye göre arayarak bugün tam olarak ne pişirmek istediğinizi bulun.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Tarif ara (örn. domates, yumurta, tofu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Güvenle geçiş yapın</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Kullanıcının sistem ayarlarına otomatik olarak uyum sağlayan akıllı karanlık mod.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Bir hata mı buldunuz veya bir tarifi geliştirmek mi istiyorsunuz? GitHub üzerinde doğrudan düzenleyin ve tüm topluluğa yardımcı olun.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Standart uygulama. Derleme yapmadan sağlayıcıları değiştirin.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Başlamak için neye ihtiyacım var?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Neyi Özel Kılan</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Geliştiricilerimizin Görüşleri</value>

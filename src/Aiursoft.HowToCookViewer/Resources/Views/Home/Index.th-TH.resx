@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>การแปลด้วยพลัง AI</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>แปลด้วย AI</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>การอ้างอิงทั้งหมดจะถูกลงทะเบียนโดยอัตโนมัติและพร้อมใช้งานเสมอผ่าน Constructor Injection</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>สูตรอาหารทั้งหมดมาจากโปรเจกต์โอเพนซอร์ส HowToCook ใครๆ ก็สามารถร่วมพัฒนา ปรับปรุง หรือทำฟอกรับไปใช้งานได้</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>คู่มือสองภาษา</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>ดูสูตรอาหารทั้งหมด</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>ค้นหาสูตรอาหารพร้อมภาพปกสวยงามและคำแนะนำทีละขั้นตอนแบบละเอียด</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>สำรวจสิ่งที่ชุมชนชื่นชอบมากที่สุด</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>สร้างครั้งเดียว รันได้ทุกที่ สถาปัตยกรรมที่ถูกบรรจุในคอนเทนเนอร์อย่างสมบูรณ์</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>มาพร้อมการทดสอบหน่วยที่เข้มงวด ทำให้การพัฒนาแบบทดสอบเป็นหลักทำได้ง่าย</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>ขับเคลื่อนโดยชุมชน</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>ที่ชื่นชอบโดยชุมชน</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>ชุมชนเป็นผู้รวบรวม, แปลโดย AI, และฟรีตลอดไป</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>เอกสารคู่มือที่ครอบคลุม</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>เปลี่ยนระหว่างผู้ให้บริการอย่าง SQLite, MySQL, SQL Server และฐานข้อมูลในหน่วยความจำสำหรับการทดสอบได้อย่างง่ายดาย</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>แก้ไขบน GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>เขียนการทดสอบการรวมระบบได้อย่างง่ายดายโดยใช้ฐานข้อมูลในหน่วยความจำ ระบบไฟล์ชั่วคราว การจำลองแบบที่มีอยู่ในตัว และการจำลองการร้องขอ HTTP แบบจริง</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>รวม Entity Framework Core แล้ว</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>ทุกสูตรอาหารได้รับการแปลอัตโนมัติเป็น 27 ภาษาโดยใช้ AI เพื่อให้คุณสามารถทำอาหารในภาษาแม่ของคุณได้</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>สำรวจสูตรอาหารฟรีนับพันที่มาจากชุมชน</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>คำถามที่พบบ่อย</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>ฟรีสำหรับการใช้งานเชิงพาณิชย์</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>ฟรีตลอดไป</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>ซอฟต์แวร์ฟรี</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>ทำงานแบบออฟไลน์ทั้งหมด</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>โอเพนซอร์สเต็มรูปแบบ</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>การตั้งค่าทั่วไป</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>พร้อมใช้งานกับ K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>กดไลก์ บันทึก และแสดงความคิดเห็นในสูตรอาหารที่คุณชอบ แบ่งปันประสบการณ์การทำอาหารกับชุมชน</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>ตรวจสอบลินต์</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์โดยอิงจาก annotation ข้อมูล</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>สูตรอาหารยอดนิยม</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>การจัดการหลายเขตเวลา</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>การค้นพบและการซิงค์สิทธิ์</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>การค้นหาที่ทรงพลัง</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>ตั้งค่าล่วงหน้าและผ่านการทดสอบแล้ว</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>รีวิว</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>มีรูปภาพหลากหลาย</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>การทดสอบการรวมระบบที่มั่นคง</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>ผสานรวมได้อย่างราบรื่นกับผู้ให้บริการ OpenID Connect ใดก็ได้ พร้อมการซิงโครไนซ์บทบาทอัตโนมัติ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>ค้นหาตามส่วนผสม ชื่อเมนู หรือหมวดหมู่ เพื่อหาสิ่งที่ต้องการทำอาหารวันนี้ได้อย่างแม่นยำ</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>ค้นหาสูตรอาหาร (เช่น มะเขือเทศ ไข่ เต้าหู้…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>เปลี่ยนไปอย่างมั่นใจ</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>โหมดมืดอัจฉริยะที่ปรับเปลี่ยนอัตโนมัติตามการตั้งค่าระบบของผู้ใช้</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>พบข้อผิดพลาดหรือต้องการปรับปรุงสูตรอาหาร? แก้ไขโดยตรงบน GitHub และช่วยชุมชนทั้งหมด</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>การใช้งานมาตรฐาน สามารถสลับผู้ให้บริการได้โดยไม่ต้องคอมไพล์</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>ฉันต้องมีอะไรบ้างเพื่อเริ่มต้นใช้งาน?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>สิ่งที่ทำให้พิเศษ</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>นักพัฒนาของเราพูดว่าอย่างไร</value>

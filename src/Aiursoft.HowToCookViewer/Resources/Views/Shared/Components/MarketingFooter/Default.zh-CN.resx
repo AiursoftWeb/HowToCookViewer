@@ -21,14 +21,17 @@
       <data name="Aiursoft" xml:space="preserve">
     <value>Aiursoft</value>
   </data>
-  <data name="Aiursoft Template - A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
-    <value>Aiursoft Template - 一个现代化、功能丰富且高度可扩展的下一代 Web 应用程序基础框架。</value>
+  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
+    <value>HowToCook Viewer - 一个现代化、功能丰富且高度可扩展的 HowToCook 开源项目 Web 查看器。</value>
   </data>
   <data name="Community" xml:space="preserve">
     <value>社区</value>
   </data>
   <data name="Contributions" xml:space="preserve">
     <value>贡献</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>贡献者</value>
   </data>
   <data name="Documentation" xml:space="preserve">
     <value>文档</value>
@@ -53,6 +56,9 @@
   </data>
   <data name="Resources" xml:space="preserve">
     <value>资源</value>
+  </data>
+  <data name="Revolt Forum" xml:space="preserve">
+    <value>Revolt 论坛</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>社交</value>

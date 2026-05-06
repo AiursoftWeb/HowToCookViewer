@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Переклади на основі ШІ</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>Перекладено ШІ</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Усі залежності автоматично реєструються та завжди доступні через ін&apos;єкцію конструктора.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Усі рецепти походять з проєкту HowToCook з відкритим кодом. Кожен може долучатися, покращувати його або створювати його форки.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Білінгвальні навчальні матеріали</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Переглянути всі рецепти</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Переглядайте рецепти з красивими обкладинками та детальними покроковими візуальними інструкціями.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Переглядайте те, що найбільше подобається спільноті.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Зібрати один раз, запустити де завгодно. Повністю контейнеризована архітектура.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Містить строгі юніт-тести, що робить розробку на основі тестування простою.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Спільнотне</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Улюблені спільнотою</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Створено спільнотою, перекладено штучним інтелектом, назавжди безкоштовно.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Детальна документація</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Легко перемикайтеся між провайдерами, такими як SQLite, MySQL, SQL Server, та оперативною пам&apos;яттю для тестування.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Редагувати на GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Легко створюйте інтеграційні тести, використовуючи бази даних у пам&apos;яті, тимчасові файлові системи, вбудоване мокування та симуляцію реальних HTTP-запитів.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core включено</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Кожен рецепт автоматично перекладається на 27 мов за допомогою ШІ, щоб ви могли готувати рідною мовою.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Досліджуйте тисячі безкоштовних рецептів, створених спільнотою</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Часті питання</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Безкоштовно для комерційного використання</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Безкоштовно назавжди</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Вільне програмне забезпечення</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Повністю автономно</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Повністю відкритий вихідний код</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Загальна конфігурація</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Готовність до K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Додавайте у вподобані, зберігайте та коментуйте рецепти, які вам подобаються. Діліться своїм кулінарним досвідом із спільнотою.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Перевірка лінтів</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Моделі валідуються на клієнтській та серверній сторонах на основі анотацій даних.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Найпопулярніші рецепти</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Обробка багатьох часових поясів</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Виявлення та синхронізація дозволів</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Потужний пошук</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Налаштовано та протестовано</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Відгуки</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Багато фотографій</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Надійне інтеграційне тестування</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Безперешкодна інтеграція з будь-яким постачальником OpenID Connect із автоматичною синхронізацією ролей.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Шукайте за інгредієнтами, назвою страви або категорією, щоб знайти саме те, що ви хочете приготувати сьогодні.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Шукати рецепти (напр., помідори, яйця, тофу…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Переміщуйтесь із впевненістю</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Розумний темний режим, який автоматично адаптується до системних налаштувань користувача.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Знайшли помилку або хочете покращити рецепт? Відредагуйте його напряму на GitHub і допоможіть усьому співтовариству.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Стандартна реалізація. Перемикання постачальників без компіляції.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Що мені потрібно, щоб почати?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Що робить його особливим</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Що кажуть наші розробники</value>

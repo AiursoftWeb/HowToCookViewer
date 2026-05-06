@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Tehokäännökset tekoälyllä</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI-käännetty</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Kaikki riippuvuudet rekisteröidään automaattisesti ja ne ovat aina saatavilla konstruktorin kautta tapahtuvan injektoinnin välityksellä.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Kaikki reseptit tulevat HowToCook-avointa lähdekoodia -hankkeesta. Kuka tahansa voi osallistua, parantaa tai haarauttaa sitä.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Kaksikieliset oppaat</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Selaa kaikkia reseptejä</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Selaa reseptejä kauniiden kansikuvien ja yksityiskohtaisten vaiheittain etenevien visuaalisten ohjeiden kera.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Selaa yhteisön eniten arvostamia reseptejä.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Rakenna kerran, suorita missä tahansa. Täysin säiliöön paketoidu arkkitehtuuri.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Sisältää tiukat yksikkötestit, mikä tekee testiin perustuvan kehityksen helpoksi.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Yhteisön voimin</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Yhteisön suosikit</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Yhteisön tuottama, tekoällä käännetty ja ikuisesti ilmainen.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Kattava dokumentaatio</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Vaihda helposti tietokantapalveluntarjoajien, kuten SQLite, MySQL, SQL Server ja testaukseen tarkoitetun muistissa olevan tietokannan, välillä.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Muokkaa GitHubissa</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Kirjoita integraatiotestejä helposti käyttämällä muistin tietokantoja, väliaikaisia tiedostojärjestelmiä, sisäänrakennettua mockausta ja todellisia HTTP-pyyntösimulaatioita.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core mukana</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Jokainen resepti käännetään automaattisesti 27 kielelle tekoälyn avulla, joten voit ruokailla äidinkielelläsi.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Tutustu tuhansiin ilmaisiin, yhteisön tuottamiin resepteihin</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>UKK</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Ilmainen kaupalliseen käyttöön</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Ikuisesti ilmainen</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Vapaa ohjelmisto</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Täysin offline</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Täysin avoin lähdekoodi</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Yleinen konfiguraatio</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm -valmis</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Tykkää, tallenna ja kommentoi reseptejä, jotka pidät. Jaa ruokailukokemuksesi yhteisön kanssa.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint-tarkistus</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Mallit tarkistetaan molemmilla puolilla, asiakas- ja palvelinpuolella, tietojen annotaatioiden perusteella.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Eniten rakastetut reseptit</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Monen aikavyöhykkeen käsittely</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Oikeuksien havaitseminen ja synkronointi</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Tehokas haku</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Ennalta määritetty ja testattu</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Arvostelut</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Kuvitettu</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Vahva integrointitestaus</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Saatumattomasti integroi minkä tahansa OpenID Connect -palveluntarjoajan kanssa, automaattisen roolisynkronoinnin avulla.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Hae</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Hae aineksen, ruoan nimen tai kategorian perusteella löytääksesi täsmälleen sen, mitä haluat tehdä tänään.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Hae reseptejä (esim. tomaatti, kananmuna, tofu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Siirry luottavasti</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Älykäs tumma tila, joka mukautuu automaattisesti käyttäjän järjestelmäasetuksiin.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Löytyykö virhe tai haluatko parantaa reseptiä? Muokkaa sitä suoraan GitHubissa ja auta koko yhteisöä.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Standardityympäristö. Vaihda tarjoajia ilman käännöstä.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Mitä tarvitsen aloittamiseen?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Mikä tekee siitä erityisen</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Mitä kehittäjämme sanovat</value>

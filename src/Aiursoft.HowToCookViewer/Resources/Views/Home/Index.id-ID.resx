@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Terjemahan Berbasis AI</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>Diterjemahkan oleh AI</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Semua dependensi terdaftar secara otomatis dan selalu tersedia melalui constructor injection.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Semua resep berasal dari proyek sumber terbuka HowToCook. Siapa pun dapat berkontribusi, meningkatkan, atau melakukan fork pada proyek ini.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tutorial Berbahasa Ganda</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Lihat Semua Resep</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Jelajahi resep dengan foto sampul yang indah dan instruksi visual terperinci langkah demi langkah.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Jelajahi resep yang paling dicintai oleh komunitas.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bangun sekali, jalankan di mana saja. Arsitektur yang sepenuhnya terkontainerisasi.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Datang dengan pengujian unit yang ketat, membuat pengembangan berbasis pengujian menjadi mudah.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Didorong Komunitas</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Favorit Komunitas</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Dikumpulkan dari komunitas, diterjemahkan oleh AI, dan gratis selamanya.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Dokumentasi Komprehensif</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Dengan mudah beralih di antara penyedia seperti SQLite, MySQL, SQL Server, dan database dalam memori untuk pengujian.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Edit di GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Tulis tes integrasi dengan mudah menggunakan basis data di memori, sistem file sementara, mocking bawaan, dan simulasi permintaan HTTP dunia nyata.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core disertakan</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Setiap resep diterjemahkan secara otomatis ke dalam 27 bahasa menggunakan AI, sehingga Anda dapat memasak dalam bahasa ibu Anda.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Jelajahi Ribuan Resep Gratis, Berasal dari Komunitas</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Gratis untuk Penggunaan Komersial</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Gratis Selamanya</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Perangkat Lunak Bebas</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Sepenuhnya Offline</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Sepenuhnya Sumber Terbuka</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Konfigurasi umum</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Siap untuk K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Suka, simpan, dan beri komentar pada resep yang Anda sukai. Bagikan pengalaman memasak Anda dengan komunitas.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Cek Lint</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Model divalidasi di sisi klien dan server berdasarkan anotasi data.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Resep Paling Disukai</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Penanganan Multi-Zona Waktu</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Penemuan dan sinkronisasi izin</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Pencarian Canggih</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Prakonfigurasi dan teruji</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Ulasan</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Kaya Foto</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Pengujian Integrasi yang Kuat</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Terintegrasi dengan mulus bersama penyedia OpenID Connect apa pun, dengan sinkronisasi peran otomatis.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cari</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Cari berdasarkan bahan, nama hidangan, atau kategori untuk menemukan tepat apa yang ingin Anda masak hari ini.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Cari resep (mis. tomat, telur, tahu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Berpindah dengan percaya diri</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Mode gelap cerdas yang secara otomatis menyesuaikan dengan pengaturan sistem pengguna.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Menemukan kesalahan atau ingin meningkatkan resep? Edit langsung di GitHub dan bantu seluruh komunitas.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Implementasi standar. Ganti penyedia tanpa kompilasi.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Apa yang saya perlukan untuk memulai?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Apa yang Membuatnya Istimewa</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Apa Kata Developer Kami</value>

@@ -32,18 +32,18 @@ public class HomeController(
 
         var featured = candidates
             .OrderByDescending(r => topLiked.FirstOrDefault(x => x.RecipeId == r.Id)?.Count ?? 0)
-            .Take(6)
+            .Take(8)
             .ToList();
 
-        // If fewer than 6 liked recipes with images exist, fill up with the newest ones
-        if (featured.Count < 6)
+        // If fewer than 8 liked recipes with images exist, fill up with the newest ones
+        if (featured.Count < 8)
         {
             var existingIds = featured.Select(r => r.Id).ToHashSet();
             var fill = await db.Recipes
                 .Include(r => r.Images)
                 .Where(r => !existingIds.Contains(r.Id) && r.Images.Any(i => i.IsCover))
                 .OrderByDescending(r => r.Id)
-                .Take(6 - featured.Count)
+                .Take(8 - featured.Count)
                 .ToListAsync();
             featured.AddRange(fill);
         }

@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI-drevne oversættelser</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI-oversat</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alle afhængigheder registreres automatisk og er altid tilgængelige via konstruktor-injektion.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Alle opskrifter stammer fra HowToCook open-source-projektet. Alle kan bidrage, forbedre eller lave en fork af det.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>To-sprogede vejledninger</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Gennemse alle opskrifter</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Gennemse opskrifter med smukke forsidebilleder og detaljerede trin-for-trin visuelle instruktioner.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Se, hvad fællesskabet elsker mest.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Byg én gang, kørs overalt. Fuld containeriseret arkitektur.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Kommer med strenge enhedstests, hvilket gør testdrivet udvikling nemt.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Fællesdrevet</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Fællesfavoritter</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Fællesbaseret, AI-oversat og gratis for altid.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Omfattende Dokumentation</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Skift nemt mellem udbydere som SQLite, MySQL, SQL Server og en hukommelsesdatabase til test.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Rediger på GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Skriv integreringstests let og nemt ved hjælp af i-hukommelsesdatabaser, midlertidige filsystemer, indbygget mockning og simulering af virkelige HTTP-anmodninger.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core inkluderet</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Hver opskriv bliver automatisk oversat til 27 sprog ved hjælp af AI, så du kan lave mad på dit modersmål.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Udforsk tusindvis af gratis, fællesskabsbaserede opskrifter</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>OFTE STILLEDE SPØRGSMÅL</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Gratis til kommerciel brug</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Gratis for evigt</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Frit Software</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Fuld Offline</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Fuld open source</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Generisk konfiguration</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm Klar</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Ligesom, gem og kommenter på de opskrifter, du elsker. Del din madlavningsoplevelse med fællesskabet.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint-check</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller valideres på både klient- og serversiden baseret på dataanmerkninger.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>De mest elskede opskrifter</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Håndtering af flere tidszoner</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Opdagelse og synkronisering af tilladelser</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Kraftfuld søgning</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Forudkonfigureret og testet</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Anmeldelser</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Rig på fotos</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Robust Integration Testing</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrer problemfrit med enhver OpenID Connect-udbyder med automatisk rolle-synkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Søg</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Søg på ingredienser, retternes navn eller kategori for at finde præcis det, du har lyst til at lave i dag.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Søg efter opskrifter (f.eks. tomater, æg, tofu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Skift med tillid</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Smart mørktilstand, der automatisk tilpasser sig brugerens systemindstillinger.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Se en fejl eller vil du forbedre en opskrift? Rediger den direkte på GitHub og hjælp hele fællesskabet.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Standardimplementering. Skift leverandører uden kompilering.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Hvad har jeg brug for for at komme i gang?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Hvad gør det særligt</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Hvad vores udviklere siger</value>

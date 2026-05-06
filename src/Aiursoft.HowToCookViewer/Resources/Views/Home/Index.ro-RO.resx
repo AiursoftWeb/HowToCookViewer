@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traduceri alimentate de IA</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>Tradus de AI</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Toate dependențele sunt înregistrate automat și sunt întotdeauna disponibile prin injectare în constructor.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Toate rețetele provin din proiectul open-source HowToCook. Orice persoană poate contribui, îmbunătăți sau crea o copie a acestuia.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tutoriale bilingve</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Răsfoiește toate rețetele</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Răsfoiește rețete cu fotografii de copertă frumoase și instrucțiuni vizuale detaliate, pas cu pas.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Răsfoiește rețetele preferate de comunitate.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Construiți o dată, rulați oriunde. Arhitectură complet containerizată.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Include teste unitare stricte, facilitând dezvoltarea bazată pe testare.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Propulsat de Comunitate</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Favoritele Comunității</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Creat de comunitate, tradus de inteligență artificială și gratuit pentru totdeauna.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Documentație Cuprinzătoare</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Comută cu ușurință între furnizori precum SQLite, MySQL, SQL Server și o bază de date în memorie pentru testare.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Editează pe GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Scrieți testele de integrare fără efort folosind baze de date în memorie, sisteme de fișiere temporare, mocking integrat și simularea cererilor HTTP din lumea reală.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core inclus</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Fiecare rețetă este tradusă automat în 27 de limbi folosind AI, astfel încât să poți găti în limba ta maternă.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Explorează mii de rețete gratuite, create de comunitate</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Întrebări frecvente</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Gratuit pentru utilizare comercială</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Gratuit pentru totdeauna</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Software Gratuit</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Complet Offline</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Complet Open Source</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Configurație generică</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Gata pentru K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Dați like, salvați și comentați rețetele pe care le iubiți. Împărtășiți-vă experiența culinară cu comunitatea.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Verificare Lint</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modelele sunt validate pe ambele laturi, client și server, pe baza anotărilor de date.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Cele mai iubite rețete</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Gestionarea multiplelor fuse orare</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Descoperirea și sincronizarea permisiunilor</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Căutare Avansată</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Pre-configurat și testat</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Recenzii</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Abundant cu fotografii</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Testare integrată robustă</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrați fără probleme cu orice furnizor OpenID Connect, cu sincronizare automată a rolurilor.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Caută</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Caută după ingredient, numele preparatului sau categorie pentru a găsi exact ceea ce dorești să gătești astăzi.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Caută rețete (de ex. roșii, ouă, tofu…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Mutați cu încredere</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Mod întunecat inteligent care se adaptează automat la setările de sistem ale utilizatorului.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Ai găsit o greșeală sau vrei să îmbunătățești o rețetă? Editeaz-o direct pe GitHub și ajută întreaga comunitate.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Implementare standard. Schimbă furnizorii fără compilare.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>De ce am nevoie pentru a începe?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Ce îl face special</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Ce spun dezvoltatorii noștri</value>

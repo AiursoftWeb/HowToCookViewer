@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>الترجمات المدعومة بالذكاء الاصطناعي</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>مترجم بالذكاء الاصطناعي</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>يتم تسجيل جميع التبعيات تلقائيًا وهي متاحة دائمًا عبر حقن المُنشئ.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>جميع الوصفات مستمدة من مشروع HowToCook مفتوح المصدر. يمكن لأي شخص المساهمة، التحسين، أو عمل نسخة مفرغة منه.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>أندوين</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>دروس ثنائية اللغة</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>تصفح جميع الوصفات</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>تصفح الوصفات مع صور غلاف جميلة وتعليمات بصرية مفصلة خطوة بخطوة.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>تصفح ما تحبه المجتمع أكثر.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>ابنِ مرة واحدة، شغّل في أي مكان. بنية تحتية محتواة بالكامل.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>يأتي مع اختبارات وحدة صارمة، مما يجعل تطوير البرمجيات القائم على الاختبار سهلًا.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>مدعوم من المجتمع</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>مفضلات المجتمع</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>مجتمع المصدر، ترجمة الذكاء الاصطناعي، ومجاني للأبد.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>توثيق شامل</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>قم بالتبديل بسهولة بين مزودي الخدمة مثل SQLite وMySQL وSQL Server وقاعدة البيانات في الذاكرة لأغراض الاختبار.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>تعديل على GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>اكتب اختبارات التكامل بسهولة باستخدام قواعد بيانات الذاكرة، وأنظمة ملفات مؤقتة، والمحاكاة المدمجة، ومحاكاة طلبات HTTP الحقيقية.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>تضمين Entity Framework Core</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>يتم ترجمة كل وصفة تلقائيًا إلى 27 لغة باستخدام الذكاء الاصطناعي، حتى تتمكن من الطهي بلغتك الأم.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>استكشف آلاف الوصفات المجانية التي يقدمها المجتمع</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>مجاني للاستخدام التجاري</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>مجاناً للأبد</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>برمجيات مجانية</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>كاملة بدون اتصال</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>مفتوح المصدر بالكامل</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>إعداد عام</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>جاهز لـ K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>أعجب، احفظ، وعلّق على الوصفات التي تحبها. شارك تجاربك في الطهي مع المجتمع.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>فحص اللينت</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>يتم التحقق من النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>الوصفات الأكثر حبًا</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>التعامل مع مناطق زمنية متعددة</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>اكتشاف الصلاحيات ومزامنتها</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>بحث متقدم</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>مُهيأة مسبقًا ومُختبرة</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>التقييمات</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>غني بالصور</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>اختبارات التكامل القوية</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>دمج سلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>ابحث عن طريق المكون أو اسم الطبق أو الفئة للعثور على ما تريد طهيه بالضبط اليوم.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>ابحث عن وصفات (مثل: طماطم، بيض، توفو...)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>انقل بثقة</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>وضع الظلام الذكي الذي يتكيف تلقائيًا مع إعدادات نظام المستخدم.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>وجدت خطأً أو ترغب في تحسين وصفة؟ عدّلها مباشرة على GitHub وساعد المجتمع بأكمله.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>التنفيذ القياسي. تبديل المزودين دون إعادة التجميع.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>ماذا أحتاج للبدء؟</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>ما الذي يميزها</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>ماذا يقول مطورونا</value>

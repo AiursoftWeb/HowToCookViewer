@@ -51,6 +51,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Dịch Thuật Hỗ Trợ Bởi AI</value>
   </data>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>Dịch bởi AI</value>
+  </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
@@ -59,6 +62,9 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tất cả các dependency đều được tự động đăng ký và luôn sẵn sàng thông qua constructor injection.</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>Tất cả công thức nấu ăn đều được lấy từ dự án mã nguồn mở HowToCook. Bất kỳ ai cũng có thể đóng góp, cải thiện hoặc fork nó.</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -117,6 +123,15 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Hướng dẫn song ngữ</value>
   </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>Xem tất cả công thức</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>Duyệt qua các công thức nấu ăn với ảnh bìa đẹp mắt và hướng dẫn từng bước chi tiết bằng hình ảnh.</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>Xem những công thức được cộng đồng yêu thích nhất.</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Xây dựng một lần, chạy ở bất kỳ đâu. Kiến trúc được đóng gói hoàn toàn trong container.</value>
   </data>
@@ -155,6 +170,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Được đi kèm với các bài kiểm thử đơn vị nghiêm ngặt, giúp phát triển theo phương pháp kiểm thử trước (test-driven development) trở nên dễ dàng.</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>Cộng đồng kiến tạo</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>Yêu thích của cộng đồng</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>Do cộng đồng đóng góp, dịch bởi AI và miễn phí mãi mãi.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Tài liệu Toàn diện</value>
@@ -246,6 +270,9 @@
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Dễ dàng chuyển đổi giữa các nhà cung cấp như SQLite, MySQL, SQL Server và cơ sở dữ liệu trong bộ nhớ để kiểm thử.</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Chỉnh sửa trên GitHub</value>
+  </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Viết các bài kiểm thử tích hợp một cách dễ dàng bằng cách sử dụng cơ sở dữ liệu trong bộ nhớ, hệ thống tệp tạm thời, mô phỏng tích hợp sẵn và mô phỏng yêu cầu HTTP thực tế.</value>
   </data>
@@ -269,6 +296,12 @@
   </data>
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Đã bao gồm Entity Framework Core</value>
+  </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>Mỗi công thức đều được tự động dịch sang 27 ngôn ngữ bằng AI, giúp bạn nấu ăn bằng ngôn ngữ mẹ đẻ của mình.</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>Khám phá hàng ngàn công thức nấu ăn miễn phí, được đóng góp bởi cộng đồng</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
@@ -309,6 +342,9 @@
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Miễn phí sử dụng cho mục đích thương mại</value>
   </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>Miễn phí mãi mãi</value>
+  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Phần mềm miễn phí</value>
   </data>
@@ -329,6 +365,9 @@
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Hoàn toàn ngoại tuyến</value>
+  </data>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>Hoàn toàn Mã nguồn mở</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Cấu hình chung</value>
@@ -423,6 +462,9 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Sẵn sàng cho K8s / Swarm</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>Thích, lưu và bình luận về các công thức nấu ăn bạn yêu thích. Chia sẻ kinh nghiệm nấu nướng của bạn với cộng đồng.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Kiểm tra Lint</value>
   </data>
@@ -443,6 +485,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía khách và phía máy chủ dựa trên các chú thích dữ liệu.</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>Công thức được yêu thích nhất</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Xử lý đa múi giờ</value>
@@ -531,6 +576,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Phát hiện và đồng bộ quyền</value>
   </data>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>Tìm kiếm mạnh mẽ</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Đã được cấu hình sẵn và kiểm tra</value>
   </data>
@@ -561,6 +609,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Đánh giá</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>Dồi dào hình ảnh</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Kiểm thử tích hợp mạnh mẽ</value>
   </data>
@@ -572,6 +623,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với bất kỳ nhà cung cấp OpenID Connect nào, đồng thời tự động đồng bộ hóa vai trò.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>Tìm kiếm theo nguyên liệu, tên món ăn hoặc danh mục để tìm chính xác những gì bạn muốn nấu hôm nay.</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Tìm kiếm công thức nấu ăn (ví dụ: cà chua, trứng, đậu phụ…)</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Chuyển đổi với sự tự tin</value>
@@ -590,6 +650,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Chế độ tối thông minh tự động điều chỉnh theo cài đặt hệ thống của người dùng.</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>Phát hiện lỗi hoặc muốn cải thiện một công thức? Chỉnh sửa trực tiếp trên GitHub và giúp đỡ toàn bộ cộng đồng.</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>Thực thi chuẩn. Chuyển đổi nhà cung cấp mà không cần biên dịch.</value>
@@ -683,6 +746,9 @@
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>Tôi cần gì để bắt đầu?</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>Điều gì làm nên sự đặc biệt</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Những gì nhà phát triển của chúng tôi nói</value>
