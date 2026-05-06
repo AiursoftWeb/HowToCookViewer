@@ -10,6 +10,7 @@ using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.LanguagesDropdown;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.Navbar;
+using Aiursoft.UiStack.Views.Shared.Components.SearchForm;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
@@ -139,6 +140,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Least Favorited"];
 
         _ = localizer["Recipe Search"];
+        _ = localizer["Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)"];
     }
 
     public void InjectSimple(
@@ -177,7 +179,13 @@ public class ViewModelArgsInjector(
         };
         toInject.Navbar = new NavbarViewModel
         {
-            ThemeSwitchApiCallEndpoint = "/api/switch-theme"
+            ThemeSwitchApiCallEndpoint = "/api/switch-theme",
+            SearchForm = new SearchFormViewModel
+            {
+                SearchUrl  = "/Dashboard/Index",
+                SearchParam = "q",
+                Placeholder = localizer["Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)"]
+            }
         };
 
         var currentViewingController = context.GetRouteValue("controller")?.ToString();

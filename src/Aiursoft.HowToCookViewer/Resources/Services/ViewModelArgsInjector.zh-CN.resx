@@ -252,4 +252,7 @@
   <data name="Advanced" xml:space="preserve">
     <value>高级</value>
   </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>搜索菜谱（如：西红柿、鸡蛋、豆腐…）</value>
+  </data>
 </root>

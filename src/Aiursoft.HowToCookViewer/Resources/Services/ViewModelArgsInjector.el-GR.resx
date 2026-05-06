@@ -249,4 +249,7 @@
   <data name="Advanced" xml:space="preserve">
     <value>Προχωρημένο</value>
   </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Αναζήτηση συνταγών (π.χ. ντομάτα, αυγό, τόφου…)</value>
+  </data>
 </root>
