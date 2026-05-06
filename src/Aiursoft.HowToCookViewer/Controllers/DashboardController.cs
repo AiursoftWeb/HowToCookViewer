@@ -36,14 +36,17 @@ public class DashboardController(
         if (!string.IsNullOrWhiteSpace(q))
         {
             (results, totalResults) = await RecipeSearchService.SearchAsync(
-                baseQuery, q, page, IndexViewModel.PageSize);
+                baseQuery, db, q, page, IndexViewModel.PageSize);
         }
         else
         {
             totalResults = totalRecipes;
             results = await baseQuery
                 .Include(r => r.Images)
-                .OrderBy(r => r.Name)
+                .OrderByDescending(r => r.Images.Any())
+                .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
+                .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
+                .ThenBy(r => r.Name)
                 .Skip((page - 1) * IndexViewModel.PageSize)
                 .Take(IndexViewModel.PageSize)
                 .ToListAsync();

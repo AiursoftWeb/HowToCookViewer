@@ -75,5 +75,10 @@
   <data name="Write your comment…" xml:space="preserve">
     <value>写下您的评论…</value>
   </data>
-
+  <data name="Contributors" xml:space="preserve">
+    <value>贡献者</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>次提交</value>
+  </data>
 </root>

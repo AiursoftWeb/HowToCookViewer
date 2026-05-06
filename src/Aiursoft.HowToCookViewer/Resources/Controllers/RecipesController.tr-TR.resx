@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version='1.0' encoding='utf-8'?>
 <root>
     <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:element name="root" msdata:IsDataSet="true">
-
         </xsd:element>
     </xsd:schema>
     <resheader name="resmimetype">
@@ -18,8 +16,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
+  <data name="All Recipes" xml:space="preserve">
     <value>Tüm Tarifler</value>
+  </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Aquatic</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Breakfast</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Condiments</value>
+  </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Desserts</value>
+  </data>
+  <data name="Difficulty {0} Stars" xml:space="preserve">
+    <value>Difficulty {0} Stars</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Drinks</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>En Az Yorumlanan</value>
@@ -30,6 +46,9 @@
   <data name="Least Liked" xml:space="preserve">
     <value>En Az Beğenilen</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>Meat Dishes</value>
+  </data>
   <data name="Most Commented" xml:space="preserve">
     <value>En Çok Yorumlanan</value>
   </data>
@@ -39,5 +58,19 @@
   <data name="Most Liked" xml:space="preserve">
     <value>En Çok Beğenilen</value>
   </data>
-
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Semi-finished</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Soups</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Staple Food</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Templates</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Vegetable Dishes</value>
+  </data>
 </root>

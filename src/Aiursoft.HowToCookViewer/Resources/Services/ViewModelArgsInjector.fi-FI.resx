@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -31,13 +30,13 @@
     <value>Aiursoft-malli</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>Kaikki reseptit</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonyymi</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>Vesieläimet</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Taustatehtävät</value>
@@ -46,19 +45,19 @@
     <value>Väärä pyyntö</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>Aamiainen</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>Kommenttien mukaan</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>Vaikeusasteen mukaan</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>Suosikkien mukaan</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>Mukana tykkäykset</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Vaihda avataria</value>
@@ -70,13 +69,13 @@
     <value>Muokkaa profiilia</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>Luokittelu</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Klikkaa kirjautuaksesi</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>Mausteet</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>Luo rooli</value>
@@ -94,13 +93,13 @@
     <value>Poista käyttäjä</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>Jälkiruoat</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Hakemisto</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>Juomat</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Muokkaa roolia</value>
@@ -130,13 +129,13 @@
     <value>Sisäinen palvelinvirhe</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>Vähiten kommentoitu</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>Vähiten suosituimmat</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>Vähiten pidetty</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Lukitus</value>
@@ -151,16 +150,16 @@
     <value>Hallinnoi</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>Liharat</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>Eniten kommentoitu</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>Suosituimmat</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>Suosituin</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Suosikkini</value>
@@ -202,7 +201,7 @@
     <value>Roolit</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>Valmis ruoka-aine</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Asetukset</value>
@@ -211,10 +210,10 @@
     <value>Kirjaudu ulos</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>Keitot</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>Pääruoka</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Järjestelmä</value>
@@ -226,7 +225,7 @@
     <value>Malli</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>Mallit</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Luvaton</value>
@@ -238,7 +237,7 @@
     <value>Käyttäjät</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Kasvisruoat</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>

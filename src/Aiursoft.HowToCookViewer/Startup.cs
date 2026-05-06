@@ -32,8 +32,7 @@ public class Startup : IWebStartup
     {
         // AppSettings.
         services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
-        services.AddGitRunner();
-
+        
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
         services.AddSwitchableRelationalDatabase(
@@ -63,6 +62,7 @@ public class Startup : IWebStartup
         services.AddScoped<RecipeLocalizationService>();
         services.AddScoped<ChatClient>();
         services.AddScoped<MarkdownShredder>();
+        services.AddGitRunner();
 
         // Background job infrastructure
         services.AddTaskQueueEngine();

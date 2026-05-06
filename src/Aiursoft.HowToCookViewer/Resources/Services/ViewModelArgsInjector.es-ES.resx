@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -34,13 +33,13 @@
     <value>Plantilla de Aiursoft</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>Todas las recetas</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anónimo</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>Acuático</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Trabajos en segundo plano</value>
@@ -49,19 +48,19 @@
     <value>Solicitud incorrecta</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>Desayuno</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>Por comentarios</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>Por dificultad</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>Por favoritos</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>Por me gusta</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Cambiar avatar</value>
@@ -73,13 +72,13 @@
     <value>Cambiar perfil</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>Clasificación</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Haga clic para iniciar sesión</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>Condimentos</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>Crear Rol</value>
@@ -97,13 +96,13 @@
     <value>Eliminar usuario</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>Postres</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Directorio</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>Bebidas</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Editar rol</value>
@@ -133,13 +132,13 @@
     <value>Error interno del servidor</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>Menos comentados</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>Menos favoritos</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>Menos gustados</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Bloqueo</value>
@@ -154,16 +153,16 @@
     <value>Gestionar</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>Platos de carne</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>Más comentados</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>Más favoritos</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>Más valorados</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mis favoritos</value>
@@ -205,7 +204,7 @@
     <value>Roles</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>Producto semielaborado</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Configuración</value>
@@ -214,10 +213,10 @@
     <value>Cerrar sesión</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>Sopas</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>Platos básicos</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Sistema</value>
@@ -229,7 +228,7 @@
     <value>Plantilla</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>Plantillas</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>No autorizado</value>
@@ -241,7 +240,7 @@
     <value>Usuarios</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Platos de verduras</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>

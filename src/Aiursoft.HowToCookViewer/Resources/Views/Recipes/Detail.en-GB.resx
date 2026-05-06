@@ -57,5 +57,10 @@
   <data name="Write your comment…" xml:space="preserve">
     <value>Write your comment…</value>
   </data>
-
+  <data name="Contributors" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commits</value>
+  </data>
 </root>

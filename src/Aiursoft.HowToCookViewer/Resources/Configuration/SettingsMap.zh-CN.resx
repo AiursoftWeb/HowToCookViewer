@@ -96,5 +96,11 @@
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>用于菜谱翻译的 OpenAI 兼容聊天补全端点，例如 https://ollama.example.com/api/chat/completions</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>每个账号每天最高评论次数</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>同一个账号在一天内最多可以发布的评论数量。</value>
+  </data>
 
 </root>

@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version='1.0' encoding='utf-8'?>
 <root>
     <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:element name="root" msdata:IsDataSet="true">
-
         </xsd:element>
     </xsd:schema>
     <resheader name="resmimetype">
@@ -18,8 +16,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
-    <value>所有食譜</value>
+  <data name="All Recipes" xml:space="preserve">
+    <value>所有菜譜</value>
+  </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>水產</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>早餐</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>醬料</value>
+  </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>甜品</value>
+  </data>
+  <data name="Difficulty {0} Stars" xml:space="preserve">
+    <value>難度 {0} 星</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>飲品</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>最少評論</value>
@@ -28,16 +44,33 @@
     <value>最少收藏</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>最少喜歡</value>
+    <value>最少點贊</value>
+  </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>葷菜</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>最多留言</value>
+    <value>最多評論</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>最受歡迎</value>
+    <value>最多收藏</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>最受歡迎</value>
+    <value>最多點贊</value>
   </data>
-
+  <data name="Semi-finished" xml:space="preserve">
+    <value>半成品</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>湯</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>主食</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>模板</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>素菜</value>
+  </data>
 </root>
