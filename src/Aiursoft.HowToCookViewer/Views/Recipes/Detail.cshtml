@@ -100,9 +100,19 @@
             @if (Model.Contributors.Count > 0)
             {
                 <div class="mt-4">
-                    <h5 class="mb-3">
-                        <i class="align-middle me-1" data-lucide="users"></i>
-                        @Localizer["Contributors"]
+                    <h5 class="mb-3 d-flex align-items-center">
+                        <div>
+                            <i class="align-middle me-1" data-lucide="users"></i>
+                            @Localizer["Contributors"]
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.GitHubHistoryUrl))
+                        {
+                            <a href="@Model.GitHubHistoryUrl" target="_blank" rel="noopener noreferrer"
+                               class="btn btn-sm btn-outline-secondary ms-3">
+                                <i class="align-middle me-1" data-lucide="history"></i>
+                                @Localizer["Change History"]
+                            </a>
+                        }
                     </h5>
                     <div class="d-flex flex-wrap gap-2">
                         @foreach (var contributor in Model.Contributors)
