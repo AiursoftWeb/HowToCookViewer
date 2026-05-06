@@ -114,7 +114,7 @@
                     <div class="card mb-3" id="comment-@comment.Id">
                         <div class="card-body">
                             <div class="d-flex gap-3">
-                                <img src="@Storage.RelativePathToInternetUrl(comment.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=72&square=true"
+                                <img src="@(Storage.RelativePathToInternetUrl(comment.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath))?w=72&square=true"
                                      alt="@(comment.User?.DisplayName ?? Localizer["Anonymous"].Value)"
                                      class="rounded-circle flex-shrink-0"
                                      width="40" height="40" />
@@ -144,7 +144,7 @@
                                             @foreach (var reply in comment.Replies.OrderBy(r => r.CreatedAt))
                                             {
                                                 <div class="d-flex gap-2 mb-2 pt-2" id="comment-@reply.Id">
-                                                    <img src="@Storage.RelativePathToInternetUrl(reply.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=48&square=true"
+                                                    <img src="@(Storage.RelativePathToInternetUrl(reply.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath))?w=48&square=true"
                                                          alt="@(reply.User?.DisplayName ?? Localizer["Anonymous"].Value)"
                                                          class="rounded-circle flex-shrink-0"
                                                          width="32" height="32" />
@@ -220,6 +220,7 @@
 </div>
 
 @* ReSharper disable once Razor.SectionNotResolved *@
+@* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
 <style>
 .recipe-markdown img {
@@ -236,6 +237,7 @@
 </style>
 }
 
+@* ReSharper disable once Razor.SectionNotResolved *@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
 <script>

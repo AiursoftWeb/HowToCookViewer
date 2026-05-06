@@ -7,7 +7,7 @@ namespace Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 
 /// <summary>
 /// Periodically translates recipe content into the configured languages using an AI endpoint.
-/// Each run processes at most <see cref="BatchSize"/> (recipe, culture) pairs to avoid long runs.
+/// Runs until all pending (recipe, culture) pairs are translated, saving progress along the way.
 /// Skips recipes whose <see cref="LocalizedRecipe.LastLocalizedAt"/> is already up-to-date.
 /// </summary>
 public class LocalizeRecipesJob(

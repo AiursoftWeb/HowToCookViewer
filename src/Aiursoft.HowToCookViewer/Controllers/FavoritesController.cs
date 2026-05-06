@@ -1,7 +1,6 @@
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.FavoritesViewModels;
 using Aiursoft.HowToCookViewer.Services;
-using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
