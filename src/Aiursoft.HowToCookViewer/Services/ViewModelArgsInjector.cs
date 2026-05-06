@@ -13,6 +13,7 @@ using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
+using Microsoft.EntityFrameworkCore;
 using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
 using Microsoft.AspNetCore.Authorization;
@@ -102,6 +103,11 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Recipes"];
         _ = localizer["All Recipes"];
+
+        // Tip category display names
+        _ = localizer["Cooking Tips"];
+        _ = localizer["Learn"];
+        _ = localizer["Advanced"];
 
         _ = localizer["My Favorites"];
         _ = localizer["Recipe"];
@@ -334,6 +340,72 @@ public class ViewModelArgsInjector(
             var insertAt = navGroupsForView.Count > 0 ? 1 : 0;
             navGroupsForView.Insert(insertAt, classificationGroup);
             navGroupsForView.Insert(insertAt, allRecipesGroup);
+        }
+
+        // ── Tips NavGroup ─────────────────────────────────────────────────────
+        // Map tip category folder names → (localizer key, lucide icon)
+        var tipCategoryMeta = new Dictionary<string, (string Key, string Icon)>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["learn"]    = ("Learn",    "book-open"),
+            ["advanced"] = ("Advanced", "graduation-cap"),
+        };
+
+        var allTips = db.Tips
+            .AsNoTracking()
+            .Select(t => new { t.Id, t.Title, t.Category })
+            .OrderBy(t => t.Title)
+            .ToList();
+
+        if (allTips.Count > 0)
+        {
+            var isOnTipsController = string.Equals(currentViewingController, "Tips", StringComparison.OrdinalIgnoreCase);
+            var currentTipId = context.GetRouteValue("id")?.ToString();
+
+            var tipsItems = new List<SideBarItem>();
+
+            // Root tips first (direct links)
+            foreach (var tip in allTips.Where(t => t.Category == "root"))
+            {
+                tipsItems.Add(new LinkSideBarItem
+                {
+                    LucideIcon = "file-text",
+                    Text       = tip.Title,
+                    Href       = $"/Tips/Detail/{tip.Id}",
+                    IsActive   = isOnTipsController && currentTipId == tip.Id.ToString()
+                });
+            }
+
+            // Category groups (learn, advanced) — each as a collapsible item
+            var knownCategories = new[] { "learn", "advanced" };
+            foreach (var cat in knownCategories)
+            {
+                var catTips = allTips.Where(t => t.Category == cat).ToList();
+                if (catTips.Count == 0) continue;
+
+                var (catKey, catIcon) = tipCategoryMeta.TryGetValue(cat, out var meta) ? meta : (cat, "folder");
+                tipsItems.Add(new CascadedSideBarItem
+                {
+                    UniqueId   = $"tips-{cat}",
+                    LucideIcon = catIcon,
+                    Text       = localizer[catKey],
+                    IsActive   = isOnTipsController && catTips.Any(t => currentTipId == t.Id.ToString()),
+                    Links      = catTips.Select(t => new CascadedLink
+                    {
+                        Text     = t.Title,
+                        Href     = $"/Tips/Detail/{t.Id}",
+                        IsActive = isOnTipsController && currentTipId == t.Id.ToString()
+                    }).ToList()
+                });
+            }
+
+            var tipsGroup = new NavGroup
+            {
+                Name  = localizer["Cooking Tips"],
+                Items = tipsItems
+            };
+
+            var tipsInsertAt = navGroupsForView.Count > 0 ? 1 : 0;
+            navGroupsForView.Insert(tipsInsertAt, tipsGroup);
         }
 
         toInject.Sidebar = new SidebarViewModel

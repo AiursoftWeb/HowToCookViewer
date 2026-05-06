@@ -1,0 +1,48 @@
+@model Aiursoft.HowToCookViewer.Models.TipsViewModels.DetailViewModel
+
+<div class="container-fluid p-4">
+    <div class="row mb-3">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">@Localizer["Home"]</a></li>
+                    <li class="breadcrumb-item active">@Model.DisplayTitle</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-auto align-self-center">
+            <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline-secondary">
+                <i class="align-middle me-1" data-lucide="pencil"></i>
+                @Localizer["Edit on GitHub"]
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header p-4 p-md-5 pb-0">
+            <h2 class="mb-0 fw-bold">@Model.DisplayTitle</h2>
+        </div>
+        <div class="card-body p-4 p-md-5">
+            <div class="recipe-markdown">
+                @Html.Raw(Model.RenderedContent)
+            </div>
+        </div>
+        <div class="px-4 px-md-5 pb-3">
+            <div class="alert alert-primary alert-dismissible" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="alert-message">
+                    <h4 class="alert-heading">@Localizer["Community Content"]</h4>
+                    <p class="mb-0">
+                        @Localizer["The copyright of this tip belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions."]
+                        <a href="https://github.com/Anduin2017/HowToCook/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">@Localizer["Click here to view the legal information."]</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted small">
+            <i class="align-middle me-1" data-lucide="git-commit-horizontal"></i>
+            @Localizer["Last updated:"] <label data-utc-time="@Model.Tip.FileLastModified.ToHtmlDateTime()"></label>
+        </div>
+    </div>
+</div>
