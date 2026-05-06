@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Précédent</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Prise en charge « fire-and-forget » des tâches longues (comme les e-mails ou l&apos;IA), avec une interface graphique pour la gestion de file d&apos;attente, le traitement parallèle et l&apos;annulation.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Toutes les dépendances sont automatiquement enregistrées et toujours disponibles via l&apos;injection de constructeur.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>et découvrez quelque chose de nouveau à cuisiner aujourd&apos;hui.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Mode Sombre Automatique</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Traitement des tâches en arrière-plan</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Parcourir par catégorie</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestion des utilisateurs intégrée</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Effacer</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Fourni avec le support Docker pour un déploiement simplifié et cohérent.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Intègre un système de gestion de fichiers intégré avec compression automatique des avatars.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Envie de surprise ?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Gérez les tâches récurrentes telles que le nettoyage et la synchronisation avec une interface graphique complète pour surveiller l&apos;historique d&apos;exécution et les journaux.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Prise en charge de plusieurs bases de données</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Suivant ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Aucune recette trouvée correspondant à</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Intégration OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Lire la documentation</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Recherche de recettes</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Conception adaptative</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Intégration transparente avec n&apos;importe quel fournisseur OpenID Connect, avec synchronisation automatique des rôles.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Rechercher des recettes</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Rechercher des recettes (ex. tomates, œufs, tofu…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Remplacements intelligents de configuration</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Ceci est un projet modèle, où nous commençons le voyage...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Essayer une recette au hasard</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Essayez un nom plus court ou vérifiez l&apos;orthographe.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Saisissez un nom de recette ci-dessus pour rechercher parmi toutes les recettes avec un classement de pertinence intelligent.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Utilisez la barre latérale pour parcourir les recettes par catégorie ou niveau de difficulté.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenue</value>

@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Semua Resep</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Komentar Terkecil</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Terkurangi Favorit</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Terpopuler Rendah</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Paling Banyak Dikomentari</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Terfavorit</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Terpopuler</value>
+  </data>
 
 </root>

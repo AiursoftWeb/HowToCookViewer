@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Trước</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Hỗ trợ &quot;Fire-and-forget&quot; cho các tác vụ dài hạn (như email hoặc AI), đi kèm giao diện người dùng (GUI) để quản lý hàng đợi, xử lý song song và hủy bỏ.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tất cả các dependency đều được tự động đăng ký và luôn sẵn sàng để sử dụng thông qua constructor injection.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>và khám phá điều mới mẻ để nấu ăn hôm nay.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Chế độ Tối Tự động</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Duyệt theo danh mục</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Xóa</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Được tích hợp hỗ trợ Docker để triển khai đơn giản và nhất quán.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Tích hợp hệ thống quản lý tập tin với tính năng nén avatar tự động.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Cảm thấy may mắn?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Xử lý các công việc lặp lại như dọn dẹp và đồng bộ hóa với giao diện người dùng toàn diện để theo dõi lịch sử thực thi và nhật ký.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Hỗ trợ Đa Cơ sở Dữ liệu</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Tiếp ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Không tìm thấy công thức nấu ăn nào phù hợp</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Đọc tài liệu</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Tìm kiếm Công thức</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Thiết kế đáp ứng</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với mọi nhà cung cấp OpenID Connect, kèm theo đồng bộ hóa vai trò tự động.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Tìm kiếm công thức</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Tìm công thức nấu ăn (ví dụ: cà chua, trứng, đậu phụ…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Đây là một dự án mẫu, nơi chúng ta bắt đầu hành trình khám phá...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Thử một công thức ngẫu nhiên</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Hãy thử tên ngắn hơn hoặc kiểm tra chính tả.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Nhập tên công thức nấu ăn ở trên để tìm kiếm trong tất cả các công thức với xếp hạng độ liên quan thông minh.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Sử dụng thanh bên để duyệt công thức theo danh mục hoặc mức độ khó.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Chào mừng</value>

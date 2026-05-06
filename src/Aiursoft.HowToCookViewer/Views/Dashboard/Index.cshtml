@@ -66,6 +66,9 @@
                     ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
                     : null;
                 var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+                var displayName = Model.LocalizedNames.TryGetValue(recipe.Id, out var ln) ? ln : recipe.Name;
+                var displayDesc = Model.LocalizedDescriptions.TryGetValue(recipe.Id, out var ld) ? ld : recipe.Description;
+                var categoryDisplay = Model.CategoryDisplayNames.TryGetValue(recipe.Category, out var cn) ? cn : recipe.Category;
                 <div class="col-12">
                     <a asp-controller="Recipes" asp-action="Detail" asp-route-id="@recipe.Id"
                        class="card mb-0 shadow-sm text-decoration-none text-body">
@@ -73,7 +76,7 @@
                             <div class="d-flex align-items-start gap-3">
                                 @if (coverUrl != null)
                                 {
-                                    <img src="@coverUrl" alt="@recipe.Name"
+                                    <img src="@coverUrl" alt="@displayName"
                                          class="rounded-2 object-fit-cover flex-shrink-0"
                                          style="width:64px;height:64px;object-fit:cover;" />
                                 }
@@ -86,8 +89,8 @@
                                 }
                                 <div class="flex-grow-1 overflow-hidden">
                                     <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                                        <span class="fs-5 fw-semibold">@recipe.Name</span>
-                                        <span class="badge bg-secondary small">@recipe.Category</span>
+                                        <span class="fs-5 fw-semibold">@displayName</span>
+                                        <span class="badge bg-secondary small">@categoryDisplay</span>
                                         <span class="text-warning small">@difficultyStars</span>
                                         @if (Model.LikeCounts.TryGetValue(recipe.Id, out var likes) && likes > 0)
                                         {
@@ -96,9 +99,9 @@
                                             </span>
                                         }
                                     </div>
-                                    @if (!string.IsNullOrWhiteSpace(recipe.Description))
+                                    @if (!string.IsNullOrWhiteSpace(displayDesc))
                                     {
-                                        <p class="text-muted mb-0 small text-truncate">@recipe.Description</p>
+                                        <p class="text-muted mb-0 small text-truncate">@displayDesc</p>
                                     }
                                 </div>
                             </div>

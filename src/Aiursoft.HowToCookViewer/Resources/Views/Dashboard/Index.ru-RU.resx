@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Назад</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Поддержка &quot;fire-and-forget&quot; для длительных задач (например, электронной почты или ИИ), с графическим интерфейсом для управления очередями, параллельной обработки и отмены.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Все зависимости автоматически регистрируются и всегда доступны через внедрение в конструктор.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>и откройте для себя что-то новое, чтобы приготовить сегодня.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Автоматическая тёмная тема</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Обработка фоновых задач</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Просмотр по категориям</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Встроенное управление пользователями</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Очистить</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Имеет поддержку Docker для упрощённого и единообразного развертывания.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Оснащена встроенной системой управления файлами с автоматическим сжатием аватаров.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Испытываете удачу?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Управляйте повторяющимися задачами, такими как очистка и синхронизация, с помощью комплексного графического интерфейса для мониторинга истории выполнения и журналов.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Поддержка нескольких баз данных</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Далее ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Рецепты, соответствующие запросу, не найдены</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Интеграция OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Прочитать документацию</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Поиск рецептов</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Адаптивный дизайн</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Беспрепятственная интеграция с любым провайдером OpenID Connect с автоматической синхронизацией ролей.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Поиск рецептов</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Поиск рецептов (например, помидоры, яйца, тофу…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Умные переопределения конфигурации</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Это шаблонный проект, с которого мы начинаем наше путешествие...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Попробовать случайный рецепт</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Попробуйте использовать более короткое название или проверьте правописание.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Введите название рецепта выше, чтобы выполнить поиск по всем рецептам с интеллектуальной сортировкой по релевантности.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Используйте боковую панель для просмотра рецептов по категориям или уровню сложности.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать</value>

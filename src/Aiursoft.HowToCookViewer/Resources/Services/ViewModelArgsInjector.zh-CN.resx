@@ -51,8 +51,17 @@
   <data name="Breakfast" xml:space="preserve">
     <value>早餐</value>
   </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>按评论数</value>
+  </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>按难度</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>按收藏数</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>按点赞数</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>更换头像</value>
@@ -123,6 +132,15 @@
   <data name="Internal Server Error" xml:space="preserve">
     <value>内部服务器错误</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>评论最少</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>最少收藏</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>最少点赞</value>
+  </data>
   <data name="Lockout" xml:space="preserve">
     <value>账户被锁定</value>
   </data>
@@ -137,6 +155,15 @@
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>肉类菜肴</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>评论最多</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>最受欢迎</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>最多点赞</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>我的收藏</value>
@@ -161,6 +188,9 @@
   </data>
   <data name="Recipe" xml:space="preserve">
     <value>食谱</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>菜谱搜索</value>
   </data>
   <data name="Recipes" xml:space="preserve">
     <value>食谱</value>

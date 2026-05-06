@@ -48,8 +48,17 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Сніданок</value>
   </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>За коментарями</value>
+  </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>За складністю</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>За вподобаннями</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>За вподобаннями</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Змінити аватар</value>
@@ -120,6 +129,15 @@
   <data name="Internal Server Error" xml:space="preserve">
     <value>Помилка внутрішнього сервера</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Найменше коментарів</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Найменше вподобаних</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Найменш вподобані</value>
+  </data>
   <data name="Lockout" xml:space="preserve">
     <value>Блокування</value>
   </data>
@@ -134,6 +152,15 @@
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>М&apos;ясні страви</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Найбільш коментовані</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Найбільш улюблені</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Найбільш вподобані</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Мої улюблені</value>
@@ -158,6 +185,9 @@
   </data>
   <data name="Recipe" xml:space="preserve">
     <value>Рецепт</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Пошук рецептів</value>
   </data>
   <data name="Recipes" xml:space="preserve">
     <value>Рецепти</value>

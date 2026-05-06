@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>すべてのレシピ</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>コメントが少ない順</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>お気に入り数が少ない順</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>最も低評価</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>コメント数が多い順</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>お気に入り数が多い順</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>一番いいね！</value>
+  </data>
 
 </root>

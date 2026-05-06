@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Poista</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Muokkaa GitHubissa</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Kirjaudu kommentoidaksesi</value>
   </data>

@@ -24,6 +24,12 @@ public class DetailViewModel : UiStackLayoutViewModel
     /// <summary>Direct link to edit this file on GitHub.</summary>
     public string? GitHubEditUrl { get; set; }
 
+    /// <summary>Localized category display name for the breadcrumb.</summary>
+    public string CategoryDisplayName { get; set; } = string.Empty;
+
+    /// <summary>Localized version of the recipe for the current request culture, if available.</summary>
+    public LocalizedRecipe? LocalizedRecipe { get; set; }
+
     /// <summary>Root-level comments with Replies pre-loaded.</summary>
     public List<RecipeComment> Comments { get; set; } = [];
 }

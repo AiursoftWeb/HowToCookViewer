@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Tüm Tarifler</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>En Az Yorumlanan</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>En Az Favorilenen</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>En Az Beğenilen</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>En Çok Yorumlanan</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>En Çok Favorilenen</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>En Çok Beğenilen</value>
+  </data>
 
 </root>

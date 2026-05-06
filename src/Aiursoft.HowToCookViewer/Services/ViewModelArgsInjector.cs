@@ -132,6 +132,8 @@ public class ViewModelArgsInjector(
         _ = localizer["By Favorites"];
         _ = localizer["Most Favorited"];
         _ = localizer["Least Favorited"];
+    
+        _ = localizer["Recipe Search"];
     }
 
     public void InjectSimple(

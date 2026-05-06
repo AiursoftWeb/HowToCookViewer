@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Forrige</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>&quot;Fire-and-forget&quot;-støtte til langvarende opgaver (som emails eller AI), med en brugergrænseflade til køstyring, parallell behandling og annullering.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alle afhængigheder registreres automatisk og er altid tilgængelige via konstruktor-injektion.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>og opdag noget nyt at lave i dag.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Automatisk Mørk Tilstand</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Baggrundsjobbebehandling</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Gennemse efter kategori</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Indbygget brugeradministration</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Ryd</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Kommer med Docker-understøttelse til forenklet og konsistent implementering.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Har et indbygget filstyringssystem med automatisk avatar-komprimering.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Har du mod på at prøve?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Håndtér gentagende opgaver som rydning og synkronisering med en omfattende brugergrænseflade til overvågning af udførelseshistorik og logfiler.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Understøttelse af flere databaser</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Næste ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Ingen opskrifter fundet, der matcher</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Læs dokumentationen</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Opskriftssøgning</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsivt Design</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrer problemfrit med enhver OpenID Connect-udbyder, med automatisk rolle-synkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Søg</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Søg efter opskrifter</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Søg efter opskrifter (f.eks. tomater, æg, tofu…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smarte konfigurations-overskrivninger</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Dette er et skabelonprojekt, hvor vi begynder rejsen...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Prøv en tilfældig opskrift</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Prøv et kortere navn eller tjek stavefejl.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Skriv et opskriftsnavn ovenfor for at søge på tværs af alle opskrifter med intelligent rangering efter relevans.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Brug sidebjælken til at browse opskrifter efter kategori eller sværhedsgrad.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Velkommen</value>

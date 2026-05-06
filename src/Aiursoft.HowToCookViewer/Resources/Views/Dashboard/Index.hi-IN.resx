@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ पिछला</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>&quot;फायर-एंड-फॉरगेट&quot; समर्थन लंबे समय तक चलने वाले कार्यों (जैसे ईमेल या एआई) के लिए, जिसमें कतार प्रबंधन, समानांतर प्रसंस्करण और रद्द करने के लिए एक GUI शामिल है।</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>सभी निर्भरताएँ स्वचालित रूप से पंजीकृत होती हैं और कंस्ट्रक्टर इंजेक्शन के माध्यम से हमेशा उपलब्ध रहती हैं।</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>और आज पकाने के लिए कुछ नया खोजें।</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>स्वचालित डार्क मोड</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>बैकग्राउंड जॉब प्रोसेसिंग</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>श्रेणी के अनुसार ब्राउज़ करें</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>साफ़ करें</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>डॉकर समर्थन के साथ आता है सरल और समान डेप्लॉयमेंट के लिए।</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>स्वचालित अवतार संपीड़न के साथ एक अंतर्निहित फ़ाइल प्रबंधन प्रणाली की सुविधा प्रदान करता है।</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>किस्मत आजमाना?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>नियमित कार्यों जैसे साफ़ करना और समन्वयन को एक व्यापक GUI के साथ प्रबंधित करें जो निष्पादन इतिहास और लॉग के निगरानी के लिए उपलब्ध है।</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>एकाधिक डेटाबेस समर्थन</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>अगला ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>कोई रेसिपी नहीं मिली जो मेल खाती है</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>दस्तावेज़ पढ़ें</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>रेसिपी खोज</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>उत्तरदायी डिज़ाइन</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>किसी भी OpenID Connect प्रदाता के साथ सहज एकीकरण, स्वचालित भूमिका सिंक्रनाइज़ेशन के साथ।</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>खोजें</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>रिसेपी खोजें</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>रिसेपी खोजें (उदा. टमाटर, अंडे, टोफू…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>स्मार्ट कॉन्फ़िगरेशन ओवरराइड्स</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है, जहाँ से हम अपनी यात्रा शुरू करते हैं...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>एक यादृच्छिक रेसिपी आज़माएं</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>कोई छोटा नाम आज़माएं या वर्तनी की जाँच करें।</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>सभी रेसिपी में स्मार्ट प्रासंगिकता क्रम के साथ खोजने के लिए ऊपर एक रेसिपी का नाम टाइप करें।</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>श्रेणी या कठिनाई स्तर के अनुसार रेसिपी ब्राउज़ करने के लिए साइडबार का उपयोग करें।</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>स्वागत है</value>

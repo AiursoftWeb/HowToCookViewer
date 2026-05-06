@@ -24,5 +24,8 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>ยังไม่มีสูตรอาหาร งานจัดทำดัชนีพื้นหลังอาจยังคงทำงานอยู่</value>
   </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>สูตรอาหารสุ่ม</value>
+  </data>
 
 </root>

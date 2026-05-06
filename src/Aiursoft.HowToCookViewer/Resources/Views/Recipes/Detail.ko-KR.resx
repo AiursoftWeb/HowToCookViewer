@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>삭제</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>GitHub에서 편집</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>댓글을 남기려면 로그인하세요</value>
   </data>

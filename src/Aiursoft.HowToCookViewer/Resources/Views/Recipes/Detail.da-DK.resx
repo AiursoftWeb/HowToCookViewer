@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Slet</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Rediger på GitHub</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Log ind for at kommentere</value>
   </data>

@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>刪除</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>在 GitHub 上編輯</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>登入以留言</value>
   </data>

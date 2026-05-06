@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ السابق</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>دعم &quot;إطلاق ونسي&quot; للمهام الطويلة (مثل البريد الإلكتروني أو الذكاء الاصطناعي)، يشمل واجهة رسومية لإدارة الطابور، والمعالجة المتوازية، والإلغاء.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>يتم تسجيل جميع التبعيات تلقائيًا وهي متاحة دائمًا عبر حقن المُنشئ.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>واكتشف شيئًا جديدًا للطهي اليوم.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>الوضع الداكن التلقائي</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>معالجة المهام الخلفية</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>تصفح حسب الفئة</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>إدارة المستخدمين المدمجة</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>يأتي مع دعم دوكير لDeployment مبسطة وموحدة.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>يتميز بنظام مدمج لإدارة الملفات مع ضغط تلقائي للصور الشخصية.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>هل تشعر بالحظ؟</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>قم بإدارة المهام المتكررة مثل التنظيف والمزامنة باستخدام واجهة رسومية شاملة لمراقبة سجلات تاريخ التنفيذ والسجلات.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>دعم قواعد بيانات متعددة</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>التالي ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>لم يتم العثور على وصفات تطابق</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>دمج OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>اقرأ المستند</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>البحث عن الوصفات</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>تصميم متجاوب</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>التكامل السلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>ابحث عن الوصفات</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>ابحث عن الوصفات (مثال: طماطم، بيض، توفو...)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>الإعادة تعيين الإعدادات الذكية</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>جرّب وصفة عشوائية</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>جرّب اسمًا أقصر أو تحقق من تهجئته.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>اكتب اسم وصفة في الأعلى للبحث عبر جميع الوصفات مع ترتيب ذكي للصلة.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>استخدم الشريط الجانبي لتصفح الوصفات حسب الفئة أو مستوى الصعوبة.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>مرحباً</value>

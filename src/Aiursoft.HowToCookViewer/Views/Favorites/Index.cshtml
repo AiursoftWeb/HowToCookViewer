@@ -7,9 +7,9 @@
         <div class="col">
             <h3>
                 <i class="align-middle me-2" data-lucide="heart"></i>
-                我的收藏夹
+                @Localizer["My Favorites"]
             </h3>
-            <p class="text-muted mb-0">共 @Model.Favorites.Count 道收藏菜谱</p>
+            <p class="text-muted mb-0">@string.Format(Localizer["Total {0} recipe(s) favorited"].Value, Model.Favorites.Count)</p>
         </div>
     </div>
 
@@ -17,7 +17,7 @@
     {
         <div class="alert alert-info">
             <i class="align-middle me-2" data-lucide="info"></i>
-            还没有收藏任何菜谱，去菜谱页面点击 ♥ 收藏吧！
+            @Localizer["No favorites yet. Go to the recipes page and click ♥ to add some!"]
         </div>
     }
     else
@@ -31,6 +31,8 @@
                     ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
                     : "/img/no-image.svg";
                 var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+                var displayName = Model.LocalizedNames.TryGetValue(recipe.Id, out var ln) ? ln : recipe.Name;
+                var displayDesc = Model.LocalizedDescriptions.TryGetValue(recipe.Id, out var ld) ? ld : recipe.Description;
 
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                     <a href="/Recipes/Detail/@recipe.Id" class="text-decoration-none">
@@ -38,19 +40,19 @@
                             <img src="@coverUrl"
                                  class="card-img-top"
                                  style="height:180px;object-fit:cover;"
-                                 alt="@recipe.Name"
+                                 alt="@displayName"
                                  onerror="this.src='/img/no-image.svg'">
                             <div class="card-body pb-2">
-                                <h6 class="card-title mb-1 fw-bold text-truncate">@recipe.Name</h6>
+                                <h6 class="card-title mb-1 fw-bold text-truncate">@displayName</h6>
                                 <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
                                 <p class="card-text text-muted small mt-1 mb-0"
                                    style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-                                    @recipe.Description
+                                    @displayDesc
                                 </p>
                             </div>
                             <div class="card-footer text-muted small">
                                 <i class="align-middle me-1" data-lucide="heart"></i>
-                                收藏于 <label data-utc-time="@fav.CreatedAt.ToHtmlDateTime()"></label>
+                                @Localizer["Favorited at"] <label data-utc-time="@fav.CreatedAt.ToHtmlDateTime()"></label>
                             </div>
                         </div>
                     </a>

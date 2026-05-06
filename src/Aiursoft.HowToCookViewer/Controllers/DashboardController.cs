@@ -5,11 +5,15 @@ using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
 [LimitPerMin]
-public class DashboardController(TemplateDbContext db) : Controller
+public class DashboardController(
+    TemplateDbContext db,
+    RecipeLocalizationService recipeLocalization,
+    IStringLocalizer<RecipesController> categoryLocalizer) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Features",
@@ -45,6 +49,16 @@ public class DashboardController(TemplateDbContext db) : Controller
                 .ToListAsync();
         }
 
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(results);
+
+        // Build a localized category display name map for the result set
+        var categoryNames = results
+            .Select(r => r.Category)
+            .Distinct()
+            .ToDictionary(
+                cat => cat,
+                cat => categoryLocalizer[RecipesController.CategoryLocalizerKeys.TryGetValue(cat, out var key) ? key : cat].Value);
+
         return this.StackView(new IndexViewModel
         {
             Query = q,
@@ -53,6 +67,9 @@ public class DashboardController(TemplateDbContext db) : Controller
             TotalRecipes = totalRecipes,
             Results = results,
             LikeCounts = await LoadLikeCountsAsync(results),
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs,
+            CategoryDisplayNames = categoryNames,
         });
     }
 

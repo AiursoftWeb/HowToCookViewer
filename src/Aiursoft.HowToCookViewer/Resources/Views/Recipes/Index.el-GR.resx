@@ -24,5 +24,8 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Δεν υπάρχουν ακόμη συνταγές. Η εργασία ευρετηρίασης στο παρασκήνιο μπορεί να εκτελείται ακόμη.</value>
   </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>Τυχαία Συνταγή</value>
+  </data>
 
 </root>

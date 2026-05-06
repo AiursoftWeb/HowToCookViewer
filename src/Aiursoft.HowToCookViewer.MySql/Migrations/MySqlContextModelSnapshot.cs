@@ -35,6 +35,58 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.ToTable("GlobalSettings");
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Culture")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<DateTime>("LastLocalizedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("LocalizedCalculation")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LocalizedDescription")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LocalizedIngredients")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LocalizedName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("LocalizedNotes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LocalizedSteps")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecipeId", "Culture")
+                        .IsUnique();
+
+                    b.ToTable("LocalizedRecipes");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>
                 {
                     b.Property<int>("Id")
@@ -402,6 +454,17 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>

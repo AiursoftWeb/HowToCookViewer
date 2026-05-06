@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Sebelumnya</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Dukungan &quot;fire-and-forget&quot; untuk tugas berjalan lama (seperti email atau AI), dilengkapi antarmuka GUI untuk manajemen antrian, pemrosesan paralel, dan pembatalan.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Semua dependensi terdaftar secara otomatis dan selalu tersedia melalui constructor injection.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>dan temukan sesuatu yang baru untuk dimasak hari ini.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Mode Gelap Otomatis</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Pemrosesan Tugas Latar Belakang</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Telusuri berdasarkan Kategori</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Manajemen Pengguna Bawaan</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Hapus</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Datang dengan dukungan Docker untuk penyebaran yang disederhanakan dan konsisten.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Fitur sistem manajemen file bawaan dengan kompresi avatar otomatis.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Berani Bertrial?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Kelola pekerjaan berulang seperti pembersihan dan sinkronisasi dengan antarmuka grafis komprehensif untuk memantau riwayat eksekusi dan log.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Dukungan Banyak Basis Data</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Selanjutnya ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Tidak ada resep yang cocok dengan</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrasi OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Baca dokumen</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Pencarian Resep</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Desain Responsif</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Terintegrasi dengan mulus bersama penyedia OpenID Connect apa pun, dengan sinkronisasi peran otomatis.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cari</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Cari Resep</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Cari resep (mis. tomat, telur, tahu…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Penggantian Konfigurasi Cerdas</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Ini adalah proyek templat, di mana kita memulai perjalanan...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Coba resep acak</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Coba gunakan nama yang lebih pendek atau periksa ejaannya.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Ketikkan nama resep di atas untuk mencari di semua resep dengan peringkat relevansi cerdas.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Gunakan bilah sisi untuk menjelajahi resep berdasarkan kategori atau tingkat kesulitan.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Selamat datang</value>

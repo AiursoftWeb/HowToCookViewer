@@ -24,5 +24,8 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Inga recept ännu. Bakgrundsindexeringsjobbet kan fortfarande köra.</value>
   </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>Slumpmässig recept</value>
+  </data>
 
 </root>

@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Sil</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>GitHub&apos;da Düzenle</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Yorum yapmak için giriş yapın</value>
   </data>

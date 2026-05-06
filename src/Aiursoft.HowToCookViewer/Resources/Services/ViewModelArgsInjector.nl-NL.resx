@@ -48,8 +48,17 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Ontbijt</value>
   </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>Op opmerkingen</value>
+  </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>Op moeilijkheidsgraad</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>Op favorieten</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>Op likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Avatar wijzigen</value>
@@ -120,6 +129,15 @@
   <data name="Internal Server Error" xml:space="preserve">
     <value>Interne serverfout</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Minst gecommmenteerd</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Minst favoriete</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Minst gelikt</value>
+  </data>
   <data name="Lockout" xml:space="preserve">
     <value>Blokkade</value>
   </data>
@@ -134,6 +152,15 @@
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Vleesgerechten</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Meest besproken</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Meest Favoriete</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Meest gelikt</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mijn favorieten</value>
@@ -158,6 +185,9 @@
   </data>
   <data name="Recipe" xml:space="preserve">
     <value>Recept</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Recept zoeken</value>
   </data>
   <data name="Recipes" xml:space="preserve">
     <value>Recepten</value>

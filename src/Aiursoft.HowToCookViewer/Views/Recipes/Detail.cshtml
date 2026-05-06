@@ -7,13 +7,13 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/Recipes/Index">全部菜谱</a></li>
+                    <li class="breadcrumb-item"><a href="/Recipes/Index">@Localizer["All Recipes"]</a></li>
                     <li class="breadcrumb-item">
                         <a href="/Recipes/Index?category=@Model.Recipe.Category">
-                            @Model.Recipe.Category
+                            @Model.CategoryDisplayName
                         </a>
                     </li>
-                    <li class="breadcrumb-item active">@Model.Recipe.Name</li>
+                    <li class="breadcrumb-item active">@(Model.LocalizedRecipe?.LocalizedName ?? Model.Recipe.Name)</li>
                 </ol>
             </nav>
         </div>
@@ -30,7 +30,7 @@
                     @Html.AntiForgeryToken()
                     <button type="submit" class="btn @(Model.IsLiked ? "btn-warning" : "btn-outline-warning")">
                         <i class="align-middle me-1" data-lucide="thumbs-up"></i>
-                        @(Model.IsLiked ? "已点赞" : "点赞")
+                        @(Model.IsLiked ? Localizer["Liked"] : Localizer["Like"])
                         <span class="badge @(Model.IsLiked ? "bg-white text-dark" : "bg-warning text-dark") ms-1">@Model.LikeCount</span>
                     </button>
                 </form>
@@ -39,7 +39,7 @@
                     @Html.AntiForgeryToken()
                     <button type="submit" class="btn @(Model.IsFavorited ? "btn-danger" : "btn-outline-danger")">
                         <i class="align-middle me-1" data-lucide="heart"></i>
-                        @(Model.IsFavorited ? "已收藏" : "收藏")
+                        @(Model.IsFavorited ? Localizer["Favorited"] : Localizer["Favorite"])
                     </button>
                 </form>
             </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="card-footer text-muted small">
                     <i class="align-middle me-1" data-lucide="git-commit-horizontal"></i>
-                    最后更新：<label data-utc-time="@Model.Recipe.FileLastModified.ToHtmlDateTime()"></label>
+                    @Localizer["Last updated:"] <label data-utc-time="@Model.Recipe.FileLastModified.ToHtmlDateTime()"></label>
                 </div>
             </div>
 
@@ -115,13 +115,13 @@
                         <div class="card-body">
                             <div class="d-flex gap-3">
                                 <img src="@Storage.RelativePathToInternetUrl(comment.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=72&square=true"
-                                     alt="@(comment.User?.DisplayName ?? "匿名")"
+                                     alt="@(comment.User?.DisplayName ?? Localizer["Anonymous"].Value)"
                                      class="rounded-circle flex-shrink-0"
                                      width="40" height="40" />
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center mb-1">
                                         <div>
-                                            <strong class="me-2">@(comment.User?.DisplayName ?? comment.User?.UserName ?? "匿名")</strong>
+                                            <strong class="me-2">@(comment.User?.DisplayName ?? comment.User?.UserName ?? Localizer["Anonymous"].Value)</strong>
                                             <small class="text-muted"><label data-utc-time="@comment.CreatedAt.ToHtmlDateTime()"></label></small>
                                         </div>
                                         @if (User.Identity?.IsAuthenticated == true &&
@@ -145,13 +145,13 @@
                                             {
                                                 <div class="d-flex gap-2 mb-2 pt-2" id="comment-@reply.Id">
                                                     <img src="@Storage.RelativePathToInternetUrl(reply.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=48&square=true"
-                                                         alt="@(reply.User?.DisplayName ?? "匿名")"
+                                                         alt="@(reply.User?.DisplayName ?? Localizer["Anonymous"].Value)"
                                                          class="rounded-circle flex-shrink-0"
                                                          width="32" height="32" />
                                                     <div class="flex-grow-1">
                                                         <div class="d-flex justify-content-between align-items-center mb-1">
                                                             <div>
-                                                                <strong class="me-2">@(reply.User?.DisplayName ?? reply.User?.UserName ?? "匿名")</strong>
+                                                                <strong class="me-2">@(reply.User?.DisplayName ?? reply.User?.UserName ?? Localizer["Anonymous"].Value)</strong>
                                                                 <small class="text-muted"><label data-utc-time="@reply.CreatedAt.ToHtmlDateTime()"></label></small>
                                                             </div>
                                                             @if (User.Identity?.IsAuthenticated == true &&
@@ -177,7 +177,7 @@
                                     {
                                         <div class="mt-2">
                                             <a class="btn btn-link btn-sm p-0 text-secondary toggle-reply"
-                                               data-target="reply-form-@comment.Id">回复</a>
+                                               data-target="reply-form-@comment.Id">@Localizer["Reply"]</a>
                                             <div id="reply-form-@comment.Id" class="d-none mt-2">
                                                 <form asp-controller="Comments" asp-action="Post" method="post">
                                                     <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
@@ -185,7 +185,7 @@
                                                     @Html.AntiForgeryToken()
                                                     <div class="mb-1">
                                                         <textarea name="content" class="form-control form-control-sm" rows="2"
-                                                                  placeholder="回复 @(comment.User?.DisplayName ?? comment.User?.UserName ?? "")…"
+                                                                  placeholder="@string.Format(Localizer["Reply to {0}..."].Value, comment.User?.DisplayName ?? comment.User?.UserName ?? "")"
                                                                   maxlength="1000" required></textarea>
                                                     </div>
                                                     <button type="submit" class="btn btn-secondary btn-sm">@Localizer["Send Reply"]</button>

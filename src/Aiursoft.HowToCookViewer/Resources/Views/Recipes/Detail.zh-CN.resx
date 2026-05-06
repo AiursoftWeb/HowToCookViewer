@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>删除</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>在 GitHub 上编辑</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>登录以发表评论</value>
   </data>
@@ -44,6 +47,30 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>写下您的评论…</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
+  <data name="Favorite" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="Favorited" xml:space="preserve">
+    <value>已收藏</value>
+  </data>
+  <data name="Last updated:" xml:space="preserve">
+    <value>最后更新：</value>
+  </data>
+  <data name="Like" xml:space="preserve">
+    <value>点赞</value>
+  </data>
+  <data name="Liked" xml:space="preserve">
+    <value>已点赞</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>回复</value>
+  </data>
+  <data name="Reply to {0}..." xml:space="preserve">
+    <value>回复 {0}…</value>
   </data>
 
 </root>

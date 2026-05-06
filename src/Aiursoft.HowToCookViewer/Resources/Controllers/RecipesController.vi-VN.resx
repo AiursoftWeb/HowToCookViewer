@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Tất cả công thức</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Ít bình luận nhất</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Ít được yêu thích nhất</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Ít được thích nhất</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Được bình luận nhiều nhất</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Được Yêu Thích Nhất</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Được yêu thích nhất</value>
+  </data>
 
 </root>

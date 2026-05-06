@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Διαγραφή</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Επεξεργασία στο GitHub</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Εγγραφή για να σχολιάσετε</value>
   </data>

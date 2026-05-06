@@ -21,5 +21,17 @@
       <data name="Difficulty" xml:space="preserve">
     <value>难度</value>
   </data>
+  <data name="Favorited at" xml:space="preserve">
+    <value>收藏于</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>我的收藏夹</value>
+  </data>
+  <data name="No favorites yet. Go to the recipes page and click ♥ to add some!" xml:space="preserve">
+    <value>还没有收藏任何菜谱，去菜谱页面点击 ♥ 收藏吧！</value>
+  </data>
+  <data name="Total {0} recipe(s) favorited" xml:space="preserve">
+    <value>共 {0} 道收藏菜谱</value>
+  </data>
 
 </root>

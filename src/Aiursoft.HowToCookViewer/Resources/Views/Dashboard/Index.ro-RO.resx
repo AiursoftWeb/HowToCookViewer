@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Înapoi</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Suport „fire-and-forget” pentru sarcini de lungă durată (cum ar fi emailurile sau AI), cu o interfață grafică pentru gestionarea cozii, procesare paralelă și anulare.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Toate dependențele sunt înregistrate automat și sunt întotdeauna disponibile prin injectare în constructor.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>și descoperă ceva nou de gătit astăzi.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Mod Întunecat Automat</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesare sarcini în fundal</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Răsfoiește după categorie</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestionare Utilizatori Integrată</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Șterge</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Include suport pentru Docker pentru implementări simplificate și consistente.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Dispune de un sistem integrat de gestionare a fișierelor cu compresie automată a avatarurilor.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Te simți norocos?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Gestionează sarcinile periodice, cum ar fi curățarea și sincronizarea, cu o interfață grafică completă pentru monitorizarea istoricului de execuție și a jurnalelor.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Suport pentru Multiple Baze de Date</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Următorul ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Nu s-au găret rețete care să corespundă</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrare OpenID Connect</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Citește documentația</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Căutare rețete</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Design Responsiv</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrați-vă fără probleme cu orice furnizor OpenID Connect, cu sincronizare automată a rolurilor.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Caută</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Caută rețete</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Caută rețete (de ex. roșii, ouă, tofu…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Supravățuiri inteligente de configurare</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Acesta este un proiect tip, de unde începem călătoria...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Încearcă o rețetă aleatorie</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Încercați un nume mai scurt sau verificați ortografia.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Introduceți un nume de rețetă mai sus pentru a căuta în toate rețetele cu o clasificare inteligentă a relevanței.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Folosește bara laterală pentru a răsfoi rețetele după categorie sau nivel de dificultate.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bun venit</value>

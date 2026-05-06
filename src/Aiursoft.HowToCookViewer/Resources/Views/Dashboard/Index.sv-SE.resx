@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Föregående</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Stöd för &quot;fire-and-forget&quot; för långvariga uppgifter (t.ex. e-post eller AI), med en GUI för köhantering, parallell bearbetning och avbrott.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alla beroenden registreras automatiskt och är alltid tillgängliga via konstruktorinjektion.</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>och upptäck något nytt att laga idag.</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Automatiskt mörkt läge</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Bakgrundsjobbshantering</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>Bläddra efter kategori</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Inbyggd användarhantering</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Rensa</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Kommer med Docker-stöd för enklare och konsekventa distributioner.</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Har ett inbyggt filhanteringssystem med automatisk komprimering av avatarer.</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Känns det turigt?</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Hantera återkommande jobb som rengöring och synkronisering med en omfattande GUI för att övervaka utförandehistorik och loggar.</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Stöd för flera databaser</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Nästa ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Inga recept hittade som matchar</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Läs dokumentet</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Receptsökning</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsiv design</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrera sömlöst med valfri OpenID Connect-leverantör, med automatisk rollsynkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Sök recept</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>Sök recept (t.ex. tomater, ägg, tofu…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smart Configuration Overrides</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Det här är ett mallprojekt, där vi börjar resan...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Prova ett slumpmärtigt recept</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Prova ett kortare namn eller kontrollera stavningen.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Skriv ett receptnamn ovan för att söka igenom alla recept med intelligent relevansrankning.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Använd sidofältet för att bläddra bland recept efter kategori eller svårighetsgrad.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Välkommen</value>

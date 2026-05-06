@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Hapus</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Edit di GitHub</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Login untuk berkomentar</value>
   </data>

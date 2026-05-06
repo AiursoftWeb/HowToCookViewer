@@ -11,4 +11,10 @@ public class IndexViewModel : UiStackLayoutViewModel
     }
 
     public List<RecipeFavorite> Favorites { get; set; } = [];
+
+    /// <summary>Maps RecipeId → localized name for the current request culture.</summary>
+    public Dictionary<int, string> LocalizedNames { get; set; } = [];
+
+    /// <summary>Maps RecipeId → localized description for the current request culture.</summary>
+    public Dictionary<int, string> LocalizedDescriptions { get; set; } = [];
 }

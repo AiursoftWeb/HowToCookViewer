@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>सभी रेसिपी</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>कम टिप्पणी</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>कमतर पसंद किया गया</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>कम पसंद</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>सबसे अधिक टिप्पणी</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>सबसे ज्यादा पसंद किए गए</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>सबसे अधिक पसंद किए गए</value>
+  </data>
 
 </root>

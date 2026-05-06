@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Όλες οι Συνταγές</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Ελάχιστα σχόλια</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Λιγότερο Αγαπημένο</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Ελάχιστες Ψηφοφορίες</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Τα περισσότερα σχόλια</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Τα πιο αγαπημένα</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Πιο αγαπημένα</value>
+  </data>
 
 </root>

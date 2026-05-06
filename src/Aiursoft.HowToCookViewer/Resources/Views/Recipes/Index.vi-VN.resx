@@ -24,5 +24,8 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Chưa có công thức nấu ăn nào. Công việc lập chỉ mục nền có thể vẫn đang chạy.</value>
   </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>Công thức ngẫu nhiên</value>
+  </data>
 
 </root>

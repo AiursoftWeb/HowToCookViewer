@@ -48,8 +48,17 @@
   <data name="Breakfast" xml:space="preserve">
     <value>الفطور</value>
   </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>حسب التعليقات</value>
+  </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>حسب الصعوبة</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>حسب المفضلة</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>حسب الإعجابات</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>تغيير الصورة الشخصية</value>
@@ -120,6 +129,15 @@
   <data name="Internal Server Error" xml:space="preserve">
     <value>خطأ الخادم الداخلي</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>الأقل تعليقًا</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>الأقل إعجابًا</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>الأقل إعجابًا</value>
+  </data>
   <data name="Lockout" xml:space="preserve">
     <value>حظر الحساب</value>
   </data>
@@ -134,6 +152,15 @@
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>أطباق اللحوم</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>الأكثر تعليقاً</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>الأكثر مفضلة</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>الأكثر إعجاباً</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>مفضلاتي</value>
@@ -158,6 +185,9 @@
   </data>
   <data name="Recipe" xml:space="preserve">
     <value>وصفة</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>بحث الوصفات</value>
   </data>
   <data name="Recipes" xml:space="preserve">
     <value>الوصفات</value>

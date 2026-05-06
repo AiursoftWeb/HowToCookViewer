@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ 上一页</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>“火速发送”支持长时间运行的任务（如邮件或AI），配备用于队列管理、并行处理和取消的图形化界面。</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>所有依赖项都会自动注册，并始终可通过构造函数注入方式使用。</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>并发现一些今天可以烹饪的新菜肴。</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自动深色模式</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>按类别浏览</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>内置用户管理</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>清除</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>自带 Docker 支持，实现简化且一致的部署。</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持头像自动压缩。</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>心情不错？</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>轻松处理如清理和同步等重复性任务，并通过功能全面的图形界面监控执行历史和日志。</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>多数据库支持</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>下一页 ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>未找到匹配的食谱</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>阅读文档</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>菜谱搜索</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>响应式设计</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并自动同步角色信息。</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>搜索食谱</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>搜索食谱（例如：西红柿、鸡蛋、豆腐…）</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智能配置覆盖</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>试试随机菜谱</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>尝试使用更短的名称或检查拼写。</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>在上方输入食谱名称，即可通过智能相关性排名搜索所有食谱。</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>使用侧边栏按类别或难度浏览食谱。</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>欢迎</value>

@@ -30,6 +30,56 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.ToTable("GlobalSettings");
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Culture")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("LastLocalizedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedCalculation")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedDescription")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedIngredients")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedNotes")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedSteps")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecipeId", "Culture")
+                        .IsUnique();
+
+                    b.ToTable("LocalizedRecipes");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>
                 {
                     b.Property<int>("Id")
@@ -387,6 +437,17 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>

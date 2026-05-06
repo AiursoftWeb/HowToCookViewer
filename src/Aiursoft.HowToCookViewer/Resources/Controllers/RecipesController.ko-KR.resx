@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>모든 요리</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>댓글 가장 적은 순</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>가장 찜 적음</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>좋아하는 사람이 가장 적은</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>댓글 많은 순</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>가장 좋아하는 레시피</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>인기순</value>
+  </data>
 
 </root>

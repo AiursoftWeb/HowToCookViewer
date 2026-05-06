@@ -24,5 +24,8 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Nog geen recepten. De achtergrondindexeringstaak is mogelijk nog actief.</value>
   </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>Willekeurig recept</value>
+  </data>
 
 </root>

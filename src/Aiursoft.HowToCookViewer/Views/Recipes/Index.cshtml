@@ -35,50 +35,84 @@
     }
     else
     {
-        <div class="row g-3">
-            @foreach (var recipe in Model.Recipes)
+        <div class="row g-3" id="recipe-grid">
+            @await Html.PartialAsync("_RecipeCards", new Aiursoft.HowToCookViewer.Models.RecipesViewModels.RecipeCardsViewModel
             {
-                var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
-                var coverUrl = cover != null
-                    ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
-                    : "/img/no-image.svg";
-                var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
-
-                <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                    <a href="/Recipes/Detail/@recipe.Id" class="text-decoration-none">
-                        <div class="card h-100 shadow-sm recipe-card">
-                            <img src="@coverUrl"
-                                 class="card-img-top"
-                                 style="height:180px;object-fit:cover;"
-                                 alt="@recipe.Name"
-                                 onerror="this.src='/img/no-image.svg'">
-                            <div class="card-body pb-2">
-                                <h6 class="card-title mb-1 fw-bold text-truncate">@recipe.Name</h6>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
-                                    @{
-                                        var likes = Model.LikeCounts.TryGetValue(recipe.Id, out var lc) ? lc : 0;
-                                    }
-                                    @if (likes > 0)
-                                    {
-                                        <small class="text-muted">
-                                            <i class="align-middle" data-lucide="thumbs-up" style="width:13px;height:13px;"></i>
-                                            @likes
-                                        </small>
-                                    }
-                                </div>
-                                @if (!string.IsNullOrWhiteSpace(recipe.Description))
-                                {
-                                    <p class="card-text text-muted small mt-1 mb-0"
-                                       style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-                                        @recipe.Description
-                                    </p>
-                                }
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            }
+                Recipes = Model.Recipes,
+                LikeCounts = Model.LikeCounts,
+                LocalizedNames = Model.LocalizedNames,
+                LocalizedDescriptions = Model.LocalizedDescriptions
+            })
         </div>
+
+        @if (Model.HasMore)
+        {
+            <div id="load-sentinel"
+                 class="text-center py-4"
+                 style="min-height:60px;"
+                 data-category="@(Model.Category ?? "")"
+                 data-difficulty="@(Model.Difficulty?.ToString() ?? "")"
+                 data-sort-by="@(Model.SortBy ?? "")">
+                <div class="spinner-border text-secondary" role="status" style="display:none;" id="load-spinner">
+                    <span class="visually-hidden">@Localizer["Loading…"]</span>
+                </div>
+            </div>
+
+            <script>
+            (function () {
+                let nextPage = 2;
+                let loading = false;
+                let hasMore = true;
+
+                const grid     = document.getElementById('recipe-grid');
+                const sentinel = document.getElementById('load-sentinel');
+                const spinner  = document.getElementById('load-spinner');
+
+                const category   = sentinel.dataset.category   || null;
+                const difficulty = sentinel.dataset.difficulty || null;
+                const sortBy     = sentinel.dataset.sortBy     || null;
+
+                function buildUrl(page) {
+                    const params = new URLSearchParams({ page });
+                    if (category)   params.set('category',   category);
+                    if (difficulty) params.set('difficulty', difficulty);
+                    if (sortBy)     params.set('sortBy',     sortBy);
+                    return '/Recipes/LoadMore?' + params.toString();
+                }
+
+                async function loadMore() {
+                    if (loading || !hasMore) return;
+                    loading = true;
+                    spinner.style.display = '';
+
+                    try {
+                        const resp = await fetch(buildUrl(nextPage));
+                        if (!resp.ok) { hasMore = false; return; }
+
+                        const html = await resp.text();
+                        hasMore = resp.headers.get('X-Has-More') === 'true';
+                        nextPage++;
+
+                        const tmp = document.createElement('div');
+                        tmp.innerHTML = html;
+                        while (tmp.firstChild) grid.appendChild(tmp.firstChild);
+
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    } finally {
+                        loading = false;
+                        spinner.style.display = 'none';
+                        if (!hasMore) sentinel.style.display = 'none';
+                    }
+                }
+
+                const observer = new IntersectionObserver(
+                    entries => { if (entries[0].isIntersecting) loadMore(); },
+                    { rootMargin: '200px' }
+                );
+                observer.observe(sentinel);
+            })();
+            </script>
+        }
     }
 </div>
+

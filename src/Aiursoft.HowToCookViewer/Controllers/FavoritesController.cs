@@ -16,7 +16,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 [LimitPerMin]
 public class FavoritesController(
     TemplateDbContext db,
-    UserManager<User> userManager) : Controller
+    UserManager<User> userManager,
+    RecipeLocalizationService recipeLocalization) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Settings",
@@ -38,7 +39,15 @@ public class FavoritesController(
             .OrderByDescending(f => f.CreatedAt)
             .ToListAsync();
 
-        return this.StackView(new IndexViewModel { Favorites = favorites });
+        var recipes = favorites.Select(f => f.Recipe).ToList();
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+
+        return this.StackView(new IndexViewModel
+        {
+            Favorites = favorites,
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs
+        });
     }
 
     [HttpPost]

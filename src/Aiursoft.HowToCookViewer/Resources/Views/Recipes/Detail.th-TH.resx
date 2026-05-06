@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>ลบ</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>แก้ไขบน GitHub</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>เข้าสู่ระบบเพื่อแสดงความคิดเห็น</value>
   </data>

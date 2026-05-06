@@ -10,9 +10,11 @@ public class SettingsMap
     public const string ProjectLogo = "ProjectLogo";
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
     public const string Icp = "Icp";
-    public const string DummyNumber = "DummyNumber";
-    public const string DummyChoice = "DummyChoice";
     public const string HowToCookRepoUrl = "HowToCookRepoUrl";
+    public const string OllamaInstance = "OllamaInstance";
+    public const string OllamaModel = "OllamaModel";
+    public const string OllamaToken = "OllamaToken";
+    public const string LocalizationLanguages = "LocalizationLanguages";
 
     public class FakeLocalizer
     {
@@ -29,7 +31,7 @@ public class SettingsMap
             Name = Localizer["Project Name"],
             Description = Localizer["The name of the project displayed in the frontend."],
             Type = SettingType.Text,
-            DefaultValue = "Aiursoft Template"
+            DefaultValue = "HowToCook"
         },
         new GlobalSettingDefinition
         {
@@ -76,32 +78,43 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = DummyNumber,
-            Name = Localizer["Dummy Number"],
-            Description = Localizer["A dummy number for testing."],
-            Type = SettingType.Number,
-            DefaultValue = "0"
-        },
-        new GlobalSettingDefinition
-        {
-            Key = DummyChoice,
-            Name = Localizer["Dummy Choice"],
-            Description = Localizer["A dummy choice for testing."],
-            Type = SettingType.Choice,
-            DefaultValue = "A",
-            ChoiceOptions = new Dictionary<string, string>
-            {
-                { "A", "Option A" },
-                { "B", "Option B" }
-            }
-        },
-        new GlobalSettingDefinition
-        {
             Key = HowToCookRepoUrl,
             Name = Localizer["HowToCook Repo URL"],
             Description = Localizer["The Git repository URL to sync HowToCook recipes from."],
             Type = SettingType.Text,
             DefaultValue = "https://github.com/Anduin2017/HowToCook.git"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = OllamaInstance,
+            Name = Localizer["Ollama API Endpoint"],
+            Description = Localizer["The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions"],
+            Type = SettingType.Text,
+            DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = OllamaModel,
+            Name = Localizer["Ollama Model"],
+            Description = Localizer["The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0"],
+            Type = SettingType.Text,
+            DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = OllamaToken,
+            Name = Localizer["Ollama API Token"],
+            Description = Localizer["The bearer token for authenticating with the Ollama/OpenAI endpoint."],
+            Type = SettingType.Text,
+            DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = LocalizationLanguages,
+            Name = Localizer["Localization Languages"],
+            Description = Localizer["Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR"],
+            Type = SettingType.Text,
+            DefaultValue = "en-US,en-GB,zh-TW,zh-HK,ja-JP,ko-KR,vi-VN,th-TH,de-DE,fr-FR,es-ES,ru-RU,it-IT,pt-PT,pt-BR,ar-SA,nl-NL,sv-SE,pl-PL,tr-TR,ro-RO,da-DK,uk-UA,id-ID,fi-FI,hi-IN,el-GR"
         }
     };
 }

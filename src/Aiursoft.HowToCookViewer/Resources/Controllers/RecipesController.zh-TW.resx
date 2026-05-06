@@ -21,5 +21,23 @@
       <data name="All Recipes" xml:space="preserve">
     <value>所有食譜</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>最少留言</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>最少收藏</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>最少喜歡</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>評論最多</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>最受歡迎</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>最多人喜歡</value>
+  </data>
 
 </root>

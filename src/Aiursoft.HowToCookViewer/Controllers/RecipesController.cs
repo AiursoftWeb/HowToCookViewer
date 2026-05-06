@@ -19,9 +19,10 @@ public class RecipesController(
     UserManager<User> userManager,
     StorageService storageService,
     GlobalSettingsService globalSettingsService,
+    RecipeLocalizationService recipeLocalization,
     IStringLocalizer<RecipesController> localizer) : Controller
 {
-    private static readonly Dictionary<string, string> CategoryLocalizerKeys =
+    internal static readonly Dictionary<string, string> CategoryLocalizerKeys =
         new(StringComparer.OrdinalIgnoreCase)
         {
             ["vegetable_dish"] = "Vegetable Dishes",
@@ -39,9 +40,61 @@ public class RecipesController(
 
     public async Task<IActionResult> Index(string? category, int? difficulty, string? sortBy)
     {
-        var query = db.Recipes
+        var baseQuery = BuildQuery(category, difficulty, sortBy);
+        var totalCount = await baseQuery.CountAsync();
+        var recipes = await baseQuery
             .Include(r => r.Images)
-            .AsQueryable();
+            .Take(IndexViewModel.PageSize)
+            .ToListAsync();
+
+        var displayName = GetDisplayName(category, difficulty, sortBy);
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+
+        return this.StackView(new IndexViewModel
+        {
+            PageTitle = displayName,
+            Category = category,
+            Difficulty = difficulty,
+            SortBy = sortBy,
+            CategoryDisplayName = displayName,
+            Recipes = recipes,
+            TotalCount = totalCount,
+            HasMore = totalCount > IndexViewModel.PageSize,
+            LikeCounts = await LoadLikeCountsAsync(recipes),
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs
+        });
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> LoadMore(string? category, int? difficulty, string? sortBy, int page = 2)
+    {
+        page = Math.Max(2, page);
+        var baseQuery = BuildQuery(category, difficulty, sortBy);
+        var totalCount = await baseQuery.CountAsync();
+        var recipes = await baseQuery
+            .Include(r => r.Images)
+            .Skip((page - 1) * IndexViewModel.PageSize)
+            .Take(IndexViewModel.PageSize)
+            .ToListAsync();
+
+        var hasMore = page * IndexViewModel.PageSize < totalCount;
+        Response.Headers["X-Has-More"] = hasMore ? "true" : "false";
+        Response.Headers["X-Next-Page"] = (page + 1).ToString();
+
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+        return PartialView("_RecipeCards", new RecipeCardsViewModel
+        {
+            Recipes = recipes,
+            LikeCounts = await LoadLikeCountsAsync(recipes),
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs
+        });
+    }
+
+    private IQueryable<Recipe> BuildQuery(string? category, int? difficulty, string? sortBy)
+    {
+        var query = db.Recipes.AsQueryable();
 
         if (!string.IsNullOrEmpty(category))
             query = query.Where(r => r.Category == category);
@@ -49,7 +102,7 @@ public class RecipesController(
         if (difficulty.HasValue)
             query = query.Where(r => r.Difficulty == difficulty.Value);
 
-        IQueryable<Recipe> ordered = sortBy switch
+        return sortBy switch
         {
             "likes_desc"     => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
             "likes_asc"      => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
@@ -59,17 +112,10 @@ public class RecipesController(
             "favorites_asc"  => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)).ThenBy(r => r.Name),
             _                => query.OrderBy(r => r.Name)
         };
+    }
 
-        var recipes = await ordered.ToListAsync();
-
-        var recipeIds = recipes.Select(r => r.Id).ToList();
-        var likeCounts = await db.RecipeLikes
-            .Where(l => recipeIds.Contains(l.RecipeId))
-            .GroupBy(l => l.RecipeId)
-            .Select(g => new { RecipeId = g.Key, Count = g.Count() })
-            .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
-
-        var displayName = sortBy switch
+    private string GetDisplayName(string? category, int? difficulty, string? sortBy) =>
+        sortBy switch
         {
             "likes_desc"     => localizer["Most Liked"].Value,
             "likes_asc"      => localizer["Least Liked"].Value,
@@ -84,17 +130,15 @@ public class RecipesController(
                     : localizer[CategoryLocalizerKeys.TryGetValue(category, out var key) ? key : category].Value
         };
 
-        return this.StackView(new IndexViewModel
-        {
-            PageTitle = displayName,
-            Category = category,
-            Difficulty = difficulty,
-            SortBy = sortBy,
-            CategoryDisplayName = displayName,
-            Recipes = recipes,
-            TotalCount = recipes.Count,
-            LikeCounts = likeCounts
-        });
+    private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes)
+    {
+        if (recipes.Count == 0) return [];
+        var ids = recipes.Select(r => r.Id).ToList();
+        return await db.RecipeLikes
+            .Where(l => ids.Contains(l.RecipeId))
+            .GroupBy(l => l.RecipeId)
+            .Select(g => new { RecipeId = g.Key, Count = g.Count() })
+            .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
     }
 
     public async Task<IActionResult> Random(string? category, int? difficulty, string? sortBy)
@@ -124,6 +168,12 @@ public class RecipesController(
         if (recipe == null)
             return NotFound();
 
+        // Detect current request culture and look for a localized version
+        var currentCulture = HttpContext.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>()
+            ?.RequestCulture.Culture.Name ?? string.Empty;
+        var localized = await db.LocalizedRecipes
+            .FirstOrDefaultAsync(lr => lr.RecipeId == id && lr.Culture == currentCulture);
+
         var userId = userManager.GetUserId(User);
         var isFavorited = userId != null &&
             await db.RecipeFavorites.AnyAsync(f => f.UserId == userId && f.RecipeId == id);
@@ -138,7 +188,7 @@ public class RecipesController(
             .OrderBy(c => c.CreatedAt)
             .ToListAsync();
 
-        var markdown = BuildFullMarkdown(recipe);
+        var markdown = BuildFullMarkdown(recipe, localized);
         var html = Markdown.ToHtml(markdown, new MarkdownPipelineBuilder()
             .UseAdvancedExtensions()
             .Build());
@@ -152,24 +202,40 @@ public class RecipesController(
 
         return this.StackView(new DetailViewModel
         {
-            PageTitle = recipe.Name,
+            PageTitle = localized?.LocalizedName ?? recipe.Name,
             Recipe = recipe,
             RenderedMarkdown = html,
             IsFavorited = isFavorited,
             IsLiked = isLiked,
             LikeCount = likeCount,
             Comments = comments,
-            GitHubEditUrl = gitHubEditUrl
+            GitHubEditUrl = gitHubEditUrl,
+            CategoryDisplayName = GetDisplayName(recipe.Category, null, null),
+            LocalizedRecipe = localized
         });
     }
 
     /// <summary>
     /// Re-inserts cover image HTML at the top and concatenates all markdown sections.
+    /// If a <paramref name="localized"/> version is provided, its translated text is used instead of the original.
     /// Images in the stored markdown were already stripped; we add them back via StorageService URLs.
     /// </summary>
-    private string BuildFullMarkdown(Recipe recipe)
+    private string BuildFullMarkdown(Recipe recipe, LocalizedRecipe? localized = null)
     {
-        var parts = new List<string> { $"# {recipe.Name}" };
+        var name        = (localized?.LocalizedName        is { Length: > 0 } n ? n : null) ?? recipe.Name;
+        var description = (localized?.LocalizedDescription is { Length: > 0 } d ? d : null) ?? recipe.Description;
+        var ingredients = (localized?.LocalizedIngredients is { Length: > 0 } i ? i : null) ?? recipe.Ingredients;
+        var calculation = (localized?.LocalizedCalculation is { Length: > 0 } c ? c : null) ?? recipe.Calculation;
+        var steps       = (localized?.LocalizedSteps       is { Length: > 0 } s ? s : null) ?? recipe.Steps;
+        var notes       = (localized?.LocalizedNotes       is { Length: > 0 } no ? no : null) ?? recipe.Notes;
+
+        // Localized section headings: use translated terms when locale is not Chinese
+        var isLocalized = localized != null;
+        var (hIngredients, hCalculation, hSteps, hNotes) = isLocalized
+            ? ("## Ingredients and Tools", "## Calculation", "## Steps", "## Additional Notes")
+            : ("## 必备原料和工具", "## 计算", "## 操作", "## 附加内容");
+
+        var parts = new List<string> { $"# {name}" };
 
         // Cover image block (displayed at top for detail page)
         var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
@@ -179,20 +245,20 @@ public class RecipesController(
             parts.Add($"![]({url})");
         }
 
-        if (!string.IsNullOrWhiteSpace(recipe.Description))
-            parts.Add(recipe.Description);
+        if (!string.IsNullOrWhiteSpace(description))
+            parts.Add(description);
 
-        if (!string.IsNullOrWhiteSpace(recipe.Ingredients))
-            parts.Add("## 必备原料和工具\n" + recipe.Ingredients);
+        if (!string.IsNullOrWhiteSpace(ingredients))
+            parts.Add($"{hIngredients}\n{ingredients}");
 
-        if (!string.IsNullOrWhiteSpace(recipe.Calculation))
-            parts.Add("## 计算\n" + recipe.Calculation);
+        if (!string.IsNullOrWhiteSpace(calculation))
+            parts.Add($"{hCalculation}\n{calculation}");
 
-        if (!string.IsNullOrWhiteSpace(recipe.Steps))
-            parts.Add("## 操作\n" + recipe.Steps);
+        if (!string.IsNullOrWhiteSpace(steps))
+            parts.Add($"{hSteps}\n{steps}");
 
-        if (!string.IsNullOrWhiteSpace(recipe.Notes))
-            parts.Add("## 附加内容\n" + recipe.Notes);
+        if (!string.IsNullOrWhiteSpace(notes))
+            parts.Add($"{hNotes}\n{notes}");
 
         // Inline all extra images as an image gallery
         var extras = recipe.Images.Where(i => !i.IsCover).ToList();

@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="‹ Prev" xml:space="preserve">
+    <value>‹ 前</value>
+  </data>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>長期実行タスク（メールやAIなど）に対する「ファイア・アンド・フォーゲット」サポート。キュー管理、並列処理、キャンセルに対応するGUIを備えています。</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -42,6 +45,9 @@
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>すべての依存関係は自動的に登録され、コンストラクタインジェクションを通じて常に利用可能です。</value>
   </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>そして、今日新しい料理を発見しましょう。</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自動ダークモード</value>
   </data>
@@ -60,8 +66,14 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>バックグラウンドジョブ処理</value>
   </data>
+  <data name="Browse by Category" xml:space="preserve">
+    <value>カテゴリ別に表示</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>組み込みユーザー管理</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>クリア</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Docker対応を備えており、シンプルで一貫性のあるデプロイを実現します。</value>
@@ -102,6 +114,9 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>アバターの自動圧縮機能を備えた組み込みファイル管理システムを搭載しています。</value>
   </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>おまかせで！</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>定期実行されるジョブ（クリーンアップや同期など）を、実行履歴およびログの監視が可能な包括的なGUIで管理します。</value>
   </data>
@@ -123,6 +138,12 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>複数データベースサポート</value>
   </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>次へ ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>一致するレシピが見つかりません</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect連携</value>
   </data>
@@ -131,6 +152,9 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>ドキュメントを読む</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>レシピ検索</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>レスポンシブデザイン</value>
@@ -143,6 +167,15 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>あらゆるOpenID Connectプロバイダーとシームレスに統合し、ロールの自動同期を実現します。</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>レシピを検索</value>
+  </data>
+  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+    <value>レシピを検索（例：トマト、卵、豆腐…）</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>スマート設定オーバーライド</value>
@@ -164,6 +197,18 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>これはテンプレートプロジェクトです。ここから航海が始まります...</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>ランダムなレシピを試す</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>名前を短くするか、スペルを確認してください。</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>レシピ名を入力して、関連性の高い順にすべてのレシピを検索してください。</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>サイドバーを使用して、カテゴリや難易度別にレシピを閲覧してください。</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ようこそ</value>

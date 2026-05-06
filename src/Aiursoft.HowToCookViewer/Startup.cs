@@ -56,6 +56,8 @@ public class Startup : IWebStartup
         services.AddHttpClient();
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
+        services.AddHttpContextAccessor();
+        services.AddScoped<RecipeLocalizationService>();
 
         // Background job infrastructure
         services.AddTaskQueueEngine();
@@ -66,6 +68,7 @@ public class Startup : IWebStartup
         var orphanAvatarCleanupJob = services.RegisterBackgroundJob<OrphanAvatarCleanupJob>();
         var syncHowToCookRepoJob = services.RegisterBackgroundJob<SyncHowToCookRepoJob>();
         var indexRecipesJob = services.RegisterBackgroundJob<IndexRecipesJob>();
+        var localizeRecipesJob = services.RegisterBackgroundJob<LocalizeRecipesJob>();
         services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
@@ -83,6 +86,12 @@ public class Startup : IWebStartup
             registration: indexRecipesJob,
             period:     TimeSpan.FromHours(4),
             startDelay: TimeSpan.FromMinutes(20));
+
+        // Localize recipes after indexing (start after 30 min, then every 30 min)
+        services.RegisterScheduledTask(
+            registration: localizeRecipesJob,
+            period:     TimeSpan.FromMinutes(30),
+            startDelay: TimeSpan.FromMinutes(30));
 
         // Controllers and localization
         services.AddControllersWithViews()

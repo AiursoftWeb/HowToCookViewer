@@ -30,6 +30,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Xóa</value>
   </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Chỉnh sửa trên GitHub</value>
+  </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Đăng nhập để bình luận</value>
   </data>

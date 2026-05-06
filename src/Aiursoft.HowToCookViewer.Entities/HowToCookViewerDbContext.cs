@@ -15,6 +15,7 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
     public DbSet<RecipeFavorite> RecipeFavorites => Set<RecipeFavorite>();
     public DbSet<RecipeLike> RecipeLikes => Set<RecipeLike>();
     public DbSet<RecipeComment> RecipeComments => Set<RecipeComment>();
+    public DbSet<LocalizedRecipe> LocalizedRecipes => Set<LocalizedRecipe>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -30,6 +31,10 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
             .WithMany(c => c.Replies)
             .HasForeignKey(c => c.ParentCommentId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<LocalizedRecipe>()
+            .HasIndex(lr => new { lr.RecipeId, lr.Culture })
+            .IsUnique();
     }
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
