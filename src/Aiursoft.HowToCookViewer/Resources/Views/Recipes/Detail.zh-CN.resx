@@ -78,6 +78,9 @@
   <data name="Contributors" xml:space="preserve">
     <value>贡献者</value>
   </data>
+  <data name="Change History" xml:space="preserve">
+    <value>变更历史</value>
+  </data>
   <data name="commits" xml:space="preserve">
     <value>次提交</value>
   </data>

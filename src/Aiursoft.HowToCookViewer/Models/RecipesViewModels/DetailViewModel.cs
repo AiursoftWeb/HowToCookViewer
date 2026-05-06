@@ -24,6 +24,9 @@ public class DetailViewModel : UiStackLayoutViewModel
     /// <summary>Direct link to edit this file on GitHub.</summary>
     public string? GitHubEditUrl { get; set; }
 
+    /// <summary>Direct link to view the file's commit history on GitHub.</summary>
+    public string? GitHubHistoryUrl { get; set; }
+
     /// <summary>Localized category display name for the breadcrumb.</summary>
     public string CategoryDisplayName { get; set; } = string.Empty;
 

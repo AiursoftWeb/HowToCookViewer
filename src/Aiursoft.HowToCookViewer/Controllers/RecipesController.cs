@@ -213,6 +213,7 @@ public class RecipesController(
             ? repoUrl[..^4]
             : repoUrl;
         var gitHubEditUrl = $"{repoWebUrl}/edit/master/{recipe.FilePath.Replace('\\', '/')}";
+        var gitHubHistoryUrl = $"{repoWebUrl}/commits/master/{recipe.FilePath.Replace('\\', '/')}";
         var contributors = await recipeContributorService.GetContributorsAsync(recipe.FilePath);
 
         return this.StackView(new DetailViewModel
@@ -225,6 +226,7 @@ public class RecipesController(
             LikeCount = likeCount,
             Comments = comments,
             GitHubEditUrl = gitHubEditUrl,
+            GitHubHistoryUrl = gitHubHistoryUrl,
             CategoryDisplayName = GetDisplayName(recipe.Category, null, null),
             LocalizedRecipe = localized,
             Contributors = contributors
