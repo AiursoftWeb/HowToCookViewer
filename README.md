@@ -1,39 +1,17 @@
-# HowToCookViewer - A sample project
+# HowToCook Viewer - Visualization and website of HowToCook
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/howToCookViewer/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines)
 [![Man hours](https://manhours.aiursoft.com/r/github.com/aiursoftweb/howToCookViewer.svg)](https://manhours.aiursoft.com/r/github.com/aiursoftweb/howToCookViewer.html)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2FhowToCookViewer.aiursoft.com)](https://howToCookViewer.aiursoft.com)
-[![Docker](https://img.shields.io/docker/pulls/aiursoft/howToCookViewer.svg)](https://hub.docker.com/r/aiursoft/howToCookViewer)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fhowtocook.aiursoft.com)](https://howtocook.aiursoft.com)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/howtocookviewer.svg)](https://hub.docker.com/r/aiursoft/howtocookviewer)
 
 HowToCookViewer is a sample project.
 
 ![screenshot](./screenshot.png)
 
 Default user name is `admin@default.com` and default password is `Admin@123456!`.
-
-## Projects using Aiursoft HowToCookViewer
-
-* [Stathub](https://github.com/aiursoftweb/stathub)
-* [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
-* [MusicTools](https://github.com/aiursoftweb/musictools)
-* [AnduinOS Home](https://github.com/aiursoftweb/AnduinOS-Home)
-* [Manhours](https://github.com/aiursoftweb/manhours)
-* [Tracer](https://github.com/aiursoftweb/tracer)
-* [Warp](https://github.com/aiursoftweb/warp)
-* [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
-* [EmployeeCenter](https://github.com/aiursoftweb/employeecenter)
-* [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
-* [CppRunner](https://github.com/aiursoftweb/cpprunner)
-* [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
-* [Polls](https://github.com/aiursoftweb/polls)
-* [WeChatExam](https://github.com/aiursoftweb/wechatexam)
-* [MusicExam](https://github.com/aiursoftweb/musicexam)
-* [CoprHome](https://github.com/aiursoftweb/corphome)
-* [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
-* [Translate](https://github.com/aiursoftweb/translate)
-* [Apkg](https://github.com/aiursoftweb/apkg)
 
 ## Try
 
