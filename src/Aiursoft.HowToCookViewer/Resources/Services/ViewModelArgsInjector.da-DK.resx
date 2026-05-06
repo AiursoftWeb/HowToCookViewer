@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -31,13 +30,13 @@
     <value>Aiursoft Skabelon</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>Alle opskrifter</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>Fiskeretter</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Baggrundstasks</value>
@@ -46,19 +45,19 @@
     <value>Forkert anmodning</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>Morgenmad</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>Efter kommentarer</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>Efter sværhedsgrad</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>Efter Favoritter</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>Efter likes</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Skift avatar</value>
@@ -70,13 +69,13 @@
     <value>Rediger profil</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>Klassificering</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Klik for at logge ind</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>Krydderier</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>Opret rolle</value>
@@ -94,13 +93,13 @@
     <value>Slet bruger</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>Desserter</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Mappe</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>Drikkevarer</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Rediger Rolle</value>
@@ -130,13 +129,13 @@
     <value>Intern serverfejl</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>Færrest kommenteret</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>Mindst Favoritter</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>Færrest liket</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Låst ud</value>
@@ -151,16 +150,16 @@
     <value>Administrer</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>Kødretter</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>Flest kommentarer</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>Flest favoritter</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>Mest liket</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mine favoritter</value>
@@ -202,7 +201,7 @@
     <value>Roller</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>Halvfabrikata</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Indstillinger</value>
@@ -211,10 +210,10 @@
     <value>Log ud</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>Supper</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>Hovedret</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>System</value>
@@ -226,7 +225,7 @@
     <value>Skabelon</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>Skabeloner</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Uautoriseret</value>
@@ -238,7 +237,7 @@
     <value>Brugere</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Grøntsagsretter</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>

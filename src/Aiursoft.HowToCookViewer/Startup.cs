@@ -31,6 +31,7 @@ public class Startup : IWebStartup
         // AppSettings.
         services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
         services.AddGitRunner();
+        services.AddLocalization(options => options.ResourcesPath = "Resources");
 
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();

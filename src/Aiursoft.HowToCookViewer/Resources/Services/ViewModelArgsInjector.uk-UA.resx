@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -31,13 +30,13 @@
     <value>Шаблон Aiursoft</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>Усі рецепти</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Анонімний</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>Водні страви</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Фонові завдання</value>
@@ -46,19 +45,19 @@
     <value>Помилковий запит</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>Сніданок</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>За коментарями</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>За складністю</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>За вподобаннями</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>За вподобаннями</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Змінити аватар</value>
@@ -70,13 +69,13 @@
     <value>Змінити профіль</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>Класифікація</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Натисніть, щоб увійти</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>Кондитерські вироби</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>Створити роль</value>
@@ -94,13 +93,13 @@
     <value>Видалити користувача</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>Десерти</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Каталог</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>Напої</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Редагувати роль</value>
@@ -130,13 +129,13 @@
     <value>Помилка внутрішнього сервера</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>Найменше коментарів</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>Найменше вподобаних</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>Найменш вподобані</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Блокування</value>
@@ -151,16 +150,16 @@
     <value>Керування</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>М&apos;ясні страви</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>Найбільш коментовані</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>Найбільш улюблені</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>Найбільш вподобані</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Мої улюблені</value>
@@ -202,7 +201,7 @@
     <value>Ролі</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>Напівфабрикат</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Налаштування</value>
@@ -211,10 +210,10 @@
     <value>Вийти</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>Супи</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>Основна їжа</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Система</value>
@@ -226,7 +225,7 @@
     <value>Шаблон</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>Шаблони</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Неавторизовано</value>
@@ -238,7 +237,7 @@
     <value>Користувачі</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Овочеві страви</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>

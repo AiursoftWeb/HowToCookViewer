@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -34,7 +33,7 @@
     <value>Aiursoft 模板项目</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>所有食谱</value>
+    <value>所有菜谱</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>匿名</value>
@@ -79,7 +78,7 @@
     <value>点击登录</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>调味品</value>
+    <value>酱料</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>创建角色</value>
@@ -97,7 +96,7 @@
     <value>删除用户</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>甜点</value>
+    <value>甜品</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>目录</value>
@@ -133,7 +132,7 @@
     <value>内部服务器错误</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>评论最少</value>
+    <value>最少评论</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
     <value>最少收藏</value>
@@ -154,13 +153,13 @@
     <value>管理</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>肉类菜肴</value>
+    <value>荤菜</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>评论最多</value>
+    <value>最多评论</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>最受欢迎</value>
+    <value>最多收藏</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
     <value>最多点赞</value>
@@ -214,7 +213,7 @@
     <value>退出登录</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>汤类</value>
+    <value>汤</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
     <value>主食</value>
@@ -241,7 +240,7 @@
     <value>用户</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>蔬菜类菜肴</value>
+    <value>素菜</value>
   </data>
 
 </root>

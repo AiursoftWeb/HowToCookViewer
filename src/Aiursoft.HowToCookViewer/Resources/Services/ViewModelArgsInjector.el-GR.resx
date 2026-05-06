@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -31,13 +30,13 @@
     <value>Aiursoft Πρότυπο</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>Όλες οι Συνταγές</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Ανώνυμος</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>Υδρόβια</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Ημικυκλικές Εργασίες</value>
@@ -46,19 +45,19 @@
     <value>Λάθος Αίτημα</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>Πρωινό</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>Με βάση τα σχόλια</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>Ανά δυσκολία</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>Με βάση τις Αγαπημένες</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>Κατά Αγαπήσεις</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Αλλαγή Avatar</value>
@@ -70,13 +69,13 @@
     <value>Αλλαγή Προφίλ</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>Ταξινόμηση</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Κάντε κλικ για σύνδεση</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>Προαιρετικά</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>Δημιουργία Ρόλου</value>
@@ -94,13 +93,13 @@
     <value>Διαγραφή Χρήστη</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>Επιδόρπια</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Κατάλογος</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>Ποτά</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Επεξεργασία Ρόλου</value>
@@ -130,13 +129,13 @@
     <value>Internal Server Error</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>Ελάχιστες Σχόλια</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>Λιγότερο Αγαπημένα</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>Ελαχίστη Αγαπήση</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Μπλοκάρισμα</value>
@@ -151,16 +150,16 @@
     <value>Διαχείριση</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>Κρέατα</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>Τα περισσότερα σχολιασμένα</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>Τα πιο αγαπημένα</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>Τα πιο δημοφιλή</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Τα αγαπημένα μου</value>
@@ -202,7 +201,7 @@
     <value>Ρόλοι</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>Ημιτελή προϊόντα</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Ρυθμίσεις</value>
@@ -211,10 +210,10 @@
     <value>Αποσύνδεση</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>Σούπες</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>Βασικό Τρόφιμο</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Σύστημα</value>
@@ -226,7 +225,7 @@
     <value>Πρότυπο</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>Πρότυπα</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Μη Εξουσιοδοτημένος</value>
@@ -238,7 +237,7 @@
     <value>Χρήστες</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Λαχανικά Πιάτα</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>
