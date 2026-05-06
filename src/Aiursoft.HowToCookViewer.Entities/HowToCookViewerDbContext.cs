@@ -16,6 +16,8 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
     public DbSet<RecipeLike> RecipeLikes => Set<RecipeLike>();
     public DbSet<RecipeComment> RecipeComments => Set<RecipeComment>();
     public DbSet<LocalizedRecipe> LocalizedRecipes => Set<LocalizedRecipe>();
+    public DbSet<Tip> Tips => Set<Tip>();
+    public DbSet<LocalizedTip> LocalizedTips => Set<LocalizedTip>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -34,6 +36,10 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
 
         builder.Entity<LocalizedRecipe>()
             .HasIndex(lr => new { lr.RecipeId, lr.Culture })
+            .IsUnique();
+
+        builder.Entity<LocalizedTip>()
+            .HasIndex(lt => new { lt.TipId, lt.Culture })
             .IsUnique();
     }
 

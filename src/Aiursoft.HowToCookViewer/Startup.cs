@@ -74,6 +74,8 @@ public class Startup : IWebStartup
         var syncHowToCookRepoJob = services.RegisterBackgroundJob<SyncHowToCookRepoJob>();
         var indexRecipesJob = services.RegisterBackgroundJob<IndexRecipesJob>();
         var localizeRecipesJob = services.RegisterBackgroundJob<LocalizeRecipesJob>();
+        var indexTipsJob = services.RegisterBackgroundJob<IndexTipsJob>();
+        var localizeTipsJob = services.RegisterBackgroundJob<LocalizeTipsJob>();
         services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
@@ -97,6 +99,16 @@ public class Startup : IWebStartup
             registration: localizeRecipesJob,
             period:     TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(30));
+
+        services.RegisterScheduledTask(
+            registration: indexTipsJob,
+            period:     TimeSpan.FromHours(4),
+            startDelay: TimeSpan.FromMinutes(22));
+
+        services.RegisterScheduledTask(
+            registration: localizeTipsJob,
+            period:     TimeSpan.FromMinutes(30),
+            startDelay: TimeSpan.FromMinutes(35));
 
         // Controllers and localization
         services.AddControllersWithViews()

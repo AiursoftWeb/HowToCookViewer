@@ -80,6 +80,40 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.ToTable("LocalizedRecipes");
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedTip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Culture")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("LastLocalizedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedContent")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LocalizedTitle")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TipId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TipId", "Culture")
+                        .IsUnique();
+
+                    b.ToTable("LocalizedTips");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>
                 {
                     b.Property<int>("Id")
@@ -232,6 +266,39 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeLikes");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Tip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FileLastModified")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tips");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.User", b =>
@@ -448,6 +515,17 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                         .IsRequired();
 
                     b.Navigation("Recipe");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedTip", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Tip", "Tip")
+                        .WithMany()
+                        .HasForeignKey("TipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tip");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>
