@@ -5,7 +5,6 @@ using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.Scanner.Abstractions;
-using Microsoft.Extensions.Logging;
 
 namespace Aiursoft.HowToCookViewer.Services;
 
@@ -84,7 +83,7 @@ public class RecipeContributorService(
             Email = kvp.Key,
             CommitCount = kvp.Value.Count,
             AvatarUrl = GetGravatarUrl(kvp.Key),
-            GitHubProfileUrl = GetGitHubProfileUrl(kvp.Value.Name, kvp.Key, repoWebUrl)
+            GitHubProfileUrl = GetGitHubProfileUrl(kvp.Key, repoWebUrl)
         })
         .OrderByDescending(c => c.CommitCount)
         .ToList();
@@ -97,7 +96,7 @@ public class RecipeContributorService(
         return $"https://www.gravatar.com/avatar/{hashStr}?d=identicon";
     }
 
-    private string GetGitHubProfileUrl(string name, string email, string repoWebUrl)
+    private string GetGitHubProfileUrl(string email, string repoWebUrl)
     {
         // If it's a GitHub noreply email, we can get the username
         // username@users.noreply.github.com
