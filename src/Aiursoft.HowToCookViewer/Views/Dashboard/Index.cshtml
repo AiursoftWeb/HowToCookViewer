@@ -136,38 +136,111 @@
 }
 else
 {
-    @* ── Landing hints when no query ────────────────────────────────── *@
-    <div class="row g-3">
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center py-4">
-                    <i data-lucide="search" style="width:36px;height:36px;" class="text-primary mb-2 d-block mx-auto"></i>
-                    <h6 class="fw-semibold">@Localizer["Search Recipes"]</h6>
-                    <p class="text-muted small mb-0">@Localizer["Type a recipe name above to search across all recipes with intelligent relevance ranking."]</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center py-4">
-                    <i data-lucide="layers" style="width:36px;height:36px;" class="text-success mb-2 d-block mx-auto"></i>
-                    <h6 class="fw-semibold">@Localizer["Browse by Category"]</h6>
-                    <p class="text-muted small mb-0">@Localizer["Use the sidebar to browse recipes by category or difficulty level."]</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center py-4">
-                    <i data-lucide="shuffle" style="width:36px;height:36px;" class="text-info mb-2 d-block mx-auto"></i>
-                    <h6 class="fw-semibold">@Localizer["Feeling Lucky?"]</h6>
-                    <p class="text-muted small mb-0">
-                        <a asp-controller="Recipes" asp-action="Random">@Localizer["Try a random recipe"]</a>
-                        @Localizer["and discover something new to cook today."]
-                    </p>
-                </div>
-            </div>
-        </div>
+    @* ── Top liked recipes with images ─────────────────────────────── *@
+    <div class="d-flex align-items-center mb-3 gap-2">
+        <i data-lucide="flame" style="width:20px;height:20px;" class="text-danger"></i>
+        <h5 class="mb-0 fw-semibold">@Localizer["Most Liked Recipes"]</h5>
+        <span class="text-muted small ms-1">@Localizer["{0} recipes with photos", Model.TopTotalWithImages.ToString("N0")]</span>
     </div>
+
+    @if (Model.TopRecipes.Count == 0)
+    {
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <i data-lucide="search" style="width:36px;height:36px;" class="text-primary mb-2 d-block mx-auto"></i>
+                        <h6 class="fw-semibold">@Localizer["Search Recipes"]</h6>
+                        <p class="text-muted small mb-0">@Localizer["Type a recipe name above to search across all recipes with intelligent relevance ranking."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <i data-lucide="layers" style="width:36px;height:36px;" class="text-success mb-2 d-block mx-auto"></i>
+                        <h6 class="fw-semibold">@Localizer["Browse by Category"]</h6>
+                        <p class="text-muted small mb-0">@Localizer["Use the sidebar to browse recipes by category or difficulty level."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center py-4">
+                        <i data-lucide="shuffle" style="width:36px;height:36px;" class="text-info mb-2 d-block mx-auto"></i>
+                        <h6 class="fw-semibold">@Localizer["Feeling Lucky?"]</h6>
+                        <p class="text-muted small mb-0">
+                            <a asp-controller="Recipes" asp-action="Random">@Localizer["Try a random recipe"]</a>
+                            @Localizer["and discover something new to cook today."]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row g-3" id="top-recipe-grid">
+            @await Html.PartialAsync("_RecipeCards", new Aiursoft.HowToCookViewer.Models.RecipesViewModels.RecipeCardsViewModel
+            {
+                Recipes = Model.TopRecipes,
+                LikeCounts = Model.TopLikeCounts,
+                LocalizedNames = Model.TopLocalizedNames,
+                LocalizedDescriptions = Model.TopLocalizedDescriptions
+            })
+        </div>
+
+        @if (Model.TopHasMore)
+        {
+            <div id="top-load-sentinel" class="text-center py-4" style="min-height:60px;">
+                <div class="spinner-border text-secondary" role="status" style="display:none;" id="top-load-spinner">
+                    <span class="visually-hidden">@Localizer["Loading…"]</span>
+                </div>
+            </div>
+
+            <script>
+            (function () {
+                let nextPage = 2;
+                let loading = false;
+                let hasMore = true;
+
+                const grid     = document.getElementById('top-recipe-grid');
+                const sentinel = document.getElementById('top-load-sentinel');
+                const spinner  = document.getElementById('top-load-spinner');
+
+                async function loadMore() {
+                    if (loading || !hasMore) return;
+                    loading = true;
+                    spinner.style.display = '';
+
+                    try {
+                        const resp = await fetch('/Dashboard/TopRecipesLoadMore?page=' + nextPage);
+                        if (!resp.ok) { hasMore = false; return; }
+
+                        const html = await resp.text();
+                        hasMore = resp.headers.get('X-Has-More') === 'true';
+                        nextPage++;
+
+                        const tmp = document.createElement('div');
+                        tmp.innerHTML = html;
+                        while (tmp.firstChild) grid.appendChild(tmp.firstChild);
+
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    } finally {
+                        loading = false;
+                        spinner.style.display = 'none';
+                        if (!hasMore) sentinel.style.display = 'none';
+                    }
+                }
+
+                const observer = new IntersectionObserver(
+                    entries => { if (entries[0].isIntersecting) loadMore(); },
+                    { rootMargin: '200px' }
+                );
+                observer.observe(sentinel);
+            })();
+            </script>
+        }
+    }
 }
 

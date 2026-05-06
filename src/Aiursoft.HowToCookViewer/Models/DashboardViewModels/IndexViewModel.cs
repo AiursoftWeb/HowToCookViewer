@@ -33,4 +33,12 @@ public class IndexViewModel : UiStackLayoutViewModel
 
     /// <summary>Maps category slug → localized display name for the current request culture.</summary>
     public Dictionary<string, string> CategoryDisplayNames { get; set; } = [];
+
+    // ── Top-liked recipes (shown when no search query) ────────────────
+    public List<Recipe> TopRecipes { get; set; } = [];
+    public Dictionary<int, int> TopLikeCounts { get; set; } = [];
+    public Dictionary<int, string> TopLocalizedNames { get; set; } = [];
+    public Dictionary<int, string> TopLocalizedDescriptions { get; set; } = [];
+    public int TopTotalWithImages { get; set; }
+    public bool TopHasMore => TopTotalWithImages > PageSize;
 }

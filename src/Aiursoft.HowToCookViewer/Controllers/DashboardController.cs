@@ -1,11 +1,12 @@
 using Aiursoft.HowToCookViewer.Entities;
-using Aiursoft.HowToCookViewer.Models.DashboardViewModels;
+using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using DashboardIndexViewModel = Aiursoft.HowToCookViewer.Models.DashboardViewModels.IndexViewModel;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
@@ -36,7 +37,7 @@ public class DashboardController(
         if (!string.IsNullOrWhiteSpace(q))
         {
             (results, totalResults) = await RecipeSearchService.SearchAsync(
-                baseQuery, db, q, page, IndexViewModel.PageSize);
+                baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
         }
         else
         {
@@ -47,14 +48,13 @@ public class DashboardController(
                 .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
                 .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
                 .ThenBy(r => r.Name)
-                .Skip((page - 1) * IndexViewModel.PageSize)
-                .Take(IndexViewModel.PageSize)
+                .Skip((page - 1) * DashboardIndexViewModel.PageSize)
+                .Take(DashboardIndexViewModel.PageSize)
                 .ToListAsync();
         }
 
         var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(results);
 
-        // Build a localized category display name map for the result set
         var categoryNames = results
             .Select(r => r.Category)
             .Distinct()
@@ -62,7 +62,16 @@ public class DashboardController(
                 cat => cat,
                 cat => categoryLocalizer[RecipesController.CategoryLocalizerKeys.TryGetValue(cat, out var key) ? key : cat].Value);
 
-        return this.StackView(new IndexViewModel
+        // ── Top-liked recipes with images (for the landing page grid) ──────
+        var topQuery = TopLikedWithImagesQuery();
+        var topTotalWithImages = await topQuery.CountAsync();
+        var topRecipes = await topQuery
+            .Include(r => r.Images)
+            .Take(DashboardIndexViewModel.PageSize)
+            .ToListAsync();
+        var (topLocalizedNames, topLocalizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(topRecipes);
+
+        return this.StackView(new DashboardIndexViewModel
         {
             Query = q,
             Page = page,
@@ -73,8 +82,45 @@ public class DashboardController(
             LocalizedNames = localizedNames,
             LocalizedDescriptions = localizedDescs,
             CategoryDisplayNames = categoryNames,
+            TopRecipes = topRecipes,
+            TopLikeCounts = await LoadLikeCountsAsync(topRecipes),
+            TopLocalizedNames = topLocalizedNames,
+            TopLocalizedDescriptions = topLocalizedDescs,
+            TopTotalWithImages = topTotalWithImages,
         });
     }
+
+    [HttpGet]
+    public async Task<IActionResult> TopRecipesLoadMore(int page = 2)
+    {
+        page = Math.Max(2, page);
+        var query = TopLikedWithImagesQuery();
+        var totalCount = await query.CountAsync();
+        var recipes = await query
+            .Include(r => r.Images)
+            .Skip((page - 1) * DashboardIndexViewModel.PageSize)
+            .Take(DashboardIndexViewModel.PageSize)
+            .ToListAsync();
+
+        var hasMore = page * DashboardIndexViewModel.PageSize < totalCount;
+        Response.Headers["X-Has-More"] = hasMore ? "true" : "false";
+
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+        return PartialView("_RecipeCards", new RecipeCardsViewModel
+        {
+            Recipes = recipes,
+            LikeCounts = await LoadLikeCountsAsync(recipes),
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs
+        });
+    }
+
+    private IQueryable<Recipe> TopLikedWithImagesQuery() =>
+        db.Recipes.AsNoTracking()
+            .Where(r => r.Images.Any())
+            .OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
+            .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
+            .ThenBy(r => r.Name);
 
     private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes)
     {
