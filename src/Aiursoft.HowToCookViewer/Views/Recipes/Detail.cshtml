@@ -84,6 +84,29 @@
                 </div>
             </div>
 
+            <!-- Contributors Section -->
+            @if (Model.Contributors.Count > 0)
+            {
+                <div class="mt-4">
+                    <h5 class="mb-3">
+                        <i class="align-middle me-1" data-lucide="users"></i>
+                        @Localizer["Contributors"]
+                    </h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach (var contributor in Model.Contributors)
+                        {
+                            <a href="@contributor.GitHubProfileUrl" target="_blank" rel="noopener noreferrer"
+                               title="@contributor.Name (@contributor.CommitCount @Localizer["commits"])"
+                               class="d-inline-block">
+                                <img src="@contributor.AvatarUrl" alt="@contributor.Name"
+                                     class="rounded-circle border shadow-sm" width="40" height="40"
+                                     style="object-fit: cover;" />
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
             <!-- Comments Section
  -->
             <div id="comments" class="mt-4">

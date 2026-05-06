@@ -32,4 +32,7 @@ public class DetailViewModel : UiStackLayoutViewModel
 
     /// <summary>Root-level comments with Replies pre-loaded.</summary>
     public List<RecipeComment> Comments { get; set; } = [];
+
+    /// <summary>Git contributors for this recipe.</summary>
+    public List<ContributorViewModel> Contributors { get; set; } = [];
 }
