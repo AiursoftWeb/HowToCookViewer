@@ -7,7 +7,7 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fhowtocook.aiursoft.com)](https://howtocook.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/howtocookviewer.svg)](https://hub.docker.com/r/aiursoft/howtocookviewer)
 
-HowToCookViewer is a sample project.
+HowToCook Viewer - Visualization and website of HowToCook
 
 ![screenshot](./screenshot.png)
 
