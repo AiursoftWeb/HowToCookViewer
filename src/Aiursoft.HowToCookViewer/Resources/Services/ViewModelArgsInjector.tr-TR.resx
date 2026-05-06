@@ -249,7 +249,7 @@
   <data name="Advanced" xml:space="preserve">
     <value>İleri</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Tarif ara (örn. domates, yumurta, tofu…)</value>
   </data>
 </root>

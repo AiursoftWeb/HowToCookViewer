@@ -249,7 +249,7 @@
   <data name="Advanced" xml:space="preserve">
     <value>Gevorderd</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Recepten zoeken (bijv. tomaat, ei, tofu…)</value>
   </data>
 </root>

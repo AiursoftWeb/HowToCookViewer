@@ -140,7 +140,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Least Favorited"];
 
         _ = localizer["Recipe Search"];
-        _ = localizer["Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)"];
+        _ = localizer["Search recipes (e.g. tomato, egg, tofu…)"];
     }
 
     public void InjectSimple(
@@ -184,7 +184,7 @@ public class ViewModelArgsInjector(
             {
                 SearchUrl  = "/Dashboard/Index",
                 SearchParam = "q",
-                Placeholder = localizer["Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)"]
+                Placeholder = localizer["Search recipes (e.g. tomato, egg, tofu…)"]
             }
         };
 
