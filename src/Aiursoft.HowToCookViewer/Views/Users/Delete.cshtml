@@ -11,15 +11,13 @@
 {
     <div class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        <div class="d-flex">
-            <div class="alert-icon pe-3">
-                @* Icon updated to the theme's standard Lucide icon set. *@
-                <i class="align-middle" data-lucide="alert-triangle"></i>
-            </div>
-            <div class="alert-message">
-                <strong>@Localizer["Warning!"]</strong>
-                @Localizer["This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider."]
-            </div>
+        <div class="alert-icon">
+            @* Icon updated to the theme's standard Lucide icon set. *@
+            <i class="align-middle" data-lucide="alert-triangle"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Warning!"]</strong>
+            @Localizer["This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider."]
         </div>
     </div>
 }

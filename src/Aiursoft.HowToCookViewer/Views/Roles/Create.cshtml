@@ -11,15 +11,13 @@
 {
     <div class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        <div class="d-flex">
-            <div class="alert-icon pe-3">
-                @* Icon updated to the theme's standard Lucide icon set. *@
-                <i class="align-middle" data-lucide="alert-triangle"></i>
-            </div>
-            <div class="alert-message">
-                <strong>@Localizer["Warning!"]</strong>
-                @Localizer["OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application."]
-            </div>
+        <div class="alert-icon">
+            @* Icon updated to the theme's standard Lucide icon set. *@
+            <i class="align-middle" data-lucide="alert-triangle"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Warning!"]</strong>
+            @Localizer["OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application."]
         </div>
     </div>
 }

@@ -26,9 +26,11 @@
 
     @if (Model.Recipes.Count == 0)
     {
-        <div class="alert alert-info">
-            <i class="align-middle me-2" data-lucide="info"></i>
-            @Localizer["No recipes yet. The background indexing job may still be running."]
+        <div class="alert alert-info" role="alert">
+            <div class="alert-message">
+                <i class="align-middle me-2" data-lucide="info"></i>
+                @Localizer["No recipes yet. The background indexing job may still be running."]
+            </div>
         </div>
     }
     else

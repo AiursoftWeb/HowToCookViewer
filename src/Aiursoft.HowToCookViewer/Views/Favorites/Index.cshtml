@@ -15,9 +15,11 @@
 
     @if (Model.Favorites.Count == 0)
     {
-        <div class="alert alert-info">
-            <i class="align-middle me-2" data-lucide="info"></i>
-            @Localizer["No favorites yet. Go to the recipes page and click ♥ to add some!"]
+        <div class="alert alert-info" role="alert">
+            <div class="alert-message">
+                <i class="align-middle me-2" data-lucide="info"></i>
+                @Localizer["No favorites yet. Go to the recipes page and click ♥ to add some!"]
+            </div>
         </div>
     }
     else

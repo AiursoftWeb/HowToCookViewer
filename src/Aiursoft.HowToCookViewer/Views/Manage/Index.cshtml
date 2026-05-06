@@ -11,14 +11,12 @@
 {
     <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        <div class="d-flex">
-            <div class="alert-icon pe-3">
-                <i class="align-middle" data-lucide="check-circle"></i>
-            </div>
-            <div class="alert-message">
-                <strong>@Localizer["Success!"]</strong>
-                @ViewData["StatusMessage"]
-            </div>
+        <div class="alert-icon">
+            <i class="align-middle" data-lucide="check-circle"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Success!"]</strong>
+            @ViewData["StatusMessage"]
         </div>
     </div>
 }

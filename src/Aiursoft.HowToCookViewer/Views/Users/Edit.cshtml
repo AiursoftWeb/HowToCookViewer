@@ -19,15 +19,13 @@
 {
     <div class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        <div class="d-flex">
-            <div class="alert-icon pe-3">
-                @* Icon updated to the theme's standard Lucide icon set. *@
-                <i class="align-middle" data-lucide="alert-triangle"></i>
-            </div>
-            <div class="alert-message">
-                <strong>@Localizer["Warning!"]</strong>
-                @Localizer["This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user's profile directly on your OIDC provider."]
-            </div>
+        <div class="alert-icon">
+            @* Icon updated to the theme's standard Lucide icon set. *@
+            <i class="align-middle" data-lucide="alert-triangle"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Warning!"]</strong>
+            @Localizer["This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user's profile directly on your OIDC provider."]
         </div>
     </div>
 }

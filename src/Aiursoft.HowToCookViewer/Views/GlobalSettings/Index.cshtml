@@ -132,8 +132,10 @@
 
 @if (ViewData.ModelState.Any(m => m.Value != null && m.Value.Errors.Any()))
 {
-    <div class="alert alert-danger mt-3">
-        <div asp-validation-summary="All"></div>
+    <div class="alert alert-danger mt-3" role="alert">
+        <div class="alert-message">
+            <div asp-validation-summary="All"></div>
+        </div>
     </div>
 }
 
