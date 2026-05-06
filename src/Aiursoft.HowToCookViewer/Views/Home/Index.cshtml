@@ -49,17 +49,17 @@
 </section>
 
 @* ── Features ──────────────────────────────────────────────────────── *@
-<section class="py-6">
+<section class="py-6 bg-light">
     <div class="container">
         <div class="mb-5 text-center">
             <span class="text-uppercase text-primary text-sm fw-medium mb-1 d-block">@Localizer["What Makes It Special"]</span>
-            <h2 class="h1">@Localizer["Explore Thousands of Free, Community-Sourced Recipes"]</h2>
+            <h2 class="h1">@Localizer["Cook with Confidence."]</h2>
         </div>
 
-        <div class="row">
+        <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
                         <i data-lucide="languages"></i>
                     </div>
                     <div class="flex-grow-1">
@@ -69,31 +69,31 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
-                        <i data-lucide="heart"></i>
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
+                        <i data-lucide="users"></i>
                     </div>
                     <div class="flex-grow-1">
                         <h4 class="mt-0">@Localizer["Community Driven"]</h4>
-                        <p class="fs-lg">@Localizer["Like, save, and comment on the recipes you love. Share your cooking experience with the community."]</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
-                        <i data-lucide="github"></i>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h4 class="mt-0">@Localizer["Fully Open Source"]</h4>
                         <p class="fs-lg">@Localizer["All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it."]</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
-                        <i data-lucide="search"></i>
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Fully Open Source"]</h4>
+                        <p class="fs-lg">@Localizer["Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
+                        <i data-lucide="search-check"></i>
                     </div>
                     <div class="flex-grow-1">
                         <h4 class="mt-0">@Localizer["Powerful Search"]</h4>
@@ -102,8 +102,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
                         <i data-lucide="image"></i>
                     </div>
                     <div class="flex-grow-1">
@@ -113,9 +113,9 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="d-flex align-items-start py-3">
-                    <div class="landing-feature">
-                        <i data-lucide="pencil"></i>
+                <div class="d-flex align-items-start py-3 h-100">
+                    <div class="landing-feature me-3">
+                        <i data-lucide="github"></i>
                     </div>
                     <div class="flex-grow-1">
                         <h4 class="mt-0">@Localizer["Edit on GitHub"]</h4>
@@ -157,6 +157,8 @@
         </div>
     </section>
 }
+
+<vc:marketing-footer></vc:marketing-footer>
 
 @* Hidden CSRF token so fallback anti-CSRF logic in integration tests can find it *@
 <div hidden>@Html.AntiForgeryToken()</div>

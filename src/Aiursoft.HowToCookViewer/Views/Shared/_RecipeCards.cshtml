@@ -1,0 +1,50 @@
+@model Aiursoft.HowToCookViewer.Models.RecipesViewModels.RecipeCardsViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+
+@foreach (var recipe in Model.Recipes)
+{
+    var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
+    var coverUrl = cover != null
+        ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
+        : "/img/no-image.svg";
+    var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+    var displayName = Model.LocalizedNames.TryGetValue(recipe.Id, out var ln) ? ln : recipe.Name;
+    var displayDesc = Model.LocalizedDescriptions.TryGetValue(recipe.Id, out var ld) ? ld : recipe.Description;
+
+    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+        <a href="/Recipes/Detail/@recipe.Id" class="text-decoration-none">
+            <div class="card h-100 shadow-sm recipe-card">
+                <img src="@coverUrl"
+                     class="card-img-top"
+                     style="height:180px;object-fit:cover;"
+                     alt="@displayName"
+                     loading="lazy"
+                     onerror="this.src='/img/no-image.svg'">
+                <div class="card-body pb-2">
+                    <h6 class="card-title mb-1 fw-bold text-truncate">@displayName</h6>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
+                        @{
+                            var likes = Model.LikeCounts.TryGetValue(recipe.Id, out var lc) ? lc : 0;
+                        }
+                        @if (likes > 0)
+                        {
+                            <small class="text-muted">
+                                <i class="align-middle" data-lucide="thumbs-up" style="width:13px;height:13px;"></i>
+                                @likes
+                            </small>
+                        }
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(displayDesc))
+                    {
+                        <p class="card-text text-muted small mt-1 mb-0"
+                           style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+                            @displayDesc
+                        </p>
+                    }
+                </div>
+            </div>
+        </a>
+    </div>
+}
