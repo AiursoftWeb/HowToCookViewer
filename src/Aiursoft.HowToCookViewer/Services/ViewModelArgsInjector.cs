@@ -366,9 +366,9 @@ public class ViewModelArgsInjector(
             var tipIds = allTips.Select(t => t.Id).ToList();
             var localizedTipTitles = db.LocalizedTips
                 .AsNoTracking()
-                .Where(lt => lt.Culture == tipCulture && tipIds.Contains(lt.TipId) && lt.LocalizedTitle != null)
+                .Where(lt => lt.Culture == tipCulture && tipIds.Contains(lt.TipId))
                 .Select(lt => new { lt.TipId, lt.LocalizedTitle })
-                .ToDictionary(lt => lt.TipId, lt => lt.LocalizedTitle!);
+                .ToDictionary(lt => lt.TipId, lt => lt.LocalizedTitle);
 
             string ResolveTitle(int tipId, string originalTitle) =>
                 localizedTipTitles.TryGetValue(tipId, out var locTitle) && !string.IsNullOrWhiteSpace(locTitle)

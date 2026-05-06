@@ -18,7 +18,7 @@ public class LocalizeTipsJob(
     {
         var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
         var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
-        var languagesRaw = await settingsService.GetSettingValueAsync(SettingsMap.LocalizationLanguages) ?? string.Empty;
+        var languagesRaw = await settingsService.GetSettingValueAsync(SettingsMap.LocalizationLanguages);
 
         if (string.IsNullOrWhiteSpace(instance) || string.IsNullOrWhiteSpace(model))
         {
