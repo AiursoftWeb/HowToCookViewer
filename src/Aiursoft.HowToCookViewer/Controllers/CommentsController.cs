@@ -1,4 +1,6 @@
 using Aiursoft.HowToCookViewer.Entities;
+using Aiursoft.HowToCookViewer.Services;
+using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,7 +13,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 [LimitPerMin]
 public class CommentsController(
     TemplateDbContext db,
-    UserManager<User> userManager) : Controller
+    UserManager<User> userManager,
+    GlobalSettingsService globalSettingsService) : Controller
 {
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -33,6 +36,18 @@ public class CommentsController(
         }
 
         var userId = userManager.GetUserId(User)!;
+        
+        // Rate limiting
+        var maxCommentsPerDay = await globalSettingsService.GetIntSettingAsync(SettingsMap.MaxCommentsPerDayPerUser);
+        var today = DateTime.UtcNow.Date;
+        var commentCountToday = await db.RecipeComments
+            .CountAsync(c => c.UserId == userId && c.CreatedAt >= today);
+
+        if (commentCountToday >= maxCommentsPerDay)
+        {
+            return StatusCode(429);
+        }
+
         db.RecipeComments.Add(new RecipeComment
         {
             RecipeId = recipeId,
