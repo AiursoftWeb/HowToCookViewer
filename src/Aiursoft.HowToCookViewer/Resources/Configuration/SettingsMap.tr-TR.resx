@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Yerelleştirme Dilleri</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>Kullanıcı Başına Günde Maksimum Yorum Sayısı</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API Uç Noktası</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Projenin logosu navbar ve footer&apos;da gösterilir. jpg, png, svg desteklenir.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Bir kullanıcının günde gönderebileceği maksimum yorum sayısı.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Frontende görüntülenen proje adı.</value>

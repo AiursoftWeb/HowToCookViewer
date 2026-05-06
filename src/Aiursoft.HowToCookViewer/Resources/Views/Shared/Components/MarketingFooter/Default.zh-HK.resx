@@ -30,6 +30,9 @@
   <data name="Contributions" xml:space="preserve">
     <value>貢獻</value>
   </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>貢獻者</value>
+  </data>
   <data name="Documentation" xml:space="preserve">
     <value>文件</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Github" xml:space="preserve">
     <value>Github</value>
+  </data>
+  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
+    <value>HowToCook Viewer - 一個現代化、功能豐富且高度可擴展的 HowToCook 開源項目網頁查看器。</value>
   </data>
   <data name="Legal" xml:space="preserve">
     <value>法律</value>
@@ -53,6 +59,9 @@
   </data>
   <data name="Resources" xml:space="preserve">
     <value>資源</value>
+  </data>
+  <data name="Revolt Forum" xml:space="preserve">
+    <value>Revolt 論壇</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>社交</value>

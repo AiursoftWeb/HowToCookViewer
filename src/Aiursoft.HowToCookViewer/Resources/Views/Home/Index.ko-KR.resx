@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>이중 언어 튜토리얼</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>레시피와 이 뷰어 모두 오픈소스입니다. 투명하고, 협력적이며, 영원히 무료입니다.</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>모든 레시피 보기</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>일관성 검증</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>자신감 있게 요리하세요.</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>편안하게 조율하세요</value>

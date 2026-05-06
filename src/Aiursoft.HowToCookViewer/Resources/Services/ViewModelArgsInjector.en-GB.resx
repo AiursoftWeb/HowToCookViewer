@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:schema id="root">
-        <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-    </xs:schema>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -28,6 +29,9 @@
   </data>
   <data name="Administration" xml:space="preserve">
     <value>Administration</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
@@ -80,6 +84,9 @@
   <data name="Condiments" xml:space="preserve">
     <value>Condiments</value>
   </data>
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Cooking Tips</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Create Role</value>
   </data>
@@ -130,6 +137,9 @@
   </data>
   <data name="Internal Server Error" xml:space="preserve">
     <value>Internal Server Error</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Learn</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>Least Commented</value>
@@ -203,6 +213,9 @@
   <data name="Roles" xml:space="preserve">
     <value>Roles</value>
   </data>
+  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
+    <value>Search recipes (e.g. tomato, egg, tofu…)</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Semi-finished</value>
   </data>
@@ -230,6 +243,9 @@
   <data name="Templates" xml:space="preserve">
     <value>Templates</value>
   </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Unauthorised</value>
   </data>
@@ -243,16 +259,4 @@
     <value>Vegetable Dishes</value>
   </data>
 
-  <data name="Cooking Tips" xml:space="preserve">
-    <value>Cooking Tips</value>
-  </data>
-  <data name="Learn" xml:space="preserve">
-    <value>Learn</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Advanced</value>
-  </data>
-  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
-    <value>Search recipes (e.g. tomato, egg, tofu…)</value>
-  </data>
 </root>

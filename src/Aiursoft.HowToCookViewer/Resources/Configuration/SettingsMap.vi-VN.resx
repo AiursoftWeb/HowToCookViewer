@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Ngôn ngữ bản địa hóa</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>Số nhận xét tối đa mỗi ngày cho mỗi người dùng</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Điểm cuối API Ollama</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Logo của dự án được hiển thị trong thanh điều hướng và chân trang. Hỗ trợ định dạng jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Số lượng bình luận tối đa mà một người dùng có thể đăng mỗi ngày.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Tên dự án được hiển thị trên giao diện người dùng</value>

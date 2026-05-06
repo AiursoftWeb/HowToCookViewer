@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Hướng dẫn song ngữ</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>Cả công thức nấu ăn và trình xem này đều là mã nguồn mở. Minh bạch, hợp tác và miễn phí mãi mãi.</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>Xem tất cả công thức</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>Nấu ăn tự tin</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Hợp tác một cách thoải mái</value>

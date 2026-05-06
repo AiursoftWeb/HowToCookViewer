@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:schema id="root">
-        <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-    </xs:schema>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -28,6 +29,9 @@
   </data>
   <data name="Administration" xml:space="preserve">
     <value>Administration</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Avancé</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Modèle Aiursoft</value>
@@ -63,7 +67,7 @@
     <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
-    <value>Changer l'avatar</value>
+    <value>Changer l&apos;avatar</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>Modifier le mot de passe</value>
@@ -80,6 +84,9 @@
   <data name="Condiments" xml:space="preserve">
     <value>Condiments</value>
   </data>
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Conseils de cuisine</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Créer un rôle</value>
   </data>
@@ -93,7 +100,7 @@
     <value>Supprimer le rôle</value>
   </data>
   <data name="Delete User" xml:space="preserve">
-    <value>Supprimer l'utilisateur</value>
+    <value>Supprimer l&apos;utilisateur</value>
   </data>
   <data name="Desserts" xml:space="preserve">
     <value>Desserts</value>
@@ -108,7 +115,7 @@
     <value>Modifier le rôle</value>
   </data>
   <data name="Edit User" xml:space="preserve">
-    <value>Modifier l'utilisateur</value>
+    <value>Modifier l&apos;utilisateur</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Erreur</value>
@@ -130,6 +137,9 @@
   </data>
   <data name="Internal Server Error" xml:space="preserve">
     <value>Erreur serveur interne</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Apprendre</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>Least Commented</value>
@@ -195,13 +205,16 @@
     <value>Recettes</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>S'inscrire</value>
+    <value>S&apos;inscrire</value>
   </data>
   <data name="Role Details" xml:space="preserve">
     <value>Détails du rôle</value>
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Rôles</value>
+  </data>
+  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
+    <value>Rechercher des recettes (ex. tomate, œuf, tofu…)</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Semi-finished</value>
@@ -230,11 +243,14 @@
   <data name="Templates" xml:space="preserve">
     <value>Templates</value>
   </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Astuce</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Non autorisé</value>
   </data>
   <data name="User Details" xml:space="preserve">
-    <value>Détails de l'utilisateur</value>
+    <value>Détails de l&apos;utilisateur</value>
   </data>
   <data name="Users" xml:space="preserve">
     <value>Utilisateurs</value>
@@ -243,16 +259,4 @@
     <value>Vegetable Dishes</value>
   </data>
 
-  <data name="Cooking Tips" xml:space="preserve">
-    <value>Conseils de cuisine</value>
-  </data>
-  <data name="Learn" xml:space="preserve">
-    <value>Apprendre</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Avancé</value>
-  </data>
-  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
-    <value>Rechercher des recettes (ex. tomate, œuf, tofu…)</value>
-  </data>
 </root>

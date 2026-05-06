@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>로컬화 언어</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>사용자당 일일 최대 댓글 수</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API 엔드포인트</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>네비게이션 바와 푸터에 표시되는 프로젝트의 로고입니다. jpg, png, svg 형식을 지원합니다.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>사용자가 하루에 게시할 수 있는 댓글의 최대 개수입니다.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>프론트엔드에 표시되는 프로젝트 이름</value>

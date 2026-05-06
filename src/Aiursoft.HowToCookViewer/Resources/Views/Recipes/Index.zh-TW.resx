@@ -18,7 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Difficulty" xml:space="preserve">
+      <data name="Add Recipe" xml:space="preserve">
+    <value>新增食譜</value>
+  </data>
+  <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
+    <value>任何人都可以免費在 HowToCook 中新增或編輯食譜 — 只需在 GitHub 上分叉（fork）此倉庫，進行修改後提交合併請求（pull request）即可。您的食譜將供所有人使用！</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
     <value>難度</value>
   </data>
   <data name="Loading…" xml:space="preserve">
@@ -27,10 +33,14 @@
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>目前尚無食譜。背景索引作業可能仍在進行中。</value>
   </data>
+  <data name="Open Community Cookbook" xml:space="preserve">
+    <value>開放社群食譜</value>
+  </data>
   <data name="Random Recipe" xml:space="preserve">
     <value>隨機食譜</value>
   </data>
   <data name="Total {0} recipes" xml:space="preserve">
     <value>共 {0} 道食譜</value>
   </data>
+
 </root>

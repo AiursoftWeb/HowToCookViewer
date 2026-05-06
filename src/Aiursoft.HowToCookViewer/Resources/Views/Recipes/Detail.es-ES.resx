@@ -27,8 +27,23 @@
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
     <value>¿Estás seguro de que quieres eliminar esta respuesta?</value>
   </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Historial de cambios</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
+    <value>Haz clic aquí para ver la información legal.</value>
+  </data>
   <data name="Comments" xml:space="preserve">
     <value>Comentarios</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commits</value>
+  </data>
+  <data name="Community Content" xml:space="preserve">
+    <value>Contenido de la comunidad</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Colaboradores</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Eliminar</value>
@@ -53,6 +68,9 @@
   </data>
   <data name="Send Reply" xml:space="preserve">
     <value>Enviar respuesta</value>
+  </data>
+  <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
+    <value>El copyright de esta receta pertenece a la comunidad y se libera al dominio público bajo The Unlicense: libre de usar para cualquier propósito sin restricciones.</value>
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Escribe tu comentario…</value>

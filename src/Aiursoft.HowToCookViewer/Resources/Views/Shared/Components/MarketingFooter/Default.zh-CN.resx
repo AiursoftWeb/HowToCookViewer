@@ -21,9 +21,6 @@
       <data name="Aiursoft" xml:space="preserve">
     <value>Aiursoft</value>
   </data>
-  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
-    <value>HowToCook Viewer - 一个现代化、功能丰富且高度可扩展的 HowToCook 开源项目 Web 查看器。</value>
-  </data>
   <data name="Community" xml:space="preserve">
     <value>社区</value>
   </data>
@@ -41,6 +38,9 @@
   </data>
   <data name="Github" xml:space="preserve">
     <value>GitHub</value>
+  </data>
+  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
+    <value>HowToCook Viewer - 一个现代化、功能丰富且高度可扩展的 HowToCook 开源项目 Web 查看器。</value>
   </data>
   <data name="Legal" xml:space="preserve">
     <value>法律</value>
