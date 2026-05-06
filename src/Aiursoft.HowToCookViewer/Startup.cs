@@ -3,7 +3,9 @@ using Aiursoft.Canon.TaskQueue;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.Canon.ScheduledTasks;
 using Aiursoft.DbTools.Switchable;
+using Aiursoft.Dotlang.Shared;
 using Aiursoft.GitRunner;
+using Aiursoft.GptClient.Services;
 using Aiursoft.Scanner;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
@@ -59,6 +61,8 @@ public class Startup : IWebStartup
         services.AddSingleton<NavigationState<Startup>>();
         services.AddHttpContextAccessor();
         services.AddScoped<RecipeLocalizationService>();
+        services.AddScoped<ChatClient>();
+        services.AddScoped<MarkdownShredder>();
 
         // Background job infrastructure
         services.AddTaskQueueEngine();

@@ -25,7 +25,6 @@ public class LocalizeRecipesJob(
     {
         var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
         var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
-        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
         var languagesRaw = await settingsService.GetSettingValueAsync(SettingsMap.LocalizationLanguages);
 
         if (string.IsNullOrWhiteSpace(instance) || string.IsNullOrWhiteSpace(model))
@@ -66,7 +65,7 @@ public class LocalizeRecipesJob(
 
                 foreach (var recipe in pendingRecipes)
                 {
-                    await LocalizeRecipeAsync(recipe, culture, instance, model, token);
+                    await LocalizeRecipeAsync(recipe, culture);
                     totalProcessed++;
                 }
 
@@ -84,12 +83,7 @@ public class LocalizeRecipesJob(
         logger.LogInformation("LocalizeRecipesJob: done. Processed {Count} recipe/language pair(s) this run.", totalProcessed);
     }
 
-    private async Task LocalizeRecipeAsync(
-        Recipe recipe,
-        string culture,
-        string instance,
-        string model,
-        string token)
+    private async Task LocalizeRecipeAsync(Recipe recipe, string culture)
     {
         try
         {
@@ -97,12 +91,12 @@ public class LocalizeRecipesJob(
                 "LocalizeRecipesJob: translating recipe '{Name}' (id={Id}) to {Culture}.",
                 recipe.Name, recipe.Id, culture);
 
-            var localizedName        = await translator.TranslateAsync(recipe.Name,        culture, instance, model, token);
-            var localizedDescription = await translator.TranslateAsync(recipe.Description, culture, instance, model, token);
-            var localizedIngredients = await translator.TranslateAsync(recipe.Ingredients, culture, instance, model, token);
-            var localizedCalculation = await translator.TranslateAsync(recipe.Calculation, culture, instance, model, token);
-            var localizedSteps       = await translator.TranslateAsync(recipe.Steps,       culture, instance, model, token);
-            var localizedNotes       = await translator.TranslateAsync(recipe.Notes,       culture, instance, model, token);
+            var localizedName        = await translator.TranslateAsync(recipe.Name,        culture);
+            var localizedDescription = await translator.TranslateAsync(recipe.Description, culture);
+            var localizedIngredients = await translator.TranslateAsync(recipe.Ingredients, culture);
+            var localizedCalculation = await translator.TranslateAsync(recipe.Calculation, culture);
+            var localizedSteps       = await translator.TranslateAsync(recipe.Steps,       culture);
+            var localizedNotes       = await translator.TranslateAsync(recipe.Notes,       culture);
 
             var existing = await db.LocalizedRecipes
                 .FirstOrDefaultAsync(lr => lr.RecipeId == recipe.Id && lr.Culture == culture);

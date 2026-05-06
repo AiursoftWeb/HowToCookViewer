@@ -1,72 +1,37 @@
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.Json;
+using Aiursoft.Canon;
+using Aiursoft.Dotlang.Shared;
+using Aiursoft.GptClient.Services;
+using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.Scanner.Abstractions;
+using Microsoft.Extensions.Options;
 
 namespace Aiursoft.HowToCookViewer.Services;
 
 /// <summary>
-/// Calls an OpenAI-compatible chat completions endpoint (Ollama or DeepSeek)
-/// to translate a piece of text into a target language.
-/// Settings (instance, model, token) are read at call time so admin changes take effect immediately.
+/// Translates text using Dotlang's <see cref="OllamaBasedTranslatorEngine"/>.
+/// Ollama settings (instance, model, token) are read from <see cref="GlobalSettingsService"/>
+/// at call time so admin changes take effect immediately.
 /// </summary>
 public class RecipeTranslationService(
-    IHttpClientFactory httpClientFactory,
-    ILogger<RecipeTranslationService> logger) : IScopedDependency
+    GlobalSettingsService settingsService,
+    MarkdownShredder shredder,
+    RetryEngine retryEngine,
+    ILogger<OllamaBasedTranslatorEngine> engineLogger,
+    ChatClient chatClient) : IScopedDependency
 {
-    public async Task<string> TranslateAsync(
-        string text,
-        string targetLanguage,
-        string instance,
-        string model,
-        string token)
+    public async Task<string> TranslateAsync(string text, string targetLanguage)
     {
         if (string.IsNullOrWhiteSpace(text))
             return text;
 
-        var client = httpClientFactory.CreateClient();
-        client.Timeout = TimeSpan.FromMinutes(5);
-        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-        var prompt = $"Translate the following text to {targetLanguage}. Preserve all markdown formatting exactly. Output only the translation, no explanations, no preamble:\n\n{text}";
-
-        var requestBody = new
+        var options = Options.Create(new TranslateOptions
         {
-            model,
-            stream = false,
-            messages = new[] { new { role = "user", content = prompt } }
-        };
+            OllamaInstance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance),
+            OllamaModel    = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel),
+            OllamaToken    = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken)
+        });
 
-        var json = JsonSerializer.Serialize(requestBody);
-        using var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-        logger.LogDebug("Translating {Chars} chars to {Language} via {Instance}", text.Length, targetLanguage, instance);
-
-        var response = await client.PostAsync(instance, content);
-        response.EnsureSuccessStatusCode();
-
-        var responseJson = await response.Content.ReadAsStringAsync();
-        using var doc = JsonDocument.Parse(responseJson);
-        var root = doc.RootElement;
-
-        // OpenAI-compatible format: { "choices": [{ "message": { "content": "..." } }] }
-        if (root.TryGetProperty("choices", out var choices) &&
-            choices.GetArrayLength() > 0 &&
-            choices[0].TryGetProperty("message", out var choiceMsg) &&
-            choiceMsg.TryGetProperty("content", out var choiceContent))
-        {
-            return choiceContent.GetString() ?? text;
-        }
-
-        // Native Ollama format: { "message": { "content": "..." } }
-        if (root.TryGetProperty("message", out var ollamaMsg) &&
-            ollamaMsg.TryGetProperty("content", out var ollamaContent))
-        {
-            return ollamaContent.GetString() ?? text;
-        }
-
-        logger.LogWarning("RecipeTranslationService: unrecognized response shape. Raw: {Json}",
-            responseJson.Length > 500 ? responseJson[..500] : responseJson);
-        return text;
+        var engine = new OllamaBasedTranslatorEngine(options, retryEngine, engineLogger, chatClient, shredder);
+        return await engine.TranslateAsync(text, targetLanguage);
     }
 }
