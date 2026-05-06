@@ -78,6 +78,18 @@
                         @Html.Raw(Model.RenderedMarkdown)
                     </div>
                 </div>
+                <div class="px-4 px-md-5 pb-3">
+                    <div class="alert alert-primary alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <h4 class="alert-heading">@Localizer["Community Content"]</h4>
+                            <p class="mb-0">
+                                @Localizer["The copyright of this recipe belongs to the community and is licensed under the CC0 protocol."]
+                                <a href="https://github.com/Anduin2017/HowToCook/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">@Localizer["Click here to view the legal information."]</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="card-footer text-muted small">
                     <i class="align-middle me-1" data-lucide="git-commit-horizontal"></i>
                     @Localizer["Last updated:"] <label data-utc-time="@Model.Recipe.FileLastModified.ToHtmlDateTime()"></label>
