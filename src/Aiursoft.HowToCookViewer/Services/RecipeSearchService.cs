@@ -98,7 +98,7 @@ public static class RecipeSearchService
                 Recipe = r,
                 LikeCount = db.RecipeLikes.Count(l => l.RecipeId == r.Id),
                 FavoriteCount = db.RecipeFavorites.Count(f => f.RecipeId == r.Id),
-                Images = r.Images
+                r.Images
             })
             .AsNoTracking()
             .ToListAsync(ct);
