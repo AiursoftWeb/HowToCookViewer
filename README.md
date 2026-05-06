@@ -56,8 +56,8 @@ First, install Docker [here](https://docs.docker.com/get-docker/).
 Then run the following commands in a Linux shell:
 
 ```bash
-image=aiursoft/howToCookViewer
-appName=howToCookViewer
+image=aiursoft/howtocookviewer
+appName=howtocookviewer
 sudo docker pull $image
 sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
 ```
@@ -68,7 +68,7 @@ The docker image has the following context:
 
 | Properties  | Value                           |
 |-------------|---------------------------------|
-| Image       | aiursoft/howToCookViewer               |
+| Image       | aiursoft/howtocookviewer        |
 | Ports       | 5000                            |
 | Binary path | /app                            |
 | Data path   | /data                           |
