@@ -45,6 +45,9 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>임시 번호</value>
   </data>
+  <data name="HowToCook Repo URL" xml:space="preserve">
+    <value>HowToCook 저장소 URL</value>
+  </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP 번호</value>
   </data>
@@ -56,6 +59,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>푸터에 표시되는 브랜드 이름</value>
+  </data>
+  <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
+    <value>HowToCook 레시피를 동기화할 Git 저장소 URL입니다.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>중국 대륙 사용자를 위한 ICP 라이선스 번호. 비워두면 숨깁니다.</value>

@@ -33,6 +33,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Tất cả công thức</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Ẩn danh</value>
   </data>
@@ -42,6 +45,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>Yêu cầu sai</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>Theo Độ Khó</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Thay đổi Ảnh đại diện</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>Thay đổi Hồ sơ</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Phân loại</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Nhấp để đăng nhập</value>
@@ -111,6 +120,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Danh sách yêu thích của tôi</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Không tìm thấy</value>
   </data>
@@ -128,6 +140,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>Cài đặt Hồ sơ</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Công thức</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>Công thức</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Đăng ký</value>

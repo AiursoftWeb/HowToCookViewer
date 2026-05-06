@@ -36,12 +36,12 @@
                         <div class="card h-100 shadow-sm recipe-card">
                             <img src="@coverUrl"
                                  class="card-img-top"
-                                 style="height:180px;object-fit:contain;background:#f8f9fa;"
+                                 style="height:180px;object-fit:cover;"
                                  alt="@recipe.Name"
                                  onerror="this.src='/img/no-image.svg'">
                             <div class="card-body pb-2">
                                 <h6 class="card-title mb-1 fw-bold text-truncate">@recipe.Name</h6>
-                                <small class="text-warning">@difficultyStars</small>
+                                <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
                                 @if (!string.IsNullOrWhiteSpace(recipe.Description))
                                 {
                                     <p class="card-text text-muted small mt-1 mb-0"

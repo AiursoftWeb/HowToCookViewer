@@ -45,6 +45,9 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Väliaikainen luku</value>
   </data>
+  <data name="HowToCook Repo URL" xml:space="preserve">
+    <value>HowToCook-repon URL</value>
+  </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-numero</value>
   </data>
@@ -56,6 +59,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Brändin nimi, joka näytetään alatunnisteessa.</value>
+  </data>
+  <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
+    <value>Git-varaston URL-osoite, josta HowToCook-reseptit synkronoidaan.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>ICP-lisenssinumero Kiinan päävaltakunnan käyttäjille. Jätä tyhjäksi piilottaaksesi.</value>

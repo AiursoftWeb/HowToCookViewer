@@ -33,6 +33,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Modèle Aiursoft</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Toutes les recettes</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonyme</value>
   </data>
@@ -42,6 +45,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>Requête incorrecte</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>Par difficulté</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Changer l&apos;avatar</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>Modifier le profil</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Cliquez pour vous connecter</value>
@@ -111,6 +120,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Gérer</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Mes favoris</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Non trouvé</value>
   </data>
@@ -128,6 +140,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>Paramètres du profil</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Recette</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>Recettes</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>S&apos;inscrire</value>

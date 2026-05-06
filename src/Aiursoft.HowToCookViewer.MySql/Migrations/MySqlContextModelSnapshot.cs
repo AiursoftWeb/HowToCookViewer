@@ -93,6 +93,63 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.ToTable("Recipes");
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int?>("ParentCommentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(450)
+                        .HasColumnType("varchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCommentId");
+
+                    b.HasIndex("RecipeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RecipeComments");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeFavorite", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasMaxLength(450)
+                        .HasColumnType("varchar(450)");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("UserId", "RecipeId");
+
+                    b.HasIndex("RecipeId");
+
+                    b.ToTable("RecipeFavorites");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeImage", b =>
                 {
                     b.Property<int>("Id")
@@ -117,6 +174,25 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeImages");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeLike", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasMaxLength(450)
+                        .HasColumnType("varchar(450)");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("UserId", "RecipeId");
+
+                    b.HasIndex("RecipeId");
+
+                    b.ToTable("RecipeLikes");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.User", b =>
@@ -328,6 +404,51 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.RecipeComment", "ParentComment")
+                        .WithMany("Replies")
+                        .HasForeignKey("ParentCommentId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ParentComment");
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeFavorite", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeImage", b =>
                 {
                     b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
@@ -337,6 +458,25 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                         .IsRequired();
 
                     b.Navigation("Recipe");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeLike", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -393,6 +533,11 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>
                 {
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>
+                {
+                    b.Navigation("Replies");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,6 +12,25 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
     public DbSet<GlobalSetting> GlobalSettings => Set<GlobalSetting>();
     public DbSet<Recipe> Recipes => Set<Recipe>();
     public DbSet<RecipeImage> RecipeImages => Set<RecipeImage>();
+    public DbSet<RecipeFavorite> RecipeFavorites => Set<RecipeFavorite>();
+    public DbSet<RecipeLike> RecipeLikes => Set<RecipeLike>();
+    public DbSet<RecipeComment> RecipeComments => Set<RecipeComment>();
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        builder.Entity<RecipeFavorite>()
+            .HasKey(f => new { f.UserId, f.RecipeId });
+
+        builder.Entity<RecipeLike>()
+            .HasKey(l => new { l.UserId, l.RecipeId });
+
+        builder.Entity<RecipeComment>()
+            .HasOne(c => c.ParentComment)
+            .WithMany(c => c.Replies)
+            .HasForeignKey(c => c.ParentCommentId)
+            .OnDelete(DeleteBehavior.Restrict);
+    }
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);

@@ -104,6 +104,9 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Recipes"];
         _ = localizer["All Recipes"];
+    
+        _ = localizer["My Favorites"];
+        _ = localizer["Recipe"];
     }
 
     public void InjectSimple(
@@ -206,9 +209,9 @@ public class ViewModelArgsInjector(
             }
         }
 
-        // Dynamic recipes group: query distinct categories from DB,
-        // each becomes its own LinkSideBarItem (no collapse nesting).
-        // Inserted after the first group ("功能") so it appears second in the sidebar.
+        // Two separate NavGroups for recipes, mirroring the existing "设置"/"管理" pattern:
+        //   NavGroup "All Recipes"  →  CascadedSideBarItem with category sub-links
+        //   NavGroup "分类方式"      →  CascadedSideBarItem "By Difficulty" with star sub-links
         var recipeCategories = db.Recipes
             .Select(r => r.Category)
             .Distinct()
@@ -219,45 +222,55 @@ public class ViewModelArgsInjector(
         {
             var isOnRecipesController = string.Equals(
                 currentViewingController, "Recipes", StringComparison.OrdinalIgnoreCase);
-            var currentCategory = context.Request.Query["category"].ToString(); // "" when absent
+            var currentCategory   = context.Request.Query["category"].ToString();
+            var currentDifficulty = context.Request.Query["difficulty"].ToString();
 
-            var categoryItems = new List<SideBarItem>
+            // NavGroup 1: "All Recipes" → flat category links, no collapse needed
+            var allRecipesGroup = new NavGroup
             {
-                new LinkSideBarItem
+                Name = localizer["All Recipes"],
+                Items = recipeCategories.Select(cat =>
                 {
-                    LucideIcon = "utensils",
-                    Text = localizer["All Recipes"],
-                    Href = "/Recipes/Index",
-                    IsActive = isOnRecipesController && string.IsNullOrEmpty(currentCategory)
-                }
+                    var (displayName, icon) = CategoryMeta.TryGetValue(cat, out var meta)
+                        ? meta
+                        : (cat, "circle-dot");
+                    return (SideBarItem)new LinkSideBarItem
+                    {
+                        LucideIcon = icon,
+                        Text       = displayName,
+                        Href       = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
+                        IsActive   = isOnRecipesController &&
+                                     string.Equals(currentCategory, cat, StringComparison.OrdinalIgnoreCase)
+                    };
+                }).ToList()
             };
 
-            categoryItems.AddRange(recipeCategories.Select(cat =>
+            // NavGroup 2: "分类方式" → collapses to difficulty star links
+            var classificationGroup = new NavGroup
             {
-                var (displayName, icon) = CategoryMeta.TryGetValue(cat, out var meta)
-                    ? meta
-                    : (cat, "circle-dot");
-                return (SideBarItem)new LinkSideBarItem
-                {
-                    LucideIcon = icon,
-                    Text = displayName,
-                    Href = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
-                    IsActive = isOnRecipesController &&
-                               string.Equals(currentCategory, cat, StringComparison.OrdinalIgnoreCase)
-                };
-            }));
-
-            var recipesGroup = new NavGroup
-            {
-                Name = localizer["Recipes"],
-                Items = categoryItems
+                Name = localizer["Classification"],
+                Items =
+                [
+                    new CascadedSideBarItem
+                    {
+                        UniqueId   = "recipes-difficulty",
+                        LucideIcon = "star",
+                        Text       = localizer["By Difficulty"],
+                        IsActive   = isOnRecipesController && !string.IsNullOrEmpty(currentDifficulty),
+                        Links      = Enumerable.Range(1, 5).Select(stars => new CascadedLink
+                        {
+                            Text     = new string('★', stars),
+                            Href     = $"/Recipes/Index?difficulty={stars}",
+                            IsActive = isOnRecipesController && currentDifficulty == stars.ToString()
+                        }).ToList()
+                    }
+                ]
             };
 
-            // Insert after the first nav group (功能) if it exists, otherwise prepend.
-            if (navGroupsForView.Count > 0)
-                navGroupsForView.Insert(1, recipesGroup);
-            else
-                navGroupsForView.Add(recipesGroup);
+            // Insert both groups after the first nav group (功能).
+            var insertAt = navGroupsForView.Count > 0 ? 1 : 0;
+            navGroupsForView.Insert(insertAt, classificationGroup);
+            navGroupsForView.Insert(insertAt, allRecipesGroup);
         }
 
         toInject.Sidebar = new SidebarViewModel

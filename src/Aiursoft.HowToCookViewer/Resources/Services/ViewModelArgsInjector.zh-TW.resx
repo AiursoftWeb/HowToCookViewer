@@ -33,6 +33,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft 範本</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>所有食譜</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>匿名</value>
   </data>
@@ -42,6 +45,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>錯誤的請求</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>依難度</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>變更大頭貼</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>變更個人資料</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>分類方式</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>點擊登入</value>
@@ -111,6 +120,9 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>我的收藏</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>找不到</value>
   </data>
@@ -128,6 +140,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>檔案設定</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>食譜</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>食譜</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>註冊</value>

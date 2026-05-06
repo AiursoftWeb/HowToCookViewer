@@ -30,6 +30,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Mall</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Alla recept</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
@@ -39,6 +42,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>Felaktig begäran</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>Efter svårighetsgrad</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Byt avatar</value>
   </data>
@@ -47,6 +53,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>Ändra profil</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Klassificering</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Klicka för att logga in</value>
@@ -108,6 +117,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Mina favoriter</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Inte hittat</value>
   </data>
@@ -125,6 +137,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>Profilinställningar</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Recept</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>Recept</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Registrera</value>

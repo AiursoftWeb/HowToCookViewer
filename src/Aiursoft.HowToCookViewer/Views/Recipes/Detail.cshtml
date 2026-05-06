@@ -17,6 +17,37 @@
                 </ol>
             </nav>
         </div>
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <div class="col-auto d-flex gap-2">
+                <form asp-controller="Likes" asp-action="Toggle" method="post">
+                    <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn @(Model.IsLiked ? "btn-warning" : "btn-outline-warning")">
+                        <i class="align-middle me-1" data-lucide="thumbs-up"></i>
+                        @(Model.IsLiked ? "已点赞" : "点赞")
+                        <span class="badge @(Model.IsLiked ? "bg-white text-dark" : "bg-warning text-dark") ms-1">@Model.LikeCount</span>
+                    </button>
+                </form>
+                <form asp-controller="Favorites" asp-action="Toggle" method="post">
+                    <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn @(Model.IsFavorited ? "btn-danger" : "btn-outline-danger")">
+                        <i class="align-middle me-1" data-lucide="heart"></i>
+                        @(Model.IsFavorited ? "已收藏" : "收藏")
+                    </button>
+                </form>
+            </div>
+        }
+        @if (User.Identity?.IsAuthenticated != true && Model.LikeCount > 0)
+        {
+            <div class="col-auto">
+                <span class="btn btn-outline-warning disabled">
+                    <i class="align-middle me-1" data-lucide="thumbs-up"></i>
+                    @Model.LikeCount
+                </span>
+            </div>
+        }
     </div>
 
     <div class="row">
@@ -29,8 +60,129 @@
                 </div>
                 <div class="card-footer text-muted small">
                     <i class="align-middle me-1" data-lucide="git-commit-horizontal"></i>
-                    最后更新：@Model.Recipe.FileLastModified.ToString("yyyy-MM-dd")
+                    最后更新：<label data-utc-time="@Model.Recipe.FileLastModified.ToHtmlDateTime()"></label>
                 </div>
+            </div>
+
+            <!-- Comments Section
+ -->
+            <div id="comments" class="mt-4">
+                <h5 class="mb-3">
+                    <i class="align-middle me-1" data-lucide="message-circle"></i>
+                    评论 (@Model.Comments.Count)
+                </h5>
+
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <form asp-controller="Comments" asp-action="Post" method="post">
+                                <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
+                                @Html.AntiForgeryToken()
+                                <div class="mb-2">
+                                    <textarea name="content" class="form-control" rows="3"
+                                              placeholder="写下你的评论…" maxlength="1000" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm">发表评论</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+
+                @foreach (var comment in Model.Comments)
+                {
+                    <div class="card mb-3" id="comment-@comment.Id">
+                        <div class="card-body">
+                            <div class="d-flex gap-3">
+                                <img src="@Storage.RelativePathToInternetUrl(comment.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=72&square=true"
+                                     alt="@(comment.User?.DisplayName ?? "匿名")"
+                                     class="rounded-circle flex-shrink-0"
+                                     width="40" height="40" />
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <div>
+                                            <strong class="me-2">@(comment.User?.DisplayName ?? comment.User?.UserName ?? "匿名")</strong>
+                                            <small class="text-muted"><label data-utc-time="@comment.CreatedAt.ToHtmlDateTime()"></label></small>
+                                        </div>
+                                        @if (User.Identity?.IsAuthenticated == true &&
+                                             User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value == comment.UserId)
+                                        {
+                                            <form asp-controller="Comments" asp-action="Delete" method="post" class="d-inline">
+                                                <input type="hidden" name="commentId" value="@comment.Id" />
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="btn btn-link btn-sm text-danger p-0"
+                                                        onclick="return confirm('确定删除此评论及其所有回复？')">删除</button>
+                                            </form>
+                                        }
+                                    </div>
+                                    <p class="mb-2">@comment.Content</p>
+
+                                    <!-- Replies -->
+                                    @if (comment.Replies.Count > 0)
+                                    {
+                                        <div class="border-start ps-3 mt-2">
+                                            @foreach (var reply in comment.Replies.OrderBy(r => r.CreatedAt))
+                                            {
+                                                <div class="d-flex gap-2 mb-2 pt-2" id="comment-@reply.Id">
+                                                    <img src="@Storage.RelativePathToInternetUrl(reply.User?.AvatarRelativePath ?? Aiursoft.HowToCookViewer.Entities.User.DefaultAvatarPath)?w=48&square=true"
+                                                         alt="@(reply.User?.DisplayName ?? "匿名")"
+                                                         class="rounded-circle flex-shrink-0"
+                                                         width="32" height="32" />
+                                                    <div class="flex-grow-1">
+                                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                                            <div>
+                                                                <strong class="me-2">@(reply.User?.DisplayName ?? reply.User?.UserName ?? "匿名")</strong>
+                                                                <small class="text-muted"><label data-utc-time="@reply.CreatedAt.ToHtmlDateTime()"></label></small>
+                                                            </div>
+                                                            @if (User.Identity?.IsAuthenticated == true &&
+                                                                 User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value == reply.UserId)
+                                                            {
+                                                                <form asp-controller="Comments" asp-action="Delete" method="post" class="d-inline">
+                                                                    <input type="hidden" name="commentId" value="@reply.Id" />
+                                                                    @Html.AntiForgeryToken()
+                                                                    <button type="submit" class="btn btn-link btn-sm text-danger p-0"
+                                                                            onclick="return confirm('确定删除此回复？')">删除</button>
+                                                                </form>
+                                                            }
+                                                        </div>
+                                                        <p class="mb-0">@reply.Content</p>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+
+                                    <!-- Reply Form -->
+                                    @if (User.Identity?.IsAuthenticated == true)
+                                    {
+                                        <div class="mt-2">
+                                            <a class="btn btn-link btn-sm p-0 text-secondary toggle-reply"
+                                               data-target="reply-form-@comment.Id">回复</a>
+                                            <div id="reply-form-@comment.Id" class="d-none mt-2">
+                                                <form asp-controller="Comments" asp-action="Post" method="post">
+                                                    <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
+                                                    <input type="hidden" name="parentCommentId" value="@comment.Id" />
+                                                    @Html.AntiForgeryToken()
+                                                    <div class="mb-1">
+                                                        <textarea name="content" class="form-control form-control-sm" rows="2"
+                                                                  placeholder="回复 @(comment.User?.DisplayName ?? comment.User?.UserName ?? "")…"
+                                                                  maxlength="1000" required></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-secondary btn-sm">发送回复</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @if (Model.Comments.Count == 0)
+                {
+                    <p class="text-muted text-center py-3">暂无评论，来第一个留言吧！</p>
+                }
             </div>
         </div>
     </div>
@@ -51,3 +203,16 @@
 .recipe-markdown p { line-height: 1.8; }
 </style>
 }
+
+@section scripts {
+<script>
+document.querySelectorAll('.toggle-reply').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.getElementById(this.dataset.target);
+        if (target) target.classList.toggle('d-none');
+    });
+});
+</script>
+}
+

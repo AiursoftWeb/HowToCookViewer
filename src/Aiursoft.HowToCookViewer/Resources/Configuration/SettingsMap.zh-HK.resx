@@ -45,6 +45,9 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>測試用數字</value>
   </data>
+  <data name="HowToCook Repo URL" xml:space="preserve">
+    <value>HowToCook 儲存庫網址</value>
+  </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP編號</value>
   </data>
@@ -56,6 +59,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>顯示於頁尾的品牌名稱</value>
+  </data>
+  <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
+    <value>用於同步 HowToCook 食譜的 Git 倉庫 URL。</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>適用於中國內地用戶的ICP許可證編號。留空則隱藏。</value>

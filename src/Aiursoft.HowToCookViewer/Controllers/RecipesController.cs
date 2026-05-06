@@ -5,6 +5,7 @@ using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Markdig;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 [LimitPerMin]
 public class RecipesController(
     TemplateDbContext db,
+    UserManager<User> userManager,
     StorageService storageService) : Controller
 {
     private static readonly Dictionary<string, string> CategoryDisplayNames =
@@ -31,7 +33,7 @@ public class RecipesController(
             ["template"]       = "模板",
         };
 
-    public async Task<IActionResult> Index(string? category)
+    public async Task<IActionResult> Index(string? category, int? difficulty)
     {
         var query = db.Recipes
             .Include(r => r.Images)
@@ -40,13 +42,18 @@ public class RecipesController(
         if (!string.IsNullOrEmpty(category))
             query = query.Where(r => r.Category == category);
 
+        if (difficulty.HasValue)
+            query = query.Where(r => r.Difficulty == difficulty.Value);
+
         var recipes = await query
             .OrderBy(r => r.Name)
             .ToListAsync();
 
-        var displayName = string.IsNullOrEmpty(category)
-            ? "全部菜谱"
-            : CategoryDisplayNames.TryGetValue(category, out var name) ? name : category;
+        var displayName = difficulty.HasValue
+            ? new string('★', difficulty.Value)
+            : string.IsNullOrEmpty(category)
+                ? "全部菜谱"
+                : CategoryDisplayNames.TryGetValue(category, out var name) ? name : category;
 
         return this.StackView(new IndexViewModel
         {
@@ -67,7 +74,20 @@ public class RecipesController(
         if (recipe == null)
             return NotFound();
 
-        // Reconstruct full markdown by prepending cover image if present
+        var userId = userManager.GetUserId(User);
+        var isFavorited = userId != null &&
+            await db.RecipeFavorites.AnyAsync(f => f.UserId == userId && f.RecipeId == id);
+        var isLiked = userId != null &&
+            await db.RecipeLikes.AnyAsync(l => l.UserId == userId && l.RecipeId == id);
+        var likeCount = await db.RecipeLikes.CountAsync(l => l.RecipeId == id);
+
+        var comments = await db.RecipeComments
+            .Where(c => c.RecipeId == id && c.ParentCommentId == null)
+            .Include(c => c.User)
+            .Include(c => c.Replies).ThenInclude(r => r.User)
+            .OrderBy(c => c.CreatedAt)
+            .ToListAsync();
+
         var markdown = BuildFullMarkdown(recipe);
         var html = Markdown.ToHtml(markdown, new MarkdownPipelineBuilder()
             .UseAdvancedExtensions()
@@ -77,7 +97,11 @@ public class RecipesController(
         {
             PageTitle = recipe.Name,
             Recipe = recipe,
-            RenderedMarkdown = html
+            RenderedMarkdown = html,
+            IsFavorited = isFavorited,
+            IsLiked = isLiked,
+            LikeCount = likeCount,
+            Comments = comments
         });
     }
 

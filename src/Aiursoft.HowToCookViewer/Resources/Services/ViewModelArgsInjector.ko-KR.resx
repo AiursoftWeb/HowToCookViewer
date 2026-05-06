@@ -33,6 +33,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft 템플릿</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>모든 레시피</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>익명</value>
   </data>
@@ -42,6 +45,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>잘못된 요청</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>난이도별</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>아바타 변경</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>프로필 변경</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>분류</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>로그인하려면 클릭</value>
@@ -111,6 +120,9 @@
   <data name="Manage" xml:space="preserve">
     <value>관리</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>내 즐겨찾기</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>찾을 수 없음</value>
   </data>
@@ -128,6 +140,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>프로필 설정</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>레시피</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>레시피</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>회원가입</value>

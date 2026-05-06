@@ -30,6 +30,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Şablon</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Tüm Tarifler</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonim</value>
   </data>
@@ -39,6 +42,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>Geçersiz İstek</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>Zorluğa Göre</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Profil Resmini Değiştir</value>
   </data>
@@ -47,6 +53,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>Profil Değiştir</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Sınıflandırma</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Giriş yapmak için tıklayın</value>
@@ -108,6 +117,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Favorilerim</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Bulunamadı</value>
   </data>
@@ -125,6 +137,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>Profil Ayarları</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Tarif</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>Tarifler</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Kayıt Ol</value>

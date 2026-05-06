@@ -30,6 +30,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>قالب Aiursoft</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>جميع الوصفات</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>مجهول</value>
   </data>
@@ -39,6 +42,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>طلب خاطئ</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>حسب الصعوبة</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>تغيير الصورة الشخصية</value>
   </data>
@@ -47,6 +53,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>تغيير الملف الشخصي</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>التصنيف</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>انقر لتسجيل الدخول</value>
@@ -108,6 +117,9 @@
   <data name="Manage" xml:space="preserve">
     <value>إدارة</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>مفضلاتي</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>غير موجود</value>
   </data>
@@ -125,6 +137,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>إعدادات الملف الشخصي</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>وصفة</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>الوصفات</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>تسجيل</value>

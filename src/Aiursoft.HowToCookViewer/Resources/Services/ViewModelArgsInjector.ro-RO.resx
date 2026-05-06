@@ -30,6 +30,9 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Șablon Aiursoft</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Toate rețetele</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anonim</value>
   </data>
@@ -39,6 +42,9 @@
   <data name="Bad Request" xml:space="preserve">
     <value>Cerere greșită</value>
   </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>După dificultate</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Schimbă Avatarul</value>
   </data>
@@ -47,6 +53,9 @@
   </data>
   <data name="Change Profile" xml:space="preserve">
     <value>Modifică Profilul</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Clasificare</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>Apasă pentru a te autentifica</value>
@@ -108,6 +117,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Gestionează</value>
   </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Favoritele mele</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Nu a fost găsit</value>
   </data>
@@ -125,6 +137,12 @@
   </data>
   <data name="Profile Settings" xml:space="preserve">
     <value>Setări Profil</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Rețetă</value>
+  </data>
+  <data name="Recipes" xml:space="preserve">
+    <value>Rețete</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Înregistrare</value>

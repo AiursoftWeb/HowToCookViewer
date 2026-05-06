@@ -45,6 +45,9 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Numéro fictif</value>
   </data>
+  <data name="HowToCook Repo URL" xml:space="preserve">
+    <value>URL du dépôt HowToCook</value>
+  </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Numéro ICP</value>
   </data>
@@ -56,6 +59,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Le nom de la marque affiché dans le pied de page.</value>
+  </data>
+  <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
+    <value>L&apos;URL du dépôt Git à partir de laquelle synchroniser les recettes HowToCook.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>Le numéro de licence ICP pour les utilisateurs du continent chinois. Laissez vide pour masquer.</value>

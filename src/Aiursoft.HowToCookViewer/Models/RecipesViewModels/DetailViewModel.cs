@@ -14,4 +14,13 @@ public class DetailViewModel : UiStackLayoutViewModel
 
     /// <summary>Pre-rendered HTML from the recipe's Markdown content.</summary>
     public string RenderedMarkdown { get; set; } = string.Empty;
+
+    public bool IsFavorited { get; set; }
+
+    public bool IsLiked { get; set; }
+
+    public int LikeCount { get; set; }
+
+    /// <summary>Root-level comments with Replies pre-loaded.</summary>
+    public List<RecipeComment> Comments { get; set; } = [];
 }
