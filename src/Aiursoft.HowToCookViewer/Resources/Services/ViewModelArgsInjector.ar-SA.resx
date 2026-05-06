@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -31,13 +30,13 @@
     <value>قالب Aiursoft</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>جميع الوصفات</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>مجهول</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>مأكولات بحرية</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>المهام الخلفية</value>
@@ -46,19 +45,19 @@
     <value>طلب خاطئ</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>الفطور</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>حسب التعليقات</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>حسب الصعوبة</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>حسب المفضلة</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>حسب الإعجابات</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>تغيير الصورة الشخصية</value>
@@ -70,13 +69,13 @@
     <value>تغيير الملف الشخصي</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>التصنيف</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>انقر لتسجيل الدخول</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>المُكَيِّفَات</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>إنشاء دور</value>
@@ -94,13 +93,13 @@
     <value>حذف المستخدم</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>الحلويات</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>دليل</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>المشروبات</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>تعديل الدور</value>
@@ -130,13 +129,13 @@
     <value>خطأ الخادم الداخلي</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>الأقل تعليقًا</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>الأقل إعجابًا</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>الأقل إعجابًا</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>حظر الحساب</value>
@@ -151,16 +150,16 @@
     <value>إدارة</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>أطباق اللحوم</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>الأكثر تعليقاً</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>الأكثر مفضلة</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>الأكثر إعجاباً</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>مفضلاتي</value>
@@ -202,7 +201,7 @@
     <value>الأدوار</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>مُعدّ</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>الإعدادات</value>
@@ -211,10 +210,10 @@
     <value>تسجيل الخروج</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>الحساء</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>الطعام الأساسي</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>النظام</value>
@@ -226,7 +225,7 @@
     <value>قالب</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>القوالب</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>غير مصرح</value>
@@ -238,7 +237,7 @@
     <value>المستخدمون</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>أطباق الخضار</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>

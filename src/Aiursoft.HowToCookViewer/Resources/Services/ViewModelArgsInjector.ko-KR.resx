@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema id="root">
+        <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
+        </xs:element>
+    </xs:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -34,13 +33,13 @@
     <value>Aiursoft 템플릿</value>
   </data>
   <data name="All Recipes" xml:space="preserve">
-    <value>모든 레시피</value>
+    <value>All Recipes</value>
   </data>
   <data name="Anonymous" xml:space="preserve">
     <value>익명</value>
   </data>
   <data name="Aquatic" xml:space="preserve">
-    <value>수산물</value>
+    <value>Aquatic</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>백그라운드 작업</value>
@@ -49,19 +48,19 @@
     <value>잘못된 요청</value>
   </data>
   <data name="Breakfast" xml:space="preserve">
-    <value>조식</value>
+    <value>Breakfast</value>
   </data>
   <data name="By Comments" xml:space="preserve">
-    <value>댓글 기준</value>
+    <value>By Comments</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
-    <value>난이도별</value>
+    <value>By Difficulty</value>
   </data>
   <data name="By Favorites" xml:space="preserve">
-    <value>즐겨찾기 기준</value>
+    <value>By Favorites</value>
   </data>
   <data name="By Likes" xml:space="preserve">
-    <value>좋아요순</value>
+    <value>By Likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>아바타 변경</value>
@@ -73,13 +72,13 @@
     <value>프로필 변경</value>
   </data>
   <data name="Classification" xml:space="preserve">
-    <value>분류</value>
+    <value>Classification</value>
   </data>
   <data name="Click to login" xml:space="preserve">
     <value>로그인하려면 클릭</value>
   </data>
   <data name="Condiments" xml:space="preserve">
-    <value>양념</value>
+    <value>Condiments</value>
   </data>
   <data name="Create Role" xml:space="preserve">
     <value>역할 생성</value>
@@ -97,13 +96,13 @@
     <value>사용자 삭제</value>
   </data>
   <data name="Desserts" xml:space="preserve">
-    <value>디저트</value>
+    <value>Desserts</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>디렉터리</value>
   </data>
   <data name="Drinks" xml:space="preserve">
-    <value>음료</value>
+    <value>Drinks</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>역할 편집</value>
@@ -133,13 +132,13 @@
     <value>내부 서버 오류</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>댓글이 가장 적은 순</value>
+    <value>Least Commented</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>가장 즐겨찾기 적은 순</value>
+    <value>Least Favorited</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>가장 좋아요가 적은 순</value>
+    <value>Least Liked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>잠금 해제</value>
@@ -154,16 +153,16 @@
     <value>관리</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
-    <value>고기 요리</value>
+    <value>Meat Dishes</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>가장 많은 댓글이 달린</value>
+    <value>Most Commented</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>가장 많이 찜한</value>
+    <value>Most Favorited</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>좋아요 많은 순</value>
+    <value>Most Liked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>내 즐겨찾기</value>
@@ -205,7 +204,7 @@
     <value>역할</value>
   </data>
   <data name="Semi-finished" xml:space="preserve">
-    <value>반제품</value>
+    <value>Semi-finished</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>설정</value>
@@ -214,10 +213,10 @@
     <value>로그아웃</value>
   </data>
   <data name="Soups" xml:space="preserve">
-    <value>국물 요리</value>
+    <value>Soups</value>
   </data>
   <data name="Staple Food" xml:space="preserve">
-    <value>주식</value>
+    <value>Staple Food</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>시스템</value>
@@ -229,7 +228,7 @@
     <value>템플릿</value>
   </data>
   <data name="Templates" xml:space="preserve">
-    <value>템플릿</value>
+    <value>Templates</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>권한 없음</value>
@@ -241,7 +240,7 @@
     <value>사용자</value>
   </data>
   <data name="Vegetable Dishes" xml:space="preserve">
-    <value>야채 요리</value>
+    <value>Vegetable Dishes</value>
   </data>
 
 </root>
