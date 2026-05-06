@@ -1,288 +1,170 @@
-<div class="text-center mt-5">
-    <h1 class="display-4">@Localizer["Hello World!"]</h1>
-    <p>@Localizer["This is a template project, where we start the voyager..."]</p>
+@model Aiursoft.HowToCookViewer.Models.DashboardViewModels.IndexViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+
+@{
+    var totalPages = (int)Math.Ceiling((double)Model.TotalResults / Aiursoft.HowToCookViewer.Models.DashboardViewModels.IndexViewModel.PageSize);
+    var hasQuery = !string.IsNullOrWhiteSpace(Model.Query);
+}
+
+@* ── Hero / Search bar ─────────────────────────────────────────────── *@
+<div class="jumbotron p-4 mb-4" style="background: linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%); border-radius:.75rem;">
+    <div class="container text-center py-3">
+        <h1 class="display-5 fw-bold text-white mb-1">
+            <i class="align-middle me-2" data-lucide="chef-hat"></i> @Localizer["Recipe Search"]
+        </h1>
+        <p class="text-white-50 mb-4">
+            @Localizer["Search across <strong class=\"text-white\">{0}</strong> recipes from HowToCook", Model.TotalRecipes.ToString("N0")]
+        </p>
+        <form method="get" asp-action="Index" asp-controller="Dashboard">
+            <div class="input-group input-group-lg mx-auto" style="max-width:640px;">
+                <span class="input-group-text bg-white border-end-0">
+                    <i data-lucide="search" style="width:20px;height:20px;"></i>
+                </span>
+                <input type="text"
+                       name="q"
+                       class="form-control border-start-0 ps-0"
+                       placeholder="@Localizer["Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)"]"
+                       value="@Model.Query"
+                       autofocus />
+                <button class="btn btn-primary px-4" type="submit">@Localizer["Search"]</button>
+            </div>
+        </form>
+    </div>
 </div>
 
-<div class="container-fluid p-5">
-    <div class="row mb-2 mb-xl-3">
-        <div class="col-auto d-none d-sm-block">
-            <h3>@Localizer["Welcome"]</h3>
-        </div>
-
-        <div class="col-auto ms-auto text-end mt-n1">
-            <a href="https://template-docs.aiursoft.com/en/Tutorial/before.html" class="btn btn-primary me-2 shadow-sm" target="_blank">
-                <i class="align-middle" data-lucide="rocket"></i> @Localizer["Start a new project"]
-            </a>
-            <a href="https://template-docs.aiursoft.com/" class="btn btn-outline-primary shadow-sm" target="_blank">
-                <i class="align-middle" data-lucide="book"></i> @Localizer["Read the document"]
-            </a>
-        </div>
+@* ── Results ───────────────────────────────────────────────────────── *@
+@if (hasQuery)
+{
+    <div class="d-flex align-items-center mb-3 gap-2">
+        <span class="text-muted">
+            @Model.TotalResults.ToString("N0") @Localizer[Model.TotalResults == 1 ? "result for" : "results for"]
+        </span>
+        <code class="fs-6">"@Model.Query"</code>
+        <a asp-action="Index" asp-controller="Dashboard" class="btn btn-sm btn-outline-secondary ms-auto">
+            <i class="align-middle me-1" data-lucide="x"></i> @Localizer["Clear"]
+        </a>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">@Localizer["Why use the Aiursoft Template?"]</h5>
-                    <p class="mb-0 text-muted mt-2">@Localizer["A modern, feature-rich, and highly extensible foundation for your next web application."]</p>
+    @if (!Model.Results.Any())
+    {
+        <div class="card">
+            <div class="card-body text-center py-5">
+                <i data-lucide="chef-hat" style="width:48px;height:48px;" class="text-muted mb-3 d-block mx-auto"></i>
+                <h5 class="text-muted">@Localizer["No recipes found matching"] <code>@Model.Query</code></h5>
+                <p class="text-muted small mb-0">@Localizer["Try a shorter name or check spelling."]</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var recipe in Model.Results)
+            {
+                var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
+                var coverUrl = cover != null
+                    ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
+                    : null;
+                var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+                <div class="col-12">
+                    <a asp-controller="Recipes" asp-action="Detail" asp-route-id="@recipe.Id"
+                       class="card mb-0 shadow-sm text-decoration-none text-body">
+                        <div class="card-body py-3">
+                            <div class="d-flex align-items-start gap-3">
+                                @if (coverUrl != null)
+                                {
+                                    <img src="@coverUrl" alt="@recipe.Name"
+                                         class="rounded-2 object-fit-cover flex-shrink-0"
+                                         style="width:64px;height:64px;object-fit:cover;" />
+                                }
+                                else
+                                {
+                                    <div class="rounded-2 d-flex align-items-center justify-content-center bg-primary text-white flex-shrink-0"
+                                         style="width:64px;height:64px;">
+                                        <i data-lucide="utensils" style="width:28px;height:28px;"></i>
+                                    </div>
+                                }
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                                        <span class="fs-5 fw-semibold">@recipe.Name</span>
+                                        <span class="badge bg-secondary small">@recipe.Category</span>
+                                        <span class="text-warning small">@difficultyStars</span>
+                                        @if (Model.LikeCounts.TryGetValue(recipe.Id, out var likes) && likes > 0)
+                                        {
+                                            <span class="text-muted small">
+                                                <i data-lucide="thumbs-up" style="width:13px;height:13px;" class="me-1"></i>@likes
+                                            </span>
+                                        }
+                                    </div>
+                                    @if (!string.IsNullOrWhiteSpace(recipe.Description))
+                                    {
+                                        <p class="text-muted mb-0 small text-truncate">@recipe.Description</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="database"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Multiple Database Provider Support"]</h5>
-                                    <p>@Localizer["Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing."]</p>
-                                </div>
-                            </div>
-                        </div>
+            }
+        </div>
 
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="key-round"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["OpenID Connect Integration"]</h5>
-                                    <p>@Localizer["Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="shield-check"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["RBAC Authorization"]</h5>
-                                    <p>@Localizer["A built-in Role-Based Access Control (RBAC) system for fine-grained permission management."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="navigation"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Dynamic Navigation Bar"]</h5>
-                                    <p>@Localizer["The navigation bar automatically adjusts based on user roles and permissions."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="check-circle-2"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Consistency Validation"]</h5>
-                                    <p>@Localizer["Models are validated on both client and server sides based on data annotations."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="languages"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["AI-Powered Translations"]</h5>
-                                    <p>@Localizer["Automatic, AI-driven translation into 28 languages."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="book-open-text"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Comprehensive Documentation"]</h5>
-                                    <p>@Localizer["Includes extensive documentation and practical examples to get you started quickly."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="user-cog"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Built-in User Management"]</h5>
-                                    <p>@Localizer["A complete solution for user authentication and profile management."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="zap"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Automatic Dependency Injection"]</h5>
-                                    <p>@Localizer["All dependencies are automatically registered and always available via constructor injection."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="folder-archive"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Integrated File Management"]</h5>
-                                    <p>@Localizer["Features a built-in file management system with automatic avatar compression and privacy protection."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="airplay"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Responsive Design"]</h5>
-                                    <p>@Localizer["A fully responsive layout that looks great on both desktop and mobile devices."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="moon"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Automatic Dark Mode"]</h5>
-                                    <p>@Localizer["Smart dark mode that adapts to the user's system settings."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="ship"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Dockerized for Easy Deployment"]</h5>
-                                    <p>@Localizer["Comes with Docker support for simplified and consistent deployments."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="test-tube-2"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Robust Integration Testing"]</h5>
-                                    <p>@Localizer["Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="globe"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Automatic Time Zone Handling"]</h5>
-                                    <p>@Localizer["Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="cpu"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Background Job Processing"]</h5>
-                                    <p>@Localizer["\"Fire-and-forget\" support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="calendar-clock"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Scheduled Task Management"]</h5>
-                                    <p>@Localizer["Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs."]</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4 d-flex">
-                            <div class="d-flex align-items-start py-3">
-                                <div class="d-inline-block me-3">
-                                    <div class="stat">
-                                        <i class="align-middle" data-lucide="settings-2"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="mt-0">@Localizer["Smart Configuration Overrides"]</h5>
-                                    <p>@Localizer["Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides."]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        @* Pagination *@
+        @if (totalPages > 1)
+        {
+            <nav class="mt-4" aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item @(Model.Page <= 1 ? "disabled" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page - 1)">@Localizer["‹ Prev"]</a>
+                    </li>
+                    @for (var p = Math.Max(1, Model.Page - 2); p <= Math.Min(totalPages, Model.Page + 2); p++)
+                    {
+                        var pageNum = p;
+                        <li class="page-item @(pageNum == Model.Page ? "active" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@pageNum">@pageNum</a>
+                        </li>
+                    }
+                    <li class="page-item @(Model.Page >= totalPages ? "disabled" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page + 1)">@Localizer["Next ›"]</a>
+                    </li>
+                </ul>
+            </nav>
+        }
+    }
+}
+else
+{
+    @* ── Landing hints when no query ────────────────────────────────── *@
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center py-4">
+                    <i data-lucide="search" style="width:36px;height:36px;" class="text-primary mb-2 d-block mx-auto"></i>
+                    <h6 class="fw-semibold">@Localizer["Search Recipes"]</h6>
+                    <p class="text-muted small mb-0">@Localizer["Type a recipe name above to search across all recipes with intelligent relevance ranking."]</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center py-4">
+                    <i data-lucide="layers" style="width:36px;height:36px;" class="text-success mb-2 d-block mx-auto"></i>
+                    <h6 class="fw-semibold">@Localizer["Browse by Category"]</h6>
+                    <p class="text-muted small mb-0">@Localizer["Use the sidebar to browse recipes by category or difficulty level."]</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center py-4">
+                    <i data-lucide="shuffle" style="width:36px;height:36px;" class="text-info mb-2 d-block mx-auto"></i>
+                    <h6 class="fw-semibold">@Localizer["Feeling Lucky?"]</h6>
+                    <p class="text-muted small mb-0">
+                        <a asp-controller="Recipes" asp-action="Random">@Localizer["Try a random recipe"]</a>
+                        @Localizer["and discover something new to cook today."]
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+}
 
-</div>

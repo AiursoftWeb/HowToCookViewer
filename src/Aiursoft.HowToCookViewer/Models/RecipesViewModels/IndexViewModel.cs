@@ -16,6 +16,9 @@ public class IndexViewModel : UiStackLayoutViewModel
     /// <summary>Null means "all difficulties".</summary>
     public int? Difficulty { get; set; }
 
+    /// <summary>Null means default (name) order. Values: likes_desc/asc, comments_desc/asc, favorites_desc/asc.</summary>
+    public string? SortBy { get; set; }
+
     public string CategoryDisplayName { get; set; } = "全部菜谱";
 
     public List<Recipe> Recipes { get; set; } = [];

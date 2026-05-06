@@ -119,6 +119,19 @@ public class ViewModelArgsInjector(
         _ = localizer["Condiments"];
         _ = localizer["Semi-finished"];
         _ = localizer["Templates"];
+
+        // Sort-by nav labels
+        _ = localizer["Classification"];
+        _ = localizer["By Difficulty"];
+        _ = localizer["By Likes"];
+        _ = localizer["Most Liked"];
+        _ = localizer["Least Liked"];
+        _ = localizer["By Comments"];
+        _ = localizer["Most Commented"];
+        _ = localizer["Least Commented"];
+        _ = localizer["By Favorites"];
+        _ = localizer["Most Favorited"];
+        _ = localizer["Least Favorited"];
     }
 
     public void InjectSimple(
@@ -257,7 +270,8 @@ public class ViewModelArgsInjector(
                 }).ToList()
             };
 
-            // NavGroup 2: "分类方式" → collapses to difficulty star links
+            // NavGroup 2: "Classification" → By Difficulty, By Likes, By Comments, By Favorites
+            var currentSortBy = context.Request.Query["sortBy"].ToString();
             var classificationGroup = new NavGroup
             {
                 Name = localizer["Classification"],
@@ -275,6 +289,42 @@ public class ViewModelArgsInjector(
                             Href     = $"/Recipes/Index?difficulty={stars}",
                             IsActive = isOnRecipesController && currentDifficulty == stars.ToString()
                         }).ToList()
+                    },
+                    new CascadedSideBarItem
+                    {
+                        UniqueId   = "recipes-likes",
+                        LucideIcon = "thumbs-up",
+                        Text       = localizer["By Likes"],
+                        IsActive   = isOnRecipesController && (currentSortBy == "likes_desc" || currentSortBy == "likes_asc"),
+                        Links      =
+                        [
+                            new CascadedLink { Text = localizer["Most Liked"],  Href = "/Recipes/Index?sortBy=likes_desc", IsActive = isOnRecipesController && currentSortBy == "likes_desc" },
+                            new CascadedLink { Text = localizer["Least Liked"], Href = "/Recipes/Index?sortBy=likes_asc",  IsActive = isOnRecipesController && currentSortBy == "likes_asc"  }
+                        ]
+                    },
+                    new CascadedSideBarItem
+                    {
+                        UniqueId   = "recipes-comments",
+                        LucideIcon = "message-circle",
+                        Text       = localizer["By Comments"],
+                        IsActive   = isOnRecipesController && (currentSortBy == "comments_desc" || currentSortBy == "comments_asc"),
+                        Links      =
+                        [
+                            new CascadedLink { Text = localizer["Most Commented"],  Href = "/Recipes/Index?sortBy=comments_desc", IsActive = isOnRecipesController && currentSortBy == "comments_desc" },
+                            new CascadedLink { Text = localizer["Least Commented"], Href = "/Recipes/Index?sortBy=comments_asc",  IsActive = isOnRecipesController && currentSortBy == "comments_asc"  }
+                        ]
+                    },
+                    new CascadedSideBarItem
+                    {
+                        UniqueId   = "recipes-favorites",
+                        LucideIcon = "heart",
+                        Text       = localizer["By Favorites"],
+                        IsActive   = isOnRecipesController && (currentSortBy == "favorites_desc" || currentSortBy == "favorites_asc"),
+                        Links      =
+                        [
+                            new CascadedLink { Text = localizer["Most Favorited"],  Href = "/Recipes/Index?sortBy=favorites_desc", IsActive = isOnRecipesController && currentSortBy == "favorites_desc" },
+                            new CascadedLink { Text = localizer["Least Favorited"], Href = "/Recipes/Index?sortBy=favorites_asc",  IsActive = isOnRecipesController && currentSortBy == "favorites_asc"  }
+                        ]
                     }
                 ]
             };

@@ -37,7 +37,7 @@ public class RecipesController(
             ["template"]       = "Templates",
         };
 
-    public async Task<IActionResult> Index(string? category, int? difficulty)
+    public async Task<IActionResult> Index(string? category, int? difficulty, string? sortBy)
     {
         var query = db.Recipes
             .Include(r => r.Images)
@@ -49,9 +49,18 @@ public class RecipesController(
         if (difficulty.HasValue)
             query = query.Where(r => r.Difficulty == difficulty.Value);
 
-        var recipes = await query
-            .OrderBy(r => r.Name)
-            .ToListAsync();
+        IQueryable<Recipe> ordered = sortBy switch
+        {
+            "likes_desc"     => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
+            "likes_asc"      => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
+            "comments_desc"  => query.OrderByDescending(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)).ThenBy(r => r.Name),
+            "comments_asc"   => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)).ThenBy(r => r.Name),
+            "favorites_desc" => query.OrderByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)).ThenBy(r => r.Name),
+            "favorites_asc"  => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)).ThenBy(r => r.Name),
+            _                => query.OrderBy(r => r.Name)
+        };
+
+        var recipes = await ordered.ToListAsync();
 
         var recipeIds = recipes.Select(r => r.Id).ToList();
         var likeCounts = await db.RecipeLikes
@@ -60,17 +69,27 @@ public class RecipesController(
             .Select(g => new { RecipeId = g.Key, Count = g.Count() })
             .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
 
-        var displayName = difficulty.HasValue
-            ? localizer["Difficulty {0} Stars", difficulty.Value].Value
-            : string.IsNullOrEmpty(category)
-                ? localizer["All Recipes"].Value
-                : localizer[CategoryLocalizerKeys.TryGetValue(category, out var key) ? key : category].Value;
+        var displayName = sortBy switch
+        {
+            "likes_desc"     => localizer["Most Liked"].Value,
+            "likes_asc"      => localizer["Least Liked"].Value,
+            "comments_desc"  => localizer["Most Commented"].Value,
+            "comments_asc"   => localizer["Least Commented"].Value,
+            "favorites_desc" => localizer["Most Favorited"].Value,
+            "favorites_asc"  => localizer["Least Favorited"].Value,
+            _ => difficulty.HasValue
+                ? localizer["Difficulty {0} Stars", difficulty.Value].Value
+                : string.IsNullOrEmpty(category)
+                    ? localizer["All Recipes"].Value
+                    : localizer[CategoryLocalizerKeys.TryGetValue(category, out var key) ? key : category].Value
+        };
 
         return this.StackView(new IndexViewModel
         {
             PageTitle = displayName,
             Category = category,
             Difficulty = difficulty,
+            SortBy = sortBy,
             CategoryDisplayName = displayName,
             Recipes = recipes,
             TotalCount = recipes.Count,
@@ -78,7 +97,7 @@ public class RecipesController(
         });
     }
 
-    public async Task<IActionResult> Random(string? category, int? difficulty)
+    public async Task<IActionResult> Random(string? category, int? difficulty, string? sortBy)
     {
         var query = db.Recipes.AsQueryable();
 
@@ -90,7 +109,7 @@ public class RecipesController(
 
         var ids = await query.Select(r => r.Id).ToListAsync();
         if (ids.Count == 0)
-            return RedirectToAction(nameof(Index), new { category, difficulty });
+            return RedirectToAction(nameof(Index), new { category, difficulty, sortBy });
 
         var randomId = ids[System.Random.Shared.Next(ids.Count)];
         return RedirectToAction(nameof(Detail), new { id = randomId });

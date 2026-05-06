@@ -17,6 +17,7 @@
                 <a asp-controller="Recipes" asp-action="Random"
                    asp-route-category="@Model.Category"
                    asp-route-difficulty="@Model.Difficulty"
+                   asp-route-sortBy="@Model.SortBy"
                    class="btn btn-outline-primary">
                     <i class="align-middle me-1" data-lucide="shuffle"></i>
                     @Localizer["Random Recipe"]
