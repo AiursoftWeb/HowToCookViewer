@@ -240,4 +240,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Tips Memasak</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Belajar</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Lanjutan</value>
+  </data>
 </root>

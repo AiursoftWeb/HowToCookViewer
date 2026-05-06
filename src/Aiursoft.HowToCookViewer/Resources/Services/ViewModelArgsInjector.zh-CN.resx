@@ -243,4 +243,13 @@
     <value>素菜</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>烹饪技巧</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>学习</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>高级</value>
+  </data>
 </root>

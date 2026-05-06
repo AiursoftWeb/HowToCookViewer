@@ -243,4 +243,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>เคล็ดลับการทำอาหาร</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>เรียนรู้</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>ขั้นสูง</value>
+  </data>
 </root>

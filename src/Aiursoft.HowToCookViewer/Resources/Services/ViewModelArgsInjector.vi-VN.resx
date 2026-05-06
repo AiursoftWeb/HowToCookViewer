@@ -243,4 +243,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Mẹo nấu ăn</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Học hỏi</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Nâng cao</value>
+  </data>
 </root>

@@ -243,4 +243,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Cooking Tips</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Learn</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
 </root>

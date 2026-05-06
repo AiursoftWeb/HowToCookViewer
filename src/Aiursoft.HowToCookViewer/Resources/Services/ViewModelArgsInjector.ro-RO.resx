@@ -240,4 +240,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>Sfaturi de gătit</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>Învăța</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Avansat</value>
+  </data>
 </root>

@@ -243,4 +243,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>料理のコツ</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>学ぶ</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>上級</value>
+  </data>
 </root>

@@ -240,4 +240,13 @@
     <value>Vegetable Dishes</value>
   </data>
 
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>खाना पकाने के टिप्स</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>सीखें</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>उन्नत</value>
+  </data>
 </root>
