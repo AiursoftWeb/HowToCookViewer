@@ -216,5 +216,13 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>为何选择 Aiursoft 模板？</value>
   </data>
-
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>在 HowToCook 中搜索 &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; 道菜谱</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
 </root>
