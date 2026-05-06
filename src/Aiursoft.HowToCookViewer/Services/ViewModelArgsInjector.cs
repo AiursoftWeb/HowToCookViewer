@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.Extensions.Localization;
 
 namespace Aiursoft.HowToCookViewer.Services;
 
@@ -101,7 +102,7 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Recipes"];
         _ = localizer["All Recipes"];
-    
+
         _ = localizer["My Favorites"];
         _ = localizer["Recipe"];
 
@@ -130,7 +131,7 @@ public class ViewModelArgsInjector(
         _ = localizer["By Favorites"];
         _ = localizer["Most Favorited"];
         _ = localizer["Least Favorited"];
-    
+
         _ = localizer["Recipe Search"];
     }
 

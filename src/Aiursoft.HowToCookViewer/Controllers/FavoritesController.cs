@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
+using Aiursoft.UiStack.Navigation;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
