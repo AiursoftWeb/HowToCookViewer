@@ -361,6 +361,20 @@ public class ViewModelArgsInjector(
             var isOnTipsController = string.Equals(currentViewingController, "Tips", StringComparison.OrdinalIgnoreCase);
             var currentTipId = context.GetRouteValue("id")?.ToString();
 
+            // Load localized tip titles for the current culture.
+            var tipCulture = context.Features.Get<IRequestCultureFeature>()?.RequestCulture.Culture.Name ?? string.Empty;
+            var tipIds = allTips.Select(t => t.Id).ToList();
+            var localizedTipTitles = db.LocalizedTips
+                .AsNoTracking()
+                .Where(lt => lt.Culture == tipCulture && tipIds.Contains(lt.TipId) && lt.LocalizedTitle != null)
+                .Select(lt => new { lt.TipId, lt.LocalizedTitle })
+                .ToDictionary(lt => lt.TipId, lt => lt.LocalizedTitle!);
+
+            string ResolveTitle(int tipId, string originalTitle) =>
+                localizedTipTitles.TryGetValue(tipId, out var locTitle) && !string.IsNullOrWhiteSpace(locTitle)
+                    ? locTitle
+                    : originalTitle;
+
             var tipsItems = new List<SideBarItem>();
 
             // Root tips first (direct links)
@@ -369,7 +383,7 @@ public class ViewModelArgsInjector(
                 tipsItems.Add(new LinkSideBarItem
                 {
                     LucideIcon = "file-text",
-                    Text       = tip.Title,
+                    Text       = ResolveTitle(tip.Id, tip.Title),
                     Href       = $"/Tips/Detail/{tip.Id}",
                     IsActive   = isOnTipsController && currentTipId == tip.Id.ToString()
                 });
@@ -391,7 +405,7 @@ public class ViewModelArgsInjector(
                     IsActive   = isOnTipsController && catTips.Any(t => currentTipId == t.Id.ToString()),
                     Links      = catTips.Select(t => new CascadedLink
                     {
-                        Text     = t.Title,
+                        Text     = ResolveTitle(t.Id, t.Title),
                         Href     = $"/Tips/Detail/{t.Id}",
                         IsActive = isOnTipsController && currentTipId == t.Id.ToString()
                     }).ToList()
