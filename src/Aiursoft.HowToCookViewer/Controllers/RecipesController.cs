@@ -101,16 +101,30 @@ public class RecipesController(
         if (difficulty.HasValue)
             query = query.Where(r => r.Difficulty == difficulty.Value);
 
-        return sortBy switch
+        IOrderedQueryable<Recipe> ordered = sortBy switch
         {
-            "likes_desc"     => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
-            "likes_asc"      => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)).ThenBy(r => r.Name),
-            "comments_desc"  => query.OrderByDescending(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)).ThenBy(r => r.Name),
-            "comments_asc"   => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)).ThenBy(r => r.Name),
-            "favorites_desc" => query.OrderByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)).ThenBy(r => r.Name),
-            "favorites_asc"  => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)).ThenBy(r => r.Name),
-            _                => query.OrderBy(r => r.Name)
+            "likes_desc"     => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
+            "likes_asc"      => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
+            "comments_desc"  => query.OrderByDescending(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
+            "comments_asc"   => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
+            "favorites_desc" => query.OrderByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
+            "favorites_asc"  => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
+            _                => query.OrderByDescending(r => r.Images.Any())
         };
+
+        if (string.IsNullOrEmpty(sortBy))
+        {
+            return ordered
+                .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
+                .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
+                .ThenBy(r => r.Name);
+        }
+
+        return ordered
+            .ThenByDescending(r => r.Images.Any())
+            .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
+            .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
+            .ThenBy(r => r.Name);
     }
 
     private string GetDisplayName(string? category, int? difficulty, string? sortBy) =>

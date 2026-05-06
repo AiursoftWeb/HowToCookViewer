@@ -23,6 +23,7 @@ public static class RecipeSearchService
 {
     public static async Task<(List<Recipe> Items, int TotalCount)> SearchAsync(
         IQueryable<Recipe> baseQuery,
+        TemplateDbContext db,
         string keyword,
         int page,
         int pageSize,
@@ -32,8 +33,8 @@ public static class RecipeSearchService
         if (terms.Length == 0) return ([], 0);
 
         return terms.Length == 1
-            ? await SingleTermSqlSearch(baseQuery, terms[0], page, pageSize, ct)
-            : await MultiTermHybridSearch(baseQuery, terms, page, pageSize, ct);
+            ? await SingleTermSqlSearch(baseQuery, db, terms[0], page, pageSize, ct)
+            : await MultiTermHybridSearch(baseQuery, db, terms, page, pageSize, ct);
     }
 
     /// <summary>
@@ -41,6 +42,7 @@ public static class RecipeSearchService
     /// </summary>
     private static async Task<(List<Recipe> Items, int TotalCount)> SingleTermSqlSearch(
         IQueryable<Recipe> baseQuery,
+        TemplateDbContext db,
         string term,
         int page,
         int pageSize,
@@ -61,6 +63,9 @@ public static class RecipeSearchService
 
         var ordered = scoreQuery
             .OrderByDescending(x => x.Score)
+            .ThenByDescending(x => x.Recipe.Images.Any())
+            .ThenByDescending(x => db.RecipeLikes.Count(l => l.RecipeId == x.Recipe.Id))
+            .ThenByDescending(x => db.RecipeFavorites.Count(f => f.RecipeId == x.Recipe.Id))
             .ThenBy(x => x.Recipe.Name)
             .Select(x => x.Recipe);
 
@@ -79,6 +84,7 @@ public static class RecipeSearchService
     /// </summary>
     private static async Task<(List<Recipe> Items, int TotalCount)> MultiTermHybridSearch(
         IQueryable<Recipe> baseQuery,
+        TemplateDbContext db,
         string[] terms,
         int page,
         int pageSize,
@@ -87,14 +93,28 @@ public static class RecipeSearchService
         var filtered = await baseQuery
             .Where(r => terms.Any(t => r.Name.Contains(t))
                      || terms.Any(t => r.Description.Contains(t)))
-            .Include(r => r.Images)
+            .Select(r => new
+            {
+                Recipe = r,
+                LikeCount = db.RecipeLikes.Count(l => l.RecipeId == r.Id),
+                FavoriteCount = db.RecipeFavorites.Count(f => f.RecipeId == r.Id),
+                r.Images
+            })
             .AsNoTracking()
             .ToListAsync(ct);
 
+        foreach (var item in filtered)
+        {
+            item.Recipe.Images = item.Images.ToList();
+        }
+
         var ordered = filtered
-            .Select(r => (Recipe: r, Score: ComputeScore(r, terms)))
+            .Select(x => (x.Recipe, x.LikeCount, x.FavoriteCount, Score: ComputeScore(x.Recipe, terms)))
             .Where(x => x.Score > 0)
             .OrderByDescending(x => x.Score)
+            .ThenByDescending(x => x.Recipe.Images.Any())
+            .ThenByDescending(x => x.LikeCount)
+            .ThenByDescending(x => x.FavoriteCount)
             .ThenBy(x => x.Recipe.Name)
             .Select(x => x.Recipe)
             .ToList();
