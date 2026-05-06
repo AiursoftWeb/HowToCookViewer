@@ -30,5 +30,7 @@
   <data name="Random Recipe" xml:space="preserve">
     <value>隨機食譜</value>
   </data>
-
+  <data name="Total {0} recipes" xml:space="preserve">
+    <value>共 {0} 道食譜</value>
+  </data>
 </root>
