@@ -3,7 +3,6 @@ using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
-using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Markdig;
 using Microsoft.AspNetCore.Identity;
@@ -238,7 +237,7 @@ public class RecipesController(
         var parts = new List<string> { $"# {name}" };
 
         // Cover image block (displayed at top for detail page)
-        var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
+        var cover = recipe.Images.FirstOrDefault(p => p.IsCover);
         if (cover != null)
         {
             var url = storageService.RelativePathToInternetUrl(cover.LogicalPath);

@@ -1,6 +1,5 @@
 using Aiursoft.GitRunner;
 using Aiursoft.HowToCookViewer.Configuration;
-using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.BackgroundJobs;
