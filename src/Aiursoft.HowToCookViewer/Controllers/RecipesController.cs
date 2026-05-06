@@ -19,6 +19,7 @@ public class RecipesController(
     StorageService storageService,
     GlobalSettingsService globalSettingsService,
     RecipeLocalizationService recipeLocalization,
+    RecipeContributorService recipeContributorService,
     IStringLocalizer<RecipesController> localizer) : Controller
 {
     internal static readonly Dictionary<string, string> CategoryLocalizerKeys =
@@ -212,6 +213,7 @@ public class RecipesController(
             ? repoUrl[..^4]
             : repoUrl;
         var gitHubEditUrl = $"{repoWebUrl}/edit/master/{recipe.FilePath.Replace('\\', '/')}";
+        var contributors = await recipeContributorService.GetContributorsAsync(recipe.FilePath);
 
         return this.StackView(new DetailViewModel
         {
@@ -224,7 +226,8 @@ public class RecipesController(
             Comments = comments,
             GitHubEditUrl = gitHubEditUrl,
             CategoryDisplayName = GetDisplayName(recipe.Category, null, null),
-            LocalizedRecipe = localized
+            LocalizedRecipe = localized,
+            Contributors = contributors
         });
     }
 
