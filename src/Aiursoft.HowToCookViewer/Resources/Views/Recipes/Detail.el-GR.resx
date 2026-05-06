@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
+    <value>Είστε σίγουρος ότι θέλετε να διαγράψετε αυτό το σχόλιο και όλες τις απαντήσεις του;</value>
+  </data>
+  <data name="Are you sure you want to delete this reply?" xml:space="preserve">
+    <value>Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την απάντηση;</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Σχόλια</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="Login to comment" xml:space="preserve">
+    <value>Εγγραφή για να σχολιάσετε</value>
+  </data>
+  <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
+    <value>Δεν υπάρχουν σχόλια ακόμα. Γίνετε ο πρώτος που θα αφήσει ένα!</value>
+  </data>
+  <data name="Post Comment" xml:space="preserve">
+    <value>Δημοσίευση Σχολίου</value>
+  </data>
+  <data name="Send Reply" xml:space="preserve">
+    <value>Αποστολή απάντησης</value>
+  </data>
+  <data name="Write your comment…" xml:space="preserve">
+    <value>Γράψτε το σχόλιό σας...</value>
+  </data>
+
+</root>

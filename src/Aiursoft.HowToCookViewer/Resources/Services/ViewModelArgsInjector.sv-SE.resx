@@ -36,11 +36,17 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Vattenlevande</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Bakgrundsjobb</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>Felaktig begäran</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Frukost</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>Efter svårighetsgrad</value>
@@ -60,6 +66,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klicka för att logga in</value>
   </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Tillbehör</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Skapa roll</value>
   </data>
@@ -75,8 +84,14 @@
   <data name="Delete User" xml:space="preserve">
     <value>Ta bort användare</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Efterrätter</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Katalog</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Drycker</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Redigera roll</value>
@@ -117,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>Köttätter</value>
+  </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mina favoriter</value>
   </data>
@@ -153,11 +171,20 @@
   <data name="Roles" xml:space="preserve">
     <value>Roller</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Färdigvaror</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Inställningar</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Logga ut</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Soppor</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Grundkost</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>System</value>
@@ -168,6 +195,9 @@
   <data name="Template" xml:space="preserve">
     <value>Mall</value>
   </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Mallar</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Obehörig</value>
   </data>
@@ -176,6 +206,9 @@
   </data>
   <data name="Users" xml:space="preserve">
     <value>Användare</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Grönsaksrätter</value>
   </data>
 
 </root>

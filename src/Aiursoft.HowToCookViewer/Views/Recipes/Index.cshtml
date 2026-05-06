@@ -9,15 +9,27 @@
                 <i class="align-middle me-2" data-lucide="utensils"></i>
                 @Model.CategoryDisplayName
             </h3>
-            <p class="text-muted mb-0">共 @Model.TotalCount 道菜谱</p>
+            <p class="text-muted mb-0">@Localizer["Total {0} recipes", Model.TotalCount]</p>
         </div>
+        @if (Model.TotalCount > 0)
+        {
+            <div class="col-auto align-self-center">
+                <a asp-controller="Recipes" asp-action="Random"
+                   asp-route-category="@Model.Category"
+                   asp-route-difficulty="@Model.Difficulty"
+                   class="btn btn-outline-primary">
+                    <i class="align-middle me-1" data-lucide="shuffle"></i>
+                    @Localizer["Random Recipe"]
+                </a>
+            </div>
+        }
     </div>
 
     @if (Model.Recipes.Count == 0)
     {
         <div class="alert alert-info">
             <i class="align-middle me-2" data-lucide="info"></i>
-            暂无菜谱，后台任务可能还未完成索引。
+            @Localizer["No recipes yet. The background indexing job may still be running."]
         </div>
     }
     else
@@ -41,7 +53,19 @@
                                  onerror="this.src='/img/no-image.svg'">
                             <div class="card-body pb-2">
                                 <h6 class="card-title mb-1 fw-bold text-truncate">@recipe.Name</h6>
-                                <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
+                                    @{
+                                        var likes = Model.LikeCounts.TryGetValue(recipe.Id, out var lc) ? lc : 0;
+                                    }
+                                    @if (likes > 0)
+                                    {
+                                        <small class="text-muted">
+                                            <i class="align-middle" data-lucide="thumbs-up" style="width:13px;height:13px;"></i>
+                                            @likes
+                                        </small>
+                                    }
+                                </div>
                                 @if (!string.IsNullOrWhiteSpace(recipe.Description))
                                 {
                                     <p class="card-text text-muted small mt-1 mb-0"

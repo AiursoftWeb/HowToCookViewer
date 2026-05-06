@@ -1,3 +1,4 @@
+using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
@@ -8,6 +9,7 @@ using Markdig;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
@@ -15,22 +17,24 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 public class RecipesController(
     TemplateDbContext db,
     UserManager<User> userManager,
-    StorageService storageService) : Controller
+    StorageService storageService,
+    GlobalSettingsService globalSettingsService,
+    IStringLocalizer<RecipesController> localizer) : Controller
 {
-    private static readonly Dictionary<string, string> CategoryDisplayNames =
+    private static readonly Dictionary<string, string> CategoryLocalizerKeys =
         new(StringComparer.OrdinalIgnoreCase)
         {
-            ["vegetable_dish"] = "素菜",
-            ["meat_dish"]      = "荤菜",
-            ["aquatic"]        = "水产",
-            ["breakfast"]      = "早餐",
-            ["staple"]         = "主食",
-            ["soup"]           = "汤品",
-            ["drink"]          = "饮料",
-            ["dessert"]        = "甜品",
-            ["condiment"]      = "调料",
-            ["semi-finished"]  = "半成品",
-            ["template"]       = "模板",
+            ["vegetable_dish"] = "Vegetable Dishes",
+            ["meat_dish"]      = "Meat Dishes",
+            ["aquatic"]        = "Aquatic",
+            ["breakfast"]      = "Breakfast",
+            ["staple"]         = "Staple Food",
+            ["soup"]           = "Soups",
+            ["drink"]          = "Drinks",
+            ["dessert"]        = "Desserts",
+            ["condiment"]      = "Condiments",
+            ["semi-finished"]  = "Semi-finished",
+            ["template"]       = "Templates",
         };
 
     public async Task<IActionResult> Index(string? category, int? difficulty)
@@ -49,20 +53,47 @@ public class RecipesController(
             .OrderBy(r => r.Name)
             .ToListAsync();
 
+        var recipeIds = recipes.Select(r => r.Id).ToList();
+        var likeCounts = await db.RecipeLikes
+            .Where(l => recipeIds.Contains(l.RecipeId))
+            .GroupBy(l => l.RecipeId)
+            .Select(g => new { RecipeId = g.Key, Count = g.Count() })
+            .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
+
         var displayName = difficulty.HasValue
-            ? new string('★', difficulty.Value)
+            ? localizer["Difficulty {0} Stars", difficulty.Value].Value
             : string.IsNullOrEmpty(category)
-                ? "全部菜谱"
-                : CategoryDisplayNames.TryGetValue(category, out var name) ? name : category;
+                ? localizer["All Recipes"].Value
+                : localizer[CategoryLocalizerKeys.TryGetValue(category, out var key) ? key : category].Value;
 
         return this.StackView(new IndexViewModel
         {
             PageTitle = displayName,
             Category = category,
+            Difficulty = difficulty,
             CategoryDisplayName = displayName,
             Recipes = recipes,
-            TotalCount = recipes.Count
+            TotalCount = recipes.Count,
+            LikeCounts = likeCounts
         });
+    }
+
+    public async Task<IActionResult> Random(string? category, int? difficulty)
+    {
+        var query = db.Recipes.AsQueryable();
+
+        if (!string.IsNullOrEmpty(category))
+            query = query.Where(r => r.Category == category);
+
+        if (difficulty.HasValue)
+            query = query.Where(r => r.Difficulty == difficulty.Value);
+
+        var ids = await query.Select(r => r.Id).ToListAsync();
+        if (ids.Count == 0)
+            return RedirectToAction(nameof(Index), new { category, difficulty });
+
+        var randomId = ids[System.Random.Shared.Next(ids.Count)];
+        return RedirectToAction(nameof(Detail), new { id = randomId });
     }
 
     public async Task<IActionResult> Detail(int id)
@@ -93,6 +124,13 @@ public class RecipesController(
             .UseAdvancedExtensions()
             .Build());
 
+        var repoUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoUrl);
+        // Convert clone URL to web URL: strip .git suffix, then build edit link
+        var repoWebUrl = repoUrl.EndsWith(".git", StringComparison.OrdinalIgnoreCase)
+            ? repoUrl[..^4]
+            : repoUrl;
+        var gitHubEditUrl = $"{repoWebUrl}/edit/master/{recipe.FilePath.Replace('\\', '/')}";
+
         return this.StackView(new DetailViewModel
         {
             PageTitle = recipe.Name,
@@ -101,7 +139,8 @@ public class RecipesController(
             IsFavorited = isFavorited,
             IsLiked = isLiked,
             LikeCount = likeCount,
-            Comments = comments
+            Comments = comments,
+            GitHubEditUrl = gitHubEditUrl
         });
     }
 

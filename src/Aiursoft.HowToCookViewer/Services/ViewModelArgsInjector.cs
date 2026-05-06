@@ -36,24 +36,23 @@ public class ViewModelArgsInjector(
     SignInManager<User> signInManager) : IScopedDependency
 {
     /// <summary>
-    /// Maps HowToCook repo folder names to (Chinese display name, Lucide icon slug).
-    /// The folder structure of the repo is stable, so this dictionary is
-    /// maintained once and covers all known categories.
+    /// Maps HowToCook repo folder names to (English localizer key, Lucide icon slug).
+    /// Display names are looked up via localizer at render time so every language gets the right text.
     /// </summary>
-    private static readonly Dictionary<string, (string DisplayName, string Icon)> CategoryMeta =
+    private static readonly Dictionary<string, (string LocalizerKey, string Icon)> CategoryMeta =
         new(StringComparer.OrdinalIgnoreCase)
         {
-            ["vegetable_dish"] = ("素菜",   "leaf"),
-            ["meat_dish"]      = ("荤菜",   "flame"),
-            ["aquatic"]        = ("水产",   "fish"),
-            ["breakfast"]      = ("早餐",   "sunrise"),
-            ["staple"]         = ("主食",   "wheat"),
-            ["soup"]           = ("汤品",   "soup"),
-            ["drink"]          = ("饮料",   "glass-water"),
-            ["dessert"]        = ("甜品",   "cake-slice"),
-            ["condiment"]      = ("调料",   "droplets"),
-            ["semi-finished"]  = ("半成品", "package"),
-            ["template"]       = ("模板",   "file-text"),
+            ["vegetable_dish"] = ("Vegetable Dishes", "leaf"),
+            ["meat_dish"]      = ("Meat Dishes",      "flame"),
+            ["aquatic"]        = ("Aquatic",           "fish"),
+            ["breakfast"]      = ("Breakfast",         "sunrise"),
+            ["staple"]         = ("Staple Food",       "wheat"),
+            ["soup"]           = ("Soups",             "soup"),
+            ["drink"]          = ("Drinks",            "glass-water"),
+            ["dessert"]        = ("Desserts",          "cake-slice"),
+            ["condiment"]      = ("Condiments",        "droplets"),
+            ["semi-finished"]  = ("Semi-finished",     "package"),
+            ["template"]       = ("Templates",         "file-text"),
         };
 
     [ExcludeFromCodeCoverage]
@@ -107,6 +106,19 @@ public class ViewModelArgsInjector(
     
         _ = localizer["My Favorites"];
         _ = localizer["Recipe"];
+
+        // Recipe category display names — translated at nav-build time
+        _ = localizer["Vegetable Dishes"];
+        _ = localizer["Meat Dishes"];
+        _ = localizer["Aquatic"];
+        _ = localizer["Breakfast"];
+        _ = localizer["Staple Food"];
+        _ = localizer["Soups"];
+        _ = localizer["Drinks"];
+        _ = localizer["Desserts"];
+        _ = localizer["Condiments"];
+        _ = localizer["Semi-finished"];
+        _ = localizer["Templates"];
     }
 
     public void InjectSimple(
@@ -231,13 +243,13 @@ public class ViewModelArgsInjector(
                 Name = localizer["All Recipes"],
                 Items = recipeCategories.Select(cat =>
                 {
-                    var (displayName, icon) = CategoryMeta.TryGetValue(cat, out var meta)
+                    var (localizerKey, icon) = CategoryMeta.TryGetValue(cat, out var meta)
                         ? meta
                         : (cat, "circle-dot");
                     return (SideBarItem)new LinkSideBarItem
                     {
                         LucideIcon = icon,
-                        Text       = displayName,
+                        Text       = localizer[localizerKey],
                         Href       = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
                         IsActive   = isOnRecipesController &&
                                      string.Equals(currentCategory, cat, StringComparison.OrdinalIgnoreCase)

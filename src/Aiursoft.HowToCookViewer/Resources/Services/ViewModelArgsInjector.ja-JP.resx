@@ -39,11 +39,17 @@
   <data name="Anonymous" xml:space="preserve">
     <value>匿名</value>
   </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>水生</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>バックグラウンドジョブ</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>Bad Request</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>朝食</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>難易度別</value>
@@ -63,6 +69,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>ログインするにはクリック</value>
   </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>調味料</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>ロールの作成</value>
   </data>
@@ -78,8 +87,14 @@
   <data name="Delete User" xml:space="preserve">
     <value>ユーザーを削除</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>デザート</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>ディレクトリ</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>飲み物</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>ロールを編集</value>
@@ -120,6 +135,9 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>肉料理</value>
+  </data>
   <data name="My Favorites" xml:space="preserve">
     <value>お気に入り</value>
   </data>
@@ -156,11 +174,20 @@
   <data name="Roles" xml:space="preserve">
     <value>ロール</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>半製品</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>設定</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>サインアウト</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>スープ</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>主食</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>システム</value>
@@ -171,6 +198,9 @@
   <data name="Template" xml:space="preserve">
     <value>テンプレート</value>
   </data>
+  <data name="Templates" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>権限がありません</value>
   </data>
@@ -179,6 +209,9 @@
   </data>
   <data name="Users" xml:space="preserve">
     <value>ユーザー</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>野菜料理</value>
   </data>
 
 </root>

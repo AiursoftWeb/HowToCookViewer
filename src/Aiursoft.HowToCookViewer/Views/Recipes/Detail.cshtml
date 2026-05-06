@@ -20,6 +20,11 @@
         @if (User.Identity?.IsAuthenticated == true)
         {
             <div class="col-auto d-flex gap-2">
+                <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline-secondary">
+                    <i class="align-middle me-1" data-lucide="pencil"></i>
+                    @Localizer["Edit on GitHub"]
+                </a>
                 <form asp-controller="Likes" asp-action="Toggle" method="post">
                     <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
                     @Html.AntiForgeryToken()
@@ -41,11 +46,26 @@
         }
         @if (User.Identity?.IsAuthenticated != true && Model.LikeCount > 0)
         {
-            <div class="col-auto">
+            <div class="col-auto d-flex gap-2">
+                <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline-secondary">
+                    <i class="align-middle me-1" data-lucide="pencil"></i>
+                    @Localizer["Edit on GitHub"]
+                </a>
                 <span class="btn btn-outline-warning disabled">
                     <i class="align-middle me-1" data-lucide="thumbs-up"></i>
                     @Model.LikeCount
                 </span>
+            </div>
+        }
+        @if (User.Identity?.IsAuthenticated != true && Model.LikeCount == 0)
+        {
+            <div class="col-auto">
+                <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline-secondary">
+                    <i class="align-middle me-1" data-lucide="pencil"></i>
+                    @Localizer["Edit on GitHub"]
+                </a>
             </div>
         }
     </div>
@@ -69,7 +89,7 @@
             <div id="comments" class="mt-4">
                 <h5 class="mb-3">
                     <i class="align-middle me-1" data-lucide="message-circle"></i>
-                    评论 (@Model.Comments.Count)
+                    @Localizer["Comments"] (@Model.Comments.Count)
                 </h5>
 
                 @if (User.Identity?.IsAuthenticated == true)
@@ -81,9 +101,9 @@
                                 @Html.AntiForgeryToken()
                                 <div class="mb-2">
                                     <textarea name="content" class="form-control" rows="3"
-                                              placeholder="写下你的评论…" maxlength="1000" required></textarea>
+                                              placeholder="@Localizer["Write your comment…"]" maxlength="1000" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-sm">发表评论</button>
+                                <button type="submit" class="btn btn-primary btn-sm">@Localizer["Post Comment"]</button>
                             </form>
                         </div>
                     </div>
@@ -111,7 +131,7 @@
                                                 <input type="hidden" name="commentId" value="@comment.Id" />
                                                 @Html.AntiForgeryToken()
                                                 <button type="submit" class="btn btn-link btn-sm text-danger p-0"
-                                                        onclick="return confirm('确定删除此评论及其所有回复？')">删除</button>
+                                                        onclick="return confirm('@Localizer["Are you sure you want to delete this comment and all its replies?"]')">@Localizer["Delete"]</button>
                                             </form>
                                         }
                                     </div>
@@ -141,7 +161,7 @@
                                                                     <input type="hidden" name="commentId" value="@reply.Id" />
                                                                     @Html.AntiForgeryToken()
                                                                     <button type="submit" class="btn btn-link btn-sm text-danger p-0"
-                                                                            onclick="return confirm('确定删除此回复？')">删除</button>
+                                                                            onclick="return confirm('@Localizer["Are you sure you want to delete this reply?"]')">@Localizer["Delete"]</button>
                                                                 </form>
                                                             }
                                                         </div>
@@ -168,7 +188,7 @@
                                                                   placeholder="回复 @(comment.User?.DisplayName ?? comment.User?.UserName ?? "")…"
                                                                   maxlength="1000" required></textarea>
                                                     </div>
-                                                    <button type="submit" class="btn btn-secondary btn-sm">发送回复</button>
+                                                    <button type="submit" class="btn btn-secondary btn-sm">@Localizer["Send Reply"]</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -181,7 +201,18 @@
 
                 @if (Model.Comments.Count == 0)
                 {
-                    <p class="text-muted text-center py-3">暂无评论，来第一个留言吧！</p>
+                    <p class="text-muted text-center py-3">@Localizer["No comments yet. Be the first to leave one!"]</p>
+                }
+
+                @if (User.Identity?.IsAuthenticated != true)
+                {
+                    <div class="text-center py-3">
+                        <a href="/Account/Login?returnUrl=@Uri.EscapeDataString(Context.Request.Path + Context.Request.QueryString)"
+                           class="btn btn-outline-primary">
+                            <i class="align-middle me-1" data-lucide="log-in"></i>
+                            @Localizer["Login to comment"]
+                        </a>
+                    </div>
                 }
             </div>
         </div>

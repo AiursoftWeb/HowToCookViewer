@@ -36,11 +36,17 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Анонімний</value>
   </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Водні страви</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Фонові завдання</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>Помилковий запит</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Сніданок</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>За складністю</value>
@@ -60,6 +66,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Натисніть, щоб увійти</value>
   </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Кондитерські вироби</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Створити роль</value>
   </data>
@@ -75,8 +84,14 @@
   <data name="Delete User" xml:space="preserve">
     <value>Видалити користувача</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Десерти</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Каталог</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Напої</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Редагувати роль</value>
@@ -117,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Керування</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>М&apos;ясні страви</value>
+  </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Мої улюблені</value>
   </data>
@@ -153,11 +171,20 @@
   <data name="Roles" xml:space="preserve">
     <value>Ролі</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Напівфабрикат</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Налаштування</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Вийти</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Супи</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Основна їжа</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Система</value>
@@ -168,6 +195,9 @@
   <data name="Template" xml:space="preserve">
     <value>Шаблон</value>
   </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Шаблони</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Неавторизовано</value>
   </data>
@@ -176,6 +206,9 @@
   </data>
   <data name="Users" xml:space="preserve">
     <value>Користувачі</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Овочеві страви</value>
   </data>
 
 </root>

@@ -36,11 +36,17 @@
   <data name="Anonymous" xml:space="preserve">
     <value>مجهول</value>
   </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>مأكولات بحرية</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>المهام الخلفية</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>طلب خاطئ</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>الفطور</value>
   </data>
   <data name="By Difficulty" xml:space="preserve">
     <value>حسب الصعوبة</value>
@@ -60,6 +66,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>انقر لتسجيل الدخول</value>
   </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>المُكَيِّفَات</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>إنشاء دور</value>
   </data>
@@ -75,8 +84,14 @@
   <data name="Delete User" xml:space="preserve">
     <value>حذف المستخدم</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>الحلويات</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>دليل</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>المشروبات</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>تعديل الدور</value>
@@ -117,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>إدارة</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>أطباق اللحوم</value>
+  </data>
   <data name="My Favorites" xml:space="preserve">
     <value>مفضلاتي</value>
   </data>
@@ -153,11 +171,20 @@
   <data name="Roles" xml:space="preserve">
     <value>الأدوار</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>مُعدّ</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>الإعدادات</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>تسجيل الخروج</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>الحساء</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>الطعام الأساسي</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>النظام</value>
@@ -168,6 +195,9 @@
   <data name="Template" xml:space="preserve">
     <value>قالب</value>
   </data>
+  <data name="Templates" xml:space="preserve">
+    <value>القوالب</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>غير مصرح</value>
   </data>
@@ -176,6 +206,9 @@
   </data>
   <data name="Users" xml:space="preserve">
     <value>المستخدمون</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>أطباق الخضار</value>
   </data>
 
 </root>
