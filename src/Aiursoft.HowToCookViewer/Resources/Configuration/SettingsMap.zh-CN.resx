@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>本地化语言</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>每个账号每天最高评论次数</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API 端点</value>
   </data>
@@ -90,17 +93,14 @@
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>项目在导航栏和页脚中显示的logo。支持jpg、png、svg格式。</value>
   </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>同一个账号在一天内最多可以发布的评论数量。</value>
+  </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>项目在前端显示的名称。</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>用于菜谱翻译的 OpenAI 兼容聊天补全端点，例如 https://ollama.example.com/api/chat/completions</value>
-  </data>
-  <data name="Max Comments Per Day Per User" xml:space="preserve">
-    <value>每个账号每天最高评论次数</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>同一个账号在一天内最多可以发布的评论数量。</value>
   </data>
 
 </root>

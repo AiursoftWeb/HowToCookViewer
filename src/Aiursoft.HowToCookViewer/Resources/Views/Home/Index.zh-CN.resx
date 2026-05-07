@@ -24,6 +24,9 @@
   <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
     <value>所有菜谱均来自 HowToCook 开源项目，任何人均可贡献、改进或 Fork。</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>食谱和此查看器均为开源。透明、协作，且永久免费。</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>浏览所有菜谱</value>
   </data>
@@ -41,6 +44,9 @@
   </data>
   <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
     <value>社区贡献、AI 翻译、永久免费。</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>自信烹饪</value>
   </data>
   <data name="Edit on GitHub" xml:space="preserve">
     <value>在 GitHub 上编辑</value>

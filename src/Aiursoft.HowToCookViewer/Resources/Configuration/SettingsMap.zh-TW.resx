@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>本地化語言</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>每人每日最大留言數</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API 端點</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>專案的標誌顯示於導覽列與頁尾。支援 jpg、png、svg 格式。</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>使用者每日可發布的留言數量上限。</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>專案在前端顯示的名稱。</value>

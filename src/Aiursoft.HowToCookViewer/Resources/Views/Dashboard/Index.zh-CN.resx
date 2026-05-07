@@ -129,8 +129,14 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>集成文件管理</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>加载中…</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
+  </data>
+  <data name="Most Liked Recipes" xml:space="preserve">
+    <value>最受欢迎的食谱</value>
   </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>多数据库提供者支持</value>
@@ -159,6 +165,12 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>响应式设计</value>
   </data>
+  <data name="result for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>强大的集成测试</value>
   </data>
@@ -170,6 +182,9 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>搜索</value>
+  </data>
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>在 HowToCook 中搜索 &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; 道菜谱</value>
   </data>
   <data name="Search Recipes" xml:space="preserve">
     <value>搜索食谱</value>
@@ -216,13 +231,5 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>为何选择 Aiursoft 模板？</value>
   </data>
-  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
-    <value>在 HowToCook 中搜索 &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; 道菜谱</value>
-  </data>
-  <data name="result for" xml:space="preserve">
-    <value>个搜索结果：</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>个搜索结果：</value>
-  </data>
+
 </root>

@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Limbi de localizare</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>Număr maxim de comentarii pe zi per utilizator</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Punctul final API Ollama</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Logoul proiectului afișat în bara de navigare și în subsol. Suportă jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Numărul maxim de comentarii pe care un utilizator le poate publica pe zi.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Numele proiectului afișat în interfața frontend</value>

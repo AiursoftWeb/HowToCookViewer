@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:schema id="root">
-        <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-    </xs:schema>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -28,6 +29,9 @@
   </data>
   <data name="Administration" xml:space="preserve">
     <value>管理</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>高级</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft 模板项目</value>
@@ -80,6 +84,9 @@
   <data name="Condiments" xml:space="preserve">
     <value>酱料</value>
   </data>
+  <data name="Cooking Tips" xml:space="preserve">
+    <value>烹饪技巧</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>创建角色</value>
   </data>
@@ -130,6 +137,9 @@
   </data>
   <data name="Internal Server Error" xml:space="preserve">
     <value>内部服务器错误</value>
+  </data>
+  <data name="Learn" xml:space="preserve">
+    <value>学习</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>最少评论</value>
@@ -203,6 +213,9 @@
   <data name="Roles" xml:space="preserve">
     <value>角色</value>
   </data>
+  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
+    <value>搜索菜谱（如：西红柿、鸡蛋、豆腐…）</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>半成品</value>
   </data>
@@ -230,6 +243,9 @@
   <data name="Templates" xml:space="preserve">
     <value>模板</value>
   </data>
+  <data name="Tip" xml:space="preserve">
+    <value>提示</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>未授权</value>
   </data>
@@ -243,16 +259,4 @@
     <value>素菜</value>
   </data>
 
-  <data name="Cooking Tips" xml:space="preserve">
-    <value>烹饪技巧</value>
-  </data>
-  <data name="Learn" xml:space="preserve">
-    <value>学习</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>高级</value>
-  </data>
-  <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
-    <value>搜索菜谱（如：西红柿、鸡蛋、豆腐…）</value>
-  </data>
 </root>

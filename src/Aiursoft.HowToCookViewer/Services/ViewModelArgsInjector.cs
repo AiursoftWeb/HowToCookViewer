@@ -141,6 +141,8 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Recipe Search"];
         _ = localizer["Search recipes (e.g. tomato, egg, tofu…)"];
+    
+        _ = localizer["Tip"];
     }
 
     public void InjectSimple(

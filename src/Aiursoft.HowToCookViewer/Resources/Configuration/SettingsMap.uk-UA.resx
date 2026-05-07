@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Мови локалізації</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>Максимальна кількість коментарів на день на користувача</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Точка доступу API Ollama</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Логотип проекту, який відображається в навбарі та футері. Підтримується jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Максимальна кількість коментарів, які користувач може опублікувати протягом дня.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Назва проекту, що відображається на фронтенді.</value>

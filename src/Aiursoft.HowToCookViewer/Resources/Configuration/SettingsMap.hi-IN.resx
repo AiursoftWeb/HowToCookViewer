@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>स्थानीयकरण भाषाएँ</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>प्रतिदिन प्रति उपयोगकर्ता अधिकतम टिप्पणियाँ</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>ओलामा एपीआई एंडपॉइंट</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>प्रोजेक्ट का लोगो नेवबार और फुटर में प्रदर्शित किया जाता है। jpg, png, svg समर्थित हैं।</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>एक उपयोगकर्ता प्रतिदिन कितने टिप्पणी पोस्ट कर सकता है, यह अधिकतम संख्या।</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>फ्रंटएंड में प्रदर्शित प्रोजेक्ट का नाम।</value>

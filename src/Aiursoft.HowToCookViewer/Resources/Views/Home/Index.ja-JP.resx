@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>二か国語チュートリアル</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>レシピとこのビューアはどちらもオープンソースです。透明性があり、共同作業可能で、永久に無料です。</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>すべてのレシピを閲覧</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>整合性検証</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>自信を持って料理しましょう。</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>快適に連携する</value>

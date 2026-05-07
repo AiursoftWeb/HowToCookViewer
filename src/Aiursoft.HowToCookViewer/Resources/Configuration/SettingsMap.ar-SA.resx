@@ -57,6 +57,9 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>لغات التعريب</value>
   </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>الحد الأقصى للتعليقات في اليوم الواحد لكل مستخدم</value>
+  </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>نقطة نهاية واجهة برمجة تطبيقات Ollama</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>الشعار الخاص بالمشروع يتم عرضه في شريط التنقل والقدم. يدعم jpg، png، svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>الحد الأقصى لعدد التعليقات التي يمكن للمستخدم نشرها يوميًا.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>اسم المشروع المُعرض في الواجهة الأمامية.</value>

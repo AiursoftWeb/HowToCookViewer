@@ -18,7 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Difficulty" xml:space="preserve">
+      <data name="Add Recipe" xml:space="preserve">
+    <value>เพิ่มสูตรอาหาร</value>
+  </data>
+  <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
+    <value>任何人都สามารถเพิ่มหรือแก้ไขสูตรอาหารใน HowToCook ได้อย่างอิสระ — เพียงฟอกลที่เก็บข้อมูลบน GitHub ทำการเปลี่ยนแปลง และส่งคำขอ pull request สูตรอาหารของคุณจะพร้อมใช้งานสำหรับทุกคน!</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
     <value>ระดับความยาก</value>
   </data>
   <data name="Loading…" xml:space="preserve">
@@ -26,6 +32,9 @@
   </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>ยังไม่มีสูตรอาหาร งานจัดทำดัชนีพื้นหลังอาจยังคงทำงานอยู่</value>
+  </data>
+  <data name="Open Community Cookbook" xml:space="preserve">
+    <value>เปิดหนังสือสูตรอาหารชุมชน</value>
   </data>
   <data name="Random Recipe" xml:space="preserve">
     <value>สูตรอาหารสุ่ม</value>
