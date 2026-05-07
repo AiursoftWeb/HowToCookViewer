@@ -27,8 +27,23 @@
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
     <value>Ви впевнені, що хочете видалити цю відповідь?</value>
   </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Історія змін</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
+    <value>Натисніть тут, щоб переглянути юридичну інформацію.</value>
+  </data>
   <data name="Comments" xml:space="preserve">
     <value>Коментарі</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commit</value>
+  </data>
+  <data name="Community Content" xml:space="preserve">
+    <value>Вміст спільноти</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Учасники</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Видалити</value>
@@ -53,6 +68,9 @@
   </data>
   <data name="Send Reply" xml:space="preserve">
     <value>Надіслати відповідь</value>
+  </data>
+  <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
+    <value>Авторські права на цей рецепт належать спільноті та передані в суспільне надбання згідно з The Unlicense — вільне використання для будь-яких цілей без будь-яких обмежень.</value>
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Напишіть свій коментар…</value>
