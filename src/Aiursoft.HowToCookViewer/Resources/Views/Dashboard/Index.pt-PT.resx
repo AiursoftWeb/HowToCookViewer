@@ -129,8 +129,14 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Gestão Integrada de Ficheiros</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>A carregar…</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Os modelos são validados nos lados cliente e servidor com base em anotações de dados.</value>
+  </data>
+  <data name="Most Liked Recipes" xml:space="preserve">
+    <value>Receitas Mais Gostadas</value>
   </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Suporte a Vários Provedores de Base de Dados</value>

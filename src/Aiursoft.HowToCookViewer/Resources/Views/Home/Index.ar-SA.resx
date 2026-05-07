@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>دروس ثنائية اللغة</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>كلا الوصفات وهذا المستعرض مفتوح المصدر. شفاف، تعاوني، ومجاني إلى الأبد.</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>تصفح جميع الوصفات</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>التحقق من الاتساق</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>اطبخ بثقة</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>coordination بسلاسة</value>
