@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:schema id="root">
-        <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-    </xs:schema>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -35,14 +36,35 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>เทมเพลต Aiursoft</value>
   </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>สูตรทั้งหมด</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>ไม่ระบุชื่อ</value>
+  </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>อาหารทะเล</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>งานพื้นหลัง</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>คำขอไม่ถูกต้อง</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>อาหารเช้า</value>
+  </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>ตามความคิดเห็น</value>
+  </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>ตามความยาก</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>ตามรายการโปรด</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>ตามความชอบ</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>เปลี่ยนรูปโปรไฟล์</value>
@@ -53,8 +75,14 @@
   <data name="Change Profile" xml:space="preserve">
     <value>เปลี่ยนโปรไฟล์</value>
   </data>
+  <data name="Classification" xml:space="preserve">
+    <value>การจัดหมวดหมู่</value>
+  </data>
   <data name="Click to login" xml:space="preserve">
     <value>คลิกเพื่อเข้าสู่ระบบ</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>เครื่องปรุง</value>
   </data>
   <data name="Cooking Tips" xml:space="preserve">
     <value>เคล็ดลับการทำอาหาร</value>
@@ -74,8 +102,14 @@
   <data name="Delete User" xml:space="preserve">
     <value>ลบผู้ใช้</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>ของหวาน</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>ไดเรกทอรี</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>เครื่องดื่ม</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>แก้ไขบทบาท</value>
@@ -107,6 +141,15 @@
   <data name="Learn" xml:space="preserve">
     <value>เรียนรู้</value>
   </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>มีความคิดเห็นน้อยที่สุด</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>มีรายการโปรดน้อยที่สุด</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>มีความชอบน้อยที่สุด</value>
+  </data>
   <data name="Lockout" xml:space="preserve">
     <value>บล็อกการเข้าถึง</value>
   </data>
@@ -118,6 +161,18 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>จัดการ</value>
+  </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>อาหารเนื้อสัตว์</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>มีความคิดเห็นมากที่สุด</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>มีรายการโปรดมากที่สุด</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>มีความชอบมากที่สุด</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>รายการโปรดของฉัน</value>
@@ -161,11 +216,20 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>ค้นหาสูตรอาหาร (เช่น มะเขือเทศ, ไข่, เต้าหู้…)</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>อาหารกึ่งสำเร็จรูป</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>การตั้งค่า</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>ออกจากระบบ</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>ซุป</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>อาหารหลัก</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>ระบบ</value>
@@ -174,6 +238,9 @@
     <value>ข้อมูลระบบ</value>
   </data>
   <data name="Template" xml:space="preserve">
+    <value>แม่แบบ</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
     <value>แม่แบบ</value>
   </data>
   <data name="Tip" xml:space="preserve">
@@ -188,4 +255,8 @@
   <data name="Users" xml:space="preserve">
     <value>ผู้ใช้</value>
   </data>
-  <data name="All Recipes" xml:space="preserve"><value>สูตรทั้งหมด</value></data><data name="Classification" xml:space="preserve"><value>การจัดหมวดหมู่</value></data><data name="Aquatic" xml:space="preserve"><value>อาหารทะเล</value></data><data name="Breakfast" xml:space="preserve"><value>อาหารเช้า</value></data><data name="Condiments" xml:space="preserve"><value>เครื่องปรุง</value></data><data name="Desserts" xml:space="preserve"><value>ของหวาน</value></data><data name="Drinks" xml:space="preserve"><value>เครื่องดื่ม</value></data><data name="Meat Dishes" xml:space="preserve"><value>อาหารเนื้อสัตว์</value></data><data name="Semi-finished" xml:space="preserve"><value>อาหารกึ่งสำเร็จรูป</value></data><data name="Soups" xml:space="preserve"><value>ซุป</value></data><data name="Staple Food" xml:space="preserve"><value>อาหารหลัก</value></data><data name="Templates" xml:space="preserve"><value>แม่แบบ</value></data><data name="Vegetable Dishes" xml:space="preserve"><value>อาหารผัก</value></data><data name="By Comments" xml:space="preserve"><value>ตามความคิดเห็น</value></data><data name="By Difficulty" xml:space="preserve"><value>ตามความยาก</value></data><data name="By Favorites" xml:space="preserve"><value>ตามรายการโปรด</value></data><data name="By Likes" xml:space="preserve"><value>ตามความชอบ</value></data><data name="Least Commented" xml:space="preserve"><value>มีความคิดเห็นน้อยที่สุด</value></data><data name="Least Favorited" xml:space="preserve"><value>มีรายการโปรดน้อยที่สุด</value></data><data name="Least Liked" xml:space="preserve"><value>มีความชอบน้อยที่สุด</value></data><data name="Most Commented" xml:space="preserve"><value>มีความคิดเห็นมากที่สุด</value></data><data name="Most Favorited" xml:space="preserve"><value>มีรายการโปรดมากที่สุด</value></data><data name="Most Liked" xml:space="preserve"><value>มีความชอบมากที่สุด</value></data></root>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>อาหารผัก</value>
+  </data>
+
+</root>

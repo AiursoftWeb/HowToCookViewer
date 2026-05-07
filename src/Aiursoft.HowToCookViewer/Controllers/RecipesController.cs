@@ -247,11 +247,11 @@ public class RecipesController(
         var steps       = (localized?.LocalizedSteps       is { Length: > 0 } s ? s : null) ?? recipe.Steps;
         var notes       = (localized?.LocalizedNotes       is { Length: > 0 } no ? no : null) ?? recipe.Notes;
 
-        // Localized section headings: use translated terms when locale is not Chinese
-        var isLocalized = localized != null;
-        var (hIngredients, hCalculation, hSteps, hNotes) = isLocalized
-            ? ("## Ingredients and Tools", "## Calculation", "## Steps", "## Additional Notes")
-            : ("## 必备原料和工具", "## 计算", "## 操作", "## 附加内容");
+        // Localized section headings
+        var hIngredients = $"## {localizer["Ingredients and Tools"].Value}";
+        var hCalculation = $"## {localizer["Calculation"].Value}";
+        var hSteps       = $"## {localizer["Steps"].Value}";
+        var hNotes       = $"## {localizer["Additional Notes"].Value}";
 
         var parts = new List<string> { $"# {name}" };
 
@@ -282,7 +282,7 @@ public class RecipesController(
         var extras = recipe.Images.Where(p => !p.IsCover).ToList();
         if (extras.Count > 0)
         {
-            parts.Add("## 图片");
+            parts.Add($"## {localizer["Images"].Value}");
             foreach (var img in extras)
             {
                 var url = storageService.RelativePathToInternetUrl(img.LogicalPath);

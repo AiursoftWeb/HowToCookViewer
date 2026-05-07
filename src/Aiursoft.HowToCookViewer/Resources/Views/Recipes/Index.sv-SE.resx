@@ -18,7 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Difficulty" xml:space="preserve">
+      <data name="Add Recipe" xml:space="preserve">
+    <value>Lägg till recept</value>
+  </data>
+  <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
+    <value>All kan fritt lägga till eller redigera recept i HowToCook — fork:a bara repositoryn på GitHub, gör dina ändringar och skicka en pull request. Ditt recept blir tillgängligt för alla!</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
     <value>Svårighetsgrad</value>
   </data>
   <data name="Loading…" xml:space="preserve">
@@ -26,6 +32,9 @@
   </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Inga recept ännu. Bakgrundsindexeringsjobbet kan fortfarande köra.</value>
+  </data>
+  <data name="Open Community Cookbook" xml:space="preserve">
+    <value>Öppna community-kokboken</value>
   </data>
   <data name="Random Recipe" xml:space="preserve">
     <value>Slumpmässig recept</value>

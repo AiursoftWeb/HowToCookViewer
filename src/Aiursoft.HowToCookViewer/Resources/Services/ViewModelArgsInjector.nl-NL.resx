@@ -1,10 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:schema id="root">
-        <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-    </xs:schema>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -20,6 +21,9 @@
       <data name="Access Denied" xml:space="preserve">
     <value>Toegang geweigerd</value>
   </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Accountinstellingen</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Beheerder</value>
   </data>
@@ -29,14 +33,38 @@
   <data name="Advanced" xml:space="preserve">
     <value>Gevorderd</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft-sjabloon</value>
+  </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Alle recepten</value>
+  </data>
   <data name="Anonymous" xml:space="preserve">
     <value>Anoniem</value>
+  </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Zeevruchten</value>
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Achtergrondtaken</value>
   </data>
   <data name="Bad Request" xml:space="preserve">
     <value>Ongeldige aanvraag</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Ontbijt</value>
+  </data>
+  <data name="By Comments" xml:space="preserve">
+    <value>Op reacties</value>
+  </data>
+  <data name="By Difficulty" xml:space="preserve">
+    <value>Op moeilijkheidsgraad</value>
+  </data>
+  <data name="By Favorites" xml:space="preserve">
+    <value>Op favorieten</value>
+  </data>
+  <data name="By Likes" xml:space="preserve">
+    <value>Op likes</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Avatar wijzigen</value>
@@ -47,8 +75,14 @@
   <data name="Change Profile" xml:space="preserve">
     <value>Profiel wijzigen</value>
   </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Classificatie</value>
+  </data>
   <data name="Click to login" xml:space="preserve">
     <value>Klik om in te loggen</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Sauzen</value>
   </data>
   <data name="Cooking Tips" xml:space="preserve">
     <value>Kooktips</value>
@@ -59,14 +93,23 @@
   <data name="Create User" xml:space="preserve">
     <value>Gebruiker aanmaken</value>
   </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Rol verwijderen</value>
   </data>
   <data name="Delete User" xml:space="preserve">
     <value>Gebruiker verwijderen</value>
   </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Desserts</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Map</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Dranken</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Rol bewerken</value>
@@ -83,6 +126,12 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Algemene instellingen</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
   <data name="Info" xml:space="preserve">
     <value>Informatie</value>
   </data>
@@ -91,6 +140,15 @@
   </data>
   <data name="Learn" xml:space="preserve">
     <value>Leren</value>
+  </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Minst bereageerd</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Minst als favoriet</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Minst geliked</value>
   </data>
   <data name="Lockout" xml:space="preserve">
     <value>Blokkade</value>
@@ -103,6 +161,18 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Beheren</value>
+  </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>Vleesgerechten</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Meest bereageerd</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Meest als favoriet</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Meest geliked</value>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mijn favorieten</value>
@@ -146,11 +216,20 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Recepten zoeken (bijv. tomaat, ei, tofu…)</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Halfproducten</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Instellingen</value>
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Uitloggen</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Soepen</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Basisvoedsel</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Systeem</value>
@@ -161,6 +240,12 @@
   <data name="Template" xml:space="preserve">
     <value>Sjabloon</value>
   </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Sjablonen</value>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip</value>
+  </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Niet geautoriseerd</value>
   </data>
@@ -170,4 +255,8 @@
   <data name="Users" xml:space="preserve">
     <value>Gebruikers</value>
   </data>
-  <data name="All Recipes" xml:space="preserve"><value>Alle recepten</value></data><data name="Classification" xml:space="preserve"><value>Classificatie</value></data><data name="Aquatic" xml:space="preserve"><value>Zeevruchten</value></data><data name="Breakfast" xml:space="preserve"><value>Ontbijt</value></data><data name="Condiments" xml:space="preserve"><value>Sauzen</value></data><data name="Desserts" xml:space="preserve"><value>Desserts</value></data><data name="Drinks" xml:space="preserve"><value>Dranken</value></data><data name="Meat Dishes" xml:space="preserve"><value>Vleesgerechten</value></data><data name="Semi-finished" xml:space="preserve"><value>Halfproducten</value></data><data name="Soups" xml:space="preserve"><value>Soepen</value></data><data name="Staple Food" xml:space="preserve"><value>Basisvoedsel</value></data><data name="Templates" xml:space="preserve"><value>Sjablonen</value></data><data name="Vegetable Dishes" xml:space="preserve"><value>Groentegerechten</value></data><data name="By Comments" xml:space="preserve"><value>Op reacties</value></data><data name="By Difficulty" xml:space="preserve"><value>Op moeilijkheidsgraad</value></data><data name="By Favorites" xml:space="preserve"><value>Op favorieten</value></data><data name="By Likes" xml:space="preserve"><value>Op likes</value></data><data name="Least Commented" xml:space="preserve"><value>Minst bereageerd</value></data><data name="Least Favorited" xml:space="preserve"><value>Minst als favoriet</value></data><data name="Least Liked" xml:space="preserve"><value>Minst geliked</value></data><data name="Most Commented" xml:space="preserve"><value>Meest bereageerd</value></data><data name="Most Favorited" xml:space="preserve"><value>Meest als favoriet</value></data><data name="Most Liked" xml:space="preserve"><value>Meest geliked</value></data><data name="Account Settings" xml:space="preserve"><value>Accountinstellingen</value></data><data name="Aiursoft Template" xml:space="preserve"><value>Aiursoft-sjabloon</value></data><data name="Dashboard" xml:space="preserve"><value>Dashboard</value></data><data name="Home" xml:space="preserve"><value>Home</value></data><data name="Index" xml:space="preserve"><value>Index</value></data><data name="Tip" xml:space="preserve"><value>Tip</value></data></root>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Groentegerechten</value>
+  </data>
+
+</root>

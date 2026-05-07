@@ -75,5 +75,20 @@
   <data name="Vegetable Dishes" xml:space="preserve">
     <value>素菜</value>
   </data>
+  <data name="Ingredients and Tools" xml:space="preserve">
+    <value>必备原料和工具</value>
+  </data>
+  <data name="Calculation" xml:space="preserve">
+    <value>计算</value>
+  </data>
+  <data name="Steps" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Additional Notes" xml:space="preserve">
+    <value>附加内容</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>图片</value>
+  </data>
 
 </root>

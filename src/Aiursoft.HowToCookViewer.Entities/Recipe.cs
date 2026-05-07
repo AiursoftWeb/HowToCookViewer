@@ -57,4 +57,5 @@ public class Recipe
     public DateTime FileLastModified { get; set; }
 
     public ICollection<RecipeImage> Images { get; set; } = [];
+    public ICollection<LocalizedRecipe> LocalizedRecipes { get; set; } = [];
 }
