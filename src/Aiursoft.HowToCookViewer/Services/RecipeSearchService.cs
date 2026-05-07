@@ -50,7 +50,8 @@ public static class RecipeSearchService
     {
         var termLower = term.ToLower();
         var scoreQuery = baseQuery
-            .Where(r => r.Name.Contains(term) || r.Description.Contains(term))
+            .Where(r => r.Name.Contains(term) || r.Description.Contains(term) ||
+                        r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term) || lr.LocalizedDescription.Contains(term)))
             .Select(r => new
             {
                 Recipe = r,
@@ -59,6 +60,10 @@ public static class RecipeSearchService
                     + (r.Name.StartsWith(term) ? 100 : 0)
                     + (r.Name.Contains(term) ? 10 : 0)
                     + (r.Description.Contains(term) ? 1 : 0)
+                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower() == termLower) ? 1000 : 0)
+                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.StartsWith(term)) ? 100 : 0)
+                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term)) ? 10 : 0)
+                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(term)) ? 1 : 0)
             });
 
         var ordered = scoreQuery
@@ -92,13 +97,16 @@ public static class RecipeSearchService
     {
         var filtered = await baseQuery
             .Where(r => terms.Any(t => r.Name.Contains(t))
-                     || terms.Any(t => r.Description.Contains(t)))
+                     || terms.Any(t => r.Description.Contains(t))
+                     || terms.Any(t => r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(t)))
+                     || terms.Any(t => r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(t))))
             .Select(r => new
             {
                 Recipe = r,
                 LikeCount = db.RecipeLikes.Count(l => l.RecipeId == r.Id),
                 FavoriteCount = db.RecipeFavorites.Count(f => f.RecipeId == r.Id),
-                r.Images
+                r.Images,
+                r.LocalizedRecipes
             })
             .AsNoTracking()
             .ToListAsync(ct);
@@ -106,6 +114,7 @@ public static class RecipeSearchService
         foreach (var item in filtered)
         {
             item.Recipe.Images = item.Images.ToList();
+            item.Recipe.LocalizedRecipes = item.LocalizedRecipes.ToList();
         }
 
         var ordered = filtered
@@ -133,7 +142,11 @@ public static class RecipeSearchService
             (r.Name.Equals(term, StringComparison.OrdinalIgnoreCase) ? 1000 : 0)
             + (r.Name.StartsWith(term, StringComparison.OrdinalIgnoreCase) ? 100 : 0)
             + (r.Name.Contains(term, StringComparison.OrdinalIgnoreCase) ? 10 : 0)
-            + (r.Description.Contains(term, StringComparison.OrdinalIgnoreCase) ? 1 : 0));
+            + (r.Description.Contains(term, StringComparison.OrdinalIgnoreCase) ? 1 : 0)
+            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Equals(term, StringComparison.OrdinalIgnoreCase)) ? 1000 : 0)
+            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.StartsWith(term, StringComparison.OrdinalIgnoreCase)) ? 100 : 0)
+            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term, StringComparison.OrdinalIgnoreCase)) ? 10 : 0)
+            + (r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(term, StringComparison.OrdinalIgnoreCase)) ? 1 : 0));
 
     public static string[] SplitTerms(string keyword) =>
         Regex.Split(keyword.Trim(), @"\s+")
