@@ -1,0 +1,218 @@
+@model Aiursoft.HowToCookViewer.Models.HomeViewModels.SelfHostViewModel
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/styles/site.css"/>
+    <link rel="stylesheet" href="~/styles/marketing.css"/>
+}
+
+<vc:marketing-navbar></vc:marketing-navbar>
+
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-auto">
+            <h3><strong>@Localizer["Deploy"]</strong> @Localizer["Anywhere"]</h3>
+        </div>
+
+        <div class="col-auto ms-auto text-end mt-n1">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+                    <li class="breadcrumb-item"><a href="/">Aiursoft</a></li>
+                    <li class="breadcrumb-item"><a href="/">HowToCook</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@Localizer["Self Host"]</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="card-title">@Localizer["About HowToCook Viewer"]</h5>
+                            <p class="text-muted">
+                                @Localizer["HowToCook Viewer is a visualization and website of HowToCook."]
+                            </p>
+                            <div class="mb-3">
+                                <a href="https://github.com/aiursoftweb/howToCookViewer/blob/master/LICENSE" target="_blank" class="d-inline-block me-1 mb-1">
+                                    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed">
+                                </a>
+                                <a href="https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines" target="_blank" class="d-inline-block me-1 mb-1">
+                                    <img src="https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/pipeline.svg" alt="Pipeline stat">
+                                </a>
+                                <a href="https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines" target="_blank" class="d-inline-block me-1 mb-1">
+                                    <img src="https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/coverage.svg" alt="Test Coverage">
+                                </a>
+                                <a href="https://hub.docker.com/r/aiursoft/howtocookviewer" target="_blank" class="d-inline-block me-1 mb-1">
+                                    <img src="https://img.shields.io/docker/pulls/aiursoft/howtocookviewer.svg" alt="Docker Pulls">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-md-end align-self-center">
+                            <a href="/" class="btn btn-primary">
+                                <i class="align-middle me-1" data-lucide="activity"></i> @Localizer["Live Demo"]
+                            </a>
+                            <a href="https://github.com/aiursoftweb/howToCookViewer" target="_blank" class="btn btn-outline-primary">
+                                <i class="align-middle me-1" data-lucide="github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-xl-8">
+            <div class="card border-primary flex-fill w-100">
+                <div class="card-header">
+                    <div class="card-actions float-end">
+                        <span class="badge bg-primary">@Localizer["Recommended"]</span>
+                    </div>
+                    <h5 class="card-title mb-0">
+                        <i class="align-middle me-2 text-primary" data-lucide="container"></i>
+                        @Localizer["Run in Docker"]
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p>@Localizer["First, install Docker. Then run the following commands in a Linux shell:"]</p>
+
+                    <div class="bg-light p-3 rounded border mb-3">
+                        <code class="text-dark user-select-all">
+                            image=aiursoft/howtocookviewer<br>
+                            appName=howtocookviewer<br>
+                            docker pull $image<br>
+                            docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
+                        </code>
+                    </div>
+
+                    <p class="text-muted small">@Localizer["That will start a web server at http://localhost:5000 and you can test the app."]</p>
+                    <p class="text-muted small">@Localizer["The default username is:"] <code>admin@default.com</code>, @Localizer["and the default password is:"] <code>Admin@123456!</code>.</p>
+
+                    <h6 class="mt-4">@Localizer["Container Context"]</h6>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Localizer["Property"]</th>
+                                    <th>@Localizer["Value"]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Localizer["Image"]</td>
+                                    <td><code>aiursoft/howtocookviewer</code></td>
+                                </tr>
+                                <tr>
+                                    <td>@Localizer["Ports"]</td>
+                                    <td><code>5000</code></td>
+                                </tr>
+                                <tr>
+                                    <td>@Localizer["Binary path"]</td>
+                                    <td><code>/app</code></td>
+                                </tr>
+                                <tr>
+                                    <td>@Localizer["Data path"]</td>
+                                    <td><code>/data</code></td>
+                                </tr>
+                                <tr>
+                                    <td>@Localizer["Config path"]</td>
+                                    <td><code>/data/appsettings.json</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="align-middle me-2" data-lucide="terminal"></i>
+                        @Localizer["Run in Ubuntu"]
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@Localizer["The following script will install/update this app on your Ubuntu server. Supports Ubuntu 25.04."]</p>
+                    <div class="bg-light p-2 rounded border mb-3">
+                        <code class="text-dark small user-select-all">curl -sL https://github.com/aiursoftweb/howToCookViewer/raw/master/install.sh | sudo bash</code>
+                    </div>
+                    <p class="card-text"><small class="text-muted">@Localizer["Or with a custom port:"]</small></p>
+                    <div class="bg-light p-2 rounded border">
+                        <code class="text-dark small user-select-all">... | sudo bash -s 8080</code>
+                    </div>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary">Systemd</span>
+                        <span class="badge bg-secondary">/opt/apps</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card flex-fill w-100 mt-3">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="align-middle me-2 text-danger" data-lucide="heart"></i>
+                        @Localizer["Contribute"]
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@Localizer["We're interested in your feedback! You can submit a suggestion or feature request through the issue tracker."]</p>
+                    <a href="https://github.com/aiursoftweb/howToCookViewer/issues" target="_blank" class="btn btn-sm btn-outline-danger">@Localizer["Report Issue"]</a>
+                    <a href="https://github.com/aiursoftweb/howToCookViewer/pulls" target="_blank" class="btn btn-sm btn-outline-secondary">@Localizer["Pull Request"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="align-middle me-2" data-lucide="code-2"></i>
+                        @Localizer["Development & Manual Run"]
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>@Localizer["Prerequisites"]</h6>
+                            <ul>
+                                <li><a href="http://dot.net/">@Localizer[".NET 10 SDK"]</a></li>
+                                <li><a href="https://nodejs.org/">@Localizer["Node.js"]</a></li>
+                            </ul>
+                            <h6>@Localizer["Run Manually"]</h6>
+                            <ol>
+                                <li>@Localizer["Execute `npm install` at `wwwroot` folder."]</li>
+                                <li>@Localizer["Execute `dotnet run` to run the app."]</li>
+                                <li>@Localizer["Visit http://localhost:5000."]</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>@Localizer["Run in Visual Studio"]</h6>
+                            <ol>
+                                <li>@Localizer["Open the `.sln` file."]</li>
+                                <li>@Localizer["Press `F5` to run the app."]</li>
+                            </ol>
+                            <div class="alert alert-info py-2">
+                                <i class="align-middle me-2" data-lucide="info"></i>
+                                @Localizer["Always create a personal fork before submitting PRs."]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<vc:marketing-footer></vc:marketing-footer>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/scripts/site.js"></script>
+}

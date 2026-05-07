@@ -61,6 +61,11 @@ public class HomeController(
         });
     }
 
+    public IActionResult SelfHost()
+    {
+        return this.SimpleView(new SelfHostViewModel());
+    }
+
     private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes)
     {
         if (recipes.Count == 0) return [];
