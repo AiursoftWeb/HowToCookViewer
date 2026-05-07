@@ -75,5 +75,20 @@
   <data name="Vegetable Dishes" xml:space="preserve">
     <value>Vegetable Dishes</value>
   </data>
+  <data name="Ingredients and Tools" xml:space="preserve">
+    <value>Ingredients and Tools</value>
+  </data>
+  <data name="Calculation" xml:space="preserve">
+    <value>Calculation</value>
+  </data>
+  <data name="Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="Additional Notes" xml:space="preserve">
+    <value>Additional Notes</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
 
 </root>
