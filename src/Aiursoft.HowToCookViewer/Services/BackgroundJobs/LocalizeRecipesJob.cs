@@ -49,11 +49,11 @@ public class LocalizeRecipesJob(
 
         foreach (var culture in cultures)
         {
-            // Pull pending recipes in pages to avoid loading the entire table into memory
+            var lastId = 0;
             while (true)
             {
                 var pendingRecipes = await db.Recipes
-                    .Where(r => !db.LocalizedRecipes.Any(lr =>
+                    .Where(r => r.Id > lastId && !db.LocalizedRecipes.Any(lr =>
                         lr.RecipeId == r.Id &&
                         lr.Culture == culture &&
                         lr.LastLocalizedAt >= r.FileLastModified))
@@ -65,16 +65,19 @@ public class LocalizeRecipesJob(
 
                 foreach (var recipe in pendingRecipes)
                 {
-                    await LocalizeRecipeAsync(recipe, culture);
-                    totalProcessed++;
+                    var success = await LocalizeRecipeAsync(recipe, culture);
+                    if (success)
+                    {
+                        totalProcessed++;
+                        // Save immediately after each recipe to ensure progress survives a crash
+                        await db.SaveChangesAsync();
+                    }
                 }
 
-                // Save after every page so progress survives a restart
-                await db.SaveChangesAsync();
-
+                lastId = pendingRecipes.Max(r => r.Id);
                 logger.LogInformation(
-                    "LocalizeRecipesJob: [{Culture}] saved a batch of {Count} (total so far: {Total}).",
-                    culture, pendingRecipes.Count, totalProcessed);
+                    "LocalizeRecipesJob: [{Culture}] batch finished. Last ID: {LastId}. Total processed so far: {Total}.",
+                    culture, lastId, totalProcessed);
             }
 
             logger.LogInformation("LocalizeRecipesJob: [{Culture}] all recipes up-to-date.", culture);
@@ -83,7 +86,7 @@ public class LocalizeRecipesJob(
         logger.LogInformation("LocalizeRecipesJob: done. Processed {Count} recipe/language pair(s) this run.", totalProcessed);
     }
 
-    private async Task LocalizeRecipeAsync(Recipe recipe, string culture)
+    private async Task<bool> LocalizeRecipeAsync(Recipe recipe, string culture)
     {
         try
         {
@@ -91,12 +94,15 @@ public class LocalizeRecipesJob(
                 "LocalizeRecipesJob: translating recipe '{Name}' (id={Id}) to {Culture}.",
                 recipe.Name, recipe.Id, culture);
 
-            var localizedName        = await translator.TranslateAsync(recipe.Name,        culture);
-            var localizedDescription = await translator.TranslateAsync(recipe.Description, culture);
-            var localizedIngredients = await translator.TranslateAsync(recipe.Ingredients, culture);
-            var localizedCalculation = await translator.TranslateAsync(recipe.Calculation, culture);
-            var localizedSteps       = await translator.TranslateAsync(recipe.Steps,       culture);
-            var localizedNotes       = await translator.TranslateAsync(recipe.Notes,       culture);
+            // Parallelize translation calls to reduce overhead
+            var nameTask = translator.TranslateAsync(recipe.Name, culture);
+            var descTask = translator.TranslateAsync(recipe.Description, culture);
+            var ingrTask = translator.TranslateAsync(recipe.Ingredients, culture);
+            var calcTask = translator.TranslateAsync(recipe.Calculation, culture);
+            var stepTask = translator.TranslateAsync(recipe.Steps, culture);
+            var noteTask = translator.TranslateAsync(recipe.Notes, culture);
+
+            await Task.WhenAll(nameTask, descTask, ingrTask, calcTask, stepTask, noteTask);
 
             var existing = await db.LocalizedRecipes
                 .FirstOrDefaultAsync(lr => lr.RecipeId == recipe.Id && lr.Culture == culture);
@@ -107,31 +113,33 @@ public class LocalizeRecipesJob(
                 {
                     RecipeId            = recipe.Id,
                     Culture             = culture,
-                    LocalizedName        = localizedName,
-                    LocalizedDescription = localizedDescription,
-                    LocalizedIngredients = localizedIngredients,
-                    LocalizedCalculation = localizedCalculation,
-                    LocalizedSteps       = localizedSteps,
-                    LocalizedNotes       = localizedNotes,
+                    LocalizedName        = await nameTask,
+                    LocalizedDescription = await descTask,
+                    LocalizedIngredients = await ingrTask,
+                    LocalizedCalculation = await calcTask,
+                    LocalizedSteps       = await stepTask,
+                    LocalizedNotes       = await noteTask,
                     LastLocalizedAt      = DateTime.UtcNow
                 });
             }
             else
             {
-                existing.LocalizedName        = localizedName;
-                existing.LocalizedDescription = localizedDescription;
-                existing.LocalizedIngredients = localizedIngredients;
-                existing.LocalizedCalculation = localizedCalculation;
-                existing.LocalizedSteps       = localizedSteps;
-                existing.LocalizedNotes       = localizedNotes;
+                existing.LocalizedName        = await nameTask;
+                existing.LocalizedDescription = await descTask;
+                existing.LocalizedIngredients = await ingrTask;
+                existing.LocalizedCalculation = await calcTask;
+                existing.LocalizedSteps       = await stepTask;
+                existing.LocalizedNotes       = await noteTask;
                 existing.LastLocalizedAt      = DateTime.UtcNow;
             }
+            return true;
         }
         catch (Exception ex)
         {
             logger.LogError(ex,
                 "LocalizeRecipesJob: failed to localize recipe '{Name}' to {Culture}.",
                 recipe.Name, culture);
+            return false;
         }
     }
 }
