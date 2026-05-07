@@ -30,6 +30,9 @@
   <data name="Contributions" xml:space="preserve">
     <value>Bidrag</value>
   </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Medverkande</value>
+  </data>
   <data name="Documentation" xml:space="preserve">
     <value>Dokumentation</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Github" xml:space="preserve">
     <value>GitHub</value>
+  </data>
+  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
+    <value>HowToCook Viewer - En modern, funktionsrik och högst utbyggnadsbar webbvisare för HowToCook-projektet med öppen källkod.</value>
   </data>
   <data name="Legal" xml:space="preserve">
     <value>Juridik</value>
@@ -53,6 +59,9 @@
   </data>
   <data name="Resources" xml:space="preserve">
     <value>Resurser</value>
+  </data>
+  <data name="Revolt Forum" xml:space="preserve">
+    <value>Revolt Forum</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>Sociala medier</value>

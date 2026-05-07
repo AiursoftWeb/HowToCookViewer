@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Twee-talige tutorials</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>Zowel de recepten als deze viewer zijn open-source. Transparant, samenwerkend en voor altijd gratis.</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>Alle recepten bekijken</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Consistency Validatie</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>Kook met vertrouwen.</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Comfortabel coördineren</value>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Click here to view the legal information." xml:space="preserve">
+    <value>Clique aqui para ver as informações legais.</value>
+  </data>
+  <data name="Community Content" xml:space="preserve">
+    <value>Conteúdo da Comunidade</value>
+  </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>Editar no GitHub</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="Last updated:" xml:space="preserve">
+    <value>Última atualização:</value>
+  </data>
+  <data name="The copyright of this tip belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
+    <value>Os direitos de autor desta dica pertencem à comunidade e são libertados para o domínio público sob a Licença Unlicense — livre para uso para qualquer fim, sem quaisquer restrições.</value>
+  </data>
+
+</root>
