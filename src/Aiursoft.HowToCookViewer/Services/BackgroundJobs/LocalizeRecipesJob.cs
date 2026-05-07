@@ -52,8 +52,9 @@ public class LocalizeRecipesJob(
             var lastId = 0;
             while (true)
             {
+                var currentLastId = lastId;
                 var pendingRecipes = await db.Recipes
-                    .Where(r => r.Id > lastId && !db.LocalizedRecipes.Any(lr =>
+                    .Where(r => r.Id > currentLastId && !db.LocalizedRecipes.Any(lr =>
                         lr.RecipeId == r.Id &&
                         lr.Culture == culture &&
                         lr.LastLocalizedAt >= r.FileLastModified))
