@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>To-sprogede vejledninger</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>Både opskrifterne og denne visning er open-source. Gennemsigtige, samarbejdsorienterede og gratis for altid.</value>
+  </data>
   <data name="Browse All Recipes" xml:space="preserve">
     <value>Gennemse alle opskrifter</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistensvalidering</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>Tilbered med tillid</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Sammenlign bekvemt</value>
