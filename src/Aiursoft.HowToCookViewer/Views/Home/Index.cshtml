@@ -42,6 +42,10 @@
                         <i class="align-middle me-1" data-lucide="grid"></i>
                         @Localizer["Browse All Recipes"]
                     </a>
+                    <a asp-controller="Home" asp-action="SelfHost" class="btn btn-outline-light btn-sm btn-pill ms-2">
+                        <i class="align-middle me-1" data-lucide="server"></i>
+                        @Localizer["Self Host"]
+                    </a>
                 </div>
             </div>
         </div>
@@ -152,6 +156,10 @@
                 <a asp-controller="Dashboard" asp-action="Index" class="btn btn-primary btn-lg btn-pill">
                     <i class="align-middle me-2" data-lucide="utensils"></i>
                     @Localizer["Browse All Recipes"]
+                </a>
+                <a asp-controller="Home" asp-action="SelfHost" class="btn btn-outline-primary btn-lg btn-pill ms-2">
+                    <i class="align-middle me-2" data-lucide="server"></i>
+                    @Localizer["Self Host"]
                 </a>
             </div>
         </div>

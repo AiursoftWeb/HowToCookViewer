@@ -93,6 +93,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>搜索菜谱（如 西红柿、鸡蛋、豆腐…）</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>本地部署菜谱浏览器</value>
+  </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>发现错误或想改进菜谱？直接在 GitHub 上修改，帮助整个社区。</value>
   </data>
