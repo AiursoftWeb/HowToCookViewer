@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET 10 SDK" xml:space="preserve">
+    <value>.NET 10 SDK</value>
+  </data>
+  <data name="About HowToCook Viewer" xml:space="preserve">
+    <value>Informazioni su HowToCook Viewer</value>
+  </data>
+  <data name="Always create a personal fork before submitting PRs." xml:space="preserve">
+    <value>Crea sempre un fork personale prima di inviare le PR.</value>
+  </data>
+  <data name="and the default password is:" xml:space="preserve">
+    <value>e la password predefinita è:</value>
+  </data>
+  <data name="Anywhere" xml:space="preserve">
+    <value>Ovunque</value>
+  </data>
+  <data name="Binary path" xml:space="preserve">
+    <value>Percorso del binario</value>
+  </data>
+  <data name="Config path" xml:space="preserve">
+    <value>Percorso configurazione</value>
+  </data>
+  <data name="Container Context" xml:space="preserve">
+    <value>Contesto del contenitore</value>
+  </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Collabora</value>
+  </data>
+  <data name="Data path" xml:space="preserve">
+    <value>Percorso dati</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>Distribuisci</value>
+  </data>
+  <data name="Development &amp; Manual Run" xml:space="preserve">
+    <value>Sviluppo ed esecuzione manuale</value>
+  </data>
+  <data name="Execute `dotnet run` to run the app." xml:space="preserve">
+    <value>Esegui `dotnet run` per avviare l&apos;app.</value>
+  </data>
+  <data name="Execute `npm install` at `wwwroot` folder." xml:space="preserve">
+    <value>Esegui `npm install` nella cartella `wwwroot`.</value>
+  </data>
+  <data name="First, install Docker. Then run the following commands in a Linux shell:" xml:space="preserve">
+    <value>Innanzitutto, installa Docker. Quindi esegui i seguenti comandi in un terminale Linux:</value>
+  </data>
+  <data name="HowToCook Viewer is a visualization and website of HowToCook." xml:space="preserve">
+    <value>HowToCook Viewer è una visualizzazione e un sito web di HowToCook.</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Immagine</value>
+  </data>
+  <data name="Live Demo" xml:space="preserve">
+    <value>Demo dal vivo</value>
+  </data>
+  <data name="Node.js" xml:space="preserve">
+    <value>Node.js</value>
+  </data>
+  <data name="Open the `.sln` file." xml:space="preserve">
+    <value>Apri il file `.sln`.</value>
+  </data>
+  <data name="Or with a custom port:" xml:space="preserve">
+    <value>Oppure con una porta personalizzata:</value>
+  </data>
+  <data name="Ports" xml:space="preserve">
+    <value>Porte</value>
+  </data>
+  <data name="Prerequisites" xml:space="preserve">
+    <value>Prerequisiti</value>
+  </data>
+  <data name="Press `F5` to run the app." xml:space="preserve">
+    <value>Premi `F5` per eseguire l&apos;app.</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Proprietà</value>
+  </data>
+  <data name="Pull Request" xml:space="preserve">
+    <value>Richiesta di estrazione</value>
+  </data>
+  <data name="Recommended" xml:space="preserve">
+    <value>Raccomandato</value>
+  </data>
+  <data name="Report Issue" xml:space="preserve">
+    <value>Segnala un problema</value>
+  </data>
+  <data name="Run in Docker" xml:space="preserve">
+    <value>Esegui in Docker</value>
+  </data>
+  <data name="Run in Ubuntu" xml:space="preserve">
+    <value>Esegui su Ubuntu</value>
+  </data>
+  <data name="Run in Visual Studio" xml:space="preserve">
+    <value>Esegui in Visual Studio</value>
+  </data>
+  <data name="Run Manually" xml:space="preserve">
+    <value>Esecuzione manuale</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Self Host</value>
+  </data>
+  <data name="That will start a web server at http://localhost:5000 and you can test the app." xml:space="preserve">
+    <value>Questo avvierà un server web all&apos;indirizzo http://localhost:5000 e potrai testare l&apos;applicazione.</value>
+  </data>
+  <data name="The default username is:" xml:space="preserve">
+    <value>Il nome utente predefinito è:</value>
+  </data>
+  <data name="The following script will install/update this app on your Ubuntu server. Supports Ubuntu 25.04." xml:space="preserve">
+    <value>Lo script seguente installerà/aggiornará questa app sul tuo server Ubuntu. Supporta Ubuntu 25.04.</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valore</value>
+  </data>
+  <data name="Visit http://localhost:5000." xml:space="preserve">
+    <value>Visita http://localhost:5000.</value>
+  </data>
+  <data name="We&apos;re interested in your feedback! You can submit a suggestion or feature request through the issue tracker." xml:space="preserve">
+    <value>Ci interessa il tuo feedback! Puoi inviare un suggerimento o una richiesta di funzionalità tramite il tracker delle issue.</value>
+  </data>
+
+</root>

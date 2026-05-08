@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Cari resep (mis. tomat, telur, tahu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Hosting Mandiri</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Setengah Jadi</value>
   </data>

@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>रेसिपी खोजें (जैसे टमाटर, अंडा, टोफू…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>स्वयं होस्ट</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>अर्ध-निर्मित</value>
   </data>

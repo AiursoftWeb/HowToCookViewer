@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Tarif ara (örn. domates, yumurta, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Kendi Kendine Barındırma</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Yarı Mamul</value>
   </data>

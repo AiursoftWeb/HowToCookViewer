@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Pesquisar receitas (ex. tomate, ovo, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Auto-hospedado</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Semiacabados</value>
   </data>

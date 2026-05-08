@@ -639,6 +639,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>Tìm kiếm công thức nấu ăn (ví dụ: cà chua, trứng, đậu phụ…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Tự lưu trữ</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Chuyển đổi với sự tự tin</value>
   </data>

@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Hae reseptejä (esim. tomaatti, muna, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Itse isännöity</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Puolivalmisteet</value>
   </data>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET 10 SDK" xml:space="preserve">
+    <value>.NET 10 SDK</value>
+  </data>
+  <data name="About HowToCook Viewer" xml:space="preserve">
+    <value>Σχετικά με τον HowToCook Viewer</value>
+  </data>
+  <data name="Always create a personal fork before submitting PRs." xml:space="preserve">
+    <value>Δημιουργήστε πάντα ένα προσωπικό fork πριν υποβάλετε PRs.</value>
+  </data>
+  <data name="and the default password is:" xml:space="preserve">
+    <value>και ο προεπιλεγμένος κωδικός πρόσβασης είναι:</value>
+  </data>
+  <data name="Anywhere" xml:space="preserve">
+    <value>Οπουδήποτε</value>
+  </data>
+  <data name="Binary path" xml:space="preserve">
+    <value>Διαδρομή εκτελέσιμου</value>
+  </data>
+  <data name="Config path" xml:space="preserve">
+    <value>Διαδρομή διαμόρφωσης</value>
+  </data>
+  <data name="Container Context" xml:space="preserve">
+    <value>Πλαίσιο Περιεχομένου</value>
+  </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Συνεισφορά</value>
+  </data>
+  <data name="Data path" xml:space="preserve">
+    <value>Διαδρομή δεδομένων</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>Εγκατάσταση</value>
+  </data>
+  <data name="Development &amp; Manual Run" xml:space="preserve">
+    <value>Ανάπτυξη &amp; Χειροκίνητη Εκτέλεση</value>
+  </data>
+  <data name="Execute `dotnet run` to run the app." xml:space="preserve">
+    <value>Εκτελέστε το `dotnet run` για να εκτελέσετε την εφαρμογή.</value>
+  </data>
+  <data name="Execute `npm install` at `wwwroot` folder." xml:space="preserve">
+    <value>Εκτελέστε το `npm install` στον φάκελο `wwwroot`.</value>
+  </data>
+  <data name="First, install Docker. Then run the following commands in a Linux shell:" xml:space="preserve">
+    <value>Πρώτα, εγκαταστήστε το Docker. Στη συνέχεια, εκτελέστε τις ακόλουθες εντολές σε ένα τερματικό Linux:</value>
+  </data>
+  <data name="HowToCook Viewer is a visualization and website of HowToCook." xml:space="preserve">
+    <value>Το HowToCook Viewer είναι μια απεικόνιση και ιστοσελίδα του HowToCook.</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Εικόνα</value>
+  </data>
+  <data name="Live Demo" xml:space="preserve">
+    <value>Ζωντανή Επίδειξη</value>
+  </data>
+  <data name="Node.js" xml:space="preserve">
+    <value>Node.js</value>
+  </data>
+  <data name="Open the `.sln` file." xml:space="preserve">
+    <value>Ανοίξτε το αρχείο `.sln`.</value>
+  </data>
+  <data name="Or with a custom port:" xml:space="preserve">
+    <value>Ή με μια προσαρμοσμένη θύρα:</value>
+  </data>
+  <data name="Ports" xml:space="preserve">
+    <value>Θύρες</value>
+  </data>
+  <data name="Prerequisites" xml:space="preserve">
+    <value>Προαπαιτούμενα</value>
+  </data>
+  <data name="Press `F5` to run the app." xml:space="preserve">
+    <value>Πατήστε `F5` για να εκτελέσετε την εφαρμογή.</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Ιδιότητα</value>
+  </data>
+  <data name="Pull Request" xml:space="preserve">
+    <value>Παρακαλώ αίτημα έλξης</value>
+  </data>
+  <data name="Recommended" xml:space="preserve">
+    <value>Προτεινόμενο</value>
+  </data>
+  <data name="Report Issue" xml:space="preserve">
+    <value>Αναφορά Προβλήματος</value>
+  </data>
+  <data name="Run in Docker" xml:space="preserve">
+    <value>Εκτέλεση σε Docker</value>
+  </data>
+  <data name="Run in Ubuntu" xml:space="preserve">
+    <value>Εκτέλεση στο Ubuntu</value>
+  </data>
+  <data name="Run in Visual Studio" xml:space="preserve">
+    <value>Εκτέλεση στο Visual Studio</value>
+  </data>
+  <data name="Run Manually" xml:space="preserve">
+    <value>Χειροκίνητη Εκτέλεση</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Ξεχωριστή Στέγαση</value>
+  </data>
+  <data name="That will start a web server at http://localhost:5000 and you can test the app." xml:space="preserve">
+    <value>Αυτό θα εκκινήσει έναν web server στο http://localhost:5000 και μπορείτε να δοκιμάσετε την εφαρμογή.</value>
+  </data>
+  <data name="The default username is:" xml:space="preserve">
+    <value>Το προεπιλεγμένο όνομα χρήστη είναι:</value>
+  </data>
+  <data name="The following script will install/update this app on your Ubuntu server. Supports Ubuntu 25.04." xml:space="preserve">
+    <value>Το παρακάτω σενάριο θα εγκαταστήσει/ενημερώσει αυτή την εφαρμογή στον διακομιστή Ubuntu σας. Υποστηρίζει Ubuntu 25.04.</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Τιμή</value>
+  </data>
+  <data name="Visit http://localhost:5000." xml:space="preserve">
+    <value>Επισκεφθείτε το http://localhost:5000.</value>
+  </data>
+  <data name="We&apos;re interested in your feedback! You can submit a suggestion or feature request through the issue tracker." xml:space="preserve">
+    <value>Είμαστε ενδιαφερόμενοι για τα σχόλιά σας! Μπορείτε να υποβάλετε μια πρόταση ή αίτημα νέας λειτουργίας μέσω του συστήματος παρακολούθησης θεμάτων.</value>
+  </data>
+
+</root>

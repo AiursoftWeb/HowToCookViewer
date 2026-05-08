@@ -143,6 +143,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Search recipes (e.g. tomato, egg, tofu…)"];
     
         _ = localizer["Tip"];
+    
+        _ = localizer["Self Host"];
     }
 
     public void InjectSimple(

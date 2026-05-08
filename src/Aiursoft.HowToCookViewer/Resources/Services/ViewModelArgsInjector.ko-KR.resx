@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>레시피 검색 (예: 토마토, 계란, 두부…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>셀프 호스팅</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>반가공식품</value>
   </data>

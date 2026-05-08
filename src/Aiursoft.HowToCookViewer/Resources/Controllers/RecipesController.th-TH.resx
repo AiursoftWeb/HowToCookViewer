@@ -18,38 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
+      <data name="Additional Notes" xml:space="preserve">
+    <value>หมายเหตุเพิ่มเติม</value>
+  </data>
+  <data name="All Recipes" xml:space="preserve">
     <value>สูตรทั้งหมด</value>
   </data>
-  <data name="Aquatic" xml:space="preserve">
-    <value>Aquatic</value>
+  <data name="Calculation" xml:space="preserve">
+    <value>การคำนวณ</value>
   </data>
-  <data name="Breakfast" xml:space="preserve">
-    <value>Breakfast</value>
+  <data name="Images" xml:space="preserve">
+    <value>รูปภาพ</value>
   </data>
-  <data name="Condiments" xml:space="preserve">
-    <value>Condiments</value>
-  </data>
-  <data name="Desserts" xml:space="preserve">
-    <value>Desserts</value>
-  </data>
-  <data name="Difficulty {0} Stars" xml:space="preserve">
-    <value>Difficulty {0} Stars</value>
-  </data>
-  <data name="Drinks" xml:space="preserve">
-    <value>Drinks</value>
+  <data name="Ingredients and Tools" xml:space="preserve">
+    <value>วัตถุดิบและอุปกรณ์</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
     <value>แสดงความคิดเห็นน้อยที่สุด</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
-    <value>ไม่เป็นที่โปรดปรานน้อยที่สุด</value>
+    <value>ถูกถูกใจน้อยที่สุด</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>ที่ถูกชอบน้อยที่สุด</value>
-  </data>
-  <data name="Meat Dishes" xml:space="preserve">
-    <value>Meat Dishes</value>
+    <value>ชื่นชอบน้อยที่สุด</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
     <value>แสดงความคิดเห็นมากที่สุด</value>
@@ -58,37 +49,10 @@
     <value>ที่ชื่นชอบมากที่สุด</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>ยอดนิยมที่สุด</value>
-  </data>
-  <data name="Semi-finished" xml:space="preserve">
-    <value>Semi-finished</value>
-  </data>
-  <data name="Soups" xml:space="preserve">
-    <value>Soups</value>
-  </data>
-  <data name="Staple Food" xml:space="preserve">
-    <value>Staple Food</value>
-  </data>
-  <data name="Templates" xml:space="preserve">
-    <value>Templates</value>
-  </data>
-  <data name="Vegetable Dishes" xml:space="preserve">
-    <value>Vegetable Dishes</value>
-  </data>
-  <data name="Ingredients and Tools" xml:space="preserve">
-    <value>Ingredients and Tools</value>
-  </data>
-  <data name="Calculation" xml:space="preserve">
-    <value>Calculation</value>
+    <value>ยอดนิยม</value>
   </data>
   <data name="Steps" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="Additional Notes" xml:space="preserve">
-    <value>Additional Notes</value>
-  </data>
-  <data name="Images" xml:space="preserve">
-    <value>Images</value>
+    <value>ขั้นตอน</value>
   </data>
 
 </root>

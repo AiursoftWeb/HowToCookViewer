@@ -639,6 +639,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>레시피 검색 (예: 토마토, 계란, 두부…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>직접 호스팅</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>자신 있게 전환하세요</value>
   </data>

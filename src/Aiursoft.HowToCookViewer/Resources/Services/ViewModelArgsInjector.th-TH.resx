@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>ค้นหาสูตรอาหาร (เช่น มะเขือเทศ, ไข่, เต้าหู้…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>โฮสต์เอง</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>อาหารกึ่งสำเร็จรูป</value>
   </data>

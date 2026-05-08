@@ -639,6 +639,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>Søg efter opskrifter (f.eks. tomater, æg, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Selvhost</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Skift med tillid</value>
   </data>

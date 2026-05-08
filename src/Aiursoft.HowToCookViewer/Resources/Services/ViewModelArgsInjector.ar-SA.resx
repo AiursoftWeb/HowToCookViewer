@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>البحث عن وصفات (مثل: طماطم، بيض، توفو…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>استضافة ذاتية</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>منتجات شبه مصنعة</value>
   </data>

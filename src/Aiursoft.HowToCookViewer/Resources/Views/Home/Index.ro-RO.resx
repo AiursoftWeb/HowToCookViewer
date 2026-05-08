@@ -639,6 +639,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>Caută rețete (de ex. roșii, ouă, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Gazduire proprie</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Mutați cu încredere</value>
   </data>

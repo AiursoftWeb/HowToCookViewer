@@ -216,6 +216,9 @@
   <data name="Search recipes (e.g. tomato, egg, tofu…)" xml:space="preserve">
     <value>Пошук рецептів (напр. помідор, яйце, тофу…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Самостійне розміщення</value>
+  </data>
   <data name="Semi-finished" xml:space="preserve">
     <value>Напівфабрикати</value>
   </data>

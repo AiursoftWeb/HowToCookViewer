@@ -18,77 +18,41 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
-    <value>所有菜譜</value>
+      <data name="Additional Notes" xml:space="preserve">
+    <value>補充說明</value>
   </data>
-  <data name="Aquatic" xml:space="preserve">
-    <value>水產</value>
+  <data name="All Recipes" xml:space="preserve">
+    <value>所有食譜</value>
   </data>
-  <data name="Breakfast" xml:space="preserve">
-    <value>早餐</value>
+  <data name="Calculation" xml:space="preserve">
+    <value>計算</value>
   </data>
-  <data name="Condiments" xml:space="preserve">
-    <value>醬料</value>
+  <data name="Images" xml:space="preserve">
+    <value>圖片</value>
   </data>
-  <data name="Desserts" xml:space="preserve">
-    <value>甜品</value>
-  </data>
-  <data name="Difficulty {0} Stars" xml:space="preserve">
-    <value>難度 {0} 星</value>
-  </data>
-  <data name="Drinks" xml:space="preserve">
-    <value>飲品</value>
+  <data name="Ingredients and Tools" xml:space="preserve">
+    <value>食材與工具</value>
   </data>
   <data name="Least Commented" xml:space="preserve">
-    <value>最少評論</value>
+    <value>留言最少</value>
   </data>
   <data name="Least Favorited" xml:space="preserve">
     <value>最少收藏</value>
   </data>
   <data name="Least Liked" xml:space="preserve">
-    <value>最少點贊</value>
-  </data>
-  <data name="Meat Dishes" xml:space="preserve">
-    <value>葷菜</value>
+    <value>最不喜歡</value>
   </data>
   <data name="Most Commented" xml:space="preserve">
-    <value>最多評論</value>
+    <value>最多留言</value>
   </data>
   <data name="Most Favorited" xml:space="preserve">
-    <value>最多收藏</value>
+    <value>最多人收藏</value>
   </data>
   <data name="Most Liked" xml:space="preserve">
-    <value>最多點贊</value>
-  </data>
-  <data name="Semi-finished" xml:space="preserve">
-    <value>半成品</value>
-  </data>
-  <data name="Soups" xml:space="preserve">
-    <value>湯</value>
-  </data>
-  <data name="Staple Food" xml:space="preserve">
-    <value>主食</value>
-  </data>
-  <data name="Templates" xml:space="preserve">
-    <value>模板</value>
-  </data>
-  <data name="Vegetable Dishes" xml:space="preserve">
-    <value>素菜</value>
-  </data>
-  <data name="Ingredients and Tools" xml:space="preserve">
-    <value>必备原料和工具</value>
-  </data>
-  <data name="Calculation" xml:space="preserve">
-    <value>计算</value>
+    <value>最多讚</value>
   </data>
   <data name="Steps" xml:space="preserve">
-    <value>操作</value>
-  </data>
-  <data name="Additional Notes" xml:space="preserve">
-    <value>附加内容</value>
-  </data>
-  <data name="Images" xml:space="preserve">
-    <value>图片</value>
+    <value>步驟</value>
   </data>
 
 </root>

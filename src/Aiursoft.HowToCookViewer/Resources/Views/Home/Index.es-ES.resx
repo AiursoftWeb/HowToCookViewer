@@ -639,6 +639,9 @@
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>Buscar recetas (p. ej., tomate, huevo, tofu…)</value>
   </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Autoalojamiento</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Desplázate con confianza</value>
   </data>
