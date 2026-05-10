@@ -24,8 +24,26 @@
   <data name="All Recipes" xml:space="preserve">
     <value>Semua Resep</value>
   </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Makanan Laut</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Sarapan</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Perhitungan</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Bumbu</value>
+  </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Dessert</value>
+  </data>
+  <data name="Difficulty {0} Stars" xml:space="preserve">
+    <value>Kesulitan {0} Bintang</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Minuman</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Gambar</value>
@@ -42,6 +60,9 @@
   <data name="Least Liked" xml:space="preserve">
     <value>Terleast Disukai</value>
   </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>Hidangan Daging</value>
+  </data>
   <data name="Most Commented" xml:space="preserve">
     <value>Paling Banyak Dikomentari</value>
   </data>
@@ -51,8 +72,23 @@
   <data name="Most Liked" xml:space="preserve">
     <value>Paling Disukai</value>
   </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Setengah Jadi</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Sup</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Makanan Pokok</value>
+  </data>
   <data name="Steps" xml:space="preserve">
     <value>Langkah</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Templat</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Hidangan Sayuran</value>
   </data>
 
 </root>
