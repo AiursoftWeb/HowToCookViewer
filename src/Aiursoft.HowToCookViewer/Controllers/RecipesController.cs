@@ -8,6 +8,7 @@ using Markdig;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Localization;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
@@ -38,7 +39,9 @@ public class RecipesController(
             ["template"]       = "Templates",
         };
 
-    private void Dummy()
+    [ExcludeFromCodeCoverage]
+    // ReSharper disable once UnusedMember.Local
+    private void _useless_for_localizer()
     {
         _ = localizer["Vegetable Dishes"];
         _ = localizer["Meat Dishes"];
@@ -51,6 +54,21 @@ public class RecipesController(
         _ = localizer["Condiments"];
         _ = localizer["Semi-finished"];
         _ = localizer["Templates"];
+
+        _ = localizer["Most Liked"];
+        _ = localizer["Least Liked"];
+        _ = localizer["Most Commented"];
+        _ = localizer["Least Commented"];
+        _ = localizer["Most Favorited"];
+        _ = localizer["Least Favorited"];
+        _ = localizer["Difficulty {0} Stars"];
+        _ = localizer["All Recipes"];
+
+        _ = localizer["Ingredients and Tools"];
+        _ = localizer["Calculation"];
+        _ = localizer["Steps"];
+        _ = localizer["Additional Notes"];
+        _ = localizer["Images"];
     }
 
     public async Task<IActionResult> Index(string? category, int? difficulty, string? sortBy)
