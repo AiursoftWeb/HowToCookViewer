@@ -38,6 +38,21 @@ public class RecipesController(
             ["template"]       = "Templates",
         };
 
+    private void Dummy()
+    {
+        _ = localizer["Vegetable Dishes"];
+        _ = localizer["Meat Dishes"];
+        _ = localizer["Aquatic"];
+        _ = localizer["Breakfast"];
+        _ = localizer["Staple Food"];
+        _ = localizer["Soups"];
+        _ = localizer["Drinks"];
+        _ = localizer["Desserts"];
+        _ = localizer["Condiments"];
+        _ = localizer["Semi-finished"];
+        _ = localizer["Templates"];
+    }
+
     public async Task<IActionResult> Index(string? category, int? difficulty, string? sortBy)
     {
         var baseQuery = BuildQuery(category, difficulty, sortBy);
