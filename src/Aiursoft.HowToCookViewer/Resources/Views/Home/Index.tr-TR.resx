@@ -1,24 +1,25 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:schema id="root">
-    <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-  </xs:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>Uzun süreli görevler (örneğin e-postalar veya AI) için "Fire-and-forget" desteği, kuyruk yönetimi, paralel işlem ve iptal için bir GUI ile birlikte.</value>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Uzun süreli görevler (örneğin e-postalar veya AI) için &quot;Fire-and-forget&quot; desteği, kuyruk yönetimi, paralel işlem ve iptal için bir GUI ile birlikte.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>İnce taneli izin yönetimi için yerleşik bir Rol Tabanlı Erişim Kontrolü (RBAC) sistemi.</value>
@@ -56,7 +57,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template, kurumsal projeler için nihai tercihimizdir! Geliştiriciler için tasarlandı, hafif ama güçlüdür. Kimlik doğrulama ve kullanıcı yönetimi için gerekli tüm standart kodlardan kurtulabiliriz.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -186,7 +187,7 @@
     <value>Kapsamlı Dokümantasyon</value>
   </data>
   <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
-    <value>Kapsamlı kullanım kılavuzları hem İngilizce hem de Çince'de.</value>
+    <value>Kapsamlı kullanım kılavuzları hem İngilizce hem de Çince&apos;de.</value>
   </data>
   <data name="Concise Docs" xml:space="preserve">
     <value>Kısa Belgeler</value>
@@ -240,13 +241,13 @@
     <value>Herkes için tasarlandı, başlangıç seviyesinden uzmanlara kadar.</value>
   </data>
   <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
-    <value>Konteyner çağı için tasarlandı. GitLab için önceden yapılandırılmış CI/CD pipeline'ları içerir. Kodu gönderin, sıkı şekilde kod denetimi geçin, otomatik test yapın ve Docker Swarm veya Kubernetes'e otomatik olarak dağıtın.</value>
+    <value>Konteyner çağı için tasarlandı. GitLab için önceden yapılandırılmış CI/CD pipeline&apos;ları içerir. Kodu gönderin, sıkı şekilde kod denetimi geçin, otomatik test yapın ve Docker Swarm veya Kubernetes&apos;e otomatik olarak dağıtın.</value>
   </data>
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Geliştirme &amp; Üretim</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
-    <value>UTC'de özel olarak geliştirin, sistem tarihleri otomatik olarak kullanıcıya özel saat diliminde dönüştürür ve görüntüler.</value>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>UTC&apos;de özel olarak geliştirin, sistem tarihleri otomatik olarak kullanıcıya özel saat diliminde dönüştürür ve görüntüler.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Geliştirici Deneyimi</value>
@@ -276,7 +277,7 @@
     <value>SQLite, MySQL, SQL Server gibi sağlayıcılar ile testler için kullanılan bellek içi veritabanı arasında kolayca geçiş yapın.</value>
   </data>
   <data name="Edit on GitHub" xml:space="preserve">
-    <value>GitHub'da Düzenle</value>
+    <value>GitHub&apos;da Düzenle</value>
   </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Anımsatmadan entegrasyon testleri yazın, bellek içi veritabanları, geçici dosya sistemleri, yerleşik mocklama ve gerçek dünya HTTP isteği simülasyonu kullanarak.</value>
@@ -304,6 +305,9 @@
   </data>
   <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
     <value>Her tarif, yapay zeka kullanılarak otomatik olarak 27 dile çevrilir, böylece anadilinizde yemek pişirebilirsiniz.</value>
+  </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>{0} Ücretsiz Tarifi Keşfedin</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>Binlerce Ücretsiz, Topluluk Kaynaklı Tarifi Keşfedin</value>
@@ -410,7 +414,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>İşte aradığınız cevaplardan bazıları.</value>
   </data>
-  <data name="Here's what developers from our community have to say." xml:space="preserve">
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>Topluluğumuzdaki geliştiricilerin söyledikleri.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -425,8 +429,8 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Uygulamamı nasıl dağıtırım?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
-    <value>Aiursoft Template'ı her yeni girişim projesi için aynı Auth, Log ve CI/CD borularını ayarlamaktan bıktığımdan oluşturdum. Bu sadece bir şablon değil; yüksek yoğunluklu üretim ortamlarında yıllar boyu birikmiş en iyi uygulamaların kristalleşmiş hâli. Takımımın sıkıcı kurulum aşamasını atlayıp doğrudan iş mantığına geçmesini sağlıyor.</value>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>Aiursoft Template&apos;ı her yeni girişim projesi için aynı Auth, Log ve CI/CD borularını ayarlamaktan bıktığımdan oluşturdum. Bu sadece bir şablon değil; yüksek yoğunluklu üretim ortamlarında yıllar boyu birikmiş en iyi uygulamaların kristalleşmiş hâli. Takımımın sıkıcı kurulum aşamasını atlayıp doğrudan iş mantığına geçmesini sağlıyor.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
     <value>IDE Desteği</value>
@@ -453,7 +457,7 @@
     <value>Ücretsiz Yazılımdır</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
-    <value>Aiursoft Template'ı kullanmak ücretsiz mi?</value>
+    <value>Aiursoft Template&apos;ı kullanmak ücretsiz mi?</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Tartışmalara Katıl</value>
@@ -480,7 +484,7 @@
     <value>Yönetim Paneli</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
-    <value>Markdown'dan HTML'e</value>
+    <value>Markdown&apos;dan HTML&apos;e</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT Lisansı</value>
@@ -653,10 +657,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Akıllı Yapılandırma Geçersiz Kılma</value>
   </data>
-  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Kullanıcının sistem ayarlarına uyum sağlayabilen akıllı karanlık mod.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Kullanıcının sistem ayarlarına otomatik olarak uyum sağlayan akıllı karanlık mod.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -674,8 +678,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Değer Göndermeye Başla.</value>
   </data>
-  <data name="Start with a single 'docker run' command." xml:space="preserve">
-    <value>Tek bir 'docker run' komutuyla başlayın.</value>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Tek bir &apos;docker run&apos; komutuyla başlayın.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Hiç yapılandırma gerektirmeden başlar</value>
@@ -710,7 +714,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Teknik Lider</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Kesin, savaştan sıyrılmış .NET enterprise temeli. Kimlik doğrulamadan yapay zekâya kadar, zor kısımları çözdük, sizin için yapmanıza gerek kalmadı.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -731,7 +735,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Zaman dilimi farkındalığına sahip alanlar</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>AnduinOS, StatHub ve Warp gibi üretim düzeyindeki uygulamalar tarafından güvenilir. Sadece bu kodu paylaşmakla kalmıyoruz; tamamen bu kodla işimizi yürütüyoruz.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -744,10 +748,10 @@
     <value>Kullanım</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
-    <value>Onu SaaS'ınız için bir temel, mobil uygulamanız için bir arka uç, bir kurumsal web sitesi veya kişisel bir blog olarak kullanın. Olanaklar sonsuzdur.</value>
+    <value>Onu SaaS&apos;ınız için bir temel, mobil uygulamanız için bir arka uç, bir kurumsal web sitesi veya kişisel bir blog olarak kullanın. Olanaklar sonsuzdur.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
-    <value>GitHub'da Görüntüle</value>
+    <value>GitHub&apos;da Görüntüle</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Hoş Geldiniz</value>
@@ -776,10 +780,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>GitHub Tartışmaları aracılığıyla topluluk desteği alabilirsiniz. Lütfen bizim</value>
   </data>
-  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
-    <value>.NET 10 SDK'ye, npm'ye ve Visual Studio veya JetBrains Rider gibi favori IDE'nize ihtiyacınız olacak. Tüm kurulum kılavuzunu belgelerimizde bulabilirsiniz.</value>
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>.NET 10 SDK&apos;ye, npm&apos;ye ve Visual Studio veya JetBrains Rider gibi favori IDE&apos;nize ihtiyacınız olacak. Tüm kurulum kılavuzunu belgelerimizde bulabilirsiniz.</value>
   </data>
-  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Şirketinizin kullanıcıları tekrar tekrar kayıt olmak zorunda kalmaz.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -794,7 +798,5 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Sıfır Tolerans Lint</value>
   </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>{0} Ücretsiz Tarifi Keşfedin</value>
-  </data>
+
 </root>

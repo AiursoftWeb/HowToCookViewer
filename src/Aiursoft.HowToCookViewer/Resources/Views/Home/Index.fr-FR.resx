@@ -1,33 +1,34 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:schema id="root">
-    <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-  </xs:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>Prise en charge « Fire-and-forget » pour les tâches longues (comme les e-mails ou l'IA), avec une interface graphique (GUI) pour la gestion de file d'attente, le traitement parallèle et l'annulation.</value>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Prise en charge « Fire-and-forget » pour les tâches longues (comme les e-mails ou l&apos;IA), avec une interface graphique (GUI) pour la gestion de file d&apos;attente, le traitement parallèle et l&apos;annulation.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
-    <value>Un système intégré de contrôle d'accès basé sur les rôles (RBAC) pour une gestion fine des permissions.</value>
+    <value>Un système intégré de contrôle d&apos;accès basé sur les rôles (RBAC) pour une gestion fine des permissions.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
-    <value>Une solution complète pour l'authentification des utilisateurs et la gestion des profils, prête à l'emploi.</value>
+    <value>Une solution complète pour l&apos;authentification des utilisateurs et la gestion des profils, prête à l&apos;emploi.</value>
   </data>
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
-    <value>Une solution complète pour l'authentification des utilisateurs et la gestion des profils.</value>
+    <value>Une solution complète pour l&apos;authentification des utilisateurs et la gestion des profils.</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Une mise en page entièrement réactive qui offre un rendu optimal sur les ordinateurs de bureau et les appareils mobiles.</value>
@@ -39,28 +40,28 @@
     <value>Atteignez plus avec Aiursoft Template</value>
   </data>
   <data name="Admin site included" xml:space="preserve">
-    <value>Site d'administration inclus</value>
+    <value>Site d&apos;administration inclus</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
-    <value>Traduction pilotée par l'IA</value>
+    <value>Traduction pilotée par l&apos;IA</value>
   </data>
   <data name="AI Readable" xml:space="preserve">
-    <value>Lisible par l'IA</value>
+    <value>Lisible par l&apos;IA</value>
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traductions par IA</value>
   </data>
   <data name="AI-Translated" xml:space="preserve">
-    <value>Traduit par l'IA</value>
+    <value>Traduit par l&apos;IA</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
-    <value>Aiursoft Template est notre choix définitif pour les projets d'entreprise ! Il est conçu pour les développeurs, léger mais puissant. Nous pouvons ignorer tout le code passe-partout pour l'authentification et la gestion des utilisateurs.</value>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template est notre choix définitif pour les projets d&apos;entreprise ! Il est conçu pour les développeurs, léger mais puissant. Nous pouvons ignorer tout le code passe-partout pour l&apos;authentification et la gestion des utilisateurs.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
-    <value>Toutes les dépendances sont automatiquement enregistrées et toujours disponibles via l'injection de constructeur.</value>
+    <value>Toutes les dépendances sont automatiquement enregistrées et toujours disponibles via l&apos;injection de constructeur.</value>
   </data>
   <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
     <value>Toutes les recettes proviennent du projet open-source HowToCook. Tout le monde peut contribuer, améliorer ou forker le projet.</value>
@@ -105,7 +106,7 @@
     <value>Traduction automatique par IA vers 28 langues pour une portée mondiale.</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
-    <value>Traduction automatique, alimentée par l'IA, en 28 langues.</value>
+    <value>Traduction automatique, alimentée par l&apos;IA, en 28 langues.</value>
   </data>
   <data name="Automatically deploy to Docker Swarm or Kubernetes clusters." xml:space="preserve">
     <value>Déploiement automatique vers des clusters Docker Swarm ou Kubernetes.</value>
@@ -141,7 +142,7 @@
     <value>Construisez votre prochain grand projet,</value>
   </data>
   <data name="Built for engineers who care about quality." xml:space="preserve">
-    <value>Conçu pour les ingénieurs qui s'intéressent à la qualité.</value>
+    <value>Conçu pour les ingénieurs qui s&apos;intéressent à la qualité.</value>
   </data>
   <data name="Built with Aiursoft Template" xml:space="preserve">
     <value>Construit avec le modèle Aiursoft</value>
@@ -153,13 +154,13 @@
     <value>Intégré</value>
   </data>
   <data name="Built-in administration panel" xml:space="preserve">
-    <value>Panneau d'administration intégré</value>
+    <value>Panneau d&apos;administration intégré</value>
   </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Auth intégrée</value>
   </data>
   <data name="Built-in Job Queue GUI" xml:space="preserve">
-    <value>Interface graphique intégrée pour la file d'attente des tâches</value>
+    <value>Interface graphique intégrée pour la file d&apos;attente des tâches</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestion intégrée des utilisateurs</value>
@@ -168,7 +169,7 @@
     <value>Inclut un support Docker pour des déploiements simplifiés et cohérents.</value>
   </data>
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
-    <value>Bénéficie d'une prise en charge complète de Docker pour des déploiements simplifiés, cohérents et fiables.</value>
+    <value>Bénéficie d&apos;une prise en charge complète de Docker pour des déploiements simplifiés, cohérents et fiables.</value>
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>Comprend des tests unitaires stricts, ce qui rend le développement piloté par les tests facile.</value>
@@ -180,13 +181,13 @@
     <value>Favoris de la communauté</value>
   </data>
   <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
-    <value>Contribué par la communauté, traduit par l'IA, et gratuit à vie.</value>
+    <value>Contribué par la communauté, traduit par l&apos;IA, et gratuit à vie.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Documentation complète</value>
   </data>
   <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
-    <value>Tutoriels d'utilisation complets en anglais et en chinois.</value>
+    <value>Tutoriels d&apos;utilisation complets en anglais et en chinois.</value>
   </data>
   <data name="Concise Docs" xml:space="preserve">
     <value>Docs concis</value>
@@ -228,7 +229,7 @@
     <value>Prêt le jour 1</value>
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
-    <value>Tests d'intégration approfondis avec Authentik. Compatible avec Okta.</value>
+    <value>Tests d&apos;intégration approfondis avec Authentik. Compatible avec Okta.</value>
   </data>
   <data name="Deep integration with DotLang AI" xml:space="preserve">
     <value>Intégration profonde avec DotLang AI</value>
@@ -240,13 +241,13 @@
     <value>Conçu pour tout le monde, des débutants aux experts.</value>
   </data>
   <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
-    <value>Conçu pour l'ère des conteneurs. Inclut des pipelines CI/CD préconfigurés pour GitLab. Pousser le code, passer strictement les vérifications de linting, tester automatiquement et déployer sur Docker Swarm ou Kubernetes automatiquement.</value>
+    <value>Conçu pour l&apos;ère des conteneurs. Inclut des pipelines CI/CD préconfigurés pour GitLab. Pousser le code, passer strictement les vérifications de linting, tester automatiquement et déployer sur Docker Swarm ou Kubernetes automatiquement.</value>
   </data>
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
-    <value>Développez exclusivement en UTC tandis que le système convertit automatiquement et affiche les dates dans le fuseau horaire local de l'utilisateur.</value>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Développez exclusivement en UTC tandis que le système convertit automatiquement et affiche les dates dans le fuseau horaire local de l&apos;utilisateur.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Expérience développeur</value>
@@ -270,7 +271,7 @@
     <value>Barre de navigation dynamique</value>
   </data>
   <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
-    <value>Passez facilement d'un fournisseur de base de données à un autre, y compris SQLite, MySQL, SQL Server et une base de données en mémoire pour les tests.</value>
+    <value>Passez facilement d&apos;un fournisseur de base de données à un autre, y compris SQLite, MySQL, SQL Server et une base de données en mémoire pour les tests.</value>
   </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Basculer facilement entre différents fournisseurs comme SQLite, MySQL, SQL Server, et une base de données en mémoire pour les tests.</value>
@@ -279,7 +280,7 @@
     <value>Modifier sur GitHub</value>
   </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
-    <value>Écrivez facilement des tests d'intégration en utilisant des bases de données en mémoire, des systèmes de fichiers temporaires, un mock intégré et une simulation de requêtes HTTP réelles.</value>
+    <value>Écrivez facilement des tests d&apos;intégration en utilisant des bases de données en mémoire, des systèmes de fichiers temporaires, un mock intégré et une simulation de requêtes HTTP réelles.</value>
   </data>
   <data name="Enforced" xml:space="preserve">
     <value>Imposé</value>
@@ -294,7 +295,7 @@
     <value>Fonctionnalités Entreprise</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
-    <value>Prêt pour l'entreprise</value>
+    <value>Prêt pour l&apos;entreprise</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Sécurité entreprise</value>
@@ -303,7 +304,10 @@
     <value>Entity Framework Core inclus</value>
   </data>
   <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
-    <value>Chaque recette est automatiquement traduite dans 27 langues grâce à l'IA, afin que vous puissiez cuisiner dans votre langue maternelle.</value>
+    <value>Chaque recette est automatiquement traduite dans 27 langues grâce à l&apos;IA, afin que vous puissiez cuisiner dans votre langue maternelle.</value>
+  </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Explorez {0} recettes gratuites</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>Explorez des milliers de recettes gratuites et partagées par la communauté</value>
@@ -390,13 +394,13 @@
     <value>Échelle mondiale</value>
   </data>
   <data name="Go global without extra effort." xml:space="preserve">
-    <value>Allez à l'échelle mondiale sans effort supplémentaire.</value>
+    <value>Allez à l&apos;échelle mondiale sans effort supplémentaire.</value>
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Accéder au tableau de bord</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
-    <value>Gérer les tâches récurrentes comme le nettoyage et la synchronisation avec une interface graphique complète pour surveiller l'historique d'exécution et les journaux.</value>
+    <value>Gérer les tâches récurrentes comme le nettoyage et la synchronisation avec une interface graphique complète pour surveiller l&apos;historique d&apos;exécution et les journaux.</value>
   </data>
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>Des tutoriels pratiques adaptés aux stagiaires en informatique.</value>
@@ -410,7 +414,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Voici quelques-unes des réponses que vous cherchez peut-être.</value>
   </data>
-  <data name="Here's what developers from our community have to say." xml:space="preserve">
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>Voici ce que les développeurs de notre communauté ont à dire.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -420,16 +424,16 @@
     <value>Horizon inclus</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
-    <value>Comment puis-je obtenir de l'aide ?</value>
+    <value>Comment puis-je obtenir de l&apos;aide ?</value>
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Comment déployer mon application ?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
-    <value>J'ai créé Aiursoft Template parce que j'en avais marre de configurer les mêmes pipelines d'Auth, de Log et de CI/CD pour chaque nouveau projet d'entreprise. Ce n'est pas seulement un modèle ; c'est l'essence des meilleures pratiques accumulées au fil de plusieurs années d'environnements de production à haute concurrence. Cela permet à mon équipe d'oublier les configurations fastidieuses et de passer directement à la logique métier.</value>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>J&apos;ai créé Aiursoft Template parce que j&apos;en avais marre de configurer les mêmes pipelines d&apos;Auth, de Log et de CI/CD pour chaque nouveau projet d&apos;entreprise. Ce n&apos;est pas seulement un modèle ; c&apos;est l&apos;essence des meilleures pratiques accumulées au fil de plusieurs années d&apos;environnements de production à haute concurrence. Cela permet à mon équipe d&apos;oublier les configurations fastidieuses et de passer directement à la logique métier.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
-    <value>Prise en charge de l'IDE</value>
+    <value>Prise en charge de l&apos;IDE</value>
   </data>
   <data name="Included" xml:space="preserve">
     <value>Inclus</value>
@@ -453,16 +457,16 @@
     <value>est un logiciel libre</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
-    <value>L'utilisation d'Aiursoft Template est-elle gratuite ?</value>
+    <value>L&apos;utilisation d&apos;Aiursoft Template est-elle gratuite ?</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Rejoindre les discussions</value>
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
-    <value>Rejoignez notre communauté et commencez à développer dès aujourd'hui !</value>
+    <value>Rejoignez notre communauté et commencez à développer dès aujourd&apos;hui !</value>
   </data>
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
-    <value>Rejoignez notre communauté grandissante de développeurs qui construisent la prochaine génération d'applications web.</value>
+    <value>Rejoignez notre communauté grandissante de développeurs qui construisent la prochaine génération d&apos;applications web.</value>
   </data>
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Prêt pour K8s / Swarm</value>
@@ -516,7 +520,7 @@
     <value>Nécessite Celery + Flower</value>
   </data>
   <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>Nécessite une logique d'authentification complexe</value>
+    <value>Nécessite une logique d&apos;authentification complexe</value>
   </data>
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Nécessite une configuration/des plugins</value>
@@ -576,7 +580,7 @@
     <value>ORM et migrations</value>
   </data>
   <data name="Out-of-the-box" xml:space="preserve">
-    <value>Prêt à l'emploi</value>
+    <value>Prêt à l&apos;emploi</value>
   </data>
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Découverte et synchronisation des autorisations</value>
@@ -618,7 +622,7 @@
     <value>Riche en photos</value>
   </data>
   <data name="Robust Integration Testing" xml:space="preserve">
-    <value>Tests d'intégration robustes</value>
+    <value>Tests d&apos;intégration robustes</value>
   </data>
   <data name="Runs without any internet connection required." xml:space="preserve">
     <value>Fonctionne sans connexion Internet requise.</value>
@@ -627,13 +631,13 @@
     <value>Gestion des tâches planifiées</value>
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
-    <value>Intégration transparente avec n'importe quel fournisseur OpenID Connect, avec synchronisation automatique des rôles.</value>
+    <value>Intégration transparente avec n&apos;importe quel fournisseur OpenID Connect, avec synchronisation automatique des rôles.</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Rechercher</value>
   </data>
   <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
-    <value>Recherchez par ingrédient, nom du plat ou catégorie pour trouver exactement ce que vous souhaitez cuisiner aujourd'hui.</value>
+    <value>Recherchez par ingrédient, nom du plat ou catégorie pour trouver exactement ce que vous souhaitez cuisiner aujourd&apos;hui.</value>
   </data>
   <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
     <value>Rechercher des recettes (ex. tomates, œufs, tofu…)</value>
@@ -653,11 +657,11 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Overrides de configuration intelligents</value>
   </data>
-  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
-    <value>Mode sombre intelligent qui s'adapte aux paramètres système de l'utilisateur.</value>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Mode sombre intelligent qui s&apos;adapte aux paramètres système de l&apos;utilisateur.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
-    <value>Mode sombre intelligent qui s'adapte automatiquement aux paramètres système de l'utilisateur.</value>
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Mode sombre intelligent qui s&apos;adapte automatiquement aux paramètres système de l&apos;utilisateur.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>Vous avez repéré une erreur ou souhaitez améliorer une recette ? Modifiez-la directement sur GitHub et aidez toute la communauté.</value>
@@ -674,8 +678,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Commencez à livrer de la valeur.</value>
   </data>
-  <data name="Start with a single 'docker run' command." xml:space="preserve">
-    <value>Commencez avec une seule commande 'docker run'.</value>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Commencez avec une seule commande &apos;docker run&apos;.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Démarrage sans aucune configuration</value>
@@ -699,7 +703,7 @@
     <value>Analyse de code rigoureuse et cohérente</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>Prend en charge à la fois les variables d'environnement et les paramètres stockés dans la base de données, avec une priorité automatique accordée aux variables d'environnement pour des substitutions transparentes.</value>
+    <value>Prend en charge à la fois les variables d&apos;environnement et les paramètres stockés dans la base de données, avec une priorité automatique accordée aux variables d&apos;environnement pour des substitutions transparentes.</value>
   </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>Prise en charge de JetBrains Rider pour des corrections de style de code faciles.</value>
@@ -710,28 +714,28 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Responsable Technique</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
-    <value>La fondation entreprise .NET définitive et éprouvée. De l'Auth à l'IA, nous avons résolu les parties difficiles afin que vous n'ayez pas à le faire.</value>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>La fondation entreprise .NET définitive et éprouvée. De l&apos;Auth à l&apos;IA, nous avons résolu les parties difficiles afin que vous n&apos;ayez pas à le faire.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
-    <value>La barre de navigation s'ajuste automatiquement en fonction des rôles et des permissions de l'utilisateur.</value>
+    <value>La barre de navigation s&apos;ajuste automatiquement en fonction des rôles et des permissions de l&apos;utilisateur.</value>
   </data>
   <data name="The Philosophy" xml:space="preserve">
     <value>La Philosophie</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
-    <value>Le template est conçu pour un déploiement facile. Il inclut une prise en charge complète de Docker, vous permettant de conteneuriser votre application et de l'exécuter n'importe où. Vous pouvez également le déployer directement sur IIS, Azure App Service ou tout serveur prenant en charge ASP.NET Core.</value>
+    <value>Le template est conçu pour un déploiement facile. Il inclut une prise en charge complète de Docker, vous permettant de conteneuriser votre application et de l&apos;exécuter n&apos;importe où. Vous pouvez également le déployer directement sur IIS, Azure App Service ou tout serveur prenant en charge ASP.NET Core.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
-    <value>Il s'agit d'un projet modèle</value>
+    <value>Il s&apos;agit d&apos;un projet modèle</value>
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
-    <value>Il s'agit d'un projet modèle, d'où nous lançons le voyageur...</value>
+    <value>Il s&apos;agit d&apos;un projet modèle, d&apos;où nous lançons le voyageur...</value>
   </data>
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Champs sensibles aux fuseaux horaires</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Fiable pour des applications de production, notamment AnduinOS, StatHub et Warp. Nous ne partageons pas seulement ce code ; nous faisons fonctionner toute notre entreprise avec.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -744,7 +748,7 @@
     <value>Utilisation</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
-    <value>Utilisez-le comme fondation pour votre SaaS, comme backend pour votre application mobile, comme site web d'entreprise ou comme blog personnel. Les possibilités sont infinies.</value>
+    <value>Utilisez-le comme fondation pour votre SaaS, comme backend pour votre application mobile, comme site web d&apos;entreprise ou comme blog personnel. Les possibilités sont infinies.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Afficher sur GitHub</value>
@@ -771,16 +775,16 @@
     <value>Win/Lin/Mac</value>
   </data>
   <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
-    <value>Oui, Aiursoft Template est entièrement gratuit et open-source sous licence MIT. Vous pouvez l'utiliser pour des projets personnels et commerciaux sans aucun coût.</value>
+    <value>Oui, Aiursoft Template est entièrement gratuit et open-source sous licence MIT. Vous pouvez l&apos;utiliser pour des projets personnels et commerciaux sans aucun coût.</value>
   </data>
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Vous pouvez obtenir le soutien de la communauté via GitHub Discussions. Veuillez visiter notre</value>
   </data>
-  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
-    <value>Vous aurez besoin du SDK .NET 10, de npm et de votre IDE préféré, comme Visual Studio ou JetBrains Rider. Vous trouverez le guide d'installation complet dans notre documentation.</value>
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Vous aurez besoin du SDK .NET 10, de npm et de votre IDE préféré, comme Visual Studio ou JetBrains Rider. Vous trouverez le guide d&apos;installation complet dans notre documentation.</value>
   </data>
-  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
-    <value>Vos utilisateurs professionnels n'ont pas besoin de s'inscrire à nouveau.</value>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>Vos utilisateurs professionnels n&apos;ont pas besoin de s&apos;inscrire à nouveau.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
@@ -794,7 +798,5 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Lint tolérance zéro</value>
   </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>Explorez {0} recettes gratuites</value>
-  </data>
+
 </root>
