@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>Поддержка &quot;Fire-and-forget&quot; для длительных задач (например, электронные письма или ИИ), с графическим интерфейсом для управления очередями, параллельной обработкой и отменой.</value>
+        </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Поддержка "Fire-and-forget" для длительных задач (например, электронные письма или ИИ), с графическим интерфейсом для управления очередями, параллельной обработкой и отменой.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Встроенная система управления доступом на основе ролей (RBAC) для детализированного управления разрешениями.</value>
@@ -57,7 +56,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template — это наш окончательный выбор для корпоративных проектов! Он создан для разработчиков, легковесный, но мощный. Мы можем пропустить всю стандартную работу по аутентификации и управлению пользователями.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -246,7 +245,7 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
     <value>Разрабатывайте исключительно в UTC, в то время как система автоматически преобразует и отображает даты в локальном времени пользователя.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
@@ -411,7 +410,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Вот некоторые из ответов, которые вы, возможно, ищете.</value>
   </data>
-  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+  <data name="Here's what developers from our community have to say." xml:space="preserve">
     <value>Вот что говорят разработчики из нашего сообщества.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -426,7 +425,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Как развернуть моё приложение?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Я создал шаблон Aiursoft, потому что устал настраивать одни и те же пайплайны Auth, Log и CI/CD для каждого нового корпоративного проекта. Это не просто шаблон; это кристаллизованные лучшие практики, накопленные за годы работы в высоконагруженных продакшн-средах. Это позволяет моей команде пропустить скучную настройку и сразу перейти к бизнес-логике.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -487,7 +486,7 @@
     <value>Лицензия MIT</value>
   </data>
   <data name="MIT License" xml:space="preserve">
-    <value>MIT License</value>
+    <value>Лицензия MIT</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Модели проверяются на стороне клиента и сервера на основе аннотаций данных.</value>
@@ -654,10 +653,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Умные параметры переопределения конфигурации</value>
   </data>
-  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
     <value>Умный темный режим, который адаптируется к настройкам системы пользователя.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
     <value>Умный тёмный режим, который автоматически подстраивается под системные настройки пользователя.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -675,8 +674,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Начните доставку ценности.</value>
   </data>
-  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
-    <value>Начните с одной команды &apos;docker run&apos;.</value>
+  <data name="Start with a single 'docker run' command." xml:space="preserve">
+    <value>Начните с одной команды 'docker run'.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Запускается без какой-либо настройки</value>
@@ -711,7 +710,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Ведущий разработчик</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
     <value>Окончательная, проверенная на практике основа для корпоративных решений на .NET. От аутентификации до искусственного интеллекта — мы уже решили сложные задачи, чтобы вы не тратили на это время.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -732,7 +731,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Поля с учетом часового пояса</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надёжно проверено приложениями промышленного уровня, включая AnduinOS, StatHub и Warp. Мы не просто делимся этим кодом; мы используем его для ведения всей своей бизнес-деятельности.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -777,10 +776,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Вы можете получить поддержку сообщества через GitHub Discussions. Пожалуйста, посетите нашу</value>
   </data>
-  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Вам понадобятся .NET 10 SDK, npm и ваша любимая IDE, например Visual Studio или JetBrains Rider. Полное руководство по настройке вы найдёте в нашей документации.</value>
   </data>
-  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
     <value>Вам не нужно повторно регистрировать пользователей вашей компании.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -795,5 +794,7 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Строгий линтинг без исключений</value>
   </data>
-
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Исследуйте {0} бесплатных рецептов</value>
+  </data>
 </root>

@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>Dukungan &quot;Fire-and-forget&quot; untuk tugas berjalan panjang (seperti email atau AI), dilengkapi antarmuka GUI untuk manajemen antrian, pemrosesan paralel, dan pembatalan.</value>
+        </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Dukungan "Fire-and-forget" untuk tugas berjalan panjang (seperti email atau AI), dilengkapi antarmuka GUI untuk manajemen antrian, pemrosesan paralel, dan pembatalan.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Sistem Role-Based Access Control (RBAC) bawaan untuk manajemen izin yang terperinci.</value>
@@ -57,7 +56,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template adalah pilihan utama kami untuk proyek perusahaan! Template ini dibangun untuk pengembang, ringan namun bertenaga. Kami bisa melewati semua kode boilerplate untuk autentikasi dan manajemen pengguna.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -246,7 +245,7 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
     <value>Kembangkan secara eksklusif dalam UTC sementara sistem secara otomatis mengonversi dan menampilkan tanggal dalam zona waktu lokal pengguna.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
@@ -411,7 +410,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Berikut adalah beberapa jawaban yang mungkin Anda cari.</value>
   </data>
-  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+  <data name="Here's what developers from our community have to say." xml:space="preserve">
     <value>Inilah yang dikatakan para pengembang dari komunitas kami.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -426,7 +425,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Bagaimana cara saya menerapkan aplikasi saya?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Saya membuat Aiursoft Template karena saya lelah mengatur pipeline Auth, Log, dan CI/CD yang sama untuk setiap proyek perusahaan baru. Ini bukan sekadar template; ini adalah praktik terbaik yang telah terkristalisasi dari bertahun-tahun lingkungan produksi dengan koneksi tinggi. Ini memungkinkan tim saya melewati pengaturan yang membosankan dan langsung fokus pada logika bisnis.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -487,7 +486,7 @@
     <value>Lisensi MIT</value>
   </data>
   <data name="MIT License" xml:space="preserve">
-    <value>MIT License</value>
+    <value>Lisensi MIT</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Model divalidasi di sisi klien dan server berdasarkan anotasi data.</value>
@@ -654,10 +653,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Opsi Pengaturan Cerdas</value>
   </data>
-  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
     <value>Mode gelap cerdas yang menyesuaikan dengan pengaturan sistem pengguna.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
     <value>Mode gelap cerdas yang secara otomatis menyesuaikan dengan pengaturan sistem pengguna.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -675,8 +674,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Mulai Kirim Nilai</value>
   </data>
-  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
-    <value>Mulai dengan satu perintah &apos;docker run&apos; saja.</value>
+  <data name="Start with a single 'docker run' command." xml:space="preserve">
+    <value>Mulai dengan satu perintah 'docker run' saja.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Dimulai tanpa konfigurasi apa pun</value>
@@ -711,7 +710,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Pemimpin Teknis</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
     <value>Dasar perusahaan .NET yang pasti dan telah teruji dalam pertempuran. Dari Otentikasi hingga Kecerdasan Buatan, kami telah menyelesaikan bagian-bagian sulit sehingga Anda tidak perlu melakukannya.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -732,7 +731,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Bidang yang menyadari zona waktu</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
     <value>Dipercaya oleh aplikasi produksi berkualitas tinggi termasuk AnduinOS, StatHub, dan Warp. Kami tidak hanya berbagi kode ini; kami menjalankan seluruh bisnis kami berdasarkan kode ini.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -777,10 +776,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Anda bisa mendapatkan dukungan komunitas melalui GitHub Discussions. Silakan kunjungi</value>
   </data>
-  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Anda akan memerlukan .NET 10 SDK, npm, dan IDE favorit Anda, seperti Visual Studio atau JetBrains Rider. Anda dapat menemukan panduan penyiapan lengkap di dokumentasi kami.</value>
   </data>
-  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
     <value>Pengguna perusahaan Anda tidak perlu mendaftar berulang kali.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -795,5 +794,7 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Lint Tanpa Toleransi</value>
   </data>
-
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Jelajahi {0} Resep Gratis</value>
+  </data>
 </root>

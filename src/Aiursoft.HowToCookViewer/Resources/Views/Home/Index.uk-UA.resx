@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>Підтримка &quot;Fire-and-forget&quot; для довготривалих завдань (наприклад, електронні листи або штучний інтелект), із графічним інтерфейсом для управління чергою, паралельною обробкою та відміною.</value>
+        </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>Підтримка "Fire-and-forget" для довготривалих завдань (наприклад, електронні листи або штучний інтелект), із графічним інтерфейсом для управління чергою, паралельною обробкою та відміною.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Вбудована система контролю доступу на основі ролей (RBAC) для деталізованого управління дозволами.</value>
@@ -31,7 +30,7 @@
     <value>Повне рішення для автентифікації користувачів та управління профілями.</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
-    <value>Адаптивний макет, який чудово виглядає як на настільних комп&apos;ютерах, так і на мобільних пристроях.</value>
+    <value>Адаптивний макет, який чудово виглядає як на настільних комп'ютерах, так і на мобільних пристроях.</value>
   </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Сучасна, багатофункціональна та високо розширювана основа для вашої наступної веб-програми.</value>
@@ -57,11 +56,11 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template — це наш остаточний вибір для корпоративних проектів! Він створений для розробників, легкий, але потужний. Ми можемо пропустити всю стандартну роботу з аутентифікації та управління користувачами.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
-    <value>Усі залежності автоматично реєструються та завжди доступні через ін&apos;єкцію конструктора.</value>
+    <value>Усі залежності автоматично реєструються та завжди доступні через ін'єкцію конструктора.</value>
   </data>
   <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
     <value>Усі рецепти походять з проєкту HowToCook з відкритим кодом. Кожен може долучатися, покращувати його або створювати його форки.</value>
@@ -91,7 +90,7 @@
     <value>Автоматичний темний режим</value>
   </data>
   <data name="Automatic Dependency Injection" xml:space="preserve">
-    <value>Автоматична ін&apos;єкція залежностей</value>
+    <value>Автоматична ін'єкція залежностей</value>
   </data>
   <data name="Automatic Role Sync" xml:space="preserve">
     <value>Автоматична синхронізація ролей</value>
@@ -246,7 +245,7 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
     <value>Розробляйте виключно в UTC, тоді як система автоматично перетворює та відображає дати у локальному часовому поясі користувача.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
@@ -274,19 +273,19 @@
     <value>Легко переключатися між постачальниками баз даних, включаючи SQLite, MySQL, SQL Server та ін-меморі базу даних для тестування.</value>
   </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
-    <value>Легко перемикайтеся між провайдерами, такими як SQLite, MySQL, SQL Server, та оперативною пам&apos;яттю для тестування.</value>
+    <value>Легко перемикайтеся між провайдерами, такими як SQLite, MySQL, SQL Server, та оперативною пам'яттю для тестування.</value>
   </data>
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Редагувати на GitHub</value>
   </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
-    <value>Легко створюйте інтеграційні тести, використовуючи бази даних у пам&apos;яті, тимчасові файлові системи, вбудоване мокування та симуляцію реальних HTTP-запитів.</value>
+    <value>Легко створюйте інтеграційні тести, використовуючи бази даних у пам'яті, тимчасові файлові системи, вбудоване мокування та симуляцію реальних HTTP-запитів.</value>
   </data>
   <data name="Enforced" xml:space="preserve">
     <value>Вимушене</value>
   </data>
   <data name="Enforced quality gate" xml:space="preserve">
-    <value>Обов&apos;язковий контроль якості</value>
+    <value>Обов'язковий контроль якості</value>
   </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
@@ -400,7 +399,7 @@
     <value>Працюйте з повторюваними завданнями, такими як очищення та синхронізація, з комплексним інтерфейсом для моніторингу історії виконання та журналів.</value>
   </data>
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
-    <value>Практичні навчальні матеріали, призначені для інтернів з комп&apos;ютерних наук.</value>
+    <value>Практичні навчальні матеріали, призначені для інтернів з комп'ютерних наук.</value>
   </data>
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ручна реалізація на основі політик</value>
@@ -411,7 +410,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Ось деякі відповіді, які ви, можливо, шукаєте.</value>
   </data>
-  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+  <data name="Here's what developers from our community have to say." xml:space="preserve">
     <value>Ось що розробники з нашої спільноти мають сказати.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -426,7 +425,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Як розгорнути мою програму?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Я створив шаблон Aiursoft, бо втомився налаштовувати одні й ті самі системи Auth, Log та CI/CD для кожного нового корпоративного проекту. Це не просто шаблон; це концентровані найкращі практики, набуті протягом років роботи в умовах високої конкуренції в продакшн-середовищах. Це дозволяє моїй команді пропустити нудну налагодження та відразу перейти до бізнес-логіки.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -487,7 +486,7 @@
     <value>Ліцензія MIT</value>
   </data>
   <data name="MIT License" xml:space="preserve">
-    <value>MIT License</value>
+    <value>Ліцензія MIT</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Моделі валідуються на клієнтській та серверній сторонах на основі анотацій даних.</value>
@@ -654,10 +653,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Розумні перевизначення конфігурації</value>
   </data>
-  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
     <value>Смарт-темна тема, яка адаптується до налаштувань системи користувача.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
     <value>Розумний темний режим, який автоматично адаптується до системних налаштувань користувача.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -675,8 +674,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Почніть доставляти цінність.</value>
   </data>
-  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
-    <value>Почніть із одного командного рядка &apos;docker run&apos;.</value>
+  <data name="Start with a single 'docker run' command." xml:space="preserve">
+    <value>Почніть із одного командного рядка 'docker run'.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Запускається без налаштувань</value>
@@ -711,7 +710,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Технічний лідер</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
     <value>Визначна, випробувана на практиці основа .NET для бізнес-рішень. Від Auth до AI — ми вирішили складні завдання, щоб ви не мали цього робити.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -732,7 +731,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Поля з урахуванням часових поясів</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надійний для продуктивних додатків, зокрема AnduinOS, StatHub та Warp. Ми не просто ділимося цим кодом; ми використовуємо його для всієї своєї діяльності.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -777,10 +776,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Ви можете отримати підтримку спільноти через GitHub Discussions. Будь ласка, відвідайте наш</value>
   </data>
-  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Вам знадобиться .NET 10 SDK, npm та ваше улюблене середовище розробки, наприклад Visual Studio або JetBrains Rider. Повний посібник із налаштування ви знайдете в нашій документації.</value>
   </data>
-  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
     <value>Ваші користувачі підприємства не мають повторно реєструватися.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -795,5 +794,7 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Лінт із нульовою толерантністю</value>
   </data>
-
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Досліджуйте {0} безкоштовних рецептів</value>
+  </data>
 </root>

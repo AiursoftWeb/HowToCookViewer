@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:element name="root" ns1:IsDataSet="true">
 
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+        </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Tuki pitkäkestoisille tehtäville (esimerkiksi sähköposteille tai AI:lle), jossa on käyttöliittymä jonon hallintaan, rinnakkaisprosessointiin ja peruutukseen.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -57,7 +56,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template on ratkaiseva valintamme yritysprojekteihin! Se on rakennettu kehittäjille ja on kevyt mutta tehokas. Voimme ohittaa kaiken valmiin koodin todennukseen ja käyttäjien hallintaan.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -246,7 +245,7 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
     <value>Kehitä vain UTC:lla, kunnes järjestelmä muuntaa ja näyttää päivämäärät käyttäjän paikalliseen aikavyöhön automaattisesti.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
@@ -411,7 +410,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Tässä on joitain vastauksia, joita saatat etsiä.</value>
   </data>
-  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+  <data name="Here's what developers from our community have to say." xml:space="preserve">
     <value>Tässä on mitä yhteisömme kehittäjät sanovat.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -426,7 +425,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Kuinka otan sovellukseni käyttöön?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Loin Aiursoft Template, koska olin väsynyt asentamaan samoja Auth-, Log- ja CI/CD-pipelineja jokaiseen uuteen yritysprojektiin. Tämä ei ole vain malli; se on tiivistettyä parasta käytäntöä vuosien ajan korkean suorituskyvyn tuotantoympäristöissä. Se mahdollistaa tiimini sivuuttamaan tylsän asennuksen ja siirtyä suoraan liiketoimintalogiikkaan.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -654,10 +653,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Älykäs asetusten ohjaus</value>
   </data>
-  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
     <value>Älykäs pimeä tila, joka sopeutuu käyttäjän järjestelmän asetuksiin.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
     <value>Älykäs tumma tila, joka mukautuu automaattisesti käyttäjän järjestelmäasetuksiin.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -675,8 +674,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Aloita arvon toimittaminen.</value>
   </data>
-  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
-    <value>Aloita yhdellä &apos;docker run&apos;-komennolla.</value>
+  <data name="Start with a single 'docker run' command." xml:space="preserve">
+    <value>Aloita yhdellä 'docker run'-komennolla.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Käynnistyy ilman minkäänlaista konfiguraatiota</value>
@@ -711,7 +710,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Tekninen Päällikkö</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
     <value>Määritelmällinen, kovasti testattu .NET-yritysperusta. Autentikoinnista tekoälyyn, olemme ratkaisseet vaikeat osiot, jotta sinun ei tarvitse.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -732,7 +731,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Aikavyöhyketietoiset kentät</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
     <value>Luotettu tuotantotasoisissa sovelluksissa, kuten AnduinOS, StatHub ja Warp. Emme vain jakaneet tätä koodia; käytämme sitä koko liiketoimintamme käynnistämiseen.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -777,10 +776,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Saat yhteisötukea GitHub Discussionsin kautta. Käy meidän</value>
   </data>
-  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Tarvitset .NET 10 SDK:n, npm:n ja suosikki-IDE:si, kuten Visual Studion tai JetBrains Riderin. Löydät täydellisen asennusoppaan dokumentaatiostamme.</value>
   </data>
-  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
     <value>Yrityksen käyttäjien ei tarvitse rekisteröityä uudelleen.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -795,5 +794,7 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Nollasietosyyntä</value>
   </data>
-
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Tutustu {0} ilmaiseen reseptiin</value>
+  </data>
 </root>
