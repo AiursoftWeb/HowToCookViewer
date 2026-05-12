@@ -41,6 +41,12 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
         builder.Entity<LocalizedTip>()
             .HasIndex(lt => new { lt.TipId, lt.Culture })
             .IsUnique();
+
+        builder.Entity<Recipe>()
+            .HasQueryFilter(r => !r.IsDeleted);
+
+        builder.Entity<Tip>()
+            .HasQueryFilter(t => !t.IsDeleted);
     }
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>

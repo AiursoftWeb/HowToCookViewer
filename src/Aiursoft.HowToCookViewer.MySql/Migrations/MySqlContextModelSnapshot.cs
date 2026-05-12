@@ -163,6 +163,9 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -307,6 +310,9 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("varchar(500)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -530,7 +536,7 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
                 {
                     b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
-                        .WithMany()
+                        .WithMany("LocalizedRecipes")
                         .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -678,6 +684,8 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>
                 {
                     b.Navigation("Images");
+
+                    b.Navigation("LocalizedRecipes");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.RecipeComment", b =>

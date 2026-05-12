@@ -30,17 +30,21 @@ public class IndexTipsJob(
         var inserted = 0;
         var updated = 0;
         var skipped = 0;
+        var validFilePaths = new HashSet<string>();
 
         foreach (var absoluteFilePath in markdownFiles)
         {
             var relativeFilePath = Path.GetRelativePath(repoPath, absoluteFilePath).Replace('\\', '/');
+            validFilePaths.Add(relativeFilePath);
             try
             {
                 var lastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
-                var existing = await db.Tips.AsNoTracking()
+                var existing = await db.Tips
+                    .IgnoreQueryFilters()
+                    .AsNoTracking()
                     .FirstOrDefaultAsync(t => t.FilePath == relativeFilePath);
 
-                if (existing != null && existing.FileLastModified == lastModified)
+                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted)
                 {
                     skipped++;
                     continue;
@@ -65,11 +69,14 @@ public class IndexTipsJob(
                 }
                 else
                 {
-                    var tip = await db.Tips.FirstAsync(t => t.FilePath == relativeFilePath);
+                    var tip = await db.Tips
+                        .IgnoreQueryFilters()
+                        .FirstAsync(t => t.FilePath == relativeFilePath);
                     tip.Title = title;
                     tip.Category = category;
                     tip.Content = content;
                     tip.FileLastModified = lastModified;
+                    tip.IsDeleted = false;
                     updated++;
                 }
             }
@@ -79,8 +86,23 @@ public class IndexTipsJob(
             }
         }
 
+        var allDbTips = await db.Tips
+            .IgnoreQueryFilters()
+            .Where(t => !t.IsDeleted)
+            .ToListAsync();
+        
+        var deletedCount = 0;
+        foreach (var t in allDbTips)
+        {
+            if (!validFilePaths.Contains(t.FilePath))
+            {
+                t.IsDeleted = true;
+                deletedCount++;
+            }
+        }
+
         await db.SaveChangesAsync();
-        logger.LogInformation("IndexTipsJob complete: {Inserted} inserted, {Updated} updated, {Skipped} skipped.", inserted, updated, skipped);
+        logger.LogInformation("IndexTipsJob complete: {Inserted} inserted, {Updated} updated, {Skipped} skipped, {Deleted} deleted.", inserted, updated, skipped, deletedCount);
     }
 
     private async Task<DateTime> GetGitLastModifiedAsync(string repoPath, string relativeFilePath)

@@ -40,21 +40,25 @@ public partial class IndexRecipesJob(
         var inserted = 0;
         var updated = 0;
         var skipped = 0;
+        var validFilePaths = new HashSet<string>();
 
         foreach (var absoluteFilePath in markdownFiles)
         {
             // Repo-relative path used as the natural key, e.g. "dishes/vegetable_dish/西红柿炒鸡蛋.md"
             var relativeFilePath = Path.GetRelativePath(repoPath, absoluteFilePath)
                 .Replace('\\', '/');
+            
+            validFilePaths.Add(relativeFilePath);
 
             try
             {
                 var lastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
                 var existing = await db.Recipes
+                    .IgnoreQueryFilters()
                     .AsNoTracking()
                     .FirstOrDefaultAsync(r => r.FilePath == relativeFilePath);
 
-                if (existing != null && existing.FileLastModified == lastModified)
+                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted)
                 {
                     // Also verify all referenced image files still exist on disk.
                     // If any are missing (e.g. Workspace was wiped), fall through and re-process.
@@ -117,6 +121,7 @@ public partial class IndexRecipesJob(
                     recipe.Steps = parsed.Steps;
                     recipe.Notes = parsed.Notes;
                     recipe.FileLastModified = lastModified;
+                    recipe.IsDeleted = false;
 
                     db.RecipeImages.RemoveRange(recipe.Images);
                     recipe.Images = BuildImageEntities(imageLogicalPaths);
@@ -129,10 +134,25 @@ public partial class IndexRecipesJob(
             }
         }
 
+        var allDbRecipes = await db.Recipes
+            .IgnoreQueryFilters()
+            .Where(r => !r.IsDeleted)
+            .ToListAsync();
+        
+        var deletedCount = 0;
+        foreach (var r in allDbRecipes)
+        {
+            if (!validFilePaths.Contains(r.FilePath))
+            {
+                r.IsDeleted = true;
+                deletedCount++;
+            }
+        }
+
         await db.SaveChangesAsync();
         logger.LogInformation(
-            "IndexRecipesJob complete: {Inserted} inserted, {Updated} updated, {Skipped} skipped.",
-            inserted, updated, skipped);
+            "IndexRecipesJob complete: {Inserted} inserted, {Updated} updated, {Skipped} skipped, {Deleted} deleted.",
+            inserted, updated, skipped, deletedCount);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
