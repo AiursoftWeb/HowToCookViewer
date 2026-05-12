@@ -32,10 +32,10 @@ public class RecipesDetailTests : TestBase
         Assert.Contains("Test Recipe", html);
         Assert.Contains("Difficulty", html);
         Assert.Contains("5", html);
-        Assert.Contains("/ 8", html);
+        Assert.Contains("/ 5", html);
         Assert.Contains("difficulty-meter", html);
         Assert.Contains("difficulty-icon", html);
-        Assert.Contains("Intermediate", html); // Difficulty 5 should be "Intermediate" (index 4)
+        Assert.Contains("Expert", html); // Difficulty 5 should be "Expert" (index 4)
     }
 
     [TestMethod]
@@ -48,7 +48,7 @@ public class RecipesDetailTests : TestBase
             Name = "Expert Recipe",
             Category = "meat_dish",
             FilePath = "dishes/meat_dish/expert.md",
-            Difficulty = 8,
+            Difficulty = 5,
             Description = "Hard Description",
             Ingredients = "Hard Ingredients",
             Steps = "Hard Steps"
@@ -63,7 +63,7 @@ public class RecipesDetailTests : TestBase
 
         // Assert
         Assert.Contains("Expert Recipe", html);
-        Assert.Contains("8", html);
-        Assert.Contains("Legendary", html); // Difficulty 8 should be "Legendary" (index 7)
+        Assert.Contains("5", html);
+        Assert.Contains("Expert", html); // Difficulty 5 should be "Expert" (index 4)
     }
 }
