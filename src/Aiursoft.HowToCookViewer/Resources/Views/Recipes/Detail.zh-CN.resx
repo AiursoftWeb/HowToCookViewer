@@ -93,5 +93,38 @@
   <data name="Write your comment…" xml:space="preserve">
     <value>写下您的评论…</value>
   </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>难度</value>
+  </data>
+  <data name="Calculating..." xml:space="preserve">
+    <value>计算中…</value>
+  </data>
+  <data name="Beginner" xml:space="preserve">
+    <value>入门</value>
+  </data>
+  <data name="Novice" xml:space="preserve">
+    <value>新手</value>
+  </data>
+  <data name="Easy" xml:space="preserve">
+    <value>简单</value>
+  </data>
+  <data name="Intermediate" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>进阶</value>
+  </data>
+  <data name="Expert" xml:space="preserve">
+    <value>专业</value>
+  </data>
+  <data name="Master" xml:space="preserve">
+    <value>大师</value>
+  </data>
+  <data name="Legendary" xml:space="preserve">
+    <value>传奇</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
 
 </root>

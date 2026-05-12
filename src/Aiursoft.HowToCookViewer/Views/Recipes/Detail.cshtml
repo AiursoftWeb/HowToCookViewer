@@ -74,6 +74,37 @@
         <div class="col-12 col-lg-8 offset-lg-2">
             <div class="card shadow-sm">
                 <div class="card-body p-4 p-md-5">
+                    <!-- Difficulty Section -->
+                    <div class="mb-5 p-4 bg-light rounded-4 shadow-sm border-start border-4 border-warning position-relative overflow-hidden">
+                        <div class="position-absolute top-0 end-0 p-3 opacity-10">
+                            <i data-lucide="chef-hat" style="width: 80px; height: 80px;"></i>
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap gap-4 position-relative">
+                            <div>
+                                <div class="text-muted small text-uppercase fw-bold mb-1">@Localizer["Difficulty"]</div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <h3 class="mb-0 fw-bold">@Model.Recipe.Difficulty</h3>
+                                    <span class="text-muted">/ 8</span>
+                                </div>
+                            </div>
+                            <div class="difficulty-meter-container flex-grow-1">
+                                <div class="difficulty-meter d-flex gap-2" data-difficulty="@Model.Recipe.Difficulty">
+                                    @for (int i = 1; i <= 8; i++)
+                                    {
+                                        <div class="difficulty-step" data-index="@i">
+                                            <i class="difficulty-icon" data-lucide="flame" style="width: 32px; height: 32px; color: #dee2e6; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);"></i>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <div id="difficulty-badge-container">
+                                <span id="difficulty-label" class="badge rounded-pill px-4 py-2 fw-bold shadow-sm" style="font-size: 1rem; transition: all 0.5s ease;">
+                                    @Localizer["Calculating..."]
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="recipe-markdown">
                         @Html.Raw(Model.RenderedMarkdown)
                     </div>
@@ -279,6 +310,22 @@
 .recipe-markdown ul, .recipe-markdown ol { padding-left: 1.5rem; }
 .recipe-markdown li { margin-bottom: .25rem; }
 .recipe-markdown p { line-height: 1.8; }
+
+.difficulty-step {
+    cursor: help;
+}
+.difficulty-icon.active {
+    transform: scale(1.2) translateY(-2px);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+@@keyframes pulse-red {
+    0% { transform: scale(1.2); filter: drop-shadow(0 0 5px rgba(220, 53, 69, 0.5)); }
+    50% { transform: scale(1.3); filter: drop-shadow(0 0 15px rgba(220, 53, 69, 0.8)); }
+    100% { transform: scale(1.2); filter: drop-shadow(0 0 5px rgba(220, 53, 69, 0.5)); }
+}
+.difficulty-icon.extreme {
+    animation: pulse-red 1.5s infinite ease-in-out;
+}
 </style>
 }
 
@@ -293,6 +340,57 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
         if (target) target.classList.toggle('d-none');
     });
 });
+
+(function() {
+    const meter = document.querySelector('.difficulty-meter');
+    if (!meter) return;
+    
+    const difficulty = parseInt(meter.dataset.difficulty) || 0;
+    const icons = meter.querySelectorAll('.difficulty-icon');
+    const label = document.getElementById('difficulty-label');
+    
+    const colors = {
+        low: '#20c997',    // Teal
+        medium: '#ffc107', // Yellow
+        high: '#fd7e14',   // Orange
+        extreme: '#dc3545' // Red
+    };
+    
+    const levels = [
+        "@Localizer["Beginner"]",
+        "@Localizer["Novice"]",
+        "@Localizer["Easy"]",
+        "@Localizer["Intermediate"]",
+        "@Localizer["Advanced"]",
+        "@Localizer["Expert"]",
+        "@Localizer["Master"]",
+        "@Localizer["Legendary"]"
+    ];
+
+    function getColor(d) {
+        if (d <= 2) return colors.low;
+        if (d <= 4) return colors.medium;
+        if (d <= 6) return colors.high;
+        return colors.extreme;
+    }
+
+    const finalColor = getColor(difficulty);
+    label.textContent = levels[Math.min(Math.max(difficulty - 1, 0), 7)] || "@Localizer["Unknown"]";
+    label.style.backgroundColor = finalColor;
+    label.style.color = (difficulty > 2 && difficulty <= 4) ? '#212529' : '#fff';
+
+    icons.forEach((icon, index) => {
+        if (index < difficulty) {
+            setTimeout(() => {
+                icon.classList.add('active');
+                icon.style.color = finalColor;
+                if (difficulty >= 7) {
+                    icon.classList.add('extreme');
+                }
+            }, index * 100);
+        }
+    });
+})();
 </script>
 }
 
