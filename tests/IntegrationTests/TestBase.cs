@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Net;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
@@ -9,40 +10,60 @@ namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
 public abstract class TestBase
 {
-    protected readonly int Port;
-    protected readonly HttpClient Http;
-    protected IHost? Server;
+    private static readonly ConcurrentDictionary<string, ClassFixture> Fixtures = new();
 
-    protected TestBase()
+    private ClassFixture GetFixture() => Fixtures[GetType().FullName!];
+
+    protected int Port => GetFixture().Port;
+    protected HttpClient Http => GetFixture().Http;
+    protected IHost Server => GetFixture().Server;
+
+    [ClassInitialize(InheritanceBehavior.BeforeEachDerivedClass)]
+    public static async Task ClassInit(TestContext context)
     {
-        var cookieContainer = new CookieContainer();
-        var handler = new HttpClientHandler
+        // Retry on port conflict — rare with GetAvailablePort but can happen
+        // under high concurrency with many test classes starting servers.
+        for (var attempt = 0; ; attempt++)
         {
-            CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
-        };
-        Port = Network.GetAvailablePort();
-        Http = new HttpClient(handler)
-        {
-            BaseAddress = new Uri($"http://localhost:{Port}")
-        };
+            var port = Network.GetAvailablePort();
+            var cookieContainer = new CookieContainer();
+            var handler = new HttpClientHandler
+            {
+                CookieContainer = cookieContainer,
+                AllowAutoRedirect = false
+            };
+            var http = new HttpClient(handler)
+            {
+                BaseAddress = new Uri($"http://localhost:{port}")
+            };
+
+            var server = await AppAsync<Startup>([], port: port);
+            await server.UpdateDbAsync<TemplateDbContext>();
+            await server.SeedAsync();
+            try
+            {
+                await server.StartAsync();
+                Fixtures[context.FullyQualifiedTestClassName] = new ClassFixture(port, http, server);
+                return;
+            }
+            catch (IOException) when (attempt < 3)
+            {
+                await server.StopAsync();
+                await server.DisposeAsync();
+                await Task.Delay(100);
+            }
+        }
     }
 
-    [TestInitialize]
-    public virtual async Task CreateServer()
+    [ClassCleanup(InheritanceBehavior.BeforeEachDerivedClass)]
+    public static void ClassCleanup(TestContext context)
     {
-        Server = await AppAsync<Startup>([], port: Port);
-        await Server.UpdateDbAsync<TemplateDbContext>();
-        await Server.SeedAsync();
-        await Server.StartAsync();
-    }
-
-    [TestCleanup]
-    public virtual async Task CleanServer()
-    {
-        if (Server == null) return;
-        await Server.StopAsync();
-        Server.Dispose();
+        if (Fixtures.TryRemove(context.FullyQualifiedTestClassName, out var fixture))
+        {
+            fixture.Server.StopAsync().GetAwaiter().GetResult();
+            fixture.Server.Dispose();
+            fixture.Http.Dispose();
+        }
     }
 
     protected async Task<string> GetAntiCsrfToken(string url)
@@ -79,10 +100,10 @@ public abstract class TestBase
         Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
         var actualLocation = response.Headers.Location?.OriginalString ?? string.Empty;
         var baseUri = Http.BaseAddress?.ToString() ?? "____";
-        
+
         if (actualLocation.StartsWith(baseUri))
         {
-            actualLocation = actualLocation.Substring(baseUri.Length - 1); // Keep the leading slash
+            actualLocation = actualLocation.Substring(baseUri.Length - 1);
         }
 
         if (exact)
@@ -126,4 +147,6 @@ public abstract class TestBase
         if (Server == null) throw new InvalidOperationException("Server is not started.");
         return Server.Services.GetRequiredService<T>();
     }
+
+    private sealed record ClassFixture(int Port, HttpClient Http, IHost Server);
 }

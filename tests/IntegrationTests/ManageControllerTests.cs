@@ -13,7 +13,7 @@ public class ManageControllerTests : TestBase
         await LoginAsAdmin();
 
         // Ensure AllowUserAdjustNickname is true
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             await settingsService.UpdateSettingAsync(Configuration.SettingsMap.AllowUserAdjustNickname, "True");

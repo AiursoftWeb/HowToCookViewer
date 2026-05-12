@@ -15,7 +15,7 @@ public class CommentsRateLimitTests : TestBase
         await RegisterAndLoginAsync();
 
         // 2. Create a recipe to comment on
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
             db.Recipes.Add(new Recipe
@@ -62,7 +62,7 @@ public class CommentsRateLimitTests : TestBase
         await RegisterAndLoginAsync();
 
         // 2. Create a recipe to comment on
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
             db.Recipes.Add(new Recipe

@@ -15,14 +15,14 @@ public class GlobalSettingsCacheTests : TestBase
         
         // 1. Initial value (should be seeded)
         string initialValue;
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             initialValue = await settingsService.GetSettingValueAsync(key);
         }
 
         // 2. Modify database directly (bypass service/cache)
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
             var dbSetting = await dbContext.GlobalSettings.FirstAsync(s => s.Key == key);
@@ -31,7 +31,7 @@ public class GlobalSettingsCacheTests : TestBase
         }
 
         // 3. Get value again from service - should be cached (initialValue)
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             var cachedValue = await settingsService.GetSettingValueAsync(key);
@@ -40,14 +40,14 @@ public class GlobalSettingsCacheTests : TestBase
 
         // 4. Update via service - should clear cache
         var newValue = initialValue == "True" ? "False" : "True";
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             await settingsService.UpdateSettingAsync(key, newValue);
         }
 
         // 5. Get value again - should be new value
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             var updatedValue = await settingsService.GetSettingValueAsync(key);

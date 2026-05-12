@@ -9,7 +9,7 @@ public class ExtractIngredientsJobTests : TestBase
     [TestMethod]
     public async Task TestIngredientSchema()
     {
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
 
         // 1. Create a recipe

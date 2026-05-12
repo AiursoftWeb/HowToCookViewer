@@ -19,7 +19,7 @@ public class GlobalSettingsTests : TestBase
         await LoginAsAdmin();
 
         // 2. Disable Allow_User_Adjust_Nickname
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             await settingsService.UpdateSettingAsync(SettingsMap.AllowUserAdjustNickname, "False");
@@ -35,7 +35,7 @@ public class GlobalSettingsTests : TestBase
         Assert.AreEqual(HttpStatusCode.BadRequest, changeProfileResponse.StatusCode);
 
         // 5. Enable Allow_User_Adjust_Nickname
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             await settingsService.UpdateSettingAsync(SettingsMap.AllowUserAdjustNickname, "True");
@@ -73,7 +73,7 @@ public class GlobalSettingsTests : TestBase
         Assert.AreEqual(HttpStatusCode.Found, editResponse.StatusCode);
 
         // 4. Verify setting changed in DB
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
             var value = await settingsService.GetBoolSettingAsync(SettingsMap.AllowUserAdjustNickname);
@@ -84,7 +84,7 @@ public class GlobalSettingsTests : TestBase
     [TestMethod]
     public async Task TestDatabaseFallbackAndCache()
     {
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
         var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
         
@@ -113,7 +113,7 @@ public class GlobalSettingsTests : TestBase
     [TestMethod]
     public async Task TestGetIntSettingAsync()
     {
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
         
         // Test with non-number value
@@ -124,7 +124,7 @@ public class GlobalSettingsTests : TestBase
     [TestMethod]
     public async Task TestGetBoolSettingAsyncInvalid()
     {
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
         
         // Test with non-bool value
