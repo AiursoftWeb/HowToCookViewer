@@ -26,14 +26,14 @@ public class ExtractIngredientsJob(
 
     public async Task ExecuteAsync()
     {
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
-        var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
-
-        if (string.IsNullOrWhiteSpace(instance) || string.IsNullOrWhiteSpace(model))
+        if (!await settingsService.IsAiFeatureEnabledAsync())
         {
-            logger.LogInformation("ExtractIngredientsJob: Ollama endpoint or model not configured. Skipping.");
+            logger.LogInformation("ExtractIngredientsJob: Ollama endpoint not configured. Skipping.");
             return;
         }
+
+        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+        var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
 
         var lastId = 0;
         while (true)

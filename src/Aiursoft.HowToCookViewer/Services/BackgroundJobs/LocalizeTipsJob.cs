@@ -16,15 +16,13 @@ public class LocalizeTipsJob(
 
     public async Task ExecuteAsync()
     {
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
-        var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
-        var languagesRaw = await settingsService.GetSettingValueAsync(SettingsMap.LocalizationLanguages);
-
-        if (string.IsNullOrWhiteSpace(instance) || string.IsNullOrWhiteSpace(model))
+        if (!await settingsService.IsAiFeatureEnabledAsync())
         {
-            logger.LogInformation("LocalizeTipsJob: Ollama endpoint or model not configured. Skipping.");
+            logger.LogInformation("LocalizeTipsJob: Ollama endpoint not configured. Skipping.");
             return;
         }
+
+        var languagesRaw = await settingsService.GetSettingValueAsync(SettingsMap.LocalizationLanguages);
 
         var cultures = languagesRaw.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
         if (cultures.Length == 0)

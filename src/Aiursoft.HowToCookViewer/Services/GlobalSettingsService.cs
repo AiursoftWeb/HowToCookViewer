@@ -68,6 +68,12 @@ public class GlobalSettingsService(
                !string.IsNullOrWhiteSpace(configuration[key]);
     }
 
+    public async Task<bool> IsAiFeatureEnabledAsync()
+    {
+        var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
+        return !string.IsNullOrWhiteSpace(instance);
+    }
+
     public async Task UpdateSettingAsync(string key, string value)
     {
         if (IsOverriddenByConfig(key))
