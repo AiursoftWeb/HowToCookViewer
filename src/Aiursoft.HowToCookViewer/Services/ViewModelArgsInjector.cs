@@ -145,6 +145,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Tip"];
     
         _ = localizer["Self Host"];
+
+        _ = localizer["Ingredient Reverse Lookup"];
     }
 
     public void InjectSimple(

@@ -1,0 +1,162 @@
+@model Aiursoft.HowToCookViewer.Models.IngredientsViewModels.IndexViewModel
+@inject IViewLocalizer Localizer
+
+<div class="container-fluid p-3">
+    <div class="row g-3">
+        <!-- Left: ingredient selection -->
+        <div class="col-md-4 col-lg-3">
+            <div class="card" style="position:sticky;top:1rem;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>
+                        <i class="align-middle me-1" data-lucide="cherry"></i>
+                        @Localizer["Ingredients"] (<span id="ingredient-total">@Model.IngredientCount</span>)
+                    </span>
+                    <button id="clear-selection" class="btn btn-sm btn-outline-secondary" style="display:none;">
+                        @Localizer["Clear Selection"]
+                    </button>
+                </div>
+                <div class="card-body" style="max-height:calc(100vh - 160px);overflow-y:auto;">
+                    <div class="d-flex flex-wrap gap-2" id="ingredient-list">
+                        @foreach (var ing in Model.AllIngredients)
+                        {
+                            var isPreSelected = Model.PreSelectedIds.Contains(ing.Id);
+                            <button class="btn @(isPreSelected ? "btn-primary" : "btn-outline-secondary") ingredient-chip rounded-pill px-3 py-1"
+                                    data-ingredient-id="@ing.Id"
+                                    data-ingredient-name="@ing.Name"
+                                    role="checkbox" aria-checked="@(isPreSelected ? "true" : "false")">
+                                @ing.Name
+                            </button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: results -->
+        <div class="col-md-8 col-lg-9">
+            <h4 class="mb-3">
+                <i class="align-middle me-2" data-lucide="utensils"></i>
+                @Localizer["Ingredient Reverse Lookup"]
+            </h4>
+
+            <div id="lookup-pending" style="display:none;">
+                <div class="progress mb-3" style="height:3px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%" role="progressbar"></div>
+                </div>
+            </div>
+
+            <div id="lookup-results-area">
+                <div class="text-center text-muted py-5" id="lookup-placeholder">
+                    <i class="align-middle mb-2" data-lucide="arrow-left" style="width:40px;height:40px;"></i>
+                    <p class="mt-2">@Localizer["Select one or more ingredients to see matching recipes"]</p>
+                </div>
+                <div id="lookup-results" style="display:none;">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="fw-semibold">
+                            @Localizer["Matching Recipes"] (<span id="result-count">0</span>)
+                        </span>
+                    </div>
+                    <div class="row g-3" id="lookup-recipe-grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+    (function() {
+        var chips = document.querySelectorAll('.ingredient-chip');
+        var preSelectedIds = @Json.Serialize(Model.PreSelectedIds);
+        var selected = new Set(preSelectedIds);
+        var clearBtn = document.getElementById('clear-selection');
+        var resultsDiv = document.getElementById('lookup-results');
+        var recipeGrid = document.getElementById('lookup-recipe-grid');
+        var resultCount = document.getElementById('result-count');
+        var placeholder = document.getElementById('lookup-placeholder');
+        var pending = document.getElementById('lookup-pending');
+        var currentRequest = null;
+
+        function updateChips() {
+            chips.forEach(function(chip) {
+                var id = parseInt(chip.dataset.ingredientId);
+                if (selected.has(id)) {
+                    chip.classList.remove('btn-outline-secondary');
+                    chip.classList.add('btn-primary');
+                    chip.setAttribute('aria-checked', 'true');
+                } else {
+                    chip.classList.remove('btn-primary');
+                    chip.classList.add('btn-outline-secondary');
+                    chip.setAttribute('aria-checked', 'false');
+                }
+            });
+            clearBtn.style.display = selected.size > 0 ? '' : 'none';
+        }
+
+        function fetchResults() {
+            if (currentRequest) currentRequest.abort();
+            if (selected.size === 0) {
+                recipeGrid.innerHTML = '';
+                resultCount.textContent = '0';
+                resultsDiv.style.display = 'none';
+                placeholder.style.display = '';
+                return;
+            }
+
+            placeholder.style.display = 'none';
+            pending.style.display = '';
+
+            var controller = new AbortController();
+            currentRequest = controller;
+
+            var params = new URLSearchParams();
+            selected.forEach(function(id) { params.append('ingredientIds', id); });
+
+            fetch('/Ingredients/Lookup?' + params.toString(), { signal: controller.signal })
+                .then(function(resp) {
+                    if (!resp.ok) return '';
+                    return resp.text();
+                })
+                .then(function(html) {
+                    recipeGrid.innerHTML = html;
+                    var cards = recipeGrid.querySelectorAll('.recipe-card');
+                    resultCount.textContent = cards.length;
+                    resultsDiv.style.display = '';
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                })
+                .catch(function(e) {
+                    if (e.name !== 'AbortError') console.error(e);
+                })
+                .finally(function() {
+                    pending.style.display = 'none';
+                    if (currentRequest === controller) currentRequest = null;
+                });
+        }
+
+        chips.forEach(function(chip) {
+            chip.addEventListener('click', function() {
+                var id = parseInt(chip.dataset.ingredientId);
+                if (selected.has(id)) {
+                    selected.delete(id);
+                } else {
+                    selected.add(id);
+                }
+                updateChips();
+                fetchResults();
+            });
+        });
+
+        clearBtn.addEventListener('click', function() {
+            selected.clear();
+            updateChips();
+            fetchResults();
+        });
+
+        if (selected.size > 0) {
+            updateChips();
+            fetchResults();
+        }
+    })();
+    </script>
+}

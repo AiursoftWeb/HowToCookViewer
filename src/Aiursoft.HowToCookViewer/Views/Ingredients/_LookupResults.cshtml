@@ -1,0 +1,78 @@
+@model Aiursoft.HowToCookViewer.Models.IngredientsViewModels.LookupResultsViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+@inject IViewLocalizer Localizer
+
+@{
+    var hasExact = Model.ExactMatches.Recipes.Count > 0;
+    var hasNear = Model.NearMatches.Count > 0;
+}
+
+@if (!hasExact && !hasNear)
+{
+    <div class="col-12">
+        <div class="alert alert-info">
+            <i class="align-middle me-2" data-lucide="info"></i>
+            @Localizer["No recipes found with the selected ingredients"]
+        </div>
+    </div>
+}
+else
+{
+    @if (hasExact)
+    {
+        @await Html.PartialAsync("_RecipeCards", Model.ExactMatches)
+    }
+
+    @if (hasNear)
+    {
+        <div class="col-12 mt-3 mb-2">
+            <h6 class="text-muted">
+                <i class="align-middle me-1" data-lucide="alert-circle" style="width:16px;height:16px;"></i>
+                @Localizer["Almost There"] (@Model.NearMatches.Count)
+            </h6>
+        </div>
+
+        @foreach (var item in Model.NearMatches)
+        {
+            var recipe = item.Recipe;
+            var cover = recipe.Images.FirstOrDefault(i => i.IsCover);
+            var coverUrl = cover != null
+                ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=400"
+                : "/img/no-image.svg";
+            var difficultyStars = new string('★', recipe.Difficulty) + new string('☆', Math.Max(0, 5 - recipe.Difficulty));
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <a href="/Recipes/Detail/@recipe.Id" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm recipe-card position-relative">
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2" style="z-index:1;">
+                            @item.MatchPercentage%
+                        </span>
+                        <img src="@coverUrl"
+                             class="card-img-top"
+                             style="height:180px;object-fit:cover;"
+                             alt="@item.LocalizedName"
+                             loading="lazy"
+                             onerror="this.src='/img/no-image.svg'">
+                        <div class="card-body pb-2">
+                            <h6 class="card-title mb-1 fw-bold text-truncate">@item.LocalizedName</h6>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <small class="text-warning">@Localizer["Difficulty"]：@difficultyStars</small>
+                                @if (item.LikeCount > 0)
+                                {
+                                    <small class="text-muted">
+                                        <i class="align-middle" data-lucide="thumbs-up" style="width:13px;height:13px;"></i>
+                                        @item.LikeCount
+                                    </small>
+                                }
+                            </div>
+                            <p class="card-text text-muted small mt-1 mb-0">
+                                <span class="text-danger">@Localizer["Missing"]：@item.MissingIngredients</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    }
+}

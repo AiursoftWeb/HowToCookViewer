@@ -77,19 +77,23 @@ public class ExtractIngredientsJob(
         }
 
         var prompt = $"""
-            你是一个专业的厨师和数据分析师。请从提供的菜谱内容（Markdown格式）中提取出所有的原料名词。
+            你是一个专业的厨师和数据分析师。请从提供的菜谱内容（Markdown格式）中提取出所有的原料名词。不包含厨具、工具、数量、单位、形容词或任何非原料的词汇。
+            
             要求：
             1. 只提取最单纯的精准的名词，去除所有形容词（如“生”、“熟”、“可选”、“大约”、“克”、“毫升”、“勺”等）。
             2. 将名称标准化，例如“蛋”、“生鸡蛋”统一为“鸡蛋”。
             3. 结果必须是标准的 JSON 数组，包含字符串。例如：["鸡蛋", "西红柿"]
             4. 不要包含任何额外的描述、解释或 Markdown 格式（如 ```json 代码块）。
             5. 必须是中文名词。
+            6. 必须是必备的材料。如果是可选的材料，请不要提取！请忽视一切可选的材料！
+            7. 复合材料（包含多种配料的材料）请提取最终材料的名称。例如“复配食品增稠剂（κ-卡拉胶 45%、瓜尔胶 35%、氯化钾 20%）”提取为“食品增稠剂”。
 
             菜谱内容：
             {recipe.Ingredients}
             """;
 
-        var response = await chatClient.AskString(instance, model, prompt, Array.Empty<string>(), CancellationToken.None);
+        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken) ?? string.Empty;
+        var response = await chatClient.AskString(model, instance, token, new[] { prompt }, CancellationToken.None);
 
         var json = response.GetFullContent().Trim();
         if (json.StartsWith("```json")) json = json[7..].Trim();

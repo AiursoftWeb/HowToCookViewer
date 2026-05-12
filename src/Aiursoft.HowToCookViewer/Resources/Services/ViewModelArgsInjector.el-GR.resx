@@ -262,4 +262,7 @@
     <value>Λαχανικά</value>
   </data>
 
+  <data name="Ingredient Reverse Lookup" xml:space="preserve">
+    <value>Ingredient Reverse Lookup</value>
+  </data>
 </root>
