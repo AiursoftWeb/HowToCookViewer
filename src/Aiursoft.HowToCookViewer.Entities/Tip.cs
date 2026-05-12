@@ -28,5 +28,5 @@ public class Tip
     public DateTime FileLastModified { get; set; }
 
     /// <summary>Indicates if the tip was deleted from the upstream repository.</summary>
-    public bool IsDeleted { get; set; } = false;
+    public bool IsDeleted { get; set; }
 }

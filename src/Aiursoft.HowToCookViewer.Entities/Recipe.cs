@@ -60,5 +60,5 @@ public class Recipe
     public ICollection<LocalizedRecipe> LocalizedRecipes { get; set; } = [];
 
     /// <summary>Indicates if the recipe was deleted from the upstream repository.</summary>
-    public bool IsDeleted { get; set; } = false;
+    public bool IsDeleted { get; set; }
 }
