@@ -56,7 +56,7 @@ public class ExtractIngredientsJob(
                         await ExtractForRecipeAsync(recipe, instance, model);
                         recipe.LastIngredientExtractedAt = DateTime.UtcNow;
                         await db.SaveChangesAsync();
-                    }, 3);
+                    });
                 }
                 catch (Exception ex)
                 {
