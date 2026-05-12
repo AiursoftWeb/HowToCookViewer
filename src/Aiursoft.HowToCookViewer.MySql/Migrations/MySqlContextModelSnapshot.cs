@@ -35,6 +35,27 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.ToTable("GlobalSettings");
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Ingredient", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Ingredients");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
                 {
                     b.Property<int>("Id")
@@ -165,6 +186,9 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("LastIngredientExtractedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -401,6 +425,21 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("IngredientRecipe", b =>
+                {
+                    b.Property<int>("ConsumedIngredientsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ConsumedIngredientsId", "RecipesId");
+
+                    b.HasIndex("RecipesId");
+
+                    b.ToTable("IngredientRecipe");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -628,6 +667,21 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.Navigation("Recipe");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("IngredientRecipe", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Ingredient", null)
+                        .WithMany()
+                        .HasForeignKey("ConsumedIngredientsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", null)
+                        .WithMany()
+                        .HasForeignKey("RecipesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

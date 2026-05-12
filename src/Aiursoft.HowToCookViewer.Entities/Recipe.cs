@@ -56,6 +56,14 @@ public class Recipe
     /// </summary>
     public DateTime FileLastModified { get; set; }
 
+    /// <summary>
+    /// UTC timestamp of the last successful ingredient extraction.
+    /// Used to detect changes during incremental extraction.
+    /// </summary>
+    public DateTime LastIngredientExtractedAt { get; set; } = DateTime.MinValue;
+
+    public ICollection<Ingredient> ConsumedIngredients { get; set; } = [];
+
     public ICollection<RecipeImage> Images { get; set; } = [];
     public ICollection<LocalizedRecipe> LocalizedRecipes { get; set; } = [];
 
