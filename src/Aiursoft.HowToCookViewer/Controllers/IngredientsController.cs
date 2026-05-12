@@ -4,7 +4,6 @@ using Aiursoft.HowToCookViewer.Models.IngredientsViewModels;
 using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.UiStack.Navigation;
-using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
@@ -54,7 +53,7 @@ public class IngredientsController(
     }
 
     [HttpGet]
-    public async Task<IActionResult> Lookup([FromQuery] List<int> ingredientIds)
+    public async Task<IActionResult> Lookup([FromQuery] List<int>? ingredientIds)
     {
         if (ingredientIds == null || ingredientIds.Count == 0)
         {

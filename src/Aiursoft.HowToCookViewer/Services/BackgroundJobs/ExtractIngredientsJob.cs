@@ -92,7 +92,7 @@ public class ExtractIngredientsJob(
             {recipe.Ingredients}
             """;
 
-        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken) ?? string.Empty;
+        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
         var response = await chatClient.AskString(model, instance, token, new[] { prompt }, CancellationToken.None);
 
         var json = response.GetFullContent().Trim();
