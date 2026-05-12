@@ -19,4 +19,6 @@ public class IndexViewModel : UiStackLayoutViewModel
     public Dictionary<int, string> LocalizedNames { get; set; } = [];
 
     public Dictionary<int, string> LocalizedDescriptions { get; set; } = [];
+
+    public bool ShowVoxihostAd { get; set; }
 }

@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="~/styles/marketing.css"/>
 }
 
+@if (Model.ShowVoxihostAd)
+{
+    <!-- Ad Banner -->
+    <div class="alert alert-dismissible fade show text-center mb-0 pt-2 pb-2 border-0 rounded-0 text-white" role="alert"
+         style="background-color: #2a4b77;">
+        <div class="container">
+            <strong class="text-white">@Localizer["Special Thanks!"]</strong>
+            @Localizer["The HowToCook server is proudly sponsored by"] <a href="https://voxihost.pl/"
+                                                                         class="alert-link text-white">@Localizer["Voxihost"]</a>, @Localizer["a provider of top-tier hosting services"].
+            <a href="https://voxihost.pl/" class="alert-link ms-2">@Localizer["Sign up today!"]</a>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close" style="padding: .8rem"></button>
+    </div>
+}
+
 <vc:marketing-navbar></vc:marketing-navbar>
 
 @* ── Hero / Search ─────────────────────────────────────────────────── *@

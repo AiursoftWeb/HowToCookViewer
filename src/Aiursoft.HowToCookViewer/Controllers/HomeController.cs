@@ -1,3 +1,4 @@
+using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.HomeViewModels;
 using Aiursoft.HowToCookViewer.Services;
@@ -10,7 +11,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 [LimitPerMin]
 public class HomeController(
     TemplateDbContext db,
-    RecipeLocalizationService recipeLocalization) : Controller
+    RecipeLocalizationService recipeLocalization,
+    GlobalSettingsService globalSettings) : Controller
 {
     public async Task<IActionResult> Index()
     {
@@ -51,13 +53,16 @@ public class HomeController(
         var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(featured);
         var likeCounts = await LoadLikeCountsAsync(featured);
 
+        var showVoxihostAd = await globalSettings.GetBoolSettingAsync(SettingsMap.ShowVoxihostAd);
+
         return this.SimpleView(new IndexViewModel
         {
             TotalRecipes = totalRecipes,
             FeaturedRecipes = featured,
             LikeCounts = likeCounts,
             LocalizedNames = localizedNames,
-            LocalizedDescriptions = localizedDescs
+            LocalizedDescriptions = localizedDescs,
+            ShowVoxihostAd = showVoxihostAd
         });
     }
 

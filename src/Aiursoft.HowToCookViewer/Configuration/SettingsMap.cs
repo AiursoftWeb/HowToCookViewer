@@ -15,6 +15,7 @@ public class SettingsMap
     public const string OllamaModel = "OllamaModel";
     public const string OllamaToken = "OllamaToken";
     public const string LocalizationLanguages = "LocalizationLanguages";
+    public const string ShowVoxihostAd = "ShowVoxihostAd";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
 
     public class FakeLocalizer
@@ -116,6 +117,14 @@ public class SettingsMap
             Description = Localizer["Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR"],
             Type = SettingType.Text,
             DefaultValue = "en-US,en-GB,zh-TW,zh-HK,ja-JP,ko-KR,vi-VN,th-TH,de-DE,fr-FR,es-ES,ru-RU,it-IT,pt-PT,pt-BR,ar-SA,nl-NL,sv-SE,pl-PL,tr-TR,ro-RO,da-DK,uk-UA,id-ID,fi-FI,hi-IN,el-GR"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = ShowVoxihostAd,
+            Name = Localizer["Show Voxihost Ad"],
+            Description = Localizer["Display a promotion banner on the home page thanking Voxihost for sponsoring the server."],
+            Type = SettingType.Bool,
+            DefaultValue = "False"
         },
         new GlobalSettingDefinition
         {
