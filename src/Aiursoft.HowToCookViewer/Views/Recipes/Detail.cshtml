@@ -75,21 +75,18 @@
             <div class="card shadow-sm">
                 <div class="card-body p-4 p-md-5">
                     <!-- Difficulty Section -->
-                    <div class="mb-5 p-4 bg-light rounded-4 shadow-sm border-start border-4 border-warning position-relative overflow-hidden">
-                        <div class="position-absolute top-0 end-0 p-3 opacity-10">
-                            <i data-lucide="chef-hat" style="width: 80px; height: 80px;"></i>
-                        </div>
-                        <div class="d-flex align-items-center flex-wrap gap-4 position-relative">
+                    <div class="mb-5 p-4 bg-light rounded-4 shadow-sm border-start border-4 border-warning">
+                        <div class="d-flex align-items-center flex-wrap gap-4">
                             <div>
                                 <div class="text-muted small text-uppercase fw-bold mb-1">@Localizer["Difficulty"]</div>
                                 <div class="d-flex align-items-center gap-2">
                                     <h3 class="mb-0 fw-bold">@Model.Recipe.Difficulty</h3>
-                                    <span class="text-muted">/ 8</span>
+                                    <span class="text-muted">/ 5</span>
                                 </div>
                             </div>
                             <div class="difficulty-meter-container flex-grow-1">
                                 <div class="difficulty-meter d-flex gap-2" data-difficulty="@Model.Recipe.Difficulty">
-                                    @for (int i = 1; i <= 8; i++)
+                                    @for (int i = 1; i <= 5; i++)
                                     {
                                         <div class="difficulty-step" data-index="@i">
                                             <i class="difficulty-icon" data-lucide="flame" style="width: 32px; height: 32px; color: #dee2e6; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);"></i>
@@ -358,33 +355,30 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
     
     const levels = [
         "@Localizer["Beginner"]",
-        "@Localizer["Novice"]",
         "@Localizer["Easy"]",
         "@Localizer["Intermediate"]",
         "@Localizer["Advanced"]",
-        "@Localizer["Expert"]",
-        "@Localizer["Master"]",
-        "@Localizer["Legendary"]"
+        "@Localizer["Expert"]"
     ];
 
     function getColor(d) {
-        if (d <= 2) return colors.low;
-        if (d <= 4) return colors.medium;
-        if (d <= 6) return colors.high;
+        if (d <= 1) return colors.low;
+        if (d <= 2) return colors.medium;
+        if (d <= 3) return colors.high;
         return colors.extreme;
     }
 
     const finalColor = getColor(difficulty);
-    label.textContent = levels[Math.min(Math.max(difficulty - 1, 0), 7)] || "@Localizer["Unknown"]";
+    label.textContent = levels[Math.min(Math.max(difficulty - 1, 0), 4)] || "@Localizer["Unknown"]";
     label.style.backgroundColor = finalColor;
-    label.style.color = (difficulty > 2 && difficulty <= 4) ? '#212529' : '#fff';
+    label.style.color = difficulty <= 2 ? '#212529' : '#fff';
 
     icons.forEach((icon, index) => {
         if (index < difficulty) {
             setTimeout(() => {
                 icon.classList.add('active');
                 icon.style.color = finalColor;
-                if (difficulty >= 7) {
+                if (difficulty >= 5) {
                     icon.classList.add('extreme');
                 }
             }, index * 100);
