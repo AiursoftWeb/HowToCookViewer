@@ -76,6 +76,7 @@ public class Startup : IWebStartup
         var localizeRecipesJob = services.RegisterBackgroundJob<LocalizeRecipesJob>();
         var indexTipsJob = services.RegisterBackgroundJob<IndexTipsJob>();
         var localizeTipsJob = services.RegisterBackgroundJob<LocalizeTipsJob>();
+        var extractIngredientsJob = services.RegisterBackgroundJob<ExtractIngredientsJob>();
         services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
@@ -109,6 +110,11 @@ public class Startup : IWebStartup
             registration: localizeTipsJob,
             period:     TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(35));
+
+        services.RegisterScheduledTask(
+            registration: extractIngredientsJob,
+            period:     TimeSpan.FromMinutes(30),
+            startDelay: TimeSpan.FromMinutes(40));
 
         // Controllers and localization
         services.AddControllersWithViews()

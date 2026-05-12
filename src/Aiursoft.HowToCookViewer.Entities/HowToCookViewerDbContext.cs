@@ -18,6 +18,7 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
     public DbSet<LocalizedRecipe> LocalizedRecipes => Set<LocalizedRecipe>();
     public DbSet<Tip> Tips => Set<Tip>();
     public DbSet<LocalizedTip> LocalizedTips => Set<LocalizedTip>();
+    public DbSet<Ingredient> Ingredients => Set<Ingredient>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
