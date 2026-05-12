@@ -26,4 +26,7 @@ public class Tip
 
     /// <summary>Last-commit timestamp from git log.</summary>
     public DateTime FileLastModified { get; set; }
+
+    /// <summary>Indicates if the tip was deleted from the upstream repository.</summary>
+    public bool IsDeleted { get; set; }
 }
