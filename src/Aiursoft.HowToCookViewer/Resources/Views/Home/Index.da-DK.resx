@@ -1,24 +1,25 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:schema id="root">
-    <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-  </xs:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>"Fire-and-forget"-støtte til langvarige opgaver (som emails eller AI), med en brugergrænseflade til køstyring, parallell behandling og annullering.</value>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>&quot;Fire-and-forget&quot;-støtte til langvarige opgaver (som emails eller AI), med en brugergrænseflade til køstyring, parallell behandling og annullering.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Et indbygget Role-Based Access Control (RBAC)-system til finjusteret rettighedshåndtering.</value>
@@ -56,7 +57,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template er vores endegyldige valg til enterprise-projekter! Den er bygget til udviklere og er letvægtig, men alligevel kraftfuld. Vi kan springe al standardkode til godkendelse og brugeradministration over.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -245,8 +246,8 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
-    <value>Udvikl eksklusivt i UTC, mens systemet automatisk konverterer og viser datoer i brugeren's lokale tidszone.</value>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Udvikl eksklusivt i UTC, mens systemet automatisk konverterer og viser datoer i brugeren&apos;s lokale tidszone.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Udvikleroplevelse</value>
@@ -304,6 +305,9 @@
   </data>
   <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
     <value>Hver opskriv bliver automatisk oversat til 27 sprog ved hjælp af AI, så du kan lave mad på dit modersmål.</value>
+  </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Udforsk {0} gratis opskrifter</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>Udforsk tusindvis af gratis, fællesskabsbaserede opskrifter</value>
@@ -410,7 +414,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Her er nogle af de svar, du muligvis leder efter.</value>
   </data>
-  <data name="Here's what developers from our community have to say." xml:space="preserve">
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>Her er hvad udviklere fra vores fællesskab har at sige.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -425,7 +429,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Hvordan deployer jeg min applikation?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Jeg har bygget Aiursoft Template, fordi jeg var træt af at indstille de samme Auth, Log og CI/CD-pipelines for hvert nye enterprise-projekt. Dette er ikke blot en skabelon; det er de kristalliserede bedste praksisser fra år med højkonkurrenceproduktionsmiljøer. Det giver mit team mulighed for at springe over den kedelige opsætning og direkte begynde med business logik.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -653,10 +657,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smarte konfigurationsgenveje</value>
   </data>
-  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Smart mørk tilstand, der tilpasnings til brugeren systemindstillinger.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Smart mørktilstand, der automatisk tilpasser sig brugerens systemindstillinger.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -674,8 +678,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Start levering værdi.</value>
   </data>
-  <data name="Start with a single 'docker run' command." xml:space="preserve">
-    <value>Start med en enkelt 'docker run' kommando.</value>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Start med en enkelt &apos;docker run&apos; kommando.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Starts uden nogen konfiguration</value>
@@ -710,7 +714,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Teknisk Lead</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Den definitive, prøvet og testet .NET enterprise-grundlag. Fra Auth til AI, har vi løst de svære dele, så du ikke behøver at gøre det.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -731,7 +735,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Felter med tidssonebevidsthed</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Anvendt af produktionsskalerede applikationer, herunder AnduinOS, StatHub og Warp. Vi deler ikke kun denne kode; vi driver vores hele business med den.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -776,10 +780,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Du kan få fællesskabsstøtte via GitHub Discussions. Besøg venligst vores</value>
   </data>
-  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Du skal bruge .NET 10 SDK, npm og din foretrukne IDE, som f.eks. Visual Studio eller JetBrains Rider. Du kan finde den fulde opsætningsvejledning i vores dokumentation.</value>
   </data>
-  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Dine enterprise-brugere behøver ikke at registrere sig gentagende.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -794,7 +798,5 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Linting med nul tolerance</value>
   </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>Udforsk {0} gratis opskrifter</value>
-  </data>
+
 </root>

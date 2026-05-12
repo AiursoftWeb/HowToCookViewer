@@ -1,24 +1,25 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:schema id="root">
-    <xs:element name="root" ns1:IsDataSet="true">
+<?xml version="1.0" encoding="utf-8"?>
 
-        </xs:element>
-  </xs:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>"Fire-and-forget"-ondersteuning voor langdurige taken (zoals e-mails of AI), met een GUI voor wachtrijbeheer, parallelle verwerking en annulering.</value>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>&quot;Fire-and-forget&quot;-ondersteuning voor langdurige taken (zoals e-mails of AI), met een GUI voor wachtrijbeheer, parallelle verwerking en annulering.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Een ingebouwd Role-Based Access Control (RBAC) systeem voor gedetailleerd rechtenbeheer.</value>
@@ -56,7 +57,7 @@
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template is onze definitieve keuze voor enterprise projecten! Het is gebouwd voor ontwikkelaars en is lichtgewicht maar krachtig. We kunnen alle standaardcode voor authenticatie en gebruikersbeheer overslaan.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
@@ -129,7 +130,7 @@
     <value>Alle recepten bekijken</value>
   </data>
   <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
-    <value>Blader door recepten met mooie coverfoto's en gedetailleerde stap-voor-stap visuele instructies.</value>
+    <value>Blader door recepten met mooie coverfoto&apos;s en gedetailleerde stap-voor-stap visuele instructies.</value>
   </data>
   <data name="Browse what the community loves most." xml:space="preserve">
     <value>Blader door wat de community het meest waardeert.</value>
@@ -245,7 +246,7 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Ontwikkel uitsluitend in UTC terwijl het systeem automatisch datums converteert en weergeeft in de lokale tijdzone van de gebruiker.</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
@@ -304,6 +305,9 @@
   </data>
   <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
     <value>Elk recept wordt automatisch vertaald naar 27 talen met behulp van AI, zodat je kunt koken in je moedertaal.</value>
+  </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>Ontdek {0} gratis recepten</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>Ontdek duizenden gratis, door de gemeenschap aangeleverde recepten</value>
@@ -410,7 +414,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>Hier zijn enkele antwoorden waar je mogelijk naar op zoek bent.</value>
   </data>
-  <data name="Here's what developers from our community have to say." xml:space="preserve">
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>Dit is wat ontwikkelaars uit onze community te zeggen hebben.</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -425,7 +429,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Hoe implementeer ik mijn applicatie?</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Ik heb Aiursoft Template gemaakt omdat ik het zat was om steeds dezelfde Auth, Log en CI/CD-pijplijnen in te stellen voor elk nieuwe enterprise-project. Dit is niet zomaar een sjabloon; het is de geconcentreerde beste praktijken uit jaren van productieomgevingen met hoge concurrentie. Het stelt mijn team in staat om de saaie setup over te slaan en direct aan de kern van de businesslogica te beginnen.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -615,7 +619,7 @@
     <value>Beoordelingen</value>
   </data>
   <data name="Rich with Photos" xml:space="preserve">
-    <value>Rijk aan foto's</value>
+    <value>Rijk aan foto&apos;s</value>
   </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Robuuste integratietests</value>
@@ -653,10 +657,10 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Slimme configuratie-overschrijvingen</value>
   </data>
-  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Slimme donkere modus die zich aanpast aan de systeeminstellingen van de gebruiker.</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Slimme donkere modus die automatisch aanpast aan de systeeminstellingen van de gebruiker.</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
@@ -674,8 +678,8 @@
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Start met het leveren van waarde.</value>
   </data>
-  <data name="Start with a single 'docker run' command." xml:space="preserve">
-    <value>Begin met een enkele 'docker run' opdracht.</value>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Begin met een enkele &apos;docker run&apos; opdracht.</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
     <value>Start zonder configuratie</value>
@@ -710,7 +714,7 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Technisch Leider</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>De definitieve, bewezen .NET enterprise basis. Van Auth tot AI, hebben we de lastige onderdelen opgelost, zodat u dat niet hoeft te doen.</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
@@ -731,7 +735,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Velden met tijdzone-informatie</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Vertrouwd door productie-gebaseerde toepassingen, waaronder AnduinOS, StatHub en Warp. We delen deze code niet alleen; we draaien onze hele bedrijfsactiviteiten erop.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -776,10 +780,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>Je kunt gemeenschapsondersteuning krijgen via GitHub Discussions. Bezoek onze</value>
   </data>
-  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Je hebt de .NET 10 SDK, npm en je favoriete IDE nodig, zoals Visual Studio of JetBrains Rider. Je kunt de volledige installatiehandleiding in onze documentatie vinden.</value>
   </data>
-  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Uw bedrijfsgebruikers hoeven zich niet herhaaldelijk te registreren.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -794,7 +798,5 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Geen Tolerantie Lint</value>
   </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>Ontdek {0} gratis recepten</value>
-  </data>
+
 </root>
