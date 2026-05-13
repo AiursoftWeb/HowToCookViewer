@@ -232,4 +232,8 @@
     <value>點解要使用 Aiursoft 模板？</value>
   </data>
 
+
+  <data name="Page navigation" xml:space="preserve">
+    <value>分頁導航</value>
+  </data>
 </root>

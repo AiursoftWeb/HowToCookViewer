@@ -55,4 +55,7 @@
     <value>Anda tidak dapat mengubah kata sandi karena autentikasi lokal dinonaktifkan. Silakan edit profil Anda dari penyedia autentikasi.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

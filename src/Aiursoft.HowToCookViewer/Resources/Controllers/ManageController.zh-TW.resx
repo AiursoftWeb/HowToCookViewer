@@ -34,4 +34,11 @@
     <value>您的個人資料已儲存。</value>
   </data>
 
+  <data name="Local password is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>啟用 OIDC 認證時，本地密碼已禁用。</value>
+  </data>
+  <data name="Adjusting nickname is disabled by administrator." xml:space="preserve">
+    <value>管理員已禁用暱稱修改。</value>
+  </data>
+
 </root>

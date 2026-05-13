@@ -55,4 +55,7 @@
     <value>Bạn không thể thay đổi mật khẩu vì tính năng xác thực cục bộ đã bị vô hiệu hóa. Vui lòng chỉnh sửa hồ sơ của bạn từ nhà cung cấp xác thực.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

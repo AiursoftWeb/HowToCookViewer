@@ -37,4 +37,7 @@
     <value>डैशबोर्ड आज़माएं</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
 </root>

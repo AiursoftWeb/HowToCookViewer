@@ -37,4 +37,10 @@
     <value>このヒントの著作権はコミュニティに帰属し、The Unlicense の下でパブリックドメインとして解放されています。いかなる目的にも制限なく自由に使用できます。</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

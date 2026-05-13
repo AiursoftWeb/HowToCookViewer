@@ -64,4 +64,7 @@
     <value>Да, удалить этого пользователя</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

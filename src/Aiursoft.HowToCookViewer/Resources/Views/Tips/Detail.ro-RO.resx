@@ -37,4 +37,10 @@
     <value>Drepturile de autor ale acestui sfat aparțin comunității și sunt eliberate în domeniul public conform The Unlicense — liber de utilizat în orice scop, fără nicio restricție.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

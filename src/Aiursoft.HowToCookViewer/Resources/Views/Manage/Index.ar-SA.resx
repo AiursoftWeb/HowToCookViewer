@@ -55,4 +55,7 @@
     <value>لا يمكنك تغيير كلمة المرور لأن المصادقة المحلية معطلة. يرجى تعديل ملفك الشخصي من مزود المصادقة.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

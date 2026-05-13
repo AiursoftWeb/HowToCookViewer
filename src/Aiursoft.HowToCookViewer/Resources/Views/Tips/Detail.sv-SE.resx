@@ -37,4 +37,10 @@
     <value>Upphovsrätten till denna tips tillhör communityn och är frigiven till allmän ägo enligt The Unlicense — fri att användas för vilket ändamål som helst utan några begränsningar.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

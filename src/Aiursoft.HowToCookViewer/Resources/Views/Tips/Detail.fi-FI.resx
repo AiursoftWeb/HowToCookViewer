@@ -37,4 +37,10 @@
     <value>Tämän vinkin tekijänoikeus kuuluu yhteisölle ja se on julkaistu yleiseen omistukseen Unlicense-lisenssillä — vapaasti käytettävissä mihin tahansa tarkoitukseen ilman rajoituksia.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

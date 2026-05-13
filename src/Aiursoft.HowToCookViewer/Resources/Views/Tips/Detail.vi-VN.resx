@@ -37,4 +37,10 @@
     <value>Bản quyền của mẹo vặt này thuộc về cộng đồng và được phát hành vào phạm vi công cộng theo The Unlicense — tự do sử dụng cho bất kỳ mục đích nào mà không có bất kỳ hạn chế nào.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

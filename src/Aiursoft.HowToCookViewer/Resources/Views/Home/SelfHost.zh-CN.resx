@@ -136,4 +136,28 @@
     <value>我们对您的反馈很感兴趣！您可以通过问题追踪器提交建议或功能请求。</value>
   </data>
 
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker 拉取</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
+  </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT 许可</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>流水线状态</value>
+  </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>测试覆盖率</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>面包屑导航</value>
+  </data>
 </root>

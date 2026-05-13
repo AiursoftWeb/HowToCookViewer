@@ -55,4 +55,7 @@
     <value>Você não pode alterar sua senha porque a autenticação local está desativada. Edite seu perfil no provedor de autenticação.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

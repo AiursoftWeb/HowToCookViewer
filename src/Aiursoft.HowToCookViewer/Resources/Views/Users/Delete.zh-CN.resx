@@ -64,4 +64,7 @@
     <value>是的，删除此用户</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
 </root>

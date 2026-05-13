@@ -232,4 +232,8 @@
     <value>为何选择 Aiursoft 模板？</value>
   </data>
 
+
+  <data name="Page navigation" xml:space="preserve">
+    <value>分页导航</value>
+  </data>
 </root>

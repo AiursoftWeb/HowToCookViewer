@@ -40,4 +40,11 @@
     <value>وصفة عشوائية</value>
   </data>
 
+  <data name="Total {0} recipes" xml:space="preserve">
+    <value>Total {0} recipes</value>
+  </data>
+
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

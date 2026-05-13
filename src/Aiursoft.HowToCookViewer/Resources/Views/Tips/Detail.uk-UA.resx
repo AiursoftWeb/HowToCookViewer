@@ -37,4 +37,10 @@
     <value>Авторські права на цей порада належать спільноті та перенесені в суспільне надбання згідно з ліцензією The Unlicense — його можна використовувати для будь-яких цілей без будь-яких обмежень.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

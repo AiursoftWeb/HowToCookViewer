@@ -64,4 +64,7 @@
     <value>예, 이 사용자를 삭제합니다</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

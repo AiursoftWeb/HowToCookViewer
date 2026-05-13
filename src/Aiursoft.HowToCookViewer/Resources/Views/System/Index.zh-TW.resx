@@ -151,4 +151,13 @@
     <value>是，立即重新啟動</value>
   </data>
 
+  <data name="(32-bit)" xml:space="preserve">
+    <value>（32位元）</value>
+  </data>
+  <data name="(64-bit)" xml:space="preserve">
+    <value>（64位元）</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
 </root>

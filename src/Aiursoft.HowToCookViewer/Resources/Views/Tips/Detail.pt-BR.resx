@@ -37,4 +37,10 @@
     <value>A propriedade intelectual desta dica pertence à comunidade e é lançada ao domínio público sob a Licença Não-Obrigatória — livre para uso em qualquer finalidade, sem restrições.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

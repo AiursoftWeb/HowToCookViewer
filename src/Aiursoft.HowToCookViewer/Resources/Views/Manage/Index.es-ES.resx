@@ -55,4 +55,7 @@
     <value>No puede cambiar su contraseña porque la autenticación local está deshabilitada. Por favor, edite su perfil desde el proveedor de autenticación.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

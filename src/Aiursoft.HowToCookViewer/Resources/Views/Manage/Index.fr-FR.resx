@@ -55,4 +55,7 @@
     <value>Vous ne pouvez pas modifier votre mot de passe car l&apos;authentification locale est désactivée. Veuillez modifier votre profil depuis le fournisseur d&apos;authentification.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

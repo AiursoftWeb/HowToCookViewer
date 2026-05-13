@@ -55,4 +55,7 @@
     <value>Yerel kimlik doğrulama devre dışı bırakıldığı için şifrenizi değiştiremezsiniz. Lütfen profilinizi kimlik sağlayıcınızdan düzenleyin.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

@@ -37,4 +37,10 @@
     <value>Hak cipta atas tips ini milik komunitas dan dirilis ke domain publik di bawah The Unlicense — bebas digunakan untuk tujuan apa pun tanpa batasan.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

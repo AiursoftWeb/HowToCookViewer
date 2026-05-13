@@ -31,4 +31,17 @@
     <value>此帳戶已被鎖定，請稍後再試。</value>
   </data>
 
+  <data name="Local login is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>啟用 OIDC 認證時，本地登錄已禁用。</value>
+  </data>
+  <data name="Registration is not allowed in the current configuration." xml:space="preserve">
+    <value>當前配置不允許註冊。</value>
+  </data>
+  <data name="Error from external provider: {0}" xml:space="preserve">
+    <value>外部提供程序錯誤：{0}</value>
+  </data>
+  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
+    <value>關聯外部登錄失敗。該用戶可能不存在於本地。</value>
+  </data>
+
 </root>

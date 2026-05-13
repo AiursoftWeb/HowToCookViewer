@@ -37,4 +37,10 @@
     <value>이 팁의 저작권은 커뮤니티에 귀속되며, The Unlicense에 따라 퍼블릭 도메인으로 공개되어 어떤 목적으로든 제한 없이 자유롭게 사용할 수 있습니다.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

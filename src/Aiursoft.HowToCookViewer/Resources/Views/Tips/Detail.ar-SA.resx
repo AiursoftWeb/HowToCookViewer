@@ -37,4 +37,10 @@
     <value>حقوق الطبع والنشر لهذه النصيحة تعود للمجتمع وهي محررة في المجال العام بموجب رخصة Unlicense — حرة الاستخدام لأي غرض دون أي قيود.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

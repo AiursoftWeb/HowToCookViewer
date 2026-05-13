@@ -37,4 +37,7 @@
     <value>Essayez le tableau de bord</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
 </root>

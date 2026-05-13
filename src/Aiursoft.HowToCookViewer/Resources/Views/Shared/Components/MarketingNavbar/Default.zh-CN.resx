@@ -37,4 +37,7 @@
     <value>试用仪表板</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
 </root>

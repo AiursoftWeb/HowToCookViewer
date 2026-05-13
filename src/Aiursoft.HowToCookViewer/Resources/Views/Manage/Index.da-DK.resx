@@ -55,4 +55,7 @@
     <value>Du kan ikke ændre din adgangskode, fordi lokal godkendelse er deaktiveret. Rediger venligst din profil fra godkendelsesudbyderen.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

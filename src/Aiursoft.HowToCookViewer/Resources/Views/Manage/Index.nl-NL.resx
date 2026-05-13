@@ -55,4 +55,7 @@
     <value>U kunt uw wachtwoord niet wijzigen omdat lokale authenticatie is uitgeschakeld. Bewerk uw profiel via de authenticatieprovider.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

@@ -55,4 +55,7 @@
     <value>Sie können Ihr Passwort nicht ändern, da die lokale Authentifizierung deaktiviert ist. Bitte bearbeiten Sie Ihr Profil über den Authentifizierungsanbieter.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

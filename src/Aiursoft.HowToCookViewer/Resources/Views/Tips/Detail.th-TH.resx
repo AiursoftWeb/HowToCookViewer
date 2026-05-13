@@ -37,4 +37,10 @@
     <value>ลิขสิทธิ์ของคำแนะนำนี้เป็นของชุมชนและถูกวางไว้ในสาธารณสมบัติภายใต้ The Unlicense — สามารถนำไปใช้เพื่อวัตถุประสงค์ใด ๆ ได้โดยไม่มีการจำกัด</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

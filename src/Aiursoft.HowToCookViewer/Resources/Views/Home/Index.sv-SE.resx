@@ -799,4 +799,7 @@
     <value>Lint med noll tolerans</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

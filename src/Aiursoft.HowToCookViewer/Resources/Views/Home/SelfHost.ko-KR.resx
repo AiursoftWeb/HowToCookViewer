@@ -136,4 +136,28 @@
     <value>피드백에 관심을 가지고 있습니다! 이슈 트래커를 통해 제안이나 기능 요청을 제출할 수 있습니다.</value>
   </data>
 
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker Pulls</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
+  </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT licensed</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>Pipeline stat</value>
+  </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>Test Coverage</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

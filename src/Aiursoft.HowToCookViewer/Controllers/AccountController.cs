@@ -53,7 +53,7 @@ public class AccountController(
     {
         if (_appSettings.OIDCEnabled)
         {
-            return BadRequest("Local login is disabled when OIDC authentication is enabled.");
+            return BadRequest(localizer["Local login is disabled when OIDC authentication is enabled."]);
         }
 
         ViewData["ReturnUrl"] = returnUrl;
@@ -101,7 +101,7 @@ public class AccountController(
         // If in OIDC mode or registration is not allowed, return 400.
         if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
         {
-            return BadRequest("Registration is not allowed in the current configuration.");
+            return BadRequest(localizer["Registration is not allowed in the current configuration."]);
         }
 
         ViewData["ReturnUrl"] = returnUrl;
@@ -116,7 +116,7 @@ public class AccountController(
     {
         if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
         {
-            return BadRequest("Registration is not allowed in the current configuration.");
+            return BadRequest(localizer["Registration is not allowed in the current configuration."]);
         }
 
         ViewData["ReturnUrl"] = returnUrl;
@@ -174,7 +174,7 @@ public class AccountController(
     {
         if (remoteError != null)
         {
-            ModelState.AddModelError(string.Empty, $"Error from external provider: {remoteError}");
+            ModelState.AddModelError(string.Empty, localizer["Error from external provider: {0}", remoteError]);
             return RedirectToAction(nameof(Login));
         }
 
@@ -199,7 +199,7 @@ public class AccountController(
         else
         {
             ModelState.AddModelError(string.Empty,
-                "Failed to associate external login. The user may not exist locally.");
+                localizer["Failed to associate external login. The user may not exist locally."]);
             return RedirectToAction(nameof(Login));
         }
     }

@@ -70,4 +70,7 @@
     <value>소스 코드</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
 </root>

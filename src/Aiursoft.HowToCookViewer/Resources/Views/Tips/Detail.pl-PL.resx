@@ -37,4 +37,10 @@
     <value>Prawa autorskie do tego poradnika należą do społeczności i zostały upublicznione na licencji The Unlicense — można go używać w dowolnym celu bez żadnych ograniczeń.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

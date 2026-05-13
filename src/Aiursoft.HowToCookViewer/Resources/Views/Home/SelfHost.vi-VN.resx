@@ -136,4 +136,28 @@
     <value>Chúng tôi rất mong nhận được phản hồi từ bạn! Bạn có thể gửi góp ý hoặc yêu cầu tính năng mới thông qua hệ thống theo dõi vấn đề.</value>
   </data>
 
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker Pulls</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
+  </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT licensed</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>Pipeline stat</value>
+  </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>Test Coverage</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

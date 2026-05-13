@@ -37,4 +37,10 @@
     <value>Bu ipucunun telif hakkı topluluğa aittir ve The Unlicense altında kamu malı olarak yayınlanmıştır — her türlü amaçla kısıtlama olmaksızın özgürce kullanılabilir.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

@@ -37,4 +37,10 @@
     <value>Авторские права на этот совет принадлежат сообществу и переданы в общественное достояние согласно лицензии The Unlicense — свободное использование для любых целей без каких-либо ограничений.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

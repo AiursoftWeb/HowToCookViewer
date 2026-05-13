@@ -114,7 +114,7 @@
         @* Pagination *@
         @if (totalPages > 1)
         {
-            <nav class="mt-4" aria-label="Page navigation">
+            <nav class="mt-4" aria-label="@Localizer["Page navigation"]">
                 <ul class="pagination justify-content-center">
                     <li class="page-item @(Model.Page <= 1 ? "disabled" : "")">
                         <a class="page-link" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page - 1)">@Localizer["‹ Prev"]</a>

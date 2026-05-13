@@ -55,4 +55,7 @@
     <value>आप अपना पासवर्ड नहीं बदल सकते क्योंकि स्थानीय प्रमाणीकरण अक्षम है। कृपया अपना प्रोफ़ाइल ऑथ प्रदाता से संपादित करें।</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

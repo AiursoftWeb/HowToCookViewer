@@ -37,4 +37,10 @@
     <value>इस टिप का कॉपीराइट समुदाय का है और यह अनलाइसेंस के तहत सार्वजनिक डोमेन में जारी किया गया है — किसी भी उद्देश्य के लिए बिना किसी प्रतिबंध के स्वतंत्र रूप से उपयोग करने के लिए।</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

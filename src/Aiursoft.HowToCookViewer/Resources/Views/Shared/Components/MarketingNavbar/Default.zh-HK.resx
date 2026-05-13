@@ -37,4 +37,7 @@
     <value>試用控制台</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
 </root>

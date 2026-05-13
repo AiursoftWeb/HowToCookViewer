@@ -799,4 +799,7 @@
     <value>การตรวจสอบโค้ดแบบไม่ยอมให้ผิดพลาดเลย</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

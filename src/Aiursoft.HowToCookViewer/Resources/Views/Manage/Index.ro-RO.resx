@@ -55,4 +55,7 @@
     <value>Nu vă puteți schimba parola deoarece autentificarea locală este dezactivată. Vă rugăm să vă editați profilul de la furnizorul de autentificare.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

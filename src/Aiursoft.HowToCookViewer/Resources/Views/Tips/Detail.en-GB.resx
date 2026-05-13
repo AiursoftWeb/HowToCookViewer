@@ -37,4 +37,10 @@
     <value>The copyright of this tip belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

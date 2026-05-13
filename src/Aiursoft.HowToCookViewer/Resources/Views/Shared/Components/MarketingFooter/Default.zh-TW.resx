@@ -70,4 +70,7 @@
     <value>原始碼</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
 </root>

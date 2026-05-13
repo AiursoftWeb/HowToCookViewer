@@ -37,4 +37,10 @@
     <value>Les droits d&apos;auteur de cette astuce appartiennent à la communauté et sont placés dans le domaine public sous la licence The Unlicense — libre d&apos;utilisation à toute fin et sans aucune restriction.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

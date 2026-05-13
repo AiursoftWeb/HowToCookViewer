@@ -55,4 +55,7 @@
     <value>예, 이 역할 삭제</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

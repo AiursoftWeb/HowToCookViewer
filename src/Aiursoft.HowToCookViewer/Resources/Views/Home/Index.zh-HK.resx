@@ -799,4 +799,7 @@
     <value>零容忍代碼檢查</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
 </root>

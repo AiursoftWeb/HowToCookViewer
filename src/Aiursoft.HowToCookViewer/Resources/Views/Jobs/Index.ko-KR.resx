@@ -103,4 +103,7 @@
     <value>지금 실행</value>
   </data>
 
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
 </root>

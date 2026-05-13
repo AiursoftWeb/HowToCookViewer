@@ -37,4 +37,10 @@
     <value>Il copyright di questo suggerimento appartiene alla comunità ed è rilasciato nel dominio pubblico sotto la licenza The Unlicense: libero da usare per qualsiasi scopo senza alcuna restrizione.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

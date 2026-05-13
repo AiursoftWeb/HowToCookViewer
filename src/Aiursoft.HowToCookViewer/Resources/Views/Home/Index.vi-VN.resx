@@ -799,4 +799,7 @@
     <value>Kiểm tra mã nghiêm ngặt không khoan nhượng</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

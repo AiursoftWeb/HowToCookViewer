@@ -70,4 +70,7 @@
     <value>सोर्स कोड</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
 </root>

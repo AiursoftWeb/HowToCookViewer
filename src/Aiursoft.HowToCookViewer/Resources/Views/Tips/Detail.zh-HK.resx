@@ -37,4 +37,10 @@
     <value>本提示的版權歸社區所有，並在 The Unlicense 下釋入公共領域——可自由用於任何目的，不受任何限制。</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>麵包屑導航</value>
+  </data>
 </root>

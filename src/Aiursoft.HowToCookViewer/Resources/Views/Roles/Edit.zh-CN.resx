@@ -55,4 +55,7 @@
     <value>警告！</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
 </root>

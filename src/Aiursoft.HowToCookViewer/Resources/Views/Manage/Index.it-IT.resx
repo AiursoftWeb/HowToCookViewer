@@ -55,4 +55,7 @@
     <value>Non puoi cambiare la tua password perché l&apos;autenticazione locale è disabilitata. Modifica il tuo profilo dal provider di autenticazione.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

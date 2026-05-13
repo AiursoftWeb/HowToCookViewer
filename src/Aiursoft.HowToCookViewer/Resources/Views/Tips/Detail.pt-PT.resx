@@ -37,4 +37,10 @@
     <value>Os direitos de autor desta dica pertencem à comunidade e são libertados para o domínio público sob a Licença Unlicense — livre para uso para qualquer fim, sem quaisquer restrições.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

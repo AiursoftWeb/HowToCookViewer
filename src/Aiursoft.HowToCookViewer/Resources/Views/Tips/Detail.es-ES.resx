@@ -37,4 +37,10 @@
     <value>Los derechos de autor de esta receta pertenecen a la comunidad y se liberan al dominio público bajo la licencia The Unlicense: libre para usar con cualquier propósito y sin restricciones.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

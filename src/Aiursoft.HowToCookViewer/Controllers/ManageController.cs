@@ -65,7 +65,7 @@ public class ManageController(
     {
         if (appSettings.Value.OIDCEnabled)
         {
-            return BadRequest("Local password is disabled when OIDC authentication is enabled.");
+            return BadRequest(localizer["Local password is disabled when OIDC authentication is enabled."]);
         }
         return this.StackView(new ChangePasswordViewModel());
     }
@@ -79,7 +79,7 @@ public class ManageController(
     {
         if (appSettings.Value.OIDCEnabled)
         {
-            return BadRequest("Local password is disabled when OIDC authentication is enabled.");
+            return BadRequest(localizer["Local password is disabled when OIDC authentication is enabled."]);
         }
         if (!ModelState.IsValid)
         {
@@ -108,7 +108,7 @@ public class ManageController(
     {
         if (!await settingsService.GetBoolSettingAsync(SettingsMap.AllowUserAdjustNickname))
         {
-            return BadRequest("Adjusting nickname is disabled by administrator.");
+            return BadRequest(localizer["Adjusting nickname is disabled by administrator."]);
         }
 
         var user = await GetCurrentUserAsync();
@@ -126,7 +126,7 @@ public class ManageController(
     {
         if (!await settingsService.GetBoolSettingAsync(SettingsMap.AllowUserAdjustNickname))
         {
-            return BadRequest("Adjusting nickname is disabled by administrator.");
+            return BadRequest(localizer["Adjusting nickname is disabled by administrator."]);
         }
 
         if (!ModelState.IsValid)

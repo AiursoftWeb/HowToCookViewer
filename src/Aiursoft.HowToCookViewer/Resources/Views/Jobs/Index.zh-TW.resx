@@ -103,4 +103,7 @@
     <value>立即執行</value>
   </data>
 
+  <data name="JOB" xml:space="preserve">
+    <value>任務</value>
+  </data>
 </root>

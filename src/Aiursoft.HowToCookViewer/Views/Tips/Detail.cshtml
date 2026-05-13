@@ -3,7 +3,7 @@
 <div class="container-fluid p-4">
     <div class="row mb-3">
         <div class="col">
-            <nav aria-label="breadcrumb">
+            <nav aria-label="@Localizer["breadcrumb"]">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">@Localizer["Home"]</a></li>
                     <li class="breadcrumb-item active">@Model.DisplayTitle</li>
@@ -30,7 +30,7 @@
         </div>
         <div class="px-4 px-md-5 pb-3">
             <div class="alert alert-primary alert-dismissible" role="alert">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="@Localizer["Close"]"></button>
                 <div class="alert-message">
                     <h4 class="alert-heading">@Localizer["Community Content"]</h4>
                     <p class="mb-0">

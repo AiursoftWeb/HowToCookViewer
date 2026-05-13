@@ -55,4 +55,7 @@
     <value>Da, șterge acest rol</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

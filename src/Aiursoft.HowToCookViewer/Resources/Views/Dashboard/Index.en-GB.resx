@@ -223,4 +223,18 @@
     <value>Why use the Aiursoft Template?</value>
   </data>
 
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+
+
+  <data name="Page navigation" xml:space="preserve">
+    <value>Page navigation</value>
+  </data>
 </root>

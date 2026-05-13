@@ -55,4 +55,7 @@
     <value>由于本地身份验证已禁用，您无法更改密码。请通过认证提供方编辑您的个人资料。</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
 </root>

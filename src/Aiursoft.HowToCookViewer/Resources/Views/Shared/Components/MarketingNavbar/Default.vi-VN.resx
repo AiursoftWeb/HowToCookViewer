@@ -37,4 +37,7 @@
     <value>Dùng thử bảng điều khiển</value>
   </data>
 
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
 </root>

@@ -37,4 +37,10 @@
     <value>Das Urheberrecht an diesem Tipp liegt bei der Community und wird unter der Unlicense in die Public Domain gestellt – frei verwendbar für jeden Zweck ohne Einschränkungen.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
 </root>

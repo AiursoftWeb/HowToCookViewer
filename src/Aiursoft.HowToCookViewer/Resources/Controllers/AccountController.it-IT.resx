@@ -28,4 +28,17 @@
     <value>Questo account è stato bloccato, riprova più tardi.</value>
   </data>
 
+  <data name="Local login is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>Local login is disabled when OIDC authentication is enabled.</value>
+  </data>
+  <data name="Registration is not allowed in the current configuration." xml:space="preserve">
+    <value>Registration is not allowed in the current configuration.</value>
+  </data>
+  <data name="Error from external provider: {0}" xml:space="preserve">
+    <value>Error from external provider: {0}</value>
+  </data>
+  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
+    <value>Failed to associate external login. The user may not exist locally.</value>
+  </data>
+
 </root>

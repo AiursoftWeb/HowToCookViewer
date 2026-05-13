@@ -4,6 +4,7 @@ using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
@@ -14,7 +15,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 public class FilesController(
     ImageProcessingService imageCompressor,
     ILogger<FilesController> logger,
-    StorageService storage) : ControllerBase
+    StorageService storage,
+    IStringLocalizer<FilesController> localizer) : ControllerBase
 {
     [HttpPost]
     [Route("upload/{**subfolder}")]
@@ -26,7 +28,7 @@ public class FilesController(
     {
         if (!storage.ValidateToken(subfolder, token, FilePermission.Upload))
         {
-            return Unauthorized("Invalid or expired token.");
+            return Unauthorized(localizer["Invalid or expired token."]);
         }
         return await ProcessUpload(subfolder, isVault: false);
     }
@@ -41,7 +43,7 @@ public class FilesController(
     {
         if (!storage.ValidateToken(subfolder, token, FilePermission.Upload))
         {
-            return Unauthorized("Invalid or expired token.");
+            return Unauthorized(localizer["Invalid or expired token."]);
         }
         return await ProcessUpload(subfolder, isVault: true);
     }
@@ -65,13 +67,13 @@ public class FilesController(
 
         if (HttpContext.Request.Form.Files.Count < 1)
         {
-            return BadRequest("No file uploaded!");
+            return BadRequest(localizer["No file uploaded!"]);
         }
 
         var file = HttpContext.Request.Form.Files.First();
         if (!new ValidFolderName().IsValid(file.FileName))
         {
-            return BadRequest("Invalid file name!");
+            return BadRequest(localizer["Invalid file name!"]);
         }
 
         var storePath = Path.Combine(
@@ -98,7 +100,7 @@ public class FilesController(
     {
         if (!storage.ValidateToken(folderNames, token, requiredPermission: FilePermission.Download))
         {
-            return Unauthorized("Invalid or expired token.");
+            return Unauthorized(localizer["Invalid or expired token."]);
         }
         return await ProcessDownload(folderNames, isVault: true);
     }
@@ -120,7 +122,7 @@ public class FilesController(
         }
         catch (ArgumentException)
         {
-            return BadRequest("Attempted to access a restricted path.");
+            return BadRequest(localizer["Attempted to access a restricted path."]);
         }
 
         if (!System.IO.File.Exists(physicalPath))

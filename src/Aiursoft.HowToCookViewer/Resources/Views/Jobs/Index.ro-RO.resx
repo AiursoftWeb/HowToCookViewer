@@ -103,4 +103,7 @@
     <value>Activează acum</value>
   </data>
 
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
 </root>

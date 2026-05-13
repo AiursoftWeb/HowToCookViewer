@@ -799,4 +799,7 @@
     <value>فحص صارم بدون تسامح</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

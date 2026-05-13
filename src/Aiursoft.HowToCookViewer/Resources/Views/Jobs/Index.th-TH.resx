@@ -103,4 +103,7 @@
     <value>เริ่มทันที</value>
   </data>
 
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
 </root>

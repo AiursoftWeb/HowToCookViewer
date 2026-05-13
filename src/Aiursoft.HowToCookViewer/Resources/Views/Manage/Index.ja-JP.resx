@@ -55,4 +55,7 @@
     <value>ローカル認証が無効になっているため、パスワードを変更できません。認証プロバイダーからプロフィールを編集してください。</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

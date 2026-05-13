@@ -55,4 +55,7 @@
     <value>Não pode alterar a sua palavra-passe porque a autenticação local está desativada. Por favor, edite o seu perfil no fornecedor de autenticação.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

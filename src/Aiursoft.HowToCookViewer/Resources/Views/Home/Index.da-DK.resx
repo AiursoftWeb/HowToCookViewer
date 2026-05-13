@@ -799,4 +799,7 @@
     <value>Linting med nul tolerance</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

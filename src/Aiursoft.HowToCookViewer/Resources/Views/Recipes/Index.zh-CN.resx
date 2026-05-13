@@ -43,4 +43,7 @@
     <value>共 {0} 道菜谱</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
 </root>

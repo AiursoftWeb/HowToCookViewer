@@ -27,7 +27,7 @@
                     </tr>
                     <tr>
                         <td>@Localizer["System"]</td>
-                        <td>@Aiursoft.CSTools.Services.OperatingSystemExtensions.TryGetFullOsVersion() @(Environment.Is64BitOperatingSystem ? "(64-bit)" : "(32-bit)")</td>
+                        <td>@Aiursoft.CSTools.Services.OperatingSystemExtensions.TryGetFullOsVersion() @(Environment.Is64BitOperatingSystem ? Localizer["(64-bit)"].Value : Localizer["(32-bit)"].Value)</td>
                     </tr>
                     <tr>
                         <td>@Localizer["Machine Name"]</td>
@@ -48,7 +48,7 @@
                     <tr>
                         <td>@Localizer["Worker Process"]</td>
                         <td>
-                            [@process.Id] @process.ProcessName @(Environment.Is64BitProcess ? "(64-bit)" : "(32-bit)")</td>
+                            [@process.Id] @process.ProcessName @(Environment.Is64BitProcess ? Localizer["(64-bit)"].Value : Localizer["(32-bit)"].Value)</td>
                     </tr>
                     <tr>
                         <td>@Localizer["Start Time"]</td>
@@ -257,7 +257,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="restartModalLabel">@Localizer["Confirm Application Restart"]</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@Localizer["Close"]"></button>
             </div>
             <div class="modal-body">
                 <div class="text-center mb-3">

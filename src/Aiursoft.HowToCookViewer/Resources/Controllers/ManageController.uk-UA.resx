@@ -34,4 +34,11 @@
     <value>Ваш профіль збережено.</value>
   </data>
 
+  <data name="Local password is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>Local password is disabled when OIDC authentication is enabled.</value>
+  </data>
+  <data name="Adjusting nickname is disabled by administrator." xml:space="preserve">
+    <value>Adjusting nickname is disabled by administrator.</value>
+  </data>
+
 </root>

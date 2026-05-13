@@ -55,4 +55,7 @@
     <value>Nie możesz zmienić swojego hasła, ponieważ lokalne uwierzytelnianie jest wyłączone. Edytuj swój profil u dostawcy uwierzytelniania.</value>
   </data>
 
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>
