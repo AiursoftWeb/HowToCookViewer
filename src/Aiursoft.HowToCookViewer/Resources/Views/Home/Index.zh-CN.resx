@@ -55,13 +55,19 @@
     <value>每道菜谱均通过 AI 自动翻译成 27 种语言，让您用母语烹饪。</value>
   </data>
   <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>探索 {0} 道免费菜谱</value>
+    <value>探索 {0} 道开源菜谱</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>探索数千道免费社区菜谱</value>
   </data>
   <data name="Free Forever" xml:space="preserve">
     <value>永久免费</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>自由软件</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>是自由软件</value>
   </data>
   <data name="Fully Open Source" xml:space="preserve">
     <value>完全开源</value>

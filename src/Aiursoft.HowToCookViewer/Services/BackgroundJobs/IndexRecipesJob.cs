@@ -47,7 +47,7 @@ public partial class IndexRecipesJob(
             // Repo-relative path used as the natural key, e.g. "dishes/vegetable_dish/西红柿炒鸡蛋.md"
             var relativeFilePath = Path.GetRelativePath(repoPath, absoluteFilePath)
                 .Replace('\\', '/');
-            
+
             validFilePaths.Add(relativeFilePath);
 
             try
@@ -138,7 +138,7 @@ public partial class IndexRecipesJob(
             .IgnoreQueryFilters()
             .Where(r => !r.IsDeleted)
             .ToListAsync();
-        
+
         var deletedCount = 0;
         foreach (var r in allDbRecipes)
         {

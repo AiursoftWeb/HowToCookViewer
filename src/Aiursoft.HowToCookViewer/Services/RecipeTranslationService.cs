@@ -27,8 +27,8 @@ public class RecipeTranslationService(
         var options = Options.Create(new TranslateOptions
         {
             OllamaInstance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance),
-            OllamaModel    = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel),
-            OllamaToken    = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken)
+            OllamaModel = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel),
+            OllamaToken = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken)
         });
 
         var engine = new OllamaBasedTranslatorEngine(options, retryEngine, engineLogger, chatClient, shredder);

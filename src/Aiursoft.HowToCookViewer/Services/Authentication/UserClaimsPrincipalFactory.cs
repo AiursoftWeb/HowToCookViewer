@@ -31,7 +31,7 @@ public class UserClaimsPrincipalFactory(
     /// This is the claim type for the display name of the user.
     ///
     /// To get the display name of the user, use:
-   ///  HttpContext.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.DisplayNameClaimType).Value
+    ///  HttpContext.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.DisplayNameClaimType).Value
     /// </summary>
     public static string DisplayNameClaimType = "DisplayName";
 

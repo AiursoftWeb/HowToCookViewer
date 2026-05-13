@@ -110,26 +110,26 @@ public class LocalizeRecipesJob(
             {
                 db.LocalizedRecipes.Add(new LocalizedRecipe
                 {
-                    RecipeId            = recipe.Id,
-                    Culture             = culture,
-                    LocalizedName        = await nameTask,
+                    RecipeId = recipe.Id,
+                    Culture = culture,
+                    LocalizedName = await nameTask,
                     LocalizedDescription = await descTask,
                     LocalizedIngredients = await ingrTask,
                     LocalizedCalculation = await calcTask,
-                    LocalizedSteps       = await stepTask,
-                    LocalizedNotes       = await noteTask,
-                    LastLocalizedAt      = DateTime.UtcNow
+                    LocalizedSteps = await stepTask,
+                    LocalizedNotes = await noteTask,
+                    LastLocalizedAt = DateTime.UtcNow
                 });
             }
             else
             {
-                existing.LocalizedName        = await nameTask;
+                existing.LocalizedName = await nameTask;
                 existing.LocalizedDescription = await descTask;
                 existing.LocalizedIngredients = await ingrTask;
                 existing.LocalizedCalculation = await calcTask;
-                existing.LocalizedSteps       = await stepTask;
-                existing.LocalizedNotes       = await noteTask;
-                existing.LastLocalizedAt      = DateTime.UtcNow;
+                existing.LocalizedSteps = await stepTask;
+                existing.LocalizedNotes = await noteTask;
+                existing.LastLocalizedAt = DateTime.UtcNow;
             }
             return true;
         }

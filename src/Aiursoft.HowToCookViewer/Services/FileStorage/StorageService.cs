@@ -42,7 +42,7 @@ public class StorageService(
         var directory = Path.GetDirectoryName(physicalPath);
         if (!Directory.Exists(directory))
         {
-             Directory.CreateDirectory(directory!);
+            Directory.CreateDirectory(directory!);
         }
 
         // 5. Handle collisions (Renaming)

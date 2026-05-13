@@ -44,16 +44,16 @@ public class ViewModelArgsInjector(
         new(StringComparer.OrdinalIgnoreCase)
         {
             ["vegetable_dish"] = ("Vegetable Dishes", "leaf"),
-            ["meat_dish"]      = ("Meat Dishes",      "flame"),
-            ["aquatic"]        = ("Aquatic",           "fish"),
-            ["breakfast"]      = ("Breakfast",         "sunrise"),
-            ["staple"]         = ("Staple Food",       "wheat"),
-            ["soup"]           = ("Soups",             "soup"),
-            ["drink"]          = ("Drinks",            "glass-water"),
-            ["dessert"]        = ("Desserts",          "cake-slice"),
-            ["condiment"]      = ("Condiments",        "droplets"),
-            ["semi-finished"]  = ("Semi-finished",     "package"),
-            ["template"]       = ("Templates",         "file-text"),
+            ["meat_dish"] = ("Meat Dishes", "flame"),
+            ["aquatic"] = ("Aquatic", "fish"),
+            ["breakfast"] = ("Breakfast", "sunrise"),
+            ["staple"] = ("Staple Food", "wheat"),
+            ["soup"] = ("Soups", "soup"),
+            ["drink"] = ("Drinks", "glass-water"),
+            ["dessert"] = ("Desserts", "cake-slice"),
+            ["condiment"] = ("Condiments", "droplets"),
+            ["semi-finished"] = ("Semi-finished", "package"),
+            ["template"] = ("Templates", "file-text"),
         };
 
     [ExcludeFromCodeCoverage]
@@ -141,9 +141,9 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Recipe Search"];
         _ = localizer["Search recipes (e.g. tomato, egg, tofu…)"];
-    
+
         _ = localizer["Tip"];
-    
+
         _ = localizer["Self Host"];
 
         _ = localizer["Ingredient Reverse Lookup"];
@@ -188,7 +188,7 @@ public class ViewModelArgsInjector(
             ThemeSwitchApiCallEndpoint = "/api/switch-theme",
             SearchForm = new SearchFormViewModel
             {
-                SearchUrl  = "/Dashboard/Index",
+                SearchUrl = "/Dashboard/Index",
                 SearchParam = "q",
                 Placeholder = localizer["Search recipes (e.g. tomato, egg, tofu…)"]
             }
@@ -268,7 +268,7 @@ public class ViewModelArgsInjector(
         {
             var isOnRecipesController = string.Equals(
                 currentViewingController, "Recipes", StringComparison.OrdinalIgnoreCase);
-            var currentCategory   = context.Request.Query["category"].ToString();
+            var currentCategory = context.Request.Query["category"].ToString();
             var currentDifficulty = context.Request.Query["difficulty"].ToString();
 
             // NavGroup 1: "All Recipes" → flat category links, no collapse needed
@@ -283,9 +283,9 @@ public class ViewModelArgsInjector(
                     return (SideBarItem)new LinkSideBarItem
                     {
                         LucideIcon = icon,
-                        Text       = localizer[localizerKey],
-                        Href       = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
-                        IsActive   = isOnRecipesController &&
+                        Text = localizer[localizerKey],
+                        Href = $"/Recipes/Index?category={Uri.EscapeDataString(cat)}",
+                        IsActive = isOnRecipesController &&
                                      string.Equals(currentCategory, cat, StringComparison.OrdinalIgnoreCase)
                     };
                 }).ToList()
@@ -360,7 +360,7 @@ public class ViewModelArgsInjector(
         // Map tip category folder names → (localizer key, lucide icon)
         var tipCategoryMeta = new Dictionary<string, (string Key, string Icon)>(StringComparer.OrdinalIgnoreCase)
         {
-            ["learn"]    = ("Learn",    "book-open"),
+            ["learn"] = ("Learn", "book-open"),
             ["advanced"] = ("Advanced", "graduation-cap"),
         };
 
@@ -397,9 +397,9 @@ public class ViewModelArgsInjector(
                 tipsItems.Add(new LinkSideBarItem
                 {
                     LucideIcon = "file-text",
-                    Text       = ResolveTitle(tip.Id, tip.Title),
-                    Href       = $"/Tips/Detail/{tip.Id}",
-                    IsActive   = isOnTipsController && currentTipId == tip.Id.ToString()
+                    Text = ResolveTitle(tip.Id, tip.Title),
+                    Href = $"/Tips/Detail/{tip.Id}",
+                    IsActive = isOnTipsController && currentTipId == tip.Id.ToString()
                 });
             }
 
@@ -413,14 +413,14 @@ public class ViewModelArgsInjector(
                 var (catKey, catIcon) = tipCategoryMeta.TryGetValue(cat, out var meta) ? meta : (cat, "folder");
                 tipsItems.Add(new CascadedSideBarItem
                 {
-                    UniqueId   = $"tips-{cat}",
+                    UniqueId = $"tips-{cat}",
                     LucideIcon = catIcon,
-                    Text       = localizer[catKey],
-                    IsActive   = isOnTipsController && catTips.Any(t => currentTipId == t.Id.ToString()),
-                    Links      = catTips.Select(t => new CascadedLink
+                    Text = localizer[catKey],
+                    IsActive = isOnTipsController && catTips.Any(t => currentTipId == t.Id.ToString()),
+                    Links = catTips.Select(t => new CascadedLink
                     {
-                        Text     = ResolveTitle(t.Id, t.Title),
-                        Href     = $"/Tips/Detail/{t.Id}",
+                        Text = ResolveTitle(t.Id, t.Title),
+                        Href = $"/Tips/Detail/{t.Id}",
                         IsActive = isOnTipsController && currentTipId == t.Id.ToString()
                     }).ToList()
                 });
@@ -428,7 +428,7 @@ public class ViewModelArgsInjector(
 
             var tipsGroup = new NavGroup
             {
-                Name  = localizer["Cooking Tips"],
+                Name = localizer["Cooking Tips"],
                 Items = tipsItems
             };
 

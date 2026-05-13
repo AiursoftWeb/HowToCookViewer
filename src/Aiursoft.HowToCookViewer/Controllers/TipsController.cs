@@ -28,7 +28,7 @@ public class TipsController(
             .AsNoTracking()
             .FirstOrDefaultAsync(lt => lt.TipId == id && lt.Culture == currentCulture);
 
-        var displayTitle   = !string.IsNullOrWhiteSpace(localized?.LocalizedTitle)   ? localized.LocalizedTitle   : tip.Title;
+        var displayTitle = !string.IsNullOrWhiteSpace(localized?.LocalizedTitle) ? localized.LocalizedTitle : tip.Title;
         var contentToRender = !string.IsNullOrWhiteSpace(localized?.LocalizedContent) ? localized.LocalizedContent : tip.Content;
 
         var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();

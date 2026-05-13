@@ -27,16 +27,16 @@ public class RecipesController(
         new(StringComparer.OrdinalIgnoreCase)
         {
             ["vegetable_dish"] = "Vegetable Dishes",
-            ["meat_dish"]      = "Meat Dishes",
-            ["aquatic"]        = "Aquatic",
-            ["breakfast"]      = "Breakfast",
-            ["staple"]         = "Staple Food",
-            ["soup"]           = "Soups",
-            ["drink"]          = "Drinks",
-            ["dessert"]        = "Desserts",
-            ["condiment"]      = "Condiments",
-            ["semi-finished"]  = "Semi-finished",
-            ["template"]       = "Templates",
+            ["meat_dish"] = "Meat Dishes",
+            ["aquatic"] = "Aquatic",
+            ["breakfast"] = "Breakfast",
+            ["staple"] = "Staple Food",
+            ["soup"] = "Soups",
+            ["drink"] = "Drinks",
+            ["dessert"] = "Desserts",
+            ["condiment"] = "Condiments",
+            ["semi-finished"] = "Semi-finished",
+            ["template"] = "Templates",
         };
 
     [ExcludeFromCodeCoverage]
@@ -137,13 +137,13 @@ public class RecipesController(
 
         IOrderedQueryable<Recipe> ordered = sortBy switch
         {
-            "likes_desc"     => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
-            "likes_asc"      => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
-            "comments_desc"  => query.OrderByDescending(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
-            "comments_asc"   => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
+            "likes_desc" => query.OrderByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
+            "likes_asc" => query.OrderBy(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id)),
+            "comments_desc" => query.OrderByDescending(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
+            "comments_asc" => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
             "favorites_desc" => query.OrderByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
-            "favorites_asc"  => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
-            _                => query.OrderByDescending(r => r.Images.Any())
+            "favorites_asc" => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
+            _ => query.OrderByDescending(r => r.Images.Any())
         };
 
         if (string.IsNullOrEmpty(sortBy))
@@ -164,12 +164,12 @@ public class RecipesController(
     private string GetDisplayName(string? category, int? difficulty, string? sortBy) =>
         sortBy switch
         {
-            "likes_desc"     => localizer["Most Liked"].Value,
-            "likes_asc"      => localizer["Least Liked"].Value,
-            "comments_desc"  => localizer["Most Commented"].Value,
-            "comments_asc"   => localizer["Least Commented"].Value,
+            "likes_desc" => localizer["Most Liked"].Value,
+            "likes_asc" => localizer["Least Liked"].Value,
+            "comments_desc" => localizer["Most Commented"].Value,
+            "comments_asc" => localizer["Least Commented"].Value,
             "favorites_desc" => localizer["Most Favorited"].Value,
-            "favorites_asc"  => localizer["Least Favorited"].Value,
+            "favorites_asc" => localizer["Least Favorited"].Value,
             _ => difficulty.HasValue
                 ? localizer["Difficulty {0} Stars", difficulty.Value].Value
                 : string.IsNullOrEmpty(category)
@@ -273,18 +273,18 @@ public class RecipesController(
     /// </summary>
     private string BuildFullMarkdown(Recipe recipe, LocalizedRecipe? localized = null)
     {
-        var name        = (localized?.LocalizedName        is { Length: > 0 } n ? n : null) ?? recipe.Name;
+        var name = (localized?.LocalizedName is { Length: > 0 } n ? n : null) ?? recipe.Name;
         var description = (localized?.LocalizedDescription is { Length: > 0 } d ? d : null) ?? recipe.Description;
         var ingredients = (localized?.LocalizedIngredients is { Length: > 0 } i ? i : null) ?? recipe.Ingredients;
         var calculation = (localized?.LocalizedCalculation is { Length: > 0 } c ? c : null) ?? recipe.Calculation;
-        var steps       = (localized?.LocalizedSteps       is { Length: > 0 } s ? s : null) ?? recipe.Steps;
-        var notes       = (localized?.LocalizedNotes       is { Length: > 0 } no ? no : null) ?? recipe.Notes;
+        var steps = (localized?.LocalizedSteps is { Length: > 0 } s ? s : null) ?? recipe.Steps;
+        var notes = (localized?.LocalizedNotes is { Length: > 0 } no ? no : null) ?? recipe.Notes;
 
         // Localized section headings
         var hIngredients = $"## {localizer["Ingredients and Tools"].Value}";
         var hCalculation = $"## {localizer["Calculation"].Value}";
-        var hSteps       = $"## {localizer["Steps"].Value}";
-        var hNotes       = $"## {localizer["Additional Notes"].Value}";
+        var hSteps = $"## {localizer["Steps"].Value}";
+        var hNotes = $"## {localizer["Additional Notes"].Value}";
 
         var parts = new List<string> { $"# {name}" };
 

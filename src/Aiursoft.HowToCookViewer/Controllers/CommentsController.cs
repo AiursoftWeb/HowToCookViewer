@@ -36,7 +36,7 @@ public class CommentsController(
         }
 
         var userId = userManager.GetUserId(User)!;
-        
+
         // Rate limiting
         var maxCommentsPerDay = await globalSettingsService.GetIntSettingAsync(SettingsMap.MaxCommentsPerDayPerUser);
         var today = DateTime.UtcNow.Date;

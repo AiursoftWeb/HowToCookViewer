@@ -17,7 +17,7 @@ public class RecipeContributorService(
     {
         var repoPath = Path.Combine(storageRootPathProvider.GetStorageRootPath(), "repo");
         var repoUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoUrl);
-        
+
         // Convert clone URL to web URL: strip .git suffix
         var repoWebUrl = repoUrl.EndsWith(".git", StringComparison.OrdinalIgnoreCase)
             ? repoUrl[..^4]
@@ -110,7 +110,7 @@ public class RecipeContributorService(
             }
             return $"https://github.com/{username}";
         }
-        
+
         // Fallback: search by email on GitHub
         // Or link to the author's commits in this repo
         return $"{repoWebUrl}/commits?author={email}";

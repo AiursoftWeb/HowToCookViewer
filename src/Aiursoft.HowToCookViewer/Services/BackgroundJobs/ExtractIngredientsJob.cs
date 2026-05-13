@@ -66,10 +66,10 @@ public class ExtractIngredientsJob(
 
             lastId = pendingRecipes.Max(r => r.Id);
         }
-        }
+    }
 
-        private async Task ExtractForRecipeAsync(Recipe recipe, string instance, string model)
-        {
+    private async Task ExtractForRecipeAsync(Recipe recipe, string instance, string model)
+    {
         if (string.IsNullOrWhiteSpace(recipe.Ingredients))
         {
             logger.LogInformation("ExtractIngredientsJob: Recipe '{Name}' has no ingredients content. Skipping.", recipe.Name);
@@ -101,7 +101,7 @@ public class ExtractIngredientsJob(
         if (json.EndsWith("```")) json = json[..^3].Trim();
 
         string[]? ingredients;
-        try 
+        try
         {
             ingredients = JsonConvert.DeserializeObject<string[]>(json);
         }

@@ -27,7 +27,7 @@ public class SettingViewModel
 
     [Display(Name = "Choice options")]
     public Dictionary<string, string>? ChoiceOptions { get; set; }
-    
+
     // File upload settings (for SettingType.File)
     [Display(Name = "Subfolder")]
     public string? Subfolder { get; set; }

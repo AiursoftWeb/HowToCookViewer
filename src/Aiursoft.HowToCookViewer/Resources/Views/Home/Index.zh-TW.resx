@@ -307,7 +307,7 @@
     <value>每道食譜都會自動透過 AI 翻譯成 27 種語言，讓您能以母語進行烹飪。</value>
   </data>
   <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>探索 {0} 道免費食譜</value>
+    <value>探索 {0} 道開源食譜</value>
   </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>探索數以千計的免費、社群貢獻食譜</value>

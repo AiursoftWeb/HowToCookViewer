@@ -9,7 +9,7 @@ using Microsoft.Extensions.Caching.Memory;
 namespace Aiursoft.HowToCookViewer.Services;
 
 public class GlobalSettingsService(
-    TemplateDbContext dbContext, 
+    TemplateDbContext dbContext,
     IConfiguration configuration,
     StorageService storageService,
     IMemoryCache cache) : IScopedDependency

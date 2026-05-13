@@ -109,7 +109,7 @@ public static class AuthenticationExtensions
     private static async Task HandleRemoteFailure(RemoteFailureContext context)
     {
         var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Startup>>();
-        
+
         // Check if the exception is an OIDC protocol exception
         if (context.Failure is OpenIdConnectProtocolException)
         {

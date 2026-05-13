@@ -11,7 +11,7 @@ public class GlobalSettingDefinition
     public required SettingType Type { get; init; }
     public required string DefaultValue { get; init; }
     public Dictionary<string, string>? ChoiceOptions { get; init; }
-    
+
     // File upload settings (for SettingType.File)
     public string? Subfolder { get; init; }
     public string? AllowedExtensions { get; init; }

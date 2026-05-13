@@ -5,7 +5,7 @@ using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.HowToCookViewer.Models.UsersViewModels;
 
-public class CreateViewModel: UiStackLayoutViewModel
+public class CreateViewModel : UiStackLayoutViewModel
 {
     public CreateViewModel()
     {

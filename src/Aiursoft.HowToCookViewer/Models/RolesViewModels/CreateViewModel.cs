@@ -3,7 +3,7 @@ using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.HowToCookViewer.Models.RolesViewModels;
 
-public class CreateViewModel: UiStackLayoutViewModel
+public class CreateViewModel : UiStackLayoutViewModel
 {
     public CreateViewModel()
     {

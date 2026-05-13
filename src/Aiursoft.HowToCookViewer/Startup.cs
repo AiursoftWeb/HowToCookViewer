@@ -32,7 +32,7 @@ public class Startup : IWebStartup
     {
         // AppSettings.
         services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
-        
+
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
         services.AddSwitchableRelationalDatabase(
@@ -82,38 +82,38 @@ public class Startup : IWebStartup
         // Scheduled tasks (attach a schedule to any registered background job)
         services.RegisterScheduledTask(
             registration: orphanAvatarCleanupJob,
-            period:     TimeSpan.FromHours(6),
+            period: TimeSpan.FromHours(6),
             startDelay: TimeSpan.FromMinutes(5));
 
         services.RegisterScheduledTask(
             registration: syncHowToCookRepoJob,
-            period:     TimeSpan.FromHours(4),
+            period: TimeSpan.FromHours(4),
             startDelay: TimeSpan.FromMinutes(1));
 
         services.RegisterScheduledTask(
             registration: indexRecipesJob,
-            period:     TimeSpan.FromHours(4),
+            period: TimeSpan.FromHours(4),
             startDelay: TimeSpan.FromMinutes(20));
 
         // Localize recipes after indexing (start after 30 min, then every 30 min)
         services.RegisterScheduledTask(
             registration: localizeRecipesJob,
-            period:     TimeSpan.FromMinutes(30),
+            period: TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(30));
 
         services.RegisterScheduledTask(
             registration: indexTipsJob,
-            period:     TimeSpan.FromHours(4),
+            period: TimeSpan.FromHours(4),
             startDelay: TimeSpan.FromMinutes(22));
 
         services.RegisterScheduledTask(
             registration: localizeTipsJob,
-            period:     TimeSpan.FromMinutes(30),
+            period: TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(35));
 
         services.RegisterScheduledTask(
             registration: extractIngredientsJob,
-            period:     TimeSpan.FromMinutes(30),
+            period: TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(40));
 
         // Controllers and localization

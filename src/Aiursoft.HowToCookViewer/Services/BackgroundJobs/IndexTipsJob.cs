@@ -90,7 +90,7 @@ public class IndexTipsJob(
             .IgnoreQueryFilters()
             .Where(t => !t.IsDeleted)
             .ToListAsync();
-        
+
         var deletedCount = 0;
         foreach (var t in allDbTips)
         {

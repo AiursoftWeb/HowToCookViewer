@@ -3,7 +3,7 @@ using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.HowToCookViewer.Models.AccountViewModels;
 
-public class RegisterViewModel: UiStackLayoutViewModel
+public class RegisterViewModel : UiStackLayoutViewModel
 {
     public RegisterViewModel()
     {

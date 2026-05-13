@@ -14,7 +14,7 @@ public class ThemeController : ControllerBase
 
     [Route("api/switch-theme")]
     [HttpPost]
-    public IActionResult SwitchTheme([FromBody]SwitchThemeViewModel model)
+    public IActionResult SwitchTheme([FromBody] SwitchThemeViewModel model)
     {
         var preferDark = model.Theme == "dark";
         Response.Cookies.Append(

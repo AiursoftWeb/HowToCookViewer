@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.HowToCookViewer.Models.RolesViewModels;
 
-public class EditViewModel: UiStackLayoutViewModel
+public class EditViewModel : UiStackLayoutViewModel
 {
     public EditViewModel()
     {
