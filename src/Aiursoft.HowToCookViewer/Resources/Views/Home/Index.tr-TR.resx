@@ -639,7 +639,7 @@
   <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
     <value>Malzeme, yemek adı veya kategoriye göre arayarak bugün tam olarak ne pişirmek istediğinizi bulun.</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes placeholder" xml:space="preserve">
     <value>Tarif ara (örn. domates, yumurta, tofu…)</value>
   </data>
   <data name="Self Host" xml:space="preserve">

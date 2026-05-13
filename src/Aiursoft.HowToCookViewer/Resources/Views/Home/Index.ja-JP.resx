@@ -639,8 +639,8 @@
   <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
     <value>材料、料理名、またはカテゴリで検索して、今日作りたい料理を完璧に見つけましょう。</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
-    <value>レシピを検索する（例：トマト、卵、豆腐…）</value>
+  <data name="Search recipes placeholder" xml:space="preserve">
+    <value>レシピを検索（例：トマト、卵、豆腐…）</value>
   </data>
   <data name="Self Host" xml:space="preserve">
     <value>セルフホスト</value>

@@ -639,7 +639,7 @@
   <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
     <value>Tìm kiếm theo nguyên liệu, tên món ăn hoặc danh mục để tìm chính xác những gì bạn muốn nấu hôm nay.</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes placeholder" xml:space="preserve">
     <value>Tìm kiếm công thức nấu ăn (ví dụ: cà chua, trứng, đậu phụ…)</value>
   </data>
   <data name="Self Host" xml:space="preserve">

@@ -189,8 +189,8 @@
   <data name="Search Recipes" xml:space="preserve">
     <value>搜尋食譜</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
-    <value>搜尋食譜（例如：番茄、雞蛋、豆腐…）</value>
+  <data name="Search recipes placeholder" xml:space="preserve">
+    <value>搜尋食譜（如 番茄、雞蛋、豆腐…）</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智慧型設定覆寫</value>

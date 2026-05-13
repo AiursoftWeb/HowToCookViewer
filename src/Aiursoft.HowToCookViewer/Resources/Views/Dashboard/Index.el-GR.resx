@@ -180,7 +180,7 @@
   <data name="Search Recipes" xml:space="preserve">
     <value>Αναζήτηση Συνταγών</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes placeholder" xml:space="preserve">
     <value>Αναζήτηση συνταγών (π.χ. ντομάτα, αυγό, τόφου…)</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">

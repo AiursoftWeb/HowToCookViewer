@@ -639,7 +639,7 @@
   <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
     <value>Cerca per ingrediente, nome del piatto o categoria per trovare esattamente ciò che vuoi cucinare oggi.</value>
   </data>
-  <data name="Search recipes (e.g. 西红柿, 鸡蛋, 豆腐…)" xml:space="preserve">
+  <data name="Search recipes placeholder" xml:space="preserve">
     <value>Cerca ricette (es. pomodori, uova, tofu…)</value>
   </data>
   <data name="Self Host" xml:space="preserve">
