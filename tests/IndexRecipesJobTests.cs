@@ -14,12 +14,16 @@ namespace Aiursoft.HowToCookViewer.Tests;
 public class IndexRecipesJobTests
 {
     private string _tempPath = null!;
+    private string _mockRepoPath = null!;
 
     [TestInitialize]
     public void Initialize()
     {
         _tempPath = Path.Combine(Path.GetTempPath(), "IndexJobTest_" + Guid.NewGuid());
         Directory.CreateDirectory(_tempPath);
+        
+        _mockRepoPath = Path.Combine(Path.GetTempPath(), "MockRepo_" + Guid.NewGuid());
+        CreateMockGitRepo(_mockRepoPath);
     }
 
     [TestCleanup]
@@ -27,6 +31,44 @@ public class IndexRecipesJobTests
     {
         if (Directory.Exists(_tempPath))
             Directory.Delete(_tempPath, recursive: true);
+        if (Directory.Exists(_mockRepoPath))
+            Directory.Delete(_mockRepoPath, recursive: true);
+    }
+
+    private void CreateMockGitRepo(string path)
+    {
+        Directory.CreateDirectory(path);
+        var dishesPath = Path.Combine(path, "dishes", "vegetable_dish");
+        Directory.CreateDirectory(dishesPath);
+        File.WriteAllText(Path.Combine(dishesPath, "tomato.md"), "# Tomato\n## Ingredients\n- Tomato\n## Steps\n1. Cook");
+
+        RunGitCommand("init -b main", path);
+        RunGitCommand("config user.name TestUser", path);
+        RunGitCommand("config user.email test@test.com", path);
+        RunGitCommand("add .", path);
+        RunGitCommand("commit -m \"Initial commit\"", path);
+    }
+
+    private void RunGitCommand(string args, string path)
+    {
+        var p = new System.Diagnostics.Process
+        {
+            StartInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "git",
+                Arguments = args,
+                WorkingDirectory = path,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false
+            }
+        };
+        p.Start();
+        p.WaitForExit();
+        if (p.ExitCode != 0)
+        {
+            throw new Exception($"git {args} failed: {p.StandardError.ReadToEnd()}");
+        }
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -45,7 +87,7 @@ public class IndexRecipesJobTests
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
                 { "Storage:Path", _tempPath },
-                { $"GlobalSettings:{SettingsMap.HowToCookRepoUrl}", "https://github.com/Anduin2017/HowToCook.git" }
+                { $"GlobalSettings:{SettingsMap.HowToCookRepoUrl}", _mockRepoPath }
             })
             .Build();
 
