@@ -233,6 +233,10 @@
   </data>
 
 
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>基于AI和向量数据库的搜索</value>
+  </data>
+
   <data name="Page navigation" xml:space="preserve">
     <value>分页导航</value>
   </data>

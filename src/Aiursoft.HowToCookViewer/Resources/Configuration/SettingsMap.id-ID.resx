@@ -103,4 +103,11 @@
     <value>Titik akhir penyelesaian obrolan yang kompatibel dengan OpenAI untuk terjemahan resep, mis. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>URL cadangan repositori HowToCook</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>URL repositori Git cadangan yang digunakan ketika URL utama mengalami timeout.</value>
+  </data>
+
 </root>

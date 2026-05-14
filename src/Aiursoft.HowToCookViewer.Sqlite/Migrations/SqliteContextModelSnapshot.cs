@@ -155,6 +155,9 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.Property<int>("Difficulty")
                         .HasColumnType("INTEGER");
 
+                    b.Property<byte[]>("Embedding")
+                        .HasColumnType("BLOB");
+
                     b.Property<DateTime>("FileLastModified")
                         .HasColumnType("TEXT");
 
@@ -173,6 +176,9 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("LastEmbeddedAt")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("LastIngredientExtractedAt")
                         .HasColumnType("TEXT");

@@ -25,13 +25,27 @@ public class SyncHowToCookRepoJob(
     {
         var repoPath = Path.Combine(storageRootPathProvider.GetStorageRootPath(), "repo");
         var repoUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoUrl);
-        logger.LogInformation(
-            "SyncHowToCookRepoJob: resetting repo at '{RepoPath}' from '{RepoUrl}'.",
-            repoPath, repoUrl);
+        var backupUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoBackupUrl);
 
         Directory.CreateDirectory(repoPath);
-        await workspaceManager.ResetRepo(repoPath, branch: null, endPoint: repoUrl, cloneMode: CloneMode.Full);
 
-        logger.LogInformation("SyncHowToCookRepoJob: repo is up to date.");
+        try
+        {
+            logger.LogInformation(
+                "SyncHowToCookRepoJob: cloning from primary URL '{RepoUrl}'.", repoUrl);
+            await workspaceManager.ResetRepo(repoPath, branch: null, endPoint: repoUrl, cloneMode: CloneMode.Full);
+            logger.LogInformation("SyncHowToCookRepoJob: repo is up to date.");
+        }
+        catch (TimeoutException)
+        {
+            if (string.IsNullOrWhiteSpace(backupUrl) || backupUrl == repoUrl)
+                throw;
+
+            logger.LogWarning(
+                "SyncHowToCookRepoJob: primary URL '{RepoUrl}' timed out. Falling back to backup URL '{BackupUrl}'.",
+                repoUrl, backupUrl);
+            await workspaceManager.ResetRepo(repoPath, branch: null, endPoint: backupUrl, cloneMode: CloneMode.Full);
+            logger.LogInformation("SyncHowToCookRepoJob: repo is up to date (via backup URL).");
+        }
     }
 }

@@ -42,11 +42,20 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>用于翻译菜谱的逗号分隔的 BCP-47 语言代码，例如 en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>在首页显示横幅，感谢 Voxihost 对服务器的赞助。</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>示例选项</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>占位数字</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>嵌入模型</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>启用基于嵌入模型的菜谱语义向量搜索。需要配置 Ollama 端点和嵌入模型。</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook 仓库地址</value>
@@ -75,6 +84,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>项目名称</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>显示 Voxihost 广告</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>用于食谱翻译的 AI 模型名称，例如 qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +95,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>页脚中显示的品牌名称。</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>用于向量搜索的嵌入模型名称，例如 bge-m3。需要配置 Ollama 端点。</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>用于同步 HowToCook 菜谱的 Git 仓库 URL。</value>
@@ -101,6 +116,16 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>用于菜谱翻译的 OpenAI 兼容聊天补全端点，例如 https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>使用 AI 搜索</value>
+  </data>
+
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook 备用仓库地址</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>当主仓库地址连接超时时使用的备用 Git 仓库 URL。</value>
   </data>
 
 </root>

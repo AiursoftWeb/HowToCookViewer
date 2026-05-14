@@ -18,30 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Invalid login attempt." xml:space="preserve">
+      <data name="Error from external provider: {0}" xml:space="preserve">
+    <value>Error from external provider: {0}</value>
+  </data>
+  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
+    <value>Failed to associate external login. The user may not exist locally.</value>
+  </data>
+  <data name="Invalid login attempt." xml:space="preserve">
     <value>잘못된 로그인 시도입니다.</value>
   </data>
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>잘못된 로그인 시도입니다. 사용자 이름과 비밀번호를 확인해 주세요.</value>
   </data>
-  <data name="The username already exists. Please try another username." xml:space="preserve">
-    <value>이미 사용 중인 사용자 이름입니다. 다른 사용자 이름을 사용해 주세요.</value>
-  </data>
-  <data name="This account has been locked out, please try again later." xml:space="preserve">
-    <value>이 계정이 잠겼습니다. 나중에 다시 시도해 주세요.</value>
-  </data>
-
   <data name="Local login is disabled when OIDC authentication is enabled." xml:space="preserve">
     <value>Local login is disabled when OIDC authentication is enabled.</value>
   </data>
   <data name="Registration is not allowed in the current configuration." xml:space="preserve">
     <value>Registration is not allowed in the current configuration.</value>
   </data>
-  <data name="Error from external provider: {0}" xml:space="preserve">
-    <value>Error from external provider: {0}</value>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>이미 사용 중인 사용자 이름입니다. 다른 사용자 이름을 사용해 주세요.</value>
   </data>
-  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
-    <value>Failed to associate external login. The user may not exist locally.</value>
+  <data name="This account has been locked out, please try again later." xml:space="preserve">
+    <value>이 계정이 잠겼습니다. 나중에 다시 시도해 주세요.</value>
   </data>
 
 </root>

@@ -18,7 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Attempted to access a restricted path." xml:space="preserve">
+      <data name="Attempted to access a restricted path." xml:space="preserve">
     <value>試圖訪問受限路徑。</value>
   </data>
   <data name="Invalid file name!" xml:space="preserve">

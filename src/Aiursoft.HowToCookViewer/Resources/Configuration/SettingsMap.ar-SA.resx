@@ -42,11 +42,20 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>رموز لغة BCP-47 مفصولة بفاصلة لترجمة الوصفات، مثل en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>عرض لافتة ترويجية على الصفحة الرئيسية تشكر Voxihost على رعاية الخادم.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>اختيار تجريبي</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>رقم افتراضي</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>نموذج التضمين</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>تفعيل البحث المتجهي الدلالي للوصفات باستخدام نموذج التضمين. يتطلب تكوين نقطة نهاية Ollama ونموذج التضمين.</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>رابط مستودع HowToCook</value>
@@ -75,6 +84,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>اسم المشروع</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>إظهار إعلان Voxihost</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>اسم نموذج الذكاء الاصطناعي المستخدم لترجمة الوصفات، على سبيل المثال: qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +95,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>اسم العلامة التجارية المُعرض في التذييل.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>اسم نموذج التضمين لبحث المتجهات، على سبيل المثال bge-m3. يتطلب تكوين نقطة نهاية Ollama.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>عنوان المستودع الخاص بـ Git لمزامنة وصفات HowToCook منه.</value>
@@ -101,6 +116,9 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>نقطة نهاية إكمال المحادثات المتوافقة مع OpenAI لترجمة الوصفات، على سبيل المثال: https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>استخدام بحث الذكاء الاصطناعي</value>
   </data>
 
 </root>

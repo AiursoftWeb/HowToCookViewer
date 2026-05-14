@@ -42,11 +42,20 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Mã ngôn ngữ BCP-47 phân tách bằng dấu phẩy để dịch các công thức nấu ăn, ví dụ: en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>Hiển thị biểu ngữ quảng cáo trên trang chủ để cảm ơn Voxihost đã tài trợ cho máy chủ.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Lựa chọn giả</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>Số giả mạo</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Mô hình Nhúng</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>Bật tìm kiếm vector ngữ nghĩa cho công thức nấu ăn bằng mô hình nhúng. Yêu cầu cấu hình điểm cuối Ollama và mô hình nhúng.</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>URL Kho lưu trữ HowToCook</value>
@@ -75,6 +84,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>Tên dự án</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Hiển thị quảng cáo Voxihost</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tên mô hình AI để sử dụng cho việc dịch công thức, ví dụ: qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +95,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Tên thương hiệu được hiển thị trong chân trang.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Tên mô hình nhúng cho tìm kiếm vector, ví dụ: bge-m3. Cần cấu hình điểm cuối Ollama.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL kho Git để đồng bộ hóa các công thức nấu ăn từ HowToCook.</value>
@@ -101,6 +116,16 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Điểm cuối hoàn thành cuộc trò chuyện tương thích OpenAI để dịch công thức nấu ăn, ví dụ: https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>Sử dụng Tìm kiếm AI</value>
+  </data>
+
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>URL dự phòng của kho lưu trữ HowToCook</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>URL kho lưu trữ Git dự phòng được sử dụng khi URL chính hết thời gian chờ.</value>
   </data>
 
 </root>

@@ -110,4 +110,18 @@ public static class ProgramExtends
 
         return host;
     }
+
+    [ExcludeFromCodeCoverage]
+    public static async Task<IHost> WarmUpEmbeddingCacheAsync(this IHost host)
+    {
+        using var scope = host.Services.CreateScope();
+        var services = scope.ServiceProvider;
+        var db = services.GetRequiredService<TemplateDbContext>();
+        var cache = services.GetRequiredService<RecipeEmbeddingCache>();
+        var logger = services.GetRequiredService<ILogger<Program>>();
+
+        await cache.LoadAsync(db);
+        logger.LogInformation("Embedding cache warmed up. {Count} vectors loaded.", cache.Count);
+        return host;
+    }
 }

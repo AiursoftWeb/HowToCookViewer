@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="An error has occurred." xml:space="preserve">
+      <data name="Adjusting nickname is disabled by administrator." xml:space="preserve">
+    <value>Adjusting nickname is disabled by administrator.</value>
+  </data>
+  <data name="An error has occurred." xml:space="preserve">
     <value>오류가 발생했습니다.</value>
+  </data>
+  <data name="Local password is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>Local password is disabled when OIDC authentication is enabled.</value>
   </data>
   <data name="The file is not a valid image." xml:space="preserve">
     <value>유효한 이미지 파일이 아닙니다.</value>
@@ -32,13 +38,6 @@
   </data>
   <data name="Your profile has been saved." xml:space="preserve">
     <value>프로필이 저장되었습니다.</value>
-  </data>
-
-  <data name="Local password is disabled when OIDC authentication is enabled." xml:space="preserve">
-    <value>Local password is disabled when OIDC authentication is enabled.</value>
-  </data>
-  <data name="Adjusting nickname is disabled by administrator." xml:space="preserve">
-    <value>Adjusting nickname is disabled by administrator.</value>
   </data>
 
 </root>

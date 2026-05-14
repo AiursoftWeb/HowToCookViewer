@@ -62,6 +62,8 @@ public class Startup : IWebStartup
         services.AddScoped<RecipeLocalizationService>();
         services.AddScoped<ChatClient>();
         services.AddScoped<MarkdownShredder>();
+        services.AddSingleton<RecipeEmbeddingCache>();
+        services.AddScoped<RecipeVectorSearchService>();
         services.AddGitRunner();
 
         // Background job infrastructure
@@ -77,6 +79,8 @@ public class Startup : IWebStartup
         var indexTipsJob = services.RegisterBackgroundJob<IndexTipsJob>();
         var localizeTipsJob = services.RegisterBackgroundJob<LocalizeTipsJob>();
         var extractIngredientsJob = services.RegisterBackgroundJob<ExtractIngredientsJob>();
+        var generateEmbeddingsJob = services.RegisterBackgroundJob<GenerateEmbeddingsJob>();
+        var refreshEmbeddingCacheJob = services.RegisterBackgroundJob<RefreshEmbeddingCacheJob>();
         services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
@@ -115,6 +119,18 @@ public class Startup : IWebStartup
             registration: extractIngredientsJob,
             period: TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(40));
+
+        // Generate embeddings every 30 min (starts after 50 min, after ingredients extraction)
+        services.RegisterScheduledTask(
+            registration: generateEmbeddingsJob,
+            period: TimeSpan.FromMinutes(30),
+            startDelay: TimeSpan.FromMinutes(50));
+
+        // Refresh embedding cache every 8 hours (starts after 55 min)
+        services.RegisterScheduledTask(
+            registration: refreshEmbeddingCacheJob,
+            period: TimeSpan.FromHours(8),
+            startDelay: TimeSpan.FromMinutes(55));
 
         // Controllers and localization
         services.AddControllersWithViews()

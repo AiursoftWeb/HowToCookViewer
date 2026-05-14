@@ -42,11 +42,26 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Kommaseparerade BCP-47-språkkoder för att översera recept till, t.ex. en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>Visa en reklambanner på startsidan som tackar Voxihost för att de sponsrar servern.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Dummyval</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>Dummynummer</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Inbäddningsmodell</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>Aktivera semantisk vektorsökning för recept med hjälp av en inbäddningsmodell. Kräver att Ollama-slutpunkt och inbäddningsmodell är konfigurerade.</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Git-reserv-URL som används när den primära URL:en får timeout.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook Repo Backup-URL</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook-arkivets URL</value>
@@ -75,6 +90,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>Projektnamn</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Visa Voxihost-annons</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>AI-modellnamnet som ska användas för receptöversättning, t.ex. qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +101,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Det varumärke som visas i sidfoten.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Namnet på inbäddningsmodellen för vektorsökning, t.ex. bge-m3. Kräver att Ollama-slutpunkt är konfigurerad.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL:en till Git-lagret att synka HowToCook-recept från.</value>
@@ -101,6 +122,9 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Slutpunkten för OpenAI-kompatibla chattkompletteringar för receptöversättning, t.ex. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>Använd AI-sökning</value>
   </data>
 
 </root>

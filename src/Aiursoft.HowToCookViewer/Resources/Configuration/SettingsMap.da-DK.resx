@@ -103,4 +103,11 @@
     <value>Endpointet til OpenAI-kompatible chat-afslutninger til opskriftsoversættelse, f.eks. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook Repo Backup-URL</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Git-fallback-URL, der bruges, når den primære URL får timeout.</value>
+  </data>
+
 </root>

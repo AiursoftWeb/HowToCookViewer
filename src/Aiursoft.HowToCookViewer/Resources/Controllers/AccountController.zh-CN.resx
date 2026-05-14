@@ -18,30 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Invalid login attempt." xml:space="preserve">
+      <data name="Error from external provider: {0}" xml:space="preserve">
+    <value>外部提供程序错误：{0}</value>
+  </data>
+  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
+    <value>关联外部登录失败。该用户可能不存在于本地。</value>
+  </data>
+  <data name="Invalid login attempt." xml:space="preserve">
     <value>登录尝试无效。</value>
   </data>
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>登录尝试无效。请检查用户名和密码。</value>
   </data>
-  <data name="The username already exists. Please try another username." xml:space="preserve">
-    <value>该用户名已存在，请尝试其他用户名。</value>
-  </data>
-  <data name="This account has been locked out, please try again later." xml:space="preserve">
-    <value>此账户已被锁定，请稍后再试。</value>
-  </data>
-
   <data name="Local login is disabled when OIDC authentication is enabled." xml:space="preserve">
     <value>启用 OIDC 认证时，本地登录已禁用。</value>
   </data>
   <data name="Registration is not allowed in the current configuration." xml:space="preserve">
     <value>当前配置不允许注册。</value>
   </data>
-  <data name="Error from external provider: {0}" xml:space="preserve">
-    <value>外部提供程序错误：{0}</value>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>该用户名已存在，请尝试其他用户名。</value>
   </data>
-  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
-    <value>关联外部登录失败。该用户可能不存在于本地。</value>
+  <data name="This account has been locked out, please try again later." xml:space="preserve">
+    <value>此账户已被锁定，请稍后再试。</value>
   </data>
 
 </root>

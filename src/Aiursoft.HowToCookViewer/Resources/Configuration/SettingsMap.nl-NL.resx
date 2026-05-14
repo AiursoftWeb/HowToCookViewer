@@ -42,11 +42,26 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Komma-gescheiden BCP-47-taalcodes om recepten in te vertalen, bijv. en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>Toon een promotiebanner op de startpagina met dank aan Voxihost voor het sponsoren van de server.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Standaard Keuze</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>Standaardnummer</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Embeddingmodel</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>Schakel semantische vectorzoekopdracht voor recepten in met behulp van een inbeddingsmodel. Vereist dat het Ollama-eindpunt en het inbeddingsmodel zijn geconfigureerd.</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Fallback Git-repository-URL die wordt gebruikt wanneer de primaire URL een time-out krijgt.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook Repo Backup-URL</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook Repo-URL</value>
@@ -75,6 +90,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>Projectnaam</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Voxihost-advertentie tonen</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>De naam van het AI-model dat moet worden gebruikt voor receptvertaling, bijv. qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +101,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>De merknaam die wordt weergegeven in de voettekst.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>De naam van het embedding-model voor vectorzoekopdrachten, bijv. bge-m3. Vereist dat het Ollama-eindpunt is geconfigureerd.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>De Git-repository-URL om HowToCook-recepten van te synchroniseren.</value>
@@ -101,6 +122,9 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Het OpenAI-compatibele endpoint voor chat-completies voor receptvertaling, bijv. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>AI-zoeken gebruiken</value>
   </data>
 
 </root>

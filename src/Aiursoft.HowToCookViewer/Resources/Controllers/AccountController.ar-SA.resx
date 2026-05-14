@@ -18,27 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
+      <data name="Error from external provider: {0}" xml:space="preserve">
+    <value>Error from external provider: {0}</value>
+  </data>
+  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
+    <value>Failed to associate external login. The user may not exist locally.</value>
+  </data>
+  <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>محاولة تسجيل دخول غير صالحة. يرجى التحقق من اسم المستخدم وكلمة المرور.</value>
   </data>
-  <data name="The username already exists. Please try another username." xml:space="preserve">
-    <value>اسم المستخدم موجود بالفعل. يرجى تجربة اسم مستخدم آخر.</value>
-  </data>
-  <data name="This account has been locked out, please try again later." xml:space="preserve">
-    <value>تم حظر هذا الحساب، يرجى المحاولة مرة أخرى لاحقًا.</value>
-  </data>
-
   <data name="Local login is disabled when OIDC authentication is enabled." xml:space="preserve">
     <value>Local login is disabled when OIDC authentication is enabled.</value>
   </data>
   <data name="Registration is not allowed in the current configuration." xml:space="preserve">
     <value>Registration is not allowed in the current configuration.</value>
   </data>
-  <data name="Error from external provider: {0}" xml:space="preserve">
-    <value>Error from external provider: {0}</value>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>اسم المستخدم موجود بالفعل. يرجى تجربة اسم مستخدم آخر.</value>
   </data>
-  <data name="Failed to associate external login. The user may not exist locally." xml:space="preserve">
-    <value>Failed to associate external login. The user may not exist locally.</value>
+  <data name="This account has been locked out, please try again later." xml:space="preserve">
+    <value>تم حظر هذا الحساب، يرجى المحاولة مرة أخرى لاحقًا.</value>
   </data>
 
 </root>

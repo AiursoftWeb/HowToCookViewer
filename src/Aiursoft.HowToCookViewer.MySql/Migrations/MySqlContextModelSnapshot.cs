@@ -168,6 +168,9 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.Property<int>("Difficulty")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("Embedding")
+                        .HasColumnType("longblob");
+
                     b.Property<DateTime>("FileLastModified")
                         .HasColumnType("datetime(6)");
 
@@ -186,6 +189,9 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("LastEmbeddedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("LastIngredientExtractedAt")
                         .HasColumnType("datetime(6)");

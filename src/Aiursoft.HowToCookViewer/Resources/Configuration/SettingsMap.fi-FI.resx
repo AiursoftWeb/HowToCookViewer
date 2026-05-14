@@ -103,4 +103,11 @@
     <value>Avain OpenAI-yhteensopivaksi reseptien kääntämiseen, esim. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook-varavaraston URL</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Git-varavaraston URL, jota käytetään, kun ensisijainen URL aikakatkaistaan.</value>
+  </data>
+
 </root>

@@ -11,9 +11,12 @@ public class SettingsMap
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
     public const string Icp = "Icp";
     public const string HowToCookRepoUrl = "HowToCookRepoUrl";
+    public const string HowToCookRepoBackupUrl = "HowToCookRepoBackupUrl";
     public const string OllamaInstance = "OllamaInstance";
     public const string OllamaModel = "OllamaModel";
     public const string OllamaToken = "OllamaToken";
+    public const string UseAiSearch = "UseAiSearch";
+    public const string EmbeddingModel = "EmbeddingModel";
     public const string LocalizationLanguages = "LocalizationLanguages";
     public const string ShowVoxihostAd = "ShowVoxihostAd";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
@@ -88,6 +91,14 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
+            Key = HowToCookRepoBackupUrl,
+            Name = Localizer["HowToCook Repo Backup URL"],
+            Description = Localizer["Fallback Git repository URL used when the primary URL times out."],
+            Type = SettingType.Text,
+            DefaultValue = "https://gitee.com/Anduin2017/HowToCook.git"
+        },
+        new GlobalSettingDefinition
+        {
             Key = OllamaInstance,
             Name = Localizer["Ollama API Endpoint"],
             Description = Localizer["The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions"],
@@ -109,6 +120,22 @@ public class SettingsMap
             Description = Localizer["The bearer token for authenticating with the Ollama/OpenAI endpoint."],
             Type = SettingType.Text,
             DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = UseAiSearch,
+            Name = Localizer["Use AI Search"],
+            Description = Localizer["Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured."],
+            Type = SettingType.Bool,
+            DefaultValue = "False"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = EmbeddingModel,
+            Name = Localizer["Embedding Model"],
+            Description = Localizer["The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured."],
+            Type = SettingType.Text,
+            DefaultValue = "bge-m3:latest"
         },
         new GlobalSettingDefinition
         {

@@ -103,4 +103,11 @@
     <value>Адреса API завершення чату, сумісного з OpenAI, для перекладу рецептів, наприклад, https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>Резервний URL репозиторію HowToCook</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Резервний URL Git-репозиторію, що використовується при тайм-ауті основного URL.</value>
+  </data>
+
 </root>

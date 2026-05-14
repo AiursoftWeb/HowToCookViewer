@@ -42,11 +42,20 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>레시피를 번역할 대상 언어의 쉼표로 구분된 BCP-47 언어 코드, 예: en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>서버를 후원해 주신 Voxihost에 감사하는 프로모션 배너를 홈페이지에 표시합니다.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>임의 선택</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>임시 번호</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>임베딩 모델</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>임베딩 모델을 사용하여 레시피에 대한 시맨틱 벡터 검색을 활성화합니다. Ollama 엔드포인트와 임베딩 모델이 구성되어 있어야 합니다.</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook 저장소 URL</value>
@@ -75,6 +84,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>프로젝트 이름</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Voxihost 광고 표시</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>요리 번역에 사용할 AI 모델 이름(예: qwen3.5:27b-q8_0)</value>
   </data>
@@ -83,6 +95,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>푸터에 표시되는 브랜드 이름</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>벡터 검색용 임베딩 모델 이름, 예: bge-m3. Ollama 엔드포인트가 구성되어 있어야 합니다.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>HowToCook 레시피를 동기화할 Git 저장소 URL입니다.</value>
@@ -101,6 +116,16 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>레시피 번역을 위한 OpenAI 호환 채팅 완성 엔드포인트, 예: https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>AI 검색 사용</value>
+  </data>
+
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook 백업 저장소 URL</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>기본 URL 시간 초과 시 사용되는 대체 Git 저장소 URL입니다.</value>
   </data>
 
 </root>

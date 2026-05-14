@@ -103,4 +103,11 @@
     <value>Το σημείο τερματισμού ολοκλήρωσης συνομιλιών συμβατό με OpenAI για μετάφραση συνταγών, π.χ. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>Εφεδρικό URL αποθετηρίου HowToCook</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Εφεδρικό URL αποθετηρίου Git που χρησιμοποιείται όταν το κύριο URL λήξει.</value>
+  </data>
+
 </root>

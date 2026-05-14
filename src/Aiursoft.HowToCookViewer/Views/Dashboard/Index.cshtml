@@ -41,6 +41,13 @@
             @Model.TotalResults.ToString("N0") @Localizer[Model.TotalResults == 1 ? "result for" : "results for"]
         </span>
         <code class="fs-6">"@Model.Query"</code>
+        @if (Model.UsedAiSearch)
+        {
+            <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle">
+                <i class="align-middle me-1" data-lucide="cpu" style="width:14px;height:14px;"></i>
+                @Localizer["Search based on AI (Vector Database)"]
+            </span>
+        }
         <a asp-action="Index" asp-controller="Dashboard" class="btn btn-sm btn-outline-secondary ms-auto">
             <i class="align-middle me-1" data-lucide="x"></i> @Localizer["Clear"]
         </a>

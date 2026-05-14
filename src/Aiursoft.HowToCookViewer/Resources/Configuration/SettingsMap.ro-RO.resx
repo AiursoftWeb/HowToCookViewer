@@ -103,4 +103,11 @@
     <value>Punctul final pentru completări chat compatibil cu OpenAI pentru traducerea rețetelor, de ex. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>URL de rezervă al depozitului HowToCook</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>URL-ul de rezervă al depozitului Git utilizat când URL-ul principal expiră.</value>
+  </data>
+
 </root>

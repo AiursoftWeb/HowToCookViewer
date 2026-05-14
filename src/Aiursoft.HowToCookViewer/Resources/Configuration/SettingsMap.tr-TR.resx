@@ -103,4 +103,11 @@
     <value>Tarif çevirisi için OpenAI uyumlu sohbet tamamlama uç noktası, örn. https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook Repo Yedek URL'si</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Birincil URL zaman aşımına uğradığında kullanılan yedek Git depo URL'si.</value>
+  </data>
+
 </root>

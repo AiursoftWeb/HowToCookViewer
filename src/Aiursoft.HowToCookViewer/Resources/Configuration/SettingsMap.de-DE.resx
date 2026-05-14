@@ -42,11 +42,20 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Komma-separierte BCP-47-Sprachcodes, in die Rezepte übersetzt werden sollen, z. B. en-US, ja-JP, ko-KR, fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>Zeigen Sie einen Werbebanner auf der Startseite, der sich bei Voxihost für die Sponsoring des Servers bedankt.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Dummy-Auswahl</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>Dummy-Nummer</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Einbettungsmodell</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>Aktivieren Sie die semantische Vektorsuche für Rezepte unter Verwendung eines Embedding-Modells. Erfordert, dass der Ollama-Endpunkt und das Embedding-Modell konfiguriert sind.</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook-Repo-URL</value>
@@ -75,6 +84,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>Projektname</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Voxihost-Werbung anzeigen</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Der Name des KI-Modells, das für die Rezeptübersetzung verwendet werden soll, z. B. qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +95,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Der Markenname, der im Footer angezeigt wird.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Der Name des Embedding-Modells für die Vektorsuche, z. B. bge-m3. Erfordert, dass der Ollama-Endpunkt konfiguriert ist.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>Die Git-Repository-URL, von der HowToCook-Rezepte synchronisiert werden sollen.</value>
@@ -101,6 +116,16 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Der OpenAI-kompatible Endpunkt für Chat-Vervollständigungen zur Rezeptübersetzung, z. B. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>KI-Suche verwenden</value>
+  </data>
+
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook Repo Backup-URL</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Git-Fallback-Repository-URL, die verwendet wird, wenn die primäre URL eine Zeitüberschreitung verursacht.</value>
   </data>
 
 </root>

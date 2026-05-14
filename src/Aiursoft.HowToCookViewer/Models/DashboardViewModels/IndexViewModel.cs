@@ -41,4 +41,6 @@ public class IndexViewModel : UiStackLayoutViewModel
     public Dictionary<int, string> TopLocalizedDescriptions { get; set; } = [];
     public int TopTotalWithImages { get; set; }
     public bool TopHasMore => TopTotalWithImages > PageSize;
+
+    public bool UsedAiSearch { get; set; }
 }

@@ -14,7 +14,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 public class DashboardController(
     TemplateDbContext db,
     RecipeLocalizationService recipeLocalization,
-    IStringLocalizer<RecipesController> categoryLocalizer) : Controller
+    IStringLocalizer<RecipesController> categoryLocalizer,
+    RecipeVectorSearchService vectorSearch) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Features",
@@ -33,11 +34,23 @@ public class DashboardController(
 
         List<Recipe> results;
         int totalResults;
+        var usedAi = false;
 
         if (!string.IsNullOrWhiteSpace(q))
         {
-            (results, totalResults) = await RecipeSearchService.SearchAsync(
-                baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
+            var aiResult = await vectorSearch.SearchAsync(
+                baseQuery, q, page, DashboardIndexViewModel.PageSize);
+
+            if (aiResult.UsedAi)
+            {
+                usedAi = true;
+                (results, totalResults) = (aiResult.Results, aiResult.TotalCount);
+            }
+            else
+            {
+                (results, totalResults) = await RecipeSearchService.SearchAsync(
+                    baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
+            }
         }
         else
         {
@@ -80,6 +93,7 @@ public class DashboardController(
             Results = results,
             LikeCounts = await LoadLikeCountsAsync(results),
             LocalizedNames = localizedNames,
+            UsedAiSearch = usedAi,
             LocalizedDescriptions = localizedDescs,
             CategoryDisplayNames = categoryNames,
             TopRecipes = topRecipes,

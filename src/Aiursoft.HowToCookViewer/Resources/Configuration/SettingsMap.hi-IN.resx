@@ -103,4 +103,11 @@
     <value>recipe अनुवाद के लिए OpenAI-संगत चैट पूर्णता एंडपॉइंट, उदाहरण के लिए https://ollama.example.com/api/chat/completions</value>
   </data>
 
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook रेपो बैकअप URL</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>प्राथमिक URL के समय समाप्त होने पर उपयोग किया जाने वाला फ़ॉलबैक Git रेपोसिटरी URL।</value>
+  </data>
+
 </root>
