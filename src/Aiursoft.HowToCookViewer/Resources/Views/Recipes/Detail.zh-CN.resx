@@ -136,4 +136,10 @@
   <data name="breadcrumb" xml:space="preserve">
     <value>面包屑导航</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>相似菜谱</value>
+  </data>
+  <data name="Failed to load similar recipes." xml:space="preserve">
+    <value>加载相似菜谱失败。</value>
+  </data>
 </root>
