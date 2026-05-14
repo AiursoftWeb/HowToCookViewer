@@ -1,4 +1,3 @@
-using Aiursoft.Canon;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;

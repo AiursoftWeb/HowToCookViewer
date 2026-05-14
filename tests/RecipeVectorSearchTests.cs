@@ -6,7 +6,7 @@ using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
+
 using Newtonsoft.Json;
 
 namespace Aiursoft.HowToCookViewer.Tests;
@@ -82,9 +82,6 @@ public class RecipeVectorSearchTests
     /// </summary>
     private async Task SeedRecipesWithEmbeddingsAsync()
     {
-        // Simulated query vector for "面" (noodles): first two dims high.
-        var noodleVector = EncodeVector(v => v[0] = v[1] = 1.0f);
-
         // Vector close to noodle query.
         var noodleSoupVector = EncodeVector(v => { v[0] = 0.9f; v[1] = 0.9f; });
         // Vector far from noodle query (orthogonal-ish).
@@ -220,7 +217,7 @@ public class RecipeVectorSearchTests
         });
 
         var service = CreateSearchService(fakeHandler);
-        var (usedAi, results, total) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "面", 1, 10);
+        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "面", 1, 10);
 
         Assert.IsTrue(usedAi, "Should use AI search when all conditions are met.");
         Assert.IsTrue(results.Count > 0, "Should return at least one result.");
