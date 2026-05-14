@@ -36,6 +36,9 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Một nền tảng hiện đại, giàu tính năng và có khả năng mở rộng cao cho ứng dụng web tiếp theo của bạn.</value>
   </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>nhà cung cấp dịch vụ lưu trữ hàng đầu</value>
+  </data>
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Đạt được nhiều hơn với Aiursoft Template</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Được tích hợp hỗ trợ Docker để triển khai đơn giản và nhất quán.</value>
@@ -648,6 +654,9 @@
   <data name="Shift with confidence" xml:space="preserve">
     <value>Chuyển đổi với sự tự tin</value>
   </data>
+  <data name="Sign up today!" xml:space="preserve">
+    <value>Đăng ký ngay hôm nay!</value>
+  </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>Đơn giản &amp; Dễ dàng</value>
   </data>
@@ -662,6 +671,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Chế độ tối thông minh tự động điều chỉnh theo cài đặt hệ thống của người dùng.</value>
+  </data>
+  <data name="Special Thanks!" xml:space="preserve">
+    <value>Đặc biệt cảm ơn!</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>Phát hiện lỗi hoặc muốn cải thiện một công thức? Chỉnh sửa trực tiếp trên GitHub và giúp đỡ toàn bộ cộng đồng.</value>
@@ -717,6 +729,9 @@
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Nền tảng doanh nghiệp .NET chính xác, đã được kiểm chứng qua thực tế. Từ Xác thực đến Trí tuệ nhân tạo, chúng tôi đã giải quyết những phần khó khăn để bạn không phải lo lắng.</value>
   </data>
+  <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
+    <value>Máy chủ HowToCook được tài trợ bởi</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Thanh điều hướng tự động điều chỉnh dựa trên vai trò và quyền của người dùng.</value>
   </data>
@@ -752,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Xem trên GitHub</value>
+  </data>
+  <data name="Voxihost" xml:space="preserve">
+    <value>Voxihost</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Chào mừng</value>
@@ -799,7 +817,4 @@
     <value>Kiểm tra mã nghiêm ngặt không khoan nhượng</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

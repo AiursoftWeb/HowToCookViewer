@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Avbryt</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Skapad</value>
   </data>
@@ -64,7 +67,4 @@
     <value>Ja, ta bort den här användaren</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

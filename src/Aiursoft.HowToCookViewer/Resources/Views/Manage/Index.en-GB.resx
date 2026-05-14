@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Change your profile</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -55,7 +58,4 @@
     <value>You cannot change your password because local authentication is disabled. Please edit your profile from the auth provider.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

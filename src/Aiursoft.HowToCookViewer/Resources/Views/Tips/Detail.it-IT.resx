@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>Clicca qui per visualizzare le informazioni legali.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Contenuto della comunità</value>
@@ -37,10 +43,4 @@
     <value>Il copyright di questo suggerimento appartiene alla comunità ed è rilasciato nel dominio pubblico sotto la licenza The Unlicense: libero da usare per qualsiasi scopo senza alcuna restrizione.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

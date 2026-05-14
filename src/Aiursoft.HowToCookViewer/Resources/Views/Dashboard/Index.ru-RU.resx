@@ -153,6 +153,9 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Интеграция OpenID Connect</value>
   </data>
+  <data name="Page navigation" xml:space="preserve">
+    <value>Page navigation</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Авторизация RBAC</value>
   </data>
@@ -165,6 +168,12 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>Адаптивный дизайн</value>
   </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Надежное интеграционное тестирование</value>
   </data>
@@ -176,6 +185,12 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Поиск</value>
+  </data>
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
+  </data>
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>Поиск на основе ИИ (векторная база данных)</value>
   </data>
   <data name="Search Recipes" xml:space="preserve">
     <value>Поиск рецептов</value>
@@ -223,17 +238,4 @@
     <value>Зачем использовать шаблон Aiursoft?</value>
   </data>
 
-  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
-    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
-  </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
-
-  <data name="Page navigation" xml:space="preserve">
-    <value>Page navigation</value>
-  </data>
 </root>

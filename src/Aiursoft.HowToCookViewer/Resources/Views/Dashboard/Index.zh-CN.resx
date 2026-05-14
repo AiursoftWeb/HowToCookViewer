@@ -153,6 +153,9 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
   </data>
+  <data name="Page navigation" xml:space="preserve">
+    <value>分页导航</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>基于角色的访问控制 (RBAC) 授权</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>在 HowToCook 中搜索 &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; 道菜谱</value>
+  </data>
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>基于AI和向量数据库的搜索</value>
   </data>
   <data name="Search Recipes" xml:space="preserve">
     <value>搜索食谱</value>
@@ -232,12 +238,4 @@
     <value>为何选择 Aiursoft 模板？</value>
   </data>
 
-
-  <data name="Search based on AI (Vector Database)" xml:space="preserve">
-    <value>基于AI和向量数据库的搜索</value>
-  </data>
-
-  <data name="Page navigation" xml:space="preserve">
-    <value>分页导航</value>
-  </data>
 </root>

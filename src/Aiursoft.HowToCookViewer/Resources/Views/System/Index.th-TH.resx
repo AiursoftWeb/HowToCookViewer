@@ -21,6 +21,12 @@
       <data name=".NET Version" xml:space="preserve">
     <value>เวอร์ชัน .NET</value>
   </data>
+  <data name="(32-bit)" xml:space="preserve">
+    <value>(32-bit)</value>
+  </data>
+  <data name="(64-bit)" xml:space="preserve">
+    <value>(64-bit)</value>
+  </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>ภาพรวมของสภาพแวดล้อมเซิร์ฟเวอร์ กระบวนการ และบริบทคำขอปัจจุบันของแอปพลิเคชัน</value>
   </data>
@@ -32,6 +38,9 @@
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>ยกเลิก</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>ยืนยันการเริ่มต้นแอปพลิเคชันใหม่</value>
@@ -151,13 +160,4 @@
     <value>ใช่ เริ่มต้นระบบใหม่ตอนนี้</value>
   </data>
 
-  <data name="(32-bit)" xml:space="preserve">
-    <value>(32-bit)</value>
-  </data>
-  <data name="(64-bit)" xml:space="preserve">
-    <value>(64-bit)</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

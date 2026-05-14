@@ -21,6 +21,9 @@
       <data name="Back to List" xml:space="preserve">
     <value>Назад к списку</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Создать</value>
   </data>
@@ -70,7 +73,4 @@
     <value>Внимание!</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

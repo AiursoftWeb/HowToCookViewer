@@ -30,6 +30,9 @@
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>الكود المصدري</value>
   </data>
@@ -37,7 +40,4 @@
     <value>جرب لوحة التحكم</value>
   </data>
 
-  <data name="logo" xml:space="preserve">
-    <value>logo</value>
-  </data>
 </root>

@@ -39,6 +39,9 @@
   <data name="Finished At" xml:space="preserve">
     <value>Afgerond op</value>
   </data>
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
   <data name="Job Name" xml:space="preserve">
     <value>Taaknaam</value>
   </data>
@@ -103,7 +106,4 @@
     <value>Nu activeren</value>
   </data>
 
-  <data name="JOB" xml:space="preserve">
-    <value>JOB</value>
-  </data>
 </root>

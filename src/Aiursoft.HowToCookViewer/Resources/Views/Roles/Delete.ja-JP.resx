@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>キャンセル</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>削除</value>
   </data>
@@ -55,7 +58,4 @@
     <value>はい、このロールを削除します</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

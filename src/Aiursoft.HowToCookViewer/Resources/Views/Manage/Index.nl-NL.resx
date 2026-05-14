@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Wijzig je profiel</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Wachtwoord</value>
   </data>
@@ -55,7 +58,4 @@
     <value>U kunt uw wachtwoord niet wijzigen omdat lokale authenticatie is uitgeschakeld. Bewerk uw profiel via de authenticatieprovider.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

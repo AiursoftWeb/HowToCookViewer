@@ -39,6 +39,9 @@
   <data name="Finished At" xml:space="preserve">
     <value>完成於</value>
   </data>
+  <data name="JOB" xml:space="preserve">
+    <value>任務</value>
+  </data>
   <data name="Job Name" xml:space="preserve">
     <value>工作名稱</value>
   </data>
@@ -103,7 +106,4 @@
     <value>立即執行</value>
   </data>
 
-  <data name="JOB" xml:space="preserve">
-    <value>任務</value>
-  </data>
 </root>

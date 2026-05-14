@@ -21,27 +21,17 @@
       <data name="Add Recipe" xml:space="preserve">
     <value>Add Recipe</value>
   </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonymous</value>
+  </data>
   <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
     <value>Anyone can freely add or edit recipes in HowToCook — simply fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>Difficulty</value>
-  </data>
-  <data name="Loading…" xml:space="preserve">
-    <value>Loading…</value>
-  </data>
-  <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
-    <value>No recipes yet. The background indexing job may still be running.</value>
-  </data>
-  <data name="Open Community Cookbook" xml:space="preserve">
-    <value>Open Community Cookbook</value>
-  </data>
-  <data name="Random Recipe" xml:space="preserve">
-    <value>Random Recipe</value>
-  </data>
-
-  <data name="Anonymous" xml:space="preserve">
-    <value>Anonymous</value>
   </data>
   <data name="Favorite" xml:space="preserve">
     <value>Favorite</value>
@@ -55,6 +45,18 @@
   <data name="Liked" xml:space="preserve">
     <value>Liked</value>
   </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
+    <value>No recipes yet. The background indexing job may still be running.</value>
+  </data>
+  <data name="Open Community Cookbook" xml:space="preserve">
+    <value>Open Community Cookbook</value>
+  </data>
+  <data name="Random Recipe" xml:space="preserve">
+    <value>Random Recipe</value>
+  </data>
   <data name="Reply to {0}..." xml:space="preserve">
     <value>Reply to {0}...</value>
   </data>
@@ -62,7 +64,4 @@
     <value>Total {0} recipes</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

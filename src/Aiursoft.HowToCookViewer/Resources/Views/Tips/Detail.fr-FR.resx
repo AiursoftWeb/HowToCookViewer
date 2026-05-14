@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>Cliquez ici pour afficher les informations légales.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Contenu communautaire</value>
@@ -37,10 +43,4 @@
     <value>Les droits d&apos;auteur de cette astuce appartiennent à la communauté et sont placés dans le domaine public sous la licence The Unlicense — libre d&apos;utilisation à toute fin et sans aucune restriction.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

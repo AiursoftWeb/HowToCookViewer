@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Annulla</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Data di creazione</value>
   </data>
@@ -64,7 +67,4 @@
     <value>Sì, elimina questo utente</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

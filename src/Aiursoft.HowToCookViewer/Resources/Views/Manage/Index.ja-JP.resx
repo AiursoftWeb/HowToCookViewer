@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>プロフィールを変更</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>パスワード</value>
   </data>
@@ -55,7 +58,4 @@
     <value>ローカル認証が無効になっているため、パスワードを変更できません。認証プロバイダーからプロフィールを編集してください。</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Annulla</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Elimina</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Sì, elimina questo ruolo</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

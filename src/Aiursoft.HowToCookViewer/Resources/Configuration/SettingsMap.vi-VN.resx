@@ -57,6 +57,12 @@
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Bật tìm kiếm vector ngữ nghĩa cho công thức nấu ăn bằng mô hình nhúng. Yêu cầu cấu hình điểm cuối Ollama và mô hình nhúng.</value>
   </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>URL kho lưu trữ Git dự phòng được sử dụng khi URL chính hết thời gian chờ.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>URL dự phòng của kho lưu trữ HowToCook</value>
+  </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>URL Kho lưu trữ HowToCook</value>
   </data>
@@ -119,13 +125,6 @@
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Sử dụng Tìm kiếm AI</value>
-  </data>
-
-  <data name="HowToCook Repo Backup URL" xml:space="preserve">
-    <value>URL dự phòng của kho lưu trữ HowToCook</value>
-  </data>
-  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
-    <value>URL kho lưu trữ Git dự phòng được sử dụng khi URL chính hết thời gian chờ.</value>
   </data>
 
 </root>

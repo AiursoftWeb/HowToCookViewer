@@ -39,6 +39,9 @@
   <data name="Finished At" xml:space="preserve">
     <value>Completato alle</value>
   </data>
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
   <data name="Job Name" xml:space="preserve">
     <value>Nome attività</value>
   </data>
@@ -103,7 +106,4 @@
     <value>Esegui ora</value>
   </data>
 
-  <data name="JOB" xml:space="preserve">
-    <value>JOB</value>
-  </data>
 </root>

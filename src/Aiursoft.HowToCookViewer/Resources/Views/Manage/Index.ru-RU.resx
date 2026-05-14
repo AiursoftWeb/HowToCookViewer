@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Изменить профиль</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Вы не можете изменить свой пароль, так как локальная аутентификация отключена. Пожалуйста, отредактируйте свой профиль у поставщика аутентификации.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>
