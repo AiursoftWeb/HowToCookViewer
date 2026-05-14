@@ -1,7 +1,5 @@
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
