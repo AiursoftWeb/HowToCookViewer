@@ -42,11 +42,26 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Κωδικοί γλώσσας BCP-47 χωρισμένοι με κόμμα για τη μετάφραση συνταγών, π.χ. en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
+    <value>Εμφάνιση διαφημιστικής μπάνερ στην αρχική σελίδα ευχαριστώντας τη Voxihost για την χορηγία του διακομιστή.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Προσχέδιο Επιλογής</value>
   </data>
   <data name="Dummy Number" xml:space="preserve">
     <value>Τυχαίος Αριθμός</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Μοντέλο Ενσωμάτωσης</value>
+  </data>
+  <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
+    <value>Ενεργοποιήστε την ημιανθρωπιστική αναζήτηση διανυσμάτων για συνταγές χρησιμοποιώντας ένα μοντέλο ενσωμάτωσης. Απαιτείται η διαμόρφωση του τερματικού σημείου Ollama και του μοντέλου ενσωμάτωσης.</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Εφεδρικό URL αποθετηρίου Git που χρησιμοποιείται όταν το κύριο URL λήξει.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>Εφεδρικό URL αποθετηρίου HowToCook</value>
   </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>Διεύθυνση αποθετηρίου HowToCook</value>
@@ -75,6 +90,9 @@
   <data name="Project Name" xml:space="preserve">
     <value>Όνομα Έργου</value>
   </data>
+  <data name="Show Voxihost Ad" xml:space="preserve">
+    <value>Προβολή διαφήμισης Voxihost</value>
+  </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Το όνομα του μοντέλου AI που θα χρησιμοποιηθεί για τη μετάφρασε συνταγών, π.χ. qwen3.5:27b-q8_0</value>
   </data>
@@ -83,6 +101,9 @@
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Το όνομα της εταιρείας που εμφανίζεται στον ποδόσκαλο.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Το όνομα του μοντέλου ενσωμάτωσης για την αναζήτηση διανυσμάτων, π.χ. bge-m3. Απαιτείται η διαμόρφωση του endpoint του Ollama.</value>
   </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>Η διεύθυνση URL του αποθετηρίου Git για τη συγχρονισμός των συνταγών HowToCook από αυτό.</value>
@@ -102,12 +123,8 @@
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Το σημείο τερματισμού ολοκλήρωσης συνομιλιών συμβατό με OpenAI για μετάφραση συνταγών, π.χ. https://ollama.example.com/api/chat/completions</value>
   </data>
-
-  <data name="HowToCook Repo Backup URL" xml:space="preserve">
-    <value>Εφεδρικό URL αποθετηρίου HowToCook</value>
-  </data>
-  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
-    <value>Εφεδρικό URL αποθετηρίου Git που χρησιμοποιείται όταν το κύριο URL λήξει.</value>
+  <data name="Use AI Search" xml:space="preserve">
+    <value>Χρήση Αναζήτησης AI</value>
   </data>
 
 </root>

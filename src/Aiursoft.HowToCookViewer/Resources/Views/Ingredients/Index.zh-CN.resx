@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <root>
     <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:element name="root" msdata:IsDataSet="true">
+
         </xsd:element>
     </xsd:schema>
     <resheader name="resmimetype">
@@ -16,17 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-  <data name="Ingredient Reverse Lookup" xml:space="preserve">
-    <value>食材反查</value>
+      <data name="Almost There" xml:space="preserve">
+    <value>差一点满足</value>
+  </data>
+  <data name="Clear Selection" xml:space="preserve">
+    <value>清除选择</value>
   </data>
   <data name="Click ingredients to find recipes you can make" xml:space="preserve">
     <value>点击食材查看可制作的食谱</value>
   </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>难度</value>
+  </data>
+  <data name="Ingredient Reverse Lookup" xml:space="preserve">
+    <value>食材反查</value>
+  </data>
   <data name="Ingredients" xml:space="preserve">
     <value>食材</value>
   </data>
-  <data name="Clear Selection" xml:space="preserve">
-    <value>清除选择</value>
+  <data name="Matching Recipes" xml:space="preserve">
+    <value>匹配的食谱</value>
+  </data>
+  <data name="Missing" xml:space="preserve">
+    <value>缺少</value>
+  </data>
+  <data name="No recipes found with the selected ingredients" xml:space="preserve">
+    <value>未找到同时包含所选食材的食谱</value>
   </data>
   <data name="Searching..." xml:space="preserve">
     <value>搜索中...</value>
@@ -34,19 +51,8 @@
   <data name="Select one or more ingredients above to see matching recipes" xml:space="preserve">
     <value>请选择食材以查看匹配的食谱</value>
   </data>
-  <data name="Matching Recipes" xml:space="preserve">
-    <value>匹配的食谱</value>
+  <data name="Select one or more ingredients to see matching recipes" xml:space="preserve">
+    <value>选择一种或多种食材以查看匹配的食谱</value>
   </data>
-  <data name="No recipes found with the selected ingredients" xml:space="preserve">
-    <value>未找到同时包含所选食材的食谱</value>
-  </data>
-  <data name="Difficulty" xml:space="preserve">
-    <value>难度</value>
-  </data>
-  <data name="Almost There" xml:space="preserve">
-    <value>差一点满足</value>
-  </data>
-  <data name="Missing" xml:space="preserve">
-    <value>缺少</value>
-  </data>
+
 </root>

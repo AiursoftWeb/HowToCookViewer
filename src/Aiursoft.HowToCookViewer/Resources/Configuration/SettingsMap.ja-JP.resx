@@ -57,6 +57,12 @@
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>埋め込みモデルを使用してレシピのセマンティックベクトル検索を有効にします。Ollamaエンドポイントと埋め込みモデルの設定が必要です。</value>
   </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>プライマリURLがタイムアウトした場合に使用されるフォールバックGitリポジトリURL。</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook バックアップリポジトリURL</value>
+  </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook リポジトリ URL</value>
   </data>
@@ -119,13 +125,6 @@
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>AI検索を使用する</value>
-  </data>
-
-  <data name="HowToCook Repo Backup URL" xml:space="preserve">
-    <value>HowToCook バックアップリポジトリURL</value>
-  </data>
-  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
-    <value>プライマリURLがタイムアウトした場合に使用されるフォールバックGitリポジトリURL。</value>
   </data>
 
 </root>

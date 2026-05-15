@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Ändra din profil</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Lösenord</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Du kan inte ändra ditt lösenord eftersom lokal autentisering är inaktiverad. Vänligen redigera din profil från autentiseringsleverantören.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

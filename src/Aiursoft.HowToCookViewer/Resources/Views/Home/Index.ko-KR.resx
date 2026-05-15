@@ -36,6 +36,9 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>현대적이고, 기능이 풍부하며, 매우 확장 가능한 기반을 제공하여 차세대 웹 애플리케이션을 구축할 수 있습니다.</value>
   </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>최고급 호스팅 서비스를 제공하는 업체</value>
+  </data>
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft 템플릿으로 더 많은 성과를 이루세요</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>내장된 사용자 관리</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Docker 지원을 제공하여 간편하고 일관된 배포가 가능합니다.</value>
@@ -648,6 +654,9 @@
   <data name="Shift with confidence" xml:space="preserve">
     <value>자신 있게 전환하세요</value>
   </data>
+  <data name="Sign up today!" xml:space="preserve">
+    <value>지금 가입하세요!</value>
+  </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>간단하고 쉬운</value>
   </data>
@@ -662,6 +671,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>사용자의 시스템 설정에 자동으로 적응하는 스마트 다크 모드.</value>
+  </data>
+  <data name="Special Thanks!" xml:space="preserve">
+    <value>특별한 감사!</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>실수를 발견했거나 레시피를 개선하고 싶으신가요? GitHub에서 직접 편집하여 전체 커뮤니티에 기여하세요.</value>
@@ -717,6 +729,9 @@
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>결정적인, 검증된 .NET 엔터프라이즈 기반입니다. 인증(Auth)부터 인공지능(AI)까지, 어려운 부분은 이미 해결했으므로 귀하께서는 그 부분을 신경 쓰지 않아도 됩니다.</value>
   </data>
+  <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
+    <value>HowToCook 서버는 다음과 같이 자랑스럽게 후원받습니다</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>네비게이션 바는 사용자 역할과 권한에 따라 자동으로 조정됩니다.</value>
   </data>
@@ -752,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>GitHub에서 보기</value>
+  </data>
+  <data name="Voxihost" xml:space="preserve">
+    <value>Voxihost</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>환영합니다</value>
@@ -799,7 +817,4 @@
     <value>허용되지 않는 린트</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

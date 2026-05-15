@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>删除</value>
   </data>
@@ -55,7 +58,4 @@
     <value>是，删除此角色</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
 </root>

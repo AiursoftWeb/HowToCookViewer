@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Avbryt</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Ta bort</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Ja, ta bort den här rollen</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

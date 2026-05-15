@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Alterar seu perfil</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Você não pode alterar sua senha porque a autenticação local está desativada. Edite seu perfil no provedor de autenticação.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

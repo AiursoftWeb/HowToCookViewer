@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>เปลี่ยนโปรไฟล์ของคุณ</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>รหัสผ่าน</value>
   </data>
@@ -55,7 +58,4 @@
     <value>คุณไม่สามารถเปลี่ยนรหัสผ่านได้ เนื่องจากการยืนยันตัวตนภายในระบบถูกปิดใช้งาน กรุณาแก้ไขโปรไฟล์ของคุณจากผู้ให้บริการยืนยันตัวตน</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>建立時間</value>
   </data>
@@ -64,7 +67,4 @@
     <value>是的，刪除此使用者</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>關閉</value>
-  </data>
 </root>

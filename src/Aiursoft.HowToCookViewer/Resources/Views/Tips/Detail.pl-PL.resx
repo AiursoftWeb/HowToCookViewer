@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>Kliknij tutaj, aby wyświetlić informacje prawne.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Treść społeczności</value>
@@ -37,10 +43,4 @@
     <value>Prawa autorskie do tego poradnika należą do społeczności i zostały upublicznione na licencji The Unlicense — można go używać w dowolnym celu bez żadnych ograniczeń.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

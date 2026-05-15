@@ -39,6 +39,9 @@
   <data name="Finished At" xml:space="preserve">
     <value>Hoàn thành lúc</value>
   </data>
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
   <data name="Job Name" xml:space="preserve">
     <value>Tên công việc</value>
   </data>
@@ -103,7 +106,4 @@
     <value>Kích hoạt ngay</value>
   </data>
 
-  <data name="JOB" xml:space="preserve">
-    <value>JOB</value>
-  </data>
 </root>

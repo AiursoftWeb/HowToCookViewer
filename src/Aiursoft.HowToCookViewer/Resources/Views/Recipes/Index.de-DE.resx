@@ -24,6 +24,9 @@
   <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
     <value>Jeder kann frei Rezepte in HowToCook hinzufügen oder bearbeiten — forken Sie einfach das Repository auf GitHub, nehmen Sie Ihre Änderungen vor und reichen Sie einen Pull Request ein. Ihr Rezept steht dann allen zur Verfügung!</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>Schwierigkeit</value>
   </data>
@@ -39,12 +42,8 @@
   <data name="Random Recipe" xml:space="preserve">
     <value>Zufälliges Rezept</value>
   </data>
-
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>Nhấp vào đây để xem thông tin pháp lý.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Nội dung Cộng đồng</value>
@@ -37,10 +43,4 @@
     <value>Bản quyền của mẹo vặt này thuộc về cộng đồng và được phát hành vào phạm vi công cộng theo The Unlicense — tự do sử dụng cho bất kỳ mục đích nào mà không có bất kỳ hạn chế nào.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

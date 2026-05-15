@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Excluir</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Sim, excluir este cargo</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

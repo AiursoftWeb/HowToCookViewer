@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>حذف</value>
   </data>
@@ -55,7 +58,4 @@
     <value>نعم، احذف هذا الدور</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -21,6 +21,12 @@
       <data name=".NET Version" xml:space="preserve">
     <value>.NET 版本</value>
   </data>
+  <data name="(32-bit)" xml:space="preserve">
+    <value>（32位）</value>
+  </data>
+  <data name="(64-bit)" xml:space="preserve">
+    <value>（64位）</value>
+  </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>应用程序服务器环境、进程及当前请求上下文的概览。</value>
   </data>
@@ -32,6 +38,9 @@
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>确认应用重启</value>
@@ -151,13 +160,4 @@
     <value>是，立即重启</value>
   </data>
 
-  <data name="(32-bit)" xml:space="preserve">
-    <value>（32位）</value>
-  </data>
-  <data name="(64-bit)" xml:space="preserve">
-    <value>（64位）</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
 </root>

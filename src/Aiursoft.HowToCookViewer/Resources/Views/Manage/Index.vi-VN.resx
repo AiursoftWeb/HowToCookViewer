@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Thay đổi hồ sơ của bạn</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Bạn không thể thay đổi mật khẩu vì tính năng xác thực cục bộ đã bị vô hiệu hóa. Vui lòng chỉnh sửa hồ sơ của bạn từ nhà cung cấp xác thực.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>وقت الإنشاء</value>
   </data>
@@ -64,7 +67,4 @@
     <value>نعم، احذف هذا المستخدم</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

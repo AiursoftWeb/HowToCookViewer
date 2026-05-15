@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>Klicken Sie hier, um die rechtlichen Informationen einzusehen.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Community-Inhalte</value>
@@ -37,10 +43,4 @@
     <value>Das Urheberrecht an diesem Tipp liegt bei der Community und wird unter der Unlicense in die Public Domain gestellt – frei verwendbar für jeden Zweck ohne Einschränkungen.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

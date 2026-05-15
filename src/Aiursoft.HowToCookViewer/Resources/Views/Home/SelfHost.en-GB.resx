@@ -24,6 +24,9 @@
   <data name="About HowToCook Viewer" xml:space="preserve">
     <value>About HowToCook Viewer</value>
   </data>
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
   <data name="Always create a personal fork before submitting PRs." xml:space="preserve">
     <value>Always create a personal fork before submitting PRs.</value>
   </data>
@@ -35,6 +38,9 @@
   </data>
   <data name="Binary path" xml:space="preserve">
     <value>Binary path</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
   </data>
   <data name="Config path" xml:space="preserve">
     <value>Config path</value>
@@ -54,6 +60,9 @@
   <data name="Development &amp; Manual Run" xml:space="preserve">
     <value>Development &amp; Manual Run</value>
   </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker Pulls</value>
+  </data>
   <data name="Execute `dotnet run` to run the app." xml:space="preserve">
     <value>Execute `dotnet run` to run the app.</value>
   </data>
@@ -62,6 +71,12 @@
   </data>
   <data name="First, install Docker. Then run the following commands in a Linux shell:" xml:space="preserve">
     <value>First, install Docker. Then run the following commands in a Linux shell:</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
   </data>
   <data name="HowToCook Viewer is a visualization and website of HowToCook." xml:space="preserve">
     <value>HowToCook Viewer is a visualisation and website for HowToCook.</value>
@@ -72,6 +87,9 @@
   <data name="Live Demo" xml:space="preserve">
     <value>Live Demo</value>
   </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT licensed</value>
+  </data>
   <data name="Node.js" xml:space="preserve">
     <value>Node.js</value>
   </data>
@@ -80,6 +98,9 @@
   </data>
   <data name="Or with a custom port:" xml:space="preserve">
     <value>Or with a custom port:</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>Pipeline stat</value>
   </data>
   <data name="Ports" xml:space="preserve">
     <value>Ports</value>
@@ -117,6 +138,9 @@
   <data name="Self Host" xml:space="preserve">
     <value>Self Host</value>
   </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>Test Coverage</value>
+  </data>
   <data name="That will start a web server at http://localhost:5000 and you can test the app." xml:space="preserve">
     <value>That will start a web server at http://localhost:5000 and you can test the app.</value>
   </data>
@@ -136,28 +160,4 @@
     <value>We&apos;d be interested in your feedback! You can submit a suggestion or feature request via the issue tracker.</value>
   </data>
 
-  <data name="Aiursoft" xml:space="preserve">
-    <value>Aiursoft</value>
-  </data>
-  <data name="Docker Pulls" xml:space="preserve">
-    <value>Docker Pulls</value>
-  </data>
-  <data name="GitHub" xml:space="preserve">
-    <value>GitHub</value>
-  </data>
-  <data name="HowToCook" xml:space="preserve">
-    <value>HowToCook</value>
-  </data>
-  <data name="MIT licensed" xml:space="preserve">
-    <value>MIT licensed</value>
-  </data>
-  <data name="Pipeline stat" xml:space="preserve">
-    <value>Pipeline stat</value>
-  </data>
-  <data name="Test Coverage" xml:space="preserve">
-    <value>Test Coverage</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

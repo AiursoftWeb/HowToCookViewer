@@ -36,6 +36,9 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Una base moderna, rica en funciones y altamente extensible para tu próxima aplicación web.</value>
   </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>un proveedor de servicios de alojamiento de primer nivel</value>
+  </data>
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Logra más con Aiursoft Template</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestión de Usuarios Integrada</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Viene con soporte para Docker para despliegues simplificados y consistentes.</value>
@@ -648,6 +654,9 @@
   <data name="Shift with confidence" xml:space="preserve">
     <value>Desplázate con confianza</value>
   </data>
+  <data name="Sign up today!" xml:space="preserve">
+    <value>¡Regístrate hoy!</value>
+  </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>Sencillo y fácil</value>
   </data>
@@ -662,6 +671,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Modo oscuro inteligente que se adapta automáticamente a la configuración del sistema del usuario.</value>
+  </data>
+  <data name="Special Thanks!" xml:space="preserve">
+    <value>¡Gracias especiales!</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>¿Has encontrado un error o quieres mejorar una receta? Edítala directamente en GitHub y ayuda a toda la comunidad.</value>
@@ -717,6 +729,9 @@
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>La fundación empresarial .NET definitiva y comprobada en combate. Desde la autenticación hasta la inteligencia artificial, hemos resuelto las partes difíciles para que tú no tengas que hacerlo.</value>
   </data>
+  <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
+    <value>El servidor HowToCook es patrocinado con orgullo por</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>La barra de navegación se ajusta automáticamente en función de los roles y permisos del usuario.</value>
   </data>
@@ -752,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Ver en GitHub</value>
+  </data>
+  <data name="Voxihost" xml:space="preserve">
+    <value>Voxihost</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenido</value>
@@ -799,7 +817,4 @@
     <value>Lint con tolerancia cero</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

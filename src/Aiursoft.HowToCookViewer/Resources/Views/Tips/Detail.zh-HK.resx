@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="breadcrumb" xml:space="preserve">
+    <value>麵包屑導航</value>
+  </data>
+  <data name="Click here to view the legal information." xml:space="preserve">
     <value>點此查看法律資訊。</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>社群內容</value>
@@ -37,10 +43,4 @@
     <value>本提示的版權歸社區所有，並在 The Unlicense 下釋入公共領域——可自由用於任何目的，不受任何限制。</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>關閉</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>麵包屑導航</value>
-  </data>
 </root>

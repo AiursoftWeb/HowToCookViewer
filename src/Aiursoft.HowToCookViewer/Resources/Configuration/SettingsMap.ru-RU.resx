@@ -57,6 +57,12 @@
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Включить семантический векторный поиск рецептов с использованием модели встраивания. Необходимо настроить конечную точку Ollama и модель встраивания.</value>
   </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Резервный URL Git-репозитория, используемый при тайм-ауте основного URL.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>Резервный URL репозитория HowToCook</value>
+  </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>URL репозитория HowToCook</value>
   </data>
@@ -119,13 +125,6 @@
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Использовать AI Search</value>
-  </data>
-
-  <data name="HowToCook Repo Backup URL" xml:space="preserve">
-    <value>Резервный URL репозитория HowToCook</value>
-  </data>
-  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
-    <value>Резервный URL Git-репозитория, используемый при тайм-ауте основного URL.</value>
   </data>
 
 </root>
