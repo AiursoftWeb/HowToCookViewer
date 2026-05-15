@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>Đồ uống</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Calo ước tính</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>

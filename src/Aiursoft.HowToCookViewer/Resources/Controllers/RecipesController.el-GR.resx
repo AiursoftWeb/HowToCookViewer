@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>Ποτά</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Εκτιμώμενες Θερμίδες</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Εικόνες</value>
   </data>

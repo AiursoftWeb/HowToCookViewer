@@ -21,5 +21,8 @@
       <data name="Difficulty" xml:space="preserve">
     <value>Trudność</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
+  </data>
 
 </root>

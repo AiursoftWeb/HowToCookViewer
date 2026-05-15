@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>Напої</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Орієнтовна кількість калорій</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Зображення</value>
   </data>

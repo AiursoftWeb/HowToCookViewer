@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>İçecekler</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Tahmini Kalori</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Görseller</value>
   </data>
