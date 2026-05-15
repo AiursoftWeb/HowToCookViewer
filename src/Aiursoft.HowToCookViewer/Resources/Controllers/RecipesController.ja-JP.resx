@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>飲み物</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>推定カロリー</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>画像</value>
   </data>

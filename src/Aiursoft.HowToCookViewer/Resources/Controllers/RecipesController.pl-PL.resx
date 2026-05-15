@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>Napoje</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Szacunkowa wartość kaloryczna</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Obrazy</value>
   </data>

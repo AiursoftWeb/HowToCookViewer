@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>Getränke</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Geschätzte Kalorien</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Bilder</value>
   </data>

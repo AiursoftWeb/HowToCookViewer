@@ -21,5 +21,8 @@
       <data name="Difficulty" xml:space="preserve">
     <value>ความยาก</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>กิโลแคลอรี</value>
+  </data>
 
 </root>

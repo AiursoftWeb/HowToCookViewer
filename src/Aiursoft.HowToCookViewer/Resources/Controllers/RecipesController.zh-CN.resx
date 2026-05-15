@@ -45,6 +45,9 @@
   <data name="Drinks" xml:space="preserve">
     <value>饮品</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>估算卡路里</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>图片</value>
   </data>
