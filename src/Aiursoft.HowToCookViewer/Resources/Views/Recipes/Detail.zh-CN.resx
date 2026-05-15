@@ -81,6 +81,9 @@
   <data name="Expert" xml:space="preserve">
     <value>专业</value>
   </data>
+  <data name="Failed to load similar recipes." xml:space="preserve">
+    <value>加载相似菜谱失败。</value>
+  </data>
   <data name="Favorite" xml:space="preserve">
     <value>收藏</value>
   </data>
@@ -126,6 +129,9 @@
   <data name="Send Reply" xml:space="preserve">
     <value>发送回复</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>相似菜谱</value>
+  </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>本食谱的版权归社区所有，并根据《The Unlicense》协议释放至公共领域——可自由用于任何目的，无任何限制。</value>
   </data>
@@ -136,10 +142,4 @@
     <value>写下您的评论…</value>
   </data>
 
-  <data name="Similar Recipes" xml:space="preserve">
-    <value>相似菜谱</value>
-  </data>
-  <data name="Failed to load similar recipes." xml:space="preserve">
-    <value>加载相似菜谱失败。</value>
-  </data>
 </root>
