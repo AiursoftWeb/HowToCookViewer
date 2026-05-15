@@ -1,0 +1,95 @@
+@model Aiursoft.HowToCookViewer.Models.RecipesViewModels.SimilarViewModel
+@using Aiursoft.HowToCookViewer.Services.FileStorage
+@inject StorageService Storage
+
+<div class="container-fluid p-4">
+    <div class="row mb-3">
+        <div class="col">
+            <nav aria-label="@Localizer["breadcrumb"]">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/Recipes/Index">@Localizer["All Recipes"]</a></li>
+                    <li class="breadcrumb-item">
+                        <a href="/Recipes/Index?category=@Model.SourceRecipe.Category">
+                            @Model.CategoryDisplayName
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/Recipes/Detail/@Model.SourceRecipe.Id">
+                            @(Model.LocalizedNames.GetValueOrDefault(Model.SourceRecipe.Id, Model.SourceRecipe.Name))
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active">@Localizer["Similar Recipes"]</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+            <!-- Source Recipe Card -->
+            <div class="card shadow-sm mb-4">
+                <a href="/Recipes/Detail/@Model.SourceRecipe.Id" class="text-decoration-none text-reset">
+                    <div class="row g-0">
+                        @{
+                            var cover = Model.SourceRecipe.Images.FirstOrDefault(i => i.IsCover);
+                            var coverUrl = cover != null
+                                ? Storage.RelativePathToInternetUrl(cover.LogicalPath) + "?w=600"
+                                : "/img/no-image.svg";
+                        }
+                        <div class="col-md-4">
+                            <img src="@coverUrl"
+                                 class="img-fluid rounded-start h-100"
+                                 style="object-fit:cover; min-height:200px;"
+                                 alt="@(Model.LocalizedNames.GetValueOrDefault(Model.SourceRecipe.Id, Model.SourceRecipe.Name))"
+                                 onerror="this.src='/img/no-image.svg'">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase">@Localizer["Source Recipe"]</small>
+                                <h4 class="card-title mt-1">
+                                    @(Model.LocalizedNames.GetValueOrDefault(Model.SourceRecipe.Id, Model.SourceRecipe.Name))
+                                </h4>
+                                @{
+                                    var desc = Model.LocalizedDescriptions.GetValueOrDefault(Model.SourceRecipe.Id, Model.SourceRecipe.Description);
+                                }
+                                @if (!string.IsNullOrWhiteSpace(desc))
+                                {
+                                    <p class="card-text text-muted">@desc</p>
+                                }
+                                <span class="badge bg-warning text-dark">
+                                    @Localizer["Difficulty"]: @(new string('★', Model.SourceRecipe.Difficulty))@(new string('☆', Math.Max(0, 5 - Model.SourceRecipe.Difficulty)))
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Similar Recipes Grid -->
+            <h4 class="mb-3">
+                <i class="align-middle me-1" data-lucide="layers"></i>
+                @Localizer["Similar Recipes"] (@Model.SimilarRecipes.Count)
+            </h4>
+
+            @if (Model.SimilarRecipes.Count == 0)
+            {
+                <div class="alert alert-info" role="alert">
+                    <i class="align-middle me-2" data-lucide="info"></i>
+                    @Localizer["No similar recipes found."]
+                </div>
+            }
+            else
+            {
+                <div class="row g-3">
+                    @await Html.PartialAsync("_RecipeCards", new Aiursoft.HowToCookViewer.Models.RecipesViewModels.RecipeCardsViewModel
+                    {
+                        Recipes = Model.SimilarRecipes,
+                        LikeCounts = Model.LikeCounts,
+                        LocalizedNames = Model.LocalizedNames,
+                        LocalizedDescriptions = Model.LocalizedDescriptions
+                    })
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -43,7 +43,7 @@ public class SimilarRecipesTests : TestBase
         var html = await response.Content.ReadAsStringAsync();
 
         // Assert
-        Assert.IsFalse(html.Contains("<button type=\"button\" class=\"btn btn-outline-primary btn-similar-recipes\">"), "Button should not be visible when some recipes are missing embeddings.");
+        Assert.IsFalse(html.Contains("<a href=\"/Recipes/Similar/"), "Button should not be visible when some recipes are missing embeddings.");
 
         // Arrange - Add embedding to r2
         r2.Embedding = new byte[4 * 4];
@@ -55,7 +55,7 @@ public class SimilarRecipesTests : TestBase
         html = await response.Content.ReadAsStringAsync();
 
         // Assert
-        Assert.IsTrue(html.Contains("<button type=\"button\" class=\"btn btn-outline-primary btn-similar-recipes\">"), "Button should be visible when all recipes have embeddings.");
+        Assert.IsTrue(html.Contains("<a href=\"/Recipes/Similar/"), "Button should be visible when all recipes have embeddings.");
     }
 
     [TestMethod]

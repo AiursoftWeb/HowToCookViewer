@@ -27,10 +27,10 @@
                 </a>
                 @if (Model.ShowSimilarRecipesButton)
                 {
-                    <button type="button" class="btn btn-outline-primary btn-similar-recipes">
+                    <a href="/Recipes/Similar/@Model.Recipe.Id" class="btn btn-outline-primary">
                         <i class="align-middle me-1" data-lucide="search"></i>
                         @Localizer["Similar Recipes"]
-                    </button>
+                    </a>
                 }
                 <form asp-controller="Likes" asp-action="Toggle" method="post">
                     <input type="hidden" name="recipeId" value="@Model.Recipe.Id" />
@@ -61,10 +61,10 @@
                 </a>
                 @if (Model.ShowSimilarRecipesButton)
                 {
-                    <button type="button" class="btn btn-outline-primary btn-similar-recipes">
+                    <a href="/Recipes/Similar/@Model.Recipe.Id" class="btn btn-outline-primary">
                         <i class="align-middle me-1" data-lucide="search"></i>
                         @Localizer["Similar Recipes"]
-                    </button>
+                    </a>
                 }
                 <span class="btn btn-outline-warning disabled">
                     <i class="align-middle me-1" data-lucide="thumbs-up"></i>
@@ -82,10 +82,10 @@
                 </a>
                 @if (Model.ShowSimilarRecipesButton)
                 {
-                    <button type="button" class="btn btn-outline-primary btn-similar-recipes">
+                    <a href="/Recipes/Similar/@Model.Recipe.Id" class="btn btn-outline-primary">
                         <i class="align-middle me-1" data-lucide="search"></i>
                         @Localizer["Similar Recipes"]
-                    </button>
+                    </a>
                 }
             </div>
         }
@@ -144,25 +144,6 @@
                     @Localizer["Last updated:"] <label data-utc-time="@Model.Recipe.FileLastModified.ToHtmlDateTime()"></label>
                 </div>
             </div>
-
-            <!-- Similar Recipes Section -->
-            @if (Model.ShowSimilarRecipesButton)
-            {
-                <div id="similar-recipes-container" class="mt-4 d-none">
-                    <h5 class="mb-3">
-                        <i class="align-middle me-1" data-lucide="layers"></i>
-                        @Localizer["Similar Recipes"]
-                    </h5>
-                    <div class="row" id="similar-recipes-list">
-                        <div class="text-center py-4">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-            }
 
             <!-- Contributors Section -->
             @if (Model.Contributors.Count > 0)
@@ -423,34 +404,6 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
                 }
             }, index * 100);
         }
-    });
-
-    // Similar recipes logic
-    document.querySelectorAll('.btn-similar-recipes').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const container = document.getElementById('similar-recipes-container');
-            const list = document.getElementById('similar-recipes-list');
-            
-            if (container.classList.contains('d-none')) {
-                container.classList.remove('d-none');
-                
-                fetch('/Recipes/Similar/@Model.Recipe.Id')
-                    .then(response => response.text())
-                    .then(html => {
-                        list.innerHTML = html;
-                        // Trigger lucide icons if any
-                        if (window.lucide) {
-                            window.lucide.createIcons();
-                        }
-                    })
-                    .catch(err => {
-                        console.error('Failed to load similar recipes:', err);
-                        list.innerHTML = '<div class="col-12 text-center text-danger">@Localizer["Failed to load similar recipes."]</div>';
-                    });
-            } else {
-                container.classList.add('d-none');
-            }
-        });
     });
 })();
 </script>

@@ -272,11 +272,21 @@ public class RecipesController(
     [HttpGet]
     public async Task<IActionResult> Similar(int id)
     {
+        var sourceRecipe = await db.Recipes
+            .Include(r => r.Images)
+            .FirstOrDefaultAsync(r => r.Id == id);
+
+        if (sourceRecipe == null)
+            return NotFound();
+
         var recipes = await vectorSearchService.GetSimilarRecipesAsync(db.Recipes, id, 20);
         var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
-        return PartialView("_RecipeCards", new RecipeCardsViewModel
+
+        return View(new SimilarViewModel
         {
-            Recipes = recipes,
+            SourceRecipe = sourceRecipe,
+            CategoryDisplayName = GetDisplayName(sourceRecipe.Category, null, null),
+            SimilarRecipes = recipes,
             LikeCounts = await LoadLikeCountsAsync(recipes),
             LocalizedNames = localizedNames,
             LocalizedDescriptions = localizedDescs

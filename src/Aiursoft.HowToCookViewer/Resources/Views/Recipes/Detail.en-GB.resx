@@ -81,6 +81,9 @@
   <data name="Expert" xml:space="preserve">
     <value>Expert</value>
   </data>
+  <data name="Failed to load similar recipes." xml:space="preserve">
+    <value>Failed to load similar recipes.</value>
+  </data>
   <data name="Favorite" xml:space="preserve">
     <value>Favorite</value>
   </data>
@@ -126,6 +129,9 @@
   <data name="Send Reply" xml:space="preserve">
     <value>Send reply</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>Similar Recipes</value>
+  </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions.</value>
   </data>
@@ -136,10 +142,4 @@
     <value>Write your comment…</value>
   </data>
 
-  <data name="Similar Recipes" xml:space="preserve">
-    <value>Similar Recipes</value>
-  </data>
-  <data name="Failed to load similar recipes." xml:space="preserve">
-    <value>Failed to load similar recipes.</value>
-  </data>
 </root>
