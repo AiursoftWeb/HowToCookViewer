@@ -138,6 +138,9 @@ public class ViewModelArgsInjector(
         _ = localizer["By Favorites"];
         _ = localizer["Most Favorited"];
         _ = localizer["Least Favorited"];
+        _ = localizer["By Calories"];
+        _ = localizer["Highest Calories"];
+        _ = localizer["Lowest Calories"];
 
         _ = localizer["Recipe Search"];
         _ = localizer["Search recipes (e.g. tomato, egg, tofu…)"];
@@ -346,6 +349,18 @@ public class ViewModelArgsInjector(
                         [
                             new CascadedLink { Text = localizer["Most Favorited"],  Href = "/Recipes/Index?sortBy=favorites_desc", IsActive = isOnRecipesController && currentSortBy == "favorites_desc" },
                             new CascadedLink { Text = localizer["Least Favorited"], Href = "/Recipes/Index?sortBy=favorites_asc",  IsActive = isOnRecipesController && currentSortBy == "favorites_asc"  }
+                        ]
+                    },
+                    new CascadedSideBarItem
+                    {
+                        UniqueId   = "recipes-calories",
+                        LucideIcon = "flame",
+                        Text       = localizer["By Calories"],
+                        IsActive   = isOnRecipesController && (currentSortBy == "calories_desc" || currentSortBy == "calories_asc"),
+                        Links      =
+                        [
+                            new CascadedLink { Text = localizer["Highest Calories"], Href = "/Recipes/Index?sortBy=calories_desc", IsActive = isOnRecipesController && currentSortBy == "calories_desc" },
+                            new CascadedLink { Text = localizer["Lowest Calories"],  Href = "/Recipes/Index?sortBy=calories_asc",  IsActive = isOnRecipesController && currentSortBy == "calories_asc"  }
                         ]
                     }
                 ]

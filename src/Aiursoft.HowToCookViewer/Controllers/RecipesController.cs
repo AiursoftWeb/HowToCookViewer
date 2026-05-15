@@ -72,6 +72,10 @@ public class RecipesController(
         _ = localizer["Additional Notes"];
         _ = localizer["Images"];
         _ = localizer["Estimated Calories"];
+
+        _ = localizer["By Calories"];
+        _ = localizer["Highest Calories"];
+        _ = localizer["Lowest Calories"];
     }
 
     public async Task<IActionResult> Index(string? category, int? difficulty, string? sortBy)
@@ -146,6 +150,8 @@ public class RecipesController(
             "comments_asc" => query.OrderBy(r => db.RecipeComments.Count(c => c.RecipeId == r.Id)),
             "favorites_desc" => query.OrderByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
             "favorites_asc" => query.OrderBy(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id)),
+            "calories_desc" => query.OrderByDescending(r => r.Calories ?? double.MinValue),
+            "calories_asc" => query.OrderBy(r => r.Calories ?? double.MaxValue),
             _ => query.OrderByDescending(r => r.Images.Any())
         };
 
@@ -173,6 +179,8 @@ public class RecipesController(
             "comments_asc" => localizer["Least Commented"].Value,
             "favorites_desc" => localizer["Most Favorited"].Value,
             "favorites_asc" => localizer["Least Favorited"].Value,
+            "calories_desc" => localizer["Highest Calories"].Value,
+            "calories_asc" => localizer["Lowest Calories"].Value,
             _ => difficulty.HasValue
                 ? localizer["Difficulty {0} Stars", difficulty.Value].Value
                 : string.IsNullOrEmpty(category)

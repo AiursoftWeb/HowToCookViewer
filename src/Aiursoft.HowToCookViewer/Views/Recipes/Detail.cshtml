@@ -123,6 +123,55 @@
                         </div>
                     </div>
 
+                    @if (Model.Recipe.Calories.HasValue)
+                    {
+                        <!-- Calories Section -->
+                        <div class="mb-5 p-4 rounded-4 shadow-sm border-start border-4 border-danger"
+                             style="background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #fef9f0 100%);">
+                            <div class="d-flex align-items-center flex-wrap gap-4">
+                                <div class="calorie-gauge-wrapper position-relative d-flex align-items-center justify-content-center"
+                                     style="width:130px;height:130px;" data-calories="@Model.Recipe.Calories.Value">
+                                    <svg class="calorie-gauge-svg" viewBox="0 0 120 120" style="position:absolute;width:130px;height:130px;transform:rotate(-90deg);">
+                                        <circle cx="60" cy="60" r="52" fill="none" stroke="#f0f0f0" stroke-width="8"/>
+                                        <circle class="calorie-gauge-fill" cx="60" cy="60" r="52" fill="none"
+                                                stroke="#dc3545" stroke-width="8" stroke-linecap="round"
+                                                stroke-dasharray="326.73"
+                                                stroke-dashoffset="326.73"
+                                                style="filter: drop-shadow(0 0 6px rgba(220,53,69,0.4)); transition: stroke-dashoffset 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), stroke 1.8s ease;"/>
+                                    </svg>
+                                    <div class="text-center position-relative" style="z-index:1;">
+                                        <div class="calorie-value-display fw-bold" style="font-size:1.8rem;line-height:1.1;color:#dc3545;">0</div>
+                                        <div class="text-muted" style="font-size:0.75rem;">@Localizer["kcal"]</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-muted small text-uppercase fw-bold mb-1">@Localizer["Estimated Calories"]</div>
+                                    <h3 class="mb-0 fw-bold">
+                                        @Model.Recipe.Calories.Value.ToString("F0")
+                                        <span class="text-muted fs-6 fw-normal">@Localizer["kcal"]</span>
+                                    </h3>
+                                    <span id="calorie-level-badge" class="badge rounded-pill px-3 py-1 mt-2 fw-semibold"
+                                          style="font-size:0.85rem; transition: all 0.5s ease;">
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column gap-2 ms-auto d-none d-md-flex">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="calorie-dot" style="width:10px;height:10px;border-radius:50%;background:#20c997;"></span>
+                                        <small class="text-muted">1–200 kcal</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="calorie-dot" style="width:10px;height:10px;border-radius:50%;background:#F59E0B;"></span>
+                                        <small class="text-muted">200–500 kcal</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="calorie-dot" style="width:10px;height:10px;border-radius:50%;background:#EF4444;"></span>
+                                        <small class="text-muted">500+ kcal</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
                     <div class="recipe-markdown">
                         @Html.Raw(Model.RenderedMarkdown)
                     </div>
@@ -344,6 +393,26 @@
 .difficulty-icon.extreme {
     animation: pulse-red 1.5s infinite ease-in-out;
 }
+
+/* ── Calorie Gauge ──────────────────────────────────────────── */
+.calorie-gauge-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.calorie-gauge-svg circle {
+    transition: stroke-dashoffset 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), stroke 1.8s ease;
+}
+@@keyframes shimmer {
+    0%   { filter: drop-shadow(0 0 6px rgba(220,53,69,0.3)); }
+    50%  { filter: drop-shadow(0 0 14px rgba(220,53,69,0.7)); }
+    100% { filter: drop-shadow(0 0 6px rgba(220,53,69,0.3)); }
+}
+.calorie-gauge-fill {
+    animation: shimmer 2.5s ease-in-out infinite;
+}
+.calorie-dot {
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
 </style>
 }
 
@@ -362,18 +431,18 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
 (function() {
     const meter = document.querySelector('.difficulty-meter');
     if (!meter) return;
-    
+
     const difficulty = parseInt(meter.dataset.difficulty) || 0;
     const icons = meter.querySelectorAll('.difficulty-icon');
     const label = document.getElementById('difficulty-label');
-    
+
     const colors = {
         low: '#20c997',    // Teal
         medium: '#ffc107', // Yellow
         high: '#fd7e14',   // Orange
         extreme: '#dc3545' // Red
     };
-    
+
     const levels = [
         "@Localizer["Beginner"]",
         "@Localizer["Easy"]",
@@ -404,6 +473,74 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
                 }
             }, index * 100);
         }
+    });
+})();
+
+// ── Calorie Gauge ──────────────────────────────────────────────────
+(function() {
+    const wrapper = document.querySelector('.calorie-gauge-wrapper');
+    if (!wrapper) return;
+
+    const calories = parseFloat(wrapper.dataset.calories);
+    const fillCircle = wrapper.querySelector('.calorie-gauge-fill');
+    const valueDisplay = wrapper.querySelector('.calorie-value-display');
+    const levelBadge = document.getElementById('calorie-level-badge');
+
+    const circumference = 2 * Math.PI * 52; // ~326.73
+
+    function getCalorieLevel(kcal) {
+        if (kcal <= 200) return { color: '#20c997', label: '@Localizer["Light"]', glow: 'rgba(32,201,151,0.4)' };
+        if (kcal <= 500) return { color: '#F59E0B', label: '@Localizer["Moderate"]', glow: 'rgba(245,158,11,0.4)' };
+        return { color: '#EF4444', label: '@Localizer["Hearty"]', glow: 'rgba(239,68,68,0.4)' };
+    }
+
+    const level = getCalorieLevel(calories);
+    const maxRef = 1000;
+    const ratio = Math.min(calories / maxRef, 1);
+    const offset = circumference * (1 - ratio);
+
+    // Animate fill
+    setTimeout(() => {
+        fillCircle.style.strokeDashoffset = offset;
+        fillCircle.style.stroke = level.color;
+        fillCircle.style.filter = 'drop-shadow(0 0 8px ' + level.glow + ')';
+    }, 200);
+
+    // Animate counter
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function animateCounter(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutCubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(calories * eased);
+        valueDisplay.textContent = current;
+        valueDisplay.style.color = level.color;
+        if (progress < 1) {
+            requestAnimationFrame(animateCounter);
+        }
+    }
+    setTimeout(() => requestAnimationFrame(animateCounter), 200);
+
+    // Badge
+    levelBadge.textContent = level.label;
+    levelBadge.style.backgroundColor = level.color;
+    levelBadge.style.color = '#fff';
+
+    // Interactive hover — pulse gauge
+    wrapper.style.cursor = 'pointer';
+    wrapper.addEventListener('mouseenter', () => {
+        fillCircle.style.transform = 'scale(1.05)';
+        fillCircle.style.transformOrigin = '60px 60px';
+        fillCircle.style.transition = 'transform 0.3s ease, stroke-dashoffset 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), stroke 1.8s ease';
+        wrapper.style.transform = 'scale(1.08)';
+        wrapper.style.transition = 'transform 0.3s ease';
+    });
+    wrapper.addEventListener('mouseleave', () => {
+        fillCircle.style.transform = 'scale(1)';
+        wrapper.style.transform = 'scale(1)';
     });
 })();
 </script>
