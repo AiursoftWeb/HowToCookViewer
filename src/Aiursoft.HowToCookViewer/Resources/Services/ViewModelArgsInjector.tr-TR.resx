@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Kahvaltı</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Kaloriye Göre</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>Yorumlara Göre</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Genel Ayarlar</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>En Yüksek Kalori</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Ana Sayfa</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Tüm özelliklere erişmek için giriş yapın.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>En Düşük Kalori</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>

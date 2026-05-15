@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Frukost</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Efter kalorier</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Beräkning</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Beräknade kalorier</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Flest kalorier</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Bilder</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Mest oomtyckt</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Färst kalorier</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Köttätter</value>

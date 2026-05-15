@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Πρωινό</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Με βάση τις θερμίδες</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Υπολογισμός</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Εκτιμώμενες Θερμίδες</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Μεγαλύτερες Θερμίδες</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Εικόνες</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Λιγότερες Αγαπήσεις</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Χαμηλότερες Θερμίδες</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Κρέατα</value>

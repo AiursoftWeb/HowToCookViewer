@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Pequeno-almoço</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Por Calorias</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Cálculo</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Calorias Estimadas</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Maior Calorias</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Imagens</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Menos Gostado</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Menor Calorias</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Pratos de Carne</value>

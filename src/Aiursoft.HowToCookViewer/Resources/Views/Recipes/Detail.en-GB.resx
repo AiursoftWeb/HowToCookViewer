@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Edit on GitHub</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Estimated Calories</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Expert</value>
   </data>
@@ -90,14 +93,23 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Hearty</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Intermediate</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Last updated:</value>
   </data>
   <data name="Legendary" xml:space="preserve">
     <value>Legendary</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -110,6 +122,9 @@
   </data>
   <data name="Master" xml:space="preserve">
     <value>Master</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Moderate</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>No comments yet. Be the first to leave one!</value>

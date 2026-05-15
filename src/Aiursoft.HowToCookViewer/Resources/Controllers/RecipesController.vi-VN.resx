@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Bữa sáng</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Theo Calo</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Tính toán</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Calo ước tính</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Nhiều Calo Nhất</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Ít được yêu thích nhất</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Ít Calo Nhất</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Các món thịt</value>

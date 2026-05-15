@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Редактировать на GitHub</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Расчетная калорийность</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Эксперт</value>
   </data>
@@ -87,11 +90,20 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Щедрые</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Средний</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>ккал</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Последнее обновление:</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Лёгкий</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -101,6 +113,9 @@
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Войдите, чтобы оставить комментарий</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Умеренный</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>Комментариев пока нет. Будьте первым, кто оставит свой комментарий!</value>

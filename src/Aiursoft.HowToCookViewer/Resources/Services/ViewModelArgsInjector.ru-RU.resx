@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Завтрак</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>По калориям</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>По комментариям</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Глобальные настройки</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Больше калорий</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Главная</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Войдите, чтобы получить доступ ко всем функциям.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Наименьшая калорийность</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Управление</value>

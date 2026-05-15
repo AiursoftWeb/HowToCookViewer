@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Mic dejun</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>După calorii</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Calculație</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Calorii estimate</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Cele mai calorice</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Imagini</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Cel mai puțin apreciat</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Cele mai puține calorii</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Feluri de carne</value>

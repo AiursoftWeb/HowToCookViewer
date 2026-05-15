@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>الإفطار</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>حسب السعرات الحرارية</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>الحساب</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>السعرات الحرارية المقدرة</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>أعلى سعرات حرارية</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>الصور</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>الأقل إعجاباً</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>أقل سعرات حرارية</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>أطباق اللحوم</value>

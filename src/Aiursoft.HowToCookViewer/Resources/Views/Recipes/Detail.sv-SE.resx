@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Redigera på GitHub</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Beräknade kalorier</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Expert</value>
   </data>
@@ -87,11 +90,20 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Hartig</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Medel</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Senast uppdaterad:</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Lätt</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -101,6 +113,9 @@
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Logga in för att kommentera</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Måttlig</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>Inga kommentarer än. Var först med att lämna en!</value>

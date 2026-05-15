@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>早餐</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>按卡路里</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>计算</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>估算卡路里</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>最高卡路里</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>图片</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>最少点赞</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>最低卡路里</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>肉类菜肴</value>

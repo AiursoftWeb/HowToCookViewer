@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>नाश्ता</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>कैलोरी के अनुसार</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>टिप्पणियों द्वारा</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>सार्वभौम सेटिंग्स</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>सबसे अधिक कैलोरी</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>होम</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>सभी सुविधाओं तक पहुँच पाने के लिए लॉगिन करें।</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>सबसे कम कैलोरी</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>प्रबंधित करें</value>

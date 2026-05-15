@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Завтрак</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>По калориям</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Расчет</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Примерное количество калорий</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Больше калорий</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Изображения</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Наименее популярные</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Наименьшее количество калорий</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Мясные блюда</value>

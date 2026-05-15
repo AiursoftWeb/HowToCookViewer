@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>อาหารเช้า</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>ตามแคลอรี</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>การคำนวณ</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>แคลอรี่โดยประมาณ</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>แคลอรี่สูงสุด</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>รูปภาพ</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>ชื่นชอบน้อยที่สุด</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>แคลอรี่ต่ำสุด</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>อาหารเนื้อ</value>
