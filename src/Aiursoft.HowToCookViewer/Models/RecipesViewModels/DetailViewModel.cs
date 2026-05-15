@@ -38,4 +38,6 @@ public class DetailViewModel : UiStackLayoutViewModel
 
     /// <summary>Git contributors for this recipe.</summary>
     public List<ContributorViewModel> Contributors { get; set; } = [];
+
+    public bool ShowSimilarRecipesButton { get; set; }
 }

@@ -136,4 +136,10 @@
     <value>Write your comment…</value>
   </data>
 
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>Similar Recipes</value>
+  </data>
+  <data name="Failed to load similar recipes." xml:space="preserve">
+    <value>Failed to load similar recipes.</value>
+  </data>
 </root>

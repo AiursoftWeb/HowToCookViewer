@@ -21,6 +21,8 @@ public class RecipesController(
     GlobalSettingsService globalSettingsService,
     RecipeLocalizationService recipeLocalization,
     RecipeContributorService recipeContributorService,
+    RecipeEmbeddingCache embeddingCache,
+    RecipeVectorSearchService vectorSearchService,
     IStringLocalizer<RecipesController> localizer) : Controller
 {
     internal static readonly Dictionary<string, string> CategoryLocalizerKeys =
@@ -262,7 +264,22 @@ public class RecipesController(
             GitHubHistoryUrl = gitHubHistoryUrl,
             CategoryDisplayName = GetDisplayName(recipe.Category, null, null),
             LocalizedRecipe = localized,
-            Contributors = contributors
+            Contributors = contributors,
+            ShowSimilarRecipesButton = embeddingCache.Count > 0 && embeddingCache.Count >= await db.Recipes.CountAsync()
+        });
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Similar(int id)
+    {
+        var recipes = await vectorSearchService.GetSimilarRecipesAsync(db.Recipes, id, 20);
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+        return PartialView("_RecipeCards", new RecipeCardsViewModel
+        {
+            Recipes = recipes,
+            LikeCounts = await LoadLikeCountsAsync(recipes),
+            LocalizedNames = localizedNames,
+            LocalizedDescriptions = localizedDescs
         });
     }
 

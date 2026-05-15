@@ -87,6 +87,44 @@ public class RecipeVectorSearchService(
         return (true, ordered, total);
     }
 
+    public async Task<List<Recipe>> GetSimilarRecipesAsync(
+        IQueryable<Recipe> baseQuery,
+        int recipeId,
+        int take,
+        CancellationToken ct = default)
+    {
+        var snapshot = cache.Snapshot();
+        if (!snapshot.TryGetValue(recipeId, out var targetVector))
+        {
+            return [];
+        }
+
+        var topIds = snapshot
+            .Where(kv => kv.Key != recipeId)
+            .Select(kv => (RecipeId: kv.Key, Score: CosineSimilarity(targetVector, kv.Value)))
+            .OrderByDescending(x => x.Score)
+            .Take(take)
+            .Select(x => x.RecipeId)
+            .ToList();
+
+        if (topIds.Count == 0)
+        {
+            return [];
+        }
+
+        var recipes = await baseQuery
+            .Include(r => r.Images)
+            .Where(r => topIds.Contains(r.Id))
+            .ToListAsync(ct);
+
+        var recipeMap = recipes.ToDictionary(r => r.Id);
+        return topIds
+            .Select(id => recipeMap.GetValueOrDefault(id))
+            .Where(r => r != null)
+            .Cast<Recipe>()
+            .ToList();
+    }
+
     private async Task<bool> ShouldAttemptVectorSearch()
     {
         var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.UseAiSearch);
