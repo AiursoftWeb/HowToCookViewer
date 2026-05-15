@@ -153,6 +153,9 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 연동</value>
   </data>
+  <data name="Page navigation" xml:space="preserve">
+    <value>Page navigation</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC 인증</value>
   </data>
@@ -165,6 +168,12 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>반응형 디자인</value>
   </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>강력한 통합 테스팅</value>
   </data>
@@ -176,6 +185,12 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>검색</value>
+  </data>
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
+  </data>
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>AI(벡터 데이터베이스) 기반 검색</value>
   </data>
   <data name="Search Recipes" xml:space="preserve">
     <value>레시피 검색</value>
@@ -223,17 +238,4 @@
     <value>Aiursoft 템플릿을 사용하는 이유는 무엇인가요?</value>
   </data>
 
-  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
-    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
-  </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
-
-  <data name="Page navigation" xml:space="preserve">
-    <value>Page navigation</value>
-  </data>
 </root>

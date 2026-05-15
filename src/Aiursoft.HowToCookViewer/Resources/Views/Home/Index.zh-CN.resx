@@ -18,98 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="AI-Translated" xml:space="preserve">
-    <value>AI 翻译</value>
-  </data>
-  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
-    <value>所有菜谱均来自 HowToCook 开源项目，任何人均可贡献、改进或 Fork。</value>
-  </data>
-  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
-    <value>食谱和此查看器均为开源。透明、协作，且永久免费。</value>
-  </data>
-  <data name="Browse All Recipes" xml:space="preserve">
-    <value>浏览所有菜谱</value>
-  </data>
-  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
-    <value>浏览配有精美封面图和详细步骤图解的菜谱。</value>
-  </data>
-  <data name="Browse what the community loves most." xml:space="preserve">
-    <value>发现社区最喜爱的菜肴。</value>
-  </data>
-  <data name="Community Driven" xml:space="preserve">
-    <value>社区驱动</value>
-  </data>
-  <data name="Community Favourites" xml:space="preserve">
-    <value>社区最爱</value>
-  </data>
-  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
-    <value>社区贡献、AI 翻译、永久免费。</value>
-  </data>
-  <data name="Cook with Confidence." xml:space="preserve">
-    <value>自信烹饪</value>
-  </data>
-  <data name="Edit on GitHub" xml:space="preserve">
-    <value>在 GitHub 上编辑</value>
-  </data>
-  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
-    <value>每道菜谱均通过 AI 自动翻译成 27 种语言，让您用母语烹饪。</value>
-  </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>探索 {0} 道开源菜谱</value>
-  </data>
-  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
-    <value>探索数千道免费社区菜谱</value>
-  </data>
-  <data name="Free Forever" xml:space="preserve">
-    <value>永久免费</value>
-  </data>
-  <data name="Free Software" xml:space="preserve">
-    <value>自由软件</value>
-  </data>
-  <data name="is Free Software" xml:space="preserve">
-    <value>是自由软件</value>
-  </data>
-  <data name="Fully Open Source" xml:space="preserve">
-    <value>完全开源</value>
-  </data>
-  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
-    <value>点赞、收藏并评论您喜爱的菜谱，与社区分享烹饪心得。</value>
-  </data>
-  <data name="MIT License" xml:space="preserve">
-    <value>MIT 许可证</value>
-  </data>
-  <data name="Most Loved Recipes" xml:space="preserve">
-    <value>最受喜爱的菜谱</value>
-  </data>
-  <data name="Open Source" xml:space="preserve">
-    <value>开源</value>
-  </data>
-  <data name="Powerful Search" xml:space="preserve">
-    <value>强大搜索</value>
-  </data>
-  <data name="Rich with Photos" xml:space="preserve">
-    <value>图文并茂</value>
-  </data>
-  <data name="Search" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
-    <value>通过食材、菜名或分类搜索，精准找到您今天想烹饪的菜肴。</value>
-  </data>
-  <data name="Search recipes placeholder" xml:space="preserve">
-    <value>搜索菜谱（如 西红柿、鸡蛋、豆腐…）</value>
-  </data>
-  <data name="Self Host" xml:space="preserve">
-    <value>本地部署菜谱浏览器</value>
-  </data>
-  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
-    <value>发现错误或想改进菜谱？直接在 GitHub 上修改，帮助整个社区。</value>
-  </data>
-  <data name="What Makes It Special" xml:space="preserve">
-    <value>有什么特别之处</value>
-  </data>
-
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>支持&quot;即发即忘&quot;的长时间运行任务（如邮件或 AI），提供队列管理、并行处理和取消功能的图形界面。</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -127,6 +36,15 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>为您的下一个 Web 应用提供的现代化、功能丰富且高度可扩展的基础框架。</value>
   </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>顶级托管服务提供商</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>使用 Aiursoft Template 实现更多可能</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>自带管理后台</value>
+  </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>AI 驱动翻译</value>
   </data>
@@ -136,20 +54,20 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI 驱动翻译</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>使用 Aiursoft Template 实现更多可能</value>
-  </data>
-  <data name="Admin site included" xml:space="preserve">
-    <value>自带管理后台</value>
+  <data name="AI-Translated" xml:space="preserve">
+    <value>AI 翻译</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
   </data>
-  <data name="Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template 是我们企业项目的首选！它为开发者而生，轻量而强大。我们可以跳过所有认证和用户管理的样板代码。</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>所有依赖项自动注册，始终可通过构造函数注入获取。</value>
+  </data>
+  <data name="All recipes come from the HowToCook open-source project. Anyone can contribute, improve, or fork it." xml:space="preserve">
+    <value>所有菜谱均来自 HowToCook 开源项目，任何人均可贡献、改进或 Fork。</value>
   </data>
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
@@ -163,11 +81,11 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik 与 Okta</value>
   </data>
-  <data name="Auto Deployment" xml:space="preserve">
-    <value>自动部署</value>
-  </data>
   <data name="Auto compression and privacy" xml:space="preserve">
     <value>自动压缩与隐私保护</value>
+  </data>
+  <data name="Auto Deployment" xml:space="preserve">
+    <value>自动部署</value>
   </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>通过 AI 自动翻译为 28 种语言。</value>
@@ -208,6 +126,18 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>双语教程</value>
   </data>
+  <data name="Both the recipes and this viewer are open-source. Transparent, collaborative, and free forever." xml:space="preserve">
+    <value>食谱和此查看器均为开源。透明、协作，且永久免费。</value>
+  </data>
+  <data name="Browse All Recipes" xml:space="preserve">
+    <value>浏览所有菜谱</value>
+  </data>
+  <data name="Browse recipes with beautiful cover photos and detailed step-by-step visual instructions." xml:space="preserve">
+    <value>浏览配有精美封面图和详细步骤图解的菜谱。</value>
+  </data>
+  <data name="Browse what the community loves most." xml:space="preserve">
+    <value>发现社区最喜爱的菜肴。</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>一次构建，随处运行。完全容器化架构。</value>
   </data>
@@ -226,6 +156,9 @@
   <data name="Built-in" xml:space="preserve">
     <value>内置</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>内置管理面板</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>内置认证</value>
   </data>
@@ -235,8 +168,8 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>内置用户管理</value>
   </data>
-  <data name="Built-in administration panel" xml:space="preserve">
-    <value>内置管理面板</value>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>内置 Docker 支持，实现简洁一致的部署。</value>
@@ -246,6 +179,15 @@
   </data>
   <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
     <value>自带严格的单元测试，使测试驱动开发变得轻松。</value>
+  </data>
+  <data name="Community Driven" xml:space="preserve">
+    <value>社区驱动</value>
+  </data>
+  <data name="Community Favourites" xml:space="preserve">
+    <value>社区最爱</value>
+  </data>
+  <data name="Community-sourced, AI-translated, and free forever." xml:space="preserve">
+    <value>社区贡献、AI 翻译、永久免费。</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>完善的文档</value>
@@ -258,6 +200,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性验证</value>
+  </data>
+  <data name="Cook with Confidence." xml:space="preserve">
+    <value>自信烹饪</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>轻松协作</value>
@@ -277,11 +222,11 @@
   <data name="Custom development required" xml:space="preserve">
     <value>需要自定义开发</value>
   </data>
-  <data name="Dashboard Website" xml:space="preserve">
-    <value>控制面板网站</value>
-  </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>后台任务仪表板</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>控制面板网站</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
     <value>首日合规与安全。</value>
@@ -307,14 +252,14 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>开发与生产</value>
   </data>
-  <data name="DevOps Native" xml:space="preserve">
-    <value>原生 DevOps</value>
-  </data>
-  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user's local time zone." xml:space="preserve">
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>统一使用 UTC 开发，系统自动转换并以用户本地时区显示日期。</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>开发者体验</value>
+  </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>原生 DevOps</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>讨论页面</value>
@@ -336,6 +281,9 @@
   </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>轻松切换数据库提供程序，如 SQLite、MySQL、SQL Server 以及用于测试的内存数据库。</value>
+  </data>
+  <data name="Edit on GitHub" xml:space="preserve">
+    <value>在 GitHub 上编辑</value>
   </data>
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>使用内存数据库、临时文件系统、内置 Mock 和真实 HTTP 请求模拟，轻松编写集成测试。</value>
@@ -361,8 +309,20 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>包含 Entity Framework Core</value>
   </data>
+  <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
+    <value>每道菜谱均通过 AI 自动翻译成 27 种语言，让您用母语烹饪。</value>
+  </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>探索 {0} 道开源菜谱</value>
+  </data>
+  <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
+    <value>探索数千道免费社区菜谱</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>更快</value>
   </data>
   <data name="Features" xml:space="preserve">
     <value>特性</value>
@@ -382,6 +342,9 @@
   <data name="Flexible API" xml:space="preserve">
     <value>灵活的 API</value>
   </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>如有任何疑问或报告问题。</value>
+  </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Aiursoft 创始人兼架构师</value>
   </data>
@@ -393,6 +356,12 @@
   </data>
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>免费商用</value>
+  </data>
+  <data name="Free Forever" xml:space="preserve">
+    <value>永久免费</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>自由软件</value>
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>常见问题</value>
@@ -412,11 +381,14 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>完全离线</value>
   </data>
-  <data name="Generic Dockerfile only" xml:space="preserve">
-    <value>仅通用 Dockerfile</value>
+  <data name="Fully Open Source" xml:space="preserve">
+    <value>完全开源</value>
   </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>通用配置</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>仅通用 Dockerfile</value>
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
@@ -448,7 +420,7 @@
   <data name="Here are some of the answers you might be looking for." xml:space="preserve">
     <value>以下是您可能正在寻找的一些答案。</value>
   </data>
-  <data name="Here's what developers from our community have to say." xml:space="preserve">
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>以下是社区开发者的真实反馈。</value>
   </data>
   <data name="High Quality" xml:space="preserve">
@@ -463,7 +435,7 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>如何部署我的应用？</value>
   </data>
-  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn't just a template; it's the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>我构建 Aiursoft Template 是因为厌倦了为每个新企业项目重复设置相同的认证、日志和 CI/CD 流水线。这不只是模板，而是多年高并发生产环境所凝练的最佳实践。它让我的团队跳过繁琐的初始化，直接进入业务逻辑。</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
@@ -472,11 +444,11 @@
   <data name="Included" xml:space="preserve">
     <value>内置</value>
   </data>
-  <data name="Includes Tutorials" xml:space="preserve">
-    <value>包含教程</value>
-  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>包含详尽的文档和实用示例，助您快速上手。</value>
+  </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>包含教程</value>
   </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>集成文件管理</value>
@@ -486,6 +458,9 @@
   </data>
   <data name="Interoperability" xml:space="preserve">
     <value>互操作性</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>是自由软件</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Template 免费吗？</value>
@@ -502,11 +477,11 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm 就绪</value>
   </data>
+  <data name="Like, save, and comment on the recipes you love. Share your cooking experience with the community." xml:space="preserve">
+    <value>点赞、收藏并评论您喜爱的菜谱，与社区分享烹饪心得。</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>代码规范检查</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MIT 许可证</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>保持高代码质量</value>
@@ -517,8 +492,17 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 转 HTML</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT 许可证</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT 许可证</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>模型基于数据注解在客户端和服务器端双重验证。</value>
+  </data>
+  <data name="Most Loved Recipes" xml:space="preserve">
+    <value>最受喜爱的菜谱</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>多时区处理</value>
@@ -541,6 +525,12 @@
   <data name="Needs Celery + Flower" xml:space="preserve">
     <value>需要 Celery + Flower</value>
   </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>需要复杂的认证逻辑</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>需要配置/插件</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>需要 ESLint/Prettier 配置</value>
   </data>
@@ -549,6 +539,9 @@
   </data>
   <data name="Needs Laravel Sail" xml:space="preserve">
     <value>需要 Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>需要手动配置</value>
   </data>
   <data name="Needs Medialibrary" xml:space="preserve">
     <value>需要 Medialibrary</value>
@@ -562,35 +555,26 @@
   <data name="Needs Spring Security config" xml:space="preserve">
     <value>需要 Spring Security 配置</value>
   </data>
-  <data name="Needs TypeORM or similar" xml:space="preserve">
-    <value>需要 TypeORM 或类似方案</value>
-  </data>
-  <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>需要复杂的认证逻辑</value>
-  </data>
-  <data name="Needs config/plugins" xml:space="preserve">
-    <value>需要配置/插件</value>
-  </data>
-  <data name="Needs manual configuration" xml:space="preserve">
-    <value>需要手动配置</value>
-  </data>
   <data name="Needs third-party plugins" xml:space="preserve">
     <value>需要第三方插件</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>需要 TypeORM 或类似方案</value>
   </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>不依赖任何云厂商，随时随地运行。</value>
   </data>
-  <data name="OIDC &amp; SSO" xml:space="preserve">
-    <value>OIDC 与单点登录</value>
-  </data>
-  <data name="ORM &amp; Migrations" xml:space="preserve">
-    <value>ORM 与迁移</value>
-  </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>支持离线</value>
   </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC 与单点登录</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>一键启动</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>开源</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
@@ -598,17 +582,23 @@
   <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
     <value>优化的 Docker 与 K8s 配置</value>
   </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM 与迁移</value>
+  </data>
   <data name="Out-of-the-box" xml:space="preserve">
     <value>开箱即用</value>
   </data>
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>权限发现与同步</value>
   </data>
-  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
-    <value>专为 GitLab 预配置的 CI/CD 流水线。</value>
+  <data name="Powerful Search" xml:space="preserve">
+    <value>强大搜索</value>
   </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>预配置并测试完毕</value>
+  </data>
+  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
+    <value>专为 GitLab 预配置的 CI/CD 流水线。</value>
   </data>
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>预配置的开发/生产流水线</value>
@@ -634,6 +624,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>评价</value>
   </data>
+  <data name="Rich with Photos" xml:space="preserve">
+    <value>图文并茂</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>健壮的集成测试</value>
   </data>
@@ -646,8 +639,23 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供程序，支持自动角色同步。</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search by ingredient, dish name, or category to find exactly what you want to cook today." xml:space="preserve">
+    <value>通过食材、菜名或分类搜索，精准找到您今天想烹饪的菜肴。</value>
+  </data>
+  <data name="Search recipes placeholder" xml:space="preserve">
+    <value>搜索菜谱（如 西红柿、鸡蛋、豆腐…）</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>本地部署菜谱浏览器</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>自信转变</value>
+  </data>
+  <data name="Sign up today!" xml:space="preserve">
+    <value>立即注册！</value>
   </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>简单易用</value>
@@ -658,25 +666,31 @@
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智能配置覆盖</value>
   </data>
-  <data name="Smart dark mode that adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，适应用户系统设置。</value>
   </data>
-  <data name="Smart dark mode that automatically adapts to the user's system settings." xml:space="preserve">
+  <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，自动适应用户系统设置。</value>
   </data>
-  <data name="Standard OpenID" xml:space="preserve">
-    <value>标准 OpenID</value>
+  <data name="Special Thanks!" xml:space="preserve">
+    <value>特别感谢！</value>
+  </data>
+  <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
+    <value>发现错误或想改进菜谱？直接在 GitHub 上修改，帮助整个社区。</value>
   </data>
   <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
     <value>标准实现，无需重新编译即可切换提供程序。</value>
   </data>
-  <data name="Start Shipping Value." xml:space="preserve">
-    <value>开始创造价值。</value>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>标准 OpenID</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>
   </data>
-  <data name="Start with a single 'docker run' command." xml:space="preserve">
+  <data name="Start Shipping Value." xml:space="preserve">
+    <value>开始创造价值。</value>
+  </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>一条 docker run 命令即可启动。</value>
   </data>
   <data name="Starts without any configuration" xml:space="preserve">
@@ -688,23 +702,23 @@
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>严格的代码规范</value>
   </data>
-  <data name="Strict Unit Testing" xml:space="preserve">
-    <value>严格的单元测试</value>
-  </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
     <value>默认严格的代码规范规则，零警告。</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>默认项目中零警告的严格代码规范。</value>
   </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>严格的单元测试</value>
+  </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
     <value>高度一致的代码规范</value>
   </data>
-  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
-    <value>支持 JetBrains Rider 轻松修复代码风格。</value>
-  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>同时支持环境变量和数据库存储的设置，环境变量自动优先以实现无缝覆盖。</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>支持 JetBrains Rider 轻松修复代码风格。</value>
   </data>
   <data name="Task Runner" xml:space="preserve">
     <value>任务运行器</value>
@@ -712,14 +726,17 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>技术负责人</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>设计理念</value>
-  </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we've solved the hard parts so you don't have to." xml:space="preserve">
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>经过实战检验的权威 .NET 企业级基础框架。从认证到 AI，我们解决了难题，您无需操心。</value>
+  </data>
+  <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
+    <value>The HowToCook 服务器由</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>导航栏根据用户角色和权限自动调整。</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>设计理念</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>模板专为轻松部署而构建。它包含完整的 Docker 支持，因此您可以容器化应用并在任何地方运行，也可以直接部署到 IIS、Azure App Service 或任何支持 ASP.NET Core 的服务器。</value>
@@ -733,7 +750,7 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>时区感知字段</value>
   </data>
-  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don't just share this code; we run our entire business on it." xml:space="preserve">
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>被 AnduinOS、StatHub 和 Warp 等生产级应用所信赖。我们不止共享这些代码，我们整个业务都运行在它上面。</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
@@ -751,11 +768,17 @@
   <data name="View on GitHub" xml:space="preserve">
     <value>在 GitHub 上查看</value>
   </data>
+  <data name="Voxihost" xml:space="preserve">
+    <value>Voxihost</value>
+  </data>
   <data name="Welcome" xml:space="preserve">
     <value>欢迎</value>
   </data>
   <data name="What do I need to get started?" xml:space="preserve">
     <value>开始需要什么？</value>
+  </data>
+  <data name="What Makes It Special" xml:space="preserve">
+    <value>有什么特别之处</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>开发者心声</value>
@@ -775,10 +798,10 @@
   <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
     <value>您可以通过 GitHub Discussions 获取社区支持。请访问我们的</value>
   </data>
-  <data name="You'll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要 .NET 10 SDK、npm 以及您喜欢的 IDE，如 Visual Studio 或 JetBrains Rider。完整配置指南请参阅文档。</value>
   </data>
-  <data name="Your enterprise users don't need to register repeatedly." xml:space="preserve">
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>企业用户无需重复注册。</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
@@ -793,14 +816,5 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>零容忍代码规范</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>更快</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>如有任何疑问或报告问题。</value>
-  </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
 </root>

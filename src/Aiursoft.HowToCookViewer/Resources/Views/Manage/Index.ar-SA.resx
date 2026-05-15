@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>تغيير ملفك الشخصي</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
   </data>
@@ -55,7 +58,4 @@
     <value>لا يمكنك تغيير كلمة المرور لأن المصادقة المحلية معطلة. يرجى تعديل ملفك الشخصي من مزود المصادقة.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

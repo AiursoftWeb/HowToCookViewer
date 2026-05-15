@@ -57,6 +57,12 @@
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>تفعيل البحث المتجهي الدلالي للوصفات باستخدام نموذج التضمين. يتطلب تكوين نقطة نهاية Ollama ونموذج التضمين.</value>
   </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>عنوان URL لمستودع Git الاحتياطي المستخدم عند انتهاء مهلة الاتصال بالعنوان الأساسي.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>رابط النسخ الاحتياطي لمستودع HowToCook</value>
+  </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>رابط مستودع HowToCook</value>
   </data>

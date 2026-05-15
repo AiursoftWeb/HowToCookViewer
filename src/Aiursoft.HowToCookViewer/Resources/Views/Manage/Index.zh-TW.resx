@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>變更個人資料</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>密碼</value>
   </data>
@@ -55,7 +58,4 @@
     <value>由於本地驗證已停用，您無法變更密碼。請從驗證提供者編輯您的個人資料。</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>關閉</value>
-  </data>
 </root>

@@ -57,6 +57,12 @@
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>启用基于嵌入模型的菜谱语义向量搜索。需要配置 Ollama 端点和嵌入模型。</value>
   </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>当主仓库地址连接超时时使用的备用 Git 仓库 URL。</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook 备用仓库地址</value>
+  </data>
   <data name="HowToCook Repo URL" xml:space="preserve">
     <value>HowToCook 仓库地址</value>
   </data>
@@ -119,13 +125,6 @@
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>使用 AI 搜索</value>
-  </data>
-
-  <data name="HowToCook Repo Backup URL" xml:space="preserve">
-    <value>HowToCook 备用仓库地址</value>
-  </data>
-  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
-    <value>当主仓库地址连接超时时使用的备用 Git 仓库 URL。</value>
   </data>
 
 </root>

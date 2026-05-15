@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
+      <data name="/ 5" xml:space="preserve">
+    <value>/ 5</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Zaawansowany</value>
+  </data>
+  <data name="All Recipes" xml:space="preserve">
     <value>Wszystkie przepisy</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonymous</value>
   </data>
   <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
     <value>Czy na pewno chcesz usunąć tę opinię i wszystkie jej odpowiedzi?</value>
@@ -27,11 +36,23 @@
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
     <value>Czy na pewno chcesz usunąć tę odpowiedź?</value>
   </data>
+  <data name="Beginner" xml:space="preserve">
+    <value>Początkujący</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Calculating..." xml:space="preserve">
+    <value>Obliczanie...</value>
+  </data>
   <data name="Change History" xml:space="preserve">
     <value>Historia zmian</value>
   </data>
   <data name="Click here to view the legal information." xml:space="preserve">
     <value>Kliknij tutaj, aby zobaczyć informacje prawne.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Komentarze</value>
@@ -48,11 +69,35 @@
   <data name="Delete" xml:space="preserve">
     <value>Usuń</value>
   </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Poziom trudności</value>
+  </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Łatwy</value>
+  </data>
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Edytuj na GitHubie</value>
   </data>
+  <data name="Expert" xml:space="preserve">
+    <value>Ekspert</value>
+  </data>
+  <data name="Favorite" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="Favorited" xml:space="preserve">
+    <value>Favorited</value>
+  </data>
+  <data name="Intermediate" xml:space="preserve">
+    <value>Średniozaawansowany</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Ostatnia aktualizacja:</value>
+  </data>
+  <data name="Like" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="Liked" xml:space="preserve">
+    <value>Liked</value>
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Zaloguj się, aby skomentować</value>
@@ -66,42 +111,20 @@
   <data name="Reply" xml:space="preserve">
     <value>Odpowiedz</value>
   </data>
+  <data name="Reply to {0}..." xml:space="preserve">
+    <value>Reply to {0}...</value>
+  </data>
   <data name="Send Reply" xml:space="preserve">
     <value>Wyślij odpowiedź</value>
   </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>Prawa autorskie do tego przepisu należą do społeczności i są upublicznione na licencji The Unlicense — wolne do wykorzystania w dowolnym celu bez żadnych ograniczeń.</value>
   </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nieznany</value>
+  </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Napisz swój komentarz…</value>
   </data>
 
-  <data name="Anonymous" xml:space="preserve">
-    <value>Anonymous</value>
-  </data>
-  <data name="Favorite" xml:space="preserve">
-    <value>Favorite</value>
-  </data>
-  <data name="Favorited" xml:space="preserve">
-    <value>Favorited</value>
-  </data>
-  <data name="Like" xml:space="preserve">
-    <value>Like</value>
-  </data>
-  <data name="Liked" xml:space="preserve">
-    <value>Liked</value>
-  </data>
-  <data name="Reply to {0}..." xml:space="preserve">
-    <value>Reply to {0}...</value>
-  </data>
-
-  <data name="/ 5" xml:space="preserve">
-    <value>/ 5</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

@@ -24,6 +24,9 @@
   <data name="About HowToCook Viewer" xml:space="preserve">
     <value>О просмотре HowToCook Viewer</value>
   </data>
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
   <data name="Always create a personal fork before submitting PRs." xml:space="preserve">
     <value>Всегда создавайте личный форк перед отправкой PR.</value>
   </data>
@@ -35,6 +38,9 @@
   </data>
   <data name="Binary path" xml:space="preserve">
     <value>Путь к исполняемому файлу</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
   </data>
   <data name="Config path" xml:space="preserve">
     <value>Путь к конфигурации</value>
@@ -54,6 +60,9 @@
   <data name="Development &amp; Manual Run" xml:space="preserve">
     <value>Разработка и ручной запуск</value>
   </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker Pulls</value>
+  </data>
   <data name="Execute `dotnet run` to run the app." xml:space="preserve">
     <value>Выполните `dotnet run`, чтобы запустить приложение.</value>
   </data>
@@ -62,6 +71,12 @@
   </data>
   <data name="First, install Docker. Then run the following commands in a Linux shell:" xml:space="preserve">
     <value>Сначала установите Docker. Затем выполните следующие команды в оболочке Linux:</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
   </data>
   <data name="HowToCook Viewer is a visualization and website of HowToCook." xml:space="preserve">
     <value>HowToCook Viewer — это визуализация и веб-сайт проекта HowToCook.</value>
@@ -72,6 +87,9 @@
   <data name="Live Demo" xml:space="preserve">
     <value>Демо-версия</value>
   </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT licensed</value>
+  </data>
   <data name="Node.js" xml:space="preserve">
     <value>Node.js</value>
   </data>
@@ -80,6 +98,9 @@
   </data>
   <data name="Or with a custom port:" xml:space="preserve">
     <value>Или с нестандартным портом:</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>Pipeline stat</value>
   </data>
   <data name="Ports" xml:space="preserve">
     <value>Порты</value>
@@ -117,6 +138,9 @@
   <data name="Self Host" xml:space="preserve">
     <value>Разверните у себя</value>
   </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>Test Coverage</value>
+  </data>
   <data name="That will start a web server at http://localhost:5000 and you can test the app." xml:space="preserve">
     <value>Это запустит веб-сервер по адресу http://localhost:5000, и вы сможете протестировать приложение.</value>
   </data>
@@ -136,28 +160,4 @@
     <value>Нам важен ваш отзыв! Вы можете отправить предложение или запрос новой функции через трекер задач.</value>
   </data>
 
-  <data name="Aiursoft" xml:space="preserve">
-    <value>Aiursoft</value>
-  </data>
-  <data name="Docker Pulls" xml:space="preserve">
-    <value>Docker Pulls</value>
-  </data>
-  <data name="GitHub" xml:space="preserve">
-    <value>GitHub</value>
-  </data>
-  <data name="HowToCook" xml:space="preserve">
-    <value>HowToCook</value>
-  </data>
-  <data name="MIT licensed" xml:space="preserve">
-    <value>MIT licensed</value>
-  </data>
-  <data name="Pipeline stat" xml:space="preserve">
-    <value>Pipeline stat</value>
-  </data>
-  <data name="Test Coverage" xml:space="preserve">
-    <value>Test Coverage</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>

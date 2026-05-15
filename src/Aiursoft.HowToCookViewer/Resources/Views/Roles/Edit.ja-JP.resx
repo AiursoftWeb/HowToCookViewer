@@ -21,6 +21,9 @@
       <data name="Back to List" xml:space="preserve">
     <value>一覧に戻る</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>編集</value>
   </data>
@@ -55,7 +58,4 @@
     <value>警告！</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

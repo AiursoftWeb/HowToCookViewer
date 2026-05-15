@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Modifica il tuo profilo</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Non puoi cambiare la tua password perché l&apos;autenticazione locale è disabilitata. Modifica il tuo profilo dal provider di autenticazione.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

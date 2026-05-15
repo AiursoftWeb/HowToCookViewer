@@ -36,6 +36,9 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>一個現代化、功能豐富且高度可擴展嘅基礎，為您嘅下一個網頁應用程式提供強大支援。</value>
   </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>頂級主機服務供應商</value>
+  </data>
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>使用 Aiursoft 模板成就更多</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>內建用戶管理</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>內建 Docker 支援，可簡化並確保部署的一致性。</value>
@@ -648,6 +654,9 @@
   <data name="Shift with confidence" xml:space="preserve">
     <value>放心轉移</value>
   </data>
+  <data name="Sign up today!" xml:space="preserve">
+    <value>今日註冊！</value>
+  </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>簡單而容易</value>
   </data>
@@ -662,6 +671,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，會自動適應使用者嘅系統設定。</value>
+  </data>
+  <data name="Special Thanks!" xml:space="preserve">
+    <value>特別感謝！</value>
   </data>
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>發現錯誤或想改進食譜？直接在 GitHub 上編輯，幫助整個社群。</value>
@@ -717,6 +729,9 @@
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>最穩健、經過實戰考驗的 .NET 企業級基礎架構。從身份認證到人工智能，我們已解決所有難題，讓你無需再煩惱。</value>
   </data>
+  <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
+    <value>The HowToCook server is proudly sponsored by</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>導覽列會根據用戶角色同權限自動調整。</value>
   </data>
@@ -752,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>在 GitHub 查看</value>
+  </data>
+  <data name="Voxihost" xml:space="preserve">
+    <value>Voxihost</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>歡迎</value>
@@ -799,7 +817,4 @@
     <value>零容忍代碼檢查</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>關閉</value>
-  </data>
 </root>

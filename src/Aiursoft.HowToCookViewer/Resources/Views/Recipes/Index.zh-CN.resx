@@ -24,6 +24,9 @@
   <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
     <value>任何人都可以自由地在 HowToCook 中添加或编辑食谱——只需在 GitHub 上 fork 该仓库，进行修改，然后提交拉取请求即可。您的食谱将向所有人开放！</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>难度</value>
   </data>
@@ -43,7 +46,4 @@
     <value>共 {0} 道菜谱</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>关闭</value>
-  </data>
 </root>

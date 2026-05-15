@@ -24,6 +24,9 @@
   <data name="About HowToCook Viewer" xml:space="preserve">
     <value>關於 HowToCook Viewer</value>
   </data>
+  <data name="Aiursoft" xml:space="preserve">
+    <value>Aiursoft</value>
+  </data>
   <data name="Always create a personal fork before submitting PRs." xml:space="preserve">
     <value>提交 PR 前請先建立個人 fork</value>
   </data>
@@ -35,6 +38,9 @@
   </data>
   <data name="Binary path" xml:space="preserve">
     <value>二進制路徑</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>麵包屑導航</value>
   </data>
   <data name="Config path" xml:space="preserve">
     <value>配置路徑</value>
@@ -54,6 +60,9 @@
   <data name="Development &amp; Manual Run" xml:space="preserve">
     <value>開發及手動運行</value>
   </data>
+  <data name="Docker Pulls" xml:space="preserve">
+    <value>Docker 拉取</value>
+  </data>
   <data name="Execute `dotnet run` to run the app." xml:space="preserve">
     <value>執行 `dotnet run` 以運行應用程式。</value>
   </data>
@@ -62,6 +71,12 @@
   </data>
   <data name="First, install Docker. Then run the following commands in a Linux shell:" xml:space="preserve">
     <value>首先，安裝 Docker。然後在 Linux shell 中執行以下命令：</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="HowToCook" xml:space="preserve">
+    <value>HowToCook</value>
   </data>
   <data name="HowToCook Viewer is a visualization and website of HowToCook." xml:space="preserve">
     <value>HowToCook Viewer 是 HowToCook 的視覺化及網站。</value>
@@ -72,6 +87,9 @@
   <data name="Live Demo" xml:space="preserve">
     <value>即時示範</value>
   </data>
+  <data name="MIT licensed" xml:space="preserve">
+    <value>MIT 許可</value>
+  </data>
   <data name="Node.js" xml:space="preserve">
     <value>Node.js</value>
   </data>
@@ -80,6 +98,9 @@
   </data>
   <data name="Or with a custom port:" xml:space="preserve">
     <value>或指定自訂連接埠：</value>
+  </data>
+  <data name="Pipeline stat" xml:space="preserve">
+    <value>流水線狀態</value>
   </data>
   <data name="Ports" xml:space="preserve">
     <value>連接埠</value>
@@ -117,6 +138,9 @@
   <data name="Self Host" xml:space="preserve">
     <value>自行託管</value>
   </data>
+  <data name="Test Coverage" xml:space="preserve">
+    <value>測試覆蓋率</value>
+  </data>
   <data name="That will start a web server at http://localhost:5000 and you can test the app." xml:space="preserve">
     <value>這將啟動位於 http://localhost:5000 的網頁伺服器，您可以測試該應用程式。</value>
   </data>
@@ -136,28 +160,4 @@
     <value>我們重視您的反饋！您可以透過問題追蹤器提交建議或功能請求。</value>
   </data>
 
-  <data name="Aiursoft" xml:space="preserve">
-    <value>Aiursoft</value>
-  </data>
-  <data name="Docker Pulls" xml:space="preserve">
-    <value>Docker 拉取</value>
-  </data>
-  <data name="GitHub" xml:space="preserve">
-    <value>GitHub</value>
-  </data>
-  <data name="HowToCook" xml:space="preserve">
-    <value>HowToCook</value>
-  </data>
-  <data name="MIT licensed" xml:space="preserve">
-    <value>MIT 許可</value>
-  </data>
-  <data name="Pipeline stat" xml:space="preserve">
-    <value>流水線狀態</value>
-  </data>
-  <data name="Test Coverage" xml:space="preserve">
-    <value>測試覆蓋率</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>麵包屑導航</value>
-  </data>
 </root>

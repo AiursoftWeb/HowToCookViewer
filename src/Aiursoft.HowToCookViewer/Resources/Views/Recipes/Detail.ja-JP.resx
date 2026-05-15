@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Recipes" xml:space="preserve">
+      <data name="/ 5" xml:space="preserve">
+    <value>/ 5</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>上級</value>
+  </data>
+  <data name="All Recipes" xml:space="preserve">
     <value>すべてのレシピ</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonymous</value>
   </data>
   <data name="Are you sure you want to delete this comment and all its replies?" xml:space="preserve">
     <value>このコメントとそのすべての返信を削除してもよろしいですか？</value>
@@ -27,11 +36,23 @@
   <data name="Are you sure you want to delete this reply?" xml:space="preserve">
     <value>この返信を削除してもよろしいですか？</value>
   </data>
+  <data name="Beginner" xml:space="preserve">
+    <value>初心者</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="Calculating..." xml:space="preserve">
+    <value>計算中...</value>
+  </data>
   <data name="Change History" xml:space="preserve">
     <value>変更履歴</value>
   </data>
   <data name="Click here to view the legal information." xml:space="preserve">
     <value>法的情報を表示するにはこちらをクリックしてください。</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Comments" xml:space="preserve">
     <value>コメント</value>
@@ -48,11 +69,35 @@
   <data name="Delete" xml:space="preserve">
     <value>削除</value>
   </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>難易度</value>
+  </data>
+  <data name="Easy" xml:space="preserve">
+    <value>簡単</value>
+  </data>
   <data name="Edit on GitHub" xml:space="preserve">
     <value>GitHubで編集</value>
   </data>
+  <data name="Expert" xml:space="preserve">
+    <value>エキスパート</value>
+  </data>
+  <data name="Favorite" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="Favorited" xml:space="preserve">
+    <value>Favorited</value>
+  </data>
+  <data name="Intermediate" xml:space="preserve">
+    <value>中級</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>最終更新:</value>
+  </data>
+  <data name="Like" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="Liked" xml:space="preserve">
+    <value>Liked</value>
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>コメントするにはログインしてください</value>
@@ -66,42 +111,20 @@
   <data name="Reply" xml:space="preserve">
     <value>返信</value>
   </data>
+  <data name="Reply to {0}..." xml:space="preserve">
+    <value>Reply to {0}...</value>
+  </data>
   <data name="Send Reply" xml:space="preserve">
     <value>返信を送信</value>
   </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>このレシピの著作権はコミュニティに帰属し、The Unlicenseの下でパブリックドメインとして公開されています。いかなる目的にも制限なく自由に使用できます。</value>
   </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>コメントを書く…</value>
   </data>
 
-  <data name="Anonymous" xml:space="preserve">
-    <value>Anonymous</value>
-  </data>
-  <data name="Favorite" xml:space="preserve">
-    <value>Favorite</value>
-  </data>
-  <data name="Favorited" xml:space="preserve">
-    <value>Favorited</value>
-  </data>
-  <data name="Like" xml:space="preserve">
-    <value>Like</value>
-  </data>
-  <data name="Liked" xml:space="preserve">
-    <value>Liked</value>
-  </data>
-  <data name="Reply to {0}..." xml:space="preserve">
-    <value>Reply to {0}...</value>
-  </data>
-
-  <data name="/ 5" xml:space="preserve">
-    <value>/ 5</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
 </root>
