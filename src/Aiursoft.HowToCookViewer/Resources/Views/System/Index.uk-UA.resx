@@ -21,6 +21,12 @@
       <data name=".NET Version" xml:space="preserve">
     <value>Версія .NET</value>
   </data>
+  <data name="(32-bit)" xml:space="preserve">
+    <value>(32-bit)</value>
+  </data>
+  <data name="(64-bit)" xml:space="preserve">
+    <value>(64-bit)</value>
+  </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>Огляд серверного середовища, процесу та поточного контексту запиту додатку.</value>
   </data>
@@ -32,6 +38,9 @@
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Скасувати</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Підтвердити перезапуск додатку</value>
@@ -151,13 +160,4 @@
     <value>Так, перезавантажити зараз</value>
   </data>
 
-  <data name="(32-bit)" xml:space="preserve">
-    <value>(32-bit)</value>
-  </data>
-  <data name="(64-bit)" xml:space="preserve">
-    <value>(64-bit)</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

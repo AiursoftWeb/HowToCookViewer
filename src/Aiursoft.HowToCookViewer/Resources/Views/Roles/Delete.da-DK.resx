@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Annuller</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Slet</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Ja, slet denne rolle</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

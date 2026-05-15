@@ -21,6 +21,9 @@
       <data name="Back to List" xml:space="preserve">
     <value>Tilbage til listen</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Opret</value>
   </data>
@@ -49,7 +52,4 @@
     <value>Advarsel!</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

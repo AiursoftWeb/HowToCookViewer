@@ -153,6 +153,9 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
   </data>
+  <data name="Page navigation" xml:space="preserve">
+    <value>Page navigation</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>आरबीएसी प्राधिकरण</value>
   </data>
@@ -165,6 +168,12 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>उत्तरदायी डिज़ाइन</value>
   </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>दृढ़ एकीकरण परीक्षण</value>
   </data>
@@ -176,6 +185,12 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>खोजें</value>
+  </data>
+  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
+    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
+  </data>
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>AI (वेक्टर डेटाबेस) पर आधारित खोज</value>
   </data>
   <data name="Search Recipes" xml:space="preserve">
     <value>रिसेपी खोजें</value>
@@ -223,17 +238,4 @@
     <value>Aiursoft टेम्पलेट क्यों उपयोग करें?</value>
   </data>
 
-  <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
-    <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
-  </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
-
-  <data name="Page navigation" xml:space="preserve">
-    <value>Page navigation</value>
-  </data>
 </root>

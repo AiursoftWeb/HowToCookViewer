@@ -24,6 +24,9 @@
   <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
     <value>Οποιοσδήποτε μπορεί ελεύθερα να προσθέσει ή να επεξεργαστεί συνταγές στο HowToCook — απλά κάντε fork του αποθετηρίου στο GitHub, κάντε τις αλλαγές σας και υποβάλετε ένα pull request. Η συνταγή σας θα είναι διαθέσιμη σε όλους!</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>Δυσκολία</value>
   </data>
@@ -39,12 +42,8 @@
   <data name="Random Recipe" xml:space="preserve">
     <value>Τυχαία Συνταγή</value>
   </data>
-
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

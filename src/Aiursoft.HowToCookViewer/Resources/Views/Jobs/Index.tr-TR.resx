@@ -39,6 +39,9 @@
   <data name="Finished At" xml:space="preserve">
     <value>Bitirildi Tarihi</value>
   </data>
+  <data name="JOB" xml:space="preserve">
+    <value>JOB</value>
+  </data>
   <data name="Job Name" xml:space="preserve">
     <value>İş Adı</value>
   </data>
@@ -103,7 +106,4 @@
     <value>Şimdi Tetikle</value>
   </data>
 
-  <data name="JOB" xml:space="preserve">
-    <value>JOB</value>
-  </data>
 </root>

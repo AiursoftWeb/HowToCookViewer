@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Ακύρωση</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Χρόνος Δημιουργίας</value>
   </data>
@@ -64,7 +67,4 @@
     <value>Ναι, διαγραφή αυτού του χρήστη</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

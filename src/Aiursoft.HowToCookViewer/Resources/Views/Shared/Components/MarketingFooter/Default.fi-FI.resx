@@ -51,6 +51,9 @@
   <data name="Licence" xml:space="preserve">
     <value>Lisenssi</value>
   </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
   <data name="Project" xml:space="preserve">
     <value>Projekti</value>
   </data>
@@ -70,7 +73,4 @@
     <value>Lähdekoodi</value>
   </data>
 
-  <data name="logo" xml:space="preserve">
-    <value>logo</value>
-  </data>
 </root>

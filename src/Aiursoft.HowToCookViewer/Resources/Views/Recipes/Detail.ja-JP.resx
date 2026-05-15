@@ -117,6 +117,9 @@
   <data name="Send Reply" xml:space="preserve">
     <value>返信を送信</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>類似のレシピ</value>
+  </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>このレシピの著作権はコミュニティに帰属し、The Unlicenseの下でパブリックドメインとして公開されています。いかなる目的にも制限なく自由に使用できます。</value>
   </data>

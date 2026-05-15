@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Ubah profil Anda</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Kata Sandi</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Anda tidak dapat mengubah kata sandi karena autentikasi lokal dinonaktifkan. Silakan edit profil Anda dari penyedia autentikasi.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -51,6 +51,9 @@
   <data name="Licence" xml:space="preserve">
     <value>Licență</value>
   </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
   <data name="Project" xml:space="preserve">
     <value>Proiect</value>
   </data>
@@ -70,7 +73,4 @@
     <value>Cod Sursă</value>
   </data>
 
-  <data name="logo" xml:space="preserve">
-    <value>logo</value>
-  </data>
 </root>

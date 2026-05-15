@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Profilinizi değiştirin</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Şifre</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Yerel kimlik doğrulama devre dışı bırakıldığı için şifrenizi değiştiremezsiniz. Lütfen profilinizi kimlik sağlayıcınızdan düzenleyin.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

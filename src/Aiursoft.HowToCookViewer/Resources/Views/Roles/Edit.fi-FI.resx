@@ -21,6 +21,9 @@
       <data name="Back to List" xml:space="preserve">
     <value>Takaisin listaan</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Muokkaa</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Varoitus!</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

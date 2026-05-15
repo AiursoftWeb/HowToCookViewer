@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Muuta profiiliasi</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Salasana</value>
   </data>
@@ -55,7 +58,4 @@
     <value>Et voi vaihtaa salasanaasi, koska paikallinen tunnistautuminen on poistettu käytöstä. Muokkaa profiiliasi tunnistautumispalvelun kautta.</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

@@ -30,6 +30,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>निर्माण समय</value>
   </data>
@@ -64,7 +67,4 @@
     <value>हाँ, इस उपयोगकर्ता को हटाएं</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>

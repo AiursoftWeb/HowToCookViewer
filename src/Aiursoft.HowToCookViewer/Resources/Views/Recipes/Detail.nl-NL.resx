@@ -117,6 +117,9 @@
   <data name="Send Reply" xml:space="preserve">
     <value>Antwoord verzenden</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>Vergelijkbare recepten</value>
+  </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>Het copyright van dit recept behoort toe aan de community en is vrijgegeven in het publieke domein onder de Unlicentie — vrij te gebruiken voor elk doel zonder beperkingen.</value>
   </data>

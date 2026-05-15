@@ -117,6 +117,9 @@
   <data name="Send Reply" xml:space="preserve">
     <value>답장 보내기</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>비슷한 레시피</value>
+  </data>
   <data name="The copyright of this recipe belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>이 레시피의 저작권은 커뮤니티에 귀속되며, The Unlicense에 따라 퍼블릭 도메인으로 공개됩니다. 어떠한 제한 없이 어떠한 목적으로도 자유롭게 사용 가능합니다.</value>
   </data>

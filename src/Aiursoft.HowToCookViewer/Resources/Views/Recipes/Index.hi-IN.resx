@@ -24,6 +24,9 @@
   <data name="Anyone can freely add or edit recipes in HowToCook for free — just fork the repository on GitHub, make your changes, and submit a pull request. Your recipe will be available to everyone!" xml:space="preserve">
     <value>HowToCook में कोई भी स्वतंत्र रूप से रेसिपी जोड़ या संपादित कर सकता है — बस GitHub पर रिपॉजिटरी को फॉक करें, अपनी बदलाव करें, और एक पुल रिक्वेस्ट सबमिट करें। आपकी रेसिपी सभी के लिए उपलब्ध हो जाएगी!</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>कठिनाई</value>
   </data>
@@ -39,12 +42,8 @@
   <data name="Random Recipe" xml:space="preserve">
     <value>यादृच्छिक रेसिपी</value>
   </data>
-
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
   </data>
 
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
 </root>
