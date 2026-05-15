@@ -143,6 +143,9 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("Calories")
+                        .HasColumnType("REAL");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasMaxLength(100)
