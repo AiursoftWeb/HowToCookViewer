@@ -126,11 +126,11 @@ public class Startup : IWebStartup
             period: TimeSpan.FromMinutes(30),
             startDelay: TimeSpan.FromMinutes(50));
 
-        // Refresh embedding cache every 8 hours (starts after 55 min)
+        // Refresh embedding cache every 8 hours (starts after 1 min)
         services.RegisterScheduledTask(
             registration: refreshEmbeddingCacheJob,
             period: TimeSpan.FromHours(8),
-            startDelay: TimeSpan.FromMinutes(55));
+            startDelay: TimeSpan.FromMinutes(1));
 
         // Controllers and localization
         services.AddControllersWithViews()

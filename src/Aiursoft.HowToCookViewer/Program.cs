@@ -16,7 +16,6 @@ public abstract class Program
         await app.UpdateDbAsync<TemplateDbContext>();
         await app.SeedAsync();
         await app.CopyAvatarFileAsync();
-        await app.WarmUpEmbeddingCacheAsync();
         await app.RunAsync();
     }
 }
