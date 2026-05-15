@@ -1,4 +1,5 @@
 using Aiursoft.Canon.BackgroundJobs;
+using Aiursoft.CSTools.Tools;
 using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
 using Aiursoft.HowToCookViewer.Configuration;
@@ -42,10 +43,19 @@ public class SyncHowToCookRepoJob(
                 throw;
 
             logger.LogWarning(
-                "SyncHowToCookRepoJob: primary URL '{RepoUrl}' timed out. Falling back to backup URL '{BackupUrl}'.",
+                "SyncHowToCookRepoJob: primary URL '{RepoUrl}' timed out. Cleaning up and falling back to backup URL '{BackupUrl}'.",
                 repoUrl, backupUrl);
+            FolderDeleter.DeleteByForce(repoPath, keepFolder: true);
+            Directory.CreateDirectory(repoPath);
             await workspaceManager.ResetRepo(repoPath, branch: null, endPoint: backupUrl, cloneMode: CloneMode.Full);
             logger.LogInformation("SyncHowToCookRepoJob: repo is up to date (via backup URL).");
+        }
+        catch (Exception)
+        {
+            logger.LogError(
+                "SyncHowToCookRepoJob: failed to sync repo. Cleaning up local directory to avoid partial state.");
+            FolderDeleter.DeleteByForce(repoPath, keepFolder: true);
+            throw;
         }
     }
 }
