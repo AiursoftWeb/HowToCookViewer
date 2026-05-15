@@ -234,6 +234,9 @@
   <data name="Sign out" xml:space="preserve">
     <value>ออกจากระบบ</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>สูตรอาหารที่เกี่ยวข้อง</value>
+  </data>
   <data name="Soups" xml:space="preserve">
     <value>ซุป</value>
   </data>

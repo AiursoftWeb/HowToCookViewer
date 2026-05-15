@@ -234,6 +234,9 @@
   <data name="Sign out" xml:space="preserve">
     <value>Terminar sessão</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>Receitas Similares</value>
+  </data>
   <data name="Soups" xml:space="preserve">
     <value>Sopas</value>
   </data>

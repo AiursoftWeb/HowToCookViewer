@@ -234,6 +234,9 @@
   <data name="Sign out" xml:space="preserve">
     <value>Αποσύνδεση</value>
   </data>
+  <data name="Similar Recipes" xml:space="preserve">
+    <value>Συναφές Συνταγές</value>
+  </data>
   <data name="Soups" xml:space="preserve">
     <value>Σούπες</value>
   </data>
