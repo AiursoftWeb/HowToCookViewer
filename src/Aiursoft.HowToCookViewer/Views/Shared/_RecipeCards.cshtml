@@ -36,6 +36,15 @@
                             </small>
                         }
                     </div>
+                    @if (recipe.Calories.HasValue)
+                    {
+                        <div class="mt-1">
+                            <small class="text-muted">
+                                <i class="align-middle" data-lucide="flame" style="width:13px;height:13px;"></i>
+                                @recipe.Calories.Value.ToString("F0") @Localizer["kcal"]
+                            </small>
+                        </div>
+                    }
                     @if (!string.IsNullOrWhiteSpace(displayDesc))
                     {
                         <p class="card-text text-muted small mt-1 mb-0"

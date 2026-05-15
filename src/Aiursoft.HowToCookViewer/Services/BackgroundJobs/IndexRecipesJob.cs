@@ -94,6 +94,7 @@ public partial class IndexRecipesJob(
                         GroupName = parsed.GroupName,
                         FilePath = relativeFilePath,
                         Difficulty = parsed.Difficulty,
+                        Calories = parsed.Calories,
                         Description = parsed.Description,
                         Ingredients = parsed.Ingredients,
                         Calculation = parsed.Calculation,
@@ -115,6 +116,7 @@ public partial class IndexRecipesJob(
                     recipe.Category = parsed.Category;
                     recipe.GroupName = parsed.GroupName;
                     recipe.Difficulty = parsed.Difficulty;
+                    recipe.Calories = parsed.Calories;
                     recipe.Description = parsed.Description;
                     recipe.Ingredients = parsed.Ingredients;
                     recipe.Calculation = parsed.Calculation;
@@ -184,6 +186,7 @@ public partial class IndexRecipesJob(
         var lines = stripped.Split('\n');
 
         var difficulty = 0;
+        double? calories = null;
         var descriptionLines = new List<string>();
         var ingredients = new List<string>();
         var calculation = new List<string>();
@@ -218,6 +221,15 @@ public partial class IndexRecipesJob(
                 continue;
             }
 
+            // Calorie line anywhere: "预估卡路里：1790大卡"
+            if (line.StartsWith("预估卡路里：") && line.EndsWith("大卡"))
+            {
+                var numPart = line["预估卡路里：".Length..^"大卡".Length];
+                if (double.TryParse(numPart, out var c))
+                    calories = c;
+                continue;
+            }
+
             switch (currentSection)
             {
                 case null:
@@ -244,6 +256,7 @@ public partial class IndexRecipesJob(
             Category: category,
             GroupName: groupName,
             Difficulty: difficulty,
+            Calories: calories,
             Description: string.Join('\n', descriptionLines).Trim(),
             Ingredients: string.Join('\n', ingredients).Trim(),
             Calculation: string.Join('\n', calculation).Trim(),
@@ -359,6 +372,7 @@ public partial class IndexRecipesJob(
         string Category,
         string? GroupName,
         int Difficulty,
+        double? Calories,
         string Description,
         string Ingredients,
         string Calculation,

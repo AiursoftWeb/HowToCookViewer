@@ -35,6 +35,9 @@ public class Recipe
     /// <summary>Cooking difficulty parsed from ★ count (1–8).</summary>
     public int Difficulty { get; set; }
 
+    /// <summary>Estimated calories parsed from "预估卡路里：NNN大卡" line, in kcal.</summary>
+    public double? Calories { get; set; }
+
     /// <summary>Introductory paragraph before the difficulty line.</summary>
     public string Description { get; set; } = string.Empty;
 
