@@ -92,7 +92,7 @@ public class RolesControllerTests : TestBase
         await LoginAsAdmin();
         var roleName = "TestRole-" + Guid.NewGuid();
         await PostForm("/Roles/Create", new Dictionary<string, string> { { "RoleName", roleName } });
-        
+
         var indexResponse = await Http.GetAsync("/Roles/Index");
         var indexHtml = await indexResponse.Content.ReadAsStringAsync();
         // Extract role ID from HTML

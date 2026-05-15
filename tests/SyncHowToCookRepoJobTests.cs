@@ -21,7 +21,7 @@ public class SyncHowToCookRepoJobTests
     {
         _tempPath = Path.Combine(Path.GetTempPath(), "SyncJobTest_" + Guid.NewGuid());
         Directory.CreateDirectory(_tempPath);
-        
+
         _mockRepoPath = Path.Combine(Path.GetTempPath(), "MockRepo_" + Guid.NewGuid());
         CreateMockGitRepo(_mockRepoPath);
     }

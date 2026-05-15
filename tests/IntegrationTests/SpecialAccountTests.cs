@@ -31,7 +31,7 @@ public class SpecialAccountTests
 
         // Set environment variable for default role
         Environment.SetEnvironmentVariable("AppSettings__DefaultRole", "Administrators");
-        
+
         _server = await AppAsync<Startup>([], port: _port);
         await _server.UpdateDbAsync<TemplateDbContext>();
         await _server.SeedAsync();

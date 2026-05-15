@@ -12,7 +12,7 @@ public class GlobalSettingsCacheTests : TestBase
     public async Task TestGlobalSettingsCaching()
     {
         var key = SettingsMap.AllowUserAdjustNickname;
-        
+
         // 1. Initial value (should be seeded)
         string initialValue;
         using (var scope = Server.Services.CreateScope())

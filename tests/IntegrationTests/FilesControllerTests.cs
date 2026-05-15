@@ -108,13 +108,13 @@ public class FilesControllerTests : TestBase
         // If we just use "folderA/../folderB", the HTTP client or server might normalize it to "folderB" before it hits our logic.
         // We want to test that IF the controller receives "folderA/../folderB", our logic rejects it.
         var maliciousPath = "folderA%2F..%2FfolderB";
-        
+
         var content = new StringContent("Malicious Content");
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(content, "file", "hack.txt");
 
         var uploadResponse = await Http.PostAsync($"/upload-private/{maliciousPath}?token={token}", multipartContent);
-        
+
         // Should be rejected because the path contains ".."
         Assert.AreEqual(HttpStatusCode.Unauthorized, uploadResponse.StatusCode);
     }

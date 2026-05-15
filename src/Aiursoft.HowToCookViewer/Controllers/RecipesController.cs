@@ -282,7 +282,7 @@ public class RecipesController(
         var recipes = await vectorSearchService.GetSimilarRecipesAsync(db.Recipes, id, 20);
         var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
 
-        return View(new SimilarViewModel
+        return this.StackView(new SimilarViewModel
         {
             SourceRecipe = sourceRecipe,
             CategoryDisplayName = GetDisplayName(sourceRecipe.Category, null, null),

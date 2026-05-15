@@ -26,7 +26,7 @@ public class CommentsRateLimitTests : TestBase
             });
             await db.SaveChangesAsync();
         }
-        
+
         var recipeId = 1; // Assuming it's the first recipe
 
         // 3. Get the limit (default should be 10)
@@ -54,7 +54,7 @@ public class CommentsRateLimitTests : TestBase
 
         Assert.AreEqual((HttpStatusCode)429, limitExceededResponse.StatusCode);
     }
-    
+
     [TestMethod]
     public async Task TestCommentRateLimitWithCustomValue()
     {
@@ -73,8 +73,8 @@ public class CommentsRateLimitTests : TestBase
             });
             await db.SaveChangesAsync();
         }
-        
-        var recipeId = 1; 
+
+        var recipeId = 1;
 
         // 3. Change the limit to 2
         var globalSettingsService = GetService<GlobalSettingsService>();

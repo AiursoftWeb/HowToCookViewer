@@ -42,9 +42,9 @@ public class MigrationEntryTests
     }
 
     [TestMethod]
-    [DataRow("20250826125833_Init",              2025, 8,  26, 12, 58, 33, "Init")]
-    [DataRow("20250911113624_AddDisplayName",    2025, 9,  11, 11, 36, 24, "AddDisplayName")]
-    [DataRow("20260108110700_AddGlobalSettings", 2026, 1,   8, 11,  7,  0, "AddGlobalSettings")]
+    [DataRow("20250826125833_Init", 2025, 8, 26, 12, 58, 33, "Init")]
+    [DataRow("20250911113624_AddDisplayName", 2025, 9, 11, 11, 36, 24, "AddDisplayName")]
+    [DataRow("20260108110700_AddGlobalSettings", 2026, 1, 8, 11, 7, 0, "AddGlobalSettings")]
     public void NameAndTimestamp_MatchKnownMigrationIds(
         string id, int year, int month, int day, int hour, int minute, int second, string expectedName)
     {

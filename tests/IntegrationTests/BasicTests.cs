@@ -1,6 +1,6 @@
 using System.Net;
 
-[assembly:DoNotParallelize]
+[assembly: DoNotParallelize]
 
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
@@ -36,7 +36,7 @@ public class BasicTests : TestBase
         // Step 2: Log off the user and assert a successful redirect.
         var homePageResponse = await Http.GetAsync("/Manage/Index");
         homePageResponse.EnsureSuccessStatusCode();
-        
+
         var logOffResponse = await Http.GetAsync("/Account/LogOff");
         AssertRedirect(logOffResponse, "/");
 
@@ -88,7 +88,7 @@ public class BasicTests : TestBase
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
 
         // Step 2: Log off to clear the current session.
-await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
+        await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
 
         // Step 3: Attempt to register again using the same email.
         var secondRegisterResponse = await PostForm("/Account/Register", new Dictionary<string, string>
@@ -120,7 +120,7 @@ await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
 
         // Step 2: Log off the user.
-await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
+        await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
 
         // Step 3: Attempt to log in with the correct email but a wrong password.
         var loginResponse = await PostForm("/Account/Login", new Dictionary<string, string>
@@ -151,7 +151,7 @@ await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken
             { "Password", correctPassword },
             { "ConfirmPassword", correctPassword }
         });
-await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
+        await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
 
         // Step 2: Attempt to log in with the wrong password multiple times to trigger lockout.
         HttpResponseMessage loginResponse = null!;
@@ -199,7 +199,7 @@ await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken
         AssertRedirect(changePasswordResponse, "/Manage?Message=ChangePasswordSuccess");
 
         // Step 4: Log off to test the new password.
-await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
+        await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
 
         // Step 5: Verify that the old password no longer works for the original user.
         var oldLoginResponse = await PostForm("/Account/Login", new Dictionary<string, string>

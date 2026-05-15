@@ -46,13 +46,31 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
         builder.Entity<Recipe>()
             .HasQueryFilter(r => !r.IsDeleted);
 
+        builder.Entity<RecipeImage>()
+            .HasQueryFilter(ri => !ri.Recipe.IsDeleted);
+
+        builder.Entity<RecipeFavorite>()
+            .HasQueryFilter(rf => !rf.Recipe.IsDeleted);
+
+        builder.Entity<RecipeLike>()
+            .HasQueryFilter(rl => !rl.Recipe.IsDeleted);
+
+        builder.Entity<RecipeComment>()
+            .HasQueryFilter(rc => !rc.Recipe.IsDeleted);
+
+        builder.Entity<LocalizedRecipe>()
+            .HasQueryFilter(lr => !lr.Recipe.IsDeleted);
+
         builder.Entity<Tip>()
             .HasQueryFilter(t => !t.IsDeleted);
+
+        builder.Entity<LocalizedTip>()
+            .HasQueryFilter(lt => !lt.Tip.IsDeleted);
     }
 
-    public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
+    public virtual Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
 
-    public virtual  Task<bool> CanConnectAsync() =>
+    public virtual Task<bool> CanConnectAsync() =>
         Database.CanConnectAsync();
 }

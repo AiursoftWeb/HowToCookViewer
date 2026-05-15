@@ -40,7 +40,7 @@ public class ExtractIngredientsJobTests : TestBase
         var recipeFromDb = await db.Recipes
             .Include(r => r.ConsumedIngredients)
             .FirstAsync(r => r.Id == recipe.Id);
-        
+
         Assert.AreEqual(1, recipeFromDb.ConsumedIngredients.Count);
         Assert.AreEqual("Tomato", recipeFromDb.ConsumedIngredients.First().Name);
 
@@ -48,7 +48,7 @@ public class ExtractIngredientsJobTests : TestBase
         var ingredientFromDb = await db.Ingredients
             .Include(i => i.Recipes)
             .FirstAsync(i => i.Id == ingredient.Id);
-        
+
         Assert.AreEqual(1, ingredientFromDb.Recipes.Count);
         Assert.AreEqual("Test Recipe", ingredientFromDb.Recipes.First().Name);
     }

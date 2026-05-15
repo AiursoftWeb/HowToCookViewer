@@ -1,5 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 

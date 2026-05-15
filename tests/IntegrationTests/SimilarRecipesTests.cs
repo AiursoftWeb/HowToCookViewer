@@ -12,11 +12,11 @@ public class SimilarRecipesTests : TestBase
         // Arrange
         var db = GetService<TemplateDbContext>();
         var cache = GetService<RecipeEmbeddingCache>();
-        
+
         // Clear existing recipes
         db.Recipes.RemoveRange(db.Recipes);
         await db.SaveChangesAsync();
-        
+
         // Add two recipes
         var r1 = new Recipe
         {

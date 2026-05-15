@@ -21,7 +21,7 @@ public class IndexRecipesJobTests
     {
         _tempPath = Path.Combine(Path.GetTempPath(), "IndexJobTest_" + Guid.NewGuid());
         Directory.CreateDirectory(_tempPath);
-        
+
         _mockRepoPath = Path.Combine(Path.GetTempPath(), "MockRepo_" + Guid.NewGuid());
         CreateMockGitRepo(_mockRepoPath);
     }

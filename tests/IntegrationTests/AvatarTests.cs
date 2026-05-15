@@ -231,7 +231,7 @@ public class AvatarTests : TestBase
         // Try to compress it. FilesController.Download will call physicalPath.IsStaticImage() 
         // which might return true based on extension, but SKBitmap.Decode will fail.
         var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
-        
+
         // It should still return the file (original) or successfully handle the error.
         compressedResponse.EnsureSuccessStatusCode();
     }
