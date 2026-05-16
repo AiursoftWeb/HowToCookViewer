@@ -23,6 +23,7 @@
                 </span>
                 <input type="text"
                        name="q"
+                       maxlength="40"
                        class="form-control border-start-0 ps-0"
                        placeholder="@Localizer["Search recipes placeholder"]"
                        value="@Model.Query"
@@ -46,6 +47,13 @@
             <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle">
                 <i class="align-middle me-1" data-lucide="cpu" style="width:14px;height:14px;"></i>
                 @Localizer["Search based on AI (Vector Database)"]
+            </span>
+        }
+        @if (Model.RateLimited)
+        {
+            <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle">
+                <i class="align-middle me-1" data-lucide="alert-triangle" style="width:14px;height:14px;"></i>
+                @Localizer["Too many searches. AI search temporarily limited; showing keyword results."]
             </span>
         }
         <a asp-action="Index" asp-controller="Dashboard" class="btn btn-sm btn-outline-secondary ms-auto">

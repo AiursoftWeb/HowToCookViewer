@@ -15,8 +15,11 @@ public class DashboardController(
     TemplateDbContext db,
     RecipeLocalizationService recipeLocalization,
     IStringLocalizer<RecipesController> categoryLocalizer,
-    RecipeVectorSearchService vectorSearch) : Controller
+    RecipeVectorSearchService vectorSearch,
+    SearchRateLimiter rateLimiter) : Controller
 {
+    private const int MaxQueryLength = 40;
+
     [RenderInNavBar(
         NavGroupName = "Features",
         NavGroupOrder = 1,
@@ -35,21 +38,39 @@ public class DashboardController(
         List<Recipe> results;
         int totalResults;
         var usedAi = false;
+        var rateLimited = false;
 
         if (!string.IsNullOrWhiteSpace(q))
         {
-            var aiResult = await vectorSearch.SearchAsync(
-                baseQuery, q, page, DashboardIndexViewModel.PageSize);
-
-            if (aiResult.UsedAi)
+            // Truncate query to max allowed length.
+            if (q.Length > MaxQueryLength)
             {
-                usedAi = true;
-                (results, totalResults) = (aiResult.Results, aiResult.TotalCount);
+                q = q[..MaxQueryLength];
+            }
+
+            var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+
+            if (!rateLimiter.TryConsume(ip))
+            {
+                rateLimited = true;
+                (results, totalResults) = await RecipeSearchService.SearchAsync(
+                    baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
             }
             else
             {
-                (results, totalResults) = await RecipeSearchService.SearchAsync(
-                    baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
+                var aiResult = await vectorSearch.SearchAsync(
+                    baseQuery, q, page, DashboardIndexViewModel.PageSize);
+
+                if (aiResult.UsedAi)
+                {
+                    usedAi = true;
+                    (results, totalResults) = (aiResult.Results, aiResult.TotalCount);
+                }
+                else
+                {
+                    (results, totalResults) = await RecipeSearchService.SearchAsync(
+                        baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
+                }
             }
         }
         else
@@ -101,6 +122,7 @@ public class DashboardController(
             TopLocalizedNames = topLocalizedNames,
             TopLocalizedDescriptions = topLocalizedDescs,
             TopTotalWithImages = topTotalWithImages,
+            RateLimited = rateLimited,
         });
     }
 

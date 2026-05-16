@@ -153,7 +153,7 @@ public class RecipeVectorSearchTests
         var httpClientFactory = handler != null
             ? new TestHttpClientFactory(handler)
             : (IHttpClientFactory)new TestHttpClientFactory(new FakeOllamaEmbedHandler());
-        return new RecipeVectorSearchService(_cache, settings, httpClientFactory);
+        return new RecipeVectorSearchService(_db, _cache, settings, httpClientFactory);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
