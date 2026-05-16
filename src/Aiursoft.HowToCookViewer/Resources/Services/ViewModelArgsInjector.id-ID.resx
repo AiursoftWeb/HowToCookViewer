@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Sarapan</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Berdasarkan Kalori</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>Berdasarkan Komentar</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Pengaturan Global</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Kalori Tertinggi</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Beranda</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Masuk untuk mendapatkan akses ke semua fitur.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Kalori Terendah</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Kelola</value>

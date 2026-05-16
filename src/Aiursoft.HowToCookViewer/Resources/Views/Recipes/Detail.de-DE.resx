@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Auf GitHub bearbeiten</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Geschätzte Kalorien</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Experte</value>
   </data>
@@ -87,11 +90,20 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Herzhaft</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Fortgeschrittene</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Zuletzt aktualisiert:</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Leicht</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -101,6 +113,9 @@
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Einloggen, um zu kommentieren</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Mäßig</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>Noch keine Kommentare. Sei der Erste, der einen hinterlässt!</value>

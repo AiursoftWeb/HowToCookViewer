@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>नाश्ता</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>कैलोरी के अनुसार</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>गणना</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>अनुमानित कैलोरी</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>सबसे अधिक कैलोरी</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>छवियाँ</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>कम पसंद किया गया</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>सबसे कम कैलोरी</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>मांस व्यंजन</value>

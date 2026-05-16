@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>在 GitHub 上编辑</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>预估热量</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>专业</value>
   </data>
@@ -90,14 +93,23 @@
   <data name="Favorited" xml:space="preserve">
     <value>已收藏</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>丰盛</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>中等</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>千卡</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>最后更新：</value>
   </data>
   <data name="Legendary" xml:space="preserve">
     <value>传奇</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>轻度</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>点赞</value>
@@ -110,6 +122,9 @@
   </data>
   <data name="Master" xml:space="preserve">
     <value>大师</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>中等</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>暂无评论。成为第一个留言的人！</value>

@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Sarapan</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Berdasarkan Kalori</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>Perhitungan</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>Kalori Perkiraan</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Kalori Tertinggi</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Gambar</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>Terleast Disukai</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Kalori Terendah</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>Hidangan Daging</value>

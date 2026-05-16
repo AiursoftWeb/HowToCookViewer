@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Bữa sáng</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Theo Calo</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>Theo bình luận</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Cài đặt chung</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Nhiều calo nhất</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Trang Chủ</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Đăng nhập để truy cập tất cả các tính năng.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Calo Thấp Nhất</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>

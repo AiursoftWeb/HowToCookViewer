@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Редагувати на GitHub</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Орієнтовна калорійність</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Експерт</value>
   </data>
@@ -87,11 +90,20 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Щільний</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Середній</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>ккал</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Останнє оновлення:</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Легкий</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -101,6 +113,9 @@
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Увійдіть, щоб коментувати</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Помірний</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>Коментарів ще немає. Будьте першим, хто залишить коментар!</value>

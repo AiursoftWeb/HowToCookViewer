@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Café da manhã</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Por Calorias</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>Por comentários</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Configurações Globais</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Maiores Calorias</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Início</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Faça login para acessar todos os recursos.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Menor Caloria</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Gerenciar</value>

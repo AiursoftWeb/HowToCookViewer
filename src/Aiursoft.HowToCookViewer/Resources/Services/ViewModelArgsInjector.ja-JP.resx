@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>朝食</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>カロリー順</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>コメント数順</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>グローバル設定</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>カロリーの高い順</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>ホーム</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>すべての機能にアクセスするにはログインしてください。</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>カロリーの低い順</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>管理</value>

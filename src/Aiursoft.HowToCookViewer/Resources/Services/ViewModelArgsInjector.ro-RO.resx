@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>Mic dejun</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>După calorii</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>Dupa comentarii</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>Setări globale</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Cele mai multe calorii</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Acasă</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>Conectează-te pentru a accesa toate funcționalitățile.</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Cele mai puține calorii</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Gestionează</value>

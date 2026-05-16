@@ -78,6 +78,9 @@
   <data name="Edit on GitHub" xml:space="preserve">
     <value>Edit di GitHub</value>
   </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Perkiraan Kalori</value>
+  </data>
   <data name="Expert" xml:space="preserve">
     <value>Ahli</value>
   </data>
@@ -87,11 +90,20 @@
   <data name="Favorited" xml:space="preserve">
     <value>Favorited</value>
   </data>
+  <data name="Hearty" xml:space="preserve">
+    <value>Nyaman</value>
+  </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Menengah</value>
   </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
+  </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Terakhir diperbarui:</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Ringan</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Like</value>
@@ -101,6 +113,9 @@
   </data>
   <data name="Login to comment" xml:space="preserve">
     <value>Login untuk berkomentar</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>Sedang</value>
   </data>
   <data name="No comments yet. Be the first to leave one!" xml:space="preserve">
     <value>Belum ada komentar. Jadilah yang pertama meninggalkan komentar!</value>

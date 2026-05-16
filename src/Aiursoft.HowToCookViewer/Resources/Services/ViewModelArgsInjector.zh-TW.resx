@@ -57,6 +57,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>早餐</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>依熱量</value>
+  </data>
   <data name="By Comments" xml:space="preserve">
     <value>按評論數</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="Global Settings" xml:space="preserve">
     <value>全域設定</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>最高熱量</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>首頁</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Login to get access to all features." xml:space="preserve">
     <value>登入以使用所有功能。</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>最低熱量</value>
   </data>
   <data name="Manage" xml:space="preserve">
     <value>管理</value>

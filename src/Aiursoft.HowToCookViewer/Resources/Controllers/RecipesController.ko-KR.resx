@@ -30,6 +30,9 @@
   <data name="Breakfast" xml:space="preserve">
     <value>아침 식사</value>
   </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>칼로리 기준</value>
+  </data>
   <data name="Calculation" xml:space="preserve">
     <value>계산</value>
   </data>
@@ -48,6 +51,9 @@
   <data name="Estimated Calories" xml:space="preserve">
     <value>예상 칼로리</value>
   </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>최대 칼로리</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>이미지</value>
   </data>
@@ -62,6 +68,9 @@
   </data>
   <data name="Least Liked" xml:space="preserve">
     <value>좋아하는 사람 least</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>칼로리 최저순</value>
   </data>
   <data name="Meat Dishes" xml:space="preserve">
     <value>고기 요리</value>
