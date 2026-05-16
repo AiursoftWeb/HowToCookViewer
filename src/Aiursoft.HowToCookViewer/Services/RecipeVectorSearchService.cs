@@ -9,14 +9,18 @@ namespace Aiursoft.HowToCookViewer.Services;
 /// <summary>
 /// Semantic vector search for recipes using an Ollama-hosted embedding model (bge-m3).
 /// Computes cosine similarity against an in-memory cache of pre-computed recipe embeddings.
+/// Caches query embeddings in the database (circular buffer of 2000 entries) to avoid
+/// redundant calls to the embedding model.
 /// Falls back to classic keyword search when AI search is unavailable or times out.
 /// </summary>
 public class RecipeVectorSearchService(
+    TemplateDbContext db,
     RecipeEmbeddingCache cache,
     GlobalSettingsService settingsService,
     IHttpClientFactory httpClientFactory)
 {
     private const int EmbedTimeoutSeconds = 10;
+    private const int MaxCachedQueries = 2000;
 
     public async Task<(bool UsedAi, List<Recipe> Results, int TotalCount)> SearchAsync(
         IQueryable<Recipe> baseQuery,
@@ -141,6 +145,21 @@ public class RecipeVectorSearchService(
 
     private async Task<float[]?> EmbedQueryAsync(string text, CancellationToken ct)
     {
+        // Check database cache first.
+        var cached = await db.SearchEmbeddings
+            .AsNoTracking()
+            .FirstOrDefaultAsync(e => e.QueryText == text, ct);
+
+        if (cached != null)
+        {
+            var vector = Deserialize(cached.Embedding);
+            if (vector != null)
+            {
+                return vector;
+            }
+        }
+
+        // Compute embedding via Ollama.
         var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
         var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
@@ -148,7 +167,6 @@ public class RecipeVectorSearchService(
         var http = httpClientFactory.CreateClient();
         var baseUri = new Uri(instance);
         var embedEndpoint = $"{baseUri.Scheme}://{baseUri.Authority}/api/embed?keep_alive=-1";
-        // num_gpu=0: CPU-only inference avoids VRAM contention with the LLM.
         var requestBody = new { model, input = text, options = new { num_gpu = 0 } };
         var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
 
@@ -171,9 +189,50 @@ public class RecipeVectorSearchService(
             return null;
         }
 
-        var vector = result.Embeddings[0];
-        Normalize(vector);
-        return vector;
+        var embedding = result.Embeddings[0];
+        Normalize(embedding);
+
+        // Cache the result in the database.
+        var serialized = Serialize(embedding);
+        try
+        {
+            db.SearchEmbeddings.Add(new SearchEmbedding
+            {
+                QueryText = text,
+                Embedding = serialized,
+                CreatedAt = DateTime.UtcNow
+            });
+            await db.SaveChangesAsync(ct);
+
+            // Trim to MaxCachedQueries entries (circular buffer).
+            await TrimCacheAsync(ct);
+        }
+        catch (DbUpdateException)
+        {
+            // Race: another request already cached this query. Ignore.
+        }
+
+        return embedding;
+    }
+
+    /// <summary>Remove oldest entries if the cache exceeds MaxCachedQueries.</summary>
+    private async Task TrimCacheAsync(CancellationToken ct)
+    {
+        var count = await db.SearchEmbeddings.CountAsync(ct);
+        if (count <= MaxCachedQueries) return;
+
+        var toDelete = await db.SearchEmbeddings
+            .OrderBy(e => e.CreatedAt)
+            .Take(count - MaxCachedQueries)
+            .Select(e => e.Id)
+            .ToListAsync(ct);
+
+        if (toDelete.Count > 0)
+        {
+            await db.SearchEmbeddings
+                .Where(e => toDelete.Contains(e.Id))
+                .ExecuteDeleteAsync(ct);
+        }
     }
 
     /// <summary>Cosine similarity between two normalized vectors = dot product.</summary>
@@ -196,6 +255,21 @@ public class RecipeVectorSearchService(
             for (var i = 0; i < vector.Length; i++)
                 vector[i] /= norm;
         }
+    }
+
+    private static byte[] Serialize(float[] vector)
+    {
+        var bytes = new byte[vector.Length * 4];
+        Buffer.BlockCopy(vector, 0, bytes, 0, bytes.Length);
+        return bytes;
+    }
+
+    private static float[]? Deserialize(byte[] bytes)
+    {
+        if (bytes.Length % 4 != 0) return null;
+        var floats = new float[bytes.Length / 4];
+        Buffer.BlockCopy(bytes, 0, floats, 0, bytes.Length);
+        return floats;
     }
 
     private class OllamaEmbedResponse

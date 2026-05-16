@@ -153,7 +153,7 @@ public class RecipeVectorSearchTests
         var httpClientFactory = handler != null
             ? new TestHttpClientFactory(handler)
             : (IHttpClientFactory)new TestHttpClientFactory(new FakeOllamaEmbedHandler());
-        return new RecipeVectorSearchService(_cache, settings, httpClientFactory);
+        return new RecipeVectorSearchService(_db, _cache, settings, httpClientFactory);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -259,6 +259,121 @@ public class RecipeVectorSearchTests
     }
 
     // ─────────────────────────────────────────────────────────────────────────
+    // Tests: search embedding database caching (issue #25)
+    // ─────────────────────────────────────────────────────────────────────────
+
+    [TestMethod]
+    public async Task EmbeddingIsCachedInDatabase_AfterSuccessfulSearch()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        var countingHandler = new CountingOllamaHandler();
+        var service = CreateSearchService(countingHandler);
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "牛肉面", 1, 10);
+
+        Assert.IsTrue(usedAi);
+        Assert.AreEqual(1, countingHandler.CallCount, "Ollama should be called exactly once for a new query.");
+
+        // Verify the embedding was cached in the database.
+        var cachedEntry = await _db.SearchEmbeddings
+            .FirstOrDefaultAsync(e => e.QueryText == "牛肉面");
+        Assert.IsNotNull(cachedEntry, "Search embedding should be persisted to SearchEmbeddings table.");
+        Assert.IsTrue(cachedEntry.Embedding.Length == VectorDimension * 4,
+            "Cached embedding should be 1024 floats = 4096 bytes.");
+    }
+
+    [TestMethod]
+    public async Task SecondIdenticalSearch_UsesDatabaseCache_DoesNotCallOllama()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        var countingHandler = new CountingOllamaHandler();
+        var service = CreateSearchService(countingHandler);
+
+        // First search — Ollama must be called.
+        var (usedAi1, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
+        Assert.IsTrue(usedAi1);
+        Assert.AreEqual(1, countingHandler.CallCount);
+
+        // Second search with same query — must use DB cache, NOT call Ollama again.
+        var (usedAi2, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
+        Assert.IsTrue(usedAi2);
+        Assert.AreEqual(1, countingHandler.CallCount,
+            "Ollama should NOT be called again for a previously cached query.");
+
+        // Different query — Ollama must be called.
+        var (usedAi3, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "鱼香肉丝", 1, 10);
+        Assert.IsTrue(usedAi3);
+        Assert.AreEqual(2, countingHandler.CallCount,
+            "Ollama should be called for a new, uncached query.");
+    }
+
+    [TestMethod]
+    public async Task CacheTrim_OldestEntriesRemovedWhenExceedingLimit()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        // Pre-seed the cache with MaxCachedQueries entries.
+        var oldDate = DateTime.UtcNow.AddDays(-10);
+        for (var i = 0; i < 10; i++)
+        {
+            _db.SearchEmbeddings.Add(new SearchEmbedding
+            {
+                QueryText = $"old_query_{i}",
+                Embedding = new byte[VectorDimension * 4],
+                CreatedAt = oldDate
+            });
+        }
+        await _db.SaveChangesAsync();
+
+        var countingHandler = new CountingOllamaHandler();
+        var service = CreateSearchService(countingHandler);
+
+        // A new search should succeed and trigger trimming (10 old + 1 new > limit unlikely).
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "新查询", 1, 10);
+        Assert.IsTrue(usedAi);
+
+        // The new query should be in the cache.
+        var newEntry = await _db.SearchEmbeddings
+            .FirstOrDefaultAsync(e => e.QueryText == "新查询");
+        Assert.IsNotNull(newEntry, "Newly searched query should be cached.");
+    }
+
+    [TestMethod]
+    public async Task PreCachedQuery_ReturnsImmediatelyWithoutCallingOllama()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        // Pre-cache a query embedding in the database (simulating a prior search).
+        var queryVector = new float[VectorDimension];
+        queryVector[0] = 0.8f;
+        queryVector[1] = 0.8f;
+        Normalize(queryVector);
+        var bytes = new byte[VectorDimension * 4];
+        Buffer.BlockCopy(queryVector, 0, bytes, 0, bytes.Length);
+
+        _db.SearchEmbeddings.Add(new SearchEmbedding
+        {
+            QueryText = "预缓存查询",
+            Embedding = bytes,
+            CreatedAt = DateTime.UtcNow
+        });
+        await _db.SaveChangesAsync();
+
+        var countingHandler = new CountingOllamaHandler();
+        var service = CreateSearchService(countingHandler);
+
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "预缓存查询", 1, 10);
+        Assert.IsTrue(usedAi);
+        Assert.AreEqual(0, countingHandler.CallCount,
+            "Ollama should NOT be called when the query is already cached in the database.");
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
     // Test HTTP message handlers
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -333,6 +448,37 @@ public class RecipeVectorSearchTests
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
+        }
+    }
+
+    /// <summary>
+    /// Fake Ollama handler that counts how many times it was invoked.
+    /// Used to verify that repeated queries hit the database cache instead of calling Ollama.
+    /// </summary>
+    private class CountingOllamaHandler : HttpMessageHandler
+    {
+        public int CallCount;
+
+        protected override Task<HttpResponseMessage> SendAsync(
+            HttpRequestMessage request, CancellationToken ct)
+        {
+            Interlocked.Increment(ref CallCount);
+
+            var vector = new float[VectorDimension];
+            vector[0] = 1.0f;
+            vector[1] = 1.0f;
+
+            var response = new
+            {
+                embeddings = new[] { vector }
+            };
+
+            var json = JsonConvert.SerializeObject(response);
+            var httpResponse = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+            return Task.FromResult(httpResponse);
         }
     }
 }

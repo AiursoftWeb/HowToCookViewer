@@ -17,7 +17,7 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.7")
+                .HasAnnotation("ProductVersion", "10.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
@@ -317,6 +317,34 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                     b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeLikes");
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.SearchEmbedding", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<byte[]>("Embedding")
+                        .IsRequired()
+                        .HasColumnType("longblob");
+
+                    b.Property<string>("QueryText")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("varchar(40)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QueryText")
+                        .IsUnique();
+
+                    b.ToTable("SearchEmbeddings");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Tip", b =>
