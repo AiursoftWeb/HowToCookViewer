@@ -219,6 +219,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο, από όπου ξεκινάμε το ταξίδι...</value>
   </data>
+  <data name="Too many searches. AI search temporarily limited; showing keyword results." xml:space="preserve">
+    <value>Πάρα πολλές αναζητήσεις. Η αναζήτηση με AI περιορίζεται προσωρινά· εμφανίζονται αποτελέσματα με λέξεις-κλειδιά.</value>
+  </data>
   <data name="Try a random recipe" xml:space="preserve">
     <value>Δοκιμάστε ένα τυχαίο συνταγή</value>
   </data>

@@ -219,6 +219,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Это шаблонный проект, с которого мы начинаем наше путешествие...</value>
   </data>
+  <data name="Too many searches. AI search temporarily limited; showing keyword results." xml:space="preserve">
+    <value>Слишком много запросов. Поиск с ИИ временно ограничен; отображаются результаты по ключевым словам.</value>
+  </data>
   <data name="Try a random recipe" xml:space="preserve">
     <value>Попробовать случайный рецепт</value>
   </data>
