@@ -58,7 +58,7 @@ public partial class IndexRecipesJob(
                     .AsNoTracking()
                     .FirstOrDefaultAsync(r => r.FilePath == relativeFilePath);
 
-                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted)
+                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted && existing.Calories.HasValue)
                 {
                     // Also verify all referenced image files still exist on disk.
                     // If any are missing (e.g. Workspace was wiped), fall through and re-process.

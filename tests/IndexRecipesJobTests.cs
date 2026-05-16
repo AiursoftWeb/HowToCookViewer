@@ -40,7 +40,7 @@ public class IndexRecipesJobTests
         Directory.CreateDirectory(path);
         var dishesPath = Path.Combine(path, "dishes", "vegetable_dish");
         Directory.CreateDirectory(dishesPath);
-        File.WriteAllText(Path.Combine(dishesPath, "tomato.md"), "# Tomato\n## Ingredients\n- Tomato\n## Steps\n1. Cook");
+        File.WriteAllText(Path.Combine(dishesPath, "tomato.md"), "# Tomato\n预估卡路里：468大卡\n## Ingredients\n- Tomato\n## Steps\n1. Cook");
 
         RunGitCommand("init -b main", path);
         RunGitCommand("config user.name TestUser", path);
@@ -148,6 +148,9 @@ public class IndexRecipesJobTests
         await using (var db = new InMemoryContext(dbOptions))
         {
             recipeCount = await db.Recipes.CountAsync();
+            var recipe = await db.Recipes.FirstAsync();
+            Assert.AreEqual(468, recipe.Calories,
+                "First run must parse and store calorie value from markdown.");
         }
         Assert.IsTrue(recipeCount > 0,
             "First run must insert at least one recipe into the database.");
@@ -168,6 +171,55 @@ public class IndexRecipesJobTests
             var countAfter = await db.Recipes.CountAsync();
             Assert.AreEqual(recipeCount, countAfter,
                 "Second run must not add, update, or remove any recipes.");
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Test: recipes indexed before calorie feature was added must be re-indexed
+    // ─────────────────────────────────────────────────────────────────────────
+
+    [TestMethod]
+    public async Task IndexRecipesJob_ReindexesWhenCaloriesNull()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, foldersProvider, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        // ── Step 1: sync and index normally ────────────────────────────────────
+        await syncJob.ExecuteAsync();
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        // ── Step 2: simulate pre-calorie-feature state by clearing Calories ────
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var recipe = await db.Recipes.FirstAsync();
+            Assert.AreEqual(468, recipe.Calories,
+                "First run must parse and store calorie value.");
+
+            recipe.Calories = null;
+            await db.SaveChangesAsync();
+        }
+
+        // ── Step 3: re-run index — must restore the calorie value ─────────────
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var recipe = await db.Recipes.FirstAsync();
+            Assert.AreEqual(468, recipe.Calories,
+                "Second run must re-index and restore calorie value for recipes that had null calories.");
         }
     }
 
