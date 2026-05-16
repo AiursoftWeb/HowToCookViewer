@@ -219,6 +219,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Bu bir şablon projedir, yolculuğa buradan başlıyoruz...</value>
   </data>
+  <data name="Too many searches. AI search temporarily limited; showing keyword results." xml:space="preserve">
+    <value>Aşırı arama isteği. Yapay zeka araması geçici olarak kısıtlandı; anahtar kelime sonuçları gösteriliyor.</value>
+  </data>
   <data name="Try a random recipe" xml:space="preserve">
     <value>Rastgele bir tarif dene</value>
   </data>

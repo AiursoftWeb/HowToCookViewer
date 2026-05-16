@@ -219,6 +219,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>這是一個模板專案，我們將在此開啟探索之旅...</value>
   </data>
+  <data name="Too many searches. AI search temporarily limited; showing keyword results." xml:space="preserve">
+    <value>搜尋次數過多。AI 搜尋功能暫時受限；顯示關鍵字結果。</value>
+  </data>
   <data name="Try a random recipe" xml:space="preserve">
     <value>試試隨機食譜</value>
   </data>
