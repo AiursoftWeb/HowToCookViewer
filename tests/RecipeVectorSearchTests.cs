@@ -270,7 +270,7 @@ public class RecipeVectorSearchTests
 
         var countingHandler = new CountingOllamaHandler();
         var service = CreateSearchService(countingHandler);
-        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "牛肉面", 1, 10);
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "牛肉面", 1, 10);
 
         Assert.IsTrue(usedAi);
         Assert.AreEqual(1, countingHandler.CallCount, "Ollama should be called exactly once for a new query.");
@@ -293,18 +293,18 @@ public class RecipeVectorSearchTests
         var service = CreateSearchService(countingHandler);
 
         // First search — Ollama must be called.
-        var (usedAi1, results1, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
+        var (usedAi1, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
         Assert.IsTrue(usedAi1);
         Assert.AreEqual(1, countingHandler.CallCount);
 
         // Second search with same query — must use DB cache, NOT call Ollama again.
-        var (usedAi2, results2, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
+        var (usedAi2, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "红烧肉", 1, 10);
         Assert.IsTrue(usedAi2);
         Assert.AreEqual(1, countingHandler.CallCount,
             "Ollama should NOT be called again for a previously cached query.");
 
         // Different query — Ollama must be called.
-        var (usedAi3, results3, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "鱼香肉丝", 1, 10);
+        var (usedAi3, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "鱼香肉丝", 1, 10);
         Assert.IsTrue(usedAi3);
         Assert.AreEqual(2, countingHandler.CallCount,
             "Ollama should be called for a new, uncached query.");
@@ -367,7 +367,7 @@ public class RecipeVectorSearchTests
         var countingHandler = new CountingOllamaHandler();
         var service = CreateSearchService(countingHandler);
 
-        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "预缓存查询", 1, 10);
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "预缓存查询", 1, 10);
         Assert.IsTrue(usedAi);
         Assert.AreEqual(0, countingHandler.CallCount,
             "Ollama should NOT be called when the query is already cached in the database.");
