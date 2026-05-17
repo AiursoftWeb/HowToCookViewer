@@ -90,11 +90,49 @@ public class UsersController(
             .OrderBy(p => p.Name)
             .ToList();
 
+        var likes = await context.RecipeLikes
+            .Where(l => l.UserId == id)
+            .OrderByDescending(l => l.CreatedAt)
+            .Select(l => new LikeHistoryItem
+            {
+                RecipeName = l.Recipe.Name,
+                RecipeId = l.RecipeId,
+                CreatedAt = l.CreatedAt
+            })
+            .ToListAsync();
+
+        var comments = await context.RecipeComments
+            .Where(c => c.UserId == id)
+            .OrderByDescending(c => c.CreatedAt)
+            .Select(c => new CommentHistoryItem
+            {
+                CommentId = c.Id,
+                Content = c.Content,
+                RecipeName = c.Recipe.Name,
+                RecipeId = c.RecipeId,
+                CreatedAt = c.CreatedAt
+            })
+            .ToListAsync();
+
+        var favorites = await context.RecipeFavorites
+            .Where(f => f.UserId == id)
+            .OrderByDescending(f => f.CreatedAt)
+            .Select(f => new FavoriteHistoryItem
+            {
+                RecipeName = f.Recipe.Name,
+                RecipeId = f.RecipeId,
+                CreatedAt = f.CreatedAt
+            })
+            .ToListAsync();
+
         return this.StackView(new DetailsViewModel
         {
             User = user,
             Roles = roles,
-            Permissions = permissions
+            Permissions = permissions,
+            Likes = likes,
+            Comments = comments,
+            Favorites = favorites
         });
     }
 
@@ -248,5 +286,25 @@ public class UsersController(
         }
         await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanEditUsers)]
+    public async Task<IActionResult> DeleteComment(int commentId, string userId)
+    {
+        var comment = await context.RecipeComments
+            .Include(c => c.Replies)
+            .FirstOrDefaultAsync(c => c.Id == commentId && c.UserId == userId);
+        if (comment == null) return NotFound();
+
+        if (comment.Replies.Count > 0)
+        {
+            context.RecipeComments.RemoveRange(comment.Replies);
+        }
+        context.RecipeComments.Remove(comment);
+        await context.SaveChangesAsync();
+
+        return RedirectToAction(nameof(Details), new { id = userId });
     }
 }
