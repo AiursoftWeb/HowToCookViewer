@@ -35,7 +35,11 @@ public class BackgroundJobsTests : TestBase
         Assert.AreEqual("Test Queue", pendingTasks[0].QueueName);
         Assert.AreEqual("Test Job 1", pendingTasks[0].TaskName);
 
-        await WaitUntil(() => jobCompleted);
+        await WaitUntil(() =>
+        {
+            var recent = queue.GetRecentCompletedTasks(TimeSpan.FromMinutes(1)).ToList();
+            return recent.Any(t => t.TaskName == "Test Job 1");
+        });
 
         Assert.IsTrue(jobCompleted);
         var recentTasks = queue.GetRecentCompletedTasks(TimeSpan.FromMinutes(1)).ToList();
