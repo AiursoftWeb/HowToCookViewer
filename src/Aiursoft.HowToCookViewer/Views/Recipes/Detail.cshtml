@@ -51,7 +51,7 @@
                 </form>
             </div>
         }
-        @if (User.Identity?.IsAuthenticated != true && Model.LikeCount > 0)
+        @if (User.Identity?.IsAuthenticated != true)
         {
             <div class="col-auto d-flex gap-2">
                 <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
@@ -66,27 +66,15 @@
                         @Localizer["Similar Recipes"]
                     </a>
                 }
-                <span class="btn btn-outline-warning disabled">
+                <a href="/Account/Login?returnUrl=@Uri.EscapeDataString(Context.Request.Path + Context.Request.QueryString)"
+                   class="btn btn-outline-warning">
                     <i class="align-middle me-1" data-lucide="thumbs-up"></i>
-                    @Model.LikeCount
-                </span>
-            </div>
-        }
-        @if (User.Identity?.IsAuthenticated != true && Model.LikeCount == 0)
-        {
-            <div class="col-auto">
-                <a href="@Model.GitHubEditUrl" target="_blank" rel="noopener noreferrer"
-                   class="btn btn-outline-secondary">
-                    <i class="align-middle me-1" data-lucide="pencil"></i>
-                    @Localizer["Edit on GitHub"]
+                    @Localizer["Like"]
+                    @if (Model.LikeCount > 0)
+                    {
+                        <span class="badge bg-warning text-dark ms-1">@Model.LikeCount</span>
+                    }
                 </a>
-                @if (Model.ShowSimilarRecipesButton)
-                {
-                    <a href="/Recipes/Similar/@Model.Recipe.Id" class="btn btn-outline-primary">
-                        <i class="align-middle me-1" data-lucide="search"></i>
-                        @Localizer["Similar Recipes"]
-                    </a>
-                }
             </div>
         }
     </div>
