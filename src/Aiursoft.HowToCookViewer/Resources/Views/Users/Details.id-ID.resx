@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>Ringkasan profil pengguna, peran yang ditetapkan, dan izin yang berlaku.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Apakah Anda yakin ingin menghapus komentar ini?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Peran yang Ditugaskan</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Informasi Dasar</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Riwayat Komentar</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Waktu Pembuatan</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Hapus</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Hapus Pengguna Ini</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>Surel</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Riwayat Favorit</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Riwayat Suka</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nama</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Detail Profil</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>Pengguna ini tidak memiliki komentar.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Pengguna ini tidak memiliki izin yang efektif.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>Pengguna ini tidak memiliki favorit.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>Pengguna ini tidak memiliki suka.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Pengguna ini belum ditetapkan peran apa pun.</value>

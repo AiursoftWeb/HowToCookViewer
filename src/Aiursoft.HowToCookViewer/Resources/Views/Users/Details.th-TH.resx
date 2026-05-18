@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>ภาพรวมของโปรไฟล์ผู้ใช้ บทบาทที่ได้รับมอบหมาย และสิทธิ์การเข้าถึงที่มีผล</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่ว่าต้องการลบความคิดเห็นนี้?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>บทบาทที่ได้รับมอบหมาย</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>ข้อมูลพื้นฐาน</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>ประวัติความคิดเห็น</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>เวลาที่สร้าง</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>ลบ</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>ลบผู้ใช้นี้</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>อีเมล</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>ประวัติรายการโปรด</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>ประวัติการกดถูกใจ</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>ชื่อ</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>รายละเอียดโปรไฟล์</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>ผู้ใช้คนนี้มีความคิดเห็นไม่ครบ</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>ผู้ใช้นี้ไม่มีสิทธิ์การใช้งานที่มีผล</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>ผู้ใช้นี้ไม่มีรายการโปรด</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>ผู้ใช้คนนี้มีผู้ถูกใจไม่เลย</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>ผู้ใช้รายนี้ยังไม่ได้รับมอบหมายบทบาทใดๆ</value>

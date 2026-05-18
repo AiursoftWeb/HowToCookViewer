@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>Yleiskatsaus käyttäjän profiiliin, määritettyihin rooleihin ja tehoksiin käyttöoikeuksiin.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Haluatko varmasti poistaa tämän kommentin?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Määritetyt roolit</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Perustiedot</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Kommenttihistoria</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Luomisaika</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Poista tämä käyttäjä</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>Sähköposti</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Suosikkihistoria</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Tykkäyshistoria</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nimi</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profiilin tiedot</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>Tällä käyttäjällä ei ole kommentteja.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Tällä käyttäjällä ei ole vaikuttavia käyttöoikeuksia.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>Tällä käyttäjällä ei ole suosikkeja.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>Tällä käyttäjällä ei ole tykkäyksiä.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Tälle käyttäjälle ei ole määritetty yhtään roolia.</value>

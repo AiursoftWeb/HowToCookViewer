@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>نظرة عامة على ملف المستخدم الشخصي، والأدوار المُخصصة، والصلاحيات الفعالة.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>هل أنت متأكد من رغبتك في حذف هذا التعليق؟</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>الأدوار المعينة</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>المعلومات الأساسية</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>سجل التعليقات</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>وقت الإنشاء</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>حذف هذا المستخدم</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكتروني</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>سجل المفضلة</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>سجل الإعجابات</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>تفاصيل الملف الشخصي</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>لا يمتلك هذا المستخدم أي تعليقات.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>هذا المستخدم ليس لديه أذونات فعالة.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>هذا المستخدم ليس لديه أي مفضلات.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>هذا المستخدم لا يمتلك أي إعجابات.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>لم يتم تعيين أي أدوار لهذا المستخدم.</value>
