@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>Tổng quan về hồ sơ người dùng, các vai trò được gán và quyền hạn hiệu lực.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa bình luận này không?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Vai trò được giao</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Thông Tin Cơ Bản</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Lịch sử bình luận</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Thời gian tạo</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Xóa người dùng này</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Lịch sử Yêu thích</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Lịch sử Thích</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Thông tin Hồ sơ</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>Người dùng này không có bình luận.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Người dùng này không có quyền hạn hiệu lực nào.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>Người dùng này không có mục yêu thích nào.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>Người dùng này không có lượt thích nào.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Người dùng này chưa được gán bất kỳ vai trò nào.</value>

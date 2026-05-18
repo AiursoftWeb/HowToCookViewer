@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>用户个人资料、分配角色及有效权限的概览。</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>确定要删除此评论吗？</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>已分配角色</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>基本信息</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>评论历史</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>创建时间</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>删除此用户</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>电子邮件</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>收藏历史</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>点赞历史</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>名称</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>个人资料详情</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>该用户暂无评论记录。</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>该用户暂无有效权限。</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>该用户暂无收藏记录。</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>该用户暂无点赞记录。</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>该用户尚未被分配任何角色。</value>
@@ -68,30 +92,6 @@
   </data>
   <data name="User name" xml:space="preserve">
     <value>用户名</value>
-  </data>
-  <data name="Like History" xml:space="preserve">
-    <value>点赞历史</value>
-  </data>
-  <data name="Comment History" xml:space="preserve">
-    <value>评论历史</value>
-  </data>
-  <data name="Favorite History" xml:space="preserve">
-    <value>收藏历史</value>
-  </data>
-  <data name="This user has no likes." xml:space="preserve">
-    <value>该用户暂无点赞记录。</value>
-  </data>
-  <data name="This user has no comments." xml:space="preserve">
-    <value>该用户暂无评论记录。</value>
-  </data>
-  <data name="This user has no favorites." xml:space="preserve">
-    <value>该用户暂无收藏记录。</value>
-  </data>
-  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
-    <value>确定要删除此评论吗？</value>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>删除</value>
   </data>
 
 </root>

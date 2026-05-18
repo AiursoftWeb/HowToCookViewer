@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>Огляд профілю користувача, призначених ролей та дійсних дозволів.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити цей коментар?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Призначені ролі</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Основна інформація</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Історія коментарів</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Час створення</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Видалити цього користувача</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>Електронна пошта</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Історія вподобань</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Історія вподобань</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Ім&apos;я</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Деталі профілю</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>У цього користувача немає коментарів.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Цей користувач не має жодних дійсних дозволів.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>У цього користувача немає улюблених.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>У цього користувача немає вподобань.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Цьому користувачеві не призначено жодних ролей.</value>

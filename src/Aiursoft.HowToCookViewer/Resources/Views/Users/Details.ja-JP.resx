@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>ユーザーのプロファイル、割り当てられたロール、および有効な権限の概要。</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>このコメントを削除してもよろしいですか？</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>割り当てられたロール</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>基本情報</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>コメント履歴</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>作成日時</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>このユーザーを削除</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>メールアドレス</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>お気に入り履歴</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>いいね履歴</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>名前</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>プロフィール詳細</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>このユーザーにはコメントがありません。</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>このユーザーには有効な権限がありません。</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>このユーザーにはお気に入りはありません。</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>このユーザーにはいいねがありません。</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>このユーザーにはロールが割り当てられていません。</value>

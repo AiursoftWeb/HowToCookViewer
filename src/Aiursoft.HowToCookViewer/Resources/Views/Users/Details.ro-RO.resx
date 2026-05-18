@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>O privire de ansamblu asupra profilului utilizatorului, rolurilor atribuite și permisiunilor efective.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Ești sigur că vrei să ștergi acest comentariu?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Roluri Atribuite</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Informații de Bază</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Istoric comentarii</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Data creării</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Șterge</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Șterge acest utilizator</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Istoricul preferitelor</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Istoria aprecierilor</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nume</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Detalii Profil</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>Acest utilizator nu are comentarii.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Acest utilizator nu are permisiuni efective.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>Acest utilizator nu are favorite.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>Acest utilizator nu are aprecieri.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Acestui utilizator nu i-au fost atribuite roluri.</value>

@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>Eine Übersicht über das Benutzerprofil, die zugewiesenen Rollen und die effektiven Berechtigungen.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie diesen Kommentar löschen möchten?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>Zugewiesene Rollen</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>Grundlegende Informationen</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>Kommentarverlauf</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>Erstellungszeit</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>Diesen Benutzer löschen</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>E-Mail</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>Favoritenverlauf</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>Gefällt-mir-Verlauf</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profil-Details</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>Dieser Benutzer hat keine Kommentare.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Dieser Benutzer hat keine effektiven Berechtigungen.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>Dieser Benutzer hat keine Favoriten.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>Dieser Benutzer hat keine Likes.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>Diesem Benutzer wurden keine Rollen zugewiesen.</value>

@@ -24,6 +24,9 @@
   <data name="An overview of the user&apos;s profile, assigned roles, and effective permissions." xml:space="preserve">
     <value>사용자의 프로필, 할당된 역할 및 유효 권한에 대한 개요입니다.</value>
   </data>
+  <data name="Are you sure you want to delete this comment?" xml:space="preserve">
+    <value>이 댓글을 삭제하시겠습니까?</value>
+  </data>
   <data name="Assigned Roles" xml:space="preserve">
     <value>할당된 역할</value>
   </data>
@@ -33,8 +36,14 @@
   <data name="Basic Information" xml:space="preserve">
     <value>기본 정보</value>
   </data>
+  <data name="Comment History" xml:space="preserve">
+    <value>댓글 기록</value>
+  </data>
   <data name="Creation Time" xml:space="preserve">
     <value>생성 시간</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
   </data>
   <data name="Delete this User" xml:space="preserve">
     <value>이 사용자 삭제</value>
@@ -51,14 +60,29 @@
   <data name="Email" xml:space="preserve">
     <value>이메일</value>
   </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>즐겨찾기 기록</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>좋아한 기록</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>이름</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>프로필 세부 정보</value>
   </data>
+  <data name="This user has no comments." xml:space="preserve">
+    <value>이 사용자는 댓글이 없습니다.</value>
+  </data>
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>이 사용자에게는 유효한 권한이 없습니다.</value>
+  </data>
+  <data name="This user has no favorites." xml:space="preserve">
+    <value>이 사용자는 즐겨찾기가 없습니다.</value>
+  </data>
+  <data name="This user has no likes." xml:space="preserve">
+    <value>이 사용자는 좋아요가 없습니다.</value>
   </data>
   <data name="This user has not been assigned any roles." xml:space="preserve">
     <value>이 사용자에게는 역할이 할당되지 않았습니다.</value>

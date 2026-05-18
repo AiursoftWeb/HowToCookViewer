@@ -18,7 +18,16 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Permissions" xml:space="preserve">
+      <data name="Comment History" xml:space="preserve">
+    <value>История комментариев</value>
+  </data>
+  <data name="Favorite History" xml:space="preserve">
+    <value>История избранного</value>
+  </data>
+  <data name="Like History" xml:space="preserve">
+    <value>История лайков</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
     <value>Разрешения</value>
   </data>
   <data name="Roles" xml:space="preserve">
