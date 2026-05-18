@@ -21,4 +21,36 @@ public class DetailsViewModel : UiStackLayoutViewModel
 
     [Display(Name = "Permissions")]
     public required List<PermissionDescriptor> Permissions { get; set; }
+
+    [Display(Name = "Like History")]
+    public List<LikeHistoryItem> Likes { get; set; } = [];
+
+    [Display(Name = "Comment History")]
+    public List<CommentHistoryItem> Comments { get; set; } = [];
+
+    [Display(Name = "Favorite History")]
+    public List<FavoriteHistoryItem> Favorites { get; set; } = [];
+}
+
+public class LikeHistoryItem
+{
+    public required string RecipeName { get; set; }
+    public int RecipeId { get; set; }
+    public DateTime CreatedAt { get; set; }
+}
+
+public class CommentHistoryItem
+{
+    public int CommentId { get; set; }
+    public required string Content { get; set; }
+    public required string RecipeName { get; set; }
+    public int RecipeId { get; set; }
+    public DateTime CreatedAt { get; set; }
+}
+
+public class FavoriteHistoryItem
+{
+    public required string RecipeName { get; set; }
+    public int RecipeId { get; set; }
+    public DateTime CreatedAt { get; set; }
 }

@@ -1,7 +1,9 @@
 @using Aiursoft.HowToCookViewer.Authorization
 @using Aiursoft.HowToCookViewer.Services.FileStorage
+@using Microsoft.AspNetCore.Authorization
 @using Microsoft.Extensions.Localization
 @model Aiursoft.HowToCookViewer.Models.UsersViewModels.DetailsViewModel
+@inject IAuthorizationService AuthorizationService
 @inject IStringLocalizer<AppPermissions> PermissionLocalizer
 @inject StorageService StorageService
 
@@ -93,6 +95,100 @@
                 {
                     <div class="list-group-item">
                         <p class="text-muted mb-0">@Localizer["This user has no effective permissions."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="card flex-fill mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="thumbs-up"></i> @Localizer["Like History"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @if (Model.Likes.Any())
+                {
+                    @foreach (var like in Model.Likes)
+                    {
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/Recipes/Detail/@like.RecipeId" class="text-decoration-none">@like.RecipeName</a>
+                                <label data-utc-time="@like.CreatedAt.ToHtmlDateTime()" class="text-muted text-monospace small mb-0"></label>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["This user has no likes."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="card flex-fill mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="message-square"></i> @Localizer["Comment History"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @if (Model.Comments.Any())
+                {
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1 me-3">
+                                    <div class="mb-1">
+                                        <a href="/Recipes/Detail/@comment.RecipeId" class="text-decoration-none fw-semibold">@comment.RecipeName</a>
+                                    </div>
+                                    <p class="mb-1">@comment.Content</p>
+                                    <label data-utc-time="@comment.CreatedAt.ToHtmlDateTime()" class="text-muted text-monospace small mb-0"></label>
+                                </div>
+                                @if ((await AuthorizationService.AuthorizeAsync(User, AppPermissionNames.CanEditUsers)).Succeeded)
+                                {
+                                    <form asp-action="DeleteComment" method="post" class="ms-2" onsubmit="return confirm('@Localizer["Are you sure you want to delete this comment?"]')">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="commentId" value="@comment.CommentId" />
+                                        <input type="hidden" name="userId" value="@Model.User.Id" />
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i data-lucide="trash-2" class="me-1" style="width:16px;height:16px;"></i> @Localizer["Delete"]
+                                        </button>
+                                    </form>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["This user has no comments."]</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="card flex-fill mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0"><i class="align-middle me-2" data-lucide="heart"></i> @Localizer["Favorite History"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @if (Model.Favorites.Any())
+                {
+                    @foreach (var fav in Model.Favorites)
+                    {
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/Recipes/Detail/@fav.RecipeId" class="text-decoration-none">@fav.RecipeName</a>
+                                <label data-utc-time="@fav.CreatedAt.ToHtmlDateTime()" class="text-muted text-monospace small mb-0"></label>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        <p class="text-muted mb-0">@Localizer["This user has no favorites."]</p>
                     </div>
                 }
             </div>
