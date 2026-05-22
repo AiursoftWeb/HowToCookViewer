@@ -11,12 +11,26 @@ namespace Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 /// (2) rows for cultures that are no longer in the configured LocalizationLanguages setting.
 /// Without this, the table grows unboundedly because recipes change often and
 /// cultures may be removed over time.
+///
+/// A staleness guard (LastLocalizedAt age &gt;= <see cref="StalenessThreshold"/>)
+/// prevents a delete-then-localize ping-pong when <see cref="LocalizeRecipesJob"/>
+/// is still running with an older view of the configured languages and would
+/// otherwise re-create rows that this job just removed.
 /// </summary>
 public class CleanupLocalizedRecipesJob(
     TemplateDbContext db,
     GlobalSettingsService settingsService,
     ILogger<CleanupLocalizedRecipesJob> logger) : IBackgroundJob
 {
+    /// <summary>
+    /// Only rows whose <see cref="LocalizedRecipe.LastLocalizedAt"/> is older than
+    /// this threshold are eligible for cleanup.  Rows created/updated more recently
+    /// are left alone so that a concurrently-running <see cref="LocalizeRecipesJob"/>
+    /// (which may still hold a stale view of the configured languages) can finish
+    /// its current batch without being undone.
+    /// </summary>
+    internal static readonly TimeSpan StalenessThreshold = TimeSpan.FromMinutes(10);
+
     public string Name => "Cleanup Localized Recipes";
 
     public string Description =>
@@ -32,12 +46,13 @@ public class CleanupLocalizedRecipesJob(
             .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
             .ToHashSet();
 
+        var staleCutoff = DateTime.UtcNow - StalenessThreshold;
         var totalDeleted = 0;
 
         // 1. Delete LocalizedRecipes whose parent Recipe is soft-deleted.
         var orphaned = await db.LocalizedRecipes
             .IgnoreQueryFilters()
-            .Where(lr => lr.Recipe.IsDeleted)
+            .Where(lr => lr.Recipe.IsDeleted && lr.LastLocalizedAt < staleCutoff)
             .ExecuteDeleteAsync();
 
         if (orphaned > 0)
@@ -52,7 +67,7 @@ public class CleanupLocalizedRecipesJob(
         if (configuredCultures.Count > 0)
         {
             var staleCulture = await db.LocalizedRecipes
-                .Where(lr => !configuredCultures.Contains(lr.Culture))
+                .Where(lr => !configuredCultures.Contains(lr.Culture) && lr.LastLocalizedAt < staleCutoff)
                 .ExecuteDeleteAsync();
 
             if (staleCulture > 0)
