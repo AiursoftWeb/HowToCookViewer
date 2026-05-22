@@ -17,6 +17,8 @@ public class SettingsMap
     public const string OllamaToken = "OllamaToken";
     public const string UseAiSearch = "UseAiSearch";
     public const string EmbeddingModel = "EmbeddingModel";
+    public const string OllamaInstanceForEmbedding = "OllamaInstanceForEmbedding";
+    public const string OllamaTokenForEmbedding = "OllamaTokenForEmbedding";
     public const string LocalizationLanguages = "LocalizationLanguages";
     public const string ShowVoxihostAd = "ShowVoxihostAd";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
@@ -136,6 +138,22 @@ public class SettingsMap
             Description = Localizer["The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured."],
             Type = SettingType.Text,
             DefaultValue = "bge-m3:latest"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = OllamaInstanceForEmbedding,
+            Name = Localizer["Ollama Instance for Embedding"],
+            Description = Localizer["The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty."],
+            Type = SettingType.Text,
+            DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = OllamaTokenForEmbedding,
+            Name = Localizer["Ollama Token for Embedding"],
+            Description = Localizer["The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty."],
+            Type = SettingType.Text,
+            DefaultValue = ""
         },
         new GlobalSettingDefinition
         {

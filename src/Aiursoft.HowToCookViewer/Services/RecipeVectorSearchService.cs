@@ -134,13 +134,29 @@ public class RecipeVectorSearchService(
         var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.UseAiSearch);
         if (!useAi) return false;
 
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+        var instance = await GetEmbeddingInstanceAsync();
         if (string.IsNullOrWhiteSpace(instance)) return false;
 
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
         if (string.IsNullOrWhiteSpace(model)) return false;
 
         return true;
+    }
+
+    private async Task<string> GetEmbeddingInstanceAsync()
+    {
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
+
+        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+    }
+
+    private async Task<string> GetEmbeddingTokenAsync()
+    {
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaTokenForEmbedding);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
+
+        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
     }
 
     private async Task<float[]?> EmbedQueryAsync(string text, CancellationToken ct)
@@ -160,9 +176,9 @@ public class RecipeVectorSearchService(
         }
 
         // Compute embedding via Ollama.
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+        var instance = await GetEmbeddingInstanceAsync();
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
-        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
+        var token = await GetEmbeddingTokenAsync();
 
         var http = httpClientFactory.CreateClient();
         var baseUri = new Uri(instance);

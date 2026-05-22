@@ -46,8 +46,8 @@ public class GenerateEmbeddingsJob(
             return;
         }
 
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
-        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
+        var instance = await GetEmbeddingInstanceAsync();
+        var token = await GetEmbeddingTokenAsync();
 
         var lastId = 0;
         while (true)
@@ -113,6 +113,22 @@ public class GenerateEmbeddingsJob(
         var vector = result.Embeddings[0];
         Normalize(vector);
         return vector;
+    }
+
+    private async Task<string> GetEmbeddingInstanceAsync()
+    {
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
+
+        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+    }
+
+    private async Task<string> GetEmbeddingTokenAsync()
+    {
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaTokenForEmbedding);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
+
+        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
     }
 
     private static string BuildRecipeText(Recipe recipe)

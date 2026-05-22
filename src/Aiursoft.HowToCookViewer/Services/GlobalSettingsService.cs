@@ -71,7 +71,10 @@ public class GlobalSettingsService(
     public async Task<bool> IsAiFeatureEnabledAsync()
     {
         var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
-        return !string.IsNullOrWhiteSpace(instance);
+        if (!string.IsNullOrWhiteSpace(instance)) return true;
+
+        var embeddingInstance = await GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        return !string.IsNullOrWhiteSpace(embeddingInstance);
     }
 
     public async Task UpdateSettingAsync(string key, string value)
