@@ -26,7 +26,7 @@ public class GenerateEmbeddingsJob(
 
     public async Task ExecuteAsync()
     {
-        if (!await settingsService.IsAiFeatureEnabledAsync())
+        if (!await settingsService.IsAiSearchEnabledAsync())
         {
             logger.LogInformation("GenerateEmbeddingsJob: Ollama endpoint not configured. Skipping.");
             return;

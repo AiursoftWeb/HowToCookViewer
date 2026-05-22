@@ -68,13 +68,19 @@ public class GlobalSettingsService(
                !string.IsNullOrWhiteSpace(configuration[key]);
     }
 
-    public async Task<bool> IsAiFeatureEnabledAsync()
+    public async Task<bool> IsAiLocalizationEnabledAsync()
     {
         var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
-        if (!string.IsNullOrWhiteSpace(instance)) return true;
+        return !string.IsNullOrWhiteSpace(instance);
+    }
 
-        var embeddingInstance = await GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
-        return !string.IsNullOrWhiteSpace(embeddingInstance);
+    public async Task<bool> IsAiSearchEnabledAsync()
+    {
+        var dedicated = await GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return true;
+
+        var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
+        return !string.IsNullOrWhiteSpace(instance);
     }
 
     public async Task UpdateSettingAsync(string key, string value)

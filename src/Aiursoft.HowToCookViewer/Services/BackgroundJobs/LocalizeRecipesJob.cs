@@ -23,7 +23,7 @@ public class LocalizeRecipesJob(
 
     public async Task ExecuteAsync()
     {
-        if (!await settingsService.IsAiFeatureEnabledAsync())
+        if (!await settingsService.IsAiLocalizationEnabledAsync())
         {
             logger.LogInformation("LocalizeRecipesJob: Ollama endpoint not configured. Skipping.");
             return;
