@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API-token</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Ollama-instantie voor insluiting</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama-model</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Ollama-token voor embedding</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projectlogo</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>De naam van het AI-model dat moet worden gebruikt voor receptvertaling, bijv. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Het bearer-token voor authenticatie bij het Ollama-endpoint voor embeddings. Bij leegte wordt het Ollama API-token gebruikt.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Het bearer-token voor authenticatie bij het Ollama/OpenAI-eindpunt.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>De naam van het project dat wordt weergegeven in de frontend.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Het Ollama API-eindpunt dat specifiek wordt gebruikt voor embeddings (vectorzoekopdrachten). Valt terug op het Ollama API-eindpunt als dit leeg is.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Het OpenAI-compatibele endpoint voor chat-completies voor receptvertaling, bijv. https://ollama.example.com/api/chat/completions</value>

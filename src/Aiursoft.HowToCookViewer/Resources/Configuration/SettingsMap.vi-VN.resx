@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Mã thông báo API Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Instance Ollama cho Embedding</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Mô hình Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Mã thông báo Ollama cho Embedding</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo dự án</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tên mô hình AI để sử dụng cho việc dịch công thức, ví dụ: qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Mã thông báo bearer để xác thực với điểm cuối Ollama nhúng. Sẽ quay lại Mã thông báo API Ollama khi trống.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Mã thông báo bearer để xác thực với điểm cuối Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Tên dự án được hiển thị trên giao diện người dùng</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Điểm cuối API Ollama được sử dụng cụ thể cho việc nhúng (tìm kiếm vector). Sẽ quay lại Điểm cuối API Ollama khi trống.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Điểm cuối hoàn thành cuộc trò chuyện tương thích OpenAI để dịch công thức nấu ăn, ví dụ: https://ollama.example.com/api/chat/completions</value>

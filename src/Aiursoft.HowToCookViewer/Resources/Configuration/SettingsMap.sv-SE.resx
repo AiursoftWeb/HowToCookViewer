@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API-token</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Ollama-instans för inbäddning</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama-modell</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Ollama-token för inbäddning</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projektlogotyp</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>AI-modellnamnet som ska användas för receptöversättning, t.ex. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Bearer-tokenet för autentisering mot Ollama-endpointen för embedding. Faller tillbaka till Ollama API-token om tom.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Bearer-tokenet för autentisering mot Ollama/OpenAI-slutpunkten.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Projektets namn som visas i frontend</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Ollama API-slutpunkten som används specifikt för inbäddning (vektorsökning). Fall tillbaka till Ollama API-slutpunkten när den är tom.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Slutpunkten för OpenAI-kompatibla chattkompletteringar för receptöversättning, t.ex. https://ollama.example.com/api/chat/completions</value>

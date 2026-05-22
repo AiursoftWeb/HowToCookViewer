@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Token API Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Instancja Ollama do osadzania</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Model Ollamy</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Token Ollama do wbudowywania</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo projektu</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Nazwa modelu AI do użycia przy tłumaczeniu przepisów, np. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Token nośnika do uwierzytelniania się z punktem końcowym Ollama do osadzania. W przypadku pustego pola korzysta z Tokena API Ollama.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Token nośnika do uwierzytelniania się z punktem końcowym Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Nazwa projektu wyświetlana w interfejsie użytkownika</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Punkt końcowy API Ollama używany specjalnie do osadzania (wyszukiwanie wektorowe). W przypadku pustego pola używa punktu końcowego API Ollama.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Punkt końcowy do generowania odpowiedzi czatu zgodny z interfejsem OpenAI służący do tłumaczenia przepisów, np. https://ollama.example.com/api/chat/completions</value>

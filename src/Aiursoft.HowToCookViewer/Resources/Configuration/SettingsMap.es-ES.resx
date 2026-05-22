@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Token de la API de Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Instancia de Ollama para incrustación</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Modelo de Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Token de Ollama para incrustación</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logotipo del proyecto</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Nombre del modelo de IA a utilizar para la traducción de recetas, por ejemplo, qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>El token portador para autenticarse con el punto de conexión de Ollama para incrustaciones. Si está vacío, se utiliza como valor predeterminado el Token de API de Ollama.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>El token de portador para autenticarse con el endpoint de Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>El nombre del proyecto mostrado en la interfaz de usuario.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Punto final de la API de Ollama utilizado específicamente para la incrustación (búsqueda vectorial). Si está vacío, se utiliza el punto final de la API de Ollama.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>El extremo de API de completados de chat compatible con OpenAI para la traducción de recetas, por ejemplo, https://ollama.example.com/api/chat/completions</value>

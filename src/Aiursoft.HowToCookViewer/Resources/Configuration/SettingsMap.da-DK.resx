@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API-token</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Ollama-instans til indlejring</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama-model</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Ollama-token til indlejring</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projekttast</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Navnet på AI-modellen, der skal bruges til opskriftsoversættelse, f.eks. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering med Ollama-endepunktet til indlejring. Fallback til Ollama API-token, når den er tom.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Bearer-tokenet til autentificering med Ollama/OpenAI-endepunktet.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Navnet på projektet, der vises i brugergrænsefladen.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Ollama API-endepunktet, der bruges specifikt til indlejring (vektorsøgning). Fallback til Ollama API-endepunkt, når det er tomt.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Endpointet til OpenAI-kompatible chat-afslutninger til opskriftsoversættelse, f.eks. https://ollama.example.com/api/chat/completions</value>

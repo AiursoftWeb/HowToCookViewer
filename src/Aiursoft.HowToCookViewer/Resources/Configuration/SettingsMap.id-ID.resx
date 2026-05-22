@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Token API Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Instansi Ollama untuk Embedding</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Model Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Token Ollama untuk Embedding</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo Proyek</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Nama model AI yang digunakan untuk terjemahan resep, misalnya qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Token bearer untuk autentikasi dengan endpoint Ollama embedding. Menggunakan kembali Token API Ollama saat kosong.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Token bearer untuk autentikasi dengan endpoint Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Nama proyek yang ditampilkan di antarmuka pengguna depan</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Endpoint API Ollama yang digunakan secara khusus untuk embedding (pencarian vektor). Akan kembali ke Endpoint API Ollama jika kosong.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Titik akhir penyelesaian obrolan yang kompatibel dengan OpenAI untuk terjemahan resep, mis. https://ollama.example.com/api/chat/completions</value>

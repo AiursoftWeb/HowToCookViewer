@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>โทเค็น API ของ Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>อินสแตนซ์ Ollama สำหรับการฝัง</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>โมเดล Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>โทเค็น Ollama สำหรับการฝัง</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>โลโก้โครงการ</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>ชื่อโมเดล AI ที่ใช้สำหรับการแปลสูตรอาหาร ตัวอย่างเช่น qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>โทเค็นแบบบิเออร์สำหรับยืนยันตัวตนกับจุดสิ้นสุด Ollama สำหรับ embedding จะใช้โทเค็น API ของ Ollama แทนเมื่อว่าง</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>โทเค็นแบบแบร์เออร์สำหรับการตรวจสอบสิทธิ์กับจุดปลาย Ollama/OpenAI</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>ชื่อโปรเจกต์ที่แสดงในหน้าแสดงผล</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>จุดสิ้นสุด API ของ Ollama ที่ใช้เฉพาะสำหรับการฝัง (การค้นหาแบบเวกเตอร์) จะใช้ค่าจุดสิ้นสุด API ของ Ollama เมื่อว่าง</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>จุดสิ้นสุด API สำหรับสร้างบทสนทนาที่รองรับ OpenAI สำหรับการแปลสูตรอาหาร เช่น https://ollama.example.com/api/chat/completions</value>

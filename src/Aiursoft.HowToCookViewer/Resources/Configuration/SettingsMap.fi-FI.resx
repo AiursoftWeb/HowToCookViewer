@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API -tunnus</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Ollama-instanssi upotusta varten</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama-malli</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Ollama-tunnus upotusta varten</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projektin logo</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tehtävän kuvailu: Käytettävän tekoälymallin nimi reseptien kääntämiseen, esim. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Kantatokeni Ollama-embedding-päätepisteen todentamiseen. Käyttää oletuksena Ollama API -tokenia, jos tyhjä.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Kantatunnus Ollama/OpenAI-päätepisteen todentamiseen.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Projektin nimi, joka näytetään käyttöliittymässä.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Ollama API -päätepiste, jota käytetään nimenomaan upottamiseen (vektorihaku). Tyhjänä käytetään oletuksena Ollama API -päätepistettä.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Avain OpenAI-yhteensopivaksi reseptien kääntämiseen, esim. https://ollama.example.com/api/chat/completions</value>
