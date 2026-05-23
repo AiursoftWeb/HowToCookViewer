@@ -32,8 +32,8 @@ public class ExtractIngredientsJob(
             return;
         }
 
-        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
-        var model = await settingsService.GetSettingValueAsync(SettingsMap.OllamaModel);
+        var instance = await settingsService.GetSettingValueAsync(SettingsMap.OpenAiInstance);
+        var model = await settingsService.GetSettingValueAsync(SettingsMap.OpenAiLocalizationModel);
 
         var lastId = 0;
         while (true)
@@ -92,7 +92,7 @@ public class ExtractIngredientsJob(
             {recipe.Ingredients}
             """;
 
-        var token = await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
+        var token = await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
         var response = await chatClient.AskString(model, instance, token, new[] { prompt }, CancellationToken.None);
 
         var json = response.GetFullContent().Trim();

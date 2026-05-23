@@ -44,10 +44,10 @@ public class RecipeVectorSearchTests
     {
         var settings = new[]
         {
-            new GlobalSetting { Key = SettingsMap.UseAiSearch, Value = useAiSearch ? "True" : "False" },
-            new GlobalSetting { Key = SettingsMap.OllamaInstance, Value = ollamaInstance },
-            new GlobalSetting { Key = SettingsMap.OllamaModel, Value = "" },
-            new GlobalSetting { Key = SettingsMap.OllamaToken, Value = "" },
+            new GlobalSetting { Key = SettingsMap.EnableEmbeddingBasedSearch, Value = useAiSearch ? "True" : "False" },
+            new GlobalSetting { Key = SettingsMap.OpenAiInstance, Value = ollamaInstance },
+            new GlobalSetting { Key = SettingsMap.OpenAiLocalizationModel, Value = "" },
+            new GlobalSetting { Key = SettingsMap.OpenAiApiToken, Value = "" },
             new GlobalSetting { Key = SettingsMap.EmbeddingModel, Value = embeddingModel }
         };
 

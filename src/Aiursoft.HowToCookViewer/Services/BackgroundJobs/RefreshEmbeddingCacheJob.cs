@@ -21,10 +21,10 @@ public class RefreshEmbeddingCacheJob(
 
     public async Task ExecuteAsync()
     {
-        var useAiSearch = await settingsService.GetBoolSettingAsync(SettingsMap.UseAiSearch);
+        var useAiSearch = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
         if (!useAiSearch)
         {
-            logger.LogInformation("RefreshEmbeddingCacheJob: UseAiSearch is disabled. Skipping.");
+            logger.LogInformation("RefreshEmbeddingCacheJob: EnableEmbeddingBasedSearch is disabled. Skipping.");
             return;
         }
 

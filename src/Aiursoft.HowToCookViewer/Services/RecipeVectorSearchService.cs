@@ -131,7 +131,7 @@ public class RecipeVectorSearchService(
 
     private async Task<bool> ShouldAttemptVectorSearch()
     {
-        var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.UseAiSearch);
+        var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
         if (!useAi) return false;
 
         var instance = await GetEmbeddingInstanceAsync();
@@ -145,18 +145,18 @@ public class RecipeVectorSearchService(
 
     private async Task<string> GetEmbeddingInstanceAsync()
     {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
         if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
 
-        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiInstance);
     }
 
     private async Task<string> GetEmbeddingTokenAsync()
     {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaTokenForEmbedding);
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingApiToken);
         if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
 
-        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
+        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
     }
 
     private async Task<float[]?> EmbedQueryAsync(string text, CancellationToken ct)

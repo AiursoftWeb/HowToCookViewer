@@ -70,16 +70,16 @@ public class GlobalSettingsService(
 
     public async Task<bool> IsAiLocalizationEnabledAsync()
     {
-        var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
+        var instance = await GetSettingValueAsync(SettingsMap.OpenAiInstance);
         return !string.IsNullOrWhiteSpace(instance);
     }
 
     public async Task<bool> IsAiSearchEnabledAsync()
     {
-        var dedicated = await GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        var dedicated = await GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
         if (!string.IsNullOrWhiteSpace(dedicated)) return true;
 
-        var instance = await GetSettingValueAsync(SettingsMap.OllamaInstance);
+        var instance = await GetSettingValueAsync(SettingsMap.OpenAiInstance);
         return !string.IsNullOrWhiteSpace(instance);
     }
 

@@ -12,13 +12,13 @@ public class SettingsMap
     public const string Icp = "Icp";
     public const string HowToCookRepoUrl = "HowToCookRepoUrl";
     public const string HowToCookRepoBackupUrl = "HowToCookRepoBackupUrl";
-    public const string OllamaInstance = "OllamaInstance";
-    public const string OllamaModel = "OllamaModel";
-    public const string OllamaToken = "OllamaToken";
-    public const string UseAiSearch = "UseAiSearch";
+    public const string OpenAiInstance = "OpenAiInstance";
+    public const string OpenAiLocalizationModel = "OpenAiLocalizationModel";
+    public const string OpenAiApiToken = "OpenAiApiToken";
+    public const string EmbeddingOllamaInstance = "EmbeddingOllamaInstance";
     public const string EmbeddingModel = "EmbeddingModel";
-    public const string OllamaInstanceForEmbedding = "OllamaInstanceForEmbedding";
-    public const string OllamaTokenForEmbedding = "OllamaTokenForEmbedding";
+    public const string EmbeddingApiToken = "EmbeddingApiToken";
+    public const string EnableEmbeddingBasedSearch = "EnableEmbeddingBasedSearch";
     public const string LocalizationLanguages = "LocalizationLanguages";
     public const string ShowVoxihostAd = "ShowVoxihostAd";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
@@ -101,59 +101,59 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = OllamaInstance,
-            Name = Localizer["Ollama API Endpoint"],
-            Description = Localizer["The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions"],
+            Key = OpenAiInstance,
+            Name = Localizer["OpenAI Chat Endpoint"],
+            Description = Localizer["The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search."],
             Type = SettingType.Text,
             DefaultValue = ""
         },
         new GlobalSettingDefinition
         {
-            Key = OllamaModel,
-            Name = Localizer["Ollama Model"],
-            Description = Localizer["The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0"],
+            Key = OpenAiLocalizationModel,
+            Name = Localizer["Localization Model"],
+            Description = Localizer["The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search."],
             Type = SettingType.Text,
             DefaultValue = ""
         },
         new GlobalSettingDefinition
         {
-            Key = OllamaToken,
-            Name = Localizer["Ollama API Token"],
-            Description = Localizer["The bearer token for authenticating with the Ollama/OpenAI endpoint."],
+            Key = OpenAiApiToken,
+            Name = Localizer["OpenAI API Token"],
+            Description = Localizer["The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication."],
             Type = SettingType.Text,
             DefaultValue = ""
         },
         new GlobalSettingDefinition
         {
-            Key = UseAiSearch,
-            Name = Localizer["Use AI Search"],
-            Description = Localizer["Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured."],
-            Type = SettingType.Bool,
-            DefaultValue = "False"
+            Key = EmbeddingOllamaInstance,
+            Name = Localizer["Embedding Ollama Instance"],
+            Description = Localizer["The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com"],
+            Type = SettingType.Text,
+            DefaultValue = ""
         },
         new GlobalSettingDefinition
         {
             Key = EmbeddingModel,
             Name = Localizer["Embedding Model"],
-            Description = Localizer["The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured."],
+            Description = Localizer["The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation."],
             Type = SettingType.Text,
             DefaultValue = "bge-m3:latest"
         },
         new GlobalSettingDefinition
         {
-            Key = OllamaInstanceForEmbedding,
-            Name = Localizer["Ollama Instance for Embedding"],
-            Description = Localizer["The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty."],
+            Key = EmbeddingApiToken,
+            Name = Localizer["Embedding API Token"],
+            Description = Localizer["The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty."],
             Type = SettingType.Text,
             DefaultValue = ""
         },
         new GlobalSettingDefinition
         {
-            Key = OllamaTokenForEmbedding,
-            Name = Localizer["Ollama Token for Embedding"],
-            Description = Localizer["The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty."],
-            Type = SettingType.Text,
-            DefaultValue = ""
+            Key = EnableEmbeddingBasedSearch,
+            Name = Localizer["Enable Embedding-Based Search"],
+            Description = Localizer["Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \"Search based on AI (Vector Database)\" badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model."],
+            Type = SettingType.Bool,
+            DefaultValue = "False"
         },
         new GlobalSettingDefinition
         {

@@ -32,10 +32,10 @@ public class GenerateEmbeddingsJob(
             return;
         }
 
-        var useAiSearch = await settingsService.GetBoolSettingAsync(SettingsMap.UseAiSearch);
+        var useAiSearch = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
         if (!useAiSearch)
         {
-            logger.LogInformation("GenerateEmbeddingsJob: UseAiSearch is disabled. Skipping.");
+            logger.LogInformation("GenerateEmbeddingsJob: EnableEmbeddingBasedSearch is disabled. Skipping.");
             return;
         }
 
@@ -117,18 +117,18 @@ public class GenerateEmbeddingsJob(
 
     private async Task<string> GetEmbeddingInstanceAsync()
     {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstanceForEmbedding);
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
         if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
 
-        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaInstance);
+        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiInstance);
     }
 
     private async Task<string> GetEmbeddingTokenAsync()
     {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.OllamaTokenForEmbedding);
+        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingApiToken);
         if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
 
-        return await settingsService.GetSettingValueAsync(SettingsMap.OllamaToken);
+        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
     }
 
     private static string BuildRecipeText(Recipe recipe)
