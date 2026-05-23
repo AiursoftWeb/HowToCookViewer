@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Τυχαίος Αριθμός</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>Διακριτικό API Εμφωμάτωσης</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>Μοντέλο Ενσωμάτωσης</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Παράδειγμα Ολοκλήρωσης Ollama</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Όριο Ενσωματωμένης Μνήμης Ερωτημάτων</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>Ενεργοποίηση αναζήτησης βάσει ενσωμάτωσης</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Ενεργοποιήστε την ημιανθρωπιστική αναζήτηση διανυσμάτων για συνταγές χρησιμοποιώντας ένα μοντέλο ενσωμάτωσης. Απαιτείται η διαμόρφωση του τερματικού σημείου Ollama και του μοντέλου ενσωμάτωσης.</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Γλώσσες Τοπικοποίησης</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>Μοντέλο Τοποθέτησης</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>Κύριος διακόπτης για τη σημασιολογική (βασισμένη σε διανύσματα) αναζήτηση συνταγών. Όταν είναι ενεργοποιημένος και όλες οι εξαρτήσεις έχουν διαμορφωθεί, τα αποτελέσματα αναζήτησης εμφανίζουν ένα πράσινο σήμα \&quot;Αναζήτηση βασισμένη σε AI (Vector Database)\&quot; και χρησιμοποιούν ταξινόμηση με βάση την ομοιότητα συνημιτόνου μέσω του μοντέλου ενσωμάτωσης. Όταν είναι απενεργοποιημένος, ή όταν λείπουν οι εξαρτήσεις, η αναζήτηση υλοποιεί σιωπηρά fallback σε αντιστοίχιση λέξεων-κλειδιών χωρίς το σήμα. Απαιτεί την Εγκατάσταση Ollama Ενσωμάτωσης (ή το Τέλος OpenAI Chat ως fallback) και το Μοντέλο Ενσωμάτωσης.</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>Μέγιστος αριθμός σχολίων ανά ημέρα ανά χρήστη</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>Μέγιστος αριθμός έγκειτων ενσωματώσεων ερωτημάτων στη βάση δεδομένων. Όταν ξεπεραστεί, οι λιγότερο πρόσφατα προσπελασμένες εγγραφές αποκλείονται (LRU). Προεπιλογή 2000. Προσαρμόστε ανάλογα με τη χωρητικότητα της βάσης δεδομένων και την αναμενόμενη ποικιλία των ερωτημάτων.</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Τερματικό σημείο API Ollama</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>Διακριτικό Ollama για Εμπλουτισμό</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>Κωδικός Πρόσβασης API OpenAI</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>Τερματικό σημείο συνομιλίας OpenAI</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Λογότυπο Έργου</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>Το token bearer για την αυθεντικοποίηση με το endpoint Ollama για embedding. Επιστρέφει στο Ollama API Token όταν είναι κενό.</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Το token bearer για την πιστοποίηση με το Embedding Ollama Instance, π.χ. 5a0fbdefa19f.... Σε περίπτωση κενής τιμής, γίνεται fallback στο OpenAI API Token.</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Το bearer token για την πιστοποίηση με το endpoint Ollama/OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Το token bearer για την αυθεντικοποίηση με το OpenAI Chat Endpoint, π.χ. sk-abc123... ή 5a0fbdefa19f.... Αφήστε το κενό εάν το endpoint δεν απαιτεί αυθεντικοποίηση.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Το όνομα της εταιρείας που εμφανίζεται στον ποδόσκαλο.</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>Το όνομα του μοντέλου ενσωμάτωσης για την αναζήτηση διανυσμάτων, π.χ. bge-m3. Απαιτείται η διαμόρφωση του endpoint του Ollama.</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Το όνομα του μοντέλου ενσωμάτωσης, π.χ. bge-m3:latest. Πρέπει να είναι διαθέσιμο στην Εγκατάσταση Ollama Ενσωμάτωσης. Χρησιμοποιείται μόνο για αναζήτηση διανυσμάτων, όχι για μετάφραση.</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>Η διεύθυνση URL του αποθετηρίου Git για τη συγχρονισμός των συνταγών HowToCook από αυτό.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>Ο αριθμός άδειας ICP για χρήστες της κυρίως Κίνας. Αφήστε κενό για να κρυφτεί.</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Το όνομα του μοντέλου LLM που χρησιμοποιείται για τη μετάφραση συνταγών και την εξαγωγή συστατικών, π.χ. qwen3.5:27b-q8_0. Πρέπει να είναι διαθέσιμο στο παραπάνω OpenAI Chat Endpoint. Δεν σχετίζεται με αναζήτηση/embedding/vector.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Το λογότυπο του έργου που εμφανίζεται στην ναβιγατόρια και τον ποδοσκαλο. Υποστήριξη jpg, png, svg.</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Το όνομα του έργου που εμφανίζεται στον προβολέα</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>Η βάση URL του API Ollama που χρησιμοποιείται συγκεκριμένα για τη δημιουργία ενσωματώσεων συνταγών και ερωτημάτων (αναζήτηση διανυσμάτων). Χρησιμοποιείται μόνο το όνομα υποδοχέα — το /api/embed προστίθεται αυτόματα. Όταν είναι κενό, γίνεται υποχώρηση στο Τέλος Λειτουργίας Συνομιλίας OpenAI. Π.χ. https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>Το endpoint API του Ollama που χρησιμοποιείται συγκεκριμένα για ενσωμάτωση (αναζήτηση διανυσμάτων). Επιστρέφει στο Endpoint API του Ollama όταν είναι κενό.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Το σημείο τερματισμού ολοκλήρωσης συνομιλιών συμβατό με OpenAI για μετάφραση συνταγών, π.χ. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Το endpoint συνομιλίας συμβατό με OpenAI που χρησιμοποιείται για μετάφραση συνταγών, εξαγωγή συστατικών και άλλες εργασίες LLM. Π.χ. https://ollama.example.com/v1/chat/completions. Δεν σχετίζεται με αναζήτηση/embedding διανυσμάτων.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Χρήση Αναζήτησης AI</value>

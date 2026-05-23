@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Yanlış Numara</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>Gömme API Jetonu</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>Gömme Modeli</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Ollama Gömme Örneği</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Gömme Sorgu Önbellek Limiti</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>Gömme Tabanlı Aramayı Etkinleştir</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Yerleşik model kullanarak tarifler için anlamsal vektör aramasını etkinleştirin. Ollama uç noktasının ve yerleşik modelin yapılandırılması gerekir.</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Yerelleştirme Dilleri</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>Yerelleştirme Modeli</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>Anlamsal (vektör tabanlı) tarif arama için ana anahtar. Etkinleştirildiğinde ve tüm bağımlılıklar yapılandırıldığında, arama sonuçları yeşil bir \&quot;Yapay Zeka (Vektör Veritabanı) Tabanlı Arama\&quot; rozeti gösterir ve gömme modeli aracılığıyla kosinüs benzerliği sıralaması kullanır. Devre dışı bırakıldığında veya bağımlılıklar eksik olduğunda, arama rozet olmadan anahtar kelime eşlemesine sessizce düşer. Gömme Ollama Örneği (yedekleme olarak OpenAI Sohbet Uç Noktası) ve Gömme Modeli gerektirir.</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>Kullanıcı Başına Günde Maksimum Yorum Sayısı</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>Veritabanındaki önbelleğe alınmış sorgu gömme sayısının maksimumu. Aşıldığında, en az erişilen girişler (LRU) elenir. Varsayılan 2000. Veritabanı kapasitenize ve beklenen sorgu çeşitliliğine göre ayarlayın.</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API Uç Noktası</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>Ollama Gömme İçin Token</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>OpenAI API Anahtarı</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>OpenAI Sohbet Uç Noktası</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Proje Logosu</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>Gömme Ollama uç noktasıyla kimlik doğrulama için bearer token. Boş olduğunda Ollama API Token&apos;a düşer.</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Embedding Ollama Örneği ile kimlik doğrulama için taşıyıcı belirteci, örn. 5a0fbdefa19f.... Boş bırakıldığında OpenAI API Token&apos;ına düşer.</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Ollama/OpenAI uç noktasıyla kimlik doğrulaması için taşıyıcı belirteci.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>OpenAI Sohbet Uç Noktası ile kimlik doğrulama için taşıyıcı jetonu, örn. sk-abc123... veya 5a0fbdefa19f.... Uç nokta kimlik doğrulaması gerektirmiyorsa boş bırakın.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Footer&apos;da gösterilen marka adı.</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>Vektör araması için gömme modeli adı, örn. bge-m3. Ollama uç noktasının yapılandırılması gerekir.</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Gömme modeli adı, örn. bge-m3:latest. Gömme Ollama Örneğinde mevcut olmalıdır. Yalnızca vektör araması için kullanılır, çeviri için değil.</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>HowToCook tariflerini senkronize etmek için Git depo URL&apos;si.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>Çin ana karasında kullanıcılar için ICP lisans numarası. Gizlemek için boş bırakın.</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Tarif çevirisi ve malzeme çıkarma için kullanılan LLM model adı, örn. qwen3.5:27b-q8_0. Yukarıdaki OpenAI Sohbet Uç Noktasında mevcut olmalıdır. Gömme/vektör aramasıyla ilgisi yoktur.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Projenin logosu navbar ve footer&apos;da gösterilir. jpg, png, svg desteklenir.</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Frontende görüntülenen proje adı.</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>Yemek ve sorgu gömme vektör araması için özel olarak kullanılan Ollama API temel URL&apos;si. Yalnızca ana bilgisayar kullanılır — /api/embed otomatik olarak eklenir. Boş olduğunda OpenAI Sohbet Uç Noktasına düşer. Örn. https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>Ollama API uç noktası, özellikle gömme (vektör araması) için kullanılır. Boş olduğunda Ollama API Uç Noktasına geri döner.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Tarif çevirisi için OpenAI uyumlu sohbet tamamlama uç noktası, örn. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Tarif çevirisi, malzeme çıkarma ve diğer LLM görevleri için kullanılan OpenAI uyumlu sohbet tamamlama uç noktası. Örn. https://ollama.example.com/v1/chat/completions. Gömme/vektör aramasıyla ilgili değildir.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>AI Aramasını Kullan</value>
