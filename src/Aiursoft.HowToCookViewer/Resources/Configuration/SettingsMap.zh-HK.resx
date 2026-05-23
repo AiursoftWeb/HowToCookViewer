@@ -60,6 +60,9 @@
   <data name="Embedding Ollama Instance" xml:space="preserve">
     <value>Ollama 嵌入實例</value>
   </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>嵌入查詢緩存限制</value>
+  </data>
   <data name="Enable Embedding-Based Search" xml:space="preserve">
     <value>啟用基於嵌入的搜尋</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>每位用戶每日最大評論數</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>資料庫中快取查詢嵌入的最大數量。超出此限制時，將淘汰最近最少使用的條目（LRU）。預設值為 2000。請根據資料庫容量及預期的查詢多樣性進行調整。</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API 端點</value>

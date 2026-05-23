@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Numero fittizio</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>Token API per embedding</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>Modello di embedding</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Istanza Ollama per embedding</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Limite cache query embedding</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>Abilita ricerca basata su embedding</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Abilita la ricerca vettoriale semantica per le ricette utilizzando un modello di embedding. Richiede la configurazione dell&apos;endpoint di Ollama e del modello di embedding.</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Lingue di localizzazione</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>Modelo di localizzazione</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>Interruttore principale per la ricerca semantica (basata su vettori) delle ricette. Quando attivato e tutte le dipendenze sono configurate, i risultati della ricerca visualizzano un badge verde &quot;Ricerca basata su AI (Database Vettoriale)&quot; e utilizzano il ranking per similarità cosinusale tramite il modello di embedding. Quando disattivato, o quando mancano le dipendenze, la ricerca passa silenziosamente al matching di parole chiave senza il badge. Richiede l&apos;Istanza Ollama per Embedding (o l&apos;Endpoint Chat OpenAI come fallback) e il Modello di Embedding.</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>Numero massimo di commenti al giorno per utente</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>Numero massimo di embedding delle query memorizzati nella cache nel database. Quando superato, le voci meno recentemente accessate vengono rimosse (LRU). Valore predefinito 2000. Regolare in base alla capacità del database e alla diversità delle query previste.</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Endpoint API Ollama</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>Token Ollama per l&apos;embedding</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>Token API OpenAI</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>Endpoint di chat OpenAI</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo del Progetto</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>Il token bearer per l&apos;autenticazione con l&apos;endpoint Ollama per embedding. In caso di valore vuoto, utilizza il Token API Ollama.</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Il token bearer per l&apos;autenticazione con l&apos;istanza Ollama per embedding, ad es. 5a0fbdefa19f.... Se vuoto, utilizza il token API di OpenAI.</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Il token bearer per l&apos;autenticazione con l&apos;endpoint Ollama/OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Il token bearer per l&apos;autenticazione con l&apos;endpoint di chat OpenAI, ad es. sk-abc123... o 5a0fbdefa19f.... Lasciare vuoto se l&apos;endpoint non richiede autenticazione.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Il nome del marchio visualizzato nel piè di pagina.</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>Il nome del modello di embedding per la ricerca vettoriale, ad esempio bge-m3. Richiede che l&apos;endpoint Ollama sia configurato.</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Nome del modello di embedding, ad esempio bge-m3:latest. Deve essere disponibile nell&apos;istanza Ollama per l&apos;embedding. Utilizzato solo per la ricerca vettoriale, non per la traduzione.</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>L&apos;URL del repository Git da cui sincronizzare le ricette di HowToCook.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>Il numero di licenza ICP per gli utenti della Cina continentale. Lasciare vuoto per nascondere.</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Il nome del modello LLM utilizzato per la traduzione delle ricette e l&apos;estrazione degli ingredienti, ad esempio qwen3.5:27b-q8_0. Deve essere disponibile all&apos;endpoint di chat OpenAI indicato sopra. Non correlato alla ricerca di embedding/vettori.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Il logo del progetto visualizzato nella barra di navigazione e nel piè di pagina. Supporta jpg, png, svg.</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Il nome del progetto visualizzato nel frontend.</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>L&apos;URL base dell&apos;API Ollama utilizzato specificamente per generare gli embedding di ricette e query (ricerca vettoriale). Viene utilizzato solo l&apos;host — /api/embed viene aggiunto automaticamente. In caso di valore vuoto, viene eseguito il fallback sull&apos;endpoint di chat OpenAI. Ad esempio https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>L&apos;endpoint API di Ollama utilizzato specificamente per l&apos;embedding (ricerca vettoriale). Se vuoto, utilizza l&apos;Endpoint API di Ollama.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>L&apos;endpoint per le chat completions compatibile con OpenAI per la traduzione delle ricette, ad esempio https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>L&apos;endpoint per le chat completions compatibile con OpenAI utilizzato per la traduzione delle ricette, l&apos;estrazione degli ingredienti e altre attività LLM. Ad esempio https://ollama.example.com/v1/chat/completions. Non relativo alla ricerca di embedding/vettori.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Utilizza la ricerca AI</value>
