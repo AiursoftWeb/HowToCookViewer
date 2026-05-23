@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API 令牌</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>用于嵌入的 Ollama 实例</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama 模型</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>用于嵌入的 Ollama 令牌</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>项目标志</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>用于食谱翻译的 AI 模型名称，例如 qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>用于与嵌入 Ollama 端点进行身份验证的 bearer token。为空时回退到 Ollama API Token。</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>用于与 Ollama/OpenAI 端点身份验证的承载令牌。</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>项目在前端显示的名称。</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>专门用于嵌入（向量搜索）的 Ollama API 端点。为空时回退到 Ollama API 端点。</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>用于菜谱翻译的 OpenAI 兼容聊天补全端点，例如 https://ollama.example.com/api/chat/completions</value>

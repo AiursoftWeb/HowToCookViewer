@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Token API Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Instanță Ollama pentru Embedding</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Model Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Token Ollama pentru Embedding</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo Proiect</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Numele modelului AI de utilizat pentru traducerea rețetelor, de ex. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Tokenul bearer pentru autentificarea cu endpoint-ul de embedding Ollama. Se revine la Tokenul API Ollama când este gol.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Tokenul bearer pentru autentificarea cu endpoint-ul Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Numele proiectului afișat în interfața frontend</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Punctul final al API-ului Ollama utilizat specific pentru generarea de încorporări (căutare vectorială). Utilizează Punctul final al API-ului Ollama ca valoare implicită când este gol.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Punctul final pentru completări chat compatibil cu OpenAI pentru traducerea rețetelor, de ex. https://ollama.example.com/api/chat/completions</value>

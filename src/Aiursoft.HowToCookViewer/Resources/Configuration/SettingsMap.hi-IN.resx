@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>ओलामा एपीआई टोकन</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>एम्बेडिंग के लिए ओलामा इंस्टेंस</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>ओलामा मॉडल</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>एम्बेडिंग के लिए ओलामा टोकन</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>प्रोजेक्ट लोगो</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>रेसिपी अनुवाद के लिए उपयोग करने के लिए AI मॉडल का नाम, उदाहरण के लिए qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>एम्बेडिंग ओलामा एंडपॉइंट के साथ प्रमाणीकरण के लिए बेयरर टोकन। खाली होने पर ओलामा एपीआई टोकन पर वापस आ जाता है।</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Ollama/OpenAI एंडपॉइंट के साथ प्रमाणीकरण के लिए बीयरर टोकन।</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>फ्रंटएंड में प्रदर्शित प्रोजेक्ट का नाम।</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>एम्बेडिंग (वेक्टर खोज) के लिए विशेष रूप से उपयोग किया जाने वाला Ollama API एंडपॉइंट। खाली होने पर Ollama API एंडपॉइंट पर वापस चला जाता है।</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>recipe अनुवाद के लिए OpenAI-संगत चैट पूर्णता एंडपॉइंट, उदाहरण के लिए https://ollama.example.com/api/chat/completions</value>

@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>رمز واجهة برمجة تطبيقات Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>مثيل Ollama للتضمين</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>نموذج ألاما</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>رمز Ollama للتضمين</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>شعار المشروع</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>اسم نموذج الذكاء الاصطناعي المستخدم لترجمة الوصفات، على سبيل المثال: qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>رمز الحامل للمصادقة مع نقطة نهاية Ollama للتضمين. يعود إلى رمز واجهة برمجة تطبيقات Ollama عند فراغه.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>رمز البearer المميز للمصادقة مع نقطة نهاية Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>اسم المشروع المُعرض في الواجهة الأمامية.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>نقطة نهاية واجهة برمجة تطبيقات أولاما المستخدمة تحديداً للتضمين (البحث المتجهي). تعود إلى نقطة نهاية واجهة برمجة تطبيقات أولاما عندما تكون فارغة.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>نقطة نهاية إكمال المحادثات المتوافقة مع OpenAI لترجمة الوصفات، على سبيل المثال: https://ollama.example.com/api/chat/completions</value>

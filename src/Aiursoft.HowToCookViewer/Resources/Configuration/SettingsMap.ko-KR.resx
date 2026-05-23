@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API 토큰</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>임베딩용 Ollama 인스턴스</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama 모델</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>임베딩용 Ollama 토큰</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>프로젝트 로고</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>요리 번역에 사용할 AI 모델 이름(예: qwen3.5:27b-q8_0)</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>임베딩 Ollama 엔드포인트와의 인증을 위한 Bearer 토큰입니다. 비어 있으면 Ollama API 토큰으로 대체됩니다.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Ollama/OpenAI 엔드포인트와의 인증을 위한 Bearer 토큰입니다.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>프론트엔드에 표시되는 프로젝트 이름</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>임베딩(벡터 검색) 전용으로 사용되는 Ollama API 엔드포인트입니다. 비어 있으면 Ollama API 엔드포인트로 대체됩니다.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>레시피 번역을 위한 OpenAI 호환 채팅 완성 엔드포인트, 예: https://ollama.example.com/api/chat/completions</value>

@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Ollama API Anahtarı</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Gömme İçin Ollama Örneği</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Ollama Model</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Ollama Gömme İçin Token</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Proje Logosu</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tarif çevirisi için kullanılacak AI model adı, örn. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Gömme Ollama uç noktasıyla kimlik doğrulama için bearer token. Boş olduğunda Ollama API Token&apos;a düşer.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Ollama/OpenAI uç noktasıyla kimlik doğrulaması için taşıyıcı belirteci.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Frontende görüntülenen proje adı.</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Ollama API uç noktası, özellikle gömme (vektör araması) için kullanılır. Boş olduğunda Ollama API Uç Noktasına geri döner.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Tarif çevirisi için OpenAI uyumlu sohbet tamamlama uç noktası, örn. https://ollama.example.com/api/chat/completions</value>

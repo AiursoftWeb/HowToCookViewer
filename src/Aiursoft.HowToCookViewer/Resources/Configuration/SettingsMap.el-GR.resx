@@ -81,8 +81,14 @@
   <data name="Ollama API Token" xml:space="preserve">
     <value>Διακριτικό API Ollama</value>
   </data>
+  <data name="Ollama Instance for Embedding" xml:space="preserve">
+    <value>Παράδειγμα Ollama για Εμπλουτισμό</value>
+  </data>
   <data name="Ollama Model" xml:space="preserve">
     <value>Μοντέλο Ollama</value>
+  </data>
+  <data name="Ollama Token for Embedding" xml:space="preserve">
+    <value>Διακριτικό Ollama για Εμπλουτισμό</value>
   </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Λογότυπο Έργου</value>
@@ -95,6 +101,9 @@
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Το όνομα του μοντέλου AI που θα χρησιμοποιηθεί για τη μετάφρασε συνταγών, π.χ. qwen3.5:27b-q8_0</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Το token bearer για την αυθεντικοποίηση με το endpoint Ollama για embedding. Επιστρέφει στο Ollama API Token όταν είναι κενό.</value>
   </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Το bearer token για την πιστοποίηση με το endpoint Ollama/OpenAI.</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Το όνομα του έργου που εμφανίζεται στον προβολέα</value>
+  </data>
+  <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
+    <value>Το endpoint API του Ollama που χρησιμοποιείται συγκεκριμένα για ενσωμάτωση (αναζήτηση διανυσμάτων). Επιστρέφει στο Endpoint API του Ollama όταν είναι κενό.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Το σημείο τερματισμού ολοκλήρωσης συνομιλιών συμβατό με OpenAI για μετάφραση συνταγών, π.χ. https://ollama.example.com/api/chat/completions</value>
