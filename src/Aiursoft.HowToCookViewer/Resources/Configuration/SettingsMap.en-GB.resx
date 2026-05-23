@@ -60,6 +60,9 @@
   <data name="Embedding Ollama Instance" xml:space="preserve">
     <value>Embedding Ollama Instance</value>
   </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Embedding Query Cache Limit</value>
+  </data>
   <data name="Enable Embedding-Based Search" xml:space="preserve">
     <value>Enable Embedding-Based Search</value>
   </data>
@@ -89,6 +92,9 @@
   </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>Max Comments Per Day Per User</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>The maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity.</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API Endpoint</value>

@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>หมายเลขตัวอย่าง</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>โทเค็น API การฝังตัว</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>แบบจำลองการฝังตัว</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>อินสแตนซ์ Ollama สำหรับ Embedding</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>ขีดจำกัดแคชคิวรีแบบ Embedding</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>เปิดใช้งานการค้นหาตามการฝังตัว</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>เปิดใช้งานการค้นหาเวกเตอร์เชิงความหมายสำหรับสูตรอาหารโดยใช้โมเดล embedding ต้องมีการกำหนดค่าจุดปลาย Ollama และโมเดล embedding</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>ภาษาที่ใช้ในการแปล</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>แบบจำลองการแปลภาษา</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>สวิตช์หลักสำหรับการค้นหาสูตรอาหารแบบความหมาย (ตามเวกเตอร์) เมื่อเปิดใช้งานและกำหนดค่าส่วนประกอบที่เกี่ยวข้องทั้งหมดแล้ว ผลลัพธ์การค้นหาจะแสดงป้ายสีเขียว \&quot;ค้นหาโดยอาศัย AI (ฐานข้อมูลเวกเตอร์)\&quot; และใช้การจัดอันดับความคล้ายคลึงแบบโคไซน์ผ่านแบบจำลองการฝังตัว เมื่อปิดใช้งาน หรือเมื่อมีส่วนประกอบที่เกี่ยวข้องไม่ครบถ้วน การค้นหาจะเปลี่ยนไปใช้การจับคู่คีย์เวิร์ดแบบเงียบๆ โดยไม่มีป้ายดังกล่าว จำเป็นต้องมีอินสแตนซ์ Ollama สำหรับการฝังตัว (หรือจุดสิ้นสุดการแชท OpenAI เป็นตัวเลือกสำรอง) และแบบจำลองการฝังตัว</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>จำนวนความคิดเห็นสูงสุดต่อวันต่อผู้ใช้</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>จำนวนสูงสุดของการจัดเก็บ query embeddings ในฐานข้อมูล เมื่อเกินค่าที่กำหนด จะลบข้อมูลที่ถูกเข้าถึงล่าสุดออกก่อน (LRU) ค่าเริ่มต้นคือ 2000 ปรับค่าตามความจุของฐานข้อมูลและความหลากหลายของ query ที่คาดไว้</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>จุดจบ API Ollama</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>โทเค็น Ollama สำหรับการฝัง</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>โทเค็น API ของ OpenAI</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>จุดจบการแชท OpenAI</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>โลโก้โครงการ</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>โทเค็นแบบบิเออร์สำหรับยืนยันตัวตนกับจุดสิ้นสุด Ollama สำหรับ embedding จะใช้โทเค็น API ของ Ollama แทนเมื่อว่าง</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>โทเค็นแบบ Bearer สำหรับยืนยันตัวตนกับ Embedding Ollama Instance เช่น 5a0fbdefa19f.... จะใช้ OpenAI API Token เมื่อค่าว่าง</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>โทเค็นแบบแบร์เออร์สำหรับการตรวจสอบสิทธิ์กับจุดปลาย Ollama/OpenAI</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>โทเค็นแบบแบร์เออร์สำหรับยืนยันตัวตนกับ OpenAI Chat Endpoint เช่น sk-abc123... หรือ 5a0fbdefa19f.... ปล่อยว่างหากเอนด์พอยต์ไม่จำเป็นต้องยืนยันตัวตน</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>ชื่อแบรนด์ที่แสดงไว้ในส่วนท้ายหน้า</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>ชื่อโมเดล embedding สำหรับการค้นหาแบบเวกเตอร์ เช่น bge-m3 ต้องมีการกำหนดค่า endpoint ของ Ollama</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>ชื่อโมเดล embedding เช่น bge-m3:latest ต้องมีอยู่ใน Ollama Instance สำหรับ Embedding ใช้สำหรับการค้นหาแบบเวกเตอร์เท่านั้น ไม่ใช้สำหรับการแปล</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL ของที่เก็บ Git สำหรับซิงค์สูตรอาหาร HowToCook</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>หมายเลขใบอนุญาต ICP สำหรับผู้ใช้ในแผ่นดินใหญ่จีน ปล่อยว่างไว้เพื่อซ่อน</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>ชื่อมอดเดล LLM ที่ใช้ในการแปลสูตรอาหารและแยกส่วนประกอบ เช่น qwen3.5:27b-q8_0 ต้องใช้งานได้ที่จุดปลายการสนทนา OpenAI ด้านบน ไม่เกี่ยวข้องกับการค้นหาแบบเวกเตอร์/การฝังตัว</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>โลโก้ของโครงการที่แสดงในแถบเมนูและฟุตเตอร์ รองรับไฟล์ jpg, png, svg</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>ชื่อโปรเจกต์ที่แสดงในหน้าแสดงผล</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>URL ฐานของ Ollama API ที่ใช้โดยเฉพาะสำหรับการสร้าง embedding ของสูตรอาหารและคำค้นหา (การค้นหาแบบเวกเตอร์) จะใช้เฉพาะโฮสต์เท่านั้น — /api/embed จะถูกเพิ่มโดยอัตโนมัติ หากว่างอยู่จะกลับไปยัง OpenAI Chat Endpoint ตัวอย่างเช่น https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>จุดสิ้นสุด API ของ Ollama ที่ใช้เฉพาะสำหรับการฝัง (การค้นหาแบบเวกเตอร์) จะใช้ค่าจุดสิ้นสุด API ของ Ollama เมื่อว่าง</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>จุดสิ้นสุด API สำหรับสร้างบทสนทนาที่รองรับ OpenAI สำหรับการแปลสูตรอาหาร เช่น https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>จุดสิ้นสุดการสนทนาที่เข้ากันได้กับ OpenAI ใช้สำหรับการแปลสูตรอาหาร การสกัดส่วนผสม และงาน LLM อื่นๆ ตัวอย่างเช่น https://ollama.example.com/v1/chat/completions ไม่เกี่ยวข้องกับการฝัง/การค้นหาแบบเวกเตอร์</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>ใช้การค้นหาด้วย AI</value>

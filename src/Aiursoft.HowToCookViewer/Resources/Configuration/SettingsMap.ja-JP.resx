@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>ダミー番号</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>埋め込みAPIトークン</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>埋め込みモデル</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>埋め込み Ollama インスタンス</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>埋め込みクエリキャッシュの制限</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>埋め込みベースの検索を有効にする</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>埋め込みモデルを使用してレシピのセマンティックベクトル検索を有効にします。Ollamaエンドポイントと埋め込みモデルの設定が必要です。</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>ローカライズ言語</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>ローカライズモデル</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>セマンティック（ベクトルベース）レシピ検索のマスタースイッチ。有効化され、かつすべての依存関係が設定されている場合、検索結果には緑色の「AI（ベクトルデータベース）に基づく検索」バッジが表示され、埋め込みモデルによるコサイン類似度ランク付けが使用されます。無効化されている場合、または依存関係が不足している場合は、バッジなしでキーワードマッチングに静かにフォールバックします。Embedding Ollama Instance（またはフォールバック先の OpenAI Chat Endpoint）と Embedding Model が必要です。</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>ユーザー1日あたりの最大コメント数</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>データベースにキャッシュされるクエリ埋め込みの最大数。この数を超えると、最も最近アクセスされたエントリがLRU方式で削除されます。デフォルトは2000。データベースの容量と予想されるクエリの多様性に応じて調整してください。</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama APIエンドポイント</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>埋め込み用のOllamaトークン</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>OpenAI APIトークン</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>OpenAI チャットエンドポイント</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>プロジェクトロゴ</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>埋め込み用 Ollama エンドポイントへの認証に使用するベアラートкен。空の場合は Ollama API トークンにフォールバックします。</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Embedding Ollama インスタンスへの認証用ベアートークン。例：5a0fbdefa19f.... 空の場合は OpenAI API トークンにフォールバックします。</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Ollama/OpenAIエンドポイントへの認証に使用するベアラートークン。</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>OpenAI Chat Endpoint への認証に使用するベアラートークン。例: sk-abc123... または 5a0fbdefa19f.... エンドポイントが認証を必要としない場合は空白のままにしてください。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>フッターに表示されるブランド名。</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>ベクトル検索用の埋め込みモデル名（例: bge-m3）。Ollama エンドポイントの設定が必要です。</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>埋め込みモデルの名前（例：bge-m3:latest）。埋め込み用Ollamaインスタンスで利用可能である必要があります。ベクトル検索にのみ使用され、翻訳には使用されません。</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>HowToCookのレシピを同期するためのGitリポジトリURL。</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>中国本土ユーザー向けのICPライセンス番号。空欄のままにすると非表示になります。</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>レシピの翻訳と材料抽出に使用されるLLMモデル名（例: qwen3.5:27b-q8_0）。上記のOpenAIチャットエンドポイントで利用可能である必要があります。埋め込み/ベクトル検索には関係ありません。</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>ナビゲーションバーとフッターに表示されるプロジェクトのロゴ。jpg、png、svg形式をサポート。</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>フロントエンドに表示されるプロジェクト名</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>レシピやクエリの埋め込み（ベクトル検索）の生成に特化したOllama APIのベースURL。ホストのみが使用され、/api/embedは自動的に付加されます。空の場合はOpenAIチャットエンドポイントにフォールバックします。例：https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>埋め込み（ベクトル検索）用に特別に使用されるOllama APIエンドポイント。空の場合はOllama APIエンドポイントにフォールバックします。</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>レシピの翻訳用のOpenAI互換チャット完了エンドポイント（例：https://ollama.example.com/api/chat/completions）</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>レシピの翻訳、食材の抽出、その他のLLMタスクに使用されるOpenAI互換のチャット完了エンドポイント。例：https://ollama.example.com/v1/chat/completions。埋め込み/ベクトル検索とは無関係です。</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>AI検索を使用する</value>
