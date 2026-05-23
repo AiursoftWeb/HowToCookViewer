@@ -50,10 +50,22 @@ public class CleanupLocalizedRecipesJob(
         var totalDeleted = 0;
 
         // 1. Delete LocalizedRecipes whose parent Recipe is soft-deleted.
-        var orphaned = await db.LocalizedRecipes
+        // Materialise the list of deleted Recipe IDs first to avoid MySQL error 1093:
+        // "You can't specify target table 'l' for update in FROM clause".
+        var deletedRecipeIds = await db.Recipes
             .IgnoreQueryFilters()
-            .Where(lr => lr.Recipe.IsDeleted && lr.LastLocalizedAt < staleCutoff)
-            .ExecuteDeleteAsync();
+            .Where(r => r.IsDeleted)
+            .Select(r => r.Id)
+            .ToListAsync();
+
+        int orphaned = 0;
+        if (deletedRecipeIds.Count > 0)
+        {
+            orphaned = await db.LocalizedRecipes
+                .IgnoreQueryFilters()
+                .Where(lr => deletedRecipeIds.Contains(lr.RecipeId) && lr.LastLocalizedAt < staleCutoff)
+                .ExecuteDeleteAsync();
+        }
 
         if (orphaned > 0)
         {
