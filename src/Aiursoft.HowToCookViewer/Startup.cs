@@ -82,6 +82,7 @@ public class Startup : IWebStartup
         var extractIngredientsJob = services.RegisterBackgroundJob<ExtractIngredientsJob>();
         var generateEmbeddingsJob = services.RegisterBackgroundJob<GenerateEmbeddingsJob>();
         var refreshEmbeddingCacheJob = services.RegisterBackgroundJob<RefreshEmbeddingCacheJob>();
+        var cleanupLocalizedRecipesJob = services.RegisterBackgroundJob<CleanupLocalizedRecipesJob>();
         services.RegisterBackgroundJob<ResetRecipeDataJob>(); // manual-only, no schedule
 
         // Scheduled tasks (attach a schedule to any registered background job)
@@ -132,6 +133,12 @@ public class Startup : IWebStartup
             registration: refreshEmbeddingCacheJob,
             period: TimeSpan.FromHours(8),
             startDelay: TimeSpan.FromMinutes(1));
+
+        // Cleanup stale LocalizedRecipes every 6 hours (starts after 55 min)
+        services.RegisterScheduledTask(
+            registration: cleanupLocalizedRecipesJob,
+            period: TimeSpan.FromHours(6),
+            startDelay: TimeSpan.FromMinutes(55));
 
         // Controllers and localization
         services.AddControllersWithViews()
