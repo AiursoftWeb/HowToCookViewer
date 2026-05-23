@@ -315,6 +315,9 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                         .IsRequired()
                         .HasColumnType("BLOB");
 
+                    b.Property<DateTime>("LastAccessedAt")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("QueryText")
                         .IsRequired()
                         .HasMaxLength(40)

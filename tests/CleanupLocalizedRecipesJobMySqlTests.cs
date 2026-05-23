@@ -5,7 +5,7 @@ using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
+
 using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Aiursoft.HowToCookViewer.Tests;
@@ -28,14 +28,28 @@ public class CleanupLocalizedRecipesJobMySqlTests
     public async Task Initialize()
     {
         await using var db = new MySqlContext(CreateOptions());
-        await db.Database.EnsureCreatedAsync();
+        try
+        {
+            await db.Database.EnsureCreatedAsync();
+        }
+        catch (Exception ex) when (ex is MySqlConnector.MySqlException or InvalidOperationException or System.Net.Sockets.SocketException)
+        {
+            Assert.Inconclusive($"MySQL is not available on localhost:3307. Skipping integration test. ({ex.GetType().Name})");
+        }
     }
 
     [TestCleanup]
     public async Task Cleanup()
     {
         await using var db = new MySqlContext(CreateOptions());
-        await db.Database.EnsureDeletedAsync();
+        try
+        {
+            await db.Database.EnsureDeletedAsync();
+        }
+        catch
+        {
+            // MySQL not available — nothing to clean up.
+        }
     }
 
     [TestMethod]

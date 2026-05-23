@@ -20,6 +20,7 @@ public class SettingsMap
     public const string EmbeddingApiToken = "EmbeddingApiToken";
     public const string EnableEmbeddingBasedSearch = "EnableEmbeddingBasedSearch";
     public const string LocalizationLanguages = "LocalizationLanguages";
+    public const string EmbeddingQueryCacheLimit = "EmbeddingQueryCacheLimit";
     public const string ShowVoxihostAd = "ShowVoxihostAd";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
 
@@ -154,6 +155,14 @@ public class SettingsMap
             Description = Localizer["Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \"Search based on AI (Vector Database)\" badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model."],
             Type = SettingType.Bool,
             DefaultValue = "False"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = EmbeddingQueryCacheLimit,
+            Name = Localizer["Embedding Query Cache Limit"],
+            Description = Localizer["Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity."],
+            Type = SettingType.Number,
+            DefaultValue = "2000"
         },
         new GlobalSettingDefinition
         {

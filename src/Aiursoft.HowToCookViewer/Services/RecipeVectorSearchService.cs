@@ -20,7 +20,12 @@ public class RecipeVectorSearchService(
     IHttpClientFactory httpClientFactory)
 {
     private const int EmbedTimeoutSeconds = 10;
-    private const int MaxCachedQueries = 2000;
+
+    /// <summary>
+    /// Only update LastAccessedAt when the previous update was at least this long ago.
+    /// Avoids a write on every cache-hit search while still preserving approximate LRU order.
+    /// </summary>
+    internal static readonly TimeSpan AccessThrottle = TimeSpan.FromHours(1);
 
     public async Task<(bool UsedAi, List<Recipe> Results, int TotalCount)> SearchAsync(
         IQueryable<Recipe> baseQuery,
@@ -163,7 +168,6 @@ public class RecipeVectorSearchService(
     {
         // Check database cache first.
         var cached = await db.SearchEmbeddings
-            .AsNoTracking()
             .FirstOrDefaultAsync(e => e.QueryText == text, ct);
 
         if (cached != null)
@@ -171,6 +175,14 @@ public class RecipeVectorSearchService(
             var vector = Deserialize(cached.Embedding);
             if (vector != null)
             {
+                // Throttled LRU bump: only touch the timestamp every AccessThrottle.
+                var now = DateTime.UtcNow;
+                if (now - cached.LastAccessedAt >= AccessThrottle)
+                {
+                    cached.LastAccessedAt = now;
+                    await db.SaveChangesAsync(ct);
+                }
+
                 return vector;
             }
         }
@@ -212,11 +224,13 @@ public class RecipeVectorSearchService(
         var serialized = Serialize(embedding);
         try
         {
+            var now = DateTime.UtcNow;
             db.SearchEmbeddings.Add(new SearchEmbedding
             {
                 QueryText = text,
                 Embedding = serialized,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = now,
+                LastAccessedAt = now
             });
             await db.SaveChangesAsync(ct);
 
@@ -231,23 +245,24 @@ public class RecipeVectorSearchService(
         return embedding;
     }
 
-    /// <summary>Remove oldest entries if the cache exceeds MaxCachedQueries.</summary>
+    /// <summary>Remove least-recently-accessed entries if the cache exceeds the configured limit.</summary>
     private async Task TrimCacheAsync(CancellationToken ct)
     {
+        var limit = await settingsService.GetIntSettingAsync(SettingsMap.EmbeddingQueryCacheLimit);
+        if (limit <= 0) limit = 2000;
+
         var count = await db.SearchEmbeddings.CountAsync(ct);
-        if (count <= MaxCachedQueries) return;
+        if (count <= limit) return;
 
         var toDelete = await db.SearchEmbeddings
-            .OrderBy(e => e.CreatedAt)
-            .Take(count - MaxCachedQueries)
-            .Select(e => e.Id)
+            .OrderBy(e => e.LastAccessedAt)
+            .Take(count - limit)
             .ToListAsync(ct);
 
         if (toDelete.Count > 0)
         {
-            await db.SearchEmbeddings
-                .Where(e => toDelete.Contains(e.Id))
-                .ExecuteDeleteAsync(ct);
+            db.SearchEmbeddings.RemoveRange(toDelete);
+            await db.SaveChangesAsync(ct);
         }
     }
 

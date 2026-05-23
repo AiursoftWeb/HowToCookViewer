@@ -40,7 +40,8 @@ public class RecipeVectorSearchTests
     private async Task SeedGlobalSettingsAsync(
         bool useAiSearch = false,
         string ollamaInstance = "",
-        string embeddingModel = "")
+        string embeddingModel = "",
+        int cacheLimit = 2000)
     {
         var settings = new[]
         {
@@ -48,7 +49,8 @@ public class RecipeVectorSearchTests
             new GlobalSetting { Key = SettingsMap.OpenAiInstance, Value = ollamaInstance },
             new GlobalSetting { Key = SettingsMap.OpenAiLocalizationModel, Value = "" },
             new GlobalSetting { Key = SettingsMap.OpenAiApiToken, Value = "" },
-            new GlobalSetting { Key = SettingsMap.EmbeddingModel, Value = embeddingModel }
+            new GlobalSetting { Key = SettingsMap.EmbeddingModel, Value = embeddingModel },
+            new GlobalSetting { Key = SettingsMap.EmbeddingQueryCacheLimit, Value = cacheLimit.ToString() }
         };
 
         foreach (var setting in settings)
@@ -311,20 +313,23 @@ public class RecipeVectorSearchTests
     }
 
     [TestMethod]
-    public async Task CacheTrim_OldestEntriesRemovedWhenExceedingLimit()
+    public async Task CacheTrim_LRUEviction_RemovesLeastRecentlyAccessed()
     {
-        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3", cacheLimit: 5);
         await SeedRecipesWithEmbeddingsAsync();
 
-        // Pre-seed the cache with MaxCachedQueries entries.
-        var oldDate = DateTime.UtcNow.AddDays(-10);
-        for (var i = 0; i < 10; i++)
+        var now = DateTime.UtcNow;
+
+        // Seed 5 entries with staggered LastAccessedAt.
+        // oldest has been accessed least recently, newest most recently.
+        for (var i = 0; i < 5; i++)
         {
             _db.SearchEmbeddings.Add(new SearchEmbedding
             {
-                QueryText = $"old_query_{i}",
+                QueryText = $"query_{i}",
                 Embedding = new byte[VectorDimension * 4],
-                CreatedAt = oldDate
+                CreatedAt = now.AddDays(-10),
+                LastAccessedAt = now.AddDays(-10 + i) // 0=distant, 4=recent
             });
         }
         await _db.SaveChangesAsync();
@@ -332,14 +337,16 @@ public class RecipeVectorSearchTests
         var countingHandler = new CountingOllamaHandler();
         var service = CreateSearchService(countingHandler);
 
-        // A new search should succeed and trigger trimming (10 old + 1 new > limit unlikely).
+        // A new search adds one more entry, total becomes 6 > limit 5, triggers trim.
         var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "新查询", 1, 10);
         Assert.IsTrue(usedAi);
 
-        // The new query should be in the cache.
-        var newEntry = await _db.SearchEmbeddings
-            .FirstOrDefaultAsync(e => e.QueryText == "新查询");
-        Assert.IsNotNull(newEntry, "Newly searched query should be cached.");
+        // The oldest entry (query_0, least recently accessed) should be evicted.
+        var allQueries = await _db.SearchEmbeddings.Select(e => e.QueryText).ToListAsync();
+        Assert.AreEqual(5, allQueries.Count, "Cache should be trimmed to exactly 5 entries.");
+        Assert.IsFalse(allQueries.Contains("query_0"), "Least-recently-accessed entry should be evicted.");
+        Assert.IsTrue(allQueries.Contains("query_4"), "Most-recently-accessed entry should survive.");
+        Assert.IsTrue(allQueries.Contains("新查询"), "Newly searched query should be cached.");
     }
 
     [TestMethod]
@@ -360,7 +367,8 @@ public class RecipeVectorSearchTests
         {
             QueryText = "预缓存查询",
             Embedding = bytes,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            LastAccessedAt = DateTime.UtcNow
         });
         await _db.SaveChangesAsync();
 
@@ -371,6 +379,106 @@ public class RecipeVectorSearchTests
         Assert.IsTrue(usedAi);
         Assert.AreEqual(0, countingHandler.CallCount,
             "Ollama should NOT be called when the query is already cached in the database.");
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Tests: LRU cache behavior
+    // ─────────────────────────────────────────────────────────────────────────
+
+    [TestMethod]
+    public async Task CacheHit_UpdatesLastAccessedAt_WhenPastThrottle()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        var oldDate = DateTime.UtcNow.AddHours(-2); // older than AccessThrottle (1 hour)
+
+        // Pre-cache a query with an old LastAccessedAt.
+        var queryVector = new float[VectorDimension];
+        queryVector[0] = 0.8f;
+        queryVector[1] = 0.8f;
+        Normalize(queryVector);
+        var bytes = new byte[VectorDimension * 4];
+        Buffer.BlockCopy(queryVector, 0, bytes, 0, bytes.Length);
+
+        _db.SearchEmbeddings.Add(new SearchEmbedding
+        {
+            QueryText = "旧查询",
+            Embedding = bytes,
+            CreatedAt = oldDate,
+            LastAccessedAt = oldDate
+        });
+        await _db.SaveChangesAsync();
+
+        var service = CreateSearchService();
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "旧查询", 1, 10);
+        Assert.IsTrue(usedAi);
+
+        // LastAccessedAt should have been bumped to near-now.
+        var cached = await _db.SearchEmbeddings
+            .AsNoTracking()
+            .FirstAsync(e => e.QueryText == "旧查询");
+        Assert.IsTrue(cached.LastAccessedAt > oldDate.AddHours(1),
+            "LastAccessedAt should be updated when past the access throttle window.");
+    }
+
+    [TestMethod]
+    public async Task CacheHit_SkipsLastAccessedAtUpdate_WithinThrottleWindow()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+
+        var justNow = DateTime.UtcNow;
+
+        var queryVector = new float[VectorDimension];
+        queryVector[0] = 0.8f;
+        queryVector[1] = 0.8f;
+        Normalize(queryVector);
+        var bytes = new byte[VectorDimension * 4];
+        Buffer.BlockCopy(queryVector, 0, bytes, 0, bytes.Length);
+
+        _db.SearchEmbeddings.Add(new SearchEmbedding
+        {
+            QueryText = "刚缓存",
+            Embedding = bytes,
+            CreatedAt = justNow,
+            LastAccessedAt = justNow
+        });
+        await _db.SaveChangesAsync();
+
+        var service = CreateSearchService();
+        var (usedAi, _, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "刚缓存", 1, 10);
+        Assert.IsTrue(usedAi);
+
+        // LastAccessedAt should NOT have been updated — still within the throttle window.
+        var cached = await _db.SearchEmbeddings
+            .AsNoTracking()
+            .FirstAsync(e => e.QueryText == "刚缓存");
+        Assert.AreEqual(justNow, cached.LastAccessedAt,
+            "LastAccessedAt should NOT be updated when still within the access throttle window.");
+    }
+
+    [TestMethod]
+    public async Task CacheLimit_RespectsConfiguredValue()
+    {
+        // Set limit to 2 — only 2 query embeddings should survive after a new search.
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3", cacheLimit: 2);
+        await SeedRecipesWithEmbeddingsAsync();
+
+        var countingHandler = new CountingOllamaHandler();
+        var service = CreateSearchService(countingHandler);
+
+        // Search for 3 different queries; each should be cached, but only 2 survive.
+        await service.SearchAsync(_db.Recipes.AsNoTracking(), "查询A", 1, 10);
+        await service.SearchAsync(_db.Recipes.AsNoTracking(), "查询B", 1, 10);
+        await service.SearchAsync(_db.Recipes.AsNoTracking(), "查询C", 1, 10);
+
+        var count = await _db.SearchEmbeddings.CountAsync();
+        Assert.AreEqual(2, count, "Cache should be trimmed to exactly the configured limit of 2.");
+
+        // The first query (least recently accessed) should be evicted.
+        var existsA = await _db.SearchEmbeddings.AnyAsync(e => e.QueryText == "查询A");
+        Assert.IsFalse(existsA, "Least-recently-accessed query should be evicted when limit exceeded.");
     }
 
     // ─────────────────────────────────────────────────────────────────────────

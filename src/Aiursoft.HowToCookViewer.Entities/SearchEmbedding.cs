@@ -17,4 +17,6 @@ public class SearchEmbedding
     public byte[] Embedding { get; set; } = [];
 
     public DateTime CreatedAt { get; set; }
+
+    public DateTime LastAccessedAt { get; set; }
 }
