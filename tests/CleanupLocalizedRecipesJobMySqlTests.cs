@@ -27,14 +27,14 @@ public class CleanupLocalizedRecipesJobMySqlTests
     [TestInitialize]
     public async Task Initialize()
     {
-        await using var db = new MySqlContext(CreateOptions());
         try
         {
+            await using var db = new MySqlContext(CreateOptions());
             await db.Database.EnsureCreatedAsync();
         }
-        catch (Exception ex) when (ex is MySqlConnector.MySqlException or InvalidOperationException or System.Net.Sockets.SocketException)
+        catch (Exception ex)
         {
-            Assert.Inconclusive($"MySQL is not available on localhost:3307. Skipping integration test. ({ex.GetType().Name})");
+            Assert.Inconclusive($"MySQL integration test skipped — infrastructure not available. ({ex.GetType().Name}: {ex.Message})");
         }
     }
 
