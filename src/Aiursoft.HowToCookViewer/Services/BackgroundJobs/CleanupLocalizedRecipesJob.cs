@@ -79,6 +79,7 @@ public class CleanupLocalizedRecipesJob(
         if (configuredCultures.Count > 0)
         {
             var staleCulture = await db.LocalizedRecipes
+                .IgnoreQueryFilters()
                 .Where(lr => !configuredCultures.Contains(lr.Culture) && lr.LastLocalizedAt < staleCutoff)
                 .ExecuteDeleteAsync();
 
