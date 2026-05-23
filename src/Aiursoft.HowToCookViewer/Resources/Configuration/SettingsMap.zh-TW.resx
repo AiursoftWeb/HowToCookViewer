@@ -51,8 +51,17 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>測試用數字</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>Embedding API 權杖</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>嵌入模型</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Ollama 嵌入實例</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>啟用嵌入搜尋</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>啟用使用嵌入模型的語義向量搜尋食譜功能。需要配置 Ollama 端點和嵌入模型。</value>
@@ -72,6 +81,12 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>本地化語言</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>在地化模型</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>語意（向量式）食譜搜尋的主控開關。啟用且所有相依元件均已設定時，搜尋結果將顯示綠色的「Search based on AI (Vector Database)」徽章，並透過嵌入模型以餘弦相似度進行排序。停用時，或當相依元件缺失時，搜尋將靜默退回至關鍵字比對，且不顯示該徽章。需要 Embedding Ollama Instance（或 OpenAI Chat Endpoint 作為後備）與 Embedding Model。</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>每人每日最大留言數</value>
   </data>
@@ -90,6 +105,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>用於嵌入的 Ollama Token</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>OpenAI API 權杖</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>OpenAI 對話端點</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>專案標誌</value>
   </data>
@@ -105,8 +126,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>用於與嵌入 Ollama 端點進行身份驗證的載入權杖。當為空時，會回退至 Ollama API 權杖。</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>用於驗證 Embedding Ollama Instance 的 Bearer Token，例如 5a0fbdefa19f.... 若留空則會退而使用 OpenAI API Token。</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>用於與 Ollama/OpenAI 端點進行身份驗證的載入者權杖。</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>用於向 OpenAI 聊天端點進行驗證的 Bearer Token，例如 sk-abc123... 或 5a0fbdefa19f.... 若該端點無需驗證，請留空。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>頁尾顯示的品牌名稱</value>
@@ -114,11 +141,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>向量搜尋的嵌入模型名稱，例如 bge-m3。需要配置 Ollama 端點。</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>嵌入模型名稱，例如 bge-m3:latest。必須在「嵌入 Ollama 實例」中可用。僅用於向量搜尋，不用於翻譯。</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>用於同步 HowToCook 食譜的 Git 儲存庫 URL。</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>適用於中國大陸使用者的 ICP 備案號碼。留空則隱藏。</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>用於食譜翻譯與食材擷取的 LLM 模型名稱，例如 qwen3.5:27b-q8_0。必須為上方 OpenAI Chat Endpoint 所支援的模型。與嵌入/向量搜尋無關。</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>專案的標誌顯示於導覽列與頁尾。支援 jpg、png、svg 格式。</value>
@@ -129,11 +162,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>專案在前端顯示的名稱。</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>專用於產生食譜與查詢嵌入向量（向量搜尋）的 Ollama API 基礎網址。僅使用主機位址，`/api/embed` 會自動附加。若留空則會回退至 OpenAI 聊天端點。例如：https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>專門用於嵌入（向量搜尋）的 Ollama API 端點。若為空，則回退至 Ollama API 端點。</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>用於食譜翻譯的 OpenAI 相容聊天完成端點，例如 https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>與 OpenAI 相容的對話完成端點，用於食譜翻譯、食材擷取及其他 LLM 任務。例如：https://ollama.example.com/v1/chat/completions。與嵌入/向量搜尋無關。</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>使用 AI 搜尋</value>
