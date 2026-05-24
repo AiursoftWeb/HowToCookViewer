@@ -51,8 +51,20 @@
   <data name="Dummy Number" xml:space="preserve">
     <value>Dummy-nummer</value>
   </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>Indlejrings-API-token</value>
+  </data>
   <data name="Embedding Model" xml:space="preserve">
     <value>Indlejringsmodel</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Indlejring af Ollama-instans</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Grænse for cache af indlejrede forespørgsler</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>Aktivér indlejring-baseret søgning</value>
   </data>
   <data name="Enable semantic vector search for recipes using an embedding model. Requires Ollama endpoint and embedding model to be configured." xml:space="preserve">
     <value>Aktiver semantisk vektorsøgning til opskrifter ved hjælp af en indlejringmodel. Kræver, at Ollama-endepunkt og indlejringmodel er konfigureret.</value>
@@ -72,8 +84,17 @@
   <data name="Localization Languages" xml:space="preserve">
     <value>Lokalisationssprog</value>
   </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>Lokaliseringsmodel</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>Hovedkontakt til semantisk (vektorbaseret) opskriftssøgning. Når aktiveret og alle afhængigheder er konfigureret, viser søgeresultaterne et grønt \&quot;Søgning baseret på AI (Vektordatabase)\&quot;-mærke og bruger cosine-ligningsrangorden via indlejringsmodellen. Når deaktiveret, eller når afhængigheder mangler, falder søgningen stille tilbage til nøgleordsmatching uden mærket. Kræver Embedding Ollama Instance (eller OpenAI Chat Endpoint som fallback) og Embedding Model.</value>
+  </data>
   <data name="Max Comments Per Day Per User" xml:space="preserve">
     <value>Maksimalt antal kommentarer per dag per bruger</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>Maksimalt antal gemte forespørgsels-embeddings i databasen. Når denne grænse overskrides, fjernes de mindst nyligt tilgængelige poster (LRU). Standard 2000. Juster baseret på din databases kapacitet og forventet diversitet i forespørgslerne.</value>
   </data>
   <data name="Ollama API Endpoint" xml:space="preserve">
     <value>Ollama API-endepunkt</value>
@@ -90,6 +111,12 @@
   <data name="Ollama Token for Embedding" xml:space="preserve">
     <value>Ollama-token til indlejring</value>
   </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>OpenAI API-nøgle</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>OpenAI Chat-endepunkt</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Projekttast</value>
   </data>
@@ -105,8 +132,14 @@
   <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
     <value>Bearer-tokenen til autentificering med Ollama-endepunktet til indlejring. Fallback til Ollama API-token, når den er tom.</value>
   </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering med Embedding Ollama-instansen, f.eks. 5a0fbdefa19f.... Faller tilbage til OpenAI API-token, når den er tom.</value>
+  </data>
   <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
     <value>Bearer-tokenet til autentificering med Ollama/OpenAI-endepunktet.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering af OpenAI Chat Endpoint, f.eks. sk-abc123... eller 5a0fbdefa19f.... Efterlad tom, hvis endpointet ikke kræver autentificering.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Det brands navn, der vises i foden.</value>
@@ -114,11 +147,17 @@
   <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
     <value>Navnet på indlejringsmodellen til vektorsøgning, f.eks. bge-m3. Kræver, at Ollama-endepunktet er konfigureret.</value>
   </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Navnet på indlejringmodellen, f.eks. bge-m3:latest. Skal være tilgængelig på Embedding Ollama Instance. Bruges kun til vektorsøgning, ikke til oversættelse.</value>
+  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL&apos;en til Git-arkivet, som HowToCook-opskrifterne synkroniseres fra.</value>
   </data>
   <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
     <value>ICP-licensenr. for brugere i Kina. Lad stå tomt for at skjule.</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Navnet på LLM-modellen, der bruges til opskriftsoversættelse og udtrækning af ingredienser, f.eks. qwen3.5:27b-q8_0. Skal være tilgængelig på ovenstående OpenAI Chat Endpoint. Ikke relateret til indlejring/vektorsøgning.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Det projektlogo, der vises i navigationen og foden. Støtter jpg, png, svg.</value>
@@ -129,11 +168,17 @@
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Navnet på projektet, der vises i brugergrænsefladen.</value>
   </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>Ollama API&apos;s base-URL, der specifikt bruges til at generere indlejringer af opskrifter og forespørgsler (vektorsøgning). Kun værten bruges — /api/embed tilføjes automatisk. Faller tilbage til OpenAI Chat Endpoint, hvis den er tom. F.eks. https://ollama.example.com</value>
+  </data>
   <data name="The Ollama API endpoint used specifically for embedding (vector search). Falls back to Ollama API Endpoint when empty." xml:space="preserve">
     <value>Ollama API-endepunktet, der bruges specifikt til indlejring (vektorsøgning). Fallback til Ollama API-endepunkt, når det er tomt.</value>
   </data>
   <data name="The OpenAI-compatible chat completions endpoint for recipe translation, e.g. https://ollama.example.com/api/chat/completions" xml:space="preserve">
     <value>Endpointet til OpenAI-kompatible chat-afslutninger til opskriftsoversættelse, f.eks. https://ollama.example.com/api/chat/completions</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Endpointet til chat-afslutninger, der er OpenAI-kompatibelt, bruges til opskriftsoversættelse, ingrediensudtrækning og andre LLM-opgaver. F.eks. https://ollama.example.com/v1/chat/completions. Ikke relateret til indlejring/vektorsøgning.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Brug AI-søgning</value>
