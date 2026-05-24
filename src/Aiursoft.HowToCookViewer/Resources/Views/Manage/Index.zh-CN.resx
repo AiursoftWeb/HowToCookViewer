@@ -52,10 +52,10 @@
     <value>成功！</value>
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
-    <value>由于本地身份验证已禁用，您无法更改密码。请从</value>
+    <value>由于本地身份验证已禁用，您无法在此应用内部更改密码。请从</value>
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
-    <value>由于本地身份验证已禁用，您无法更改密码。请通过认证提供方编辑您的个人资料。</value>
+    <value>由于本地身份验证已禁用，您无法在此应用内部更改密码。请通过认证提供方编辑您的个人资料。</value>
   </data>
 
 </root>
