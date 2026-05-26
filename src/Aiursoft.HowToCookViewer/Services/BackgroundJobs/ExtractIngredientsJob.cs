@@ -17,6 +17,7 @@ public class ExtractIngredientsJob(
     GlobalSettingsService settingsService,
     ChatClient chatClient,
     RetryEngine retryEngine,
+    IngredientGroupService groupService,
     ILogger<ExtractIngredientsJob> logger) : IBackgroundJob
 {
     public string Name => "Extract Recipe Ingredients";
@@ -66,6 +67,8 @@ public class ExtractIngredientsJob(
 
             lastId = pendingRecipes.Max(r => r.Id);
         }
+
+        groupService.Invalidate();
     }
 
     private async Task ExtractForRecipeAsync(Recipe recipe, string instance, string model)

@@ -22,6 +22,7 @@ public class SettingsMap
     public const string LocalizationLanguages = "LocalizationLanguages";
     public const string EmbeddingQueryCacheLimit = "EmbeddingQueryCacheLimit";
     public const string ShowVoxihostAd = "ShowVoxihostAd";
+    public const string IngredientSimilarityThreshold = "IngredientSimilarityThreshold";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
 
     public class FakeLocalizer
@@ -179,6 +180,14 @@ public class SettingsMap
             Description = Localizer["Display a promotion banner on the home page thanking Voxihost for sponsoring the server."],
             Type = SettingType.Bool,
             DefaultValue = "False"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = IngredientSimilarityThreshold,
+            Name = Localizer["Ingredient Similarity Threshold"],
+            Description = Localizer["Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 80."],
+            Type = SettingType.Number,
+            DefaultValue = "80"
         },
         new GlobalSettingDefinition
         {

@@ -63,6 +63,7 @@ public class Startup : IWebStartup
         services.AddScoped<ChatClient>();
         services.AddScoped<MarkdownShredder>();
         services.AddSingleton<RecipeEmbeddingCache>();
+        services.AddSingleton<IngredientGroupService>();
         services.AddSingleton<SearchRateLimiter>();
         services.AddScoped<RecipeVectorSearchService>();
         services.AddGitRunner();

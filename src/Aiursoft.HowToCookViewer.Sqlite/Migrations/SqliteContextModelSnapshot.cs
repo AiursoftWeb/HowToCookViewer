@@ -36,12 +36,23 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("CanonicalIngredientId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("Embedding")
+                        .HasColumnType("BLOB");
+
+                    b.Property<DateTime>("LastEmbeddedAt")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CanonicalIngredientId");
 
                     b.HasIndex("Name")
                         .IsUnique();
@@ -587,6 +598,16 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Ingredient", b =>
+                {
+                    b.HasOne("Aiursoft.HowToCookViewer.Entities.Ingredient", "CanonicalIngredient")
+                        .WithMany("Aliases")
+                        .HasForeignKey("CanonicalIngredientId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CanonicalIngredient");
+                });
+
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.LocalizedRecipe", b =>
                 {
                     b.HasOne("Aiursoft.HowToCookViewer.Entities.Recipe", "Recipe")
@@ -748,6 +769,11 @@ namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Ingredient", b =>
+                {
+                    b.Navigation("Aliases");
                 });
 
             modelBuilder.Entity("Aiursoft.HowToCookViewer.Entities.Recipe", b =>

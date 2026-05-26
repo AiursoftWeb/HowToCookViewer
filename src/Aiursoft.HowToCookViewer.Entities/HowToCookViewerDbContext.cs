@@ -44,6 +44,12 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
             .HasIndex(lt => new { lt.TipId, lt.Culture })
             .IsUnique();
 
+        builder.Entity<Ingredient>()
+            .HasOne(i => i.CanonicalIngredient)
+            .WithMany(i => i.Aliases)
+            .HasForeignKey(i => i.CanonicalIngredientId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         builder.Entity<Recipe>()
             .HasQueryFilter(r => !r.IsDeleted);
 

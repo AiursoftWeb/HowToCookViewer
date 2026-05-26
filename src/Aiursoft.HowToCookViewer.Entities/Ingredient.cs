@@ -14,5 +14,15 @@ public class Ingredient
     [MaxLength(100)]
     public required string Name { get; set; }
 
+    public byte[]? Embedding { get; set; }
+
+    public DateTime LastEmbeddedAt { get; set; } = DateTime.MinValue;
+
+    public int? CanonicalIngredientId { get; set; }
+
+    public Ingredient? CanonicalIngredient { get; set; }
+
+    public ICollection<Ingredient> Aliases { get; set; } = [];
+
     public ICollection<Recipe> Recipes { get; set; } = [];
 }

@@ -9,7 +9,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span>
                         <i class="align-middle me-1" data-lucide="cherry"></i>
-                        @Localizer["Ingredients"] (<span id="ingredient-total">@Model.IngredientCount</span>)
+                        @Localizer["Ingredients"] (<span id="ingredient-total">@Model.GroupCount</span>)
                     </span>
                     <button id="clear-selection" class="btn btn-sm btn-outline-secondary" style="display:none;">
                         @Localizer["Clear Selection"]
@@ -17,14 +17,22 @@
                 </div>
                 <div class="card-body" style="max-height:calc(100vh - 160px);overflow-y:auto;">
                     <div class="d-flex flex-wrap gap-2" id="ingredient-list">
-                        @foreach (var ing in Model.AllIngredients)
+                        @foreach (var group in Model.Groups)
                         {
-                            var isPreSelected = Model.PreSelectedIds.Contains(ing.Id);
+                            var isPreSelected = Model.PreSelectedCanonicalIds.Contains(group.Canonical.Id);
+                            var tooltipText = group.GroupSize > 1
+                                ? $"{group.Canonical.Name}（又名: {string.Join("、", group.Aliases.Select(a => a.Name))}）"
+                                : group.Canonical.Name;
                             <button class="btn @(isPreSelected ? "btn-primary" : "btn-outline-secondary") ingredient-chip rounded-pill px-3 py-1"
-                                    data-ingredient-id="@ing.Id"
-                                    data-ingredient-name="@ing.Name"
+                                    data-ingredient-group-id="@group.Canonical.Id"
+                                    data-ingredient-group-name="@group.Canonical.Name"
+                                    title="@tooltipText"
                                     role="checkbox" aria-checked="@(isPreSelected ? "true" : "false")">
-                                @ing.Name
+                                @group.Canonical.Name
+                                @if (group.GroupSize > 1)
+                                {
+                                    <span class="badge bg-light text-dark ms-1" title="包含: @string.Join("、", group.Aliases.Select(a => a.Name))">@group.GroupSize</span>
+                                }
                             </button>
                         }
                     </div>
@@ -69,7 +77,7 @@
     <script>
     (function() {
         var chips = document.querySelectorAll('.ingredient-chip');
-        var preSelectedIds = @Json.Serialize(Model.PreSelectedIds);
+        var preSelectedIds = @Json.Serialize(Model.PreSelectedCanonicalIds);
         var selected = new Set(preSelectedIds);
         var clearBtn = document.getElementById('clear-selection');
         var resultsDiv = document.getElementById('lookup-results');
@@ -81,7 +89,7 @@
 
         function updateChips() {
             chips.forEach(function(chip) {
-                var id = parseInt(chip.dataset.ingredientId);
+                var id = parseInt(chip.dataset.ingredientGroupId);
                 if (selected.has(id)) {
                     chip.classList.remove('btn-outline-secondary');
                     chip.classList.add('btn-primary');
@@ -137,7 +145,7 @@
 
         chips.forEach(function(chip) {
             chip.addEventListener('click', function() {
-                var id = parseInt(chip.dataset.ingredientId);
+                var id = parseInt(chip.dataset.ingredientGroupId);
                 if (selected.has(id)) {
                     selected.delete(id);
                 } else {

@@ -14,7 +14,9 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 public class IngredientsController(
     TemplateDbContext db,
     RecipeLocalizationService recipeLocalization,
-    IStringLocalizer<IngredientsController> localizer) : Controller
+    IStringLocalizer<IngredientsController> localizer,
+    IngredientGroupService groupService,
+    GlobalSettingsService settingsService) : Controller
 {
     [ExcludeFromCodeCoverage]
     // ReSharper disable once UnusedMember.Local
@@ -33,22 +35,19 @@ public class IngredientsController(
         LinkOrder = 2)]
     public async Task<IActionResult> Index()
     {
-        var ingredients = await db.Ingredients
-            .AsNoTracking()
-            .OrderByDescending(i => i.Recipes.Count)
-            .ThenBy(i => i.Name)
-            .ToListAsync();
+        var groups = await groupService.GetGroupsAsync(db, settingsService);
 
-        var preSelectedIds = ingredients
+        var preSelectedIds = groups
             .Take(20)
-            .Select(i => i.Id)
+            .Select(g => g.Canonical.Id)
             .ToHashSet();
 
         return this.StackView(new IngredientIndexVm
         {
-            AllIngredients = ingredients,
-            IngredientCount = ingredients.Count,
-            PreSelectedIds = preSelectedIds
+            Groups = [.. groups],
+            GroupCount = groups.Count,
+            RawIngredientCount = groups.Sum(g => g.GroupSize),
+            PreSelectedCanonicalIds = preSelectedIds
         });
     }
 
@@ -60,7 +59,9 @@ public class IngredientsController(
             return PartialView("_LookupResults", new LookupResultsViewModel());
         }
 
-        var ids = ingredientIds.Distinct().ToList();
+        // Expand canonical IDs to all alias ingredient IDs
+        var expandedIds = groupService.ExpandCanonicalIds([.. ingredientIds]);
+        var ids = expandedIds.Distinct().ToList();
 
         // Load all candidates that have at least one matching ingredient
         var candidates = await db.Recipes
