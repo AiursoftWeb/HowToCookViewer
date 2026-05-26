@@ -134,7 +134,7 @@ public class IngredientGroupService(
         }
 
         // Deserialize embeddings
-        var embeddings = new float[ingredients.Count][];
+        float[]?[] embeddings = new float[ingredients.Count][];
         for (var i = 0; i < ingredients.Count; i++)
         {
             var vec = Deserialize(ingredients[i].Embedding);
@@ -145,11 +145,13 @@ public class IngredientGroupService(
         var dsu = new DisjointSetUnion(ingredients.Count);
         for (var i = 0; i < ingredients.Count; i++)
         {
-            if (embeddings[i] == null) continue;
+            var embI = embeddings[i];
+            if (embI == null) continue;
             for (var j = i + 1; j < ingredients.Count; j++)
             {
-                if (embeddings[j] == null) continue;
-                var similarity = CosineSimilarity(embeddings[i], embeddings[j]);
+                var embJ = embeddings[j];
+                if (embJ == null) continue;
+                var similarity = CosineSimilarity(embI, embJ);
                 if (similarity >= threshold)
                     dsu.Union(i, j);
             }
