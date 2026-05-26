@@ -19,7 +19,7 @@ public class MarketingFooter(
         var logoPath = await globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectLogo);
         if (!string.IsNullOrWhiteSpace(logoPath))
         {
-            model.LogoUrl = storageService.RelativePathToInternetUrl(logoPath, HttpContext);
+            model.LogoUrl = storageService.RelativePathToInternetUrl(logoPath);
         }
 
         return View(model);

@@ -457,7 +457,7 @@ public class ViewModelArgsInjector(
             SideLogo = new SideLogoViewModel
             {
                 AppName = projectName,
-                LogoUrl = GetLogoUrl(context).GetAwaiter().GetResult(),
+                LogoUrl = GetLogoUrl().GetAwaiter().GetResult(),
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
@@ -562,13 +562,13 @@ public class ViewModelArgsInjector(
     }
 
 
-    private async Task<string> GetLogoUrl(HttpContext context)
+    private async Task<string> GetLogoUrl()
     {
         var logoPath = await globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectLogo);
         if (string.IsNullOrWhiteSpace(logoPath))
         {
             return "/logo.svg";
         }
-        return storageService.RelativePathToInternetUrl(logoPath, context);
+        return storageService.RelativePathToInternetUrl(logoPath);
     }
 }

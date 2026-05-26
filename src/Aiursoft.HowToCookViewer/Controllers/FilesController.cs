@@ -85,7 +85,7 @@ public class FilesController(
         return Ok(new
         {
             Path = relativePath,
-            InternetPath = storage.RelativePathToInternetUrl(relativePath, HttpContext, isVault)
+            InternetPath = storage.RelativePathToInternetUrl(relativePath, isVault)
         });
     }
 
