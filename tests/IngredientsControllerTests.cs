@@ -130,7 +130,7 @@ public class IngredientsControllerTests
     public async Task Lookup_ExpandsCanonicalId_ToFindAliasRecipe()
     {
         // Two ingredients with identical embeddings at threshold 80 → same group.
-        // The ingredient with more recipe references becomes canonical (tableSalt has 1, salt has 0).
+        // Canonical = shortest name ("盐" shorter than "食用盐").
         var vector = EncodeVector(v => { v[0] = 1f; });
         var salt = new Ingredient { Name = "盐", Embedding = vector.ToArray() };
         var tableSalt = new Ingredient { Name = "食用盐", Embedding = vector.ToArray() };
@@ -149,18 +149,16 @@ public class IngredientsControllerTests
         await _db.SaveChangesAsync();
         await SeedSettingsAsync(threshold: "80");
 
-        // Build groups — tableSalt becomes canonical (has more recipe references)
         var groups = await _groupService.GetGroupsAsync(_db, _settingsService);
         Assert.AreEqual(1, groups.Count, "Two ingredients with identical embeddings should merge.");
-        var canonicalId = groups[0].Canonical.Id; // tableSalt, since it has 1 recipe
-        Assert.AreEqual(tableSalt.Name, groups[0].Canonical.Name,
-            "TableSalt should be canonical because it has more recipe references.");
+        var canonicalId = groups[0].Canonical.Id;
+        Assert.AreEqual("盐", groups[0].Canonical.Name,
+            "Shortest name should be canonical.");
 
-        // ExpandCanonicalIds should include both the canonical and its alias
+        // ExpandCanonicalIds should include both canonical and alias
         var expanded = _groupService.ExpandCanonicalIds([canonicalId]);
-        Assert.IsTrue(expanded.Contains(salt.Id),
-            $"Expanded IDs {string.Join(",", expanded)} should include alias salt.Id={salt.Id}");
-        Assert.IsTrue(expanded.Contains(tableSalt.Id));
+        Assert.IsTrue(expanded.Contains(tableSalt.Id),
+            $"Expanded IDs {string.Join(",", expanded)} should include alias tableSalt.Id={tableSalt.Id}");
 
         // Look up by canonical ID → should find recipe through alias expansion
         var result = await _controller.Lookup([canonicalId]);
@@ -287,20 +285,33 @@ public class IngredientsControllerTests
 
     private class FakeOllamaEmbedHandler : HttpMessageHandler
     {
-        protected override Task<HttpResponseMessage> SendAsync(
+        protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken ct)
         {
-            var vector = new float[VectorDim];
-            vector[0] = 1f;
-            vector[1] = 1f;
-            Normalize(vector);
+            var body = await request.Content!.ReadAsStringAsync(ct);
+            var req = JsonConvert.DeserializeAnonymousType(body, new { input = (object?)null });
+            var count = req?.input switch
+            {
+                System.Collections.IEnumerable array => array.Cast<object>().Count(),
+                _ => 1
+            };
 
-            var response = new { embeddings = new[] { vector } };
+            var embeddings = new float[count][];
+            for (var i = 0; i < count; i++)
+            {
+                var vector = new float[VectorDim];
+                vector[0] = 1f;
+                vector[1] = 1f;
+                Normalize(vector);
+                embeddings[i] = vector;
+            }
+
+            var response = new { embeddings };
             var json = JsonConvert.SerializeObject(response);
-            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+            return new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
-            });
+            };
         }
     }
 

@@ -176,57 +176,54 @@ public class IngredientGroupServiceTests
     // ─────────────────────────────────────────────────────────────────
 
     [TestMethod]
-    public async Task BuildGroups_CanonicalIsMostReferenced()
+    public async Task BuildGroups_CanonicalIsShortestName()
     {
         var vector = EncodeVector(v => { v[0] = 1f; });
-        var lessReferenced = new Ingredient { Name = "食用盐", Embedding = vector.ToArray() };
-        var moreReferenced = new Ingredient { Name = "盐", Embedding = vector.ToArray() };
+        var longer = new Ingredient { Name = "食用盐", Embedding = vector.ToArray() };
+        var shorter = new Ingredient { Name = "盐", Embedding = vector.ToArray() };
 
-        // Give "盐" more recipe references
+        // Give "食用盐" more recipe references — but "盐" is shorter, so it wins
         var recipe1 = new Recipe
         {
             Name = "炒青菜", Category = "dish", FilePath = "dishes/stir_fry_greens.md",
             Description = "", FileLastModified = DateTime.UtcNow,
-            ConsumedIngredients = [moreReferenced]
+            ConsumedIngredients = [longer]
         };
         var recipe2 = new Recipe
         {
             Name = "红烧肉", Category = "dish", FilePath = "dishes/braised_pork.md",
             Description = "", FileLastModified = DateTime.UtcNow,
-            ConsumedIngredients = [moreReferenced]
+            ConsumedIngredients = [longer]
         };
-        lessReferenced.Recipes = [recipe1]; // only 1 recipe
-        // moreReferenced is in both recipes indirectly, but Recipes collection matters
 
-        _db.Ingredients.AddRange(moreReferenced, lessReferenced);
+        _db.Ingredients.AddRange(shorter, longer);
         _db.Recipes.AddRange(recipe1, recipe2);
-        // Link moreReferenced to both recipes
-        recipe1.ConsumedIngredients.Add(moreReferenced);
-        recipe2.ConsumedIngredients.Add(moreReferenced);
         await _db.SaveChangesAsync();
         await SeedSettingsAsync(threshold: "80");
 
         var groups = await _service.GetGroupsAsync(_db, _settingsService);
         Assert.AreEqual(1, groups.Count);
         Assert.AreEqual("盐", groups[0].Canonical.Name,
-            "The ingredient with more recipe references should be canonical.");
+            "The ingredient with the shortest name should be canonical.");
     }
 
     [TestMethod]
-    public async Task BuildGroups_EqualReferences_TieBreakByLowerId()
+    public async Task BuildGroups_EqualLength_TieBreakByLowerId()
     {
         var vector = EncodeVector(v => { v[0] = 1f; });
-        // Seed lower-id first so it gets Id=1, second gets Id=2
-        var lowId = new Ingredient { Name = "低ID食材", Embedding = vector.ToArray() };
-        var highId = new Ingredient { Name = "高ID食材", Embedding = vector.ToArray() };
+        // Both names are 3 chars — lower Id wins
+        var lowId = new Ingredient { Name = "低ID" };
+        var highId = new Ingredient { Name = "高ID" };
+        lowId.Embedding = vector.ToArray();
+        highId.Embedding = vector.ToArray();
         _db.Ingredients.AddRange(lowId, highId);
         await _db.SaveChangesAsync();
         await SeedSettingsAsync(threshold: "80");
 
         var groups = await _service.GetGroupsAsync(_db, _settingsService);
         Assert.AreEqual(1, groups.Count);
-        Assert.AreEqual("低ID食材", groups[0].Canonical.Name,
-            "With equal recipe counts, lower Id should be canonical.");
+        Assert.AreEqual("低ID", groups[0].Canonical.Name,
+            "With equal name length, lower Id should be canonical.");
     }
 
     // ─────────────────────────────────────────────────────────────────
@@ -256,9 +253,9 @@ public class IngredientGroupServiceTests
 
         var groups = await _service.GetGroupsAsync(_db, _settingsService);
         Assert.AreEqual(3, groups.Count);
-        Assert.AreEqual("盐", groups[0].Canonical.Name, "Most-referenced should be first.");
-        Assert.AreEqual("糖", groups[1].Canonical.Name, "Second-most-referenced should be second.");
-        Assert.AreEqual("油", groups[2].Canonical.Name, "Least-referenced should be last.");
+        Assert.AreEqual("盐", groups[0].Canonical.Name, "Most recipes group should be first.");
+        Assert.AreEqual("糖", groups[1].Canonical.Name, "Second-most recipes group should be second.");
+        Assert.AreEqual("油", groups[2].Canonical.Name, "Least recipes group should be last.");
     }
 
     // ─────────────────────────────────────────────────────────────────
@@ -723,20 +720,34 @@ public class IngredientGroupServiceTests
 
     private class FakeOllamaEmbedHandler : HttpMessageHandler
     {
-        protected override Task<HttpResponseMessage> SendAsync(
+        protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken ct)
         {
-            var vector = new float[VectorDim];
-            vector[0] = 1f;
-            vector[1] = 1f;
-            Normalize(vector);
+            // Parse the request to determine how many embeddings to return
+            var body = await request.Content!.ReadAsStringAsync(ct);
+            var req = JsonConvert.DeserializeAnonymousType(body, new { input = (object?)null });
+            var count = req?.input switch
+            {
+                System.Collections.IEnumerable array => array.Cast<object>().Count(),
+                _ => 1
+            };
 
-            var response = new { embeddings = new[] { vector } };
+            var embeddings = new float[count][];
+            for (var i = 0; i < count; i++)
+            {
+                var vector = new float[VectorDim];
+                vector[0] = 1f;
+                vector[1] = 1f;
+                Normalize(vector);
+                embeddings[i] = vector;
+            }
+
+            var response = new { embeddings };
             var json = JsonConvert.SerializeObject(response);
-            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+            return new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
-            });
+            };
         }
     }
 

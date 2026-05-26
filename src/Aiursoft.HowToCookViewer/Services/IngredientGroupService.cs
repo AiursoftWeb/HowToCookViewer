@@ -105,22 +105,30 @@ public class IngredientGroupService(
 
         if (ingredients.Count == 0) return [];
 
-        // Generate embeddings for ingredients that don't have one
+        // Generate embeddings for ingredients that don't have one (batched)
         if (canEmbed)
         {
-            foreach (var ingredient in ingredients)
+            var missing = ingredients
+                .Select((ing, idx) => (Ingredient: ing, Index: idx))
+                .Where(x => x.Ingredient.Embedding == null)
+                .ToList();
+
+            if (missing.Count > 0)
             {
-                if (ingredient.Embedding != null) continue;
                 try
                 {
-                    var vector = await EmbedTextAsync(instance, model, token, ingredient.Name);
-                    ingredient.Embedding = Serialize(vector);
-                    ingredient.LastEmbeddedAt = DateTime.UtcNow;
+                    var names = missing.Select(x => x.Ingredient.Name).ToArray();
+                    var vectors = await EmbedTextsAsync(instance, model, token, names);
+                    for (var i = 0; i < missing.Count; i++)
+                    {
+                        missing[i].Ingredient.Embedding = Serialize(vectors[i]);
+                        missing[i].Ingredient.LastEmbeddedAt = DateTime.UtcNow;
+                    }
                     await db.SaveChangesAsync();
                 }
                 catch (Exception ex)
                 {
-                    logger.LogWarning(ex, "Failed to generate embedding for ingredient '{Name}'", ingredient.Name);
+                    logger.LogWarning(ex, "Failed to batch-generate embeddings for {Count} ingredients", missing.Count);
                 }
             }
         }
@@ -153,9 +161,9 @@ public class IngredientGroupService(
         {
             var members = indices.Select(idx => ingredients[idx]).ToList();
 
-            // Canonical = most-referenced ingredient; tie-break by lowest Id
+            // Canonical = shortest name; tie-break by lowest Id
             var canonical = members
-                .OrderByDescending(m => m.Recipes.Count)
+                .OrderBy(m => m.Name.Length)
                 .ThenBy(m => m.Id)
                 .First();
 
@@ -205,12 +213,12 @@ public class IngredientGroupService(
         return groupViewModels;
     }
 
-    private async Task<float[]> EmbedTextAsync(string instance, string model, string token, string text)
+    private async Task<List<float[]>> EmbedTextsAsync(string instance, string model, string token, string[] texts)
     {
         var http = httpClientFactory.CreateClient();
         var baseUri = new Uri(instance);
         var embedEndpoint = $"{baseUri.Scheme}://{baseUri.Authority}/api/embed?keep_alive=-1";
-        var requestBody = new { model, input = text, options = new { num_gpu = 0 } };
+        var requestBody = new { model, input = texts, options = new { num_gpu = 0 } };
         var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
 
         var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint) { Content = content };
@@ -218,7 +226,7 @@ public class IngredientGroupService(
             request.Headers.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-        using var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        using var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(60));
         var response = await http.SendAsync(request, timeoutCts.Token);
         response.EnsureSuccessStatusCode();
 
@@ -226,9 +234,9 @@ public class IngredientGroupService(
         if (result?.Embeddings == null || result.Embeddings.Length == 0)
             throw new Exception("Ollama returned no embeddings.");
 
-        var vector = result.Embeddings[0];
-        Normalize(vector);
-        return vector;
+        foreach (var vector in result.Embeddings)
+            Normalize(vector);
+        return [.. result.Embeddings];
     }
 
     private async Task<string> GetEmbeddingInstanceAsync(GlobalSettingsService settingsService)
