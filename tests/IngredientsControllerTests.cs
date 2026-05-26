@@ -6,12 +6,10 @@ using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Models.IngredientsViewModels;
 using Aiursoft.HowToCookViewer.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
@@ -71,9 +69,9 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup(null);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
-        Assert.IsTrue(model!.ExactMatches.Recipes.Count == 0);
+        Assert.IsTrue(model.ExactMatches.Recipes.Count == 0);
         Assert.IsTrue(model.NearMatches.Count == 0);
     }
 
@@ -83,9 +81,9 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup([]);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
-        Assert.IsTrue(model!.ExactMatches.Recipes.Count == 0);
+        Assert.IsTrue(model.ExactMatches.Recipes.Count == 0);
         Assert.IsTrue(model.NearMatches.Count == 0);
     }
 
@@ -115,9 +113,9 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup([salt.Id]);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
-        Assert.AreEqual(1, model!.ExactMatches.Recipes.Count,
+        Assert.AreEqual(1, model.ExactMatches.Recipes.Count,
             "Recipe with only the matching ingredient should be an exact match.");
         Assert.AreEqual("炒青菜", model.ExactMatches.Recipes[0].Name);
     }
@@ -164,10 +162,10 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup([canonicalId]);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
 
-        Assert.AreEqual(1, model!.ExactMatches.Recipes.Count);
+        Assert.AreEqual(1, model.ExactMatches.Recipes.Count);
         Assert.AreEqual("炒青菜", model.ExactMatches.Recipes[0].Name);
     }
 
@@ -192,9 +190,9 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup([salt.Id]);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
-        Assert.IsTrue(model!.ExactMatches.Recipes.Any(r => r.Name == "炒青菜"));
+        Assert.IsTrue(model.ExactMatches.Recipes.Any(r => r.Name == "炒青菜"));
     }
 
     // ─────────────────────────────────────────────────────────────────
@@ -225,9 +223,9 @@ public class IngredientsControllerTests
         var result = await _controller.Lookup([salt.Id]);
         var partialView = result as PartialViewResult;
         Assert.IsNotNull(partialView);
-        var model = partialView!.Model as LookupResultsViewModel;
+        var model = partialView.Model as LookupResultsViewModel;
         Assert.IsNotNull(model);
-        Assert.IsTrue(model!.ExactMatches.Recipes.Count == 0,
+        Assert.IsTrue(model.ExactMatches.Recipes.Count == 0,
             "50% match should not be in exact matches.");
     }
 

@@ -136,7 +136,10 @@ public class IngredientGroupService(
         // Deserialize embeddings
         var embeddings = new float[ingredients.Count][];
         for (var i = 0; i < ingredients.Count; i++)
-            embeddings[i] = Deserialize(ingredients[i].Embedding)!;
+        {
+            var vec = Deserialize(ingredients[i].Embedding);
+            if (vec != null) embeddings[i] = vec;
+        }
 
         // DSU clustering: O(n²) cosine similarity, fine for ~770 ingredients
         var dsu = new DisjointSetUnion(ingredients.Count);

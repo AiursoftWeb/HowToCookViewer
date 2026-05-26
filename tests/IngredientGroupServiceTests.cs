@@ -6,7 +6,6 @@ using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
 
@@ -410,7 +409,7 @@ public class IngredientGroupServiceTests
         var restored = Deserialize(bytes);
 
         Assert.IsNotNull(restored);
-        Assert.AreEqual(original.Length, restored!.Length);
+        Assert.AreEqual(original.Length, restored.Length);
         for (var i = 0; i < original.Length; i++)
             Assert.AreEqual(original[i], restored[i], 1e-7f,
                 $"Element {i} should match after roundtrip.");
@@ -423,7 +422,7 @@ public class IngredientGroupServiceTests
         var bytes = Serialize(original);
         var restored = Deserialize(bytes);
         Assert.IsNotNull(restored);
-        Assert.AreEqual(VectorDim, restored!.Length);
+        Assert.AreEqual(VectorDim, restored.Length);
         Assert.IsTrue(restored.All(f => f == 0f));
     }
 
