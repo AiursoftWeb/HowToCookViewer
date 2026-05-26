@@ -185,9 +185,9 @@ public class SettingsMap
         {
             Key = IngredientSimilarityThreshold,
             Name = Localizer["Ingredient Similarity Threshold"],
-            Description = Localizer["Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 80."],
+            Description = Localizer["Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83."],
             Type = SettingType.Number,
-            DefaultValue = "80"
+            DefaultValue = "83"
         },
         new GlobalSettingDefinition
         {
