@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Pilkuilla erotetut BCP-47-kielikoodit, joihin reseptit käännetään, esim. en-US, ja-JP, ko-KR, fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>Kosinisimilariteetin kynnysarvo (0-100) samankaltaisten ainesosien nimien yhdistämiseksi ryhmiin. Arvo 100 tarkoittaa, että vain identtiset vektorit täsmäävät, pienemmät arvot yhdistävät aggressiivisemmin. Oletusarvo 83.</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Näytä kotisivulla mainospalkki, joka kiittää Voxihostia palvelimen sponsoroinnista.</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-numero</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>Ainesosien samankaltaisuuskynnys</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>Kieliasetukset</value>
