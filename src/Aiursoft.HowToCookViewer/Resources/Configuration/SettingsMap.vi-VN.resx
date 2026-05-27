@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Mã ngôn ngữ BCP-47 phân tách bằng dấu phẩy để dịch các công thức nấu ăn, ví dụ: en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>Ngưỡng tương đồng Cosine (0-100) để gộp các tên nguyên liệu tương tự vào các nhóm. 100 có nghĩa là chỉ các vectơ giống hệt nhau mới khớp, giá trị thấp hơn sẽ gộp mạnh hơn. Mặc định là 83.</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Hiển thị biểu ngữ quảng cáo trên trang chủ để cảm ơn Voxihost đã tài trợ cho máy chủ.</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Số đăng ký ICP</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>Ngưỡng Tương Đồng Nguyên Liệu</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>Ngôn ngữ bản địa hóa</value>

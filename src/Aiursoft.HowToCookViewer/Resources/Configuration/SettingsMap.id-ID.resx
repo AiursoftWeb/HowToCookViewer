@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Kode bahasa BCP-47 yang dipisahkan koma untuk menerjemahkan resep ke dalam bahasa tersebut, misalnya en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>Ambang batas kemiripan Kosinus (0-100) untuk menggabungkan nama bahan yang serupa menjadi kelompok. Nilai 100 berarti hanya vektor yang identik yang cocok, nilai lebih rendah menggabungkan lebih agresif. Default 83.</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Tampilkan banner promosi di halaman utama yang mengucapkan terima kasih kepada Voxihost atas sponsor server.</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Nomor ICP</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>Ambang Batas Kemiripan Bahan</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>Bahasa Lokalisasi</value>

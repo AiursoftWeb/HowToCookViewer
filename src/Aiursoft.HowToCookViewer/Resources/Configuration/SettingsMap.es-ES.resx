@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>Códigos de idioma BCP-47 separados por comas para traducir las recetas, por ejemplo, en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>Umbral de similitud de coseno (0-100) para agrupar nombres de ingredientes similares. Un valor de 100 significa que solo coinciden vectores idénticos; valores más bajos permiten una agrupación más agresiva. Valor predeterminado: 83.</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Mostrar un banner promocional en la página de inicio agradeciendo a Voxihost por patrocinar el servidor.</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Número ICP</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>Umbral de similitud de ingredientes</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>Idiomas de localización</value>

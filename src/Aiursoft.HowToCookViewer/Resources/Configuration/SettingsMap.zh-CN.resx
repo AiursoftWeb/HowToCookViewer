@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>用于翻译菜谱的逗号分隔的 BCP-47 语言代码，例如 en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>余弦相似度阈值（0-100），用于将相似的食材名称合并为组。100 表示仅完全相同的向量才会匹配，数值越低合并越激进。默认值为 83。</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>在首页显示横幅，感谢 Voxihost 对服务器的赞助。</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP 备案号</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>食材相似度阈值</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>本地化语言</value>

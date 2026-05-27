@@ -42,6 +42,9 @@
   <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
     <value>레시피를 번역할 대상 언어의 쉼표로 구분된 BCP-47 언어 코드, 예: en-US,ja-JP,ko-KR,fr-FR</value>
   </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>유사한 재료가 이름으로 그룹화되도록 코사인 유사도 임계값(0-100). 100은 동일한 벡터만 일치함을 의미하며, 낮은 값은 더 강하게 병합합니다. 기본값 83.</value>
+  </data>
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>서버를 후원해 주신 Voxihost에 감사하는 프로모션 배너를 홈페이지에 표시합니다.</value>
   </data>
@@ -80,6 +83,9 @@
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP 번호</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>재료 유사도 임계값</value>
   </data>
   <data name="Localization Languages" xml:space="preserve">
     <value>로컬화 언어</value>
