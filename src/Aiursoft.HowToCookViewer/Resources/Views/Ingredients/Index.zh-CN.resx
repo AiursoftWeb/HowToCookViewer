@@ -45,6 +45,9 @@
   <data name="No recipes found with the selected ingredients" xml:space="preserve">
     <value>未找到同时包含所选食材的食谱</value>
   </data>
+  <data name="Search ingredients..." xml:space="preserve">
+    <value>搜索食材...</value>
+  </data>
   <data name="Searching..." xml:space="preserve">
     <value>搜索中...</value>
   </data>

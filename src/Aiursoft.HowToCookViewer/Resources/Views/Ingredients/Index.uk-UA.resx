@@ -45,6 +45,9 @@
   <data name="No recipes found with the selected ingredients" xml:space="preserve">
     <value>No recipes found with the selected ingredients</value>
   </data>
+  <data name="Search ingredients..." xml:space="preserve">
+    <value>Шукати інгредієнти...</value>
+  </data>
   <data name="Searching..." xml:space="preserve">
     <value>Searching...</value>
   </data>
