@@ -16,6 +16,9 @@
                     </button>
                 </div>
                 <div class="card-body" style="max-height:calc(100vh - 160px);overflow-y:auto;">
+                    <div class="mb-2">
+                        <input type="search" id="ingredient-search" class="form-control form-control-sm" placeholder="@Localizer["Search ingredients..."]" autocomplete="off">
+                    </div>
                     <div class="d-flex flex-wrap gap-2" id="ingredient-list">
                         @foreach (var group in Model.Groups)
                         {
@@ -85,7 +88,27 @@
         var resultCount = document.getElementById('result-count');
         var placeholder = document.getElementById('lookup-placeholder');
         var pending = document.getElementById('lookup-pending');
+        var searchInput = document.getElementById('ingredient-search');
         var currentRequest = null;
+
+        function filterChips() {
+            var query = searchInput.value.trim().toLowerCase();
+            chips.forEach(function(chip) {
+                if (!query) {
+                    chip.style.display = '';
+                    return;
+                }
+                var name = chip.dataset.ingredientGroupName.toLowerCase();
+                var title = (chip.getAttribute('title') || '').toLowerCase();
+                if (name.indexOf(query) !== -1 || title.indexOf(query) !== -1) {
+                    chip.style.display = '';
+                } else {
+                    chip.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterChips);
 
         function updateChips() {
             chips.forEach(function(chip) {
