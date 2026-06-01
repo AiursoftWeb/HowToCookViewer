@@ -1,6 +1,7 @@
 using System.Text;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
+using Aiursoft.HowToCookViewer.Util;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -63,7 +64,7 @@ public class RecipeVectorSearchService(
 
         // Compute cosine similarity for all cached recipes, rank, and paginate.
         var scored = snapshot
-            .Select(kv => (RecipeId: kv.Key, Score: CosineSimilarity(queryVector, kv.Value)))
+            .Select(kv => (RecipeId: kv.Key, Score: EmbeddingHelper.CosineSimilarity(queryVector, kv.Value)))
             .Where(x => x.Score > 0)
             .OrderByDescending(x => x.Score)
             .ToList();
@@ -110,7 +111,7 @@ public class RecipeVectorSearchService(
 
         var topIds = snapshot
             .Where(kv => kv.Key != recipeId)
-            .Select(kv => (RecipeId: kv.Key, Score: CosineSimilarity(targetVector, kv.Value)))
+            .Select(kv => (RecipeId: kv.Key, Score: EmbeddingHelper.CosineSimilarity(targetVector, kv.Value)))
             .OrderByDescending(x => x.Score)
             .Take(take)
             .Select(x => x.RecipeId)
@@ -172,7 +173,7 @@ public class RecipeVectorSearchService(
 
         if (cached != null)
         {
-            var vector = Deserialize(cached.Embedding);
+            var vector = EmbeddingHelper.Deserialize(cached.Embedding);
             if (vector != null)
             {
                 // Throttled LRU bump: only touch the timestamp every AccessThrottle.
@@ -218,10 +219,10 @@ public class RecipeVectorSearchService(
         }
 
         var embedding = result.Embeddings[0];
-        Normalize(embedding);
+        EmbeddingHelper.Normalize(embedding);
 
         // Cache the result in the database.
-        var serialized = Serialize(embedding);
+        var serialized = EmbeddingHelper.Serialize(embedding);
         try
         {
             var now = DateTime.UtcNow;
@@ -264,43 +265,6 @@ public class RecipeVectorSearchService(
             db.SearchEmbeddings.RemoveRange(toDelete);
             await db.SaveChangesAsync(ct);
         }
-    }
-
-    /// <summary>Cosine similarity between two normalized vectors = dot product.</summary>
-    private static float CosineSimilarity(float[] a, float[] b)
-    {
-        var dot = 0f;
-        for (var i = 0; i < a.Length; i++)
-            dot += a[i] * b[i];
-        return dot;
-    }
-
-    private static void Normalize(float[] vector)
-    {
-        var sumSq = 0f;
-        for (var i = 0; i < vector.Length; i++)
-            sumSq += vector[i] * vector[i];
-        var norm = MathF.Sqrt(sumSq);
-        if (norm > 0)
-        {
-            for (var i = 0; i < vector.Length; i++)
-                vector[i] /= norm;
-        }
-    }
-
-    private static byte[] Serialize(float[] vector)
-    {
-        var bytes = new byte[vector.Length * 4];
-        Buffer.BlockCopy(vector, 0, bytes, 0, bytes.Length);
-        return bytes;
-    }
-
-    private static float[]? Deserialize(byte[] bytes)
-    {
-        if (bytes.Length % 4 != 0) return null;
-        var floats = new float[bytes.Length / 4];
-        Buffer.BlockCopy(bytes, 0, floats, 0, bytes.Length);
-        return floats;
     }
 
     private class OllamaEmbedResponse

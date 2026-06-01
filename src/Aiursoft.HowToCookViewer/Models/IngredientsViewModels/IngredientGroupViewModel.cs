@@ -8,7 +8,6 @@ public class IngredientGroupViewModel
 
     public List<Ingredient> Aliases { get; set; } = [];
 
-    public HashSet<int> AllIngredientIds { get; set; } = [];
 
     public int DistinctRecipeCount { get; set; }
 

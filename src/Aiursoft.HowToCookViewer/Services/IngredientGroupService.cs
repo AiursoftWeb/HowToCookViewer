@@ -43,7 +43,7 @@ public class IngredientGroupService(
             if (_cachedGroups != null && _snapshot == currentSnapshot)
                 return _cachedGroups;
 
-            var groups = await BuildGroupsAsync(db, settingsService);
+            var groups = await BuildGroupsAsync(db, settingsService, currentSnapshot.Threshold);
             _snapshot = currentSnapshot;
             _cachedGroups = groups;
             return _cachedGroups;
@@ -88,15 +88,13 @@ public class IngredientGroupService(
     }
 
     private async Task<List<IngredientGroupViewModel>> BuildGroupsAsync(
-        TemplateDbContext db, GlobalSettingsService settingsService)
+        TemplateDbContext db, GlobalSettingsService settingsService, int thresholdPercent)
     {
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
         var instance = await GetEmbeddingInstanceAsync(settingsService);
         var token = await GetEmbeddingTokenAsync(settingsService);
         var canEmbed = !string.IsNullOrWhiteSpace(instance) && !string.IsNullOrWhiteSpace(model);
-
-        var thresholdStr = await settingsService.GetSettingValueAsync(SettingsMap.IngredientSimilarityThreshold);
-        var threshold = double.TryParse(thresholdStr, out var t) ? t / 100.0 : 0.80;
+        var threshold = thresholdPercent / 100.0;
 
         var ingredients = await db.Ingredients
             .Include(i => i.Recipes)
@@ -105,43 +103,68 @@ public class IngredientGroupService(
 
         if (ingredients.Count == 0) return [];
 
-        // Generate embeddings for ingredients that don't have one (batched)
         if (canEmbed)
-        {
-            var missing = ingredients
-                .Select((ing, idx) => (Ingredient: ing, Index: idx))
-                .Where(x => x.Ingredient.Embedding == null)
-                .ToList();
+            await GenerateMissingEmbeddingsAsync(db, instance, model, token, ingredients);
 
-            if (missing.Count > 0)
-            {
-                try
-                {
-                    var names = missing.Select(x => x.Ingredient.Name).ToArray();
-                    var vectors = await EmbedTextsAsync(instance, model, token, names);
-                    for (var i = 0; i < missing.Count; i++)
-                    {
-                        missing[i].Ingredient.Embedding = Serialize(vectors[i]);
-                        missing[i].Ingredient.LastEmbeddedAt = DateTime.UtcNow;
-                    }
-                    await db.SaveChangesAsync();
-                }
-                catch (Exception ex)
-                {
-                    logger.LogWarning(ex, "Failed to batch-generate embeddings for {Count} ingredients", missing.Count);
-                }
-            }
-        }
-
-        // Deserialize embeddings
         float[]?[] embeddings = new float[ingredients.Count][];
         for (var i = 0; i < ingredients.Count; i++)
         {
-            var vec = Deserialize(ingredients[i].Embedding);
+            var vec = EmbeddingHelper.Deserialize(ingredients[i].Embedding);
             if (vec != null) embeddings[i] = vec;
         }
 
-        // DSU clustering: O(n²) cosine similarity, fine for ~770 ingredients
+        var (groups, aliasIds) = ClusterAndBuildGroups(ingredients, embeddings, threshold);
+
+        foreach (var group in groups)
+        {
+            foreach (var alias in group.Aliases)
+                alias.CanonicalIngredientId = group.Canonical.Id;
+            group.Canonical.CanonicalIngredientId = null;
+        }
+        await db.SaveChangesAsync();
+
+        groups = groups
+            .OrderByDescending(g => g.DistinctRecipeCount)
+            .ThenBy(g => g.Canonical.Name)
+            .ToList();
+
+        _canonicalToAliasIds = aliasIds;
+        logger.LogInformation(
+            "IngredientGroupService: Rebuilt {GroupCount} groups from {IngredientCount} ingredients (threshold={Threshold}%)",
+            groups.Count, ingredients.Count, thresholdPercent);
+
+        return groups;
+    }
+
+    private async Task GenerateMissingEmbeddingsAsync(
+        TemplateDbContext db, string instance, string model, string token, List<Ingredient> ingredients)
+    {
+        var missing = ingredients
+            .Where(i => i.Embedding == null)
+            .ToList();
+
+        if (missing.Count == 0) return;
+
+        try
+        {
+            var names = missing.Select(i => i.Name).ToArray();
+            var vectors = await EmbedTextsAsync(instance, model, token, names);
+            for (var i = 0; i < missing.Count; i++)
+            {
+                missing[i].Embedding = EmbeddingHelper.Serialize(vectors[i]);
+                missing[i].LastEmbeddedAt = DateTime.UtcNow;
+            }
+            await db.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            logger.LogWarning(ex, "Failed to batch-generate embeddings for {Count} ingredients", missing.Count);
+        }
+    }
+
+    private static (List<IngredientGroupViewModel> Groups, Dictionary<int, int[]> AliasIds) ClusterAndBuildGroups(
+        List<Ingredient> ingredients, float[]?[] embeddings, double threshold)
+    {
         var dsu = new DisjointSetUnion(ingredients.Count);
         for (var i = 0; i < ingredients.Count; i++)
         {
@@ -151,71 +174,38 @@ public class IngredientGroupService(
             {
                 var embJ = embeddings[j];
                 if (embJ == null) continue;
-                var similarity = CosineSimilarity(embI, embJ);
-                if (similarity >= threshold)
+                if (EmbeddingHelper.CosineSimilarity(embI, embJ) >= threshold)
                     dsu.Union(i, j);
             }
         }
 
-        // Build groups from DSU
         var rawGroups = dsu.AsGroups(ignoreSingletons: false);
-        var groupViewModels = new List<IngredientGroupViewModel>();
-        var newCanonicalToAliasIds = new Dictionary<int, int[]>();
+        var groups = new List<IngredientGroupViewModel>();
+        var aliasIds = new Dictionary<int, int[]>();
 
         foreach (var indices in rawGroups)
         {
             var members = indices.Select(idx => ingredients[idx]).ToList();
-
-            // Canonical = shortest name; tie-break by lowest Id
             var canonical = members
                 .OrderBy(m => m.Name.Length)
                 .ThenBy(m => m.Id)
                 .First();
-
             var aliases = members.Where(m => m.Id != canonical.Id).ToList();
-            var allIds = members.Select(m => m.Id).ToHashSet();
-
-            // Deduplicated recipe count across the group
             var distinctRecipeIds = members
                 .SelectMany(m => m.Recipes.Select(r => r.Id))
                 .ToHashSet();
 
-            groupViewModels.Add(new IngredientGroupViewModel
+            groups.Add(new IngredientGroupViewModel
             {
                 Canonical = canonical,
                 Aliases = aliases,
-                AllIngredientIds = allIds,
                 DistinctRecipeCount = distinctRecipeIds.Count
             });
 
-            // Build alias mapping: canonical → all alias ingredient IDs
-            var aliasIds = aliases.Select(a => a.Id).ToArray();
-            newCanonicalToAliasIds[canonical.Id] = aliasIds;
+            aliasIds[canonical.Id] = aliases.Select(a => a.Id).ToArray();
         }
 
-        // Persist CanonicalIngredientId assignments
-        foreach (var group in groupViewModels)
-        {
-            foreach (var alias in group.Aliases)
-            {
-                alias.CanonicalIngredientId = group.Canonical.Id;
-            }
-            group.Canonical.CanonicalIngredientId = null;
-        }
-        await db.SaveChangesAsync();
-
-        // Sort by distinct recipe count descending
-        groupViewModels = groupViewModels
-            .OrderByDescending(g => g.DistinctRecipeCount)
-            .ThenBy(g => g.Canonical.Name)
-            .ToList();
-
-        _canonicalToAliasIds = newCanonicalToAliasIds;
-        logger.LogInformation(
-            "IngredientGroupService: Rebuilt {GroupCount} groups from {IngredientCount} ingredients (threshold={Threshold}%)",
-            groupViewModels.Count, ingredients.Count, threshold * 100);
-
-        return groupViewModels;
+        return (groups, aliasIds);
     }
 
     private async Task<List<float[]>> EmbedTextsAsync(string instance, string model, string token, string[] texts)
@@ -240,7 +230,7 @@ public class IngredientGroupService(
             throw new Exception("Ollama returned no embeddings.");
 
         foreach (var vector in result.Embeddings)
-            Normalize(vector);
+            EmbeddingHelper.Normalize(vector);
         return [.. result.Embeddings];
     }
 
@@ -258,40 +248,6 @@ public class IngredientGroupService(
         return !string.IsNullOrWhiteSpace(dedicated)
             ? dedicated
             : await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
-    }
-
-    private static float CosineSimilarity(float[] a, float[] b)
-    {
-        var dot = 0f;
-        for (var i = 0; i < a.Length; i++)
-            dot += a[i] * b[i];
-        return dot;
-    }
-
-    private static void Normalize(float[] vector)
-    {
-        var sumSq = 0f;
-        for (var i = 0; i < vector.Length; i++)
-            sumSq += vector[i] * vector[i];
-        var norm = MathF.Sqrt(sumSq);
-        if (norm > 0)
-            for (var i = 0; i < vector.Length; i++)
-                vector[i] /= norm;
-    }
-
-    private static byte[] Serialize(float[] vector)
-    {
-        var bytes = new byte[vector.Length * 4];
-        Buffer.BlockCopy(vector, 0, bytes, 0, bytes.Length);
-        return bytes;
-    }
-
-    private static float[]? Deserialize(byte[]? bytes)
-    {
-        if (bytes == null || bytes.Length % 4 != 0) return null;
-        var floats = new float[bytes.Length / 4];
-        Buffer.BlockCopy(bytes, 0, floats, 0, bytes.Length);
-        return floats;
     }
 
     private class OllamaEmbedResponse
