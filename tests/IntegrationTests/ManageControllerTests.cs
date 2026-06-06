@@ -96,6 +96,19 @@ public class ManageControllerTests : TestBase
         Assert.Contains("The file is not a valid image.", html);
     }
 
+    [TestMethod]
+    public async Task TestChangeAvatarAllowsJpegExtension()
+    {
+        await RegisterAndLoginAsync();
+
+        var response = await Http.GetAsync("/Manage/ChangeAvatar");
+        response.EnsureSuccessStatusCode();
+
+        var html = await response.Content.ReadAsStringAsync();
+        Assert.Contains("data-allowed-file-extensions=\"png bmp jpg jpeg\"", html);
+        Assert.Contains("validExtensions: ('png bmp jpg jpeg' || '').split(' ').filter(Boolean)", html);
+    }
+
     private class UploadResult
     {
         public string Path { get; init; } = string.Empty;
