@@ -67,34 +67,54 @@ public class LocalizeTipsJob(
 
     private async Task LocalizeTipAsync(Tip tip, string culture)
     {
+        // Ensure a row exists so partial progress is never lost.
+        var row = await db.LocalizedTips
+            .FirstOrDefaultAsync(lt => lt.TipId == tip.Id && lt.Culture == culture);
+
+        if (row == null)
+        {
+            row = new LocalizedTip
+            {
+                TipId = tip.Id,
+                Culture = culture,
+                LastLocalizedAt = DateTime.MinValue // not yet complete
+            };
+            db.LocalizedTips.Add(row);
+            await db.SaveChangesAsync();
+        }
+
+        logger.LogInformation("LocalizeTipsJob: translating tip '{Title}' (id={Id}) to {Culture}.", tip.Title, tip.Id, culture);
+
+        // Translate each field sequentially — only fill what is still empty.
+        if (string.IsNullOrWhiteSpace(row.LocalizedTitle))
+            await TranslateTipFieldAsync(tip.Title,   v => row.LocalizedTitle = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedContent))
+            await TranslateTipFieldAsync(tip.Content, v => row.LocalizedContent = v, culture);
+
+        // Mark complete only when both fields have content.
+        if (!string.IsNullOrWhiteSpace(row.LocalizedTitle) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedContent))
+        {
+            row.LastLocalizedAt = DateTime.UtcNow;
+            await db.SaveChangesAsync();
+        }
+    }
+
+    private async Task TranslateTipFieldAsync(string source, Action<string> setter, string culture)
+    {
+        if (string.IsNullOrWhiteSpace(source)) return;
         try
         {
-            logger.LogInformation("LocalizeTipsJob: translating tip '{Title}' (id={Id}) to {Culture}.", tip.Title, tip.Id, culture);
-            var localizedTitle = await translator.TranslateAsync(tip.Title, culture);
-            var localizedContent = await translator.TranslateAsync(tip.Content, culture);
-
-            var existing = await db.LocalizedTips.FirstOrDefaultAsync(lt => lt.TipId == tip.Id && lt.Culture == culture);
-            if (existing == null)
+            var translated = await translator.TranslateAsync(source, culture);
+            if (!string.IsNullOrWhiteSpace(translated))
             {
-                db.LocalizedTips.Add(new LocalizedTip
-                {
-                    TipId = tip.Id,
-                    Culture = culture,
-                    LocalizedTitle = localizedTitle,
-                    LocalizedContent = localizedContent,
-                    LastLocalizedAt = DateTime.UtcNow
-                });
-            }
-            else
-            {
-                existing.LocalizedTitle = localizedTitle;
-                existing.LocalizedContent = localizedContent;
-                existing.LastLocalizedAt = DateTime.UtcNow;
+                setter(translated);
+                await db.SaveChangesAsync();
             }
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "LocalizeTipsJob: failed to localize tip '{Title}' to {Culture}.", tip.Title, culture);
+            logger.LogWarning(ex, "LocalizeTipsJob: translation failed, will retry next run.");
         }
     }
 }

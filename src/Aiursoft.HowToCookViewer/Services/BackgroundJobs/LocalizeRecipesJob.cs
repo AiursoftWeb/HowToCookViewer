@@ -87,58 +87,70 @@ public class LocalizeRecipesJob(
 
     private async Task<bool> LocalizeRecipeAsync(Recipe recipe, string culture)
     {
+        // Ensure a row exists so partial progress is never lost.
+        var row = await db.LocalizedRecipes
+            .FirstOrDefaultAsync(lr => lr.RecipeId == recipe.Id && lr.Culture == culture);
+
+        if (row == null)
+        {
+            row = new LocalizedRecipe
+            {
+                RecipeId = recipe.Id,
+                Culture = culture,
+                LastLocalizedAt = DateTime.MinValue // not yet complete
+            };
+            db.LocalizedRecipes.Add(row);
+            await db.SaveChangesAsync();
+        }
+
+        logger.LogInformation(
+            "LocalizeRecipesJob: translating recipe '{Name}' (id={Id}) to {Culture}.",
+            recipe.Name, recipe.Id, culture);
+
+        // Translate each field sequentially — save after each success.
+        if (string.IsNullOrWhiteSpace(row.LocalizedName))
+            await TranslateAndSaveAsync(recipe.Name,       v => row.LocalizedName = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedDescription))
+            await TranslateAndSaveAsync(recipe.Description, v => row.LocalizedDescription = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedIngredients))
+            await TranslateAndSaveAsync(recipe.Ingredients, v => row.LocalizedIngredients = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedCalculation))
+            await TranslateAndSaveAsync(recipe.Calculation, v => row.LocalizedCalculation = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedSteps))
+            await TranslateAndSaveAsync(recipe.Steps,       v => row.LocalizedSteps = v, culture);
+        if (string.IsNullOrWhiteSpace(row.LocalizedNotes))
+            await TranslateAndSaveAsync(recipe.Notes,       v => row.LocalizedNotes = v, culture);
+
+        // Mark complete only when every field has content.
+        if (!string.IsNullOrWhiteSpace(row.LocalizedName) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedDescription) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedIngredients) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedCalculation) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedSteps) &&
+            !string.IsNullOrWhiteSpace(row.LocalizedNotes))
+        {
+            row.LastLocalizedAt = DateTime.UtcNow;
+            await db.SaveChangesAsync();
+        }
+
+        return true;
+    }
+
+    private async Task TranslateAndSaveAsync(string source, Action<string> setter, string culture)
+    {
+        if (string.IsNullOrWhiteSpace(source)) return;
         try
         {
-            logger.LogInformation(
-                "LocalizeRecipesJob: translating recipe '{Name}' (id={Id}) to {Culture}.",
-                recipe.Name, recipe.Id, culture);
-
-            // Parallelize translation calls to reduce overhead
-            var nameTask = translator.TranslateAsync(recipe.Name, culture);
-            var descTask = translator.TranslateAsync(recipe.Description, culture);
-            var ingrTask = translator.TranslateAsync(recipe.Ingredients, culture);
-            var calcTask = translator.TranslateAsync(recipe.Calculation, culture);
-            var stepTask = translator.TranslateAsync(recipe.Steps, culture);
-            var noteTask = translator.TranslateAsync(recipe.Notes, culture);
-
-            await Task.WhenAll(nameTask, descTask, ingrTask, calcTask, stepTask, noteTask);
-
-            var existing = await db.LocalizedRecipes
-                .FirstOrDefaultAsync(lr => lr.RecipeId == recipe.Id && lr.Culture == culture);
-
-            if (existing == null)
+            var translated = await translator.TranslateAsync(source, culture);
+            if (!string.IsNullOrWhiteSpace(translated))
             {
-                db.LocalizedRecipes.Add(new LocalizedRecipe
-                {
-                    RecipeId = recipe.Id,
-                    Culture = culture,
-                    LocalizedName = await nameTask,
-                    LocalizedDescription = await descTask,
-                    LocalizedIngredients = await ingrTask,
-                    LocalizedCalculation = await calcTask,
-                    LocalizedSteps = await stepTask,
-                    LocalizedNotes = await noteTask,
-                    LastLocalizedAt = DateTime.UtcNow
-                });
+                setter(translated);
+                await db.SaveChangesAsync();
             }
-            else
-            {
-                existing.LocalizedName = await nameTask;
-                existing.LocalizedDescription = await descTask;
-                existing.LocalizedIngredients = await ingrTask;
-                existing.LocalizedCalculation = await calcTask;
-                existing.LocalizedSteps = await stepTask;
-                existing.LocalizedNotes = await noteTask;
-                existing.LastLocalizedAt = DateTime.UtcNow;
-            }
-            return true;
         }
         catch (Exception ex)
         {
-            logger.LogError(ex,
-                "LocalizeRecipesJob: failed to localize recipe '{Name}' to {Culture}.",
-                recipe.Name, culture);
-            return false;
+            logger.LogWarning(ex, "LocalizeRecipesJob: translation failed, will retry next run.");
         }
     }
 }
