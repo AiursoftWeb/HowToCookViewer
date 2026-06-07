@@ -16,7 +16,7 @@
                 <a href="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)" target="_blank" rel="noopener noreferrer">
                     <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
                 </a>
-                <p class="text-muted"><small>@Localizer["For best results, use a square image in .jpg or .png format."]</small></p>
+                <p class="text-muted"><small>@Localizer["For best results, use a square image in .jpg, .jpeg, or .png format."]</small></p>
             </div>
             <div class="col-md-8">
                 <form asp-controller="Manage" asp-action="ChangeAvatar" method="post">
@@ -27,7 +27,7 @@
                     @* The custom View Component is wrapped in the standard form structure. *@
                     <div class="mb-3">
                         <label asp-for="AvatarUrl" class="form-label">@Localizer["New avatar file"]</label>
-                        <vc:file-upload asp-for="@Model.AvatarUrl" subfolder="avatar" allowed-extensions="png bmp jpg" max-size-in-mb="10"></vc:file-upload>
+                        <vc:file-upload asp-for="@Model.AvatarUrl" subfolder="avatar" allowed-extensions="png bmp jpg jpeg" max-size-in-mb="10"></vc:file-upload>
                         <span asp-validation-for="AvatarUrl" class="text-danger"></span>
                     </div>
 
