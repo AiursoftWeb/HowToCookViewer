@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>最適な結果を得るには、正方形の.jpgまたは.png形式の画像を使用してください。</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>最適な結果を得るには、.jpg、.jpeg、または .png 形式の正方形画像を使用してください。</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>新しいアバターファイル</value>
   </data>

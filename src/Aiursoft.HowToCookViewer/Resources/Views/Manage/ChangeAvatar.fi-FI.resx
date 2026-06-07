@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>Parhaiden tulosten saavuttamiseksi käytä neliömäistä kuvaa .jpg- tai .png-muodossa.</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>Saat parhaat tulokset käyttämällä neliömuotoista kuvaa, jonka tiedostomuoto on .jpg, .jpeg tai .png.</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>Uusi avatar-tiedosto</value>
   </data>
