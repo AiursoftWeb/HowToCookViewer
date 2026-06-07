@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>En iyi sonuçlar için, kare bir görseli .jpg veya .png formatında kullanın.</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>En iyi sonuçlar için .jpg, .jpeg veya .png formatında kare bir resim kullanın.</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>Yeni avatar dosyası</value>
   </data>

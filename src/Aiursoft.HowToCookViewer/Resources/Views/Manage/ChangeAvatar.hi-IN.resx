@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>सर्वोत्तम परिणामों के लिए, .jpg या .png प्रारूप में एक वर्गाकार छवि का उपयोग करें।</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>सर्वोत्तम परिणामों के लिए, .jpg, .jpeg, या .png प्रारूप में वर्ग आकृति वाली छवि का उपयोग करें।</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>नई अवतार फ़ाइल</value>
   </data>

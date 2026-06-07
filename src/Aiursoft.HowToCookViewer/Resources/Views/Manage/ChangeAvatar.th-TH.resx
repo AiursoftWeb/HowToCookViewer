@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>เพื่อผลลัพธ์ที่ดีที่สุด โปรดใช้ภาพสี่เหลี่ยมจัตุรัสในรูปแบบ .jpg หรือ .png</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>เพื่อผลลัพธ์ที่ดีที่สุด ให้ใช้ภาพสี่เหลี่ยมจัตุรัสในรูปแบบ .jpg, .jpeg หรือ .png</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>ไฟล์อวาตาร์ใหม่</value>
   </data>

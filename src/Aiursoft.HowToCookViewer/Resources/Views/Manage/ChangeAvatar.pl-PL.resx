@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>Aby uzyskać najlepsze efekty, użyj kwadratowego obrazu w formacie .jpg lub .png.</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>Dla najlepszych efektów użyj obrazu w formacie kwadratowym .jpg, .jpeg lub .png.</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>Nowy plik awatara</value>
   </data>

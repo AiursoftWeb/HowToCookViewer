@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>Untuk hasil terbaik, gunakan gambar persegi dalam format .jpg atau .png.</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>Untuk hasil terbaik, gunakan gambar berbentuk persegi dengan format .jpg, .jpeg, atau .png.</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>File avatar baru</value>
   </data>

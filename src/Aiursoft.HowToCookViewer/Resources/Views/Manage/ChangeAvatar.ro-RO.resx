@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>Pentru cele mai bune rezultate, utilizați o imagine pătrată în format .jpg sau .png.</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>Pentru cele mai bune rezultate, utilizați o imagine pătrată în format .jpg, .jpeg sau .png.</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>Fișier avatar nou</value>
   </data>

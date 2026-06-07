@@ -36,6 +36,9 @@
   <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
     <value>為達最佳效果，請使用 .jpg 或 .png 格式嘅正方型圖片。</value>
   </data>
+  <data name="For best results, use a square image in .jpg, .jpeg, or .png format." xml:space="preserve">
+    <value>為獲得最佳效果，請使用 .jpg、.jpeg 或 .png 格式的方形圖片。</value>
+  </data>
   <data name="New avatar file" xml:space="preserve">
     <value>新頭像檔案</value>
   </data>
