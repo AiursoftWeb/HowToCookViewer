@@ -31,7 +31,7 @@ RUN if [ "$TARGETARCH" = "arm64" ]; then \
         RID="linux-$TARGETARCH"; \
     fi && \
     echo "Building for arch: $TARGETARCH, using .NET RID: $RID" && \
-    dotnet publish ${CSPROJ_PATH}${PROJ_NAME}.csproj --configuration Release --no-self-contained --runtime $RID --output /app
+    dotnet publish ${CSPROJ_PATH}${PROJ_NAME}.csproj --configuration Release --no-self-contained --runtime $RID --output /app --configfile nuget.config
 
 RUN cp -r ${CSPROJ_PATH}/wwwroot/* /app/wwwroot
 
