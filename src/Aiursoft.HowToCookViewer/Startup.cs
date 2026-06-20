@@ -66,6 +66,7 @@ public class Startup : IWebStartup
         services.AddSingleton<IngredientGroupService>();
         services.AddSingleton<SearchRateLimiter>();
         services.AddScoped<RecipeVectorSearchService>();
+        services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
         services.AddGitRunner();
 
         // Background job infrastructure

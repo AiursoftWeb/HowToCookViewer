@@ -8,7 +8,7 @@ namespace Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 public class LocalizeTipsJob(
     TemplateDbContext db,
     GlobalSettingsService settingsService,
-    RecipeTranslationService translator,
+    IRecipeTranslationService translator,
     ILogger<LocalizeTipsJob> logger) : IBackgroundJob
 {
     public string Name => "Localize Tips";
@@ -81,6 +81,14 @@ public class LocalizeTipsJob(
             };
             db.LocalizedTips.Add(row);
             await db.SaveChangesAsync();
+        }
+
+        // If the source tip has been updated since the last localization,
+        // clear all fields so they will be re-translated.
+        if (row.LastLocalizedAt < tip.FileLastModified)
+        {
+            row.LocalizedTitle = string.Empty;
+            row.LocalizedContent = string.Empty;
         }
 
         logger.LogInformation("LocalizeTipsJob: translating tip '{Title}' (id={Id}) to {Culture}.", tip.Title, tip.Id, culture);

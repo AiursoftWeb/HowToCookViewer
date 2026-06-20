@@ -8,6 +8,14 @@ using Microsoft.Extensions.Options;
 namespace Aiursoft.HowToCookViewer.Services;
 
 /// <summary>
+/// Abstraction for translating recipe/tip text into target languages via an AI endpoint.
+/// </summary>
+public interface IRecipeTranslationService
+{
+    Task<string> TranslateAsync(string text, string targetLanguage);
+}
+
+/// <summary>
 /// Translates text using Dotlang's <see cref="OllamaBasedTranslatorEngine"/>.
 /// Ollama settings (instance, model, token) are read from <see cref="GlobalSettingsService"/>
 /// at call time so admin changes take effect immediately.
@@ -17,7 +25,7 @@ public class RecipeTranslationService(
     MarkdownShredder shredder,
     RetryEngine retryEngine,
     ILogger<OllamaBasedTranslatorEngine> engineLogger,
-    ChatClient chatClient) : IScopedDependency
+    ChatClient chatClient) : IScopedDependency, IRecipeTranslationService
 {
     public async Task<string> TranslateAsync(string text, string targetLanguage)
     {
