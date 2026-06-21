@@ -35,6 +35,8 @@ public class SyncHowToCookRepoJobTests
             Directory.Delete(_mockRepoPath, recursive: true);
     }
 
+    private static readonly TimeSpan GitTimeout = TimeSpan.FromSeconds(30);
+
     private void CreateMockGitRepo(string path)
     {
         Directory.CreateDirectory(path);
@@ -42,14 +44,13 @@ public class SyncHowToCookRepoJobTests
         Directory.CreateDirectory(dishesPath);
         File.WriteAllText(Path.Combine(dishesPath, "tomato.md"), "# Tomato\n## Ingredients\n- Tomato\n## Steps\n1. Cook");
 
-        RunGitCommand("init -b main", path);
-        RunGitCommand("config user.name TestUser", path);
-        RunGitCommand("config user.email test@test.com", path);
+        RunGitCommand("init --initial-branch=main", path);
         RunGitCommand("add .", path);
-        RunGitCommand("commit -m \"Initial commit\"", path);
+        // Use -c overrides so global GPG / hook settings don't break the test.
+        RunGitCommand("-c user.name=TestUser -c user.email=test@test.com -c commit.gpgsign=false commit --no-gpg-sign -m \"Initial commit\"", path);
     }
 
-    private void RunGitCommand(string args, string path)
+    private static void RunGitCommand(string args, string path)
     {
         var p = new System.Diagnostics.Process
         {
@@ -64,10 +65,14 @@ public class SyncHowToCookRepoJobTests
             }
         };
         p.Start();
-        p.WaitForExit();
+        if (!p.WaitForExit(GitTimeout))
+        {
+            p.Kill(entireProcessTree: true);
+            throw new TimeoutException($"git {args} timed out after {GitTimeout.TotalSeconds}s.");
+        }
         if (p.ExitCode != 0)
         {
-            throw new Exception($"git {args} failed: {p.StandardError.ReadToEnd()}");
+            throw new Exception($"git {args} failed (exit {p.ExitCode}): {p.StandardError.ReadToEnd()}");
         }
     }
 

@@ -36,10 +36,12 @@ public class LocalizeTipsJob(
 
         foreach (var culture in cultures)
         {
+            var lastId = 0;
             while (true)
             {
+                var currentLastId = lastId;
                 var pendingTips = await db.Tips
-                    .Where(t => !db.LocalizedTips.Any(lt =>
+                    .Where(t => t.Id > currentLastId && !db.LocalizedTips.Any(lt =>
                         lt.TipId == t.Id &&
                         lt.Culture == culture &&
                         lt.LastLocalizedAt >= t.FileLastModified))
@@ -56,6 +58,7 @@ public class LocalizeTipsJob(
                 }
 
                 await db.SaveChangesAsync();
+                lastId = pendingTips.Max(t => t.Id);
                 logger.LogInformation("LocalizeTipsJob: [{Culture}] saved a batch of {Count} (total so far: {Total}).", culture, pendingTips.Count, totalProcessed);
             }
 

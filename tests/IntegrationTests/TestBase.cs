@@ -12,39 +12,20 @@ public abstract class TestBase
 {
     private static readonly ConcurrentDictionary<string, ClassFixture> Fixtures = new();
 
-    private ClassFixture GetFixture() => Fixtures[GetType().FullName!];
-
-    protected int Port => GetFixture().Port;
-    protected HttpClient Http => GetFixture().Http;
-    protected IHost Server => GetFixture().Server;
-
-    [ClassInitialize(InheritanceBehavior.BeforeEachDerivedClass)]
-    public static async Task ClassInit(TestContext context)
+    // Shared server — started lazily by the first ClassInit that fires,
+    // then reused by every integration test class.
+    private static readonly Lazy<Task<SharedServer>> LazyServer = new(async () =>
     {
-        // Retry on port conflict — rare with GetAvailablePort but can happen
-        // under high concurrency with many test classes starting servers.
         for (var attempt = 0; ; attempt++)
         {
             var port = Network.GetAvailablePort();
-            var cookieContainer = new CookieContainer();
-            var handler = new HttpClientHandler
-            {
-                CookieContainer = cookieContainer,
-                AllowAutoRedirect = false
-            };
-            var http = new HttpClient(handler)
-            {
-                BaseAddress = new Uri($"http://localhost:{port}")
-            };
-
             var server = await AppAsync<Startup>([], port: port);
             await server.UpdateDbAsync<TemplateDbContext>();
             await server.SeedAsync();
             try
             {
                 await server.StartAsync();
-                Fixtures[context.FullyQualifiedTestClassName] = new ClassFixture(port, http, server);
-                return;
+                return new SharedServer(port, server);
             }
             catch (IOException) when (attempt < 3)
             {
@@ -53,6 +34,37 @@ public abstract class TestBase
                 await Task.Delay(100);
             }
         }
+    });
+
+    private static SharedServer? _cachedServer;
+
+    private ClassFixture GetFixture() => Fixtures[GetType().FullName!];
+
+    protected int Port => _cachedServer!.Port;
+    protected HttpClient Http => GetFixture().Http;
+    protected IHost Server => _cachedServer!.Host;
+
+    [ClassInitialize(InheritanceBehavior.BeforeEachDerivedClass)]
+    public static async Task ClassInit(TestContext context)
+    {
+        // Lazy ensures the server is started exactly once — the first call
+        // boots it up; all subsequent calls just await the cached task.
+        _cachedServer = await LazyServer.Value;
+
+        // Each test class gets an isolated HttpClient (cookie container per class
+        // = isolated authentication sessions), but shares the single server instance.
+        var cookieContainer = new CookieContainer();
+        var handler = new HttpClientHandler
+        {
+            CookieContainer = cookieContainer,
+            AllowAutoRedirect = false
+        };
+        var http = new HttpClient(handler)
+        {
+            BaseAddress = new Uri($"http://localhost:{_cachedServer.Port}")
+        };
+
+        Fixtures[context.FullyQualifiedTestClassName] = new ClassFixture(http);
     }
 
     [ClassCleanup(InheritanceBehavior.BeforeEachDerivedClass)]
@@ -60,9 +72,17 @@ public abstract class TestBase
     {
         if (Fixtures.TryRemove(context.FullyQualifiedTestClassName, out var fixture))
         {
-            fixture.Server.StopAsync().GetAwaiter().GetResult();
-            fixture.Server.Dispose();
             fixture.Http.Dispose();
+        }
+    }
+
+    [AssemblyCleanup]
+    public static void AssemblyCleanup()
+    {
+        if (_cachedServer != null)
+        {
+            _cachedServer.Host.StopAsync().GetAwaiter().GetResult();
+            _cachedServer.Host.Dispose();
         }
     }
 
@@ -148,5 +168,6 @@ public abstract class TestBase
         return Server.Services.GetRequiredService<T>();
     }
 
-    private sealed record ClassFixture(int Port, HttpClient Http, IHost Server);
+    private sealed record SharedServer(int Port, IHost Host);
+    private sealed record ClassFixture(HttpClient Http);
 }
