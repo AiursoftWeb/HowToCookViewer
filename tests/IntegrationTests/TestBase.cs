@@ -13,7 +13,7 @@ public abstract class TestBase
     private static readonly ConcurrentDictionary<string, ClassFixture> Fixtures = new();
 
     // Shared server — started lazily by the first ClassInit that fires,
-    // then reused by every integration test class.
+    // then reused by every integration test class. Cleaned up on process exit.
     private static readonly Lazy<Task<SharedServer>> LazyServer = new(async () =>
     {
         for (var attempt = 0; ; attempt++)
@@ -25,7 +25,13 @@ public abstract class TestBase
             try
             {
                 await server.StartAsync();
-                return new SharedServer(port, server);
+                var shared = new SharedServer(port, server);
+                AppDomain.CurrentDomain.ProcessExit += (_, _) =>
+                {
+                    shared.Host.StopAsync().GetAwaiter().GetResult();
+                    shared.Host.Dispose();
+                };
+                return shared;
             }
             catch (IOException) when (attempt < 3)
             {
@@ -73,16 +79,6 @@ public abstract class TestBase
         if (Fixtures.TryRemove(context.FullyQualifiedTestClassName, out var fixture))
         {
             fixture.Http.Dispose();
-        }
-    }
-
-    [AssemblyCleanup]
-    public static void AssemblyCleanup()
-    {
-        if (_cachedServer != null)
-        {
-            _cachedServer.Host.StopAsync().GetAwaiter().GetResult();
-            _cachedServer.Host.Dispose();
         }
     }
 
