@@ -10,7 +10,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aiursoft.ClickhouseLoggerProvider" Version="10.0.21" />
+    <PackageReference Include="Aiursoft.ClickhouseLoggerProvider" Version="10.0.22" />
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="10.0.21" />
     <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.46" />
     <PackageReference Include="Aiursoft.GitRunner" Version="10.0.25" />
