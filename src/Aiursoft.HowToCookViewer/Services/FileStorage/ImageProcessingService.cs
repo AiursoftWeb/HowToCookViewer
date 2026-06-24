@@ -254,7 +254,7 @@ public class ImageProcessingService(
         using var canvas = new SKCanvas(result);
         var matrix = new SKMatrix { Values = matrixValues };
         canvas.SetMatrix(matrix);
-        canvas.DrawBitmap(source, 0, 0);
+        canvas.DrawImage(SKImage.FromBitmap(source), 0, 0, SKSamplingOptions.Default);
         canvas.Flush();
         return result;
     }
@@ -289,10 +289,11 @@ public class ImageProcessingService(
         var paint = new SKPaint { IsAntialias = true };
         using (paint)
         {
-            canvas.DrawBitmap(source,
-                new SKRect(0, 0, source.Width, source.Height),
-                new SKRect(0, 0, finalWidth, finalHeight),
-                paint);
+canvas.DrawImage(SKImage.FromBitmap(source),
+                        new SKRect(0, 0, source.Width, source.Height),
+                        new SKRect(0, 0, finalWidth, finalHeight),
+                        SKSamplingOptions.Default,
+                        paint);
         }
         canvas.Flush();
         return result;
