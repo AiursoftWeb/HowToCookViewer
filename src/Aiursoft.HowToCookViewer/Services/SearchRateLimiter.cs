@@ -38,18 +38,19 @@ public class SearchRateLimiter(IMemoryCache cache)
     private class SlidingCounter
     {
         private readonly List<DateTimeOffset> _hits = [];
+        private readonly object _lock = new();
 
-        public int Count => _hits.Count;
+        public int Count { get { lock (_lock) return _hits.Count; } }
 
         public void Increment(DateTimeOffset now)
         {
-            _hits.Add(now);
+            lock (_lock) _hits.Add(now);
         }
 
         public void Prune(DateTimeOffset now)
         {
             var cutoff = now - Window;
-            _hits.RemoveAll(h => h < cutoff);
+            lock (_lock) _hits.RemoveAll(h => h < cutoff);
         }
     }
 }
