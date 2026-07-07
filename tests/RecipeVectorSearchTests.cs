@@ -6,8 +6,6 @@ using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Logging;
-
 using Newtonsoft.Json;
 
 namespace Aiursoft.HowToCookViewer.Tests;
