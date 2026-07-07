@@ -6,6 +6,7 @@ using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 
 using Newtonsoft.Json;
 
@@ -33,7 +34,7 @@ public class RecipeVectorSearchTests
             .UseInMemoryDatabase(dbName)
             .Options;
         _db = new InMemoryContext(dbOptions);
-        _cache = new RecipeEmbeddingCache();
+        _cache = new RecipeEmbeddingCache(new LoggerFactory().CreateLogger<RecipeEmbeddingCache>());
         _memoryCache = new MemoryCache(new MemoryCacheOptions());
     }
 
@@ -155,7 +156,7 @@ public class RecipeVectorSearchTests
         var httpClientFactory = handler != null
             ? new TestHttpClientFactory(handler)
             : (IHttpClientFactory)new TestHttpClientFactory(new FakeOllamaEmbedHandler());
-        return new RecipeVectorSearchService(_db, _cache, settings, httpClientFactory);
+        return new RecipeVectorSearchService(_db, _cache, settings, httpClientFactory, new LoggerFactory().CreateLogger<RecipeVectorSearchService>());
     }
 
     // ─────────────────────────────────────────────────────────────────────────

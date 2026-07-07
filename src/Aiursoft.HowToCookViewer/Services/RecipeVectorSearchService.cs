@@ -18,7 +18,8 @@ public class RecipeVectorSearchService(
     TemplateDbContext db,
     RecipeEmbeddingCache cache,
     GlobalSettingsService settingsService,
-    IHttpClientFactory httpClientFactory)
+    IHttpClientFactory httpClientFactory,
+    ILogger<RecipeVectorSearchService> logger)
 {
     private const int EmbedTimeoutSeconds = 10;
 
@@ -238,9 +239,10 @@ public class RecipeVectorSearchService(
             // Trim to MaxCachedQueries entries (circular buffer).
             await TrimCacheAsync(ct);
         }
-        catch (DbUpdateException)
+        catch (DbUpdateException ex)
         {
             // Race: another request already cached this query. Ignore.
+            logger.LogWarning(ex, "Failed to cache query embedding for '{Query}'. Likely a concurrent duplicate.", text);
         }
 
         return embedding;

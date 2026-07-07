@@ -9,7 +9,7 @@ namespace Aiursoft.HowToCookViewer.Services;
 /// Loaded at startup and refreshed periodically via RefreshEmbeddingCacheJob.
 /// </summary>
 [ExcludeFromCodeCoverage]
-public class RecipeEmbeddingCache
+public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
 {
     private Dictionary<int, float[]> _cache = [];
     private readonly object _lock = new();
@@ -40,6 +40,11 @@ public class RecipeEmbeddingCache
             if (vector != null)
             {
                 newCache[item.Id] = vector;
+            }
+            else
+            {
+                logger.LogWarning("Failed to deserialize embedding for recipe {RecipeId}: byte length {Length} is not a multiple of 4.",
+                    item.Id, item.Embedding!.Length);
             }
         }
 
