@@ -197,10 +197,15 @@ public class RecipeVectorSearchService(
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
         var token = await GetEmbeddingTokenAsync();
 
+        // Truncate query text to fit bge-m3's 8192-token context window.
+        // Queries are typically short, but a user might paste a very long document.
+        const int maxQueryChars = 8000;
+        var input = text.Length > maxQueryChars ? text[..maxQueryChars] : text;
+
         var http = httpClientFactory.CreateClient();
         var baseUri = new Uri(instance);
         var embedEndpoint = $"{baseUri.Scheme}://{baseUri.Authority}/api/embed?keep_alive=-1";
-        var requestBody = new { model, input = text, options = new { num_gpu = 0 } };
+        var requestBody = new { model, input, options = new { num_gpu = 0 } };
         var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
 
         var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint) { Content = content };
