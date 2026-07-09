@@ -100,8 +100,7 @@ public class GenerateEmbeddingsJob(
         {
             var input = TruncateForEmbedding(text, maxChars);
 
-            // num_gpu=0 forces CPU-only inference so the embedding model never competes with the LLM for VRAM.
-            var requestBody = new { model, input, options = new { num_gpu = 0 } };
+            var requestBody = new { model, input };
             var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
 
             var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint) { Content = content };
