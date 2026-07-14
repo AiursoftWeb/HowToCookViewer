@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.ClickhouseLoggerProvider" Version="10.0.22" />
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="10.0.21" />
-    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.47" />
+    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.48" />
     <PackageReference Include="Aiursoft.GitRunner" Version="10.0.25" />
     <PackageReference Include="Aiursoft.Scanner" Version="10.0.9" />
     <PackageReference Include="Aiursoft.UiStack" Version="10.0.16" />
@@ -24,8 +24,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="SkiaSharp" Version="4.150.0" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.150.0" />
+    <PackageReference Include="SkiaSharp" Version="4.150.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.150.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.11" />
