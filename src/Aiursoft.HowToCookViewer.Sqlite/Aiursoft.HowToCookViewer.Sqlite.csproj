@@ -13,6 +13,6 @@
     <ProjectReference Include="..\Aiursoft.HowToCookViewer.Entities\Aiursoft.HowToCookViewer.Entities.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aiursoft.DbTools.Sqlite" Version="10.0.25" />
+    <PackageReference Include="Aiursoft.DbTools.Sqlite" Version="10.0.26" />
   </ItemGroup>
 </Project>
