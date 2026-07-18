@@ -89,7 +89,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var m in ((List<Aiursoft.HowToCookViewer.Models.SystemViewModels.MigrationEntry>)Model.AppliedMigrations))
+                    @foreach (var m in Model.AppliedMigrations)
                     {
                         <tr>
                             <td>@m.Name</td>
@@ -111,12 +111,12 @@
                         <td>@Localizer["Applied / Defined"]</td>
                         <td class="text-end">@Model.AppliedMigrations.Count / @Model.TotalDefinedMigrations</td>
                     </tr>
-                    @if (((List<string>)Model.PendingMigrations).Count > 0)
+                    @if (Model.PendingMigrations.Count > 0)
                     {
                         <tr class="table-warning">
                             <td colspan="2">
                                 <i class="align-middle me-1" data-lucide="alert-triangle"></i>
-                                @string.Format(Localizer["Pending: {0}"].Value, string.Join(", ", (List<string>)Model.PendingMigrations))
+                                @string.Format(Localizer["Pending: {0}"].Value, string.Join(", ", Model.PendingMigrations))
                             </td>
                         </tr>
                     }
@@ -218,7 +218,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var kv in ((Dictionary<string, long>)Model.TableCounts).OrderBy(kv => kv.Key))
+                    @foreach (var kv in Model.TableCounts.OrderBy(kv => kv.Key))
                     {
                         <tr>
                             <td>@kv.Key</td>
