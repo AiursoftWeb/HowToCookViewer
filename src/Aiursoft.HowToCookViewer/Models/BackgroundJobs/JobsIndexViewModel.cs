@@ -6,6 +6,11 @@ namespace Aiursoft.HowToCookViewer.Models.BackgroundJobs;
 
 public class JobsIndexViewModel : UiStackLayoutViewModel
 {
+    public JobsIndexViewModel()
+    {
+        PageTitle = "Background Jobs";
+    }
+
     public IReadOnlyList<RegisteredJob> RegisteredJobs { get; init; } = [];
     public IReadOnlyList<ScheduledTaskRegistration> ScheduledTasks { get; init; } = [];
     public IReadOnlyDictionary<Type, DateTime> LastRunAtByJobType { get; init; } =
