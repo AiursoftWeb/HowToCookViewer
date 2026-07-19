@@ -211,7 +211,7 @@ public class ManageController(
         ViewData["FavoritesCount"] = favoritesCount;
         ViewData["CommentsCount"] = commentsCount;
 
-        return this.StackView(new Aiursoft.UiStack.Layout.UiStackLayoutViewModel());
+        return this.StackView(new Aiursoft.UiStack.Layout.UiStackLayoutViewModel { PageTitle = "Delete Account" });
     }
 
     //

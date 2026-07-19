@@ -1,9 +1,18 @@
-@model dynamic
-@{
-    ViewData["Title"] = Localizer["Delete Account"];
-}
+@using Aiursoft.UiStack.Layout
+@using Aiursoft.HowToCookViewer.Configuration;
+@using Microsoft.Extensions.Options
+@inject IOptions<AppSettings> AppSettings
+@model UiStackLayoutViewModel
 
-<h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+@if (AppSettings.Value.LocalEnabled)
+{
+    <h1 class="h3 mb-3">@Localizer["Delete Account"]</h1>
+}
+else
+{
+    <h1 class="h3 mb-3">@Localizer["Delete Account Data"]</h1>
+}
 
 <div class="card border-danger">
     <div class="card-header bg-danger text-white">
@@ -20,9 +29,9 @@
                 var favoritesCount = ViewData["FavoritesCount"] as int? ?? 0;
                 var commentsCount = ViewData["CommentsCount"] as int? ?? 0;
             }
-            <li>@Localizer["{0} like(s)", likesCount]</li>
-            <li>@Localizer["{0} favorite(s)", favoritesCount]</li>
-            <li>@Localizer["{0} comment(s)", commentsCount]</li>
+            <li>@Localizer[""] @likesCount @Localizer[" like(s)"]</li>
+            <li>@Localizer[""] @favoritesCount @Localizer[" favorite(s)"]</li>
+            <li>@Localizer[""] @commentsCount @Localizer[" comment(s)"]</li>
         </ul>
 
         <p class="text-muted">@Localizer["You will be signed out immediately and redirected to the home page."]</p>
