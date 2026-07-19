@@ -27,14 +27,32 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
         builder.Entity<RecipeFavorite>()
             .HasKey(f => new { f.UserId, f.RecipeId });
 
+        builder.Entity<RecipeFavorite>()
+            .HasOne(f => f.User)
+            .WithMany()
+            .HasForeignKey(f => f.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         builder.Entity<RecipeLike>()
             .HasKey(l => new { l.UserId, l.RecipeId });
+
+        builder.Entity<RecipeLike>()
+            .HasOne(l => l.User)
+            .WithMany()
+            .HasForeignKey(l => l.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<RecipeComment>()
             .HasOne(c => c.ParentComment)
             .WithMany(c => c.Replies)
             .HasForeignKey(c => c.ParentCommentId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<RecipeComment>()
+            .HasOne(c => c.User)
+            .WithMany()
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<LocalizedRecipe>()
             .HasIndex(lr => new { lr.RecipeId, lr.Culture })

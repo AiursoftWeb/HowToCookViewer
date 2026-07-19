@@ -1,0 +1,59 @@
+@model dynamic
+@{
+    ViewData["Title"] = Localizer["Delete Account"];
+}
+
+<h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+<div class="card border-danger">
+    <div class="card-header bg-danger text-white">
+        <h5 class="card-title mb-0 text-white"><i class="align-middle me-2" data-lucide="alert-triangle"></i> @Localizer["Danger Zone"]</h5>
+    </div>
+    <div class="card-body">
+        <h5 class="text-danger">@Localizer["Are you sure you want to permanently delete your account?"]</h5>
+
+        <p>@Localizer["This action is irreversible. Everything associated with your account will be permanently removed:"]</p>
+
+        <ul class="mb-3">
+            @{
+                var likesCount = ViewData["LikesCount"] as int? ?? 0;
+                var favoritesCount = ViewData["FavoritesCount"] as int? ?? 0;
+                var commentsCount = ViewData["CommentsCount"] as int? ?? 0;
+            }
+            <li>@Localizer["{0} like(s)", likesCount]</li>
+            <li>@Localizer["{0} favorite(s)", favoritesCount]</li>
+            <li>@Localizer["{0} comment(s)", commentsCount]</li>
+        </ul>
+
+        <p class="text-muted">@Localizer["You will be signed out immediately and redirected to the home page."]</p>
+
+        <form asp-action="DeleteAccountPost" method="post" id="delete-form">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-danger" id="delete-btn" disabled>
+                <i class="align-middle me-1" data-lucide="trash-2"></i>
+                <span id="btn-text">@Localizer["Yes, delete my account"]</span>
+                (<span id="countdown">10</span>s)
+            </button>
+            <a asp-action="Index" class="btn btn-outline-secondary ms-2">@Localizer["Cancel"]</a>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var timeLeft = 10;
+        var btn = document.getElementById("delete-btn");
+        var countdownSpan = document.getElementById("countdown");
+
+        var timer = setInterval(function() {
+            timeLeft--;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                btn.removeAttribute("disabled");
+                countdownSpan.parentNode.textContent = document.getElementById("btn-text").innerHTML;
+            } else {
+                countdownSpan.textContent = timeLeft;
+            }
+        }, 1000);
+    });
+</script>

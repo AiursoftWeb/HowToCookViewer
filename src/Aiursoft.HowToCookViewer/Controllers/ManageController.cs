@@ -8,6 +8,7 @@ using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using System.Diagnostics.CodeAnalysis;
@@ -189,6 +190,72 @@ public class ManageController(
         }
 
         return this.StackView(model);
+    }
+
+    //
+    // GET: /Manage/DeleteAccount
+    [HttpGet]
+    public async Task<IActionResult> DeleteAccount([FromServices] TemplateDbContext context)
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        var likesCount = await context.RecipeLikes.CountAsync(l => l.UserId == user.Id);
+        var favoritesCount = await context.RecipeFavorites.CountAsync(f => f.UserId == user.Id);
+        var commentsCount = await context.RecipeComments.CountAsync(c => c.UserId == user.Id);
+
+        ViewData["LikesCount"] = likesCount;
+        ViewData["FavoritesCount"] = favoritesCount;
+        ViewData["CommentsCount"] = commentsCount;
+
+        return this.StackView(new Aiursoft.UiStack.Layout.UiStackLayoutViewModel());
+    }
+
+    //
+    // POST: /Manage/DeleteAccount
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteAccountPost([FromServices] TemplateDbContext context)
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        // Delete all user comments and their replies
+        var comments = await context.RecipeComments
+            .Include(c => c.Replies)
+            .Where(c => c.UserId == user.Id)
+            .ToListAsync();
+        foreach (var comment in comments)
+        {
+            context.RecipeComments.RemoveRange(comment.Replies);
+        }
+        context.RecipeComments.RemoveRange(comments);
+
+        // Delete all user favorites
+        var favorites = await context.RecipeFavorites
+            .Where(f => f.UserId == user.Id)
+            .ToListAsync();
+        context.RecipeFavorites.RemoveRange(favorites);
+
+        // Delete all user likes
+        var likes = await context.RecipeLikes
+            .Where(l => l.UserId == user.Id)
+            .ToListAsync();
+        context.RecipeLikes.RemoveRange(likes);
+
+        await context.SaveChangesAsync();
+
+        await signInManager.SignOutAsync();
+        await userManager.DeleteAsync(user);
+        logger.LogInformation("User {UserId} deleted their account along with all associated data.", user.Id);
+
+        return Redirect("/");
     }
 
     #region Helpers
