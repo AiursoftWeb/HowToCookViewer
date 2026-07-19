@@ -2,6 +2,10 @@ using System.Net;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 
+using Aiursoft.HowToCookViewer.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
 [TestClass]
@@ -112,5 +116,99 @@ public class ManageControllerTests : TestBase
     private class UploadResult
     {
         public string Path { get; init; } = string.Empty;
+    }
+
+    [TestMethod]
+    public async Task TestDeleteAccount_WithContent_CascadeDeletesAll()
+    {
+        // Arrange: register, login, create test recipe and user content
+        var (email, _) = await RegisterAndLoginAsync();
+
+        string userId;
+        int recipeId, commentId;
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            var user = await userManager.FindByEmailAsync(email);
+            userId = user!.Id;
+
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+
+            // Create a parent recipe
+            var recipe = new Recipe { Name = "test-recipe-delete-ut", Category = "test", FilePath = "test/delete-ut.md" };
+            db.Recipes.Add(recipe);
+            await db.SaveChangesAsync();
+            recipeId = recipe.Id;
+
+            // Create user content: Like, Favorite, Comment + Reply
+            db.RecipeLikes.Add(new RecipeLike { UserId = userId, RecipeId = recipeId });
+            db.RecipeFavorites.Add(new RecipeFavorite { UserId = userId, RecipeId = recipeId });
+            var comment = new RecipeComment { UserId = userId, RecipeId = recipeId, Content = "Test comment for deletion" };
+            db.RecipeComments.Add(comment);
+            await db.SaveChangesAsync();
+            commentId = comment.Id;
+
+            // Create a reply to the comment
+            db.RecipeComments.Add(new RecipeComment
+            {
+                UserId = userId,
+                RecipeId = recipeId,
+                Content = "Test reply for deletion",
+                ParentCommentId = commentId
+            });
+            await db.SaveChangesAsync();
+        }
+
+        // Act: delete account
+        var deleteResponse = await PostForm("/Manage/DeleteAccountPost", new(),
+            tokenUrl: "/Manage/DeleteAccount");
+        AssertRedirect(deleteResponse, "/");
+
+        // Assert: signed out
+        var managePage = await Http.GetAsync("/Manage/Index");
+        Assert.AreEqual(HttpStatusCode.Found, managePage.StatusCode);
+
+        // Assert: user gone
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            Assert.IsNull(await userManager.FindByEmailAsync(email));
+        }
+
+        // Assert: all user content cascade-deleted
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            Assert.IsFalse(await db.RecipeLikes.AnyAsync(l => l.UserId == userId));
+            Assert.IsFalse(await db.RecipeFavorites.AnyAsync(f => f.UserId == userId));
+            Assert.IsFalse(await db.RecipeComments.AnyAsync(c => c.UserId == userId));
+        }
+    }
+
+    [TestMethod]
+    public async Task TestDeleteAccount_NoContent_Succeeds()
+    {
+        var (email, _) = await RegisterAndLoginAsync();
+
+        var deletePage = await Http.GetAsync("/Manage/DeleteAccount");
+        deletePage.EnsureSuccessStatusCode();
+
+        var deleteResponse = await PostForm("/Manage/DeleteAccountPost", new(),
+            tokenUrl: "/Manage/DeleteAccount");
+        AssertRedirect(deleteResponse, "/");
+
+        var managePage = await Http.GetAsync("/Manage/Index");
+        Assert.AreEqual(HttpStatusCode.Found, managePage.StatusCode);
+
+        using var scope = Server!.Services.CreateScope();
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+        Assert.IsNull(await userManager.FindByEmailAsync(email));
+    }
+
+    [TestMethod]
+    public async Task TestDeleteAccount_Unauthenticated_RedirectsToLogin()
+    {
+        var deletePage = await Http.GetAsync("/Manage/DeleteAccount");
+        Assert.AreEqual(HttpStatusCode.Found, deletePage.StatusCode);
     }
 }
