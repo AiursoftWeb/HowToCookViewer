@@ -20,8 +20,11 @@ public class AvatarTests : TestBase
         var fileContent = new ByteArrayContent(gifBytes);
         fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/gif");
 
+        // Use a unique filename to avoid collision-based renaming
+        // (StorageService.Save prepends underscores on collisions, which can exceed MaxLength).
+        var uniqueFileName = $"avatar-{Guid.NewGuid()}.gif";
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.gif");
+        multipartContent.Add(fileContent, "file", uniqueFileName);
 
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);

@@ -171,7 +171,8 @@ public class ManageController(
         }
 
         // Make sure the file is actually a photo.
-        var absolutePath = storageService.GetFilePhysicalPath(model.AvatarUrl);
+        // AvatarUrl is validated as [Required] by ModelState, so it's non-null here.
+        var absolutePath = storageService.GetFilePhysicalPath(model.AvatarUrl!);
         if (!await image.IsValidImageAsync(absolutePath))
         {
             ModelState.AddModelError(string.Empty, localizer["The file is not a valid image."]);
