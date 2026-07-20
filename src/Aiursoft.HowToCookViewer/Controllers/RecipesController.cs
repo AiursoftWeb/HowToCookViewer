@@ -249,6 +249,7 @@ public class RecipesController(
         var markdown = BuildFullMarkdown(recipe, localized);
         var html = Markdown.ToHtml(markdown, new MarkdownPipelineBuilder()
             .UseAdvancedExtensions()
+            .UseMermaid()
             .Build());
 
         var repoUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoUrl);

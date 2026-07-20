@@ -407,7 +407,10 @@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
+mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
 document.querySelectorAll('.toggle-reply').forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -531,6 +534,11 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
         wrapper.style.transform = 'scale(1)';
     });
 })();
+
+// Render mermaid diagrams on page load
+document.addEventListener('DOMContentLoaded', function() {
+    mermaid.run();
+});
 </script>
 }
 
