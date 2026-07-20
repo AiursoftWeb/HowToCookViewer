@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-ildasm": {
+      "version": "0.12.2",
+      "commands": [
+        "dotnet-ildasm"
+      ],
+      "rollForward": false
+    }
+  }
+}

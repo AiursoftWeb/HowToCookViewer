@@ -31,7 +31,7 @@ public class TipsController(
         var displayTitle = !string.IsNullOrWhiteSpace(localized?.LocalizedTitle) ? localized.LocalizedTitle : tip.Title;
         var contentToRender = !string.IsNullOrWhiteSpace(localized?.LocalizedContent) ? localized.LocalizedContent : tip.Content;
 
-        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseMermaid().Build();
         var renderedHtml = Markdown.ToHtml(contentToRender, pipeline);
 
         return this.StackView(new DetailViewModel

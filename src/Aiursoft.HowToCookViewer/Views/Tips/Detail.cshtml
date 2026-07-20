@@ -46,3 +46,13 @@
         </div>
     </div>
 </div>
+
+@section scripts {
+<script src="~/node_modules/mermaid/dist/mermaid.min.js" asp-append-version="true"></script>
+<script>
+mermaid.initialize({ startOnLoad: false, theme: 'default' });
+document.addEventListener('DOMContentLoaded', function() {
+    mermaid.run();
+});
+</script>
+}

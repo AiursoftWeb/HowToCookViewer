@@ -91,8 +91,11 @@ public class AvatarTests : TestBase
         var fileContent = new ByteArrayContent(pngBytes);
         fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
 
+        // Use a unique filename to avoid collision-based renaming
+        // (StorageService.Save prepends underscores on collisions, which can exceed MaxLength).
+        var uniqueFileName = $"avatar-{Guid.NewGuid()}.png";
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.png");
+        multipartContent.Add(fileContent, "file", uniqueFileName);
 
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
@@ -129,8 +132,11 @@ public class AvatarTests : TestBase
         var fileContent = new ByteArrayContent(pngBytes);
         fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
 
+        // Use a unique filename to avoid collision-based renaming
+        // (StorageService.Save prepends underscores on collisions, which can exceed MaxLength).
+        var uniqueFileName = $"avatar-{Guid.NewGuid()}.png";
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.png");
+        multipartContent.Add(fileContent, "file", uniqueFileName);
 
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
@@ -166,8 +172,11 @@ public class AvatarTests : TestBase
         var fileContent = new ByteArrayContent(pngBytes);
         fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
 
+        // Use a unique filename to avoid collision-based renaming
+        // (StorageService.Save prepends underscores on collisions, which can exceed MaxLength).
+        var uniqueFileName = $"avatar-{Guid.NewGuid()}.png";
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.png");
+        multipartContent.Add(fileContent, "file", uniqueFileName);
 
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
@@ -196,8 +205,11 @@ public class AvatarTests : TestBase
         var fileContent = new ByteArrayContent(pngBytes);
         fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
 
+        // Use a unique filename to avoid collision-based renaming
+        // (StorageService.Save prepends underscores on collisions, which can exceed MaxLength).
+        var uniqueFileName = $"avatar-{Guid.NewGuid()}.png";
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.png");
+        multipartContent.Add(fileContent, "file", uniqueFileName);
 
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
