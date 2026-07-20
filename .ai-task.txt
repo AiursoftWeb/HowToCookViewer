@@ -1,0 +1,620 @@
+You are working on an EXISTING Merge Request #112: 'Fix for issue #41: 主分支的编译管道失败'.
+Source Branch: fix-issue-41
+Target Branch: master
+
+Recent discussions and feedback (marked [NEW] if since last bot commit):
+gemini-bot: # Code Review: MR #112 — Fix for issue #41: 主分支的编译管道失败
+
+**Branch:** `fix-issue-41` → `master`  
+**Reviewer:** Claude Code  
+**Summary:** This is a large, ambitious MR that goes well beyond fixing the CI pipeline. It introduces a substantial number of new features (vector-based semantic search, ingredient extraction & grouping, tip entities, soft deletion, self-service account deletion, recipe similarity, contributor display, and more) alongside the pipeline fix. The code is well-structured and tests are thorough, but the scope warrants careful review.
+
+---
+
+## ✅ What's Good
+
+### Pipeline Fix (the core issue)
+- **nuget.config** now points to `api.nuget.org` so external contributors can build without access to the Aiursoft internal mirror. CI overwrites the config at runtime via the `before_script` heredoc to prefer the internal mirror with nuget.org as fallback. This is a clean, well-documented approach.
+- **Dockerfile** adds `--configfile nuget.config` to `dotnet publish`, ensuring the Docker build uses the right source.
+- **Docker push retries** with exponential backoff (100s, 400s, 1600s) improve CI reliability against transient registry failures.
+
+### Localization
+- Nearly all user-facing hardcoded strings are now localized via `IStringLocalizer`. This includes error messages, UI labels, and section headings — a significant i18n improvement.
+- The `_useless_for_localizer()` pattern (while unusual) correctly registers translation keys with the localizer infrastructure.
+
+### Test Coverage
+- The MR adds extensive tests (~3,800 new test lines across 33 files), including new integration tests for ingredient extraction, similar recipes, comment rate limiting, and vector search.
+- Unit tests cover `DisjointSetUnion`, `IngredientGroupService`, `SearchRateLimiter`, `RecipeVectorSearchService`, and the localization jobs.
+
+### Observability
+- Structured logging at appropriate levels (Information/Warning/Error) throughout all new background jobs and services.
+- Log messages include contextual data (recipe name, IDs, counts) useful for debugging.
+
+### Resilience
+- `SyncHowToCookRepoJob` now has a backup repo URL fallback with cleanup on failure, preventing partial repo state.
+- `LocalizeRecipesJob` saves after each field translation, so crash recovery doesn't lose all progress.
+- `GenerateEmbeddingsJob` uses binary-search truncation fallback when the embedding model reports the input is too long.
+
+---
+
+## ⚠️ Potential Issues
+
+### 1. `DeleteAccount` lacks OIDC guard
+**File:** `src/Aiursoft.HowToCookViewer/Controllers/ManageController.cs:197`
+The `DeleteAccount` GET/POST actions do **not** check if OIDC authentication is enabled. Every other sensitive action in `ManageController` (ChangePassword, ChangeNickname) guards with:
+```csharp
+if (appSettings.Value.OIDCEnabled)
+    return BadRequest("...");
+```
+In an OIDC-only deployment, allowing user-initiated account deletion through the local flow may be inconsistent — or worse, deleting the local user while the external identity still exists could lead to orphaned state.
+
+**Recommendation:** Either add an OIDC guard to `DeleteAccount`, or document why account deletion is intentionally allowed in OIDC mode.
+
+### 2. Double edge-resolution discrepancy in `LocalizeRecipesJob`
+**File:** `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/LocalizeRecipesJob.cs`
+
+The pagination cursor has switched from `!db.LocalizedRecipes.Any(...)` (which checked the full table each iteration) to `r.Id > currentLastId`:
+```csharp
+.Where(r => r.Id > currentLastId && !db.LocalizedRecipes.Any(lr =>
+    lr.RecipeId == r.Id &&
+    lr.Culture == culture &&
+    lr.LastLocalizedAt >= r.FileLastModified))
+```
+This resolves the in-chunk ordering issue from the previous implementation. However, the `!db.LocalizedRecipes.Any(...)` subquery is **still evaluated for every recipe in the page** and translates to a correlated subquery in SQL. For large recipe tables, this is expensive. The previous version had the same issue, so it's not a regression — but the performance concern remains.
+
+**Low severity.** Consider whether the `FileLastModified` comparison could be computed in a more efficient way (e.g., a join).
+
+### 3. `DisjointSetUnion.AsGroups` singleton handling when `ignoreSingletons = false`
+**File:** `src/Aiursoft.HowToCookViewer/Util/DisjointSetUnion.cs:27`
+
+When `ignoreSingletons` is `false` and multiple elements are unioned, the root element is included in its group **only when the root's index is reached during iteration**. The root is always somewhere in the range `[0, size)`, so it will eventually be added, but the code is subtle enough to trigger a double-take during review. The tests pass (193 lines of test), so behavior is correct — just worth noting the readability concern.
+
+### 4. Shell argument injection risk in `git log` invocations
+**Files:**
+- `src/Aiursoft.HowToCookViewer/Services/RecipeContributorService.cs:50`
+- `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/IndexTipsJob.cs:138`
+
+Both call `git log` with a file path argument interpolated into the command string:
+```csharp
+Arguments = $"log --pretty=format:\"%aN|%aE\" -- \"{filePath}\"",
+Arguments = $"log -1 --format=%cI -- \"{relativeFilePath}\"",
+```
+The double quotes provide some protection, but if `filePath` contains a double-quote character (`"`), this breaks. In practice, these paths come from `git ls-tree` or `Directory.GetFiles`, and the `FilePath` property has `[MaxLength(500)]` — so the risk is low. Still, for defense-in-depth, consider validating that the path contains only safe characters (forward slashes, dots, hyphens, CJK characters, no shell metacharacters) before passing to `Process.Start`.
+
+### 5. `IndexTipsJob` process lifecycle
+**File:** `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/IndexTipsJob.cs:119`
+```csharp
+process.Start();
+var output = await process.StandardOutput.ReadToEndAsync();
+await process.WaitForExitAsync();
+```
+`Process.Start()` can return `false` (process couldn't start), but the return value is not checked. If the process fails to start, `StandardOutput.ReadToEndAsync()` may hang or throw. The caller (`ExecuteAsync`) catches `Exception`, so it won't crash the job, but a more explicit guard would be clearer.
+
+### 6. Repeated Docker build command blocks
+**File:** `.gitlab-ci.yml`
+The Docker push retry logic repeats the entire `docker buildx build` command 4 times. Any change to build arguments (new tags, platform changes, build-args) must be duplicated 4×. Consider extracting to a variable or function if GitLab CI supports it in your runner configuration.
+
+---
+
+## 🔍 Minor Observations
+
+### `nuget.config` overwrite approach
+The CI `before_script` overwrites the checked-in `nuget.config` via heredoc. This means any **other** NuGet configuration (e.g., package source mappings, trusted signers) that might be added to the checked-in file later would also be silently overwritten in CI. The comment explains the rationale well, but it's worth a note in the repo's contributing docs.
+
+### `RecipeVectorSearchService` has a duplicate `Normalize` method
+Both `RecipeVectorSearchService` and `GenerateEmbeddingsJob` have private/local `Normalize(float[])` and `Serialize(float[])` methods, while `EmbeddingHelper` provides the same static methods. Consider consolidating to use `EmbeddingHelper.Normalize` and `EmbeddingHelper.Serialize` everywhere to reduce duplication and ensure consistent behavior.
+
+### `ImageProcessingService` migration from ImageSharp to SkiaSharp
+The switch from SixLabors.ImageSharp to SkiaSharp is a non-trivial dependency change. SkiaSharp handles EXIF orientation manually (via the `AutoOrient` method with an 8-case switch), which is more verbose but avoids ImageSharp's licensing concerns. The implementation handles all `SKEncodedOrigin` values correctly.
+
+### `SearchRateLimiter` uses in-memory cache
+The rate limiter uses `IMemoryCache` (per-process), so rate limiting is per-instance, not shared across a multi-instance deployment. For a single-instance deployment this is fine; for scale-out, a distributed cache would be needed. This is explicitly documented in the class summary ("in memory") — fine as-is.
+
+### `CacheKey` truncation in `EmbedQueryAsync`
+**File:** `src/Aiursoft.HowToCookViewer/Services/RecipeVectorSearchService.cs:168`
+```csharp
+var cacheKey = text.Length > 40 ? text[..40] : text;
+```
+Truncating to 40 characters could create collisions for queries that differ only after the 40th character (e.g., "chicken soup with carrots and celery" vs "chicken soup with carrots and leeks"). In practice, cooking search queries are typically very short, and the cache stores the **full** embedding (not the text), so a collision only means the **wrong** vector is used for re-ranking. The practical impact is negligible but worth noting.
+
+### Formatting-only changes
+Many files have whitespace/formatting cleanups mixed with functional changes:
+- `User.cs`: attribute spacing `[MaxLength(150)] [MinLength(2)]` → `[MaxLength(150)][MinLength(2)]`
+- Multiple migration files: `﻿using` → `using` (BOM removal)
+- `LoginViewModel.cs`/`RegisterViewModel.cs`: `: UiStackLayoutViewModel` → ` : UiStackLayoutViewModel`
+- `RecipesController.cs`: alignment/whitespace reformatting in dictionary initializers and assignments
+
+These are benign but make the diff noisier. Consider running a project-wide `dotnet format` in a separate commit next time.
+
+### `Install.sh` switches from `/tmp` to `/var/tmp`
+The `/var/tmp` directory survives reboots (unlike `/tmp`), which is a better choice for build artifacts. Good change.
+
+---
+
+## 📊 Summary
+
+| Area | Assessment |
+|------|-----------|
+| CI Pipeline Fix | ✅ Correctly resolved |
+| Code Quality | ✅ Well-structured, follows existing patterns |
+| Security | ⚠️ See OIDC guard omission in DeleteAccount (#1) |
+| Performance | ✅ Reasonable; minor query optimization possible (#2) |
+| Testing | ✅ Thorough; 3,800+ new test lines |
+| Maintainability | ⚠️ Docker retry duplication (#6), embedding normalization duplication |
+
+### Verdict
+
+This is a solid MR. The pipeline fix is cleanly implemented, and the new features are well-tested and follow the project's established patterns. The issues flagged above are mostly minor or edge-case concerns — none are blocking.
+
+**Recommendation: Approve with comments.** The OIDC guard oversight in `DeleteAccount` (#1) is the most noteworthy item and should be addressed in a follow-up if not in this MR. (07/20/2026 06:11:38)
+gemini-bot: # Code Review: MR #112 — Fix for issue #41: 主分支的编译管道失败
+
+**Branch:** `fix-issue-41` → `master`  
+**Reviewer:** Claude Code  
+**Date:** 2026-07-20
+
+---
+
+## Summary
+
+This MR fixes the CI pipeline for external contributors by changing `nuget.config` to point to `api.nuget.org` (with CI overwriting it to use the internal mirror at runtime). The scope has grown substantially to include: vector-based semantic search, ingredient extraction and grouping, tip entities, soft deletion, self-service account deletion, recipe similarity, contributor display, localization of almost all user-facing strings, an ImageSharp→SkiaSharp migration, comment rate limiting, and more. The code quality is high, tests are thorough (~3,800 new test lines across 33+ files), and the architectural patterns are consistent.
+
+---
+
+## ✅ What's Good
+
+### Pipeline Fix (the core issue)
+- **`nuget.config`** now uses `api.nuget.org` so external contributors can build without access to the Aiursoft internal mirror. CI overwrites it at runtime via a `before_script` heredoc to prefer the internal mirror with nuget.org as fallback. The inline comment explains the rationale clearly.
+- **`Dockerfile`** adds `--configfile nuget.config` to `dotnet publish`, ensuring the Docker build uses the correct NuGet source.
+- **Docker push retries** with exponential backoff (100s, 400s, 1600s) improve CI reliability against transient registry failures.
+
+### Localization
+- Nearly all user-facing hardcoded strings are now localized via `IStringLocalizer<T>` with per-culture `.resx` files. This includes error messages, UI labels, section headings, and category names — a significant i18n improvement.
+- The `_useless_for_localizer()` pattern (while unusual) correctly registers translation keys with the localizer infrastructure by forcing the scanner to detect string literals that would otherwise only appear in dictionaries or switch expressions.
+
+### Test Coverage
+- Adds ~3,800 new test lines across 33 test files, including integration tests for ingredient extraction, similar recipes, comment rate limiting, vector search, and account deletion cascade behavior.
+- Unit tests cover `DisjointSetUnion`, `IngredientGroupService`, `SearchRateLimiter`, `RecipeVectorSearchService`, and the localization jobs — all key new services.
+
+### Observability
+- Structured logging at appropriate levels (Information/Warning/Error) throughout all new background jobs and services.
+- Log messages include contextual data (recipe name, IDs, counts, culture codes) useful for debugging.
+
+### Resilience
+- `SyncHowToCookRepoJob` now has a backup repo URL fallback with cleanup on failure, preventing partial repo state.
+- `LocalizeRecipesJob` creates a `LocalizedRecipe` row immediately and saves after each field translation, so crash recovery doesn't lose all progress.
+- `GenerateEmbeddingsJob` uses binary-search truncation fallback when the embedding model reports the input is too long.
+
+### DeleteAccount OIDC Awareness
+- The UI (in `DeleteAccount.cshtml`) conditionally renders different messaging depending on `AppSettings.Value.LocalEnabled`: "Delete Account" in local mode, "Delete Account Data" in OIDC mode. This gives users in OIDC deployments a way to clean up local data without implying they can delete the external identity.
+
+---
+
+## ⚠️ Potential Issues
+
+### 1. Duplicate `Normalize`/`Serialize` methods in `GenerateEmbeddingsJob`
+**File:** `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/GenerateEmbeddingsJob.cs:191-209`
+
+`GenerateEmbeddingsJob` defines its own private `static void Normalize(float[])` and `static byte[] Serialize(float[])` methods that are byte-for-byte identical to `EmbeddingHelper.Normalize` and `EmbeddingHelper.Serialize`. Meanwhile, `RecipeVectorSearchService` and `IngredientGroupService` correctly delegate to `EmbeddingHelper`. This was likely written before `EmbeddingHelper` was extracted and the consolidation was missed.
+
+**Risk:** If the normalization or serialization logic changes in `EmbeddingHelper` but the duplicated code in `GenerateEmbeddingsJob` is not updated, embeddings generated by the job will diverge from those consumed during search — breaking semantic search silently.
+
+**Recommendation:** Replace the private methods with calls to `EmbeddingHelper.Normalize` and `EmbeddingHelper.Serialize` in `GenerateEmbeddingsJob`.
+
+### 2. Shell argument injection risk in `git log` invocations
+**Files:**
+- `src/Aiursoft.HowToCookViewer/Services/RecipeContributorService.cs:50`
+- `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/IndexTipsJob.cs:138`
+
+Both call `git log` with a file path argument interpolated into the command string:
+```csharp
+Arguments = $"log --pretty=format:\"%aN|%aE\" -- \"{filePath}\"",
+Arguments = $"log -1 --format=%cI -- \"{relativeFilePath}\"",
+```
+The double quotes provide some protection, but if `filePath` contains a double-quote character (`"`), the command string will be malformed, potentially allowing arbitrary command injection or causing the process to error out.
+
+**Risk:** Low. These paths come from `git ls-tree` or `Directory.GetFiles` on a cloned HowToCook repository. It's unlikely a recipe markdown file path would contain a quote character. However, defense-in-depth is warranted for any `Process.Start` usage.
+
+**Recommendation:** Either validate the path contains only safe characters before passing to `Process.Start`, or use the `ProcessStartInfo.ArgumentList` API (available in .NET 6+) if the `git` invocation can be restructured.
+
+### 3. `IndexTipsJob.GetGitLastModifiedAsync` doesn't check `Process.Start()` return value
+**File:** `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/IndexTipsJob.cs:119`
+
+```csharp
+process.Start();
+var output = await process.StandardOutput.ReadToEndAsync();
+```
+
+`Process.Start()` returns `false` when the process couldn't start (e.g., `git` is not on PATH). The method then reads `StandardOutput` which may block indefinitely or throw. The caller (`ExecuteAsync`) catches `Exception`, so the job won't crash, but the error message will be less informative than an explicit guard.
+
+**Contrast with `RecipeContributorService.RunGitLog`** which correctly checks `Process.Start()` for `null`:
+```csharp
+using var process = Process.Start(startInfo);
+if (process == null) return string.Empty;
+```
+
+**Recommendation:** Add the same null-return check in `GetGitLastModifiedAsync` for consistency and clearer failure behavior.
+
+### 4. Embedding cache key collision potential
+**File:** `src/Aiursoft.HowToCookViewer/Services/RecipeVectorSearchService.cs:168`
+
+```csharp
+var cacheKey = text.Length > 40 ? text[..40] : text;
+```
+
+The query text is truncated to 40 characters for the database cache key. Two queries that differ only after the 40th character (e.g., "chicken soup with carrots and celery sticks" vs. "chicken soup with carrots and leek slices") will share a cache key.
+
+**Risk:** Very low. The database caches the full embedding vector (not the text), so a collision only means the **wrong vector** is used for the cached query's re-ranking. In practice, cooking search queries are typically short and the practical impact is negligible. Additionally, the cache uses an LRU eviction policy, so stale entries are eventually replaced.
+
+### 5. `SearchRateLimiter` is per-instance (in-memory)
+**File:** `src/Aiursoft.HowToCookViewer/Services/SearchRateLimiter.cs`
+
+The rate limiter uses `IMemoryCache` (per-process), so rate limiting is per-instance, not shared across a multi-instance deployment. For a single-instance deployment this is fine; for scale-out, a distributed cache (Redis) would be needed. This is documented in the class summary ("in memory") — no action needed, just noting for awareness.
+
+### 6. Repeated Docker build command blocks in `.gitlab-ci.yml`
+**File:** `.gitlab-ci.yml`
+
+The Docker push retry logic repeats the entire `docker buildx build` command 4 times (original + 3 retries with different sleep times). Any change to build arguments (new tags, platform changes, build-args) must be duplicated 4×, creating a maintenance hazard.
+
+**Recommendation:** Consider refactoring to a loop or extracting to a function if GitLab CI supports it in your runner configuration. At minimum, add a comment at each repetition noting that all copies must be kept in sync.
+
+### 7. `DisjointSetUnion.AsGroups` singleton handling logic is subtle
+**File:** `src/Aiursoft.HowToCookViewer/Util/DisjointSetUnion.cs:27-39`
+
+When `ignoreSingletons` is `false`, the root element of a group is added to the group only when its own index is reached during the iteration over `[0, size)`. Since the root is always somewhere in `[0, size)`, it will eventually be added to its group, and the tests confirm correct behavior — but the logic is non-obvious enough to warrant a clarifying comment.
+
+**Recommendation:** Add a comment explaining that when `ignoreSingletons` is `false`, the root element is added when `i == root` for each group's root, which is guaranteed to occur since roots fall within `[0, size)`.
+
+---
+
+## 🔍 Minor Observations
+
+### Formatting-only changes
+Several files have whitespace/formatting cleanups mixed with functional changes:
+- `User.cs`: `[MaxLength(150)] [MinLength(2)]` → `[MaxLength(150)][MinLength(2)]`
+- Migration files: BOM removals (`﻿`)
+- `RecipesController.cs`: alignment/whitespace reformatting in dictionary initializers and assignments
+- `Startup.cs`: `period:` alignment
+
+These are benign but make the diff noisier. Consider running a project-wide `dotnet format` in a separate commit next time.
+
+### `nuget.config` overwrite approach
+The CI `before_script` overwrites the checked-in `nuget.config` via heredoc. Any **other** NuGet configuration (e.g., package source mappings, trusted signers) added to the checked-in file later would also be silently overwritten in CI. The comment in the YAML explains the rationale well, but the risk is worth noting in the repo's contributing docs.
+
+### `newtonsoft.json` vs `system.text.json` — Ollama API calls
+The embedding API calls use `Newtonsoft.Json` (`JsonConvert.SerializeObject`, `JsonProperty` attributes), while the `ChatClient` localization path uses `System.Text.Json`. This is minor and consistent with the existing project dependency on Newtonsoft, but mixing JSON libraries in the same project can lead to subtle serialization differences over time.
+
+### Dependency change: ImageSharp → SkiaSharp
+The switch from SixLabors.ImageSharp to SkiaSharp avoids ImageSharp's commercial licensing concerns. The EXIF auto-orient implementation (an 8-case `switch` on `SKEncodedOrigin`) is verbose but correctly handles all orientation values. The `SKPaint` disposal pattern in `ResizeBitmap` uses a `using` block correctly.
+
+---
+
+## 📊 Summary
+
+| Area | Assessment |
+|------|-----------|
+| CI Pipeline Fix | ✅ Correctly resolved |
+| Code Quality | ✅ Well-structured, follows existing patterns |
+| Architecture | ✅ Clean separation of services, dependency injection used throughout |
+| Security | ⚠️ Minor shell injection hardening opportunity (#2) |
+| Performance | ✅ Reasonable; embedding cache, LRU eviction, and snapshot pattern well-designed |
+| Testing | ✅ Thorough; 3,800+ new test lines across 33+ files |
+| Maintainability | ⚠️ Duplicate embedding serialization (#1), Docker retry duplication (#6) |
+
+### Verdict
+
+This is a high-quality MR. The pipeline fix is cleanly implemented, and the new features are well-tested and follow the project's established patterns. The issues flagged above are minor — none are blocking.
+
+**Recommendation: Approve with comments.** The duplicate `Normalize`/`Serialize` methods in `GenerateEmbeddingsJob` (#1) should be addressed to prevent silent semantic search breakage if the serialization format changes. The shell argument hardening (#2) and `Process.Start()` guard (#3) are good defense-in-depth follow-ups. (07/20/2026 06:42:15)
+[NEW] gemini-bot: # Code Review: MR #112 — Fix for issue #41: 主分支的编译管道失败
+
+**Branch:** `fix-issue-41` → `master`
+**Date:** 2026-07-20
+**Scope:** 1,106 files changed, +53,262 / −2,670 lines
+
+---
+
+## Summary
+
+This MR fixes the CI pipeline for external contributors by switching `nuget.config` to `api.nuget.org` (CI injects the internal mirror at runtime). The scope has grown substantially to include vector-based semantic search, ingredient extraction & reverse lookup, tip entities, soft deletion, self-service account deletion, recipe similarity, contributor attribution, comprehensive localization of user-facing strings, and an ImageSharp→SkiaSharp migration. Code quality is high across the board, test coverage is thorough (~3,800 new test lines), and the architecture follows the project's established patterns cleanly.
+
+---
+
+## What's Good
+
+### CI Pipeline Fix
+- `nuget.config` cleanly separates the checked-in config (external-friendly, nuget.org only) from the CI config (internal mirror with nuget.org fallback, injected via `before_script` heredoc). The rationale is well-documented in the YAML comments.
+- `Dockerfile` line 34 passes `--configfile nuget.config` to `dotnet publish`, ensuring the Docker build path picks up the same NuGet source configuration.
+- Docker push retries with exponential backoff (100s, 400s, 1600s) improve resilience against transient registry errors.
+
+### Architecture & Design
+- **`IngredientGroupService`** uses a lazy, double-checked cached-group pattern with a `SemaphoreSlim` gate and snapshot-based invalidation (`Count`, `MaxId`, `Threshold` tuple). This is well-suited to a read-heavy ingredient lookup page where rebuilds are expensive (embedding API calls) and stale reads are acceptable between invalidation calls.
+- **`CleanupLocalizedRecipesJob`** introduces a staleness threshold (10 minutes) to prevent delete-then-recreate ping-pong with `LocalizeRecipesJob` when language configurations change. The use of `ExecuteDeleteAsync` for bulk deletes is efficient, and the MySQL error 1093 workaround (materializing deleted recipe IDs first) is correctly applied.
+- **`SyncHowToCookRepoJob`** implements a clean fallback pattern: primary URL → catch `TimeoutException` → cleanup partial state → try backup URL. Deleting stale repo state before the fallback attempt prevents the backup clone from landing in a corrupted directory.
+- **`ExtractIngredientsJob`** saves each new ingredient immediately after insertion (line 143), then saves again after setting `LastIngredientExtractedAt`. This breaks up the batch save to avoid unique constraint violations when the same new ingredient appears in multiple recipes within a batch. The `RunWithRetry` wrapper ensures that if a `SaveChangesAsync` fails, the entire recipe is retried, and on retry the already-inserted ingredient is found by `FirstOrDefaultAsync`.
+
+### Test Coverage
+- `DisjointSetUnionTests` (193 lines) covers unions, path compression, and both `AsGroups` modes (`ignoreSingletons` true/false).
+- `IngredientGroupServiceTests` (761 lines) is unusually thorough for a service test, covering snapshot invalidation, cache hit/miss, canonical ID expansion, and edge cases.
+- `RecipeVectorSearchTests` (591 lines) tests embedding cache LRU eviction, truncation fallback for long inputs, and embedding deserialization.
+- Integration tests cover the new flows: ingredient reverse lookup, recipe similarity, account deletion cascade, comment rate limiting, and culture switching.
+- `BackgroundJobsTests` received significant updates for the new job scheduling assertions.
+
+### Observability & Resilience
+- Structured logs at Information/Warning/Error throughout all new background jobs include contextual data (recipe name, culture, IDs, counts).
+- `LocalizeRecipesJob` creates a `LocalizedRecipe` row and saves after each individual translation, preventing hours of lost work on crash.
+- `GenerateEmbeddingsJob` uses binary-search truncation on input text when the embedding model reports the input is too long — a smart fallback for recipes with lengthy ingredient lists.
+
+---
+
+## Potential Issues
+
+### 1. Duplicate `Normalize`/`Serialize` methods in `GenerateEmbeddingsJob` (maintainability bug risk)
+
+**File:** `src/Aiursoft.HowToCookViewer/Services/BackgroundJobs/GenerateEmbeddingsJob.cs:191-209`
+
+```csharp
+private static void Normalize(float[] vector) { ... }
+private static byte[] Serialize(float[] vector) { ... }
+```
+
+These are byte-for-byte identical to `EmbeddingHelper.Normalize` (line 13) and `EmbeddingHelper.Serialize` (line 24). Meanwhile, `RecipeVectorSearchService` and `IngredientGroupService` correctly delegate to `EmbeddingHelper`. If the normalization or serialization logic is ever updated in `EmbeddingHelper` but the copies in `GenerateEmbeddingsJob` are missed, embeddings produced by the background job will diverge from those consumed by search queries — silently breaking semantic search.
+
+**Recommendation:** Replace the private methods with calls to `EmbeddingHelper.Normalize` and `EmbeddingHelper.Serialize`.
+
+### 2. Inconsistent `Process.Start()` pattern between `RecipeContributorService` and `IndexTipsJob`
+
+**RecipeContributorService.cs:51-52** (correct pattern):
+```csharp
+using var process = Process.Start(startInfo);
+if (process == null) return string.Empty;
+```
+
+**IndexTipsJob.cs:122-124** (missing null check):
+```csharp
+process.Start();
+var output = await process.StandardOutput.ReadToEndAsync();
+await process.WaitForExitAsync();
+```
+
+`Process.Start()` returns `false` when the process cannot start (e.g., `git` not on PATH). In `IndexTipsJob`, this goes undetected — the code proceeds to read `StandardOutput`, which may block or throw. The caller (`ExecuteAsync`) catches `Exception`, so the job won't crash, but the error message will be less informative ("could not parse git log date" rather than "git not found"). Additionally, `ReadToEndAsync` followed by `WaitForExitAsync` is redundant — `ReadToEndAsync` already blocks until the stdout stream closes (which happens when the process exits).
+
+**Recommendation:** Adopt the `RecipeContributorService` pattern (null-return check with `using var process = Process.Start(...)`) in `IndexTipsJob.GetGitLastModifiedAsync` for consistency.
+
+### 3. Shell argument injection hardening opportunity
+
+**Files:**
+- `RecipeContributorService.cs:44` — `Arguments = $"log --pretty=format:\"%aN|%aE\" -- \"{filePath}\""`
+- `IndexTipsJob.cs:115` — `Arguments = $"log -1 --format=%cI -- \"{relativeFilePath}\""`
+
+Both interpolate a file path into a shell command string. The double quotes provide some protection, but if the path contains a literal `"`, the command string is malformed. In practice, these paths come from `git ls-tree` or `Directory.GetFiles` on the HowToCook repository (which has predictable filenames like `dishes/vegetable/西红柿炒鸡蛋.md`), so the risk is very low. Still, defense-in-depth is warranted for any `Process.Start` usage.
+
+**Recommendation:** Validate the path contains only safe characters (forward slashes, dots, hyphens, alphanumeric, CJK) before passing to `Process.Start`, or log a warning and skip the file if unsafe characters are detected.
+
+### 4. `IndexTipsJob` batch-saves at the end — partial crash loses all updates
+
+**File:** `IndexTipsJob.cs:104`
+
+All insertions and updates accumulated during the `foreach` loop (lines 35-87) are committed by a single `await db.SaveChangesAsync()` at line 104. If the job crashes midway through 200 tip files, all 100 processed updates are lost and will be re-discovered on the next run. This isn't a correctness bug — the job is idempotent — but it wastes work. In contrast, `LocalizeRecipesJob` saves after each recipe to preserve progress.
+
+**Recommendation:** Low priority. Consider batching saves every N files (e.g., every 50) for larger datasets, or document that the job is intentionally batched for performance and accepts rework on crash.
+
+### 5. `ExtractIngredientsJob` uses `Newtonsoft.Json` while other new code uses `System.Text.Json`
+
+**File:** `ExtractIngredientsJob.cs:109`
+
+```csharp
+ingredients = JsonConvert.DeserializeObject<string[]>(json);
+```
+
+The embedding API calls in `GenerateEmbeddingsJob` and `RecipeVectorSearchService` also use Newtonsoft, while `LocalizeRecipesJob`'s chat client path uses `System.Text.Json`. Mixing JSON libraries in the same project is minor but can lead to subtle behavioral differences over time (e.g., case sensitivity, number parsing, comment handling). Newtonsoft is already a project dependency, so this is consistent with the existing codebase and not a regression.
+
+**Recommendation:** No action needed now. Consider standardizing on one JSON library in a future refactoring pass.
+
+### 6. `DisjointSetUnion.AsGroups` readability
+
+**File:** `Util/DisjointSetUnion.cs:18-43`
+
+When `ignoreSingletons` is `false`, the root element of a group is included only when the iteration (which walks `[0, size)`) reaches `i == root` for that group's root. Since every root is in `[0, size)`, every root is eventually reached, and `Find(root) == root`, so `groups[root].Add(root)` executes. The tests confirm correctness — the code is just subtle enough to cause a double-take during review.
+
+**Recommendation:** Add a brief comment explaining that in non-singleton-ignoring mode, root elements are naturally included when their own index is reached during iteration.
+
+### 7. `SearchRateLimiter` is per-instance (by design, but worth noting)
+
+**File:** `Services/SearchRateLimiter.cs`
+
+The rate limiter uses `IMemoryCache` — per-process, not shared across instances. For a single-instance deployment this is fine. For horizontal scaling, a distributed cache (Redis) would be needed. The class summary explicitly calls out "in memory," so this is documented behavior.
+
+**Recommendation:** No action needed. The design is intentional and clearly communicated.
+
+---
+
+## Minor Observations
+
+### NuGet config fragility
+The CI `before_script` heredoc completely overwrites the checked-in `nuget.config`. If future changes add package source mappings, trusted signers, or other NuGet configuration to the checked-in file, those additions would be silently lost in CI. The comment in `.gitlab-ci.yml` explains the rationale — consider noting this risk in the repository's contribution docs.
+
+### Repeated Docker build command blocks
+`.gitlab-ci.yml` repeats the `docker buildx build` command 4 times (original + 3 retries). Any change to build arguments must be duplicated 4×. A CI variable or loop would reduce the maintenance hazard, if your GitLab runner configuration supports it.
+
+### `Embedding cache key` collision potential
+`RecipeVectorSearchService.cs:172` truncates the query text to 40 characters for the database cache key (`text[..40]`). Two semantically different queries that share the first 40 characters (e.g., "chicken soup with carrots and celery sticks" vs. "chicken soup with carrots and leek slices") would share a cache key and return each other's embedding vector. In practice, cooking queries are typically short, and the impact is limited to re-ranking quality (not correctness), so the practical risk is negligible.
+
+### View localization pattern
+The `_useless_for_localizer()` pattern (e.g., `IngredientsController.cs:23-26`) is unusual but effective: it forces the localization scanner to detect translation keys that would otherwise only appear in dictionary values or switch expressions. The method name clearly signals its purpose to future maintainers.
+
+### Formatting-only changes
+Several files mix whitespace/formatting cleanups with functional changes (`User.cs` attribute spacing, migration BOM removals, `RecipesController.cs` alignment). These are benign but make the diff noisier. Consider `dotnet format` in a dedicated commit for future changes.
+
+### `Install.sh` change: `/tmp` → `/var/tmp`
+`/var/tmp` survives reboots (unlike `/tmp`). This is a correct choice for build artifacts. Good catch.
+
+---
+
+## Summary
+
+| Area | Assessment |
+|------|-----------|
+| CI Pipeline Fix | Correctly resolved |
+| Code Quality | High; follows established patterns |
+| Architecture | Clean separation, appropriate caching, good resilience patterns |
+| Security | Minor shell-injection hardening opportunity (#3) |
+| Performance | Reasonable; appropriate caching and batch sizing |
+| Testing | Thorough; 3,800+ new test lines |
+| Maintainability | Duplicate methods (#1), inconsistent Process.Start pattern (#2) |
+
+### Verdict
+
+This is a high-quality MR. The pipeline fix is clean and well-documented. The new features are thoroughly tested and architecturally sound. The issues flagged above are all minor — none are blocking.
+
+**Recommendation: Approve.** The duplicate `Normalize`/`Serialize` methods (#1) should be addressed in a follow-up commit to prevent silent semantic search breakage if the serialization format changes. Items #2–#4 are nice-to-have hardening improvements. (07/20/2026 07:11:58)
+
+
+Status: CI/CD PIPELINE FAILED.
+Pipeline URL: https://gitlab.aiursoft.com/gemini-bot/howtocookviewer/-/pipelines/58652
+
+Failure Logs:
+
+
+=== Job: lint (Stage: lint) ===
+2026-07-20T06:59:17.398071Z 00O [0KRunning with gitlab-runner 19.1.1 (24b9b726)[0;m
+2026-07-20T06:59:17.398084Z 00O [0K  on 5a23790d31b7 wjuYPY19y, system ID: s_875163874acd[0;m
+2026-07-20T06:59:17.398104Z 00O section_start:1784530757:prepare_executor[0K
+2026-07-20T06:59:17.398107Z 00O+[0K[36;1mPreparing the "shell" executor[0;m[0;m
+2026-07-20T06:59:17.398185Z 00O [0KUsing Shell (bash) executor...[0;m
+2026-07-20T06:59:17.398187Z 00O section_end:1784530757:prepare_executor[0K
+2026-07-20T06:59:17.398300Z 00O+section_start:1784530757:prepare_script[0K
+2026-07-20T06:59:17.398302Z 00O+[0K[36;1mPreparing environment[0;m[0;m
+2026-07-20T06:59:17.406183Z 01O Running on 5a23790d31b7...
+2026-07-20T06:59:17.408036Z 00O section_end:1784530757:prepare_script[0K
+2026-07-20T06:59:17.408500Z 00O+section_start:1784530757:get_sources[0K
+2026-07-20T06:59:17.408502Z 00O+[0K[36;1mGetting source from Git repository[0;m[0;m
+2026-07-20T06:59:17.432041Z 01O [32;1mGitaly correlation ID: 01KXZ54SMF8TXECC4JBSG15DG7[0;m
+2026-07-20T06:59:17.438378Z 01O [32;1mFetching changes with git depth set to 20...[0;m
+2026-07-20T06:59:17.441294Z 01O Reinitialized existing Git repository in /home/gitlab-runner/builds/howtocookviewer/58652/.git/
+2026-07-20T06:59:17.568318Z 01O [32;1mChecking out 4981a4aa as detached HEAD (ref is fix-issue-41)...[0;m
+2026-07-20T06:59:17.643159Z 01O Removing src/Aiursoft.HowToCookViewer.Entities/obj/
+2026-07-20T06:59:17.643166Z 01O Removing src/Aiursoft.HowToCookViewer.InMemory/obj/
+2026-07-20T06:59:17.643167Z 01O Removing src/Aiursoft.HowToCookViewer.MySql/obj/
+2026-07-20T06:59:17.643167Z 01O Removing src/Aiursoft.HowToCookViewer.Sqlite/obj/
+2026-07-20T06:59:17.643167Z 01O Removing src/Aiursoft.HowToCookViewer/obj/
+2026-07-20T06:59:17.643167Z 01O Removing tests/obj/
+2026-07-20T06:59:17.646420Z 01O [32;1mSkipping Git submodules setup[0;m
+2026-07-20T06:59:17.647753Z 00O section_end:1784530757:get_sources[0K
+2026-07-20T06:59:17.648149Z 00O+section_start:1784530757:step_script[0K
+2026-07-20T06:59:17.648154Z 00O+[0K[36;1mExecuting "step_script" stage of the job script[0;m[0;m
+2026-07-20T06:59:17.660280Z 01O [32;1m$ cat > nuget.config << 'NUGETEOF' # collapsed multi-line command[0;m
+2026-07-20T06:59:17.661913Z 01O [32;1m$ export PATH=$PATH:$HOME/.dotnet/tools[0;m
+2026-07-20T06:59:17.661924Z 01O [32;1m$ which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d[0;m
+2026-07-20T06:59:17.662541Z 01O /home/gitlab-runner/.dotnet/tools/jb
+2026-07-20T06:59:17.662543Z 01O [32;1m$ which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d[0;m
+2026-07-20T06:59:17.663060Z 01O /home/gitlab-runner/.dotnet/tools/reportgenerator
+2026-07-20T06:59:17.663189Z 01O [32;1m$ echo "Hostname: $(hostname)"[0;m
+2026-07-20T06:59:17.663624Z 01O Hostname: 5a23790d31b7
+2026-07-20T06:59:17.663632Z 01O [32;1m$ dotnet --info[0;m
+2026-07-20T06:59:17.726771Z 01O .NET SDK:
+2026-07-20T06:59:17.726778Z 01O  Version:           10.0.109
+2026-07-20T06:59:17.726778Z 01O  Commit:            901ca94124
+2026-07-20T06:59:17.749973Z 01O  Workload version:  10.0.100-manifests.b0c14421
+2026-07-20T06:59:17.750430Z 01O  MSBuild version:   18.0.11+901ca9412
+2026-07-20T06:59:17.750431Z 01O 
+2026-07-20T06:59:17.750432Z 01O Runtime Environment:
+2026-07-20T06:59:17.750966Z 01O  OS Name:     ubuntu
+2026-07-20T06:59:17.750968Z 01O  OS Version:  26.04
+2026-07-20T06:59:17.751564Z 01O  OS Platform: Linux
+2026-07-20T06:59:17.757222Z 01O  RID:         ubuntu.26.04-x64
+2026-07-20T06:59:17.757225Z 01O  Base Path:   /usr/lib/dotnet/sdk/10.0.109/
+2026-07-20T06:59:17.757225Z 01O 
+2026-07-20T06:59:17.757225Z 01O .NET workloads installed:
+2026-07-20T06:59:17.758753Z 01O There are no installed workloads to display.
+2026-07-20T06:59:17.758758Z 01O Configured to use workload sets when installing new manifests.
+2026-07-20T06:59:17.758759Z 01O No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+2026-07-20T06:59:17.759790Z 01O 
+2026-07-20T06:59:17.759795Z 01O Host:
+2026-07-20T06:59:17.759796Z 01O   Version:      10.0.9
+2026-07-20T06:59:17.759797Z 01O   Architecture: x64
+2026-07-20T06:59:17.759798Z 01O   Commit:       901ca94124
+2026-07-20T06:59:17.759799Z 01O 
+2026-07-20T06:59:17.759799Z 01O .NET SDKs installed:
+2026-07-20T06:59:17.759800Z 01O   10.0.109 [/usr/lib/dotnet/sdk]
+2026-07-20T06:59:17.759801Z 01O 
+2026-07-20T06:59:17.759802Z 01O .NET runtimes installed:
+2026-07-20T06:59:17.759803Z 01O   Microsoft.AspNetCore.App 10.0.9 [/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+2026-07-20T06:59:17.759804Z 01O   Microsoft.NETCore.App 10.0.9 [/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+2026-07-20T06:59:17.759806Z 01O 
+2026-07-20T06:59:17.759806Z 01O Other architectures found:
+2026-07-20T06:59:17.759807Z 01O   None
+2026-07-20T06:59:17.759808Z 01O 
+2026-07-20T06:59:17.759809Z 01O Environment variables:
+2026-07-20T06:59:17.759810Z 01O   DOTNET_BUNDLE_EXTRACT_BASE_DIR           [/home/gitlab-runner/.cache/dotnet_bundle_extract]
+2026-07-20T06:59:17.759811Z 01O   DOTNET_CLI_TELEMETRY_OPTOUT              [1]
+2026-07-20T06:59:17.759812Z 01O 
+2026-07-20T06:59:17.759813Z 01O global.json file:
+2026-07-20T06:59:17.759814Z 01O   Not found
+2026-07-20T06:59:17.759814Z 01O 
+2026-07-20T06:59:17.759815Z 01O Learn more:
+2026-07-20T06:59:17.759816Z 01O   https://aka.ms/dotnet/info
+2026-07-20T06:59:17.759817Z 01O 
+2026-07-20T06:59:17.759818Z 01O Download .NET:
+2026-07-20T06:59:17.759818Z 01O   https://aka.ms/dotnet/download
+2026-07-20T06:59:17.762916Z 01O [32;1m$ chmod +x ./lint.sh[0;m
+2026-07-20T06:59:17.765376Z 01O [32;1m$ ./lint.sh[0;m
+2026-07-20T06:59:17.766672Z 01O Checking for JetBrains ReSharper Global Tools...
+2026-07-20T06:59:17.766674Z 01O jb is already installed.
+2026-07-20T06:59:17.766675Z 01O Restoring dependencies...
+2026-07-20T06:59:18.245698Z 01O   Determining projects to restore...
+2026-07-20T06:59:18.715984Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/src/Aiursoft.HowToCookViewer/Aiursoft.HowToCookViewer.csproj (in 210 ms).
+2026-07-20T06:59:18.715990Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/src/Aiursoft.HowToCookViewer.Entities/Aiursoft.HowToCookViewer.Entities.csproj (in 199 ms).
+2026-07-20T06:59:18.715990Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/src/Aiursoft.HowToCookViewer.MySql/Aiursoft.HowToCookViewer.MySql.csproj (in 199 ms).
+2026-07-20T06:59:18.715991Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/src/Aiursoft.HowToCookViewer.InMemory/Aiursoft.HowToCookViewer.InMemory.csproj (in 199 ms).
+2026-07-20T06:59:18.715992Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/src/Aiursoft.HowToCookViewer.Sqlite/Aiursoft.HowToCookViewer.Sqlite.csproj (in 199 ms).
+2026-07-20T06:59:18.716504Z 01O   Restored /home/gitlab-runner/builds/howtocookviewer/58652/tests/Aiursoft.HowToCookViewer.Tests.csproj (in 200 ms).
+2026-07-20T06:59:18.742840Z 01O Running ReSharper Code Inspection...
+2026-07-20T07:00:14.908545Z 01O Filtering known false positives...
+2026-07-20T07:00:14.914307Z 01O [0;31mLinting FAILED![0m
+2026-07-20T07:00:14.914314Z 01O Issues found:
+2026-07-20T07:00:14.924038Z 01O File: src/Aiursoft.HowToCookViewer/Views/Manage/ChangeAvatar.cshtml | Line: 16 | Reason: '??' left operand is never 'null' according to nullable reference types' annotations
+2026-07-20T07:00:14.931902Z 01O File: src/Aiursoft.HowToCookViewer/Controllers/ManageController.cs | Line: 175 | Reason: The nullable warning suppression expression is redundant
+2026-07-20T07:00:14.933966Z 00O section_end:1784530814:step_script[0K
+2026-07-20T07:00:14.934237Z 00O+section_start:1784530814:upload_artifacts_on_failure[0K
+2026-07-20T07:00:14.934239Z 00O+[0K[36;1mUploading artifacts for failed job[0;m[0;m
+2026-07-20T07:00:14.979000Z 01O [32;1mUploading artifacts...[0;m
+2026-07-20T07:00:15.012959Z 01E Runtime platform                                  [0;m  arch[0;m=amd64 os[0;m=linux pid[0;m=442111 revision[0;m=24b9b726 version[0;m=19.1.1
+2026-07-20T07:00:15.012998Z 01E ./analyze_output.xml: found 1 matching artifact files and directories[0;m 
+2026-07-20T07:00:15.107973Z 01E Uploading artifacts as "archive" to coordinator... 201 Created[0;m  correlation_id[0;m=01KXZ56J153VQ2V4SQ9WCR8766 id[0;m=361246 status[0;m=201 token[0;m=64_drTThP
+2026-07-20T07:00:15.112770Z 00O section_end:1784530815:upload_artifacts_on_failure[0K
+2026-07-20T07:00:15.112827Z 00O+section_start:1784530815:cleanup_file_variables[0K
+2026-07-20T07:00:15.112830Z 00O+[0K[36;1mCleaning up project directory and file based variables[0;m[0;m
+2026-07-20T07:00:15.127570Z 00O section_end:1784530815:cleanup_file_variables[0K
+2026-07-20T07:00:15.127675Z 00O [31;1mERROR: Job failed: exit status 1[0;m
+
+=== End of Job Log ===
+
+
+
+Please analyze the logs and the codebase to fix the failures.
+
+
+## ⚠️ CRITICAL: Entity Framework Migration Rules ⚠️
+
+If this project uses Entity Framework Core (check for Microsoft.EntityFrameworkCore in .csproj or packages.config files), you MUST follow these strict rules:
+
+1. **Confirm Project Type**: Check that the project uses EF Core Code First approach (look for DbContext-derived classes and an existing Migrations folder with generated migration files).
+
+2. **Generate Migrations via CLI — NEVER manually write them**:
+   - Use: `dotnet ef migrations add <DescriptiveMigrationName>`
+   - Example: `dotnet ef migrations add AddUserEmailColumn`
+   - The EF tooling will auto-generate the migration C# files for you.
+
+3. **STRICTLY FORBIDDEN**:
+   - ❌ Do NOT manually create any .cs file in the Migrations/ folder.
+   - ❌ Do NOT manually edit auto-generated migration files.
+   - ❌ Do NOT write migration code (Up/Down methods) by hand.
+   - ✅ ALWAYS use `dotnet ef migrations add` to scaffold migrations.
+
+4. **Apply migrations** (when appropriate):
+   - Use: `dotnet ef database update` to apply pending migrations to the database.
+
+5. **Model changes before migration**:
+   - Make your entity/model class changes first (e.g., add properties to DbContext or entity classes).
+   - Then generate the migration via CLI — it will detect model changes automatically.

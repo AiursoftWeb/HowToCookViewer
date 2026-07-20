@@ -13,8 +13,8 @@
             <div class="col-md-4 text-center">
                 @* UX Enhancement: Display the current avatar to provide context. The model's AvatarUrl is used here. *@
                 <p class="h5">@Localizer["Current Avatar"]</p>
-                <a href="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl ?? string.Empty)" target="_blank" rel="noopener noreferrer">
-                    <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl ?? string.Empty)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
+                <a href="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)" target="_blank" rel="noopener noreferrer">
+                    <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
                 </a>
                 <p class="text-muted"><small>@Localizer["For best results, use a square image in .jpg, .jpeg, or .png format."]</small></p>
             </div>
