@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>대시보드</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>계정 삭제</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>역할 삭제</value>
   </data>

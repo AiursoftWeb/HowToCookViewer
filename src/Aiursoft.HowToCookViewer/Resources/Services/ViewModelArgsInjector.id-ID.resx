@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Dasbor</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Hapus Akun</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Hapus Peran</value>
   </data>

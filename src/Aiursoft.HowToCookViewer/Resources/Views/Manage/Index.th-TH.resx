@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>โซนอันตราย</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>ลบบัญชีของคุณ</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>ลบข้อมูลบัญชีของคุณ</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>รหัสผ่าน</value>
   </data>

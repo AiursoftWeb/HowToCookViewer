@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>ダッシュボード</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>アカウントを削除</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>ロールを削除</value>
   </data>

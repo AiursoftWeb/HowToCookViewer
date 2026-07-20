@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" comment(s)" xml:space="preserve">
+    <value>ความคิดเห็น</value>
+  </data>
+  <data name=" favorite(s)" xml:space="preserve">
+    <value>รายการโปรด</value>
+  </data>
+  <data name=" like(s)" xml:space="preserve">
+    <value>การกดถูกใจ</value>
+  </data>
+  <data name="Are you sure you want to permanently delete your account?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณอย่างถาวร?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>เขตอันตราย</value>
+  </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>ลบบัญชี</value>
+  </data>
+  <data name="Delete Account Data" xml:space="preserve">
+    <value>ลบข้อมูลบัญชี</value>
+  </data>
+  <data name="This action is irreversible. Everything associated with your account will be permanently removed:" xml:space="preserve">
+    <value>การดำเนินการนี้ไม่สามารถย้อนกลับได้ ข้อมูลทั้งหมดที่เกี่ยวข้องกับบัญชีของคุณจะถูกลบออกอย่างถาวร:</value>
+  </data>
+  <data name="Yes, delete my account" xml:space="preserve">
+    <value>ใช่, ลบบัญชีของฉัน</value>
+  </data>
+  <data name="You will be signed out immediately and redirected to the home page." xml:space="preserve">
+    <value>คุณจะถูกออกจากระบบทันทีและเปลี่ยนเส้นทางไปยังหน้าแรก</value>
+  </data>
+
+</root>

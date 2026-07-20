@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>關閉</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>危險操作</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>刪除您的帳戶</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>刪除帳戶資料</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>密碼</value>
   </data>

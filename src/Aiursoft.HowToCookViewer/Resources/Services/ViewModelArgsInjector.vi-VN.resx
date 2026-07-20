@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Bảng điều khiển</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Xóa tài khoản</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Xóa Vai trò</value>
   </data>

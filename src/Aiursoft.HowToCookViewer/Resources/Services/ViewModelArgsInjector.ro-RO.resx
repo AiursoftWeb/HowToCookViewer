@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Panou de control</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Șterge contul</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Șterge Rol</value>
   </data>

@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>แดชบอร์ด</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>ลบบัญชี</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>ลบบทบาท</value>
   </data>

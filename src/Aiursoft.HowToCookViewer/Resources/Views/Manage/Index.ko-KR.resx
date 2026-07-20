@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>위험 구역</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>계정 삭제하기</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>계정 데이터 삭제</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>비밀번호</value>
   </data>

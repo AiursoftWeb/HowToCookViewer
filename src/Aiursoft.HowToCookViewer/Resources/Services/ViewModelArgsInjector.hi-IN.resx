@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>डैशबोर्ड</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>खाता हटाएं</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>रोल हटाएं</value>
   </data>
