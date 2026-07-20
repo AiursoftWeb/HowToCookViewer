@@ -125,7 +125,7 @@ public class ManageControllerTests : TestBase
 
         string userId;
         int recipeId, commentId;
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
             var user = await userManager.FindByEmailAsync(email);
@@ -168,14 +168,14 @@ public class ManageControllerTests : TestBase
         Assert.AreEqual(HttpStatusCode.Found, managePage.StatusCode);
 
         // Assert: user gone
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
             Assert.IsNull(await userManager.FindByEmailAsync(email));
         }
 
         // Assert: all user content cascade-deleted
-        using (var scope = Server!.Services.CreateScope())
+        using (var scope = Server.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
             Assert.IsFalse(await db.RecipeLikes.AnyAsync(l => l.UserId == userId));
@@ -199,7 +199,7 @@ public class ManageControllerTests : TestBase
         var managePage = await Http.GetAsync("/Manage/Index");
         Assert.AreEqual(HttpStatusCode.Found, managePage.StatusCode);
 
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
         Assert.IsNull(await userManager.FindByEmailAsync(email));
     }
