@@ -4,6 +4,7 @@ using Aiursoft.HowToCookViewer.Models.ManageViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.UiStack.Layout;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -211,7 +212,7 @@ public class ManageController(
         ViewData["FavoritesCount"] = favoritesCount;
         ViewData["CommentsCount"] = commentsCount;
 
-        return this.StackView(new Aiursoft.UiStack.Layout.UiStackLayoutViewModel { PageTitle = "Delete Account" });
+        return this.StackView(new UiStackLayoutViewModel { PageTitle = "Delete Account" });
     }
 
     //

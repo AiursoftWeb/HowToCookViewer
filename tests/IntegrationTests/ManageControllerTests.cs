@@ -5,7 +5,6 @@ using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
 [TestClass]
