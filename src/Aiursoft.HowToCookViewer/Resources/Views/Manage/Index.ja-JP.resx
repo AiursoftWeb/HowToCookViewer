@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>危険地帯</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>アカウントを削除する</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>アカウントデータを削除する</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>パスワード</value>
   </data>

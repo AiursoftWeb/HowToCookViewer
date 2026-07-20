@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Zona de peligro</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>Eliminar tu cuenta</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>Eliminar los datos de tu cuenta</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
   </data>

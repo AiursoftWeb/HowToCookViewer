@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" comment(s)" xml:space="preserve">
+    <value>comentariu(comentarii)</value>
+  </data>
+  <data name=" favorite(s)" xml:space="preserve">
+    <value>favorit(e)</value>
+  </data>
+  <data name=" like(s)" xml:space="preserve">
+    <value>preferință</value>
+  </data>
+  <data name="Are you sure you want to permanently delete your account?" xml:space="preserve">
+    <value>Sigur doriți să vă ștergeți contul definitiv?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anulează</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Zonă periculoasă</value>
+  </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Șterge contul</value>
+  </data>
+  <data name="Delete Account Data" xml:space="preserve">
+    <value>Ștergeți datele contului</value>
+  </data>
+  <data name="This action is irreversible. Everything associated with your account will be permanently removed:" xml:space="preserve">
+    <value>Această acțiune este ireversibilă. Tot ce este asociat cu contul dvs. va fi șters permanent:</value>
+  </data>
+  <data name="Yes, delete my account" xml:space="preserve">
+    <value>Da, șterge contul meu</value>
+  </data>
+  <data name="You will be signed out immediately and redirected to the home page." xml:space="preserve">
+    <value>Vei fi deconectat imediat și redirecționat către pagina principală.</value>
+  </data>
+
+</root>

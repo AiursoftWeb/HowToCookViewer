@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" comment(s)" xml:space="preserve">
+    <value>則評論</value>
+  </data>
+  <data name=" favorite(s)" xml:space="preserve">
+    <value>收藏項目</value>
+  </data>
+  <data name=" like(s)" xml:space="preserve">
+    <value>個讚</value>
+  </data>
+  <data name="Are you sure you want to permanently delete your account?" xml:space="preserve">
+    <value>您確定要永久刪除您的帳號嗎？</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>危險區域</value>
+  </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>刪除帳號</value>
+  </data>
+  <data name="Delete Account Data" xml:space="preserve">
+    <value>刪除帳號資料</value>
+  </data>
+  <data name="This action is irreversible. Everything associated with your account will be permanently removed:" xml:space="preserve">
+    <value>此操作無法復原。所有與您帳號相關的資料將被永久刪除：</value>
+  </data>
+  <data name="Yes, delete my account" xml:space="preserve">
+    <value>是的，刪除我的帳號</value>
+  </data>
+  <data name="You will be signed out immediately and redirected to the home page." xml:space="preserve">
+    <value>您將立即登出並重新導向至首頁。</value>
+  </data>
+
+</root>

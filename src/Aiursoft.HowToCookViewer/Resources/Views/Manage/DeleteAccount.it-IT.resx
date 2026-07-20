@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" comment(s)" xml:space="preserve">
+    <value>commento(i)</value>
+  </data>
+  <data name=" favorite(s)" xml:space="preserve">
+    <value>preferiti</value>
+  </data>
+  <data name=" like(s)" xml:space="preserve">
+    <value>mi piace/i</value>
+  </data>
+  <data name="Are you sure you want to permanently delete your account?" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare definitivamente il tuo account?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Zona Pericolosa</value>
+  </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Elimina account</value>
+  </data>
+  <data name="Delete Account Data" xml:space="preserve">
+    <value>Elimina i dati dell&apos;account</value>
+  </data>
+  <data name="This action is irreversible. Everything associated with your account will be permanently removed:" xml:space="preserve">
+    <value>Questa azione è irreversibile. Tutto ciò associato al tuo account sarà rimosso permanentemente:</value>
+  </data>
+  <data name="Yes, delete my account" xml:space="preserve">
+    <value>Sì, elimina il mio account</value>
+  </data>
+  <data name="You will be signed out immediately and redirected to the home page." xml:space="preserve">
+    <value>Verrai disconnesso immediatamente e reindirizzato alla homepage.</value>
+  </data>
+
+</root>

@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Instrumentbräda</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>Ta bort konto</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Ta bort roll</value>
   </data>

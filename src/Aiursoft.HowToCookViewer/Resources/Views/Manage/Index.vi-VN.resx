@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Khu vực nguy hiểm</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>Xóa tài khoản của bạn</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>Xóa dữ liệu tài khoản của bạn</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>

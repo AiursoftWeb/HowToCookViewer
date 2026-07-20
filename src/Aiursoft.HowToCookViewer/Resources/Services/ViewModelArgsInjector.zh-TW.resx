@@ -102,6 +102,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>儀表板</value>
   </data>
+  <data name="Delete Account" xml:space="preserve">
+    <value>刪除帳號</value>
+  </data>
   <data name="Delete Role" xml:space="preserve">
     <value>刪除角色</value>
   </data>

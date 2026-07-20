@@ -42,6 +42,15 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Опасная зона</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>Удалить аккаунт</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>Удалить данные вашей учетной записи</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
   </data>
