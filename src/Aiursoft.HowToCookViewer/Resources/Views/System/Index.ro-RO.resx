@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Confirmă repornirea aplicației</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Arhitectura CPU</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Nucleuri CPU</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Creat</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Container Docker</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Mediu</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>Memorie GC</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Mod GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Număr de handle-uri</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Antet</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Cale</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Arhitectura procesului</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Proprietate</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Această acțiune va închide aplicația în mod controlat. Se așteaptă ca un manager de procese să o repornească.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Număr de fire de execuție</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Timp de funcționare</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Nume utilizator</value>

@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Подтвердите перезапуск приложения</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Архитектура процессора</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Ядра ЦП</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Создано</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Контейнер Docker</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Окружение</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>Память сборщика мусора</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Режим GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Количество дескрипторов</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Заголовок</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Путь</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Архитектура процесса</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Свойство</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Это корректно завершит работу приложения. Ожидается, что менеджер процессов перезапустит его.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Количество потоков</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Время работы</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Имя пользователя</value>

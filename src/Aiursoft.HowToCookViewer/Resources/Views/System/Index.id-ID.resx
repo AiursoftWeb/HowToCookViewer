@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Konfirmasi Restart Aplikasi</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Arsitektur CPU</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Inti CPU</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Dibuat</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Kontainer Docker</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Lingkungan</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>Memori GC</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Mode GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Jumlah Handle</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Header</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Jalur</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Arsitektur Proses</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Properti</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Ini akan mematikan aplikasi dengan lancar. Manajer proses diharapkan akan memulihkannya.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Jumlah Thread</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Waktu Aktif</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Nama Pengguna</value>

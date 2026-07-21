@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Uygulama Yeniden Başlatmayı Onayla</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>İşlemci Mimarisi</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>İşlemci Çekirdekleri</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Oluşturulma</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Docker Konteyneri</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Çevre</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC Bellek</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC Modu</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>İşlemci Sayısı</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Başlık</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Yol</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>İşlem Mimarisi</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Özellik</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Bu, uygulamayı sorunsuz bir şekilde kapatacaktır. Bir işlem yöneticisinin uygulamayı yeniden başlatması beklenir.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>İş Parçacığı Sayısı</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Çalışma Süresi</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Kullanıcı Adı</value>

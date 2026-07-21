@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Bekräfta omstart av applikation</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU-arkitektur</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU-kärnor</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Skapad</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Docker-container</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Miljö</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC-minne</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC-läge</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Antal handtag</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Rubrik</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Sökväg</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Processarkitektur</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Egenskap</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Detta kommer att stänga ner applikationen på ett smidigt sätt. En processhanterare förväntas starta om den.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Antal trådar</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Drifttid</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Användarnamn</value>

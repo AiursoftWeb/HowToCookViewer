@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>確認應用程式重新啟動</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU 架構</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU 核心數</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>建立時間</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Docker 容器</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>環境</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC 記憶體</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC 模式</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>句柄數</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>標頭</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>路徑</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>程序架構</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>屬性</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>這將會優雅地關閉應用程式。預期進程管理器會重新啟動它。</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>執行緒數</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>運行時間</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>使用者名稱</value>

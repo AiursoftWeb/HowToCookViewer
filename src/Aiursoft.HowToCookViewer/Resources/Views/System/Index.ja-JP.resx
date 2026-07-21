@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>アプリケーションの再起動を確認</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU アーキテクチャ</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU コア数</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>作成日</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Docker コンテナ</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>環境</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC メモリ</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC モード</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>ハンドル数</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>ヘッダー</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>パス</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>プロセス アーキテクチャ</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>プロパティ</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>アプリケーションは正常に終了します。プロセスマネージャーによる再起動が予期されます。</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>スレッド数</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>稼働時間</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>ユーザー名</value>
