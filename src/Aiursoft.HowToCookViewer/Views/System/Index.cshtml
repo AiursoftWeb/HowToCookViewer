@@ -6,6 +6,7 @@
 @inject IAuthorizationService AuthorizationService
 @{
     var process = Process.GetCurrentProcess();
+    var uptime = DateTime.UtcNow - process.StartTime.ToUniversalTime();
 }
 
 @* A standard page header provides a clear and consistent entry point. *@
@@ -78,6 +79,34 @@
                     <tr>
                         <td>@Localizer["Process Architecture"]</td>
                         <td>@System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Uptime"]</td>
+                        <td>@uptime.Days d @uptime.Hours h @uptime.Minutes m @uptime.Seconds s</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["CPU Cores"]</td>
+                        <td>@Environment.ProcessorCount</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["GC Mode"]</td>
+                        <td>@(System.Runtime.GCSettings.IsServerGC ? "Server" : "Workstation")</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Thread Count"]</td>
+                        <td>@process.Threads.Count</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Environment"]</td>
+                        <td>@(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "N/A")</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Handle Count"]</td>
+                        <td>@process.HandleCount</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["GC Memory"]</td>
+                        <td>@(GC.GetTotalMemory(false) / 1024 / 1024) MB</td>
                     </tr>
                 </table>
             </div>
