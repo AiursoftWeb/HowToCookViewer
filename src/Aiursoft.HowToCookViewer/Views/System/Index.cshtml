@@ -71,6 +71,14 @@
                         <td>@Localizer["Docker Container"]</td>
                         <td>@(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")</td>
                     </tr>
+                    <tr>
+                        <td>@Localizer["CPU Architecture"]</td>
+                        <td>@System.Runtime.InteropServices.RuntimeInformation.OSArchitecture</td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["Process Architecture"]</td>
+                        <td>@System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture</td>
+                    </tr>
                 </table>
             </div>
         </div>
