@@ -54,7 +54,7 @@
                     <tr>
                         <td>@Localizer["Start Time"]</td>
                         <td>
-                            <label class="text-monospace" data-utc-time="@process.StartTime.ToHtmlDateTime()"></label>
+                            <label class="text-monospace" data-utc-time="@process.StartTime.ToUniversalTime().ToHtmlDateTime()"></label>
                         </td>
                     </tr>
                     <tr>
