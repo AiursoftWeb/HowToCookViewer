@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>애플리케이션 재시작 확인</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU 아키텍처</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU 코어 수</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>생성일</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>도커 컨테이너</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>환경</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC 메모리</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC 모드</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>핸들 수</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>헤더</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>경로</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>프로세스 아키텍처</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>속성</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>이 작업은 애플리케이션을 정상적으로 종료합니다. 프로세스 관리자가 이를 재시작할 것으로 예상됩니다.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>스레드 수</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>稼동 시간</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>사용자 이름</value>

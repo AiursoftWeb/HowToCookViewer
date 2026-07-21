@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Confirm Application Restart</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU Architecture</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU Cores</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Created</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Docker Container</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Environment</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC Memory</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>GC Mode</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Handle Count</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Header</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Path</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Process Architecture</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Property</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>This will gracefully shut down the application. A process manager is expected to restart it.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Thread Count</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Uptime</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>User Name</value>

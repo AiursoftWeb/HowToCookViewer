@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Confirmar reinicio de la aplicación</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Arquitectura de CPU</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Núcleos de CPU</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Creado</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Contenedor de Docker</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Entorno</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>Memoria GC</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Modo de GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Nº de manejadores</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Encabezado</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Ruta</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Arquitectura del proceso</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Propiedad</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Esto apagará la aplicación de forma controlada. Se espera que un gestor de procesos la reinicie.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Número de subprocesos</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Tiempo de actividad</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Nombre de usuario</value>

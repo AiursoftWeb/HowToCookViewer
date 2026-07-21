@@ -45,6 +45,12 @@
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Xác nhận Khởi động lại Ứng dụng</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Kiến trúc CPU</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Nhân CPU</value>
+  </data>
   <data name="Created" xml:space="preserve">
     <value>Được tạo</value>
   </data>
@@ -62,6 +68,18 @@
   </data>
   <data name="Docker Container" xml:space="preserve">
     <value>Container Docker</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Môi trường</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>Bộ nhớ GC</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Chế độ GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Số lượng handle</value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Tiêu đề</value>
@@ -89,6 +107,9 @@
   </data>
   <data name="Path" xml:space="preserve">
     <value>Đường dẫn</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Kiến trúc quy trình</value>
   </data>
   <data name="Property" xml:space="preserve">
     <value>Thuộc tính</value>
@@ -146,6 +167,12 @@
   </data>
   <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
     <value>Thao tác này sẽ tắt ứng dụng một cách an toàn. Trình quản lý tiến trình dự kiến sẽ khởi động lại nó.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Số lượng luồng</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Thời gian hoạt động</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>Tên người dùng</value>
