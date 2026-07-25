@@ -31,4 +31,10 @@ public class LocalizedRecipe
 
     /// <summary>UTC timestamp of the last successful AI translation.</summary>
     public DateTime LastLocalizedAt { get; set; } = DateTime.UtcNow;
+
+    /// <summary>1024-dimension float32 embedding vector for this localized text, serialized as bytes.</summary>
+    public byte[]? Embedding { get; set; }
+
+    /// <summary>UTC timestamp of the last successful embedding generation.</summary>
+    public DateTime LastEmbeddedAt { get; set; } = DateTime.MinValue;
 }

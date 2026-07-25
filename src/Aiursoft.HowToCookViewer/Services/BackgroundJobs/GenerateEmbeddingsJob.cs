@@ -10,7 +10,9 @@ namespace Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 
 /// <summary>
 /// Generates embedding vectors for recipes using the configured Ollama embedding model.
-/// Processes recipes whose FileLastModified is newer than LastEmbeddedAt.
+/// Processes recipes whose content has changed (FileLastModified) since the
+/// last embedding was generated. Also processes localized recipe translations
+/// whose LastLocalizedAt is newer than LastEmbeddedAt.
 /// </summary>
 public class GenerateEmbeddingsJob(
     TemplateDbContext db,
@@ -67,7 +69,8 @@ public class GenerateEmbeddingsJob(
                 {
                     await retryEngine.RunWithRetry(async _ =>
                     {
-                        var embedding = await CallEmbedApiAsync(instance, model, token, recipe);
+                        var text = BuildRecipeText(recipe);
+                        var embedding = await CallEmbedApiAsync(instance, model, token, text, recipe.Name);
                         recipe.Embedding = Serialize(embedding);
                         recipe.LastEmbeddedAt = DateTime.UtcNow;
                         await db.SaveChangesAsync();
@@ -81,11 +84,60 @@ public class GenerateEmbeddingsJob(
 
             lastId = pendingRecipes.Max(r => r.Id);
         }
+
+        // Phase 2: Generate embeddings for localized recipe translations.
+        await GenerateLocalizedEmbeddingsAsync(instance, model, token);
     }
 
-    private async Task<float[]> CallEmbedApiAsync(string instance, string model, string token, Recipe recipe)
+    private async Task GenerateLocalizedEmbeddingsAsync(string instance, string model, string token)
     {
-        var text = BuildRecipeText(recipe);
+        var lastId = 0;
+        while (true)
+        {
+            var currentLastId = lastId;
+            var pending = await db.LocalizedRecipes
+                .Where(lr => lr.Id > currentLastId && lr.LastEmbeddedAt < lr.LastLocalizedAt)
+                .OrderBy(lr => lr.Id)
+                .Take(10)
+                .ToListAsync();
+
+            if (pending.Count == 0) break;
+
+            foreach (var loc in pending)
+            {
+                try
+                {
+                    var text = BuildLocalizedRecipeText(loc);
+                    if (string.IsNullOrWhiteSpace(text))
+                    {
+                        loc.LastEmbeddedAt = DateTime.UtcNow;
+                        await db.SaveChangesAsync();
+                        continue;
+                    }
+
+                    await retryEngine.RunWithRetry(async _ =>
+                    {
+                        var embedding = await CallEmbedApiAsync(instance, model, token, text,
+                            $"{loc.LocalizedName} ({loc.Culture})");
+                        loc.Embedding = Serialize(embedding);
+                        loc.LastEmbeddedAt = DateTime.UtcNow;
+                        await db.SaveChangesAsync();
+                    });
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex,
+                        "GenerateEmbeddingsJob: Failed to generate localized embedding for '{Name}' ({Culture}).",
+                        loc.LocalizedName, loc.Culture);
+                }
+            }
+
+            lastId = pending.Max(lr => lr.Id);
+        }
+    }
+
+    private async Task<float[]> CallEmbedApiAsync(string instance, string model, string token, string text, string logName)
+    {
         var http = httpClientFactory.CreateClient();
 
         var baseUri = new Uri(instance);
@@ -117,7 +169,7 @@ public class GenerateEmbeddingsJob(
                 var result = await response.Content.ReadFromJsonAsync<OllamaEmbedResponse>();
                 if (result?.Embeddings == null || result.Embeddings.Length == 0)
                 {
-                    throw new Exception($"Ollama returned no embeddings for recipe '{recipe.Name}'.");
+                    throw new Exception($"Ollama returned no embeddings for '{logName}'.");
                 }
 
                 var vector = result.Embeddings[0];
@@ -133,14 +185,14 @@ public class GenerateEmbeddingsJob(
             if (!isContextError || maxChars <= 500)
             {
                 throw new HttpRequestException(
-                    $"Ollama embedding request failed for '{recipe.Name}' (HTTP {(int)response.StatusCode}): {errorBody}");
+                    $"Ollama embedding request failed for '{logName}' (HTTP {(int)response.StatusCode}): {errorBody}");
             }
 
             var prev = maxChars;
             maxChars /= 2;
             logger.LogWarning(
                 "Embedding input for '{Name}' still too long at {Prev} chars, retrying with {Current} chars (binary fallback).",
-                recipe.Name, prev, maxChars);
+                logName, prev, maxChars);
         }
     }
 
@@ -185,6 +237,18 @@ public class GenerateEmbeddingsJob(
             sb.AppendLine(recipe.Description);
         if (!string.IsNullOrWhiteSpace(recipe.Ingredients))
             sb.AppendLine(recipe.Ingredients);
+        return sb.ToString();
+    }
+
+    private static string BuildLocalizedRecipeText(LocalizedRecipe loc)
+    {
+        var sb = new StringBuilder();
+        if (!string.IsNullOrWhiteSpace(loc.LocalizedName))
+            sb.AppendLine(loc.LocalizedName);
+        if (!string.IsNullOrWhiteSpace(loc.LocalizedDescription))
+            sb.AppendLine(loc.LocalizedDescription);
+        if (!string.IsNullOrWhiteSpace(loc.LocalizedIngredients))
+            sb.AppendLine(loc.LocalizedIngredients);
         return sb.ToString();
     }
 

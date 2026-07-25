@@ -481,6 +481,292 @@ public class RecipeVectorSearchTests
     }
 
     // ─────────────────────────────────────────────────────────────────────────
+    // Tests: multi-language embedding (Plan B)
+    // ─────────────────────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Seeds a recipe with a Chinese embedding and an English localized embedding.
+    /// The English embedding is close to the "noodle" query vector; the Chinese
+    /// embedding is far from it. This simulates real data where English queries
+    /// match English-localized text better than Chinese text.
+    /// </summary>
+    private async Task SeedMultiLanguageRecipeAsync()
+    {
+        // Chinese embedding — far from "noodle" query (orthogonal, dim 4-5).
+        var chineseVector = EncodeVector(v => { v[4] = 1.0f; v[5] = 1.0f; });
+
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "牛排",
+            Category = "meat_dish",
+            FilePath = "dishes/meat/steak.md",
+            Description = "一道经典的西式煎牛排",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = chineseVector,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+
+        // English localization embedding — close to "noodle" query (dim 0-1).
+        var englishVector = EncodeVector(v => { v[0] = 0.9f; v[1] = 0.9f; });
+
+        _db.LocalizedRecipes.Add(new LocalizedRecipe
+        {
+            RecipeId = 1,
+            Culture = "en-US",
+            LocalizedName = "Steak",
+            LocalizedDescription = "A classic Western-style pan-seared steak",
+            Embedding = englishVector,
+            LastEmbeddedAt = DateTime.UtcNow,
+            LastLocalizedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+        await _cache.LoadAsync(_db);
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingCache_LoadsChineseAndLocalizedEmbeddings()
+    {
+        await SeedMultiLanguageRecipeAsync();
+
+        var snapshot = _cache.Snapshot();
+        Assert.AreEqual(1, snapshot.Count, "Should have one recipe in cache.");
+        Assert.IsTrue(snapshot.ContainsKey(1));
+
+        var embeddings = snapshot[1];
+        Assert.AreEqual(2, embeddings.Count,
+            "Recipe should have 2 embeddings: Chinese + en-US localization.");
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingSearch_UsesBestLanguageMatch()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedMultiLanguageRecipeAsync();
+
+        // Query vector is close to English "Steak" embedding (dim 0-1).
+        var fakeHandler = new FakeOllamaEmbedHandler(v =>
+        {
+            v[0] = 1.0f;
+            v[1] = 1.0f; // near English locale
+        });
+
+        var service = CreateSearchService(fakeHandler);
+        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "steak", 1, 10);
+
+        Assert.IsTrue(usedAi);
+        Assert.AreEqual(1, results.Count);
+        Assert.AreEqual("牛排", results[0].Name);
+        // The English embedding (dim 0-1 close) should give a higher score
+        // than the Chinese embedding (dim 4-5 far). The max should win.
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingSearch_RecipeWithOnlyChinese_StillFindsMatch()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+
+        // Seed a recipe with ONLY a Chinese embedding, no localization.
+        var chineseVector = EncodeVector(v => { v[0] = 0.8f; v[1] = 0.8f; });
+
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "汤面",
+            Category = "noodle_dish",
+            FilePath = "dishes/noodle/soup_noodle.md",
+            Description = "汤面是一道自由搭配的家常主食",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = chineseVector,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+        await _cache.LoadAsync(_db);
+
+        // Query vector close to the Chinese embedding.
+        var fakeHandler = new FakeOllamaEmbedHandler(v =>
+        {
+            v[0] = 1.0f;
+            v[1] = 1.0f;
+        });
+
+        var service = CreateSearchService(fakeHandler);
+        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "noodle", 1, 10);
+
+        Assert.IsTrue(usedAi, "AI search should be used.");
+        Assert.AreEqual(1, results.Count);
+        Assert.AreEqual("汤面", results[0].Name,
+            "Recipe with only Chinese embedding should still be found via cross-lingual match.");
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingGetSimilar_ReturnsBestMatches()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+
+        // Recipe 1: Chinese close to dim 0-1.
+        var vec1 = EncodeVector(v => { v[0] = 1.0f; });
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "牛肉面",
+            Category = "noodle_dish",
+            FilePath = "dishes/noodle/beef_noodle.md",
+            Description = "牛肉面",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = vec1,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        // Recipe 2: Chinese far, but English close to dim 0-1.
+        var vec2Chinese = EncodeVector(v => { v[9] = 1.0f; });
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "牛排",
+            Category = "meat_dish",
+            FilePath = "dishes/meat/steak.md",
+            Description = "牛排",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = vec2Chinese,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+
+        // Add English localization for recipe 2, close to dim 0-1.
+        var vec2English = EncodeVector(v => { v[0] = 0.9f; });
+        _db.LocalizedRecipes.Add(new LocalizedRecipe
+        {
+            RecipeId = 2,
+            Culture = "en-US",
+            LocalizedName = "Steak",
+            Embedding = vec2English,
+            LastEmbeddedAt = DateTime.UtcNow,
+            LastLocalizedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+        await _cache.LoadAsync(_db);
+
+        var service = CreateSearchService();
+
+        // Get similar recipes for recipe 2 (牛排).
+        var similar = await service.GetSimilarRecipesAsync(_db.Recipes.AsNoTracking(), 2, take: 5);
+
+        Assert.IsTrue(similar.Count > 0, "Should find at least one similar recipe.");
+        Assert.AreEqual("牛肉面", similar[0].Name,
+            "Steak's English embedding should match beef noodle's Chinese embedding.");
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingSearch_ChineseQuery_StillWorks()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+
+        // Recipe: Chinese embedding close to query.
+        var chineseVector = EncodeVector(v => { v[0] = 0.9f; v[1] = 0.9f; });
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "汤面",
+            Category = "noodle_dish",
+            FilePath = "dishes/noodle/soup_noodle.md",
+            Description = "面条软滑",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = chineseVector,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        // English translation — far from the Chinese-query vector.
+        var englishVector = EncodeVector(v => { v[1] = 1.0f; v[9] = 1.0f; });
+        _db.LocalizedRecipes.Add(new LocalizedRecipe
+        {
+            RecipeId = 1,
+            Culture = "en-US",
+            LocalizedName = "Noodle Soup",
+            Embedding = englishVector,
+            LastEmbeddedAt = DateTime.UtcNow,
+            LastLocalizedAt = DateTime.UtcNow
+        });
+
+        // Non-noodle recipe — Chinese embedding far.
+        var otherVector = EncodeVector(v => { v[9] = 1.0f; });
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "牛排",
+            Category = "meat_dish",
+            FilePath = "dishes/meat/steak.md",
+            Description = "牛排",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = otherVector,
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+
+        await _db.SaveChangesAsync();
+        await _cache.LoadAsync(_db);
+
+        // Query vector close to dim 0 — matches Chinese "汤面" embedding.
+        var fakeHandler = new FakeOllamaEmbedHandler(v =>
+        {
+            v[0] = 1.0f;
+            // NOT dim 1 (English), NOT dim 9 (other)
+        });
+
+        var service = CreateSearchService(fakeHandler);
+        var (usedAi, results, _) = await service.SearchAsync(_db.Recipes.AsNoTracking(), "面条", 1, 10);
+
+        Assert.IsTrue(usedAi);
+        Assert.IsTrue(results.Count > 0);
+        // Chinese "汤面" should outrank "牛排" even though the English locale embedding
+        // has a different orientation — the Chinese embedding should win for Chinese queries.
+        var noodleSoupIndex = results.FindIndex(r => r.Name == "汤面");
+        var steakIndex = results.FindIndex(r => r.Name == "牛排");
+        Assert.IsTrue(noodleSoupIndex >= 0, "汤面 should be in results.");
+        Assert.IsTrue(noodleSoupIndex < steakIndex || steakIndex < 0,
+            "汤面 (noodle soup) should rank above 牛排 (steak) for query '面条'.");
+    }
+
+    [TestMethod]
+    public async Task MultiEmbeddingCache_LoadsOnlyValidVectors()
+    {
+        // Recipe with malformed embedding byte length (not multiple of 4).
+        _db.Recipes.Add(new Recipe
+        {
+            Name = "坏数据",
+            Category = "test",
+            FilePath = "test/bad.md",
+            Description = "bad",
+            FileLastModified = DateTime.UtcNow,
+            Embedding = [1, 2, 3], // 3 bytes — not divisible by 4
+            LastEmbeddedAt = DateTime.UtcNow
+        });
+        await _db.SaveChangesAsync();
+
+        // Localized recipe with valid embedding.
+        var validVector = EncodeVector(v => { v[0] = 1.0f; });
+        _db.LocalizedRecipes.Add(new LocalizedRecipe
+        {
+            RecipeId = 1,
+            Culture = "en-US",
+            LocalizedName = "Test",
+            Embedding = validVector,
+            LastEmbeddedAt = DateTime.UtcNow,
+            LastLocalizedAt = DateTime.UtcNow
+        });
+        await _db.SaveChangesAsync();
+
+        await _cache.LoadAsync(_db);
+
+        var snapshot = _cache.Snapshot();
+        // The malformed Chinese embedding should be skipped, but the valid
+        // English localization should still load.
+        Assert.IsTrue(snapshot.ContainsKey(1),
+            "Recipe with valid localization embedding should be in cache.");
+        Assert.AreEqual(1, snapshot[1].Count,
+            "Only the valid localization embedding should load; malformed recipe embedding skipped.");
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
     // Test HTTP message handlers
     // ─────────────────────────────────────────────────────────────────────────
 

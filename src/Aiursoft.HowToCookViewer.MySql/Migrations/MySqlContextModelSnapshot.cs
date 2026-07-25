@@ -17,7 +17,7 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.8")
+                .HasAnnotation("ProductVersion", "10.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
@@ -79,6 +79,12 @@ namespace Aiursoft.HowToCookViewer.MySql.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
+
+                    b.Property<byte[]>("Embedding")
+                        .HasColumnType("longblob");
+
+                    b.Property<DateTime>("LastEmbeddedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("LastLocalizedAt")
                         .HasColumnType("datetime(6)");

@@ -63,9 +63,12 @@ public class RecipeVectorSearchService(
             return (false, [], 0);
         }
 
-        // Compute cosine similarity for all cached recipes, rank, and paginate.
+        // Compute cosine similarity for all cached recipes.
+        // Each recipe has multiple embeddings (Chinese + localizations).
+        // Take the best-matching language so that, e.g., an English query
+        // naturally matches against the English localization embedding.
         var scored = snapshot
-            .Select(kv => (RecipeId: kv.Key, Score: EmbeddingHelper.CosineSimilarity(queryVector, kv.Value)))
+            .Select(kv => (RecipeId: kv.Key, Score: kv.Value.Max(e => EmbeddingHelper.CosineSimilarity(queryVector, e))))
             .Where(x => x.Score > 0)
             .OrderByDescending(x => x.Score)
             .ToList();
@@ -105,14 +108,17 @@ public class RecipeVectorSearchService(
         CancellationToken ct = default)
     {
         var snapshot = cache.Snapshot();
-        if (!snapshot.TryGetValue(recipeId, out var targetVector))
+        if (!snapshot.TryGetValue(recipeId, out var targetVectors) || targetVectors.Count == 0)
         {
             return [];
         }
 
+        // Use the Chinese embedding (first in the list) as the reference for similarity.
+        var targetVector = targetVectors[0];
+
         var topIds = snapshot
             .Where(kv => kv.Key != recipeId)
-            .Select(kv => (RecipeId: kv.Key, Score: EmbeddingHelper.CosineSimilarity(targetVector, kv.Value)))
+            .Select(kv => (RecipeId: kv.Key, Score: kv.Value.Max(e => EmbeddingHelper.CosineSimilarity(targetVector, e))))
             .OrderByDescending(x => x.Score)
             .Take(take)
             .Select(x => x.RecipeId)
