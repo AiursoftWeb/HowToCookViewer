@@ -5,12 +5,10 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
-    "@aiursoft/uistack": "^1.0.12",
     "dropify": "^0.2.2",
     "mermaid": "^11.16.0"
   },
   "keep": {
-    "@aiursoft/uistack": "dist",
     "dropify": "dist",
     "mermaid": "dist"
   },
