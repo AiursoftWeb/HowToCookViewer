@@ -21,12 +21,33 @@ public class GenerateEmbeddingsJob(
     RetryEngine retryEngine,
     ILogger<GenerateEmbeddingsJob> logger) : IBackgroundJob
 {
+    internal const int MaxDocumentsPerRun = 50;
+    private static readonly SemaphoreSlim RunLock = new(1, 1);
+
     public string Name => "Generate Recipe Embeddings";
 
     public string Description =>
         "Generates 1024-dimension embedding vectors for recipes using the configured Ollama embedding model.";
 
     public async Task ExecuteAsync()
+    {
+        if (!await RunLock.WaitAsync(0))
+        {
+            logger.LogInformation("GenerateEmbeddingsJob: previous run is still active. Skipping.");
+            return;
+        }
+
+        try
+        {
+            await ExecuteCoreAsync();
+        }
+        finally
+        {
+            RunLock.Release();
+        }
+    }
+
+    private async Task ExecuteCoreAsync()
     {
         if (!await settingsService.IsAiSearchEnabledAsync())
         {
@@ -51,30 +72,54 @@ public class GenerateEmbeddingsJob(
         var instance = await GetEmbeddingInstanceAsync();
         var token = await GetEmbeddingTokenAsync();
 
+        var attempted = 0;
+        var succeeded = 0;
+
+        // Phase 1: Generate embeddings for Chinese recipes.
         var lastId = 0;
         while (true)
         {
+            if (attempted >= MaxDocumentsPerRun)
+            {
+                logger.LogInformation(
+                    "GenerateEmbeddingsJob: attempted {Count} documents, stopping until next run.",
+                    attempted);
+                break;
+            }
+
             var currentLastId = lastId;
+            var take = Math.Min(10, MaxDocumentsPerRun - attempted);
             var pendingRecipes = await db.Recipes
                 .Where(r => r.Id > currentLastId && r.LastEmbeddedAt < r.FileLastModified)
                 .OrderBy(r => r.Id)
-                .Take(10)
+                .Take(take)
                 .ToListAsync();
 
             if (pendingRecipes.Count == 0) break;
 
             foreach (var recipe in pendingRecipes)
             {
+                attempted++;
                 try
                 {
-                    await retryEngine.RunWithRetry(async _ =>
+                    var sourceFileLastModified = recipe.FileLastModified;
+                    var embedding = await retryEngine.RunWithRetry(async _ =>
                     {
                         var text = BuildRecipeText(recipe);
-                        var embedding = await CallEmbedApiAsync(instance, model, token, text, recipe.Name);
-                        recipe.Embedding = Serialize(embedding);
-                        recipe.LastEmbeddedAt = DateTime.UtcNow;
-                        await db.SaveChangesAsync();
+                        return await CallEmbedApiAsync(instance, model, token, text, recipe.Name);
                     });
+
+                    var serialized = Serialize(embedding);
+                    if (await TrySaveEmbeddingIfRecipeUnchangedAsync(db, recipe, sourceFileLastModified, serialized))
+                    {
+                        succeeded++;
+                    }
+                    else
+                    {
+                        logger.LogInformation(
+                            "GenerateEmbeddingsJob: recipe '{Name}' (id={Id}) changed while embedding was running. Skipping stale result.",
+                            recipe.Name, recipe.Id);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -86,43 +131,61 @@ public class GenerateEmbeddingsJob(
         }
 
         // Phase 2: Generate embeddings for localized recipe translations.
-        await GenerateLocalizedEmbeddingsAsync(instance, model, token);
-    }
-
-    private async Task GenerateLocalizedEmbeddingsAsync(string instance, string model, string token)
-    {
-        var lastId = 0;
+        lastId = 0;
         while (true)
         {
+            if (attempted >= MaxDocumentsPerRun)
+            {
+                logger.LogInformation(
+                    "GenerateEmbeddingsJob: attempted {Count} documents, stopping until next run.",
+                    attempted);
+                break;
+            }
+
             var currentLastId = lastId;
+            var take = Math.Min(10, MaxDocumentsPerRun - attempted);
             var pending = await db.LocalizedRecipes
                 .Where(lr => lr.Id > currentLastId && lr.LastEmbeddedAt < lr.LastLocalizedAt)
                 .OrderBy(lr => lr.Id)
-                .Take(10)
+                .Take(take)
                 .ToListAsync();
 
             if (pending.Count == 0) break;
 
             foreach (var loc in pending)
             {
+                attempted++;
                 try
                 {
+                    var sourceLastLocalizedAt = loc.LastLocalizedAt;
                     var text = BuildLocalizedRecipeText(loc);
                     if (string.IsNullOrWhiteSpace(text))
                     {
-                        loc.LastEmbeddedAt = DateTime.UtcNow;
-                        await db.SaveChangesAsync();
+                        if (await TrySaveEmbeddingIfLocalizedRecipeUnchangedAsync(db, loc, sourceLastLocalizedAt, null))
+                        {
+                            succeeded++;
+                        }
+
                         continue;
                     }
 
-                    await retryEngine.RunWithRetry(async _ =>
+                    var embedding = await retryEngine.RunWithRetry(async _ =>
                     {
-                        var embedding = await CallEmbedApiAsync(instance, model, token, text,
+                        return await CallEmbedApiAsync(instance, model, token, text,
                             $"{loc.LocalizedName} ({loc.Culture})");
-                        loc.Embedding = Serialize(embedding);
-                        loc.LastEmbeddedAt = DateTime.UtcNow;
-                        await db.SaveChangesAsync();
                     });
+
+                    var serialized = Serialize(embedding);
+                    if (await TrySaveEmbeddingIfLocalizedRecipeUnchangedAsync(db, loc, sourceLastLocalizedAt, serialized))
+                    {
+                        succeeded++;
+                    }
+                    else
+                    {
+                        logger.LogInformation(
+                            "GenerateEmbeddingsJob: localized recipe '{Name}' ({Culture}) changed while embedding was running. Skipping stale result.",
+                            loc.LocalizedName, loc.Culture);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -134,9 +197,13 @@ public class GenerateEmbeddingsJob(
 
             lastId = pending.Max(lr => lr.Id);
         }
+
+        logger.LogInformation(
+            "GenerateEmbeddingsJob: done. {Succeeded}/{Attempted} documents processed.",
+            succeeded, attempted);
     }
 
-    private async Task<float[]> CallEmbedApiAsync(string instance, string model, string token, string text, string logName)
+    internal async Task<float[]> CallEmbedApiAsync(string instance, string model, string token, string text, string logName)
     {
         var http = httpClientFactory.CreateClient();
 
@@ -270,6 +337,62 @@ public class GenerateEmbeddingsJob(
         var bytes = new byte[vector.Length * 4];
         Buffer.BlockCopy(vector, 0, bytes, 0, bytes.Length);
         return bytes;
+    }
+
+    internal static async Task<bool> TrySaveEmbeddingIfRecipeUnchangedAsync(
+        TemplateDbContext db,
+        Recipe recipe,
+        DateTime sourceFileLastModified,
+        byte[]? embedding)
+    {
+        if (db.Database.IsRelational())
+        {
+            var updated = await db.Recipes
+                .Where(r => r.Id == recipe.Id && r.FileLastModified == sourceFileLastModified)
+                .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(r => r.Embedding, embedding)
+                    .SetProperty(r => r.LastEmbeddedAt, sourceFileLastModified));
+            return updated == 1;
+        }
+
+        await db.Entry(recipe).ReloadAsync();
+        if (db.Entry(recipe).State == EntityState.Detached || recipe.FileLastModified != sourceFileLastModified)
+        {
+            return false;
+        }
+
+        recipe.Embedding = embedding;
+        recipe.LastEmbeddedAt = sourceFileLastModified;
+        await db.SaveChangesAsync();
+        return true;
+    }
+
+    internal static async Task<bool> TrySaveEmbeddingIfLocalizedRecipeUnchangedAsync(
+        TemplateDbContext db,
+        LocalizedRecipe loc,
+        DateTime sourceLastLocalizedAt,
+        byte[]? embedding)
+    {
+        if (db.Database.IsRelational())
+        {
+            var updated = await db.LocalizedRecipes
+                .Where(lr => lr.Id == loc.Id && lr.LastLocalizedAt == sourceLastLocalizedAt)
+                .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(lr => lr.Embedding, embedding)
+                    .SetProperty(lr => lr.LastEmbeddedAt, sourceLastLocalizedAt));
+            return updated == 1;
+        }
+
+        await db.Entry(loc).ReloadAsync();
+        if (db.Entry(loc).State == EntityState.Detached || loc.LastLocalizedAt != sourceLastLocalizedAt)
+        {
+            return false;
+        }
+
+        loc.Embedding = embedding;
+        loc.LastEmbeddedAt = sourceLastLocalizedAt;
+        await db.SaveChangesAsync();
+        return true;
     }
 
     private class OllamaEmbedResponse
