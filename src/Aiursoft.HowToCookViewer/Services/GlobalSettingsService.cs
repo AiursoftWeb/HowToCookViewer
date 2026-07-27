@@ -83,6 +83,29 @@ public class GlobalSettingsService(
         return !string.IsNullOrWhiteSpace(instance);
     }
 
+    public async Task<string> GetEmbeddingEndpointAsync()
+    {
+        var dedicated = await GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated.TrimEnd('/');
+
+        var openAi = await GetSettingValueAsync(SettingsMap.OpenAiInstance);
+        if (!string.IsNullOrWhiteSpace(openAi))
+        {
+            var uri = new Uri(openAi);
+            return $"{uri.Scheme}://{uri.Authority}";
+        }
+
+        return string.Empty;
+    }
+
+    public async Task<string> GetEmbeddingTokenAsync()
+    {
+        var dedicated = await GetSettingValueAsync(SettingsMap.EmbeddingApiToken);
+        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
+
+        return await GetSettingValueAsync(SettingsMap.OpenAiApiToken);
+    }
+
     public async Task UpdateSettingAsync(string key, string value)
     {
         if (IsOverriddenByConfig(key))

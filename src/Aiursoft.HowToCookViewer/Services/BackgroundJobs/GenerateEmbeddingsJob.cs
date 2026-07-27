@@ -70,8 +70,8 @@ public class GenerateEmbeddingsJob(
             return;
         }
 
-        var instance = await GetEmbeddingInstanceAsync();
-        var token = await GetEmbeddingTokenAsync();
+        var instance = await settingsService.GetEmbeddingEndpointAsync();
+        var token = await settingsService.GetEmbeddingTokenAsync();
 
         var attempted = 0;
         var succeeded = 0;
@@ -262,22 +262,6 @@ public class GenerateEmbeddingsJob(
                 "Embedding input for '{Name}' still too long at {Prev} chars, retrying with {Current} chars (binary fallback).",
                 logName, prev, maxChars);
         }
-    }
-
-    private async Task<string> GetEmbeddingInstanceAsync()
-    {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
-        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
-
-        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiInstance);
-    }
-
-    private async Task<string> GetEmbeddingTokenAsync()
-    {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingApiToken);
-        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
-
-        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
     }
 
     /// <summary>

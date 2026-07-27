@@ -215,29 +215,13 @@ public class RecipeVectorSearchService(
         var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
         if (!useAi) return false;
 
-        var instance = await GetEmbeddingInstanceAsync();
+        var instance = await settingsService.GetEmbeddingEndpointAsync();
         if (string.IsNullOrWhiteSpace(instance)) return false;
 
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
         if (string.IsNullOrWhiteSpace(model)) return false;
 
         return true;
-    }
-
-    private async Task<string> GetEmbeddingInstanceAsync()
-    {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingOllamaInstance);
-        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
-
-        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiInstance);
-    }
-
-    private async Task<string> GetEmbeddingTokenAsync()
-    {
-        var dedicated = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingApiToken);
-        if (!string.IsNullOrWhiteSpace(dedicated)) return dedicated;
-
-        return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
     }
 
     private async Task<float[]?> EmbedQueryAsync(string text, int expectedDimension, CancellationToken ct)
@@ -273,9 +257,9 @@ public class RecipeVectorSearchService(
         }
 
         // Compute embedding via Ollama.
-        var instance = await GetEmbeddingInstanceAsync();
+        var instance = await settingsService.GetEmbeddingEndpointAsync();
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
-        var token = await GetEmbeddingTokenAsync();
+        var token = await settingsService.GetEmbeddingTokenAsync();
 
         // Truncate query text to fit bge-m3's 8192-token context window.
         // Queries are typically short, but a user might paste a very long document.
