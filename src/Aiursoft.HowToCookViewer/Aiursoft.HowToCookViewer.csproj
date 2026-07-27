@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.ClickhouseLoggerProvider" Version="10.0.23" />
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="10.0.22" />
-    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.55" />
+    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.56" />
     <PackageReference Include="Aiursoft.GitRunner" Version="10.0.27" />
     <PackageReference Include="Aiursoft.Scanner" Version="10.0.10" />
     <PackageReference Include="Aiursoft.UiStack" Version="10.0.23" />
