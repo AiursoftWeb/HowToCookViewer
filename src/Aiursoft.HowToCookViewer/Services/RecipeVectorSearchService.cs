@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Text;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
@@ -51,7 +52,8 @@ public class RecipeVectorSearchService(
         float[]? queryVector;
         try
         {
-            queryVector = await EmbedQueryAsync(query, ct);
+            var expectedDimension = snapshot.Values.First().First().Length;
+            queryVector = await EmbedQueryAsync(query, expectedDimension, ct);
         }
         catch (Exception)
         {
@@ -67,9 +69,41 @@ public class RecipeVectorSearchService(
         // Each recipe has multiple embeddings (Chinese + localizations).
         // Take the best-matching language so that, e.g., an English query
         // naturally matches against the English localization embedding.
-        var scored = snapshot
-            .Select(kv => (RecipeId: kv.Key, Score: kv.Value.Max(e => EmbeddingHelper.CosineSimilarity(queryVector, e))))
-            .Where(x => x.Score > 0)
+        var scored = new List<(int RecipeId, float Score)>();
+        var skippedDimensionMismatch = 0;
+        foreach (var kv in snapshot)
+        {
+            float maxScore = float.MinValue;
+            bool anyValid = false;
+            foreach (var e in kv.Value)
+            {
+                if (e.Length != queryVector.Length)
+                {
+                    skippedDimensionMismatch++;
+                    continue;
+                }
+                anyValid = true;
+                var score = EmbeddingHelper.CosineSimilarity(queryVector, e);
+                if (score > maxScore)
+                {
+                    maxScore = score;
+                }
+            }
+            if (anyValid && maxScore > 0)
+            {
+                scored.Add((kv.Key, maxScore));
+            }
+        }
+
+        if (scored.Count == 0 && skippedDimensionMismatch > 0)
+        {
+            logger.LogWarning(
+                "Vector search skipped {Count} recipe embeddings because their dimensions did not match the query vector.",
+                skippedDimensionMismatch);
+            return (false, [], 0);
+        }
+
+        scored = scored
             .OrderByDescending(x => x.Score)
             .ToList();
 
@@ -116,9 +150,30 @@ public class RecipeVectorSearchService(
         // Use the Chinese embedding (first in the list) as the reference for similarity.
         var targetVector = targetVectors[0];
 
-        var topIds = snapshot
-            .Where(kv => kv.Key != recipeId)
-            .Select(kv => (RecipeId: kv.Key, Score: kv.Value.Max(e => EmbeddingHelper.CosineSimilarity(targetVector, e))))
+        var scored = new List<(int RecipeId, float Score)>();
+        foreach (var kv in snapshot)
+        {
+            if (kv.Key == recipeId)
+                continue;
+
+            float maxScore = float.MinValue;
+            bool anyValid = false;
+            foreach (var e in kv.Value)
+            {
+                if (e.Length != targetVector.Length)
+                    continue;
+                anyValid = true;
+                var score = EmbeddingHelper.CosineSimilarity(targetVector, e);
+                if (score > maxScore)
+                    maxScore = score;
+            }
+            if (anyValid && maxScore > 0)
+            {
+                scored.Add((kv.Key, maxScore));
+            }
+        }
+
+        var topIds = scored
             .OrderByDescending(x => x.Score)
             .Take(take)
             .Select(x => x.RecipeId)
@@ -140,6 +195,19 @@ public class RecipeVectorSearchService(
             .Where(r => r != null)
             .Cast<Recipe>()
             .ToList();
+    }
+
+    private static string ComputeQueryCacheKey(string text)
+    {
+        var hash = SHA256.HashData(Encoding.UTF8.GetBytes(text));
+        var sb = new StringBuilder(40);
+        foreach (var b in hash)
+        {
+            sb.Append(b.ToString("x2"));
+            if (sb.Length >= 40) break;
+        }
+
+        return sb.ToString();
     }
 
     private async Task<bool> ShouldAttemptVectorSearch()
@@ -172,10 +240,13 @@ public class RecipeVectorSearchService(
         return await settingsService.GetSettingValueAsync(SettingsMap.OpenAiApiToken);
     }
 
-    private async Task<float[]?> EmbedQueryAsync(string text, CancellationToken ct)
+    private async Task<float[]?> EmbedQueryAsync(string text, int expectedDimension, CancellationToken ct)
     {
-        // Truncate to column max length for the cache key (the full text is still sent to Ollama).
-        var cacheKey = text.Length > 40 ? text[..40] : text;
+        // Hash the full query text for the cache key. The QueryText column is capped at 40 chars with a
+        // unique index, so we keep the first 40 hex chars of the SHA-256 digest. Hashing the full text
+        // (instead of truncating the raw text) avoids collisions between queries that share a long common
+        // prefix but differ later — those used to return each other's cached embedding.
+        var cacheKey = ComputeQueryCacheKey(text);
 
         // Check database cache first.
         var cached = await db.SearchEmbeddings
@@ -184,7 +255,7 @@ public class RecipeVectorSearchService(
         if (cached != null)
         {
             var vector = EmbeddingHelper.Deserialize(cached.Embedding);
-            if (vector != null)
+            if (vector != null && vector.Length == expectedDimension)
             {
                 // Throttled LRU bump: only touch the timestamp every AccessThrottle.
                 var now = DateTime.UtcNow;
@@ -196,6 +267,9 @@ public class RecipeVectorSearchService(
 
                 return vector;
             }
+
+            db.SearchEmbeddings.Remove(cached);
+            await db.SaveChangesAsync(ct);
         }
 
         // Compute embedding via Ollama.
