@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Aiursoft.HowToCookViewer.Entities;
+using Aiursoft.HowToCookViewer.Util;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.HowToCookViewer.Services;
@@ -15,7 +16,7 @@ namespace Aiursoft.HowToCookViewer.Services;
 public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
 {
     private Dictionary<int, List<float[]>> _cache = [];
-    private readonly object _lock = new();
+    private readonly Lock _lock = new();
 
     public int Count
     {
@@ -49,7 +50,7 @@ public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
 
         foreach (var item in chineseEmbeddings)
         {
-            var vector = Deserialize(item.Embedding!);
+            var vector = EmbeddingHelper.Deserialize(item.Embedding!);
             if (vector != null)
             {
                 if (!newCache.TryGetValue(item.Id, out var list))
@@ -76,7 +77,7 @@ public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
 
         foreach (var item in localizedEmbeddings)
         {
-            var vector = Deserialize(item.Embedding!);
+            var vector = EmbeddingHelper.Deserialize(item.Embedding!);
             if (vector != null)
             {
                 if (!newCache.TryGetValue(item.RecipeId, out var list))
@@ -92,13 +93,5 @@ public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
         {
             _cache = newCache;
         }
-    }
-
-    private static float[]? Deserialize(byte[] bytes)
-    {
-        if (bytes.Length % 4 != 0) return null;
-        var floats = new float[bytes.Length / 4];
-        Buffer.BlockCopy(bytes, 0, floats, 0, bytes.Length);
-        return floats;
     }
 }
