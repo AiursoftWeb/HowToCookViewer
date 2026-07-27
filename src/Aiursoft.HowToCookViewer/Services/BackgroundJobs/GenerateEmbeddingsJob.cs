@@ -3,6 +3,7 @@ using Aiursoft.Canon;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
+using Aiursoft.HowToCookViewer.Util;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -109,7 +110,7 @@ public class GenerateEmbeddingsJob(
                         return await CallEmbedApiAsync(instance, model, token, text, recipe.Name);
                     });
 
-                    var serialized = Serialize(embedding);
+                    var serialized = EmbeddingHelper.Serialize(embedding);
                     if (await TrySaveEmbeddingIfRecipeUnchangedAsync(db, recipe, sourceFileLastModified, serialized))
                     {
                         succeeded++;
@@ -175,7 +176,7 @@ public class GenerateEmbeddingsJob(
                             $"{loc.LocalizedName} ({loc.Culture})");
                     });
 
-                    var serialized = Serialize(embedding);
+                    var serialized = EmbeddingHelper.Serialize(embedding);
                     if (await TrySaveEmbeddingIfLocalizedRecipeUnchangedAsync(db, loc, sourceLastLocalizedAt, serialized))
                     {
                         succeeded++;
@@ -240,7 +241,7 @@ public class GenerateEmbeddingsJob(
                 }
 
                 var vector = result.Embeddings[0];
-                Normalize(vector);
+                EmbeddingHelper.Normalize(vector);
                 return vector;
             }
 
@@ -317,26 +318,6 @@ public class GenerateEmbeddingsJob(
         if (!string.IsNullOrWhiteSpace(loc.LocalizedIngredients))
             sb.AppendLine(loc.LocalizedIngredients);
         return sb.ToString();
-    }
-
-    private static void Normalize(float[] vector)
-    {
-        var sumSq = 0f;
-        for (var i = 0; i < vector.Length; i++)
-            sumSq += vector[i] * vector[i];
-        var norm = MathF.Sqrt(sumSq);
-        if (norm > 0)
-        {
-            for (var i = 0; i < vector.Length; i++)
-                vector[i] /= norm;
-        }
-    }
-
-    private static byte[] Serialize(float[] vector)
-    {
-        var bytes = new byte[vector.Length * 4];
-        Buffer.BlockCopy(vector, 0, bytes, 0, bytes.Length);
-        return bytes;
     }
 
     internal static async Task<bool> TrySaveEmbeddingIfRecipeUnchangedAsync(
