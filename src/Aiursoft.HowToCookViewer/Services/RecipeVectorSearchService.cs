@@ -147,29 +147,28 @@ public class RecipeVectorSearchService(
             return [];
         }
 
-        // Use the Chinese embedding (first in the list) as the reference for similarity.
-        var targetVector = targetVectors[0];
-
+        // Compare all target embeddings (Chinese + localizations) against all candidate embeddings.
         var scored = new List<(int RecipeId, float Score)>();
         foreach (var kv in snapshot)
         {
             if (kv.Key == recipeId)
                 continue;
 
-            float maxScore = float.MinValue;
-            bool anyValid = false;
-            foreach (var e in kv.Value)
+            float bestScore = float.MinValue;
+            foreach (var targetVec in targetVectors)
             {
-                if (e.Length != targetVector.Length)
-                    continue;
-                anyValid = true;
-                var score = EmbeddingHelper.CosineSimilarity(targetVector, e);
-                if (score > maxScore)
-                    maxScore = score;
+                foreach (var candidateVec in kv.Value)
+                {
+                    if (candidateVec.Length != targetVec.Length)
+                        continue;
+                    var score = EmbeddingHelper.CosineSimilarity(targetVec, candidateVec);
+                    if (score > bestScore)
+                        bestScore = score;
+                }
             }
-            if (anyValid && maxScore > 0)
+            if (bestScore > 0)
             {
-                scored.Add((kv.Key, maxScore));
+                scored.Add((kv.Key, bestScore));
             }
         }
 
