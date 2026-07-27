@@ -1,4 +1,5 @@
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
@@ -148,6 +149,18 @@ public class RecipeVectorSearchTests
         }
     }
 
+    private static string HashKey(string text)
+    {
+        var hash = SHA256.HashData(Encoding.UTF8.GetBytes(text));
+        var sb = new StringBuilder(40);
+        foreach (var b in hash)
+        {
+            sb.Append(b.ToString("x2"));
+            if (sb.Length >= 40) break;
+        }
+        return sb.ToString();
+    }
+
     private RecipeVectorSearchService CreateSearchService(HttpMessageHandler? handler = null)
     {
         var settings = CreateSettingsService();
@@ -278,7 +291,7 @@ public class RecipeVectorSearchTests
 
         // Verify the embedding was cached in the database.
         var cachedEntry = await _db.SearchEmbeddings
-            .FirstOrDefaultAsync(e => e.QueryText == "牛肉面");
+            .FirstOrDefaultAsync(e => e.QueryText == HashKey("牛肉面"));
         Assert.IsNotNull(cachedEntry, "Search embedding should be persisted to SearchEmbeddings table.");
         Assert.IsTrue(cachedEntry.Embedding.Length == VectorDimension * 4,
             "Cached embedding should be 1024 floats = 4096 bytes.");
@@ -416,7 +429,7 @@ public class RecipeVectorSearchTests
         // LastAccessedAt should have been bumped to near-now.
         var cached = await _db.SearchEmbeddings
             .AsNoTracking()
-            .FirstAsync(e => e.QueryText == "旧查询");
+            .FirstAsync(e => e.QueryText == HashKey("旧查询"));
         Assert.IsTrue(cached.LastAccessedAt > oldDate.AddHours(1),
             "LastAccessedAt should be updated when past the access throttle window.");
     }
@@ -452,7 +465,7 @@ public class RecipeVectorSearchTests
         // LastAccessedAt should NOT have been updated — still within the throttle window.
         var cached = await _db.SearchEmbeddings
             .AsNoTracking()
-            .FirstAsync(e => e.QueryText == "刚缓存");
+            .FirstAsync(e => e.QueryText == HashKey("刚缓存"));
         Assert.AreEqual(justNow, cached.LastAccessedAt,
             "LastAccessedAt should NOT be updated when still within the access throttle window.");
     }
@@ -476,7 +489,7 @@ public class RecipeVectorSearchTests
         Assert.AreEqual(2, count, "Cache should be trimmed to exactly the configured limit of 2.");
 
         // The first query (least recently accessed) should be evicted.
-        var existsA = await _db.SearchEmbeddings.AnyAsync(e => e.QueryText == "查询A");
+        var existsA = await _db.SearchEmbeddings.AnyAsync(e => e.QueryText == HashKey("查询A"));
         Assert.IsFalse(existsA, "Least-recently-accessed query should be evicted when limit exceeded.");
     }
 
