@@ -38,7 +38,7 @@ public class RecipeVectorSearchService(
         CancellationToken ct = default)
     {
         // Check all three preconditions for AI vector search.
-        if (!await ShouldAttemptVectorSearch())
+        if (!await ShouldAttemptVectorSearchAsync())
         {
             return (false, [], 0);
         }
@@ -210,18 +210,16 @@ public class RecipeVectorSearchService(
         return sb.ToString();
     }
 
-    private async Task<bool> ShouldAttemptVectorSearch()
+    private async Task<bool> ShouldAttemptVectorSearchAsync()
     {
-        var useAi = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
-        if (!useAi) return false;
+        var enabled = await settingsService.GetBoolSettingAsync(SettingsMap.EnableEmbeddingBasedSearch);
+        if (!enabled) return false;
 
-        var instance = await settingsService.GetEmbeddingEndpointAsync();
-        if (string.IsNullOrWhiteSpace(instance)) return false;
+        var endpoint = await settingsService.GetEmbeddingEndpointAsync();
+        if (string.IsNullOrWhiteSpace(endpoint)) return false;
 
         var model = await settingsService.GetSettingValueAsync(SettingsMap.EmbeddingModel);
-        if (string.IsNullOrWhiteSpace(model)) return false;
-
-        return true;
+        return !string.IsNullOrWhiteSpace(model);
     }
 
     private async Task<float[]?> EmbedQueryAsync(string text, int expectedDimension, CancellationToken ct)
