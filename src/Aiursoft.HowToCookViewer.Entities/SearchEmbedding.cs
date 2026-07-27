@@ -28,5 +28,6 @@ public class SearchEmbedding
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
+    /// <summary>Updated on cache-hit (throttled to once per hour) for LRU eviction.</summary>
     public DateTime LastAccessedAt { get; set; } = DateTime.UtcNow;
 }

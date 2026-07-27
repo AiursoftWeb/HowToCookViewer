@@ -17,6 +17,7 @@ public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
 {
     private Dictionary<int, List<float[]>> _cache = [];
     private readonly Lock _lock = new();
+    private const int MaxEntries = 10_000;
 
     public int Count
     {
@@ -87,6 +88,14 @@ public class RecipeEmbeddingCache(ILogger<RecipeEmbeddingCache> logger)
                 }
                 list.Add(vector);
             }
+        }
+
+        if (newCache.Count > MaxEntries)
+        {
+            logger.LogWarning(
+                "RecipeEmbeddingCache: loaded {Count} entries exceeds MaxEntries ({MaxEntries}), capping.",
+                newCache.Count, MaxEntries);
+            newCache = newCache.Take(MaxEntries).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
 
         lock (_lock)

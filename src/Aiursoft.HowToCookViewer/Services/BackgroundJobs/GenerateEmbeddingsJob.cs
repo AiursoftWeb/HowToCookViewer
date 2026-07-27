@@ -52,7 +52,7 @@ public class GenerateEmbeddingsJob(
     {
         if (!await settingsService.IsAiSearchEnabledAsync())
         {
-            logger.LogInformation("GenerateEmbeddingsJob: Ollama endpoint not configured. Skipping.");
+            logger.LogInformation("GenerateEmbeddingsJob: Embedding endpoint not configured. Skipping.");
             return;
         }
 
@@ -234,10 +234,10 @@ public class GenerateEmbeddingsJob(
 
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadFromJsonAsync<OllamaEmbedResponse>();
+                var result = await response.Content.ReadFromJsonAsync<OllamaEmbedResponse>(timeoutCts.Token);
                 if (result?.Embeddings == null || result.Embeddings.Length == 0)
                 {
-                    throw new Exception($"Ollama returned no embeddings for '{logName}'.");
+                    throw new InvalidOperationException($"Ollama returned no embeddings for '{logName}'.");
                 }
 
                 var vector = result.Embeddings[0];
