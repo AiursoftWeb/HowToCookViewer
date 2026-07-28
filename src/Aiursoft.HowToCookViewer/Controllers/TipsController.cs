@@ -2,6 +2,7 @@ using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.TipsViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.WebTools.Attributes;
+using Ganss.Xss;
 using Markdig;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,9 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 
 [LimitPerMin]
 public class TipsController(
-    TemplateDbContext db) : Controller
+    TemplateDbContext db,
+    MarkdownPipeline pipeline,
+    HtmlSanitizer sanitizer) : Controller
 {
     private const string GitHubBaseUrl = "https://github.com/Anduin2017/HowToCook/blob/master/";
 
@@ -31,8 +34,8 @@ public class TipsController(
         var displayTitle = !string.IsNullOrWhiteSpace(localized?.LocalizedTitle) ? localized.LocalizedTitle : tip.Title;
         var contentToRender = !string.IsNullOrWhiteSpace(localized?.LocalizedContent) ? localized.LocalizedContent : tip.Content;
 
-        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseMermaid().Build();
         var renderedHtml = Markdown.ToHtml(contentToRender, pipeline);
+        renderedHtml = sanitizer.Sanitize(renderedHtml);
 
         return this.StackView(new DetailViewModel
         {

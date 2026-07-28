@@ -23,6 +23,8 @@ using Aiursoft.ClickhouseLoggerProvider;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Diagnostics.CodeAnalysis;
+using Ganss.Xss;
+using Markdig;
 
 namespace Aiursoft.HowToCookViewer;
 
@@ -142,6 +144,17 @@ public class Startup : IWebStartup
             registration: cleanupLocalizedRecipesJob,
             period: TimeSpan.FromHours(6),
             startDelay: TimeSpan.FromMinutes(55));
+
+        // Add the markdown pipeline and HTML sanitizer
+        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseMermaid().DisableHtml().Build();
+        services.AddSingleton(pipeline);
+        services.AddSingleton(_ =>
+        {
+            var sanitizer = new HtmlSanitizer();
+            sanitizer.AllowedTags.Add("br");
+            sanitizer.AllowedAttributes.Add("class");
+            return sanitizer;
+        });
 
         // Controllers and localization
         services.AddControllersWithViews()

@@ -50,7 +50,8 @@
 @section scripts {
 <script src="~/node_modules/mermaid/dist/mermaid.min.js" asp-append-version="true"></script>
 <script>
-mermaid.initialize({ startOnLoad: false, theme: 'default' });
+var isDarkMode = document.cookie.indexOf('prefer-dark=True') !== -1;
+mermaid.initialize({ startOnLoad: false, theme: isDarkMode ? 'dark' : 'default' });
 document.addEventListener('DOMContentLoaded', function() {
     mermaid.run();
 });

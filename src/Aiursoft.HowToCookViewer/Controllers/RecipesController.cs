@@ -4,6 +4,7 @@ using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Aiursoft.WebTools.Attributes;
+using Ganss.Xss;
 using Markdig;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +24,8 @@ public class RecipesController(
     RecipeContributorService recipeContributorService,
     RecipeEmbeddingCache embeddingCache,
     RecipeVectorSearchService vectorSearchService,
+    MarkdownPipeline pipeline,
+    HtmlSanitizer sanitizer,
     IStringLocalizer<RecipesController> localizer) : Controller
 {
     internal static readonly Dictionary<string, string> CategoryLocalizerKeys =
@@ -247,10 +250,8 @@ public class RecipesController(
             .ToListAsync();
 
         var markdown = BuildFullMarkdown(recipe, localized);
-        var html = Markdown.ToHtml(markdown, new MarkdownPipelineBuilder()
-            .UseAdvancedExtensions()
-            .UseMermaid()
-            .Build());
+        var html = Markdown.ToHtml(markdown, pipeline);
+        html = sanitizer.Sanitize(html);
 
         var repoUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.HowToCookRepoUrl);
         // Convert clone URL to web URL: strip .git suffix, then build edit link
