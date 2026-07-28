@@ -24,7 +24,7 @@
             <h2 class="mb-0 fw-bold">@Model.DisplayTitle</h2>
         </div>
         <div class="card-body p-4 p-md-5">
-            <div class="recipe-markdown">
+            <div class="recipe-markdown markdown-content">
                 @Html.Raw(Model.RenderedContent)
             </div>
         </div>
@@ -47,13 +47,14 @@
     </div>
 </div>
 
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/@@highlightjs/cdn-assets/styles/github.min.css" asp-append-version="true" />
+}
+
 @section scripts {
-<script src="~/node_modules/mermaid/dist/mermaid.min.js" asp-append-version="true"></script>
-<script>
-var isDarkMode = document.cookie.indexOf('prefer-dark=True') !== -1;
-mermaid.initialize({ startOnLoad: false, theme: isDarkMode ? 'dark' : 'default' });
-document.addEventListener('DOMContentLoaded', function() {
-    mermaid.run();
-});
-</script>
+    @{
+        ViewData["MarkdownSelector"] = ".recipe-markdown";
+        ViewData["MarkdownTheme"] = Context.Request.Cookies["prefer-dark"] == true.ToString() ? "dark" : "default";
+    }
+    <partial name="_MarkdownReaderAssets" />
 }

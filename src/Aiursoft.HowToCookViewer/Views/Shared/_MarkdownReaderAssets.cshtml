@@ -1,0 +1,27 @@
+@using System.Text.Json
+@{
+    var markdownSelector = ViewData["MarkdownSelector"] as string ?? ".markdown-content";
+    var markdownTheme = ViewData["MarkdownTheme"] as string ?? "default";
+}
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        },
+        svg: { fontCache: 'global' }
+    };
+</script>
+<script defer src="~/node_modules/mathjax/es5/tex-mml-chtml.js" asp-append-version="true"></script>
+<script defer src="~/node_modules/mermaid/dist/mermaid.min.js" asp-append-version="true"></script>
+<script defer src="~/node_modules/@@highlightjs/cdn-assets/highlight.min.js" asp-append-version="true"></script>
+<script defer src="~/scripts/markdown-reader.js" asp-append-version="true"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        window.AiursoftMarkdown.render({
+            selector: @Html.Raw(JsonSerializer.Serialize(markdownSelector)),
+            theme: @Html.Raw(JsonSerializer.Serialize(markdownTheme))
+        }).catch(console.error);
+    });
+</script>

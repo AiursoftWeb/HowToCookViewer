@@ -5,11 +5,15 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
+    "@highlightjs/cdn-assets": "^11.11.1",
     "dropify": "^0.2.2",
+    "mathjax": "^3.2.2",
     "mermaid": "^11.16.0"
   },
   "keep": {
+    "@highlightjs/cdn-assets": ".",
     "dropify": "dist",
+    "mathjax": "es5",
     "mermaid": "dist"
   },
   "scripts": {

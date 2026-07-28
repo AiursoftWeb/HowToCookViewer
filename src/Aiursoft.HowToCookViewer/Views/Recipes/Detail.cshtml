@@ -160,7 +160,7 @@
                         </div>
                     }
 
-                    <div class="recipe-markdown">
+                    <div class="recipe-markdown markdown-content">
                         @Html.Raw(Model.RenderedMarkdown)
                     </div>
                 </div>
@@ -353,6 +353,7 @@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
+<link rel="stylesheet" href="~/node_modules/@@highlightjs/cdn-assets/styles/github.min.css" asp-append-version="true" />
 <style>
 .recipe-markdown img {
     max-width: 100%;
@@ -407,11 +408,12 @@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
-<script src="~/node_modules/mermaid/dist/mermaid.min.js" asp-append-version="true"></script>
+@{
+    ViewData["MarkdownSelector"] = ".recipe-markdown";
+    ViewData["MarkdownTheme"] = Context.Request.Cookies["prefer-dark"] == true.ToString() ? "dark" : "default";
+}
+<partial name="_MarkdownReaderAssets" />
 <script>
-var isDarkMode = document.cookie.indexOf('prefer-dark=True') !== -1;
-mermaid.initialize({ startOnLoad: false, theme: isDarkMode ? 'dark' : 'default' });
-
 document.querySelectorAll('.toggle-reply').forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -536,10 +538,5 @@ document.querySelectorAll('.toggle-reply').forEach(btn => {
     });
 })();
 
-// Render mermaid diagrams on page load
-document.addEventListener('DOMContentLoaded', function() {
-    mermaid.run();
-});
 </script>
 }
-
