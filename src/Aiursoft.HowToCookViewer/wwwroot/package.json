@@ -5,12 +5,14 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
+    "@aiursoft/uistack-markdown-ui": "1.0.1",
     "@highlightjs/cdn-assets": "^11.11.1",
     "dropify": "^0.2.2",
     "mathjax": "^3.2.2",
     "mermaid": "^11.16.0"
   },
   "keep": {
+    "@aiursoft/uistack-markdown-ui": "dist",
     "@highlightjs/cdn-assets": ".",
     "dropify": "dist",
     "mathjax": "es5",
