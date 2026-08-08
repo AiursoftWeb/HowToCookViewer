@@ -186,8 +186,3 @@
 
 @* Hidden CSRF token so fallback anti-CSRF logic in integration tests can find it *@
 <div hidden>@Html.AntiForgeryToken()</div>
-
-@* ReSharper disable once Razor.SectionNotResolved *@
-@section scripts {
-    <script src="~/scripts/site.js"></script>
-}
