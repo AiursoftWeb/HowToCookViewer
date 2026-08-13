@@ -29,7 +29,7 @@
     <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.151.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.12" />
+    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.13" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aiursoft.HowToCookViewer.InMemory\Aiursoft.HowToCookViewer.InMemory.csproj" />
