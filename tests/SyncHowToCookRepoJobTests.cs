@@ -169,4 +169,85 @@ public class SyncHowToCookRepoJobTests
         Assert.IsFalse(File.Exists(strayFile), "Stray file should have been removed by git clean");
         Assert.IsTrue(Directory.Exists(Path.Combine(_tempPath, "repo", ".git")));
     }
+
+    [TestMethod]
+    public async Task ExecuteAsync_FallsBackToBackupRepoWhenPrimaryFails()
+    {
+        // Arrange
+        var missingPrimary = Path.Combine(_tempPath, "missing-primary.git");
+        var job = CreateJob(missingPrimary, _mockRepoPath);
+
+        // Act
+        await job.ExecuteAsync();
+
+        // Assert
+        var repoPath = Path.Combine(_tempPath, "repo");
+        Assert.IsTrue(Directory.Exists(Path.Combine(repoPath, ".git")));
+        Assert.IsTrue(File.Exists(Path.Combine(repoPath, "dishes", "vegetable_dish", "tomato.md")));
+    }
+
+    [TestMethod]
+    public async Task ExecuteAsync_PreservesLiveRepoWhenBothRemotesFail()
+    {
+        // Arrange
+        var liveRepoPath = Path.Combine(_tempPath, "repo");
+        Directory.CreateDirectory(liveRepoPath);
+        var sentinelPath = Path.Combine(liveRepoPath, "existing-content.txt");
+        await File.WriteAllTextAsync(sentinelPath, "keep me");
+
+        var missingPrimary = Path.Combine(_tempPath, "missing-primary.git");
+        var missingBackup = Path.Combine(_tempPath, "missing-backup.git");
+        var job = CreateJob(missingPrimary, missingBackup);
+
+        // Act
+        await Assert.ThrowsAsync<Exception>(() => job.ExecuteAsync());
+
+        // Assert
+        Assert.IsTrue(File.Exists(sentinelPath), "The existing live repo must survive a failed sync.");
+        Assert.AreEqual("keep me", await File.ReadAllTextAsync(sentinelPath));
+        Assert.IsFalse(
+            Directory.GetDirectories(_tempPath, "repo.sync-*", SearchOption.TopDirectoryOnly).Any(),
+            "Failed staging directories should be cleaned up.");
+    }
+
+    private SyncHowToCookRepoJob CreateJob(string primaryUrl, string? backupUrl = null)
+    {
+        var settings = new Dictionary<string, string?>
+        {
+            { "Storage:Path", _tempPath },
+            { $"GlobalSettings:{SettingsMap.HowToCookRepoUrl}", primaryUrl }
+        };
+
+        if (backupUrl is not null)
+        {
+            settings[$"GlobalSettings:{SettingsMap.HowToCookRepoBackupUrl}"] = backupUrl;
+        }
+
+        var config = new ConfigurationBuilder()
+            .AddInMemoryCollection(settings)
+            .Build();
+        var memoryCache = new MemoryCache(new MemoryCacheOptions());
+        var rootProvider = new StorageRootPathProvider(config);
+        var foldersProvider = new FeatureFoldersProvider(rootProvider);
+        var fileLockProvider = new FileLockProvider(memoryCache);
+        var storageService = new StorageService(
+            foldersProvider,
+            fileLockProvider,
+            new EphemeralDataProtectionProvider());
+
+        var dbOptions = new DbContextOptionsBuilder<InMemoryContext>()
+            .UseInMemoryDatabase("SyncJobTest_" + Guid.NewGuid())
+            .Options;
+        var db = new InMemoryContext(dbOptions);
+        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache);
+
+        var serviceProvider = new ServiceCollection()
+            .AddLogging()
+            .AddGitRunner()
+            .BuildServiceProvider();
+        var workspaceManager = serviceProvider.GetRequiredService<WorkspaceManager>();
+        var logger = serviceProvider.GetRequiredService<ILoggerFactory>().CreateLogger<SyncHowToCookRepoJob>();
+
+        return new SyncHowToCookRepoJob(rootProvider, globalSettings, workspaceManager, logger);
+    }
 }
