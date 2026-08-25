@@ -47,10 +47,12 @@
     </div>
 </div>
 
+@* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
     <link rel="stylesheet" href="~/node_modules/@@highlightjs/cdn-assets/styles/github.min.css" asp-append-version="true" />
 }
 
+@* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
     @{
         ViewData["MarkdownSelector"] = ".recipe-markdown";
