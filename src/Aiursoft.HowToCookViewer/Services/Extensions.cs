@@ -1,4 +1,3 @@
-using Aiursoft.CSTools.Models;
 using Aiursoft.UiStack.Layout;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,28 +51,50 @@ public static class Extensions
         return (etag, fileInfo.Length);
     }
 
-    public static IActionResult WebFile(this ControllerBase controller, string path)
+    public static IActionResult WebFile(
+        this ControllerBase controller,
+        string path,
+        bool isPrivate = false)
+    {
+        return ServeFile(controller, path, "attachment", "application/octet-stream", isPrivate);
+    }
+
+    public static IActionResult VerifiedInlineFile(
+        this ControllerBase controller,
+        string path,
+        string verifiedContentType,
+        bool isPrivate = false)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(verifiedContentType);
+        return ServeFile(controller, path, "inline", verifiedContentType, isPrivate);
+    }
+
+    private static IActionResult ServeFile(
+        ControllerBase controller,
+        string path,
+        string disposition,
+        string contentType,
+        bool isPrivate)
     {
         var (etag, length) = GetFileHttpProperties(path);
-
-        // Handle etag
-        controller.Response.Headers.Append("ETag", etag);
-        if (controller.Request.Headers.Keys.Contains("If-None-Match"))
+        controller.Response.Headers["ETag"] = etag;
+        if (controller.Request.Headers.IfNoneMatch.Any(value => value?.Trim('"') == etag))
         {
-            if (controller.Request.Headers["If-None-Match"].ToString().Trim('\"') == etag)
-            {
-                return new StatusCodeResult(304);
-            }
+            return new StatusCodeResult(StatusCodes.Status304NotModified);
         }
 
         var fileName = Path.GetFileName(path);
-        var asciiFileName = Uri.EscapeDataString(fileName); // Ensuring ASCII encoding
+        var encodedFileName = Uri.EscapeDataString(fileName);
+        controller.Response.Headers["Content-Disposition"] =
+            $"{disposition}; filename*=UTF-8''{encodedFileName}";
+        controller.Response.Headers["Content-Length"] = length.ToString();
+        controller.Response.Headers["X-Content-Type-Options"] = "nosniff";
+        controller.Response.Headers["Content-Security-Policy"] =
+            "sandbox; default-src 'none'; style-src 'unsafe-inline'; img-src data:";
+        controller.Response.Headers["Cache-Control"] = isPrivate
+            ? "private, no-store"
+            : $"public, max-age={TimeSpan.FromDays(7).TotalSeconds}";
 
-        controller.Response.Headers.Append("Content-Disposition", $"inline; filename*=UTF-8''{asciiFileName}");
-        controller.Response.Headers.Append("Content-Length", length.ToString());
-        controller.Response.Headers.Append("Cache-Control", $"public, max-age={TimeSpan.FromDays(7).TotalSeconds}");
-
-        var extension = Path.GetExtension(path).TrimStart('.');
-        return controller.PhysicalFile(path, Mime.GetContentType(extension), true);
+        return controller.PhysicalFile(path, contentType, enableRangeProcessing: true);
     }
 }

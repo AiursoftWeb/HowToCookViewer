@@ -9,12 +9,35 @@ public class ImageProcessingService(
     ILogger<ImageProcessingService> logger,
     FileLockProvider fileLockProvider) : ITransientDependency
 {
+    private const long MaxDecodedImagePixels = 100_000_000;
+
+    public Task<bool> IsValidImageAsync(IFormFile file)
+    {
+        try
+        {
+            using var stream = file.OpenReadStream();
+            using var codec = SKCodec.Create(stream);
+            return Task.FromResult(codec is not null &&
+                                   codec.Info.Width > 0 &&
+                                   codec.Info.Height > 0 &&
+                                   (long)codec.Info.Width * codec.Info.Height <= MaxDecodedImagePixels);
+        }
+        catch (Exception e)
+        {
+            logger.LogWarning(e, "Uploaded file {FileName} is not a valid raster image", file.FileName);
+            return Task.FromResult(false);
+        }
+    }
+
     public Task<bool> IsValidImageAsync(string imagePath)
     {
         try
         {
             using var codec = SKCodec.Create(imagePath);
-            if (codec != null)
+            if (codec is not null &&
+                codec.Info.Width > 0 &&
+                codec.Info.Height > 0 &&
+                (long)codec.Info.Width * codec.Info.Height <= MaxDecodedImagePixels)
             {
                 logger.LogTrace("File with path {ImagePath} is a valid image", imagePath);
                 return Task.FromResult(true);
@@ -66,6 +89,7 @@ public class ImageProcessingService(
             }
 
             await WaitTillFileCanBeReadAsync(sourceAbsolute);
+
             using var codec = SKCodec.Create(sourceAbsolute);
             if (codec == null)
             {
@@ -135,6 +159,7 @@ public class ImageProcessingService(
             if (File.Exists(targetAbsolute) && FileCanBeRead(targetAbsolute)) return targetAbsolute;
 
             await WaitTillFileCanBeReadAsync(sourceAbsolute);
+
             using var codec = SKCodec.Create(sourceAbsolute);
             if (codec == null)
             {
@@ -177,30 +202,6 @@ public class ImageProcessingService(
         return string.Empty;
     }
 
-    private async Task WaitTillFileCanBeReadAsync(string path)
-    {
-        // Don't wait forever
-        int retries = 0;
-        while (!FileCanBeRead(path) && retries < 20)
-        {
-            await Task.Delay(100);
-            retries++;
-        }
-    }
-
-    private bool FileCanBeRead(string path)
-    {
-        try
-        {
-            using var stream = File.Open(path, FileMode.Open, FileAccess.Read);
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
     private static SKBitmap AutoOrient(SKBitmap source, SKEncodedOrigin origin)
     {
         if (origin == SKEncodedOrigin.TopLeft)
@@ -211,37 +212,37 @@ public class ImageProcessingService(
 
         switch (origin)
         {
-            case SKEncodedOrigin.TopRight:
+            case SKEncodedOrigin.TopRight: // Flip horizontally
                 outW = source.Width;
                 outH = source.Height;
                 matrixValues = [-1, 0, source.Width - 1, 0, 1, 0, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.BottomRight:
+            case SKEncodedOrigin.BottomRight: // Rotate 180
                 outW = source.Width;
                 outH = source.Height;
                 matrixValues = [-1, 0, source.Width - 1, 0, -1, source.Height - 1, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.BottomLeft:
+            case SKEncodedOrigin.BottomLeft: // Flip vertically
                 outW = source.Width;
                 outH = source.Height;
                 matrixValues = [1, 0, 0, 0, -1, source.Height - 1, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.LeftTop:
+            case SKEncodedOrigin.LeftTop: // Transpose
                 outW = source.Height;
                 outH = source.Width;
                 matrixValues = [0, 1, 0, 1, 0, 0, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.RightTop:
+            case SKEncodedOrigin.RightTop: // Rotate 90 CW
                 outW = source.Height;
                 outH = source.Width;
                 matrixValues = [0, -1, source.Height - 1, 1, 0, 0, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.RightBottom:
+            case SKEncodedOrigin.RightBottom: // Transverse
                 outW = source.Height;
                 outH = source.Width;
                 matrixValues = [0, -1, source.Height - 1, -1, 0, source.Width - 1, 0, 0, 1];
                 break;
-            case SKEncodedOrigin.LeftBottom:
+            case SKEncodedOrigin.LeftBottom: // Rotate 270 CW
                 outW = source.Height;
                 outH = source.Width;
                 matrixValues = [0, 1, 0, -1, 0, source.Width - 1, 0, 0, 1];
@@ -286,7 +287,8 @@ public class ImageProcessingService(
 
         var result = new SKBitmap(finalWidth, finalHeight);
         using var canvas = new SKCanvas(result);
-        var paint = new SKPaint { IsAntialias = true };
+        var paint = new SKPaint();
+        paint.IsAntialias = true;
         using (paint)
         {
 canvas.DrawImage(SKImage.FromBitmap(source),
@@ -313,9 +315,35 @@ canvas.DrawImage(SKImage.FromBitmap(source),
         };
 
         using var image = SKImage.FromBitmap(bitmap);
+        // Some formats (GIF, BMP) may not be supported for encoding in all SkiaSharp builds.
+        // Fall back to PNG if the requested format encoding fails.
         using var data = image.Encode(format, format == SKEncodedImageFormat.Jpeg ? 90 : 100)
             ?? image.Encode(SKEncodedImageFormat.Png, 100);
         using var stream = File.OpenWrite(path);
         data.SaveTo(stream);
+    }
+
+    private async Task WaitTillFileCanBeReadAsync(string path)
+    {
+        // Don't wait forever
+        int retries = 0;
+        while (!FileCanBeRead(path) && retries < 20)
+        {
+            await Task.Delay(100);
+            retries++;
+        }
+    }
+
+    private bool FileCanBeRead(string path)
+    {
+        try
+        {
+            using var stream = File.Open(path, FileMode.Open, FileAccess.Read);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }

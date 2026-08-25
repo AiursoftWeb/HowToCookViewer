@@ -14,7 +14,11 @@ public class FileUpload(StorageService storage) : ViewComponent
         bool isVault = false,
         string? fieldName = null)
     {
-        var uploadEndpoint = storage.GetUploadUrl(subfolder, isVault);
+        var uploadEndpoint = storage.GetUploadUrl(
+            subfolder.TrimEnd('/', '\\'),
+            isVault,
+            maxSizeInMb,
+            allowedExtensions);
         return View(new FileUploadViewModel
         {
             AspFor = aspFor,

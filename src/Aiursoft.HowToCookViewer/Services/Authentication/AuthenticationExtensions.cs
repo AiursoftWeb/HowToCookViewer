@@ -21,6 +21,7 @@ public static class AuthenticationExtensions
         var appSettings = configuration.GetSection("AppSettings").Get<AppSettings>()!;
         services.AddIdentity<User, IdentityRole>(options =>
             {
+                options.User.RequireUniqueEmail = true;
                 if (appSettings.LocalEnabled && appSettings.Local.AllowWeakPassword)
                 {
                     options.Password.RequireNonAlphanumeric = false;
@@ -136,13 +137,11 @@ public static class AuthenticationExtensions
 
     private static async Task SyncOidcContext(TokenValidatedContext context)
     {
-        var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
-        var roleManager = context.HttpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+        var accountSynchronizer = context.HttpContext.RequestServices.GetRequiredService<OidcAccountSynchronizer>();
         var appSettings = context.HttpContext.RequestServices.GetRequiredService<IOptions<AppSettings>>().Value;
         var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Startup>>();
         var principal = context.Principal!;
 
-        // 1. Get the user's information from the OIDC token
         var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
         var displayName = principal.FindFirst(appSettings.OIDC.UserDisplayNamePropertyName)?.Value;
         var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
@@ -151,7 +150,6 @@ public static class AuthenticationExtensions
             "User '{Username}' from OIDC with email '{Email}' is trying to log in. Provider key: '{ProviderKey}'",
             username, email, providerKey);
 
-        // 2. Ensure the user's information is valid
         if (
             string.IsNullOrEmpty(username) ||
             string.IsNullOrEmpty(displayName) ||
@@ -162,69 +160,6 @@ public static class AuthenticationExtensions
             return;
         }
 
-        // 3. Try to find the user in the local database
-        var loginInfo = new UserLoginInfo(context.Scheme.Name, providerKey, context.Scheme.Name);
-        logger.LogInformation(
-            "Try to find the user in the local database. With username: '{Username}', email: '{Email}', provider key: '{ProviderKey}'",
-            username, email, providerKey);
-        var localUser = await userManager.FindByLoginAsync(loginInfo.LoginProvider, loginInfo.ProviderKey) ??
-                        await userManager.FindByNameAsync(username) ??
-                        await userManager.FindByEmailAsync(email);
-
-        // 4. If the user doesn't exist, create a new one
-        if (localUser is null)
-        {
-            localUser = new User
-            {
-                UserName = username,
-                DisplayName = displayName,
-                Email = email,
-            };
-            logger.LogInformation(
-                "The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.",
-                username, email);
-            var createUserResult = await userManager.CreateAsync(localUser);
-            if (!createUserResult.Succeeded)
-            {
-                var errors = string.Join(", ", createUserResult.Errors.Select(e => e.Description));
-                context.Fail($"Failed to create a local user: {errors}");
-                return;
-            }
-        }
-
-        // 5. Patch the user's information if needed
-        if (!string.Equals(localUser.UserName, username, StringComparison.OrdinalIgnoreCase))
-        {
-            logger.LogInformation("Setting the user's username to '{Username}' from OIDC.", username);
-            await userManager.SetUserNameAsync(localUser, username);
-        }
-
-        if (!string.Equals(localUser.DisplayName, displayName, StringComparison.OrdinalIgnoreCase))
-        {
-            logger.LogInformation("Setting the user's display name to '{DisplayName}' from OIDC.", displayName);
-            localUser.DisplayName = displayName;
-            await userManager.UpdateAsync(localUser);
-        }
-
-        if (!string.Equals(localUser.Email, email, StringComparison.OrdinalIgnoreCase))
-        {
-            logger.LogInformation("Setting the user's email to '{Email}' from OIDC.", email);
-            await userManager.SetEmailAsync(localUser, email);
-            localUser.EmailConfirmed = true;
-            await userManager.UpdateAsync(localUser);
-        }
-
-        // 6. Add the user's login information if needed
-        var userLogins = await userManager.GetLoginsAsync(localUser);
-        if (!userLogins.Any(l => l.LoginProvider == loginInfo.LoginProvider && l.ProviderKey == loginInfo.ProviderKey))
-        {
-            logger.LogInformation(
-                "Adding the user's login information with provider '{Provider}' and key '{Key}' from OIDC.",
-                loginInfo.LoginProvider, loginInfo.ProviderKey);
-            await userManager.AddLoginAsync(localUser, loginInfo);
-        }
-
-        // 7. Add the default role based on settings
         var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value).ToHashSet();
         if (!string.IsNullOrWhiteSpace(appSettings.DefaultRole))
         {
@@ -232,26 +167,17 @@ public static class AuthenticationExtensions
             oidcRoles.Add(appSettings.DefaultRole);
         }
 
-        // 8. Add or remove roles based on the user's roles in OIDC and local database.'
-        var localRoles = (await userManager.GetRolesAsync(localUser)).ToHashSet();
-        var rolesToAdd = oidcRoles.Except(localRoles);
-        foreach (var roleName in rolesToAdd)
+        var syncResult = await accountSynchronizer.SynchronizeAsync(new OidcUserProfile(
+            LoginProvider: context.Scheme.Name,
+            ProviderKey: providerKey,
+            UserName: username,
+            DisplayName: displayName,
+            Email: email,
+            Roles: oidcRoles));
+        if (!syncResult.Succeeded)
         {
-            if (!await roleManager.RoleExistsAsync(roleName))
-            {
-                logger.LogInformation("The role '{Role}' doesn't exist. Create a new one.", roleName);
-                await roleManager.CreateAsync(new IdentityRole(roleName));
-            }
-
-            logger.LogInformation("Add the role '{Role}' to the user.", roleName);
-            await userManager.AddToRoleAsync(localUser, roleName);
-        }
-
-        var rolesToRemove = localRoles.Except(oidcRoles).ToArray();
-        if (rolesToRemove.Any())
-        {
-            logger.LogInformation("Remove the roles '{Roles}' from the user.", string.Join(", ", rolesToRemove));
-            await userManager.RemoveFromRolesAsync(localUser, rolesToRemove);
+            var errors = string.Join(", ", syncResult.Errors.Select(error => error.Description));
+            context.Fail($"Failed to synchronize the OIDC account: {errors}");
         }
     }
 }

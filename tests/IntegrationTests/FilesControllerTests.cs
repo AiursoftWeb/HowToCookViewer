@@ -1,14 +1,22 @@
+// ReSharper disable RedundantUsingDirective
+
 using System.Net;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
 [TestClass]
+[DoNotParallelize]
 public class FilesControllerTests : TestBase
 {
+    private static readonly HttpClient AnonymousClient = new(
+        new HttpClientHandler { AllowAutoRedirect = false });
+
     [TestMethod]
     public async Task TestUploadAndDownload()
     {
+        await LoginAsAdmin();
+
         // 1. Upload
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("test", isVault: false);
@@ -28,11 +36,16 @@ public class FilesControllerTests : TestBase
         downloadResponse.EnsureSuccessStatusCode();
         var downloadContent = await downloadResponse.Content.ReadAsStringAsync();
         Assert.AreEqual("Hello World", downloadContent);
+        Assert.AreEqual("application/octet-stream", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("attachment", downloadResponse.Content.Headers.ContentDisposition?.DispositionType);
+        Assert.AreEqual("nosniff", downloadResponse.Headers.GetValues("X-Content-Type-Options").Single());
     }
 
     [TestMethod]
     public async Task TestPrivateUploadAndDownload()
     {
+        await LoginAsAdmin();
+
         var storage = GetService<StorageService>();
         var subfolder = "private-test";
         var uploadUrl = storage.GetUploadUrl(subfolder, isVault: true);
@@ -75,8 +88,31 @@ public class FilesControllerTests : TestBase
     }
 
     [TestMethod]
+    public async Task AuthenticatedUploadGrantRejectsAnonymousUser()
+    {
+        var storage = GetService<StorageService>();
+        var policy = FileUploadPolicy.Create(
+            maxSizeInMb: 1,
+            allowedExtensions: "txt",
+            requireAuthenticatedUser: true);
+        var token = storage.GetToken("authenticated", FilePermission.Upload, uploadPolicy: policy);
+        var request = new MultipartFormDataContent
+        {
+            { new StringContent("content"), "file", "document.txt" }
+        };
+
+        var response = await AnonymousClient.PostAsync(
+            new Uri(Http.BaseAddress!, $"/upload/authenticated?token={Uri.EscapeDataString(token)}"),
+            request);
+
+        Assert.AreEqual(HttpStatusCode.Unauthorized, response.StatusCode);
+    }
+
+    [TestMethod]
     public async Task TestUploadInvalidFileName()
     {
+        await LoginAsAdmin();
+
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("test", isVault: false);
 
@@ -101,7 +137,7 @@ public class FilesControllerTests : TestBase
         var storage = GetService<StorageService>();
         var subfolder = "folderA";
         // Get token for folderA
-        var token = storage.GetToken(subfolder, FilePermission.Upload);
+        var token = storage.GetToken(subfolder, FilePermission.Upload, isVault: true);
 
         // Attempt to upload to folderA/../folderB
         // We use double encoded slashes or explicitly encoded content to ensure it reaches the controller as "folderA/../folderB"
@@ -120,8 +156,81 @@ public class FilesControllerTests : TestBase
     }
 
     [TestMethod]
+    public async Task TestWorkspaceUploadTokenCannotUploadToVault()
+    {
+        var storage = GetService<StorageService>();
+        var token = storage.GetToken("avatar", FilePermission.Upload, isVault: false);
+        var content = new MultipartFormDataContent();
+        content.Add(new StringContent("not private"), "file", "test.txt");
+
+        var response = await Http.PostAsync($"/upload-private/avatar?token={Uri.EscapeDataString(token)}", content);
+
+        Assert.AreEqual(HttpStatusCode.Unauthorized, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestImageGrantRejectsHtmlAndFakeImage()
+    {
+        await LoginAsAdmin();
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl(
+            "avatar", isVault: false, maxSizeInMb: 1, allowedExtensions: "jpg jpeg png");
+
+        var htmlContent = new MultipartFormDataContent();
+        htmlContent.Add(new StringContent("<script>alert(document.domain)</script>"), "file", "attack.html");
+        var htmlResponse = await Http.PostAsync(uploadUrl, htmlContent);
+        Assert.AreEqual(HttpStatusCode.BadRequest, htmlResponse.StatusCode);
+
+        var fakeImageContent = new MultipartFormDataContent();
+        fakeImageContent.Add(new StringContent("<script>alert(document.domain)</script>"), "file", "attack.jpg");
+        var fakeImageResponse = await Http.PostAsync(uploadUrl, fakeImageContent);
+        Assert.AreEqual(HttpStatusCode.BadRequest, fakeImageResponse.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestUnrestrictedGrantStillForcesHtmlDownload()
+    {
+        await LoginAsAdmin();
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("documents", maxSizeInMb: 1);
+        var content = new MultipartFormDataContent();
+        content.Add(new StringContent("<script>alert(document.domain)</script>"), "file", "attack.html");
+
+        var uploadResponse = await Http.PostAsync(uploadUrl, content);
+        uploadResponse.EnsureSuccessStatusCode();
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
+        downloadResponse.EnsureSuccessStatusCode();
+        Assert.AreEqual("application/octet-stream", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("attachment", downloadResponse.Content.Headers.ContentDisposition?.DispositionType);
+        Assert.AreEqual("nosniff", downloadResponse.Headers.GetValues("X-Content-Type-Options").Single());
+        Assert.Contains("sandbox", downloadResponse.Headers.GetValues("Content-Security-Policy").Single());
+    }
+
+    [TestMethod]
+    public async Task TestUploadGrantEnforcesActualFileLength()
+    {
+        await LoginAsAdmin();
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("documents", maxSizeInMb: 1, allowedExtensions: "txt");
+        var content = new MultipartFormDataContent();
+        content.Add(new ByteArrayContent(new byte[1024 * 1024 + 1]), "file", "too-large.txt");
+
+        var response = await Http.PostAsync(uploadUrl, content);
+
+        Assert.AreEqual(HttpStatusCode.RequestEntityTooLarge, response.StatusCode);
+    }
+
+    [TestMethod]
     public async Task TestDownloadWithETag()
     {
+        await LoginAsAdmin();
+
         // 1. Upload
         var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("test", isVault: false);

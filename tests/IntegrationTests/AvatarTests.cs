@@ -71,12 +71,12 @@ public class AvatarTests : TestBase
         // 3. Test Clear EXIF (Default download)
         var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
         downloadResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", downloadResponse.Content.Headers.ContentType?.MediaType);
 
         // 4. Test Compression
         var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
         compressedResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", compressedResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", compressedResponse.Content.Headers.ContentType?.MediaType);
     }
 
     [TestMethod]
