@@ -4,7 +4,6 @@ using Aiursoft.Scanner.Abstractions;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Aiursoft.HowToCookViewer.Services.Authentication;
 
@@ -31,44 +30,32 @@ public class OidcAccountSynchronizer(
             return Failed("InvalidOidcRole", "OIDC role names must contain between 1 and 256 characters.");
         }
 
-        IDbContextTransaction? transaction = null;
-        if (dbContext.Database.IsRelational())
+        try
         {
-            transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
-        }
-
-        await using (transaction)
-        {
-            try
+            if (!dbContext.Database.IsRelational())
             {
+                return await SynchronizeCoreAsync(profile);
+            }
+
+            var strategy = dbContext.Database.CreateExecutionStrategy();
+            return await strategy.ExecuteAsync(async () =>
+            {
+                await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
                 var result = await SynchronizeCoreAsync(profile);
                 if (!result.Succeeded)
                 {
-                    if (transaction is not null)
-                    {
-                        await transaction.RollbackAsync(cancellationToken);
-                    }
-
+                    await transaction.RollbackAsync(cancellationToken);
                     return result;
                 }
 
-                if (transaction is not null)
-                {
-                    await transaction.CommitAsync(cancellationToken);
-                }
-
+                await transaction.CommitAsync(cancellationToken);
                 return IdentityResult.Success;
-            }
-            catch (Exception exception)
-            {
-                logger.LogError(exception, "OIDC account synchronization failed for provider {Provider}.", profile.LoginProvider);
-                if (transaction is not null)
-                {
-                    await transaction.RollbackAsync(cancellationToken);
-                }
-
-                return Failed("OidcSynchronizationFailed", "OIDC account synchronization failed.");
-            }
+            });
+        }
+        catch (Exception exception)
+        {
+            logger.LogError(exception, "OIDC account synchronization failed for provider {Provider}.", profile.LoginProvider);
+            return Failed("OidcSynchronizationFailed", "OIDC account synchronization failed.");
         }
     }
 

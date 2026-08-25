@@ -3,7 +3,10 @@
 
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Services.Authentication;
+using Aiursoft.HowToCookViewer.Sqlite;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
 
@@ -118,6 +121,39 @@ public class OidcAccountSynchronizerTests : TestBase
         Assert.IsNull(await userManager.FindByLoginAsync("OpenIdConnect", providerKey));
     }
 
+    [TestMethod]
+    public async Task RetryingExecutionStrategySupportsRelationalSynchronization()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddDbContext<SqliteContext>(options => options
+            .UseSqlite("Data Source=:memory:")
+            .ReplaceService<IExecutionStrategyFactory, RetryingExecutionStrategyFactory>());
+        services.AddScoped<TemplateDbContext>(provider => provider.GetRequiredService<SqliteContext>());
+        services.AddIdentityCore<User>()
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<SqliteContext>();
+        services.AddScoped<OidcAccountSynchronizer>();
+
+        await using var provider = services.BuildServiceProvider();
+        await using var scope = provider.CreateAsyncScope();
+        var context = scope.ServiceProvider.GetRequiredService<SqliteContext>();
+        await context.Database.OpenConnectionAsync();
+        await context.Database.EnsureCreatedAsync();
+        var synchronizer = scope.ServiceProvider.GetRequiredService<OidcAccountSynchronizer>();
+        var suffix = Guid.NewGuid().ToString("N");
+
+        var result = await synchronizer.SynchronizeAsync(new OidcUserProfile(
+            LoginProvider: "OpenIdConnect",
+            ProviderKey: $"retry-sub-{suffix}",
+            UserName: $"retry-{suffix}",
+            DisplayName: "Retry User",
+            Email: $"retry-{suffix}@example.com",
+            Roles: new HashSet<string>()));
+
+        Assert.IsTrue(result.Succeeded);
+    }
+
     private static User CreateUser(string userName, string displayName, string email)
     {
         var user = Activator.CreateInstance<User>();
@@ -125,5 +161,17 @@ public class OidcAccountSynchronizerTests : TestBase
         user.DisplayName = displayName;
         user.Email = email;
         return user;
+    }
+
+    private sealed class RetryingExecutionStrategyFactory(ExecutionStrategyDependencies dependencies)
+        : IExecutionStrategyFactory
+    {
+        public IExecutionStrategy Create() => new RetryingExecutionStrategy(dependencies);
+    }
+
+    private sealed class RetryingExecutionStrategy(ExecutionStrategyDependencies dependencies)
+        : ExecutionStrategy(dependencies, 1, TimeSpan.Zero)
+    {
+        protected override bool ShouldRetryOn(Exception exception) => false;
     }
 }
