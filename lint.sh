@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Security baseline checks.
 security_failed=0
 
