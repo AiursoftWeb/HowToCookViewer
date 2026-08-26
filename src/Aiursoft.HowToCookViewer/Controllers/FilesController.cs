@@ -190,6 +190,11 @@ public class FilesController(
             return this.VerifiedInlineFile(physicalPath, mediaType, isPrivate: isVault);
         }
 
+        if (deliveryPolicy.CanRenderArbitraryContentInline(Request))
+        {
+            return this.IsolatedOriginInlineFile(physicalPath, isPrivate: isVault);
+        }
+
         return this.WebFile(physicalPath, isPrivate: isVault);
     }
 

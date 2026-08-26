@@ -32,6 +32,13 @@ public class FileDeliveryPolicy(IConfiguration configuration) : ISingletonDepend
                string.Equals(request.Host.Value, publicOrigin.Authority, StringComparison.OrdinalIgnoreCase);
     }
 
+    public bool CanRenderArbitraryContentInline(HttpRequest request)
+    {
+        return configuration.GetValue<bool>("Storage:AllowArbitraryInlineOnDedicatedOrigin") &&
+               configuration.GetValue<bool>("Storage:RequireDedicatedInlineOrigin") &&
+               CanRenderInline(request);
+    }
+
     public bool TryGetVerifiedInlineMediaType(
         string logicalPath,
         string physicalPath,
