@@ -52,13 +52,19 @@ public partial class IndexRecipesJob(
 
             try
             {
-                var lastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
                 var existing = await db.Recipes
                     .IgnoreQueryFilters()
                     .AsNoTracking()
                     .FirstOrDefaultAsync(r => r.FilePath == relativeFilePath);
 
-                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted && existing.Calories.HasValue)
+                var markdown = await File.ReadAllTextAsync(absoluteFilePath);
+                var parsed = ParseRecipe(relativeFilePath, markdown);
+                var translationSourceChanged = existing == null ||
+                    HasTranslationSourceChanged(existing, parsed);
+                var metadataChanged = existing == null || HasMetadataChanged(existing, parsed);
+
+                if (existing != null && !existing.IsDeleted &&
+                    !translationSourceChanged && !metadataChanged)
                 {
                     // Also verify all referenced image files still exist on disk.
                     // If any are missing (e.g. Workspace was wiped), fall through and re-process.
@@ -67,9 +73,9 @@ public partial class IndexRecipesJob(
                         .AsNoTracking()
                         .Where(i => i.RecipeId == existing.Id)
                         .ToListAsync();
-                    var allImagesPresent = existingImages.Count == 0 ||
+                    var allImagesCurrent = existingImages.Count == parsed.ImageFileNames.Count &&
                         existingImages.All(i => File.Exists(Path.Combine(workspaceRoot, i.LogicalPath)));
-                    if (allImagesPresent)
+                    if (allImagesCurrent)
                     {
                         skipped++;
                         continue;
@@ -78,8 +84,15 @@ public partial class IndexRecipesJob(
                         "IndexRecipesJob: image files missing for '{File}', re-processing.", relativeFilePath);
                 }
 
-                var markdown = await File.ReadAllTextAsync(absoluteFilePath);
-                var parsed = ParseRecipe(relativeFilePath, markdown);
+                // FileLastModified is the revision marker consumed by localization and
+                // other AI jobs. A depth-1 clone reports HEAD for every path, so only
+                // advance it when the parsed fields those jobs consume actually changed.
+                var translationLastModified = existing?.FileLastModified ??
+                    await GetGitLastModifiedAsync(repoPath, relativeFilePath);
+                if (existing != null && translationSourceChanged)
+                {
+                    translationLastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
+                }
 
                 // Copy images from repo dir to StorageService Workspace
                 var recipeDir = Path.GetDirectoryName(absoluteFilePath)!;
@@ -100,7 +113,7 @@ public partial class IndexRecipesJob(
                         Calculation = parsed.Calculation,
                         Steps = parsed.Steps,
                         Notes = parsed.Notes,
-                        FileLastModified = lastModified,
+                        FileLastModified = translationLastModified,
                         Images = BuildImageEntities(imageLogicalPaths)
                     };
                     db.Recipes.Add(recipe);
@@ -109,6 +122,7 @@ public partial class IndexRecipesJob(
                 else
                 {
                     var recipe = await db.Recipes
+                        .IgnoreQueryFilters()
                         .Include(r => r.Images)
                         .FirstAsync(r => r.FilePath == relativeFilePath);
 
@@ -122,7 +136,7 @@ public partial class IndexRecipesJob(
                     recipe.Calculation = parsed.Calculation;
                     recipe.Steps = parsed.Steps;
                     recipe.Notes = parsed.Notes;
-                    recipe.FileLastModified = lastModified;
+                    recipe.FileLastModified = translationLastModified;
                     recipe.IsDeleted = false;
 
                     db.RecipeImages.RemoveRange(recipe.Images);
@@ -155,6 +169,24 @@ public partial class IndexRecipesJob(
         logger.LogInformation(
             "IndexRecipesJob complete: {Inserted} inserted, {Updated} updated, {Skipped} skipped, {Deleted} deleted.",
             inserted, updated, skipped, deletedCount);
+    }
+
+    private static bool HasTranslationSourceChanged(Recipe existing, ParsedRecipe parsed)
+    {
+        return !string.Equals(existing.Name, parsed.Name, StringComparison.Ordinal) ||
+               !string.Equals(existing.Description, parsed.Description, StringComparison.Ordinal) ||
+               !string.Equals(existing.Ingredients, parsed.Ingredients, StringComparison.Ordinal) ||
+               !string.Equals(existing.Calculation, parsed.Calculation, StringComparison.Ordinal) ||
+               !string.Equals(existing.Steps, parsed.Steps, StringComparison.Ordinal) ||
+               !string.Equals(existing.Notes, parsed.Notes, StringComparison.Ordinal);
+    }
+
+    private static bool HasMetadataChanged(Recipe existing, ParsedRecipe parsed)
+    {
+        return !string.Equals(existing.Category, parsed.Category, StringComparison.Ordinal) ||
+               !string.Equals(existing.GroupName, parsed.GroupName, StringComparison.Ordinal) ||
+               existing.Difficulty != parsed.Difficulty ||
+               !Nullable.Equals(existing.Calories, parsed.Calories);
     }
 
     // ─────────────────────────────────────────────────────────────────────────

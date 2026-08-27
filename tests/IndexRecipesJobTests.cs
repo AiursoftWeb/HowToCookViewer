@@ -1,10 +1,12 @@
 using Aiursoft.GitRunner;
 using Aiursoft.HowToCookViewer.Configuration;
+using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.BackgroundJobs;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -42,15 +44,22 @@ public class IndexRecipesJobTests
         Directory.CreateDirectory(path);
         var dishesPath = Path.Combine(path, "dishes", "vegetable_dish");
         Directory.CreateDirectory(dishesPath);
-        File.WriteAllText(Path.Combine(dishesPath, "tomato.md"), "# Tomato\n预估卡路里：468大卡\n## Ingredients\n- Tomato\n## Steps\n1. Cook");
+        File.WriteAllText(Path.Combine(dishesPath, "tomato.md"),
+            "# Tomato\nA simple tomato dish.\n预估卡路里：468大卡\n## 必备原料和工具\n- Tomato\n## 计算\n- 1 serving\n## 操作\n1. Cook\n## 附加内容\nServe hot.");
+        var tipsPath = Path.Combine(path, "tips", "learn");
+        Directory.CreateDirectory(tipsPath);
+        File.WriteAllText(Path.Combine(tipsPath, "heat.md"), "# Heat\nUse medium heat.");
 
         RunGitCommand("init --initial-branch=main", path);
         RunGitCommand("add .", path);
         // Use -c overrides so global GPG / hook settings don't break the test.
-        RunGitCommand("-c user.name=TestUser -c user.email=test@test.com -c commit.gpgsign=false commit --no-gpg-sign -m \"Initial commit\"", path);
+        RunGitCommand(
+            "-c user.name=TestUser -c user.email=test@test.com -c commit.gpgsign=false commit --no-gpg-sign -m \"Initial commit\"",
+            path,
+            "2026-01-01T00:00:00Z");
     }
 
-    private static void RunGitCommand(string args, string path)
+    private static string RunGitCommand(string args, string path, string? commitDate = null)
     {
         var p = new System.Diagnostics.Process
         {
@@ -64,6 +73,12 @@ public class IndexRecipesJobTests
                 UseShellExecute = false
             }
         };
+        if (commitDate != null)
+        {
+            p.StartInfo.Environment["GIT_AUTHOR_DATE"] = commitDate;
+            p.StartInfo.Environment["GIT_COMMITTER_DATE"] = commitDate;
+        }
+
         p.Start();
         if (!p.WaitForExit(GitTimeout))
         {
@@ -74,6 +89,17 @@ public class IndexRecipesJobTests
         {
             throw new Exception($"git {args} failed (exit {p.ExitCode}): {p.StandardError.ReadToEnd()}");
         }
+
+        return p.StandardOutput.ReadToEnd().Trim();
+    }
+
+    private void CommitUpstreamChange(string message, string commitDate)
+    {
+        RunGitCommand("add .", _mockRepoPath);
+        RunGitCommand(
+            $"-c user.name=TestUser -c user.email=test@test.com -c commit.gpgsign=false commit --no-gpg-sign -m \"{message}\"",
+            _mockRepoPath,
+            commitDate);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -92,7 +118,8 @@ public class IndexRecipesJobTests
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
                 { "Storage:Path", _tempPath },
-                { $"GlobalSettings:{SettingsMap.HowToCookRepoUrl}", _mockRepoPath }
+                // file:// is required for git to honor --depth=1 for a local test remote.
+                { $"GlobalSettings:{SettingsMap.HowToCookRepoUrl}", new Uri(_mockRepoPath + Path.DirectorySeparatorChar).AbsoluteUri }
             })
             .Build();
 
@@ -225,6 +252,346 @@ public class IndexRecipesJobTests
             var recipe = await db.Recipes.FirstAsync();
             Assert.AreEqual(468, recipe.Calories,
                 "Second run must re-index and restore calorie value for recipes that had null calories.");
+        }
+    }
+
+    [TestMethod]
+    public async Task IndexRecipesJob_ShallowCloneHeadMove_DoesNotInvalidateUnchangedRecipe()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, foldersProvider, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        await syncJob.ExecuteAsync();
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        DateTime originalTranslationRevision;
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            originalTranslationRevision = (await db.Recipes.FirstAsync()).FileLastModified;
+        }
+
+        File.WriteAllText(Path.Combine(_mockRepoPath, "README.md"), "Unrelated documentation update.");
+        CommitUpstreamChange("Update README", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+
+        var clonedRepoPath = Path.Combine(_tempPath, "repo");
+        Assert.AreEqual("true", RunGitCommand("rev-parse --is-shallow-repository", clonedRepoPath),
+            "This regression test must exercise a real depth-1 clone.");
+        var shallowPathTimestamp = DateTimeOffset.Parse(
+            RunGitCommand("log -1 --format=%cI -- dishes/vegetable_dish/tomato.md", clonedRepoPath)).UtcDateTime;
+        Assert.IsTrue(shallowPathTimestamp > originalTranslationRevision,
+            "A depth-1 clone should incorrectly report the new HEAD timestamp for the unchanged recipe path.");
+
+        await using (var strictDb = new NoWriteDbContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, strictDb,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            Assert.AreEqual(originalTranslationRevision, (await db.Recipes.FirstAsync()).FileLastModified,
+                "An unrelated upstream commit must not invalidate an existing translation.");
+        }
+    }
+
+    [TestMethod]
+    public async Task IndexRecipesJob_MetadataOnlyChange_DoesNotInvalidateTranslation()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, foldersProvider, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        await syncJob.ExecuteAsync();
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        DateTime originalTranslationRevision;
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            originalTranslationRevision = (await db.Recipes.FirstAsync()).FileLastModified;
+        }
+
+        File.WriteAllText(Path.Combine(_mockRepoPath, "dishes", "vegetable_dish", "tomato.md"),
+            "# Tomato\nA simple tomato dish.\n预估卡路里：500大卡\n## 必备原料和工具\n- Tomato\n## 计算\n- 1 serving\n## 操作\n1. Cook\n## 附加内容\nServe hot.");
+        CommitUpstreamChange("Correct calories", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var recipe = await db.Recipes.FirstAsync();
+            Assert.AreEqual(500, recipe.Calories, "Metadata changes must still be indexed.");
+            Assert.AreEqual(originalTranslationRevision, recipe.FileLastModified,
+                "A calorie-only change must not invalidate translations.");
+        }
+    }
+
+    [TestMethod]
+    public async Task IndexRecipesJob_TranslatableChange_AdvancesTranslationRevision()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, foldersProvider, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        await syncJob.ExecuteAsync();
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        DateTime originalTranslationRevision;
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            originalTranslationRevision = (await db.Recipes.FirstAsync()).FileLastModified;
+        }
+
+        File.WriteAllText(Path.Combine(_mockRepoPath, "dishes", "vegetable_dish", "tomato.md"),
+            "# Tomato\nA simple tomato dish.\n预估卡路里：468大卡\n## 必备原料和工具\n- Tomato\n## 计算\n- 1 serving\n## 操作\n1. Cook gently\n## 附加内容\nServe hot.");
+        CommitUpstreamChange("Improve cooking step", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var recipe = await db.Recipes.FirstAsync();
+            Assert.AreEqual("1. Cook gently", recipe.Steps);
+            Assert.IsTrue(recipe.FileLastModified > originalTranslationRevision,
+                "A changed translation source must advance the revision and invalidate old translations.");
+        }
+    }
+
+    [TestMethod]
+    public async Task IndexTipsJob_ShallowCloneHeadMove_DoesNotInvalidateUnchangedTip()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, _, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        await syncJob.ExecuteAsync();
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexTipsJob(
+                rootProvider, db,
+                loggerFactory.CreateLogger<IndexTipsJob>());
+            await job.ExecuteAsync();
+        }
+
+        DateTime originalTranslationRevision;
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            originalTranslationRevision = (await db.Tips.FirstAsync()).FileLastModified;
+        }
+
+        File.WriteAllText(Path.Combine(_mockRepoPath, "README.md"), "Unrelated documentation update.");
+        CommitUpstreamChange("Update README", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+
+        await using (var strictDb = new NoWriteDbContext(dbOptions))
+        {
+            var job = new IndexTipsJob(
+                rootProvider, strictDb,
+                loggerFactory.CreateLogger<IndexTipsJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            Assert.AreEqual(originalTranslationRevision, (await db.Tips.FirstAsync()).FileLastModified,
+                "An unrelated shallow-clone HEAD must not invalidate tip translations.");
+        }
+    }
+
+    [TestMethod]
+    public async Task IndexTipsJob_TranslatableChange_AdvancesTranslationRevision()
+    {
+        var dbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, _, loggerFactory, dbOptions) = BuildServices(dbName);
+
+        await syncJob.ExecuteAsync();
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexTipsJob(
+                rootProvider, db,
+                loggerFactory.CreateLogger<IndexTipsJob>());
+            await job.ExecuteAsync();
+        }
+
+        DateTime originalTranslationRevision;
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            originalTranslationRevision = (await db.Tips.FirstAsync()).FileLastModified;
+        }
+
+        File.WriteAllText(Path.Combine(_mockRepoPath, "tips", "learn", "heat.md"),
+            "# Heat\nUse low heat.");
+        CommitUpstreamChange("Correct heat tip", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var job = new IndexTipsJob(
+                rootProvider, db,
+                loggerFactory.CreateLogger<IndexTipsJob>());
+            await job.ExecuteAsync();
+        }
+
+        await using (var db = new InMemoryContext(dbOptions))
+        {
+            var tip = await db.Tips.FirstAsync();
+            Assert.AreEqual("# Heat\nUse low heat.", tip.Content);
+            Assert.IsTrue(tip.FileLastModified > originalTranslationRevision,
+                "Changed tip content must invalidate the old translation.");
+        }
+    }
+
+    [TestMethod]
+    public async Task ShallowSyncThroughLocalization_InvokesTranslatorOnlyForTranslatableChanges()
+    {
+        var syncDbName = "IndexJobTest_" + Guid.NewGuid();
+        var (syncJob, rootProvider, foldersProvider, loggerFactory, _) = BuildServices(syncDbName);
+
+        await using var connection = new SqliteConnection("DataSource=:memory:");
+        await connection.OpenAsync();
+        var sqliteOptions = new DbContextOptionsBuilder<SqliteEndToEndContext>()
+            .UseSqlite(connection)
+            .Options;
+
+        await using (var db = new SqliteEndToEndContext(sqliteOptions))
+        {
+            await db.Database.EnsureCreatedAsync();
+            db.GlobalSettings.AddRange(
+                new GlobalSetting
+                {
+                    Key = SettingsMap.LocalizationLanguages,
+                    Value = "en-US"
+                },
+                new GlobalSetting
+                {
+                    Key = SettingsMap.OpenAiInstance,
+                    Value = "http://localhost:11434"
+                });
+            await db.SaveChangesAsync();
+        }
+
+        // Index the initial recipe, then seed a translation completed after that revision.
+        await syncJob.ExecuteAsync();
+        await using (var db = new SqliteEndToEndContext(sqliteOptions))
+        {
+            var indexJob = new IndexRecipesJob(
+                rootProvider, foldersProvider, db,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await indexJob.ExecuteAsync();
+
+            var recipe = await db.Recipes.FirstAsync();
+            db.LocalizedRecipes.Add(new LocalizedRecipe
+            {
+                RecipeId = recipe.Id,
+                Culture = "en-US",
+                LocalizedName = "Current name",
+                LocalizedDescription = "Current description",
+                LocalizedIngredients = "Current ingredients",
+                LocalizedCalculation = "Current calculation",
+                LocalizedSteps = "Current steps",
+                LocalizedNotes = "Current notes",
+                LastLocalizedAt = new DateTime(2026, 1, 1, 12, 0, 0, DateTimeKind.Utc)
+            });
+            await db.SaveChangesAsync();
+        }
+
+        var translator = new CountingTranslationService();
+
+        // An unrelated commit becomes HEAD in the next depth-1 clone. It must not
+        // reach the translator even though git now attributes that HEAD to the recipe path.
+        File.WriteAllText(Path.Combine(_mockRepoPath, "README.md"), "Unrelated documentation update.");
+        CommitUpstreamChange("Update README", "2026-01-02T00:00:00Z");
+        await syncJob.ExecuteAsync();
+        await RunIndexAndLocalizationAsync(
+            sqliteOptions, rootProvider, foldersProvider, loggerFactory, translator);
+
+        Assert.AreEqual(0, translator.CallCount,
+            "An unrelated shallow-clone HEAD must result in zero translation calls.");
+
+        // A real change to one of the translated fields must invalidate the recipe.
+        File.WriteAllText(Path.Combine(_mockRepoPath, "dishes", "vegetable_dish", "tomato.md"),
+            "# Tomato\nA simple tomato dish.\n预估卡路里：468大卡\n## 必备原料和工具\n- Tomato\n## 计算\n- 1 serving\n## 操作\n1. Cook gently\n## 附加内容\nServe hot.");
+        CommitUpstreamChange("Improve cooking step", "2026-01-03T00:00:00Z");
+        await syncJob.ExecuteAsync();
+        await RunIndexAndLocalizationAsync(
+            sqliteOptions, rootProvider, foldersProvider, loggerFactory, translator);
+
+        Assert.AreEqual(6, translator.CallCount,
+            "A real source change should translate the six non-empty recipe fields exactly once.");
+        await using (var db = new SqliteEndToEndContext(sqliteOptions))
+        {
+            var localized = await db.LocalizedRecipes.FirstAsync();
+            StringAssert.Contains(localized.LocalizedSteps, "Cook gently");
+        }
+    }
+
+    private static async Task RunIndexAndLocalizationAsync(
+        DbContextOptions<SqliteEndToEndContext> dbOptions,
+        StorageRootPathProvider rootProvider,
+        FeatureFoldersProvider foldersProvider,
+        ILoggerFactory loggerFactory,
+        IRecipeTranslationService translator)
+    {
+        await using (var indexDb = new SqliteEndToEndContext(dbOptions))
+        {
+            var indexJob = new IndexRecipesJob(
+                rootProvider, foldersProvider, indexDb,
+                loggerFactory.CreateLogger<IndexRecipesJob>());
+            await indexJob.ExecuteAsync();
+        }
+
+        await using var localizeDb = new SqliteEndToEndContext(dbOptions);
+        using var cache = new MemoryCache(new MemoryCacheOptions());
+        var config = new ConfigurationBuilder().Build();
+        var settings = new GlobalSettingsService(localizeDb, config, null!, cache);
+        var localizeJob = new LocalizeRecipesJob(
+            localizeDb, settings, translator,
+            loggerFactory.CreateLogger<LocalizeRecipesJob>());
+        await localizeJob.ExecuteAsync();
+    }
+
+    private sealed class SqliteEndToEndContext(DbContextOptions<SqliteEndToEndContext> options)
+        : TemplateDbContext(options);
+
+    private sealed class CountingTranslationService : IRecipeTranslationService
+    {
+        public int CallCount { get; private set; }
+
+        public Task<string> TranslateAsync(string text, string targetLanguage)
+        {
+            CallCount++;
+            return Task.FromResult($"[{targetLanguage}] {text}");
         }
     }
 

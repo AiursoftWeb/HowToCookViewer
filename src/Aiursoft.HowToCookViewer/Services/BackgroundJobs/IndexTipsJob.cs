@@ -38,22 +38,36 @@ public class IndexTipsJob(
             validFilePaths.Add(relativeFilePath);
             try
             {
-                var lastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
                 var existing = await db.Tips
                     .IgnoreQueryFilters()
                     .AsNoTracking()
                     .FirstOrDefaultAsync(t => t.FilePath == relativeFilePath);
 
-                if (existing != null && existing.FileLastModified == lastModified && !existing.IsDeleted)
+                var content = await File.ReadAllTextAsync(absoluteFilePath);
+                var parts = relativeFilePath.Split('/');
+                var category = parts.Length >= 3 ? parts[1] : "root";
+                var title = Path.GetFileNameWithoutExtension(parts[^1]);
+                var translationSourceChanged = existing == null ||
+                    !string.Equals(existing.Title, title, StringComparison.Ordinal) ||
+                    !string.Equals(existing.Content, content, StringComparison.Ordinal);
+                var metadataChanged = existing == null ||
+                    !string.Equals(existing.Category, category, StringComparison.Ordinal);
+
+                if (existing != null && !existing.IsDeleted &&
+                    !translationSourceChanged && !metadataChanged)
                 {
                     skipped++;
                     continue;
                 }
 
-                var content = await File.ReadAllTextAsync(absoluteFilePath);
-                var parts = relativeFilePath.Split('/');
-                var category = parts.Length >= 3 ? parts[1] : "root";
-                var title = Path.GetFileNameWithoutExtension(parts[^1]);
+                // In a depth-1 clone git attributes HEAD to every path. Preserve the
+                // localization revision unless the fields sent to the translator changed.
+                var translationLastModified = existing?.FileLastModified ??
+                    await GetGitLastModifiedAsync(repoPath, relativeFilePath);
+                if (existing != null && translationSourceChanged)
+                {
+                    translationLastModified = await GetGitLastModifiedAsync(repoPath, relativeFilePath);
+                }
 
                 if (existing == null)
                 {
@@ -63,7 +77,7 @@ public class IndexTipsJob(
                         Category = category,
                         FilePath = relativeFilePath,
                         Content = content,
-                        FileLastModified = lastModified
+                        FileLastModified = translationLastModified
                     });
                     inserted++;
                 }
@@ -75,7 +89,7 @@ public class IndexTipsJob(
                     tip.Title = title;
                     tip.Category = category;
                     tip.Content = content;
-                    tip.FileLastModified = lastModified;
+                    tip.FileLastModified = translationLastModified;
                     tip.IsDeleted = false;
                     updated++;
                 }

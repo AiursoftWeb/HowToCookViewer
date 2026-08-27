@@ -24,7 +24,7 @@ public class Tip
     /// <summary>Full Markdown content of the tip file.</summary>
     public string Content { get; set; } = string.Empty;
 
-    /// <summary>Last-commit timestamp from git log.</summary>
+    /// <summary>Revision timestamp of the fields sent to the tip translator.</summary>
     public DateTime FileLastModified { get; set; }
 
     /// <summary>Indicates if the tip was deleted from the upstream repository.</summary>

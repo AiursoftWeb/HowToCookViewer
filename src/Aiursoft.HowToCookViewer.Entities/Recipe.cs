@@ -54,8 +54,9 @@ public class Recipe
     public string Notes { get; set; } = string.Empty;
 
     /// <summary>
-    /// Last-commit timestamp of the .md file obtained from `git log`.
-    /// Used to detect changes during incremental sync.
+    /// Revision timestamp of the translatable recipe fields. It advances only when
+    /// one of those parsed fields changes, so metadata-only upstream changes do not
+    /// invalidate translations or other AI-derived content.
     /// </summary>
     public DateTime FileLastModified { get; set; }
 
