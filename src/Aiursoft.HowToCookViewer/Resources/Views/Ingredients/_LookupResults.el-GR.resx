@@ -30,5 +30,8 @@
   <data name="No recipes found with the selected ingredients" xml:space="preserve">
     <value>No recipes found with the selected ingredients</value>
   </data>
+  <data name="Showing up to 24 recipes per match group. Refine your ingredients to narrow the results." xml:space="preserve">
+    <value>Εμφάνιση έως 24 συνταγών ανά ομάδα αντιστοίχισης. Βελτιώστε τα συστατικά σας για να περιορίσετε τα αποτελέσματα.</value>
+  </data>
 
 </root>
