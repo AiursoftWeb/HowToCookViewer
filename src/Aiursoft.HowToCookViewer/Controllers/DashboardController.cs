@@ -10,13 +10,11 @@ using DashboardIndexViewModel = Aiursoft.HowToCookViewer.Models.DashboardViewMod
 
 namespace Aiursoft.HowToCookViewer.Controllers;
 
-[LimitPerMin]
 public class DashboardController(
     TemplateDbContext db,
     RecipeLocalizationService recipeLocalization,
     IStringLocalizer<RecipesController> categoryLocalizer,
-    RecipeVectorSearchService vectorSearch,
-    SearchRateLimiter rateLimiter) : Controller
+    RecipeVectorSearchService vectorSearch) : Controller
 {
     private const int MaxQueryLength = 40;
 
@@ -28,17 +26,18 @@ public class DashboardController(
         CascadedLinksOrder = 1,
         LinkText = "Index",
         LinkOrder = 1)]
-    public async Task<IActionResult> Index(string? q, int page = 1)
+    [LimitPerMin(8)]
+    [ServiceFilter(typeof(SearchRequestFilter))]
+    public async Task<IActionResult> Index(string? q, int page = 1, CancellationToken ct = default)
     {
-        page = Math.Max(1, page);
+        page = Math.Clamp(page, 1, int.MaxValue / DashboardIndexViewModel.PageSize);
 
-        var totalRecipes = await db.Recipes.CountAsync();
+        var totalRecipes = await db.Recipes.CountAsync(ct);
         var baseQuery = db.Recipes.AsNoTracking();
 
         List<Recipe> results;
         int totalResults;
         var usedAi = false;
-        var rateLimited = false;
 
         if (!string.IsNullOrWhiteSpace(q))
         {
@@ -48,46 +47,34 @@ public class DashboardController(
                 q = q[..MaxQueryLength];
             }
 
-            var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
-
-            if (!rateLimiter.TryConsume(ip))
+            var aiResult = await vectorSearch.SearchAsync(
+                baseQuery, q, page, DashboardIndexViewModel.PageSize, ct);
+            if (aiResult.UsedAi)
             {
-                rateLimited = true;
-                (results, totalResults) = await RecipeSearchService.SearchAsync(
-                    baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
+                usedAi = true;
+                (results, totalResults) = (aiResult.Results, aiResult.TotalCount);
             }
             else
             {
-                var aiResult = await vectorSearch.SearchAsync(
-                    baseQuery, q, page, DashboardIndexViewModel.PageSize);
-
-                if (aiResult.UsedAi)
-                {
-                    usedAi = true;
-                    (results, totalResults) = (aiResult.Results, aiResult.TotalCount);
-                }
-                else
-                {
-                    (results, totalResults) = await RecipeSearchService.SearchAsync(
-                        baseQuery, db, q, page, DashboardIndexViewModel.PageSize);
-                }
+                (results, totalResults) = await RecipeSearchService.SearchAsync(
+                    baseQuery, db, q, page, DashboardIndexViewModel.PageSize, ct);
             }
         }
         else
         {
             totalResults = totalRecipes;
             results = await baseQuery
-                .Include(r => r.Images)
                 .OrderByDescending(r => r.Images.Any())
                 .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
                 .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
                 .ThenBy(r => r.Name)
                 .Skip((page - 1) * DashboardIndexViewModel.PageSize)
                 .Take(DashboardIndexViewModel.PageSize)
-                .ToListAsync();
+                .SelectCards()
+                .ToListAsync(ct);
         }
 
-        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(results);
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(results, ct);
 
         var categoryNames = results
             .Select(r => r.Category)
@@ -98,12 +85,12 @@ public class DashboardController(
 
         // ── Top-liked recipes with images (for the landing page grid) ──────
         var topQuery = TopLikedWithImagesQuery();
-        var topTotalWithImages = await topQuery.CountAsync();
-        var topRecipes = await topQuery
-            .Include(r => r.Images)
+        var topTotalWithImages = string.IsNullOrWhiteSpace(q) ? await topQuery.CountAsync(ct) : 0;
+        var topRecipes = string.IsNullOrWhiteSpace(q) ? await topQuery
             .Take(DashboardIndexViewModel.PageSize)
-            .ToListAsync();
-        var (topLocalizedNames, topLocalizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(topRecipes);
+            .SelectCards()
+            .ToListAsync(ct) : [];
+        var (topLocalizedNames, topLocalizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(topRecipes, ct);
 
         return this.StackView(new DashboardIndexViewModel
         {
@@ -112,40 +99,40 @@ public class DashboardController(
             TotalResults = totalResults,
             TotalRecipes = totalRecipes,
             Results = results,
-            LikeCounts = await LoadLikeCountsAsync(results),
+            LikeCounts = await LoadLikeCountsAsync(results, ct),
             LocalizedNames = localizedNames,
             UsedAiSearch = usedAi,
             LocalizedDescriptions = localizedDescs,
             CategoryDisplayNames = categoryNames,
             TopRecipes = topRecipes,
-            TopLikeCounts = await LoadLikeCountsAsync(topRecipes),
+            TopLikeCounts = await LoadLikeCountsAsync(topRecipes, ct),
             TopLocalizedNames = topLocalizedNames,
             TopLocalizedDescriptions = topLocalizedDescs,
             TopTotalWithImages = topTotalWithImages,
-            RateLimited = rateLimited,
         });
     }
 
     [HttpGet]
-    public async Task<IActionResult> TopRecipesLoadMore(int page = 2)
+    [LimitPerMin]
+    public async Task<IActionResult> TopRecipesLoadMore(int page = 2, CancellationToken ct = default)
     {
-        page = Math.Max(2, page);
+        page = Math.Clamp(page, 2, int.MaxValue / DashboardIndexViewModel.PageSize);
         var query = TopLikedWithImagesQuery();
-        var totalCount = await query.CountAsync();
+        var totalCount = await query.CountAsync(ct);
         var recipes = await query
-            .Include(r => r.Images)
             .Skip((page - 1) * DashboardIndexViewModel.PageSize)
             .Take(DashboardIndexViewModel.PageSize)
-            .ToListAsync();
+            .SelectCards()
+            .ToListAsync(ct);
 
         var hasMore = page * DashboardIndexViewModel.PageSize < totalCount;
         Response.Headers["X-Has-More"] = hasMore ? "true" : "false";
 
-        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes);
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(recipes, ct);
         return PartialView("_RecipeCards", new RecipeCardsViewModel
         {
             Recipes = recipes,
-            LikeCounts = await LoadLikeCountsAsync(recipes),
+            LikeCounts = await LoadLikeCountsAsync(recipes, ct),
             LocalizedNames = localizedNames,
             LocalizedDescriptions = localizedDescs
         });
@@ -158,7 +145,7 @@ public class DashboardController(
             .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
             .ThenBy(r => r.Name);
 
-    private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes)
+    private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes, CancellationToken ct)
     {
         if (recipes.Count == 0) return [];
         var ids = recipes.Select(r => r.Id).ToList();
@@ -166,6 +153,6 @@ public class DashboardController(
             .Where(l => ids.Contains(l.RecipeId))
             .GroupBy(l => l.RecipeId)
             .Select(g => new { RecipeId = g.Key, Count = g.Count() })
-            .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
+            .ToDictionaryAsync(x => x.RecipeId, x => x.Count, ct);
     }
 }

@@ -5,6 +5,7 @@ namespace Aiursoft.HowToCookViewer.Models.IngredientsViewModels;
 
 public class LookupResultsViewModel
 {
+    public bool Truncated { get; set; }
     public RecipeCardsViewModel ExactMatches { get; set; } = new();
     public List<NearMatchViewModel> NearMatches { get; set; } = [];
 }

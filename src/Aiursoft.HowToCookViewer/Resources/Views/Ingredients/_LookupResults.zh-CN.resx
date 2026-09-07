@@ -31,4 +31,7 @@
     <value>未找到同时包含所选食材的食谱</value>
   </data>
 
+  <data name="Showing up to 24 recipes per match group. Refine your ingredients to narrow the results." xml:space="preserve">
+    <value>每组最多显示 24 道菜谱。请调整食材选择以缩小结果范围。</value>
+  </data>
 </root>

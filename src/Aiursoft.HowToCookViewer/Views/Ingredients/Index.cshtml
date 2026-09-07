@@ -56,6 +56,9 @@
                 </div>
             </div>
 
+            <div id="lookup-error" class="alert alert-warning" role="alert" style="display:none;"
+                 data-busy="@Localizer["Too many requests. Please wait a minute and try again."]"
+                 data-failed="@Localizer["Unable to load recipes. Please try again."]"></div>
             <div id="lookup-results-area">
                 <div class="text-center text-muted py-5" id="lookup-placeholder">
                     <i class="align-middle mb-2" data-lucide="arrow-left" style="width:40px;height:40px;"></i>
@@ -90,6 +93,8 @@
         var pending = document.getElementById('lookup-pending');
         var searchInput = document.getElementById('ingredient-search');
         var currentRequest = null;
+        var debounceTimer = null;
+        var error = document.getElementById('lookup-error');
 
         function filterChips() {
             var query = searchInput.value.trim().toLowerCase();
@@ -127,7 +132,12 @@
         }
 
         function fetchResults() {
+            clearTimeout(debounceTimer);
             if (currentRequest) currentRequest.abort();
+            currentRequest = null;
+            error.style.display = 'none';
+            pending.style.display = 'none';
+            resultsDiv.style.display = 'none';
             if (selected.size === 0) {
                 recipeGrid.innerHTML = '';
                 resultCount.textContent = '0';
@@ -139,6 +149,11 @@
             placeholder.style.display = 'none';
             pending.style.display = '';
 
+            debounceTimer = setTimeout(sendRequest, 300);
+        }
+
+        function sendRequest() {
+
             var controller = new AbortController();
             currentRequest = controller;
 
@@ -147,10 +162,11 @@
 
             fetch('/Ingredients/Lookup?' + params.toString(), { signal: controller.signal })
                 .then(function(resp) {
-                    if (!resp.ok) return '';
+                    if (!resp.ok) throw new Error(resp.status === 429 ? error.dataset.busy : error.dataset.failed);
                     return resp.text();
                 })
                 .then(function(html) {
+                    if (currentRequest !== controller) return;
                     recipeGrid.innerHTML = html;
                     var cards = recipeGrid.querySelectorAll('.recipe-card');
                     resultCount.textContent = cards.length;
@@ -158,11 +174,14 @@
                     if (typeof lucide !== 'undefined') lucide.createIcons();
                 })
                 .catch(function(e) {
-                    if (e.name !== 'AbortError') console.error(e);
+                    if (currentRequest !== controller || e.name === 'AbortError') return;
+                    error.textContent = e.message === error.dataset.busy ? error.dataset.busy : error.dataset.failed;
+                    error.style.display = '';
                 })
                 .finally(function() {
+                    if (currentRequest !== controller) return;
                     pending.style.display = 'none';
-                    if (currentRequest === controller) currentRequest = null;
+                    currentRequest = null;
                 });
         }
 

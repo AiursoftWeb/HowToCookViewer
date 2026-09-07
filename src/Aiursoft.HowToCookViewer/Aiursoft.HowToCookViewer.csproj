@@ -29,6 +29,7 @@
     <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.151.2" />
   </ItemGroup>
   <ItemGroup>
+    <InternalsVisibleTo Include="Aiursoft.HowToCookViewer.Tests" />
     <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.13" />
   </ItemGroup>
   <ItemGroup>

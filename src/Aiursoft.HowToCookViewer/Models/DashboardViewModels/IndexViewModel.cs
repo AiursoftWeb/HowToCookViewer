@@ -44,6 +44,4 @@ public class IndexViewModel : UiStackLayoutViewModel
 
     public bool UsedAiSearch { get; set; }
 
-    /// <summary>True when AI search was blocked by rate limiting.</summary>
-    public bool RateLimited { get; set; }
 }

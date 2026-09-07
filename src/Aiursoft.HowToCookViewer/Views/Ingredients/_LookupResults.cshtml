@@ -8,6 +8,13 @@
     var hasNear = Model.NearMatches.Count > 0;
 }
 
+@if (Model.Truncated)
+{
+    <div class="col-12 alert alert-info">
+        @Localizer["Showing up to 24 recipes per match group. Refine your ingredients to narrow the results."]
+    </div>
+}
+
 @if (!hasExact && !hasNear)
 {
     <div class="col-12">

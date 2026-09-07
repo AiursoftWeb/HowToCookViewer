@@ -3,7 +3,7 @@ using System.Text;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Controllers;
 using Aiursoft.HowToCookViewer.Entities;
-using Aiursoft.HowToCookViewer.InMemory;
+using Aiursoft.HowToCookViewer.Sqlite;
 using Aiursoft.HowToCookViewer.Models.IngredientsViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Microsoft.AspNetCore.Localization;
@@ -21,7 +21,7 @@ public class IngredientsControllerTests
 {
     private const int VectorDim = 1024;
 
-    private InMemoryContext _db = null!;
+    private SqliteContext _db = null!;
     private IngredientGroupService _groupService = null!;
     private GlobalSettingsService _settingsService = null!;
     private IngredientsController _controller = null!;
@@ -29,11 +29,12 @@ public class IngredientsControllerTests
     [TestInitialize]
     public void Initialize()
     {
-        var dbName = "IngredientsCtrlTest_" + Guid.NewGuid();
-        var dbOptions = new DbContextOptionsBuilder<InMemoryContext>()
-            .UseInMemoryDatabase(dbName)
+        var dbOptions = new DbContextOptionsBuilder<SqliteContext>()
+            .UseSqlite("Data Source=:memory:")
             .Options;
-        _db = new InMemoryContext(dbOptions);
+        _db = new SqliteContext(dbOptions);
+        _db.Database.OpenConnection();
+        _db.Database.EnsureCreated();
 
         var config = new ConfigurationBuilder().Build();
         var memoryCache = new MemoryCache(new MemoryCacheOptions());
@@ -57,6 +58,38 @@ public class IngredientsControllerTests
     {
         _db.Dispose();
         _controller.Dispose();
+    }
+
+    [TestMethod]
+    public async Task Lookup_BoundsResultsAndDoesNotLoadBodies()
+    {
+        var salt = new Ingredient { Name = "salt" };
+        var pepper = new Ingredient { Name = "pepper" };
+        var oil = new Ingredient { Name = "oil" };
+        for (var i = 0; i < 30; i++)
+        {
+            _db.Recipes.Add(new Recipe
+            {
+                Name = $"exact-{i:D2}", Category = "test", FilePath = $"exact-{i}",
+                ConsumedIngredients = [salt], Steps = "large body", Embedding = new byte[4096]
+            });
+            _db.Recipes.Add(new Recipe
+            {
+                Name = $"near-{i:D2}", Category = "test", FilePath = $"near-{i}",
+                ConsumedIngredients = [salt, pepper, oil], Steps = "large body", Embedding = new byte[4096]
+            });
+        }
+        await _db.SaveChangesAsync();
+        _db.ChangeTracker.Clear();
+        var result = (PartialViewResult)await _controller.Lookup([salt.Id, pepper.Id]);
+        var model = (LookupResultsViewModel)result.Model!;
+        Assert.HasCount(24, model.ExactMatches.Recipes);
+        Assert.HasCount(24, model.NearMatches);
+        Assert.IsTrue(model.Truncated);
+        Assert.IsTrue(model.NearMatches.All(r => r.MatchPercentage == 67 && r.MissingIngredients == "oil"));
+        Assert.IsTrue(model.ExactMatches.Recipes.Concat(model.NearMatches.Select(r => r.Recipe))
+            .All(r => r.Embedding == null && r.Steps == "" && r.ConsumedIngredients.Count == 0));
+        Assert.IsInstanceOfType<BadRequestObjectResult>(await _controller.Lookup(Enumerable.Range(1, 101).ToList()));
     }
 
     // ─────────────────────────────────────────────────────────────────

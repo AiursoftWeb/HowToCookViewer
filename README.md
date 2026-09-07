@@ -81,3 +81,11 @@ There are many ways to contribute to the project: logging bugs, submitting pull 
 Even if you with push rights on the repository, you should create a personal fork and create feature branches there when you need them. This keeps the main repository clean and your workflow cruft out of sight.
 
 We're also interested in your feedback on the future of this project. You can submit a suggestion or feature request through the issue tracker. To make this process more effective, we're asking that these include more information to help define them more clearly.
+
+### Search resource protection
+
+Dashboard requests and ingredient lookups use WebTools `[LimitPerMin(8)]`: eight requests per minute for each resolved connection IP and request path, returning HTTP 429 before executing the action. The old AI-only limiter and its keyword-search fallback have been removed. WebTools counts route aliases separately; this change does not alter WebTools or forwarded-header trust configuration.
+
+Both actions also share a process-local concurrency budget: at most four active requests overall and one per resolved IP, including result rendering. Concurrency rejections return HTTP 429 with `Retry-After`. These in-memory limits are per application instance, not shared across replicas.
+
+Keyword search scores and pages in SQL, then selects card fields and cover images without recipe bodies or embeddings. Ingredient lookup accepts at most 100 selected IDs and returns at most 24 exact and 24 near matches, with a visible truncation notice. It ranks scalar counts before loading card data. Browser requests are debounced, and request cancellation is passed through database queries and vector search.

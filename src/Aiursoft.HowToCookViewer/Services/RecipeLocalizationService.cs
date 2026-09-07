@@ -13,7 +13,7 @@ public class RecipeLocalizationService(
     IHttpContextAccessor httpContextAccessor)
 {
     public async Task<(Dictionary<int, string> Names, Dictionary<int, string> Descriptions)>
-        LoadLocalizedStringsAsync(IEnumerable<Recipe> recipes)
+        LoadLocalizedStringsAsync(IEnumerable<Recipe> recipes, CancellationToken ct = default)
     {
         var list = recipes as List<Recipe> ?? recipes.ToList();
         if (list.Count == 0) return ([], []);
@@ -27,7 +27,7 @@ public class RecipeLocalizationService(
         var rows = await db.LocalizedRecipes
             .Where(lr => ids.Contains(lr.RecipeId) && lr.Culture == culture)
             .Select(lr => new { lr.RecipeId, lr.LocalizedName, lr.LocalizedDescription })
-            .ToListAsync();
+            .ToListAsync(ct);
 
         var names = rows
             .Where(r => !string.IsNullOrWhiteSpace(r.LocalizedName))

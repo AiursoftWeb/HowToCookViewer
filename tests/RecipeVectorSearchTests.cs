@@ -244,6 +244,27 @@ public class RecipeVectorSearchTests
     }
 
     [TestMethod]
+    public async Task CallerCancellation_DoesNotTriggerKeywordFallback()
+    {
+        await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");
+        await SeedRecipesWithEmbeddingsAsync();
+        using var cancellation = new CancellationTokenSource();
+        var service = CreateSearchService(new CancelCallerHandler(cancellation));
+        await Assert.ThrowsAsync<OperationCanceledException>(() =>
+            service.SearchAsync(_db.Recipes.AsNoTracking(), "cancel search", 1, 10, cancellation.Token));
+        Assert.AreEqual(0, await _db.SearchEmbeddings.CountAsync());
+    }
+
+    private sealed class CancelCallerHandler(CancellationTokenSource caller) : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            caller.Cancel();
+            return Task.FromCanceled<HttpResponseMessage>(cancellationToken);
+        }
+    }
+
+    [TestMethod]
     public async Task OllamaTimeout_FallsBackToUsedAiFalse()
     {
         await SeedGlobalSettingsAsync(useAiSearch: true, ollamaInstance: "http://localhost:11434", embeddingModel: "bge-m3");

@@ -37,6 +37,7 @@ public class RecipeVectorSearchService(
         int pageSize,
         CancellationToken ct = default)
     {
+        ct.ThrowIfCancellationRequested();
         // Check all three preconditions for AI vector search.
         if (!await ShouldAttemptVectorSearchAsync())
         {
@@ -54,6 +55,10 @@ public class RecipeVectorSearchService(
         {
             var expectedDimension = snapshot.Values.First().First().Length;
             queryVector = await EmbedQueryAsync(query, expectedDimension, ct);
+        }
+        catch (OperationCanceledException) when (ct.IsCancellationRequested)
+        {
+            throw;
         }
         catch (Exception)
         {
@@ -73,6 +78,7 @@ public class RecipeVectorSearchService(
         var skippedDimensionMismatch = 0;
         foreach (var kv in snapshot)
         {
+            ct.ThrowIfCancellationRequested();
             float maxScore = float.MinValue;
             bool anyValid = false;
             foreach (var e in kv.Value)
@@ -119,10 +125,10 @@ public class RecipeVectorSearchService(
             return (true, [], total);
         }
 
-        // Load full recipe objects from DB, preserving vector-score order.
+        // Load only card fields for this page, preserving vector-score order.
         var recipes = await baseQuery
-            .Include(r => r.Images)
             .Where(r => topIds.Contains(r.Id))
+            .SelectCards()
             .ToListAsync(ct);
 
         var recipeMap = recipes.ToDictionary(r => r.Id);
@@ -151,6 +157,7 @@ public class RecipeVectorSearchService(
         var scored = new List<(int RecipeId, float Score)>();
         foreach (var kv in snapshot)
         {
+            ct.ThrowIfCancellationRequested();
             if (kv.Key == recipeId)
                 continue;
 
@@ -184,8 +191,8 @@ public class RecipeVectorSearchService(
         }
 
         var recipes = await baseQuery
-            .Include(r => r.Images)
             .Where(r => topIds.Contains(r.Id))
+            .SelectCards()
             .ToListAsync(ct);
 
         var recipeMap = recipes.ToDictionary(r => r.Id);

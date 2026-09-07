@@ -4,6 +4,7 @@ using Aiursoft.HowToCookViewer.Models.IngredientsViewModels;
 using Aiursoft.HowToCookViewer.Models.RecipesViewModels;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
@@ -52,84 +53,68 @@ public class IngredientsController(
     }
 
     [HttpGet]
-    public async Task<IActionResult> Lookup([FromQuery] List<int>? ingredientIds)
+    [LimitPerMin(8)]
+    [ServiceFilter(typeof(SearchRequestFilter))]
+    public async Task<IActionResult> Lookup([FromQuery] List<int>? ingredientIds, CancellationToken ct = default)
     {
         if (ingredientIds == null || ingredientIds.Count == 0)
         {
             return PartialView("_LookupResults", new LookupResultsViewModel());
         }
 
-        // Expand canonical IDs to all alias ingredient IDs
-        var expandedIds = groupService.ExpandCanonicalIds([.. ingredientIds]);
-        var ids = expandedIds.Distinct().ToList();
+        if (ingredientIds.Count > 100)
+        {
+            return BadRequest("Select at most 100 ingredients.");
+        }
 
-        // Load all candidates that have at least one matching ingredient
-        var candidates = await db.Recipes
-            .AsNoTracking()
-            .Include(r => r.Images)
-            .Include(r => r.ConsumedIngredients)
+        var ids = groupService.ExpandCanonicalIds([.. ingredientIds]).Distinct().ToList();
+        // Only scalar counts are loaded for ranking; never load all recipe bodies and both collections.
+        var candidates = await db.Recipes.AsNoTracking()
             .Where(r => r.ConsumedIngredients.Any(ci => ids.Contains(ci.Id)))
-            .ToListAsync();
-
-        // Split into exact matches (100%) and near matches (>=60%, <100%)
-        var exactMatches = new List<Recipe>();
-        var nearMatchData = new List<(Recipe Recipe, int Pct, string Missing)>();
-
-        foreach (var recipe in candidates)
-        {
-            var total = recipe.ConsumedIngredients.Count;
-            var matched = recipe.ConsumedIngredients.Count(ci => ids.Contains(ci.Id));
-            var pct = (int)Math.Round(100.0 * matched / total);
-
-            if (pct == 100)
-                exactMatches.Add(recipe);
-            else if (pct >= 60)
+            .Select(r => new
             {
-                var missing = string.Join("、",
-                    recipe.ConsumedIngredients.Where(ci => !ids.Contains(ci.Id)).Select(ci => ci.Name));
-                nearMatchData.Add((recipe, pct, missing));
-            }
-        }
-
-        // Order exact matches
-        exactMatches = exactMatches
-            .OrderByDescending(r => r.Images.Any())
-            .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
-            .ThenBy(r => r.Name)
-            .ToList();
-
-        // Order near matches by match percentage descending
-        nearMatchData = nearMatchData
-            .OrderByDescending(n => n.Pct)
-            .ThenByDescending(n => n.Recipe.Images.Any())
-            .ThenBy(n => n.Recipe.Name)
-            .ToList();
-
-        // Load like counts and localization for all recipes involved
-        var allRecipes = exactMatches.Concat(nearMatchData.Select(n => n.Recipe)).ToList();
-        var likeCounts = await LoadLikeCountsAsync(allRecipes);
-        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(allRecipes);
-
-        var exactLikeCounts = new Dictionary<int, int>();
-        foreach (var r in exactMatches)
-            exactLikeCounts[r.Id] = likeCounts.GetValueOrDefault(r.Id);
-
-        var exactNames = new Dictionary<int, string>();
-        var exactDescs = new Dictionary<int, string>();
-        foreach (var r in exactMatches)
+                r.Id, r.Name,
+                HasImages = r.Images.Any(),
+                Total = r.ConsumedIngredients.Count,
+                Matched = r.ConsumedIngredients.Count(ci => ids.Contains(ci.Id)),
+                Likes = db.RecipeLikes.Count(l => l.RecipeId == r.Id)
+            })
+            .ToListAsync(ct);
+        var scored = candidates.Select(r => new
         {
-            if (localizedNames.TryGetValue(r.Id, out var n)) exactNames[r.Id] = n;
-            if (localizedDescs.TryGetValue(r.Id, out var d)) exactDescs[r.Id] = d;
-        }
-
-        var nearMatches = nearMatchData.Select(n => new NearMatchViewModel
+            r.Id, r.Name, r.HasImages, r.Likes,
+            Pct = (int)Math.Round(100.0 * r.Matched / r.Total)
+        }).ToList();
+        const int maxPerGroup = 24;
+        var exact = scored.Where(r => r.Pct == 100)
+            .OrderByDescending(r => r.HasImages).ThenByDescending(r => r.Likes)
+            .ThenBy(r => r.Name).ThenBy(r => r.Id).ToList();
+        var near = scored.Where(r => r.Pct >= 60 && r.Pct < 100)
+            .OrderByDescending(r => r.Pct).ThenByDescending(r => r.HasImages)
+            .ThenBy(r => r.Name).ThenBy(r => r.Id).ToList();
+        var selected = exact.Take(maxPerGroup).Concat(near.Take(maxPerGroup)).ToList();
+        var selectedIds = selected.Select(r => r.Id).ToList();
+        var allRecipes = await db.Recipes.AsNoTracking().Where(r => selectedIds.Contains(r.Id))
+            .SelectCards().ToListAsync(ct);
+        var recipeMap = allRecipes.ToDictionary(r => r.Id);
+        var nearIds = near.Take(maxPerGroup).Select(r => r.Id).ToList();
+        var missing = await db.Recipes.AsNoTracking().Where(r => nearIds.Contains(r.Id))
+            .Select(r => new
+            {
+                r.Id,
+                Names = r.ConsumedIngredients.Where(ci => !ids.Contains(ci.Id)).Select(ci => ci.Name).ToList()
+            }).ToDictionaryAsync(r => r.Id, r => string.Join("、", r.Names), ct);
+        var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(allRecipes, ct);
+        var exactMatches = exact.Take(maxPerGroup).Where(r => recipeMap.ContainsKey(r.Id))
+            .Select(r => recipeMap[r.Id]).ToList();
+        var nearMatches = near.Take(maxPerGroup).Where(r => recipeMap.ContainsKey(r.Id)).Select(r => new NearMatchViewModel
         {
-            Recipe = n.Recipe,
-            MatchPercentage = n.Pct,
-            MissingIngredients = n.Missing,
-            LikeCount = likeCounts.GetValueOrDefault(n.Recipe.Id),
-            LocalizedName = localizedNames.GetValueOrDefault(n.Recipe.Id, n.Recipe.Name),
-            LocalizedDescription = localizedDescs.GetValueOrDefault(n.Recipe.Id, n.Recipe.Description)
+            Recipe = recipeMap[r.Id],
+            MatchPercentage = r.Pct,
+            MissingIngredients = missing.GetValueOrDefault(r.Id, ""),
+            LikeCount = r.Likes,
+            LocalizedName = localizedNames.GetValueOrDefault(r.Id, r.Name),
+            LocalizedDescription = localizedDescs.GetValueOrDefault(r.Id, recipeMap[r.Id].Description)
         }).ToList();
 
         return PartialView("_LookupResults", new LookupResultsViewModel
@@ -137,22 +122,13 @@ public class IngredientsController(
             ExactMatches = new RecipeCardsViewModel
             {
                 Recipes = exactMatches,
-                LikeCounts = exactLikeCounts,
-                LocalizedNames = exactNames,
-                LocalizedDescriptions = exactDescs
+                LikeCounts = selected.ToDictionary(r => r.Id, r => r.Likes),
+                LocalizedNames = localizedNames,
+                LocalizedDescriptions = localizedDescs
             },
-            NearMatches = nearMatches
+            NearMatches = nearMatches,
+            Truncated = exact.Count > maxPerGroup || near.Count > maxPerGroup
         });
     }
 
-    private async Task<Dictionary<int, int>> LoadLikeCountsAsync(List<Recipe> recipes)
-    {
-        if (recipes.Count == 0) return [];
-        var ids = recipes.Select(r => r.Id).ToList();
-        return await db.RecipeLikes
-            .Where(l => ids.Contains(l.RecipeId))
-            .GroupBy(l => l.RecipeId)
-            .Select(g => new { RecipeId = g.Key, Count = g.Count() })
-            .ToDictionaryAsync(x => x.RecipeId, x => x.Count);
-    }
 }

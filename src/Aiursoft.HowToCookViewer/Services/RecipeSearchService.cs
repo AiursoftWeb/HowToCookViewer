@@ -1,24 +1,11 @@
-using System.Diagnostics.CodeAnalysis;
+using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.HowToCookViewer.Services;
 
-/// <summary>
-/// Weighted relevance search for recipes.
-///
-/// Scoring weights (per matched term):
-///   Exact recipe name match  → 1000
-///   Recipe name prefix match → 100
-///   Recipe name contains     → 10
-///   Description contains     → 1
-///
-/// Single-term searches are fully translated to SQL (CASE WHEN scoring,
-/// ORDER BY score, OFFSET/LIMIT pagination — no data pulled into memory).
-/// Multi-term searches use SQL to pre-filter then score in memory.
-/// </summary>
-[ExcludeFromCodeCoverage]
+/// <summary>Weighted keyword search with database scoring and pagination for every term count.</summary>
 public static class RecipeSearchService
 {
     public static async Task<(List<Recipe> Items, int TotalCount)> SearchAsync(
@@ -32,124 +19,56 @@ public static class RecipeSearchService
         var terms = SplitTerms(keyword);
         if (terms.Length == 0) return ([], 0);
 
-        return terms.Length == 1
-            ? await SingleTermSqlSearch(baseQuery, db, terms[0], page, pageSize, ct)
-            : await MultiTermHybridSearch(baseQuery, db, terms, page, pageSize, ct);
-    }
-
-    /// <summary>
-    /// Single-term path: scoring expression is fully pushed to SQL.
-    /// </summary>
-    private static async Task<(List<Recipe> Items, int TotalCount)> SingleTermSqlSearch(
-        IQueryable<Recipe> baseQuery,
-        TemplateDbContext db,
-        string term,
-        int page,
-        int pageSize,
-        CancellationToken ct)
-    {
-        var termLower = term.ToLower();
-        var scoreQuery = baseQuery
-            .Where(r => r.Name.Contains(term) || r.Description.Contains(term) ||
-                        r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term) || lr.LocalizedDescription.Contains(term)))
-            .Select(r => new
-            {
-                Recipe = r,
-                Score =
-                    (r.Name.ToLower() == termLower ? 1000 : 0)
-                    + (r.Name.StartsWith(term) ? 100 : 0)
-                    + (r.Name.Contains(term) ? 10 : 0)
-                    + (r.Description.Contains(term) ? 1 : 0)
-                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower() == termLower) ? 1000 : 0)
-                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.StartsWith(term)) ? 100 : 0)
-                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term)) ? 10 : 0)
-                    + (r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(term)) ? 1 : 0)
-            });
-
-        var ordered = scoreQuery
-            .OrderByDescending(x => x.Score)
-            .ThenByDescending(x => x.Recipe.Images.Any())
-            .ThenByDescending(x => db.RecipeLikes.Count(l => l.RecipeId == x.Recipe.Id))
-            .ThenByDescending(x => db.RecipeFavorites.Count(f => f.RecipeId == x.Recipe.Id))
-            .ThenBy(x => x.Recipe.Name)
-            .Select(x => x.Recipe);
-
+        var ordered = BuildRankedQuery(baseQuery, db, terms);
         var total = await ordered.CountAsync(ct);
         var items = await ordered
-            .Include(r => r.Images)
-            .Skip((page - 1) * pageSize)
+            .Skip((Math.Clamp(page, 1, int.MaxValue / pageSize) - 1) * pageSize)
             .Take(pageSize)
+            .SelectCards()
             .ToListAsync(ct);
-
         return (items, total);
     }
 
-    /// <summary>
-    /// Multi-term path: SQL filters candidates, then in-memory scoring.
-    /// </summary>
-    private static async Task<(List<Recipe> Items, int TotalCount)> MultiTermHybridSearch(
-        IQueryable<Recipe> baseQuery,
-        TemplateDbContext db,
-        string[] terms,
-        int page,
-        int pageSize,
-        CancellationToken ct)
+    internal static IQueryable<Recipe> BuildRankedQuery(IQueryable<Recipe> baseQuery, TemplateDbContext db, string[] terms)
     {
-        var filtered = await baseQuery
-            .Where(r => terms.Any(t => r.Name.Contains(t))
-                     || terms.Any(t => r.Description.Contains(t))
-                     || terms.Any(t => r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(t)))
-                     || terms.Any(t => r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(t))))
-            .Select(r => new
-            {
-                Recipe = r,
-                LikeCount = db.RecipeLikes.Count(l => l.RecipeId == r.Id),
-                FavoriteCount = db.RecipeFavorites.Count(f => f.RecipeId == r.Id),
-                r.Images,
-                r.LocalizedRecipes
-            })
-            .AsNoTracking()
-            .ToListAsync(ct);
-
-        foreach (var item in filtered)
+        var parameter = Expression.Parameter(typeof(Recipe), "r");
+        Expression match = Expression.Constant(false);
+        Expression score = Expression.Constant(0);
+        foreach (var term in terms)
         {
-            item.Recipe.Images = item.Images.ToList();
-            item.Recipe.LocalizedRecipes = item.LocalizedRecipes.ToList();
+            var lower = term.ToLowerInvariant();
+            Expression<Func<Recipe, bool>> termMatch = r =>
+                r.Name.ToLower().Contains(lower) || r.Description.ToLower().Contains(lower) ||
+                r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower().Contains(lower) ||
+                                            lr.LocalizedDescription.ToLower().Contains(lower));
+            Expression<Func<Recipe, int>> termScore = r =>
+                (r.Name.ToLower() == lower ? 1000 : 0)
+                + (r.Name.ToLower().StartsWith(lower) ? 100 : 0)
+                + (r.Name.ToLower().Contains(lower) ? 10 : 0)
+                + (r.Description.ToLower().Contains(lower) ? 1 : 0)
+                + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower() == lower) ? 1000 : 0)
+                + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower().StartsWith(lower)) ? 100 : 0)
+                + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.ToLower().Contains(lower)) ? 10 : 0)
+                + (r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.ToLower().Contains(lower)) ? 1 : 0);
+            match = Expression.OrElse(match, new ReplaceParameter(termMatch.Parameters[0], parameter).Visit(termMatch.Body));
+            score = Expression.Add(score, new ReplaceParameter(termScore.Parameters[0], parameter).Visit(termScore.Body));
         }
 
-        var ordered = filtered
-            .Select(x => (x.Recipe, x.LikeCount, x.FavoriteCount, Score: ComputeScore(x.Recipe, terms)))
-            .Where(x => x.Score > 0)
-            .OrderByDescending(x => x.Score)
-            .ThenByDescending(x => x.Recipe.Images.Any())
-            .ThenByDescending(x => x.LikeCount)
-            .ThenByDescending(x => x.FavoriteCount)
-            .ThenBy(x => x.Recipe.Name)
-            .Select(x => x.Recipe)
-            .ToList();
-
-        var total = ordered.Count;
-        var items = ordered
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .ToList();
-
-        return (items, total);
+        var filtered = baseQuery.Where(Expression.Lambda<Func<Recipe, bool>>(match, parameter));
+        return filtered
+            .OrderByDescending(Expression.Lambda<Func<Recipe, int>>(score, parameter))
+            .ThenByDescending(r => r.Images.Any())
+            .ThenByDescending(r => db.RecipeLikes.Count(l => l.RecipeId == r.Id))
+            .ThenByDescending(r => db.RecipeFavorites.Count(f => f.RecipeId == r.Id))
+            .ThenBy(r => r.Name)
+            .ThenBy(r => r.Id);
     }
 
-    private static int ComputeScore(Recipe r, string[] terms) =>
-        terms.Sum(term =>
-            (r.Name.Equals(term, StringComparison.OrdinalIgnoreCase) ? 1000 : 0)
-            + (r.Name.StartsWith(term, StringComparison.OrdinalIgnoreCase) ? 100 : 0)
-            + (r.Name.Contains(term, StringComparison.OrdinalIgnoreCase) ? 10 : 0)
-            + (r.Description.Contains(term, StringComparison.OrdinalIgnoreCase) ? 1 : 0)
-            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Equals(term, StringComparison.OrdinalIgnoreCase)) ? 1000 : 0)
-            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.StartsWith(term, StringComparison.OrdinalIgnoreCase)) ? 100 : 0)
-            + (r.LocalizedRecipes.Any(lr => lr.LocalizedName.Contains(term, StringComparison.OrdinalIgnoreCase)) ? 10 : 0)
-            + (r.LocalizedRecipes.Any(lr => lr.LocalizedDescription.Contains(term, StringComparison.OrdinalIgnoreCase)) ? 1 : 0));
+    private sealed class ReplaceParameter(ParameterExpression source, ParameterExpression target) : ExpressionVisitor
+    {
+        protected override Expression VisitParameter(ParameterExpression node) => node == source ? target : base.VisitParameter(node);
+    }
 
     public static string[] SplitTerms(string keyword) =>
-        Regex.Split(keyword.Trim(), @"\s+")
-            .Where(t => !string.IsNullOrWhiteSpace(t))
-            .ToArray();
+        Regex.Split(keyword.Trim(), @"\s+").Where(t => !string.IsNullOrWhiteSpace(t)).ToArray();
 }

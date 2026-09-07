@@ -67,7 +67,8 @@ public class Startup : IWebStartup
         services.AddScoped<MarkdownShredder>();
         services.AddSingleton<RecipeEmbeddingCache>();
         services.AddSingleton<IngredientGroupService>();
-        services.AddSingleton<SearchRateLimiter>();
+        services.AddSingleton<SearchConcurrencyLimiter>();
+        services.AddScoped<SearchRequestFilter>();
         services.AddScoped<RecipeVectorSearchService>();
         services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
         services.AddGitRunner();
