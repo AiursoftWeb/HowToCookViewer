@@ -54,5 +54,11 @@
   <data name="Select one or more ingredients to see matching recipes" xml:space="preserve">
     <value>Select one or more ingredients to see matching recipes</value>
   </data>
+  <data name="Too many requests. Please wait a minute and try again." xml:space="preserve">
+    <value>बहुत अधिक अनुरोध। कृपया एक मिनट रुकें और फिर प्रयास करें।</value>
+  </data>
+  <data name="Unable to load recipes. Please try again." xml:space="preserve">
+    <value>रेसिपी लोड नहीं कर सके। कृपया पुनः प्रयास करें।</value>
+  </data>
 
 </root>

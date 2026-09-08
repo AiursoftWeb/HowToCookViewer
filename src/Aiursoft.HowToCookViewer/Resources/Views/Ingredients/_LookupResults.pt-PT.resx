@@ -30,5 +30,8 @@
   <data name="No recipes found with the selected ingredients" xml:space="preserve">
     <value>No recipes found with the selected ingredients</value>
   </data>
+  <data name="Showing up to 24 recipes per match group. Refine your ingredients to narrow the results." xml:space="preserve">
+    <value>A mostrar até 24 receitas por grupo de correspondência. Refine os seus ingredientes para limitar os resultados.</value>
+  </data>
 
 </root>
