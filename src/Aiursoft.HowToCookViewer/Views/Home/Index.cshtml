@@ -6,18 +6,39 @@
     <link rel="stylesheet" href="~/styles/marketing.css"/>
 }
 
-@if (Model.ShowVoxihostAd)
+@if (Model.ShowVultrPromotion)
 {
     <!-- Ad Banner -->
     <div class="alert alert-dismissible fade show text-center mb-0 pt-2 pb-2 border-0 rounded-0 text-white" role="alert"
          style="background-color: #2a4b77;">
         <div class="container">
-            <strong class="text-white">@Localizer["Special Thanks!"]</strong>
-            @Localizer["The HowToCook server is proudly sponsored by"] <a href="https://voxihost.pl/?ref=Anduin"
-                                                                         class="alert-link text-white">@Localizer["Voxihost"]</a>, @Localizer["a provider of top-tier hosting services"].
-            <a href="https://voxihost.pl/?ref=Anduin" class="alert-link ms-2">@Localizer["Sign up today!"]</a>
+            @Localizer["HowToCook infrastructure is hosted on Vultr."]
+            <button type="button" class="btn btn-link alert-link p-0 ms-1 text-white align-baseline"
+                    data-bs-toggle="modal" data-bs-target="#vultr-referral-modal">
+                @Localizer["Get $300 in Vultr credits"]
+            </button>
         </div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="@Localizer["Close"]" style="padding: .8rem"></button>
+    </div>
+
+    <div class="modal fade" id="vultr-referral-modal" tabindex="-1" aria-labelledby="vultr-referral-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vultr-referral-modal-title">@Localizer["Continue to Vultr"]</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@Localizer["Close"]"></button>
+                </div>
+                <div class="modal-body">
+                    @Localizer["This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you."]
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.vultr.com/?ref=9692114-9J" rel="sponsored" class="btn btn-primary">
+                        @Localizer["Go to Vultr"]
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
+                </div>
+            </div>
+        </div>
     </div>
 }
 

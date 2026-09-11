@@ -21,7 +21,8 @@ public class SettingsMap
     public const string EnableEmbeddingBasedSearch = "EnableEmbeddingBasedSearch";
     public const string LocalizationLanguages = "LocalizationLanguages";
     public const string EmbeddingQueryCacheLimit = "EmbeddingQueryCacheLimit";
-    public const string ShowVoxihostAd = "ShowVoxihostAd";
+    // Keep the persisted key so existing deployments retain the administrator's banner preference.
+    public const string ShowVultrPromotion = "ShowVoxihostAd";
     public const string IngredientSimilarityThreshold = "IngredientSimilarityThreshold";
     public const string MaxCommentsPerDayPerUser = "MaxCommentsPerDayPerUser";
 
@@ -175,9 +176,9 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = ShowVoxihostAd,
-            Name = Localizer["Show Voxihost Ad"],
-            Description = Localizer["Display a promotion banner on the home page thanking Voxihost for sponsoring the server."],
+            Key = ShowVultrPromotion,
+            Name = Localizer["Show Vultr Promotion"],
+            Description = Localizer["Display the Vultr promotion banner on the home page."],
             Type = SettingType.Bool,
             DefaultValue = "False"
         },

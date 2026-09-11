@@ -53,7 +53,7 @@ public class HomeController(
         var (localizedNames, localizedDescs) = await recipeLocalization.LoadLocalizedStringsAsync(featured);
         var likeCounts = await LoadLikeCountsAsync(featured);
 
-        var showVoxihostAd = await globalSettings.GetBoolSettingAsync(SettingsMap.ShowVoxihostAd);
+        var showVultrPromotion = await globalSettings.GetBoolSettingAsync(SettingsMap.ShowVultrPromotion);
 
         return this.SimpleView(new IndexViewModel
         {
@@ -62,7 +62,7 @@ public class HomeController(
             LikeCounts = likeCounts,
             LocalizedNames = localizedNames,
             LocalizedDescriptions = localizedDescs,
-            ShowVoxihostAd = showVoxihostAd
+            ShowVultrPromotion = showVultrPromotion
         });
     }
 
