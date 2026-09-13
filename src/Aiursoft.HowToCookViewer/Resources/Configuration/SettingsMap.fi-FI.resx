@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Näytä kotisivulla mainospalkki, joka kiittää Voxihostia palvelimen sponsoroinnista.</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>Näytä Vultrin mainosbanaanin etusivulla.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Väliaikainen valinta</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Näytä Voxihost-mainos</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Näytä Vultrin mainos</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tehtävän kuvailu: Käytettävän tekoälymallin nimi reseptien kääntämiseen, esim. qwen3.5:27b-q8_0</value>

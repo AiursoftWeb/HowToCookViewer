@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>在首頁顯示推廣橫幅，感謝 Voxihost 贊助伺服器。</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>在首頁顯示 Vultr 推廣橫幅。</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>測試選項</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>顯示 Voxihost 廣告</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>顯示 Vultr 推廣</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>用於食譜翻譯的 AI 模型名稱，例如 qwen3.5:27b-q8_0</value>

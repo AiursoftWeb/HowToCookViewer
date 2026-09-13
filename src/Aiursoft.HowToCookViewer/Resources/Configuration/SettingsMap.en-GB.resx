@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Display a promotion banner on the home page thanking Voxihost for sponsoring the server.</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>Display the Vultr promotion banner on the home page.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Dummy Choice</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Show Voxihost Ad</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Show Vultr Promotion</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0</value>

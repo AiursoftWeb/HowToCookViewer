@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Exibir um banner promocional na página inicial agradecendo à Voxihost por patrocinar o servidor.</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>Exibir o banner de promoção da Vultr na página inicial.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Escolha de Teste</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Exibir Anúncio da Voxihost</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Exibir Promoção Vultr</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>O nome do modelo de IA a ser usado para tradução de receitas, por exemplo, qwen3.5:27b-q8_0</value>

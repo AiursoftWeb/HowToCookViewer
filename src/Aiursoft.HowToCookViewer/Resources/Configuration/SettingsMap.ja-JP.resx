@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>サーバーのスポンサーとしてVoxihostに感謝するプロモーションバナーをホームページに表示します。</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>ホームページにVultrのプロモーションバナーを表示します。</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>ダミー選択</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Voxihost広告を表示</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Vultr プロモーションを表示</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>レシピの翻訳に使用するAIモデル名（例：qwen3.5:27b-q8_0）</value>
