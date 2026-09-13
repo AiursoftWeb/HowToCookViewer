@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>การจัดการผู้ใช้ในตัว</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>การตรวจสอบความสอดคล้อง</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>ไปยัง Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>ปรุงอาหารด้วยความมั่นใจ</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>มีเฉพาะ Dockerfile แบบทั่วไปเท่านั้น</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>รับเครดิต Vultr มูลค่า $300</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>ไปยังแดชบอร์ด</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>ไปที่ Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>จัดการงานที่เกิดซ้ำ เช่น การทำความสะอาดและซิงค์ข้อมูล พร้อมด้วยอินเทอร์เฟซผู้ใช้ที่ครอบคลุมสำหรับติดตามประวัติการดำเนินงานและบันทึก</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>ฉันจะปรับใช้แอปพลิเคชันของฉันได้อย่างไร?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>โครงสร้างพื้นฐานของ HowToCook ดำเนินงานบน Vultr</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>ฉันสร้าง Aiursoft Template เพราะรู้สึกเบื่อหน่ายกับการตั้งค่า pipelines ด้าน Auth, Log, และ CI/CD เดียวกันทุกครั้งสำหรับโครงการองค์กรใหม่ทุกโครงการ นี่ไม่ใช่แค่เทมเพลตเท่านั้น แต่เป็นหลักปฏิบัติที่ดีที่สุดที่ถูกถ่ายทอดมาจากประสบการณ์การใช้งานในสภาพแวดล้อมผลิตภัณฑ์ที่มีความหนาแน่นสูงหลายปี ช่วยให้ทีมของฉันสามารถข้ามขั้นตอนการตั้งค่าที่น่าเบื่อหน่ายและเริ่มทำงานกับตรรกะทางธุรกิจได้ทันที</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>เทมเพลตนี้ถูกสร้างขึ้นเพื่อให้การปรับใช้เป็นเรื่องง่าย โดยมีระบบรองรับ Docker เต็มรูปแบบ ทำให้คุณสามารถสร้างคอนเทนเนอร์สำหรับแอปพลิเคชันและรันได้ทุกที่ นอกจากนี้คุณยังสามารถปรับใช้โดยตรงไปยัง IIS, Azure App Service หรือเซิร์ฟเวอร์ใดๆ ที่รองรับ ASP.NET Core ได้อีกด้วย</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>นี่คือลิงก์แนะนำเพื่อน หากคุณกลายเป็นลูกค้าที่ชำระเงินกับ Vultr เราอาจได้รับรางวัลแนะนำเพื่อนโดยไม่มีค่าใช้จ่ายเพิ่มเติมสำหรับคุณ</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>นี่คือโครงการต้นแบบ</value>

@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Dahili Kullanıcı Yönetimi</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Tutarlılık Doğrulama</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Vultr&apos;e Devam Et</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Güvenle Pişirin.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Sadece Genel Dockerfile</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>300 $&apos;lık Vultr kredisi alın</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Panele git</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Vultr&apos;a Git</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Temizlik ve senkronizasyon gibi tekrarlayan görevleri, yürütme geçmişi ve günlükleri izlemek için kapsamlı bir GUI ile yönetin.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Uygulamamı nasıl dağıtırım?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>HowToCook altyapısı Vultr üzerinde barındırılmaktadır.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Aiursoft Template&apos;ı her yeni girişim projesi için aynı Auth, Log ve CI/CD borularını ayarlamaktan bıktığımdan oluşturdum. Bu sadece bir şablon değil; yüksek yoğunluklu üretim ortamlarında yıllar boyu birikmiş en iyi uygulamaların kristalleşmiş hâli. Takımımın sıkıcı kurulum aşamasını atlayıp doğrudan iş mantığına geçmesini sağlıyor.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Şablon, kolay dağıtım için oluşturulmuştur. Tam Docker desteği içerir, böylece uygulamanızı konteynerleştirip her yerde çalıştırabilirsiniz. Ayrıca doğrudan IIS, Azure App Service veya ASP.NET Core destekleyen herhangi bir sunucuya dağıtabilirsiniz.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Bu bir yönlendirme bağlantısıdır. Ücretli bir Vultr müşterisi olursanız, size ek bir maliyet getirmeden bir yönlendirme ödülü alabiliriz.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Bu bir şablon projedir</value>

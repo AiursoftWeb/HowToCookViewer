@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>सांतत्य जाँच</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Vultr पर जाएँ</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>विश्वास के साथ पकाएं।</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>केवल सामान्य Dockerfile</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Vultr क्रेडिट में $300 प्राप्त करें</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>डैशबोर्ड पर जाएं</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Vultr पर जाएँ</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>नियमित जॉब्स जैसे साफ़ करना और सिंक्रनाइज़ेशन को नियंत्रित करें और निष्पादन इतिहास और लॉग्स के लिए एक व्यापक GUI के साथ निगरानी करें।</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>मैं अपने एप्लिकेशन को कैसे डिप्लॉय करूं?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>HowToCook इंफ्रास्ट्रक्चर Vultr पर होस्ट किया गया है।</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>मैंने एआईयूरसॉफ्ट टेम्पलेट बनाया क्योंकि मुझे हर नए एंटरप्राइज प्रोजेक्ट के लिए एक ही ऑथ, लॉग, और CI/CD पाइपलाइन की सेटअप करने में थक गया था। यह सिर्फ एक टेम्पलेट नहीं है; यह उच्च-प्रतिक्रिया उत्पादन वातावरणों में कई सालों के सर्वोत्तम अभ्यासों के संकलित रूप है। यह मेरी टीम को ऊबाहट भरी सेटअप के बाहर छोड़कर व्यवसाय तर्क पर तुरंत कूदने की अनुमति देता है।</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>यह टेम्पलेट आसान डेप्लॉयमेंट के लिए बनाया गया है। इसमें पूर्ण Docker सपोर्ट शामिल है, जिससे आप अपने ऐप को कंटेनराइज़ करके कहीं भी चला सकते हैं। आप इसे सीधे IIS, Azure App Service, या किसी भी सर्वर पर डेप्लॉय कर सकते हैं जो ASP.NET Core को सपोर्ट करता है।</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>यह एक रेफ़रल लिंक है। यदि आप Vultr के भुगतान करने वाले ग्राहक बनते हैं, तो हमें एक रेफ़रल इनाम प्राप्त हो सकता है, जो आपके लिए कोई अतिरिक्त खर्च नहीं है।</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है</value>

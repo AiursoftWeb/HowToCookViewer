@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestão de Utilizadores Integrada</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validação de Consistência</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Continuar para Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Cozinhe com Confiança.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Apenas Dockerfile genérico</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Obtenha 300 USD em créditos Vultr</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Ir para o painel de controlo</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Ir para Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Gerir tarefas recorrentes como limpeza e sincronização com uma interface gráfica abrangente para monitorizar o histórico de execução e os registos.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Como posso implementar a minha aplicação?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>A infraestrutura do HowToCook é alojada na Vultr.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Construí o Aiursoft Template porque estava cansado de configurar as mesmas pipelines de Autenticação, Registos e CI/CD para cada novo projeto empresarial. Isto não é apenas um modelo; é a cristalização das melhores práticas adquiridas ao longo de anos em ambientes de produção de alta concorrência. Permite-me que a minha equipa salte a configuração enfadonha e comece diretamente com a lógica de negócios.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>O modelo foi concebido para uma implementação fácil. Inclui suporte completo para Docker, para que possa containerizar a sua aplicação e executá-la em qualquer lugar. Também pode implementá-la diretamente no IIS, no Azure App Service ou em qualquer servidor que suporte ASP.NET Core.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Este é um link de referência. Se se tornar um cliente pagante da Vultr, podemos receber uma recompensa de referência sem custos adicionais para si.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Este é um projeto modelo</value>
