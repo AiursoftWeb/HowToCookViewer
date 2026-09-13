@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>서버를 후원해 주신 Voxihost에 감사하는 프로모션 배너를 홈페이지에 표시합니다.</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>홈페이지에 Vultr 프로모션 배너를 표시합니다.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>임의 선택</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Voxihost 광고 표시</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Vultr 프로모션 표시</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>요리 번역에 사용할 AI 모델 이름(예: qwen3.5:27b-q8_0)</value>

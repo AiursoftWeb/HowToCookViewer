@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>內建用戶管理</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>關閉</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性驗證</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>繼續前往 Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>安心烹飪</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>僅提供通用 Dockerfile</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>獲取 $300 嘅 Vultr 額度</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往控制台</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>前往 Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>處理重複執行的工作，例如清理和同步，並提供全面的GUI以監控執行歷史和記錄。</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>我如何部署我的應用程式？</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>HowToCook 基礎設施託管於 Vultr。</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>我開發 Aiursoft Template 是因為厭倦了為每一個新的企業項目重複設置相同的 Auth、Log 和 CI/CD 管道。這不僅僅是一個模板；它是多年高併發生產環境中總結的最佳實踐的結晶。它讓我的團隊可以跳過枯燥的設置，直接進入業務邏輯的開發。</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>此模板專為簡易部署而設計。它包含完整的 Docker 支援，因此您可以將應用程式容器化並在任何地方運行。您亦可直接將其部署到 IIS、Azure App Service 或任何支援 ASP.NET Core 的伺服器上。</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>這是一個推薦連結。如果你成為Vultr的付費用戶，我們可能會收到推薦獎勵，而這對你來說不會產生任何額外費用。</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>這是一個模板項目</value>

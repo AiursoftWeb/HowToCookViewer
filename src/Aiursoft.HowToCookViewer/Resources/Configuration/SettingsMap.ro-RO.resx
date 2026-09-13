@@ -48,6 +48,9 @@
   <data name="Display a promotion banner on the home page thanking Voxihost for sponsoring the server." xml:space="preserve">
     <value>Afișează un banner promoțional pe pagina principală mulțumind lui Voxihost pentru sponsorizarea serverului.</value>
   </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>Afișează bannerul promoțional Vultr pe pagina principală.</value>
+  </data>
   <data name="Dummy Choice" xml:space="preserve">
     <value>Alegere Dummy</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Show Voxihost Ad" xml:space="preserve">
     <value>Afișează anunț Voxihost</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Afișează promoția Vultr</value>
   </data>
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Numele modelului AI de utilizat pentru traducerea rețetelor, de ex. qwen3.5:27b-q8_0</value>
