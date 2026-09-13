@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestionare Utilizatori Integrată</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anulare</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validare de coerentă</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Continuă la Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Gătește cu încredere.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Doar un Dockerfile generic</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Obțineți 300 $ în credite Vultr</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Accesează panoul de control</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Mergi la Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Gestionați sarcinile periodice precum curățarea și sincronizarea cu o interfață grafică completă pentru monitorizarea istoricului de execuție și a jurnalelor.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Cum îmi implementez aplicația?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>Infrastructura HowToCook este găzduită pe Vultr.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Am construit Aiursoft Template pentru că eram obosit să setez aceleași pipeline de Auth, Log și CI/CD pentru fiecare proiect enterprise nou. Acesta nu este doar un template; este practica optimă cristalizată din ani de medii de producție cu concurență ridicată. Îmi permite echipei să sară peste configurarea plictisitoare și să treacă direct la logică de afaceri.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Șablonul este construit pentru o implementare ușoară. Include suport complet pentru Docker, astfel încât poți containeriza aplicația și să o rulezi oriunde. De asemenea, îl poți implementa direct pe IIS, Azure App Service sau pe orice server care suportă ASP.NET Core.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Acesta este un link de referire. Dacă devii un client plătitor Vultr, noi putem primi o recompensă de referire fără niciun cost suplimentar pentru tine.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Acesta este un proiect tip</value>

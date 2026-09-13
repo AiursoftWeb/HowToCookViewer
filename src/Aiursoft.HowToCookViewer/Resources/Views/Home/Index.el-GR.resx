@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Ενσωματωμένη Διαχείριση Χρηστών</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Ακύρωση</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Έλεγχος Συνοχής</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Συνέχεια στο Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Μαγειρέψτε με αυτοπεποίθηση.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Μόνο γενικό αρχείο Dockerfile</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Πάρτε $300 σε πιστώσεις Vultr</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Μετάβαση στον πίνακα ελέγχου</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Μετάβαση στο Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Διαχείριση επαναλαμβανόμενων εργασιών όπως καθαρισμός και συγχρονισμός με ολοκληρωμένη διεπαφή χρήστη για την παρακολούθηση της ιστορίας εκτέλεσης και των καταγραφών.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Πώς μπορώ να αναπτύξω την εφαρμογή μου;</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>Η υποδομή του HowToCook φιλοξενείται στο Vultr.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Δημιούργησα το Aiursoft Template επειδή ήμουν κουρασμένος από τη διαδικασία δημιουργίας των ίδιων πύλων Auth, Log και CI/CD για κάθε νέο επιχειρηματικό έργο. Δεν είναι απλώς ένα πρότυπο· είναι η συγκεντρωμένη καλύτερη πρακτική από χρόνια λειτουργίας σε περιβάλλοντα υψηλής συγχρονισμού. Επιτρέπει στην ομάδα μου να παραλείψει την ένοικτη διαδικασία ρύθμισης και να προχωρήσει αμέσως στη λογική της επιχείρησης.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Το πρότυπο είναι κατασκευασμένο για εύκολη ανάπτυξη. Περιλαμβάνει πλήρη υποστήριξη Docker, ώστε να μπορείτε να συσκευάσετε την εφαρμογή σας σε containers και να την εκτελέσετε οπουδήποτε. Μπορείτε επίσης να την αναπτύξετε απευθείας στο IIS, στο Azure App Service ή σε οποιονδήποτε διακομιστή που υποστηρίζει ASP.NET Core.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Αυτός είναι ένας σύνδεσμος σύστασης. Αν γίνετε πελάτης με χρέωση της Vultr, ενδέχεται να λάβουμε ένα έσοδο από σύσταση χωρίς επιπλέον κόστος για εσάς.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο</value>

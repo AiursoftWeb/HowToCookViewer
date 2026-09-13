@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Tiếp tục đến Vultr</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Nấu ăn tự tin</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Chỉ có Dockerfile chung chung</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Nhận 300 đô la tín dụng Vultr</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Truy cập bảng điều khiển</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Đi đến Vultr</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Xử lý các công việc lặp lại như dọn dẹp và đồng bộ hóa với một giao diện người dùng toàn diện để theo dõi lịch sử thực thi và nhật ký.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Làm thế nào để tôi triển khai ứng dụng của mình?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>Hạ tầng của HowToCook được đặt trên Vultr.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Tôi tạo ra Aiursoft Template vì đã chán việc phải thiết lập lại các pipeline Auth, Log và CI/CD giống nhau cho mỗi dự án doanh nghiệp mới. Đây không chỉ đơn thuần là một mẫu; đây là những nguyên tắc tốt nhất đã được tinh luyện qua nhiều năm hoạt động trong môi trường sản xuất có tải cao. Nó giúp đội của tôi bỏ qua phần thiết lập nhàm chán và nhảy thẳng vào logic kinh doanh.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Mẫu này được xây dựng để triển khai dễ dàng. Nó bao gồm hỗ trợ Docker đầy đủ, vì vậy bạn có thể đóng gói ứng dụng của mình và chạy nó ở bất cứ đâu. Bạn cũng có thể triển khai trực tiếp lên IIS, Azure App Service hoặc bất kỳ máy chủ nào hỗ trợ ASP.NET Core.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Đây là một liên kết giới thiệu. Nếu bạn trở thành khách hàng trả phí của Vultr, chúng tôi có thể nhận được phần thưởng giới thiệu mà không phát sinh thêm chi phí nào cho bạn.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Đây là một dự án mẫu</value>

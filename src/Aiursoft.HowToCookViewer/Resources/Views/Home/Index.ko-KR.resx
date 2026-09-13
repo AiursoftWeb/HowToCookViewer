@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>내장된 사용자 관리</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>일관성 검증</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Vultr로 이동</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>자신감 있게 요리하세요.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>일반 Dockerfile 만 제공</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Vultr 크레딧 $300 받기</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>대시보드로 이동</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Vultr로 이동</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>정기적인 작업(예: 정리 및 동기화)을 처리하고 실행 이력 및 로그를 모니터링할 수 있는 포괄적인 GUI를 제공합니다.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>애플리케이션을 어떻게 배포하나요?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>HowToCook 인프라는 Vultr에 호스팅됩니다.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>저는 매번 새로운 기업용 프로젝트를 시작할 때마다 동일한 인증(Auth), 로그(Log), CI/CD 파이프라인을 설정하는 데 지쳐서 Aiursoft Template을 만들었습니다. 이것은 단순한 템플릿이 아니라, 고성능 동시 처리 환경에서 수년간 쌓아온 최적의 실천 방법을 정제한 것입니다. 이 덕분에 제 팀은 지루한 설정 과정을 건너뛰고 바로 비즈니스 로직 개발에 집중할 수 있습니다.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>이 템플릿은 손쉬운 배포를 위해 구축되었습니다. 완전한 Docker 지원을 포함하고 있어 앱을 컨테이너화하여 어디서나 실행할 수 있습니다. 또한 IIS, Azure App Service 또는 ASP.NET Core를 지원하는 모든 서버에 직접 배포할 수도 있습니다.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>이것은 추천 링크입니다. 유료 Vultr 고객이 되시면, 추가 비용 없이 저희가 추천 보상을 받을 수 있습니다.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>이것은 템플릿 프로젝트입니다.</value>

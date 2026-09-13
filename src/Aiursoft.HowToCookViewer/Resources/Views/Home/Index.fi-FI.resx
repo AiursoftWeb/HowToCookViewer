@@ -168,6 +168,9 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Sisäänrakennettu käyttäjienhallinta</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Johdonmukaisuustarkistus</value>
+  </data>
+  <data name="Continue to Vultr" xml:space="preserve">
+    <value>Jatka Vultriin</value>
   </data>
   <data name="Cook with Confidence." xml:space="preserve">
     <value>Kokkaa varmuudella.</value>
@@ -390,6 +396,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Vain yleinen Dockerfile</value>
   </data>
+  <data name="Get $300 in Vultr credits" xml:space="preserve">
+    <value>Hanki 300 $ Vultrin krediittejä</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -404,6 +413,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Siirry kojelautaan</value>
+  </data>
+  <data name="Go to Vultr" xml:space="preserve">
+    <value>Mene Vultriin</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Käsittele toistuvia tehtäviä, kuten siivouksen ja synkronoinnin, laajalla käyttöliittymällä suoritushistorian ja lokien seurantaan.</value>
@@ -434,6 +446,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Kuinka otan sovellukseni käyttöön?</value>
+  </data>
+  <data name="HowToCook infrastructure is hosted on Vultr." xml:space="preserve">
+    <value>HowToCookin infrastruktuuri on isännöity Vultrissa.</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
     <value>Loin Aiursoft Template, koska olin väsynyt asentamaan samoja Auth-, Log- ja CI/CD-pipelineja jokaiseen uuteen yritysprojektiin. Tämä ei ole vain malli; se on tiivistettyä parasta käytäntöä vuosien ajan korkean suorituskyvyn tuotantoympäristöissä. Se mahdollistaa tiimini sivuuttamaan tylsän asennuksen ja siirtyä suoraan liiketoimintalogiikkaan.</value>
@@ -740,6 +755,9 @@
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Malli on suunniteltu helppokäyttöiseksi käyttöönottoa varten. Se sisältää täyden Docker-tuen, joten voit konttipohjata sovelluksesi ja ajaa sitä missä tahansa. Voit myös ottaa sen käyttöön suoraan IIS:ään, Azure App Serviceen tai mihin tahansa palvelimeen, joka tukee ASP.NET Corea.</value>
+  </data>
+  <data name="This is a referral link. If you become a paying Vultr customer, we may receive a referral reward at no additional cost to you." xml:space="preserve">
+    <value>Tämä on suosituslinkki. Jos tulet maksavaksi Vultrin asiakkaaksi, voimme saada suosituskorvauksen ilman lisäkustannuksia sinulle.</value>
   </data>
   <data name="This is a template project" xml:space="preserve">
     <value>Tämä on malliprojekti</value>
