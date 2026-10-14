@@ -30,7 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="Aiursoft.HowToCookViewer.Tests"></InternalsVisibleTo>
-    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.14" />
+    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.15" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aiursoft.HowToCookViewer.InMemory\Aiursoft.HowToCookViewer.InMemory.csproj" />
