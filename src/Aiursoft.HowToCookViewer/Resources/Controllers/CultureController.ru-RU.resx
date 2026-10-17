@@ -21,5 +21,8 @@
       <data name="Culture cannot be null or empty." xml:space="preserve">
     <value>Culture cannot be null or empty.</value>
   </data>
+  <data name="Culture is not supported." xml:space="preserve">
+    <value>Культура не поддерживается.</value>
+  </data>
 
 </root>

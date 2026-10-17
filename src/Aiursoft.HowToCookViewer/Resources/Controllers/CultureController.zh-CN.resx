@@ -21,5 +21,8 @@
       <data name="Culture cannot be null or empty." xml:space="preserve">
     <value>语言文化设置不能为空。</value>
   </data>
+  <data name="Culture is not supported." xml:space="preserve">
+    <value>不支持该区域性设置。</value>
+  </data>
 
 </root>
