@@ -1,7 +1,6 @@
 using System.Collections.Concurrent;
 using System.Net;
 using System.Text.RegularExpressions;
-using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.HowToCookViewer.Entities;
 using static Aiursoft.WebTools.Extends;
@@ -16,29 +15,26 @@ public abstract class TestBase
     // then reused by every integration test class. Cleaned up on process exit.
     private static readonly Lazy<Task<SharedServer>> LazyServer = new(async () =>
     {
-        for (var attempt = 0; ; attempt++)
+        using var reservation = new TestPortReservation();
+        var server = await AppAsync<Startup>([], port: reservation.Port);
+        try
         {
-            var port = Network.GetAvailablePort();
-            var server = await AppAsync<Startup>([], port: port);
+            reservation.ConfigureServer(server);
             await server.UpdateDbAsync<TemplateDbContext>();
             await server.SeedAsync();
-            try
+            await server.StartAsync();
+            var shared = new SharedServer(reservation.Port, server);
+            AppDomain.CurrentDomain.ProcessExit += (_, _) =>
             {
-                await server.StartAsync();
-                var shared = new SharedServer(port, server);
-                AppDomain.CurrentDomain.ProcessExit += (_, _) =>
-                {
-                    shared.Host.StopAsync().GetAwaiter().GetResult();
-                    shared.Host.Dispose();
-                };
-                return shared;
-            }
-            catch (IOException) when (attempt < 3)
-            {
-                await server.StopAsync();
-                await server.DisposeAsync();
-                await Task.Delay(100);
-            }
+                shared.Host.StopAsync().GetAwaiter().GetResult();
+                shared.Host.Dispose();
+            };
+            return shared;
+        }
+        catch
+        {
+            await server.DisposeAsync();
+            throw;
         }
     });
 
