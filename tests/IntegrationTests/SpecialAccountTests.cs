@@ -2,7 +2,6 @@ using System.Net;
 using Aiursoft.DbTools;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.AspNetCore.Identity;
-using Aiursoft.CSTools.Tools;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.HowToCookViewer.Tests.IntegrationTests;
@@ -17,7 +16,8 @@ public class SpecialAccountTests
     [TestInitialize]
     public async Task Setup()
     {
-        _port = Network.GetAvailablePort();
+        using var reservation = new TestPortReservation();
+        _port = reservation.Port;
         var cookieContainer = new CookieContainer();
         var handler = new HttpClientHandler
         {
@@ -33,9 +33,18 @@ public class SpecialAccountTests
         Environment.SetEnvironmentVariable("AppSettings__DefaultRole", "Administrators");
 
         _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
-        await _server.SeedAsync();
-        await _server.StartAsync();
+        try
+        {
+            reservation.ConfigureServer(_server);
+            await _server.UpdateDbAsync<TemplateDbContext>();
+            await _server.SeedAsync();
+            await _server.StartAsync();
+        }
+        catch
+        {
+            _server.Dispose();
+            throw;
+        }
     }
 
     [TestCleanup]
