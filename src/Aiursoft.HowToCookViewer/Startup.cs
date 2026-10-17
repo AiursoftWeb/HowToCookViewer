@@ -147,7 +147,7 @@ public class Startup : IWebStartup
             startDelay: TimeSpan.FromMinutes(55));
 
         // Add the markdown pipeline and HTML sanitizer
-        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().UseMermaid().DisableHtml().Build();
+        var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().DisableHtml().Build();
         services.AddSingleton(pipeline);
         services.AddSingleton(_ =>
         {
