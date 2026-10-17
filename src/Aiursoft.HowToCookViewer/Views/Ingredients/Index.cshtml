@@ -58,7 +58,7 @@
 
             <div id="lookup-error" class="alert alert-warning" role="alert" style="display:none;"
                  data-busy="@Localizer["Too many requests. Please wait a minute and try again."]"
-                 data-failed="@Localizer["Unable to load recipes. Please try again."]"></div>
+                 data-failed="@Localizer["Unable to load recipes. Please try again."]"><div class="alert-message"></div></div>
             <div id="lookup-results-area">
                 <div class="text-center text-muted py-5" id="lookup-placeholder">
                     <i class="align-middle mb-2" data-lucide="arrow-left" style="width:40px;height:40px;"></i>
@@ -95,6 +95,7 @@
         var currentRequest = null;
         var debounceTimer = null;
         var error = document.getElementById('lookup-error');
+        var errorMessage = error.querySelector('.alert-message');
 
         function filterChips() {
             var query = searchInput.value.trim().toLowerCase();
@@ -175,7 +176,7 @@
                 })
                 .catch(function(e) {
                     if (currentRequest !== controller || e.name === 'AbortError') return;
-                    error.textContent = e.message === error.dataset.busy ? error.dataset.busy : error.dataset.failed;
+                    errorMessage.textContent = e.message === error.dataset.busy ? error.dataset.busy : error.dataset.failed;
                     error.style.display = '';
                 })
                 .finally(function() {

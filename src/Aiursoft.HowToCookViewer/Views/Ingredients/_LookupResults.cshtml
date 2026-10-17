@@ -10,17 +10,23 @@
 
 @if (Model.Truncated)
 {
-    <div class="col-12 alert alert-info">
-        @Localizer["Showing up to 24 recipes per match group. Refine your ingredients to narrow the results."]
+    <div class="col-12 alert alert-info" role="alert">
+        <div class="alert-message">
+            @Localizer["Showing up to 24 recipes per match group. Refine your ingredients to narrow the results."]
+        </div>
     </div>
 }
 
 @if (!hasExact && !hasNear)
 {
     <div class="col-12">
-        <div class="alert alert-info">
-            <i class="align-middle me-2" data-lucide="info"></i>
-            @Localizer["No recipes found with the selected ingredients"]
+        <div class="alert alert-info" role="alert">
+            <div class="alert-icon">
+                <i class="align-middle me-2" data-lucide="info"></i>
+            </div>
+            <div class="alert-message">
+                @Localizer["No recipes found with the selected ingredients"]
+            </div>
         </div>
     </div>
 }

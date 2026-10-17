@@ -74,8 +74,12 @@
             @if (Model.SimilarRecipes.Count == 0)
             {
                 <div class="alert alert-info" role="alert">
-                    <i class="align-middle me-2" data-lucide="info"></i>
-                    @Localizer["No similar recipes found."]
+                    <div class="alert-icon">
+                        <i class="align-middle me-2" data-lucide="info"></i>
+                    </div>
+                    <div class="alert-message">
+                        @Localizer["No similar recipes found."]
+                    </div>
                 </div>
             }
             else
