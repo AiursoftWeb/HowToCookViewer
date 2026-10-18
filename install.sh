@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Repository configuration.
 app_name="howToCookViewer"
+extra_docker_args=()
 
 set -euo pipefail
 
@@ -108,6 +109,7 @@ docker pull "$image"
 docker run --detach --name "$app_name" --restart unless-stopped \
     --publish "$port:5000" \
     --mount "type=volume,source=$app_name-data,target=/data" \
+    "${extra_docker_args[@]}" \
     "$image"
 
 # Older callers use systemctl restart <app> after installation.
