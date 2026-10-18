@@ -30,7 +30,7 @@ public class GlobalSettingsTests : TestBase
         };
         SettingsMap.Definitions.Add(secretDefinition);
         SettingsMap.Definitions.Add(textDefinition);
-        using var scope = Server!.Services.CreateScope();
+        using var scope = Server.Services.CreateScope();
         var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
         var cache = scope.ServiceProvider.GetRequiredService<Microsoft.Extensions.Caching.Memory.IMemoryCache>();
         try
