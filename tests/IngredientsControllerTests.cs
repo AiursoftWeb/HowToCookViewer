@@ -38,7 +38,7 @@ public class IngredientsControllerTests
 
         var config = new ConfigurationBuilder().Build();
         var memoryCache = new MemoryCache(new MemoryCacheOptions());
-        _settingsService = new GlobalSettingsService(_db, config, null!, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
+        _settingsService = new GlobalSettingsService(_db, config, null!, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), NullLogger<GlobalSettingsService>.Instance);
 
         var httpFactory = new TestHttpClientFactory(new FakeOllamaEmbedHandler());
         var logger = NullLogger<IngredientGroupService>.Instance;

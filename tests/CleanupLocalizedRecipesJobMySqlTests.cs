@@ -72,7 +72,7 @@ public class CleanupLocalizedRecipesJobMySqlTests
         {
             var cache = new MemoryCache(new MemoryCacheOptions());
             var config = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>()).Build();
-            var gss = new GlobalSettingsService(db, config, null!, cache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
+            var gss = new GlobalSettingsService(db, config, null!, cache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), NullLogger<GlobalSettingsService>.Instance);
             var job = new CleanupLocalizedRecipesJob(db, gss, NullLogger<CleanupLocalizedRecipesJob>.Instance);
 
             await job.ExecuteAsync();

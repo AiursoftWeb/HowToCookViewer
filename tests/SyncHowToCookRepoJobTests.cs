@@ -100,7 +100,7 @@ public class SyncHowToCookRepoJobTests
             .Options;
         await using var db = new InMemoryContext(dbOptions);
 
-        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
+        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         var sp = new ServiceCollection()
             .AddLogging()
@@ -146,7 +146,7 @@ public class SyncHowToCookRepoJobTests
             .UseInMemoryDatabase("SyncJobTest_" + Guid.NewGuid())
             .Options;
         await using var db = new InMemoryContext(dbOptions);
-        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
+        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         var sp = new ServiceCollection()
             .AddLogging()
@@ -239,7 +239,7 @@ public class SyncHowToCookRepoJobTests
             .UseInMemoryDatabase("SyncJobTest_" + Guid.NewGuid())
             .Options;
         var db = new InMemoryContext(dbOptions);
-        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
+        var globalSettings = new GlobalSettingsService(db, config, storageService, memoryCache, new EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         var serviceProvider = new ServiceCollection()
             .AddLogging()
