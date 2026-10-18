@@ -32,7 +32,7 @@ public class IngredientGroupServiceTests
 
         var config = new ConfigurationBuilder().Build();
         var memoryCache = new MemoryCache(new MemoryCacheOptions());
-        _settingsService = new GlobalSettingsService(_db, config, null!, memoryCache);
+        _settingsService = new GlobalSettingsService(_db, config, null!, memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         _httpClientFactory = new TestHttpClientFactory(new FakeOllamaEmbedHandler());
         var logger = NullLogger<IngredientGroupService>.Instance;
@@ -96,7 +96,7 @@ public class IngredientGroupServiceTests
         // so the cached old value isn't returned.
         await UpdateSettingAsync(SettingsMap.IngredientSimilarityThreshold, "90");
         var newMemoryCache = new MemoryCache(new MemoryCacheOptions());
-        var newSettings = new GlobalSettingsService(_db, new ConfigurationBuilder().Build(), null!, newMemoryCache);
+        var newSettings = new GlobalSettingsService(_db, new ConfigurationBuilder().Build(), null!, newMemoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         var second = await _service.GetGroupsAsync(_db, newSettings);
         Assert.AreNotSame(first, second, "Should rebuild when threshold changes.");

@@ -65,7 +65,7 @@ public class CleanupLocalizedRecipesJobTests
 
         // The job owns this context (disposed when the test cleans up)
         var db = new SqliteTestContext(_dbOptions);
-        var settings = new GlobalSettingsService(db, config, null!, _cache);
+        var settings = new GlobalSettingsService(db, config, null!, _cache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         return new CleanupLocalizedRecipesJob(
             db,

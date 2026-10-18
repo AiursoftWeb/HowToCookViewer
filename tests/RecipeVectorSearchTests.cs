@@ -74,7 +74,7 @@ public class RecipeVectorSearchTests
         _config = new ConfigurationBuilder()
             .AddInMemoryCollection(new Dictionary<string, string?>())
             .Build();
-        return new GlobalSettingsService(_db, _config, null!, _memoryCache);
+        return new GlobalSettingsService(_db, _config, null!, _memoryCache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
     }
 
     /// <summary>

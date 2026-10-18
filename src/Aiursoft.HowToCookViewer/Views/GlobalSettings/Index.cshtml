@@ -42,7 +42,14 @@
                     <td>
                         @if (item.IsOverriddenByConfig)
                         {
-                            <span class="text-muted">@item.Value</span>
+                            @if (item.Type == SettingType.Secret)
+                            {
+                                <span class="badge text-bg-success">@(item.IsConfigured ? Localizer["Configured"] : Localizer["Not configured"])</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">@item.Value</span>
+                            }
                         }
                         else
                         {
@@ -68,6 +75,18 @@
                                 {
                                     <div class="input-group input-group-sm">
                                         <input type="number" name="Value" value="@item.Value" class="form-control" />
+                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
+                                    </div>
+                                }
+                                else if (item.Type == SettingType.Secret)
+                                {
+                                    <div class="input-group input-group-sm">
+                                        <input type="password"
+                                               name="Value"
+                                               value=""
+                                               autocomplete="new-password"
+                                               placeholder="@(item.IsConfigured ? Localizer["Configured - enter a new value to replace"] : Localizer["Enter secret"] )"
+                                               class="form-control" />
                                         <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
                                     </div>
                                 }
@@ -111,7 +130,7 @@
                         }
                     </td>
                     <td class="text-end">
-                        @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
+                        @if ((item.Type == SettingType.Secret ? item.IsConfigured : item.Value != item.DefaultValue) && !item.IsOverriddenByConfig)
                         {
                             <form asp-action="Edit" method="post" class="d-inline">
                                 <input type="hidden" name="Key" value="@item.Key" />
