@@ -6,5 +6,6 @@ public enum SettingType
     Choice,
     Text,
     Number,
-    File
+    File,
+    Secret
 }

@@ -91,7 +91,7 @@ public class LocalizeRecipesJobTests
             .AddInMemoryCollection(new Dictionary<string, string?>())
             .Build();
 
-        var settings = new GlobalSettingsService(db, config, null!, _cache);
+        var settings = new GlobalSettingsService(db, config, null!, _cache, new Microsoft.AspNetCore.DataProtection.EphemeralDataProtectionProvider(), NullLogger<GlobalSettingsService>.Instance);
         var translator = new FakeTranslationService();
 
         return new LocalizeRecipesJob(

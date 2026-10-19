@@ -141,7 +141,7 @@ public class IndexRecipesJobTests
         var loggerFactory = sp.GetRequiredService<ILoggerFactory>();
 
         var globalSettings = new GlobalSettingsService(
-            new InMemoryContext(dbOptions), config, storageService, memoryCache);
+            new InMemoryContext(dbOptions), config, storageService, memoryCache, new EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
 
         var workspaceManager = sp.GetRequiredService<WorkspaceManager>();
         var syncJob = new SyncHowToCookRepoJob(
@@ -574,7 +574,7 @@ public class IndexRecipesJobTests
         await using var localizeDb = new SqliteEndToEndContext(dbOptions);
         using var cache = new MemoryCache(new MemoryCacheOptions());
         var config = new ConfigurationBuilder().Build();
-        var settings = new GlobalSettingsService(localizeDb, config, null!, cache);
+        var settings = new GlobalSettingsService(localizeDb, config, null!, cache, new EphemeralDataProtectionProvider(), Microsoft.Extensions.Logging.Abstractions.NullLogger<GlobalSettingsService>.Instance);
         var localizeJob = new LocalizeRecipesJob(
             localizeDb, settings, translator,
             loggerFactory.CreateLogger<LocalizeRecipesJob>());
