@@ -12,10 +12,10 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.ClickhouseLoggerProvider" Version="10.0.27" />
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="10.0.27" />
-    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.77" />
-    <PackageReference Include="Aiursoft.GitRunner" Version="10.0.39" />
+    <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.78" />
+    <PackageReference Include="Aiursoft.GitRunner" Version="10.0.40" />
     <PackageReference Include="Aiursoft.Scanner" Version="10.0.14" />
-    <PackageReference Include="Aiursoft.UiStack" Version="10.0.27" />
+    <PackageReference Include="Aiursoft.UiStack" Version="10.0.29" />
     <PackageReference Include="HtmlSanitizer" Version="9.2.1039" />
     <PackageReference Include="Markdig" Version="1.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="10.0.13" />
@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="Aiursoft.HowToCookViewer.Tests"></InternalsVisibleTo>
-    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.16" />
+    <PackageReference Include="Aiursoft.Canon.ScheduledTasks" Version="10.0.17" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aiursoft.HowToCookViewer.InMemory\Aiursoft.HowToCookViewer.InMemory.csproj" />
