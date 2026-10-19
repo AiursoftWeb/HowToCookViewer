@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>विवरण</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>कॉन्फ़िगर किया गया है</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>कॉन्फ़िगरेशन द्वारा अधिरोधित है</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>कुंजी</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>अधिकतम आकार (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>अधिकतम आकार मेगाबाइट में</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>उपफ़ोल्डर</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0} आवश्यक है।</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>प्रकार</value>

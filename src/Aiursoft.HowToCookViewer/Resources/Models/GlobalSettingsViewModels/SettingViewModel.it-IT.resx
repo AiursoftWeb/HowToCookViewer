@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>Descrizione</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>È configurato</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>Sovrascritto dalla configurazione</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>Chiave</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>Dimensione massima (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>Dimensione massima in MB</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>Sottocartella</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>Il {0} è obbligatorio.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Tipo</value>
