@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>설명</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>설정 여부</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>설정 파일로 재정의됨</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>키</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>최대 크기 (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>최대 크기 (MB)</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>하위 폴더</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}은(는) 필수 항목입니다.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>유형</value>

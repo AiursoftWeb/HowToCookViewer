@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>Beskrivning</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>Är konfigurerad</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>Åsidosatt av konfiguration</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>Nyckel</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>Maximal storlek (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>Maximal storlek i MB</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>Undermapp</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0} krävs.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Typ</value>

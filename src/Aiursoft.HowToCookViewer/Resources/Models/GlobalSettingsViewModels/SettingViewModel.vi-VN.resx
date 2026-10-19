@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>Mô tả</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>Đã được cấu hình</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>Bị ghi đè bởi cấu hình</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>Khóa</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>Kích thước tối đa (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>Kích thước tối đa (MB)</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>Thư mục con</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0} là bắt buộc.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Loại</value>

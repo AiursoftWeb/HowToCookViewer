@@ -30,11 +30,17 @@
   <data name="Description" xml:space="preserve">
     <value>Beskrivelse</value>
   </data>
+  <data name="Is Configured" xml:space="preserve">
+    <value>Er konfigureret</value>
+  </data>
   <data name="Is overridden by config" xml:space="preserve">
     <value>Overskrevet af konfiguration</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>Nøgle</value>
+  </data>
+  <data name="Max Size (MB)" xml:space="preserve">
+    <value>Maks. størrelse (MB)</value>
   </data>
   <data name="Max size in MB" xml:space="preserve">
     <value>Maks. størrelse i MB</value>
@@ -44,6 +50,9 @@
   </data>
   <data name="Subfolder" xml:space="preserve">
     <value>Undermappe</value>
+  </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0} er påkrævet.</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
