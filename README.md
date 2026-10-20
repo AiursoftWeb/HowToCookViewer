@@ -3,6 +3,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/howToCookViewer/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/howToCookViewer/-/pipelines)
+[![S360 compliance](https://s360.aiursoft.com/badge.svg?project=aiursoft%2Fhowtocookviewer)](https://s360.aiursoft.com/SupplyChain?tab=projects&project=aiursoft%2Fhowtocookviewer&scope=baseline&ecosystem=all)
 [![Man hours](https://manhours.aiursoft.com/r/github.com/aiursoftweb/howToCookViewer.svg)](https://manhours.aiursoft.com/r/github.com/aiursoftweb/howToCookViewer.html)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fhowtocook.aiursoft.com)](https://howtocook.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/howtocookviewer.svg)](https://hub.docker.com/r/aiursoft/howtocookviewer)
