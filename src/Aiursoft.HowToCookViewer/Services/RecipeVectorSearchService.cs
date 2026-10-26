@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
-using Aiursoft.HowToCookViewer.Util;
+using Aiursoft.WebTools;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 

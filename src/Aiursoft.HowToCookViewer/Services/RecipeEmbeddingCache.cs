@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Aiursoft.HowToCookViewer.Entities;
-using Aiursoft.HowToCookViewer.Util;
+using Aiursoft.WebTools;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.HowToCookViewer.Services;
