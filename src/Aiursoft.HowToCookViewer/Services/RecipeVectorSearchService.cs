@@ -267,35 +267,48 @@ public class RecipeVectorSearchService(
 
         // Truncate query text to fit bge-m3's 8192-token context window.
         // Queries are typically short, but a user might paste a very long document.
-        const int maxQueryChars = 8000;
-        var input = text.Length > maxQueryChars ? text[..maxQueryChars] : text;
+        var maxChars = 8000;
 
         var http = httpClientFactory.CreateClient();
         var baseUri = new Uri(instance);
         var embedEndpoint = $"{baseUri.Scheme}://{baseUri.Authority}/api/embed?keep_alive=-1";
-        var requestBody = new { model, input };
-        var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
-
-        var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint) { Content = content };
-        if (!string.IsNullOrWhiteSpace(token))
-        {
-            request.Headers.Authorization =
-                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-        }
-
         using var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(EmbedTimeoutSeconds));
         using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct, timeoutCts.Token);
-
-        var response = await http.SendAsync(request, linkedCts.Token);
-        response.EnsureSuccessStatusCode();
-
-        var result = await response.Content.ReadFromJsonAsync<OllamaEmbedResponse>(linkedCts.Token);
-        if (result?.Embeddings == null || result.Embeddings.Length == 0)
+        float[] embedding;
+        while (true)
         {
-            return null;
+            var input = text.Length > maxChars ? text[..maxChars] : text;
+            var requestBody = new { model, input };
+            using var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint);
+            request.Content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
+            if (!string.IsNullOrWhiteSpace(token))
+            {
+                request.Headers.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            }
+
+            using var response = await http.SendAsync(request, linkedCts.Token);
+            if (!response.IsSuccessStatusCode)
+            {
+                var error = await response.Content.ReadAsStringAsync(linkedCts.Token);
+                if (maxChars > 500 && EmbeddingHelper.IsContextLengthError(response.StatusCode, error))
+                {
+                    maxChars /= 2;
+                    continue;
+                }
+                response.EnsureSuccessStatusCode();
+            }
+
+            var result = await response.Content.ReadFromJsonAsync<OllamaEmbedResponse>(linkedCts.Token);
+            if (result?.Embeddings == null || result.Embeddings.Length == 0)
+            {
+                return null;
+            }
+
+            embedding = result.Embeddings[0];
+            break;
         }
 
-        var embedding = result.Embeddings[0];
         EmbeddingHelper.Normalize(embedding);
 
         // Cache the result in the database.

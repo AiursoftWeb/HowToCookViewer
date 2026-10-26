@@ -247,9 +247,7 @@ public class GenerateEmbeddingsJob(
 
             // If the input is too long, halve the limit and retry. Otherwise fail.
             var errorBody = await response.Content.ReadAsStringAsync();
-            var isContextError = errorBody.Contains("context", StringComparison.OrdinalIgnoreCase) ||
-                                 errorBody.Contains("length", StringComparison.OrdinalIgnoreCase) ||
-                                 errorBody.Contains("exceed", StringComparison.OrdinalIgnoreCase);
+            var isContextError = EmbeddingHelper.IsContextLengthError(response.StatusCode, errorBody);
             if (!isContextError || maxChars <= 500)
             {
                 throw new HttpRequestException(

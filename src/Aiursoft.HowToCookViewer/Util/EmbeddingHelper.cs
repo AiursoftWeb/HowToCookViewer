@@ -2,6 +2,15 @@ namespace Aiursoft.HowToCookViewer.Util;
 
 public static class EmbeddingHelper
 {
+    public static bool IsContextLengthError(System.Net.HttpStatusCode statusCode, string error)
+    {
+        return statusCode is System.Net.HttpStatusCode.BadRequest or System.Net.HttpStatusCode.RequestEntityTooLarge &&
+               error.Contains("context", StringComparison.OrdinalIgnoreCase) &&
+               (error.Contains("length", StringComparison.OrdinalIgnoreCase) ||
+                error.Contains("window", StringComparison.OrdinalIgnoreCase) ||
+                error.Contains("exceed", StringComparison.OrdinalIgnoreCase));
+    }
+
     public static float CosineSimilarity(float[] a, float[] b)
     {
         var dot = 0f;
