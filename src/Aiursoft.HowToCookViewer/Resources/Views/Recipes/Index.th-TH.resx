@@ -33,6 +33,9 @@
   <data name="Loading…" xml:space="preserve">
     <value>กำลังโหลด…</value>
   </data>
+  <data name="More recipes could not be loaded. Please try again." xml:space="preserve">
+    <value>ไม่สามารถโหลดสูตรอาหารเพิ่มเติมได้ โปรดลองอีกครั้ง</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>ยังไม่มีสูตรอาหาร งานจัดทำดัชนีพื้นหลังอาจยังคงทำงานอยู่</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>ลองอีกครั้ง</value>
   </data>
 
 </root>

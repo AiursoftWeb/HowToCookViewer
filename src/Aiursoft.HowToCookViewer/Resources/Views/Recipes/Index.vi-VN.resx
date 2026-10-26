@@ -33,6 +33,9 @@
   <data name="Loading…" xml:space="preserve">
     <value>Đang tải…</value>
   </data>
+  <data name="More recipes could not be loaded. Please try again." xml:space="preserve">
+    <value>Không thể tải thêm công thức. Vui lòng thử lại.</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>Chưa có công thức nấu ăn nào. Công việc lập chỉ mục nền có thể vẫn đang chạy.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Thử lại</value>
   </data>
 
 </root>
