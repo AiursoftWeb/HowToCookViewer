@@ -48,6 +48,9 @@
   <data name="Loading…" xml:space="preserve">
     <value>Loading…</value>
   </data>
+  <data name="More recipes could not be loaded. Please try again." xml:space="preserve">
+    <value>More recipes couldn&apos;t be loaded. Please try again.</value>
+  </data>
   <data name="No recipes yet. The background indexing job may still be running." xml:space="preserve">
     <value>No recipes yet. The background indexing job may still be running.</value>
   </data>
@@ -62,6 +65,9 @@
   </data>
   <data name="Total {0} recipes" xml:space="preserve">
     <value>Total {0} recipes</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Try again</value>
   </data>
 
 </root>

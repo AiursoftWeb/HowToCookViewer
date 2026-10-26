@@ -13,6 +13,6 @@
     <ProjectReference Include="..\Aiursoft.HowToCookViewer.Entities\Aiursoft.HowToCookViewer.Entities.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aiursoft.DbTools.MySql" Version="10.0.39" />
+    <PackageReference Include="Aiursoft.DbTools.MySql" Version="10.0.40" />
   </ItemGroup>
 </Project>
