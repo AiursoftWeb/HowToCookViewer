@@ -71,63 +71,16 @@
                 <div class="spinner-border text-secondary" role="status" style="display:none;" id="load-spinner">
                     <span class="visually-hidden">@Localizer["Loading…"]</span>
                 </div>
+                <div id="load-error" class="d-none mt-2">
+                    <p class="text-danger mb-2" role="alert">@Localizer["More recipes could not be loaded. Please try again."]</p>
+                    <button id="retry-load" type="button" class="btn btn-outline-primary">@Localizer["Try again"]</button>
+                </div>
             </div>
-
-            <script>
-            (function () {
-                let nextPage = 2;
-                let loading = false;
-                let hasMore = true;
-
-                const grid     = document.getElementById('recipe-grid');
-                const sentinel = document.getElementById('load-sentinel');
-                const spinner  = document.getElementById('load-spinner');
-
-                const category   = sentinel.dataset.category   || null;
-                const difficulty = sentinel.dataset.difficulty || null;
-                const sortBy     = sentinel.dataset.sortBy     || null;
-
-                function buildUrl(page) {
-                    const params = new URLSearchParams({ page });
-                    if (category)   params.set('category',   category);
-                    if (difficulty) params.set('difficulty', difficulty);
-                    if (sortBy)     params.set('sortBy',     sortBy);
-                    return '/Recipes/LoadMore?' + params.toString();
-                }
-
-                async function loadMore() {
-                    if (loading || !hasMore) return;
-                    loading = true;
-                    spinner.style.display = '';
-
-                    try {
-                        const resp = await fetch(buildUrl(nextPage));
-                        if (!resp.ok) { hasMore = false; return; }
-
-                        const html = await resp.text();
-                        hasMore = resp.headers.get('X-Has-More') === 'true';
-                        nextPage++;
-
-                        const tmp = document.createElement('div');
-                        tmp.innerHTML = html;
-                        while (tmp.firstChild) grid.appendChild(tmp.firstChild);
-
-                        if (typeof lucide !== 'undefined') lucide.createIcons();
-                    } finally {
-                        loading = false;
-                        spinner.style.display = 'none';
-                        if (!hasMore) sentinel.style.display = 'none';
-                    }
-                }
-
-                const observer = new IntersectionObserver(
-                    entries => { if (entries[0].isIntersecting) loadMore(); },
-                    { rootMargin: '200px' }
-                );
-                observer.observe(sentinel);
-            })();
-            </script>
         }
     }
 </div>
 
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section Scripts {
+    <script src="~/scripts/recipe-list.js" asp-append-version="true"></script>
+}
