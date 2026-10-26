@@ -6,7 +6,7 @@ using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.InMemory;
 using Aiursoft.HowToCookViewer.Services;
 using Aiursoft.HowToCookViewer.Services.BackgroundJobs;
-using Aiursoft.HowToCookViewer.Util;
+using Aiursoft.WebTools;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
