@@ -279,9 +279,8 @@ public class RecipeVectorSearchService(
         {
             var input = text.Length > maxChars ? text[..maxChars] : text;
             var requestBody = new { model, input };
-            var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
-
-            using var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint) { Content = content };
+            using var request = new HttpRequestMessage(HttpMethod.Post, embedEndpoint);
+            request.Content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
             if (!string.IsNullOrWhiteSpace(token))
             {
                 request.Headers.Authorization =
