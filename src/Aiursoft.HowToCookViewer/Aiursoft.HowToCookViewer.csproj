@@ -15,8 +15,7 @@
     <PackageReference Include="Aiursoft.Dotlang.AspNetTranslate" Version="10.0.86" />
     <PackageReference Include="Aiursoft.GitRunner" Version="10.0.44" />
     <PackageReference Include="Aiursoft.Scanner" Version="10.0.15" />
-    <PackageReference Include="Aiursoft.UiStack" Version="10.0.32" />
-    <PackageReference Include="Aiursoft.WebTools" Version="10.0.21" />
+    <PackageReference Include="Aiursoft.UiStack" Version="10.0.33" />
     <PackageReference Include="HtmlSanitizer" Version="9.2.1039" />
     <PackageReference Include="Markdig" Version="1.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="10.0.14" />
