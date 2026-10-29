@@ -16,9 +16,11 @@ public abstract class TestBase
     private static readonly Lazy<Task<SharedServer>> LazyServer = new(async () =>
     {
         using var reservation = new TestPortReservation();
-        var server = await AppAsync<Startup>([], port: reservation.Port);
+        var storagePath = Directory.CreateTempSubdirectory("AiursoftTests-").FullName;
+        IHost? server = null;
         try
         {
+            server = await AppAsync<Startup>([$"Storage:Path={storagePath}"], port: reservation.Port);
             reservation.ConfigureServer(server);
             await server.UpdateDbAsync<TemplateDbContext>();
             await server.SeedAsync();
@@ -26,14 +28,25 @@ public abstract class TestBase
             var shared = new SharedServer(reservation.Port, server);
             AppDomain.CurrentDomain.ProcessExit += (_, _) =>
             {
-                shared.Host.StopAsync().GetAwaiter().GetResult();
-                shared.Host.Dispose();
+                try
+                {
+                    shared.Host.StopAsync().GetAwaiter().GetResult();
+                }
+                finally
+                {
+                    shared.Host.Dispose();
+                    Directory.Delete(storagePath, recursive: true);
+                }
             };
             return shared;
         }
         catch
         {
-            await server.DisposeAsync();
+            if (server != null)
+            {
+                await server.DisposeAsync();
+            }
+            Directory.Delete(storagePath, recursive: true);
             throw;
         }
     });
