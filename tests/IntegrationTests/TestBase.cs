@@ -17,7 +17,7 @@ public abstract class TestBase
     {
         using var reservation = new TestPortReservation();
         var storagePath = Directory.CreateTempSubdirectory("AiursoftTests-").FullName;
-        IHost? server = null;
+        WebApplication? server = null;
         try
         {
             server = await AppAsync<Startup>([$"Storage:Path={storagePath}"], port: reservation.Port);
