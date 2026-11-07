@@ -210,7 +210,7 @@ public class OidcCallbackTests
             new ClaimsPrincipal(new ClaimsIdentity(claims, "test")),
             new AuthenticationProperties());
         await _options.Events.TokenValidated(context);
-        Assert.IsNotNull(context.Result?.Failure);
+        Assert.IsNotNull(context.Result.Failure);
         Assert.IsInstanceOfType<InvalidOperationException>(context.Result.Failure);
         await AssertFailure(context.Result.Failure, false);
     }
