@@ -34,6 +34,9 @@ public class RecipesDetailTests : TestBase
         Assert.Contains("Test Recipe", html);
         Assert.Contains("Difficulty", html);
         Assert.Contains("5", html);
+        Assert.Contains("/ 5", html);
+        Assert.Contains("difficulty-meter", html);
+        Assert.Contains("difficulty-icon", html);
         Assert.Contains("Expert", html); // Difficulty 5 should be "Expert" (index 4)
     }
 
