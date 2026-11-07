@@ -1,5 +1,7 @@
 using System.Collections.Concurrent;
 using System.Net;
+using System.Security.Claims;
+using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.DbTools;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.AspNetCore.Authentication;
@@ -182,6 +184,35 @@ public class OidcCallbackTests
     {
         await AssertFailure(new AuthenticationFailureException("Authentication infrastructure failed.",
             new InvalidOperationException("Database unavailable.")), false);
+    }
+
+    [TestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task ProviderProfileAndAccountSynchronizationFailuresRemainInternal(bool invalidRole)
+    {
+        using var scope = Server!.Services.CreateScope();
+        var settings = scope.ServiceProvider.GetRequiredService<IOptions<AppSettings>>().Value.OIDC;
+        var claims = invalidRole
+            ? new[]
+            {
+                new Claim(settings.UsernamePropertyName, "callback-user"),
+                new Claim(settings.UserDisplayNamePropertyName, "Callback User"),
+                new Claim(settings.EmailPropertyName, "callback-user@example.com"),
+                new Claim(settings.UserIdentityPropertyName, "callback-subject"),
+                new Claim(settings.RolePropertyName, new string('x', 257))
+            }
+            : Array.Empty<Claim>();
+        var context = new TokenValidatedContext(
+            new DefaultHttpContext { RequestServices = scope.ServiceProvider },
+            new AuthenticationScheme(OpenIdConnectDefaults.AuthenticationScheme, null, typeof(OpenIdConnectHandler)),
+            _options,
+            new ClaimsPrincipal(new ClaimsIdentity(claims, "test")),
+            new AuthenticationProperties());
+        await _options.Events.TokenValidated(context);
+        Assert.IsNotNull(context.Result?.Failure);
+        Assert.IsInstanceOfType<InvalidOperationException>(context.Result.Failure);
+        await AssertFailure(context.Result.Failure, false);
     }
 
     private async Task AssertFailure(Exception exception, bool recoverable)
