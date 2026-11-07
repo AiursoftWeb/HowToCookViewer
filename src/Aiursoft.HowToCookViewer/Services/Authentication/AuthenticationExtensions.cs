@@ -105,16 +105,25 @@ public static class AuthenticationExtensions
     }
 
     /// <summary>
-    /// Handle OIDC remote failures (fallback logic for correlation failures or invalid grants)
+    /// Reject invalid callbacks and recover from expected OIDC login failures.
     /// </summary>
     private static async Task HandleRemoteFailure(RemoteFailureContext context)
     {
         var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Startup>>();
 
-        // Check if the exception is an OIDC protocol exception
-        if (context.Failure is OpenIdConnectProtocolException)
+        // Explicit authentication rejections include missing/invalid state and expired correlation cookies.
+        // Failures with an inner exception retain the normal server-error path.
+        if (context.Failure is AuthenticationFailureException { InnerException: null })
         {
-            logger.LogWarning(context.Failure, "OIDC protocol error detected (likely invalid_grant or dirty cookie). Initiating cleanup and redirect.");
+            logger.LogWarning("Rejected an invalid or expired OIDC callback.");
+            context.HandleResponse();
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
+        }
+        else if (context.Failure is OpenIdConnectProtocolException &&
+                 context.Failure.Data["error"] is "invalid_grant" or "access_denied" or
+                     "login_required" or "interaction_required" or "consent_required")
+        {
+            logger.LogWarning("OIDC login could not be completed. Initiating cleanup and redirect.");
 
             // 1. Mark the exception as handled to prevent the yellow screen of death
             context.HandleResponse();
@@ -128,11 +137,7 @@ public static class AuthenticationExtensions
             // 3. Redirect back to login page to let user retry with a fresh request
             context.Response.Redirect("/Account/Login");
         }
-        else
-        {
-            // If it's a different type of error, log it and allow default behavior
-            logger.LogError(context.Failure, "An unexpected error occurred during OIDC remote authentication.");
-        }
+        // Unexpected failures propagate to the exception middleware; do not log them twice here.
     }
 
     private static async Task SyncOidcContext(TokenValidatedContext context)
@@ -156,7 +161,7 @@ public static class AuthenticationExtensions
             string.IsNullOrEmpty(email) ||
             string.IsNullOrEmpty(providerKey))
         {
-            context.Fail("Could not find the required username, displayName, email, or sub claim in the OIDC token.");
+            context.Fail(new InvalidOperationException("Could not find the required username, displayName, email, or sub claim in the OIDC token."));
             return;
         }
 
@@ -177,7 +182,7 @@ public static class AuthenticationExtensions
         if (!syncResult.Succeeded)
         {
             var errors = string.Join(", ", syncResult.Errors.Select(error => error.Description));
-            context.Fail($"Failed to synchronize the OIDC account: {errors}");
+            context.Fail(new InvalidOperationException($"Failed to synchronize the OIDC account: {errors}"));
         }
     }
 }
