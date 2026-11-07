@@ -337,9 +337,6 @@ public class RecipesController(
         if (!string.IsNullOrWhiteSpace(description))
             parts.Add(description);
 
-        if (recipe.Calories.HasValue)
-            parts.Add($"**{localizer["Estimated Calories"].Value}：{recipe.Calories.Value} kcal**");
-
         if (!string.IsNullOrWhiteSpace(ingredients))
             parts.Add($"{hIngredients}\n{ingredients}");
 
