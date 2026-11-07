@@ -82,9 +82,9 @@
     <div class="row">
         <div class="col-12 col-lg-8 offset-lg-2">
             <div class="card shadow-sm">
-                <div class="card-body p-4 p-md-5">
+                <div class="card-body p-3 p-md-5">
                     <!-- Difficulty Section -->
-                    <div class="mb-5 p-4 bg-light rounded-4 shadow-sm border-start border-4 border-warning">
+                    <div class="mb-5 p-3 p-md-4 bg-body-tertiary text-body-emphasis rounded-4 shadow-sm border-start border-4 border-warning">
                         <div class="d-flex align-items-center flex-wrap gap-4">
                             <div>
                                 <div class="text-muted small text-uppercase fw-bold mb-1">@Localizer["Difficulty"]</div>
@@ -94,11 +94,11 @@
                                 </div>
                             </div>
                             <div class="difficulty-meter-container flex-grow-1">
-                                <div class="difficulty-meter d-flex gap-2" data-difficulty="@Model.Recipe.Difficulty">
+                                <div class="difficulty-meter d-flex gap-1 gap-md-2" data-difficulty="@Model.Recipe.Difficulty">
                                     @for (int i = 1; i <= 5; i++)
                                     {
                                         <div class="difficulty-step" data-index="@i">
-                                            <i class="difficulty-icon" data-lucide="flame" style="width: 32px; height: 32px; color: #dee2e6; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);"></i>
+                                            <i class="difficulty-icon" data-lucide="flame" style="color: #dee2e6; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);"></i>
                                         </div>
                                     }
                                 </div>
@@ -114,13 +114,13 @@
                     @if (Model.Recipe.Calories.HasValue)
                     {
                         <!-- Calories Section -->
-                        <div class="mb-5 p-4 rounded-4 shadow-sm border-start border-4 border-danger"
-                             style="background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #fef9f0 100%);">
+                        <div class="mb-5 p-3 p-md-4 bg-body-tertiary text-body-emphasis rounded-4 shadow-sm border-start border-4 border-danger"
+                             style="background-image: linear-gradient(135deg, rgba(220,53,69,0.04) 0%, transparent 50%, rgba(245,158,11,0.06) 100%);">
                             <div class="d-flex align-items-center flex-wrap gap-4">
                                 <div class="calorie-gauge-wrapper position-relative d-flex align-items-center justify-content-center"
                                      style="width:130px;height:130px;" data-calories="@Model.Recipe.Calories.Value">
                                     <svg class="calorie-gauge-svg" viewBox="0 0 120 120" style="position:absolute;width:130px;height:130px;transform:rotate(-90deg);">
-                                        <circle cx="60" cy="60" r="52" fill="none" stroke="#f0f0f0" stroke-width="8"/>
+                                        <circle cx="60" cy="60" r="52" fill="none" stroke="var(--bs-border-color)" stroke-width="8"/>
                                         <circle class="calorie-gauge-fill" cx="60" cy="60" r="52" fill="none"
                                                 stroke="#dc3545" stroke-width="8" stroke-linecap="round"
                                                 stroke-dasharray="326.73"
@@ -366,6 +366,11 @@
 .recipe-markdown ul, .recipe-markdown ol { padding-left: 1.5rem; }
 .recipe-markdown li { margin-bottom: .25rem; }
 .recipe-markdown p { line-height: 1.8; }
+
+.difficulty-icon { width: 32px; height: 32px; }
+@@media (max-width: 767.98px) {
+    .difficulty-icon { width: 24px; height: 24px; }
+}
 
 .difficulty-step {
     cursor: help;
