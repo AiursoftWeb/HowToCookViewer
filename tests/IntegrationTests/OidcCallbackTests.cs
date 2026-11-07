@@ -125,6 +125,7 @@ public class OidcCallbackTests
         Assert.StartsWith("https://idp.example.com/authorize", response.Headers.Location.AbsoluteUri);
         Assert.Contains("state=", response.Headers.Location.Query);
         Assert.IsTrue(response.Headers.TryGetValues("Set-Cookie", out var cookies));
+        Assert.IsNotNull(cookies);
         Assert.IsTrue(cookies.Any(cookie => cookie.StartsWith(".AspNetCore.Correlation.", StringComparison.Ordinal)));
         Assert.AreEqual(0, _logs.Errors.Count);
     }
