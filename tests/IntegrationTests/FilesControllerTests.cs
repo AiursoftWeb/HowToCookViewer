@@ -13,6 +13,43 @@ public class FilesControllerTests : TestBase
         new HttpClientHandler { AllowAutoRedirect = false });
 
     [TestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task UploadNamingFollowsTheSignedGrantInAnyFolder(bool generateUniqueFileName)
+    {
+        await LoginAsAdmin();
+        var storage = GetService<StorageService>();
+        var folder = $"naming-policy/{Guid.NewGuid():N}";
+        var uploadUrl = storage.GetUploadUrl(folder, allowedExtensions: "txt",
+            generateUniqueFileName: generateUniqueFileName);
+        var paths = new List<string>();
+        for (var attempt = 0; attempt < 2; attempt++)
+        {
+            using var content = new MultipartFormDataContent();
+            content.Add(new StringContent($"upload-{attempt}"), "file", "same-name.txt");
+            var response = await Http.PostAsync(uploadUrl, content);
+            response.EnsureSuccessStatusCode();
+            var uploaded = await response.Content.ReadFromJsonAsync<UploadResult>();
+            Assert.IsNotNull(uploaded);
+            paths.Add(uploaded.Path);
+            Assert.IsTrue(uploaded.Path.StartsWith(folder + "/", StringComparison.Ordinal));
+            Assert.AreEqual(".txt", Path.GetExtension(uploaded.Path));
+            if (generateUniqueFileName)
+            {
+                Assert.IsTrue(Guid.TryParseExact(Path.GetFileNameWithoutExtension(uploaded.Path), "N", out _));
+            }
+            else
+            {
+                Assert.AreEqual(folder + "/same-name.txt", uploaded.Path);
+            }
+        }
+        Assert.AreEqual(generateUniqueFileName, paths[0] != paths[1]);
+        Assert.AreEqual(generateUniqueFileName ? "upload-0" : "upload-1",
+            await Http.GetStringAsync("/download/" + paths[0]));
+        Assert.AreEqual("upload-1", await Http.GetStringAsync("/download/" + paths[1]));
+    }
+
+    [TestMethod]
     public async Task TestUploadAndDownload()
     {
         await LoginAsAdmin();

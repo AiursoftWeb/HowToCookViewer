@@ -126,6 +126,11 @@ public class FilesController(
             return BadRequest("The uploaded file is not a valid raster image.");
         }
 
+        if (uploadPolicy.GenerateUniqueFileName)
+        {
+            fileName = $"{Guid.NewGuid():N}{Path.GetExtension(fileName)}";
+        }
+
         var storePath = Path.Combine(subfolder, fileName);
         var relativePath = await storage.Save(storePath, file, isVault, HttpContext.RequestAborted);
         return Ok(new

@@ -13,6 +13,9 @@ public sealed record FileUploadPolicy(
     bool RequireAuthenticatedUser,
     bool ReplaceSpacesWithHyphens)
 {
+    // Signed by the grant issuer; generic uploads preserve names unless explicitly requested.
+    public bool GenerateUniqueFileName { get; init; }
+
     public const int DefaultMaxSizeInMb = 10;
     public const int AbsoluteMaxSizeInMb = 2048;
 
