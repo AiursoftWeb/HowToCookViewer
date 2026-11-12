@@ -91,8 +91,8 @@ public class RecipeContributorService(
 
     private string GetGravatarUrl(string email)
     {
-        var hash = MD5.HashData(Encoding.UTF8.GetBytes(email.ToLower().Trim()));
-        var hashStr = BitConverter.ToString(hash).Replace("-", "").ToLower();
+        var hash = MD5.HashData(Encoding.UTF8.GetBytes(email.ToLowerInvariant().Trim()));
+        var hashStr = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
         return $"https://www.gravatar.com/avatar/{hashStr}?d=identicon";
     }
 

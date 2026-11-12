@@ -1,3 +1,4 @@
+using System.Globalization;
 using Aiursoft.GitRunner;
 using Aiursoft.HowToCookViewer.Configuration;
 using Aiursoft.HowToCookViewer.Entities;
@@ -284,7 +285,7 @@ public class IndexRecipesJobTests
         Assert.AreEqual("true", RunGitCommand("rev-parse --is-shallow-repository", clonedRepoPath),
             "This regression test must exercise a real depth-1 clone.");
         var shallowPathTimestamp = DateTimeOffset.Parse(
-            RunGitCommand("log -1 --format=%cI -- dishes/vegetable_dish/tomato.md", clonedRepoPath)).UtcDateTime;
+            RunGitCommand("log -1 --format=%cI -- dishes/vegetable_dish/tomato.md", clonedRepoPath), CultureInfo.InvariantCulture).UtcDateTime;
         Assert.IsTrue(shallowPathTimestamp > originalTranslationRevision,
             "A depth-1 clone should incorrectly report the new HEAD timestamp for the unchanged recipe path.");
 

@@ -88,10 +88,10 @@ public class IngredientsController(
         const int maxPerGroup = 24;
         var exact = scored.Where(r => r.Pct == 100)
             .OrderByDescending(r => r.HasImages).ThenByDescending(r => r.Likes)
-            .ThenBy(r => r.Name).ThenBy(r => r.Id).ToList();
+            .ThenBy(r => r.Name, StringComparer.CurrentCulture).ThenBy(r => r.Id).ToList();
         var near = scored.Where(r => r.Pct >= 60 && r.Pct < 100)
             .OrderByDescending(r => r.Pct).ThenByDescending(r => r.HasImages)
-            .ThenBy(r => r.Name).ThenBy(r => r.Id).ToList();
+            .ThenBy(r => r.Name, StringComparer.CurrentCulture).ThenBy(r => r.Id).ToList();
         var selected = exact.Take(maxPerGroup).Concat(near.Take(maxPerGroup)).ToList();
         var selectedIds = selected.Select(r => r.Id).ToList();
         var allRecipes = await db.Recipes.AsNoTracking().Where(r => selectedIds.Contains(r.Id))

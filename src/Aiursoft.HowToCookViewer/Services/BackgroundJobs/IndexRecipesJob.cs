@@ -1,3 +1,4 @@
+using System.Globalization;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
@@ -257,7 +258,7 @@ public partial class IndexRecipesJob(
             if (line.StartsWith("预估卡路里：") && line.EndsWith("大卡"))
             {
                 var numPart = line["预估卡路里：".Length..^"大卡".Length];
-                if (double.TryParse(numPart, out var c))
+                if (double.TryParse(numPart, NumberStyles.Float, CultureInfo.InvariantCulture, out var c))
                     calories = c;
                 continue;
             }
@@ -376,7 +377,7 @@ public partial class IndexRecipesJob(
         var output = await process.StandardOutput.ReadToEndAsync();
         await process.WaitForExitAsync();
 
-        if (DateTimeOffset.TryParse(output.Trim(), out var dt))
+        if (DateTimeOffset.TryParse(output.Trim(), CultureInfo.InvariantCulture, DateTimeStyles.None, out var dt))
         {
             return dt.UtcDateTime;
         }

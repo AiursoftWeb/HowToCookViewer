@@ -126,7 +126,7 @@ public class IngredientGroupService(
 
         groups = groups
             .OrderByDescending(g => g.DistinctRecipeCount)
-            .ThenBy(g => g.Canonical.Name)
+            .ThenBy(g => g.Canonical.Name, StringComparer.CurrentCulture)
             .ToList();
 
         _canonicalToAliasIds = aliasIds;
