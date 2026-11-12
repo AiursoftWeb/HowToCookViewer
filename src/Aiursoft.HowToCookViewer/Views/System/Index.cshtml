@@ -255,7 +255,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var kv in Model.TableCounts.OrderBy(kv => kv.Key))
+                    @foreach (var kv in Model.TableCounts.OrderBy(kv => kv.Key, StringComparer.Ordinal))
                     {
                         <tr>
                             <td>@kv.Key</td>

@@ -61,7 +61,7 @@ public class JobsController(
         {
             RegisteredJobs = jobRegistry.GetAll(),
             ScheduledTasks = scheduledTasks
-                .OrderBy(t => t.JobType.Name)
+                .OrderBy(t => t.JobType.Name, StringComparer.Ordinal)
                 .ToList(),
             LastRunAtByJobType = lastRunAtByJobType,
             AllRecentJobs = allJobs
