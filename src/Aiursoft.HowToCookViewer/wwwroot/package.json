@@ -5,7 +5,7 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
-    "@aiursoft/uistack-markdown-ui": "1.2.19",
+    "@aiursoft/uistack-markdown-ui": "1.2.20",
     "@highlightjs/cdn-assets": "^11.12.0",
     "dropify": "^0.2.2",
     "mathjax": "^3.2.2",
