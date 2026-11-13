@@ -244,7 +244,7 @@ public class OidcCallbackTests
 
         await _options.Events.TokenValidated(context);
 
-        Assert.IsNull(context.Result?.Failure);
+        Assert.IsFalse(context.Result is { Failure: not null });
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
         var user = await userManager.FindByLoginAsync(OpenIdConnectDefaults.AuthenticationScheme, "callback-subject");
         Assert.IsNotNull(user);
