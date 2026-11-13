@@ -6,6 +6,7 @@ using Aiursoft.DbTools;
 using Aiursoft.HowToCookViewer.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -213,6 +214,43 @@ public class OidcCallbackTests
         Assert.IsNotNull(context.Result.Failure);
         Assert.IsInstanceOfType<InvalidOperationException>(context.Result.Failure);
         await AssertFailure(context.Result.Failure, false);
+    }
+
+    [TestMethod]
+    [DataRow(null, "callback-user")]
+    [DataRow("", "callback-user")]
+    [DataRow(" \t\r\n", "callback-user")]
+    [DataRow("Callback User", "Callback User")]
+    public async Task DisplayNameFallsBackToUsernameWhenBlank(string? displayName, string expectedDisplayName)
+    {
+        using var scope = Server!.Services.CreateScope();
+        var settings = scope.ServiceProvider.GetRequiredService<IOptions<AppSettings>>().Value.OIDC;
+        var claims = new List<Claim>
+        {
+            new(settings.UsernamePropertyName, "callback-user"),
+            new(settings.EmailPropertyName, "callback-user@example.com"),
+            new(settings.UserIdentityPropertyName, "callback-subject")
+        };
+        if (displayName != null)
+        {
+            claims.Add(new Claim(settings.UserDisplayNamePropertyName, displayName));
+        }
+        var context = new TokenValidatedContext(
+            new DefaultHttpContext { RequestServices = scope.ServiceProvider },
+            new AuthenticationScheme(OpenIdConnectDefaults.AuthenticationScheme, null, typeof(OpenIdConnectHandler)),
+            _options,
+            new ClaimsPrincipal(new ClaimsIdentity(claims, "test")),
+            new AuthenticationProperties());
+
+        await _options.Events.TokenValidated(context);
+
+        Assert.IsNull(context.Result?.Failure);
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+        var user = await userManager.FindByLoginAsync(OpenIdConnectDefaults.AuthenticationScheme, "callback-subject");
+        Assert.IsNotNull(user);
+        Assert.AreEqual(expectedDisplayName, user.DisplayName);
+        Assert.AreEqual("callback-user", user.UserName);
+        Assert.AreEqual("callback-user@example.com", user.Email);
     }
 
     private async Task AssertFailure(Exception exception, bool recoverable)
