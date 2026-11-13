@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Localization;
 using Aiursoft.HowToCookViewer.Authorization;
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Models.UsersViewModels;
@@ -19,7 +20,8 @@ namespace Aiursoft.HowToCookViewer.Controllers;
 public class UsersController(
     RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
-    TemplateDbContext context)
+    TemplateDbContext context,
+    IStringLocalizer<AppPermissions> permissionLocalizer)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
@@ -87,7 +89,8 @@ public class UsersController(
 
         var permissions = AppPermissions.GetAllPermissions()
             .Where(p => allPermissionValues.Contains(p.Key))
-            .OrderBy(p => p.Name)
+            .OrderBy(p => permissionLocalizer[p.Name].Value, StringComparer.CurrentCulture)
+            .ThenBy(p => p.Key, StringComparer.Ordinal)
             .ToList();
 
         var likes = await context.RecipeLikes

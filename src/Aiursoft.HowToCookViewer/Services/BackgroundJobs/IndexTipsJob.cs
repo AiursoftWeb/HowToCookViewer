@@ -1,3 +1,4 @@
+using System.Globalization;
 using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.HowToCookViewer.Entities;
 using Aiursoft.HowToCookViewer.Services.FileStorage;
@@ -136,7 +137,7 @@ public class IndexTipsJob(
         process.Start();
         var output = await process.StandardOutput.ReadToEndAsync();
         await process.WaitForExitAsync();
-        if (DateTimeOffset.TryParse(output.Trim(), out var dt)) return dt.UtcDateTime;
+        if (DateTimeOffset.TryParse(output.Trim(), CultureInfo.InvariantCulture, DateTimeStyles.None, out var dt)) return dt.UtcDateTime;
         logger.LogWarning("IndexTipsJob: could not parse git log date for '{File}'. Using UtcNow.", relativeFilePath);
         return DateTime.UtcNow;
     }
