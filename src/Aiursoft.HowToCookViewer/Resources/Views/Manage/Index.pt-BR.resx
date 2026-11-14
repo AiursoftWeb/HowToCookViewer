@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>Gerenciamento de Conta</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>provedor de autenticação</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>Configurações do Avatar</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Você não pode alterar sua senha porque a autenticação local está desativada. Edite seu perfil no provedor de autenticação.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>provedor de autenticação</value>
   </data>
 
 </root>

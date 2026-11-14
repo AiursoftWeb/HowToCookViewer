@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Berechtigungen werden von der Anwendung definiert und können nicht bearbeitet oder gelöscht werden. Klicken Sie auf eine Berechtigung, um zu sehen, welche Rollen und Benutzer sie besitzen.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Benutzer mit Berechtigung</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>Rolle(n)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>Benutzer</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Benutzer mit Berechtigung</value>
   </data>
 
 </root>

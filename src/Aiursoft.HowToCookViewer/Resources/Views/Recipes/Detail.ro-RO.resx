@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>Începător</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>Se calculează...</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Comentarii</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>commit-uri</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Conținut comunitar</value>
@@ -95,9 +89,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Intermediar</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>kcal</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Ultima actualizare:</value>
@@ -143,6 +134,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Scrieți comentariul dvs...</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commit-uri</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
   </data>
 
 </root>

@@ -21,6 +21,9 @@
       <data name="Name" xml:space="preserve">
     <value>Nimi</value>
   </data>
+  <data name="The name is required." xml:space="preserve">
+    <value>Nimi on pakollinen.</value>
+  </data>
   <data name="The {0} is required." xml:space="preserve">
     <value>Kenttä {0} on pakollinen.</value>
   </data>
@@ -29,9 +32,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>{0} saa olla enintään {1} merkkiä pitkä.</value>
-  </data>
-  <data name="The name is required." xml:space="preserve">
-    <value>Nimi on pakollinen.</value>
   </data>
 
 </root>

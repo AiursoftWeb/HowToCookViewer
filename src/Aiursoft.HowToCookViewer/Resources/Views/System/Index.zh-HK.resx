@@ -18,14 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name=".NET Version" xml:space="preserve">
-    <value>.NET 版本</value>
-  </data>
-  <data name="(32-bit)" xml:space="preserve">
+      <data name="(32-bit)" xml:space="preserve">
     <value>（32位）</value>
   </data>
   <data name="(64-bit)" xml:space="preserve">
     <value>（64位）</value>
+  </data>
+  <data name=".NET Version" xml:space="preserve">
+    <value>.NET 版本</value>
   </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>應用程式伺服器環境、進程及當前請求內容的概覽。</value>
@@ -36,6 +36,12 @@
   <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
     <value>你確定要重新啟動應用程式嗎？此操作不可逆轉，並會終止所有現有連接。</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>CPU 架構</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU 核心數</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -44,12 +50,6 @@
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>確認應用程式重新啟動</value>
-  </data>
-  <data name="CPU Architecture" xml:space="preserve">
-    <value>CPU 架構</value>
-  </data>
-  <data name="CPU Cores" xml:space="preserve">
-    <value>CPU 核心數</value>
   </data>
   <data name="Created" xml:space="preserve">
     <value>建立時間</value>

@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ पिछला</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>&quot;फायर-एंड-फॉरगेट&quot; समर्थन लंबे समय तक चलने वाले कार्यों (जैसे ईमेल या एआई) के लिए, जिसमें कतार प्रबंधन, समानांतर प्रसंस्करण और रद्द करने के लिए एक GUI शामिल है।</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>सभी निर्भरताएँ स्वचालित रूप से पंजीकृत होती हैं और कंस्ट्रक्टर इंजेक्शन के माध्यम से हमेशा उपलब्ध रहती हैं।</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>और आज पकाने के लिए कुछ नया खोजें।</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>स्वचालित डार्क मोड</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>उत्तरदायी डिज़ाइन</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>दृढ़ एकीकरण परीक्षण</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>खोजें</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>रिसेपी खोजें</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>AI (वेक्टर डेटाबेस) पर आधारित खोज</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>रिसेपी खोजें</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>रिसेपी खोजें (उदा. टमाटर, अंडे, टोफू…)</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft टेम्पलेट क्यों उपयोग करें?</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>और आज पकाने के लिए कुछ नया खोजें।</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ पिछला</value>
   </data>
 
 </root>

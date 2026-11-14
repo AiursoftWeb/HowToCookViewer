@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Ubah detail pengguna atau kelola peran yang ditetapkan di bawah ini.</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>File avatar baru</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>Kata Sandi Baru</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>File avatar baru</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>Simpan Penetapan Peran</value>

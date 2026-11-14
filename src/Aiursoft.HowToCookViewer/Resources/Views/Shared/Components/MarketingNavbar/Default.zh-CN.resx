@@ -30,14 +30,14 @@
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
-  <data name="logo" xml:space="preserve">
-    <value>Logo</value>
-  </data>
   <data name="Source Code" xml:space="preserve">
     <value>源代码</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>前往仪表板</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
   </data>
 
 </root>

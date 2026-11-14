@@ -45,9 +45,6 @@
   <data name="Job Name" xml:space="preserve">
     <value>Nazwa zadania</value>
   </data>
-  <data name="last hour" xml:space="preserve">
-    <value>ostatnia godzina</value>
-  </data>
   <data name="Last run" xml:space="preserve">
     <value>Ostatnie uruchomienie</value>
   </data>
@@ -104,6 +101,9 @@
   </data>
   <data name="Trigger Now" xml:space="preserve">
     <value>Uruchom teraz</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>ostatnia godzina</value>
   </data>
 
 </root>

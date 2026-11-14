@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>계정 관리</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>인증 공급자</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>아바타 설정</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>로컬 인증이 비활성화되어 있기 때문에 비밀번호를 변경할 수 없습니다. 인증 제공업체에서 프로필을 수정해 주세요.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>인증 공급자</value>
   </data>
 
 </root>

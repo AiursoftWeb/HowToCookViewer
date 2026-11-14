@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Confirma tu contraseña</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Crear cuenta</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Crear una nueva cuenta.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Crear una contraseña</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Crear cuenta</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>Dirección de correo electrónico</value>

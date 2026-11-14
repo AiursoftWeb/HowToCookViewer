@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>O nome do modelo de IA a ser usado para tradução de receitas, por exemplo, qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>O token de portador para autenticação no endpoint de embedding do Ollama. Usa o Token da API do Ollama como fallback quando vazio.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>O token de portador para autenticação com a Instância Ollama de Embedding, por exemplo, 5a0fbdefa19f.... Quando vazio, utiliza o Token da API OpenAI como fallback.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>O token de portador para autenticação com o endpoint Ollama/OpenAI.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>O token de portador para autenticação no Endpoint de Chat OpenAI, por exemplo, sk-abc123... ou 5a0fbdefa19f.... Deixe vazio se o endpoint não exigir autenticação.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>O nome da marca exibido no rodapé.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>O nome do modelo de embedding para busca vetorial, por exemplo, bge-m3. Requer que o endpoint do Ollama esteja configurado.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>O nome do modelo de embedding, por exemplo, bge-m3:latest. Deve estar disponível na Instância Ollama de Embedding. Usado apenas para pesquisa vetorial, não para tradução.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>A URL do repositório Git para sincronizar as receitas do HowToCook.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>O nome do modelo LLM usado para tradução de receitas e extração de ingredientes, por exemplo, qwen3.5:27b-q8_0. Deve estar disponível no Endpoint de Chat OpenAI acima. Não relacionado a embedding/busca por vetores.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>O logotipo do projeto exibido na barra de navegação e no rodapé. Suporta jpg, png, svg.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>O número máximo de comentários que um usuário pode publicar por dia.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>O nome do projeto exibido na interface do usuário.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>A URL base da API Ollama usada especificamente para gerar embeddings de receitas e consultas (pesquisa vetorial). Apenas o host é usado — /api/embed é adicionado automaticamente. Recua para o Endpoint de Chat OpenAI quando vazio. Ex.: https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>O endpoint de conclusões de chat compatível com OpenAI usado para tradução de receitas, extração de ingredientes e outras tarefas de LLM. Por exemplo, https://ollama.example.com/v1/chat/completions. Não relacionado a embeddings/busca vetorial.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>O token de portador para autenticação com a Instância Ollama de Embedding, por exemplo, 5a0fbdefa19f.... Quando vazio, utiliza o Token da API OpenAI como fallback.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>O token de portador para autenticação com o endpoint Ollama/OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>O token de portador para autenticação no Endpoint de Chat OpenAI, por exemplo, sk-abc123... ou 5a0fbdefa19f.... Deixe vazio se o endpoint não exigir autenticação.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>O token de portador para autenticação no endpoint de embedding do Ollama. Usa o Token da API do Ollama como fallback quando vazio.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>O nome da marca exibido no rodapé.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>O nome do modelo de embedding para busca vetorial, por exemplo, bge-m3. Requer que o endpoint do Ollama esteja configurado.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>O nome do modelo de embedding, por exemplo, bge-m3:latest. Deve estar disponível na Instância Ollama de Embedding. Usado apenas para pesquisa vetorial, não para tradução.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>O logotipo do projeto exibido na barra de navegação e no rodapé. Suporta jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>O número máximo de comentários que um usuário pode publicar por dia.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>O nome do projeto exibido na interface do usuário.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Usar Pesquisa com IA</value>

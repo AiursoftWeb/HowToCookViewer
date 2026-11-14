@@ -48,9 +48,6 @@
   <data name="Licence" xml:space="preserve">
     <value>许可证</value>
   </data>
-  <data name="logo" xml:space="preserve">
-    <value>Logo</value>
-  </data>
   <data name="Project" xml:space="preserve">
     <value>项目</value>
   </data>
@@ -68,6 +65,9 @@
   </data>
   <data name="Source Code" xml:space="preserve">
     <value>源代码</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
   </data>
 
 </root>

@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>ผู้เริ่มต้น</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>กำลังคำนวณ...</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>ความคิดเห็น</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>คอมมิต</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>เนื้อหาจากชุมชน</value>
@@ -95,9 +89,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>ระดับกลาง</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>กิโลแคลอรี</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>อัปเดตล่าสุด:</value>
@@ -143,6 +134,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>พิมพ์ความคิดเห็นของคุณ...</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>คอมมิต</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>กิโลแคลอรี</value>
   </data>
 
 </root>

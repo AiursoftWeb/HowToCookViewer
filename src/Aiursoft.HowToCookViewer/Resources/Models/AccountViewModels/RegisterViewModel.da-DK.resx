@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>Adgangskode</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Adgangskoden og bekræftelsesadgangskoden matcher ikke.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} er ikke en gyldig e-mailadresse.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0} skal være mindst {2} og højst {1} tegn lang.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>Adgangskoden og bekræftelsesadgangskoden matcher ikke.</value>
   </data>
 
 </root>

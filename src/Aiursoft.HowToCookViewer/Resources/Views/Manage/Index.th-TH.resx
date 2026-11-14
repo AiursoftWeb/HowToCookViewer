@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>การจัดการบัญชี</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>ผู้ให้บริการการรับรองความถูกต้อง</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>การตั้งค่าอวาตาร์</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>คุณไม่สามารถเปลี่ยนรหัสผ่านได้ เนื่องจากการยืนยันตัวตนภายในระบบถูกปิดใช้งาน กรุณาแก้ไขโปรไฟล์ของคุณจากผู้ให้บริการยืนยันตัวตน</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>ผู้ให้บริการการรับรองความถูกต้อง</value>
   </data>
 
 </root>

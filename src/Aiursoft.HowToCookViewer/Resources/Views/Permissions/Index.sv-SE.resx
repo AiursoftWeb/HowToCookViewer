@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Behörigheterna definieras av applikationen och kan inte redigeras eller raderas. Klicka på en behörighet för att se vilka roller och användare som har den.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Användare med behörighet</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>roll(er)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>användare</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Användare med behörighet</value>
   </data>
 
 </root>

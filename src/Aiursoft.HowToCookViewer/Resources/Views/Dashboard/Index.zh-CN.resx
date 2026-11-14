@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ 上一页</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>“火速发送”支持长时间运行的任务（如邮件或AI），配备用于队列管理、并行处理和取消的图形化界面。</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>所有依赖项都会自动注册，并始终可通过构造函数注入方式使用。</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>并发现一些今天可以烹饪的新菜肴。</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自动深色模式</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>响应式设计</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>个搜索结果：</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>个搜索结果：</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>强大的集成测试</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>搜索</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>搜索食谱</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>在 HowToCook 中搜索 &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; 道菜谱</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>基于AI和向量数据库的搜索</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>搜索食谱</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>搜索菜谱（如 西红柿、鸡蛋、豆腐…）</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>为何选择 Aiursoft 模板？</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>并发现一些今天可以烹饪的新菜肴。</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>个搜索结果：</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ 上一页</value>
   </data>
 
 </root>

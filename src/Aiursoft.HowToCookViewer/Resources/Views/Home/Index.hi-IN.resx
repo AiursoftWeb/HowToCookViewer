@@ -36,15 +36,6 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>आपके अगले वेब एप्लिकेशन के लिए एक आधुनिक, सुविधा-संपन्न, और अत्यधिक विस्तार योग्य आधारशिला।</value>
   </data>
-  <data name="a provider of top-tier hosting services" xml:space="preserve">
-    <value>टॉप-टियर होस्टिंग सेवाओं का प्रदाता</value>
-  </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
-  </data>
-  <data name="Admin site included" xml:space="preserve">
-    <value>प्रशासनिक साइट शामिल है</value>
-  </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>AI संचालित अनुवाद</value>
   </data>
@@ -56,6 +47,12 @@
   </data>
   <data name="AI-Translated" xml:space="preserve">
     <value>AI द्वारा अनुवादित</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>प्रशासनिक साइट शामिल है</value>
   </data>
   <data name="Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template</value>
@@ -81,11 +78,11 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
-  <data name="Auto compression and privacy" xml:space="preserve">
-    <value>स्वचालित संपीड़न और गोपनीयता</value>
-  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>स्वचालित डेप्लॉयमेंट</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>स्वचालित संपीड़न और गोपनीयता</value>
   </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>28 भाषाओं में स्वचालित AI अनुवाद।</value>
@@ -156,9 +153,6 @@
   <data name="Built-in" xml:space="preserve">
     <value>निर्मित-अंदर</value>
   </data>
-  <data name="Built-in administration panel" xml:space="preserve">
-    <value>निर्मित प्रशासनिक पैनल</value>
-  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>एम्बेडेड प्रमाणीकरण</value>
   </data>
@@ -167,6 +161,9 @@
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>निर्मित प्रशासनिक पैनल</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>रद्द करें</value>
@@ -228,11 +225,11 @@
   <data name="Custom development required" xml:space="preserve">
     <value>कस्टम विकास आवश्यक है</value>
   </data>
-  <data name="Dashboard for background tasks" xml:space="preserve">
-    <value>पृष्ठभूमि कार्यों के लिए डैशबोर्ड</value>
-  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>डैशबोर्ड वेबसाइट</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>पृष्ठभूमि कार्यों के लिए डैशबोर्ड</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
     <value>दिन 1 सुरक्षा एवं सुसंगतता।</value>
@@ -258,14 +255,14 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>डेव एंड प्रॉड</value>
   </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>डेवोप्स नेटिव</value>
+  </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>UTC में विकास केवल करें, जबकि सिस्टम स्वचालित रूप से तारीखों को उपयोगकर्ता के स्थानीय समय क्षेत्र में परिवर्तित और प्रदर्शित करता है।</value>
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>विकासकर्मी अनुभव</value>
-  </data>
-  <data name="DevOps Native" xml:space="preserve">
-    <value>डेवोप्स नेटिव</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>चर्चा पृष्ठ</value>
@@ -318,17 +315,14 @@
   <data name="Every recipe is automatically translated into 27 languages using AI, so you can cook in your native language." xml:space="preserve">
     <value>प्रत्येक रेसिपी को AI का उपयोग करके स्वचालित रूप से 27 भाषाओं में अनुवादित किया जाता है, ताकि आप अपनी मातृभाषा में पका सकें।</value>
   </data>
-  <data name="Explore {0} Free Recipes" xml:space="preserve">
-    <value>{0} मुफ्त व्यंजनों का अन्वेषण करें</value>
-  </data>
   <data name="Explore Thousands of Free, Community-Sourced Recipes" xml:space="preserve">
     <value>हज़ारों मुफ़्त, समुदाय-स्रोतित रेसिपी खोजें</value>
   </data>
+  <data name="Explore {0} Free Recipes" xml:space="preserve">
+    <value>{0} मुफ्त व्यंजनों का अन्वेषण करें</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>अक्सर पूछे जाने वाले प्रश्न</value>
-  </data>
-  <data name="faster" xml:space="preserve">
-    <value>तेज़</value>
   </data>
   <data name="Features" xml:space="preserve">
     <value>विशेषताएँ</value>
@@ -348,9 +342,6 @@
   <data name="Flexible API" xml:space="preserve">
     <value>लचीला API</value>
   </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>किसी भी जानकारी के लिए या समस्याओं की रिपोर्ट करने के लिए।</value>
-  </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>संस्थापक और वास्तुकार, Aiursoft में</value>
   </data>
@@ -360,14 +351,14 @@
   <data name="Free" xml:space="preserve">
     <value>मुफ़्त</value>
   </data>
-  <data name="Free for Commercial Use" xml:space="preserve">
-    <value>वाणिज्यिक उपयोग के लिए मुफ्त</value>
-  </data>
   <data name="Free Forever" xml:space="preserve">
     <value>हमेशा मुफ्त</value>
   </data>
   <data name="Free Software" xml:space="preserve">
     <value>मुक्त सॉफ्टवेयर</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>वाणिज्यिक उपयोग के लिए मुफ्त</value>
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>अक्सर पूछे जाने वाले प्रश्न</value>
@@ -390,11 +381,11 @@
   <data name="Fully Open Source" xml:space="preserve">
     <value>पूर्णतः ओपन सोर्स</value>
   </data>
-  <data name="Generic configuration" xml:space="preserve">
-    <value>सामान्य कॉन्फ़िगरेशन</value>
-  </data>
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>केवल सामान्य Dockerfile</value>
+  </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>सामान्य कॉन्फ़िगरेशन</value>
   </data>
   <data name="Get $300 in Vultr credits" xml:space="preserve">
     <value>Vultr क्रेडिट में $300 प्राप्त करें</value>
@@ -411,11 +402,11 @@
   <data name="Go global without extra effort." xml:space="preserve">
     <value>विश्व भर में बिना किसी अतिरिक्त प्रयास के जाएं।</value>
   </data>
-  <data name="Go to dashboard" xml:space="preserve">
-    <value>डैशबोर्ड पर जाएं</value>
-  </data>
   <data name="Go to Vultr" xml:space="preserve">
     <value>Vultr पर जाएँ</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>डैशबोर्ड पर जाएं</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>नियमित जॉब्स जैसे साफ़ करना और सिंक्रनाइज़ेशन को नियंत्रित करें और निष्पादन इतिहास और लॉग्स के लिए एक व्यापक GUI के साथ निगरानी करें।</value>
@@ -459,11 +450,11 @@
   <data name="Included" xml:space="preserve">
     <value>शामिल</value>
   </data>
-  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
-    <value>विस्तृत दस्तावेज़ीकरण और व्यावहारिक उदाहरण शामिल हैं ताकि आप जल्दी शुरुआत कर सकें।</value>
-  </data>
   <data name="Includes Tutorials" xml:space="preserve">
     <value>ट्यूटोरियल्स शामिल हैं</value>
+  </data>
+  <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
+    <value>विस्तृत दस्तावेज़ीकरण और व्यावहारिक उदाहरण शामिल हैं ताकि आप जल्दी शुरुआत कर सकें।</value>
   </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>एकीकृत फ़ाइल प्रबंधन</value>
@@ -473,9 +464,6 @@
   </data>
   <data name="Interoperability" xml:space="preserve">
     <value>अंतरक्रियाशीलता</value>
-  </data>
-  <data name="is Free Software" xml:space="preserve">
-    <value>मुक्त सॉफ्टवेयर है</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>क्या Aiursoft Template का उपयोग करना मुफ़्त है?</value>
@@ -498,6 +486,12 @@
   <data name="Lint Check" xml:space="preserve">
     <value>लिंट चेक</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>एमआईटी लाइसेंस</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT लाइसेंस</value>
+  </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>उच्च कोड गुणवत्ता बनाए रखें</value>
   </data>
@@ -506,12 +500,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>मार्कडाउन से एचटीएमएल</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>एमआईटी लाइसेंस</value>
-  </data>
-  <data name="MIT License" xml:space="preserve">
-    <value>MIT लाइसेंस</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>मॉडल्स को डेटा एनोटेशन्स के आधार पर क्लाइंट और सर्वर दोनों तरफ मान्यता दी जाती है।</value>
@@ -540,12 +528,6 @@
   <data name="Needs Celery + Flower" xml:space="preserve">
     <value>सेलरी + फ्लॉवर की आवश्यकता है</value>
   </data>
-  <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>जटिल प्रमाणीकरण तर्क की आवश्यकता है</value>
-  </data>
-  <data name="Needs config/plugins" xml:space="preserve">
-    <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
-  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ESLint/Prettier सेटअप की आवश्यकता है</value>
   </data>
@@ -554,9 +536,6 @@
   </data>
   <data name="Needs Laravel Sail" xml:space="preserve">
     <value>लारवेल सेल की आवश्यकता है</value>
-  </data>
-  <data name="Needs manual configuration" xml:space="preserve">
-    <value>मैनुअल कॉन्फ़िगरेशन की आवश्यकता है</value>
   </data>
   <data name="Needs Medialibrary" xml:space="preserve">
     <value>मीडिया लाइब्रेरी की आवश्यकता है</value>
@@ -570,20 +549,32 @@
   <data name="Needs Spring Security config" xml:space="preserve">
     <value>Spring Security कॉन्फ़िगरेशन की आवश्यकता है</value>
   </data>
-  <data name="Needs third-party plugins" xml:space="preserve">
-    <value>तीसरे पक्ष के प्लग-इन की आवश्यकता है</value>
-  </data>
   <data name="Needs TypeORM or similar" xml:space="preserve">
     <value>टाइपओआरएम या समान की आवश्यकता है</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>जटिल प्रमाणीकरण तर्क की आवश्यकता है</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>मैनुअल कॉन्फ़िगरेशन की आवश्यकता है</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>तीसरे पक्ष के प्लग-इन की आवश्यकता है</value>
   </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>किसी भी क्लाउड वेंडर पर निर्भरता नहीं। कहीं भी, कभी भी चलाएं।</value>
   </data>
-  <data name="Offline Capable" xml:space="preserve">
-    <value>ऑफलाइन कैपेबल</value>
-  </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM और माइग्रेशन</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>ऑफलाइन कैपेबल</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>एक क्लिक से शुरू करें</value>
@@ -597,9 +588,6 @@
   <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
     <value>कृषित Docker &amp; K8s कॉन्फ़िगरेशन</value>
   </data>
-  <data name="ORM &amp; Migrations" xml:space="preserve">
-    <value>ORM और माइग्रेशन</value>
-  </data>
   <data name="Out-of-the-box" xml:space="preserve">
     <value>बिना किसी सेटअप के तैयार</value>
   </data>
@@ -609,11 +597,11 @@
   <data name="Powerful Search" xml:space="preserve">
     <value>शक्तिशाली खोज</value>
   </data>
-  <data name="Pre-configured and tested" xml:space="preserve">
-    <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
-  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>गिटलैब के लिए विशेष रूप से पूर्व-संरचित CI/CD पाइपलाइन</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
   </data>
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>dev/prod के लिए पूर्व-विन्यस्त पाइपलाइन्स</value>
@@ -693,17 +681,17 @@
   <data name="Spot a mistake or want to improve a recipe? Edit it directly on GitHub and help the whole community." xml:space="preserve">
     <value>किसी गलती को पहचानते हैं या किसी रेसिपी में सुधार करना चाहते हैं? GitHub पर सीधे संपादित करें और पूरी समुदाय की मदद करें।</value>
   </data>
-  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
-    <value>मानक कार्यान्वयन। संकलन के बिना प्रदाताओं को स्विच करें।</value>
-  </data>
   <data name="Standard OpenID" xml:space="preserve">
     <value>मानक OpenID</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>एक नया प्रोजेक्ट शुरू करें</value>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>मानक कार्यान्वयन। संकलन के बिना प्रदाताओं को स्विच करें।</value>
   </data>
   <data name="Start Shipping Value." xml:space="preserve">
     <value>मूल्य शिपिंग शुरू करें।</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>एक नया प्रोजेक्ट शुरू करें</value>
   </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>एकल &apos;docker run&apos; कमांड के साथ शुरुआत करें।</value>
@@ -717,23 +705,23 @@
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>कठोर लिंट नियम</value>
   </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>कठोर यूनिट परीक्षण</value>
+  </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
     <value>डिफ़ॉल्ट रूप से सख्त लिंटिंग नियम और शून्य चेतावनियाँ</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>डिफ़ॉल्ट प्रोजेक्ट में 0 चेतावनियाँ के साथ सख्त लिंटिंग नियम।</value>
   </data>
-  <data name="Strict Unit Testing" xml:space="preserve">
-    <value>कठोर यूनिट परीक्षण</value>
-  </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
     <value>तीव्र और सुसंगत लिंटिंग</value>
   </data>
-  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>पर्यावरण चर और डेटाबेस-आधारित सेटिंग्स दोनों का समर्थन करता है, जिसमें पर्यावरण चरों को बिना किसी दिक्कत के अपडेट करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>
-  </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>जेटब्रेन्स राइडर का समर्थन करता है आसान कोड स्टाइल फिक्स के लिए।</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>पर्यावरण चर और डेटाबेस-आधारित सेटिंग्स दोनों का समर्थन करता है, जिसमें पर्यावरण चरों को बिना किसी दिक्कत के अपडेट करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>
   </data>
   <data name="Task Runner" xml:space="preserve">
     <value>टास्क रनर</value>
@@ -741,17 +729,17 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>तकनीकी लीड</value>
   </data>
-  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
-    <value>निर्णायक, युद्ध-परीक्षित .NET उद्यम स्थापना। प्राथमिकता से एआई तक, हमने कठिन हिस्सों को हल कर दिया है ताकि आपको इसकी आवश्यकता न हो।</value>
-  </data>
   <data name="The HowToCook server is proudly sponsored by" xml:space="preserve">
     <value>The HowToCook सर्वर गर्व से वॉक्सिहोस्ट द्वारा प्रायोजित है</value>
   </data>
-  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
-    <value>नेविगेशन बार स्वचालित रूप से उपयोगकर्ता की भूमिकाओं और अनुमतियों के आधार पर समायोजित होता है।</value>
-  </data>
   <data name="The Philosophy" xml:space="preserve">
     <value>द फिलॉसफी</value>
+  </data>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>निर्णायक, युद्ध-परीक्षित .NET उद्यम स्थापना। प्राथमिकता से एआई तक, हमने कठिन हिस्सों को हल कर दिया है ताकि आपको इसकी आवश्यकता न हो।</value>
+  </data>
+  <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
+    <value>नेविगेशन बार स्वचालित रूप से उपयोगकर्ता की भूमिकाओं और अनुमतियों के आधार पर समायोजित होता है।</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>यह टेम्पलेट आसान डेप्लॉयमेंट के लिए बनाया गया है। इसमें पूर्ण Docker सपोर्ट शामिल है, जिससे आप अपने ऐप को कंटेनराइज़ करके कहीं भी चला सकते हैं। आप इसे सीधे IIS, Azure App Service, या किसी भी सर्वर पर डेप्लॉय कर सकते हैं जो ASP.NET Core को सपोर्ट करता है।</value>
@@ -792,11 +780,11 @@
   <data name="Welcome" xml:space="preserve">
     <value>स्वागत है</value>
   </data>
-  <data name="What do I need to get started?" xml:space="preserve">
-    <value>शुरुआत करने के लिए मुझे क्या चाहिए?</value>
-  </data>
   <data name="What Makes It Special" xml:space="preserve">
     <value>इसकी विशेषता क्या है</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>शुरुआत करने के लिए मुझे क्या चाहिए?</value>
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>हमारे डेवलपर्स क्या कहते हैं</value>
@@ -833,6 +821,18 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>शून्य सहनशीलता लींट</value>
+  </data>
+  <data name="a provider of top-tier hosting services" xml:space="preserve">
+    <value>टॉप-टियर होस्टिंग सेवाओं का प्रदाता</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>तेज़</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>किसी भी जानकारी के लिए या समस्याओं की रिपोर्ट करने के लिए।</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>मुक्त सॉफ्टवेयर है</value>
   </data>
 
 </root>

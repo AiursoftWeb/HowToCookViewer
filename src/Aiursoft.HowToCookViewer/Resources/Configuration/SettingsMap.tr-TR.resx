@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tarif çevirisi için kullanılacak AI model adı, örn. qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>Gömme Ollama uç noktasıyla kimlik doğrulama için bearer token. Boş olduğunda Ollama API Token&apos;a düşer.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>Embedding Ollama Örneği ile kimlik doğrulama için taşıyıcı belirteci, örn. 5a0fbdefa19f.... Boş bırakıldığında OpenAI API Token&apos;ına düşer.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>Ollama/OpenAI uç noktasıyla kimlik doğrulaması için taşıyıcı belirteci.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>OpenAI Sohbet Uç Noktası ile kimlik doğrulama için taşıyıcı jetonu, örn. sk-abc123... veya 5a0fbdefa19f.... Uç nokta kimlik doğrulaması gerektirmiyorsa boş bırakın.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>Footer&apos;da gösterilen marka adı.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>Vektör araması için gömme modeli adı, örn. bge-m3. Ollama uç noktasının yapılandırılması gerekir.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>Gömme modeli adı, örn. bge-m3:latest. Gömme Ollama Örneğinde mevcut olmalıdır. Yalnızca vektör araması için kullanılır, çeviri için değil.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>HowToCook tariflerini senkronize etmek için Git depo URL&apos;si.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Tarif çevirisi ve malzeme çıkarma için kullanılan LLM model adı, örn. qwen3.5:27b-q8_0. Yukarıdaki OpenAI Sohbet Uç Noktasında mevcut olmalıdır. Gömme/vektör aramasıyla ilgisi yoktur.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>Projenin logosu navbar ve footer&apos;da gösterilir. jpg, png, svg desteklenir.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>Bir kullanıcının günde gönderebileceği maksimum yorum sayısı.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>Frontende görüntülenen proje adı.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>Yemek ve sorgu gömme vektör araması için özel olarak kullanılan Ollama API temel URL&apos;si. Yalnızca ana bilgisayar kullanılır — /api/embed otomatik olarak eklenir. Boş olduğunda OpenAI Sohbet Uç Noktasına düşer. Örn. https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Tarif çevirisi, malzeme çıkarma ve diğer LLM görevleri için kullanılan OpenAI uyumlu sohbet tamamlama uç noktası. Örn. https://ollama.example.com/v1/chat/completions. Gömme/vektör aramasıyla ilgili değildir.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Embedding Ollama Örneği ile kimlik doğrulama için taşıyıcı belirteci, örn. 5a0fbdefa19f.... Boş bırakıldığında OpenAI API Token&apos;ına düşer.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Ollama/OpenAI uç noktasıyla kimlik doğrulaması için taşıyıcı belirteci.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>OpenAI Sohbet Uç Noktası ile kimlik doğrulama için taşıyıcı jetonu, örn. sk-abc123... veya 5a0fbdefa19f.... Uç nokta kimlik doğrulaması gerektirmiyorsa boş bırakın.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Gömme Ollama uç noktasıyla kimlik doğrulama için bearer token. Boş olduğunda Ollama API Token&apos;a düşer.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Footer&apos;da gösterilen marka adı.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Vektör araması için gömme modeli adı, örn. bge-m3. Ollama uç noktasının yapılandırılması gerekir.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Gömme modeli adı, örn. bge-m3:latest. Gömme Ollama Örneğinde mevcut olmalıdır. Yalnızca vektör araması için kullanılır, çeviri için değil.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Projenin logosu navbar ve footer&apos;da gösterilir. jpg, png, svg desteklenir.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Bir kullanıcının günde gönderebileceği maksimum yorum sayısı.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Frontende görüntülenen proje adı.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>AI Aramasını Kullan</value>

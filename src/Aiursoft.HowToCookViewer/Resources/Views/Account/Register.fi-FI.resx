@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Vahvista salasanasi</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Luo tili</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Luo uusi tili.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Luo salasana</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Luo tili</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>Sähköpostiosoite</value>

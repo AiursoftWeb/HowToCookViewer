@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Επιβεβαιώστε τον κωδικό πρόσβασής σας</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Δημιουργία Λογαριασμού</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Δημιουργήστε έναν νέο λογαριασμό.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Δημιουργήστε έναν κωδικό πρόσβασης</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Δημιουργία Λογαριασμού</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>Διεύθυνση Email</value>

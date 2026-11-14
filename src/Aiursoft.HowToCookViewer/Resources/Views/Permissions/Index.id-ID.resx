@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Izin didefinisikan oleh aplikasi dan tidak dapat diedit atau dihapus. Klik pada suatu izin untuk melihat peran dan pengguna mana yang memilikinya.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Pengguna dengan Izin</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>peran</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>pengguna</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Pengguna dengan Izin</value>
   </data>
 
 </root>

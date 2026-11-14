@@ -21,6 +21,9 @@
       <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
+  <data name="The name is required." xml:space="preserve">
+    <value>Tên là bắt buộc.</value>
+  </data>
   <data name="The {0} is required." xml:space="preserve">
     <value>{0} là bắt buộc.</value>
   </data>
@@ -29,9 +32,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>{0} tối đa là {1} ký tự.</value>
-  </data>
-  <data name="The name is required." xml:space="preserve">
-    <value>Tên là bắt buộc.</value>
   </data>
 
 </root>

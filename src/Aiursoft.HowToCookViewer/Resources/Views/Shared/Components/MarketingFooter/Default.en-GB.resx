@@ -48,9 +48,6 @@
   <data name="Licence" xml:space="preserve">
     <value>Licence</value>
   </data>
-  <data name="logo" xml:space="preserve">
-    <value>logo</value>
-  </data>
   <data name="Project" xml:space="preserve">
     <value>Project</value>
   </data>
@@ -68,6 +65,9 @@
   </data>
   <data name="Source Code" xml:space="preserve">
     <value>Source Code</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
   </data>
 
 </root>

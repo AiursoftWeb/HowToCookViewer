@@ -27,17 +27,17 @@
   <data name="Create" xml:space="preserve">
     <value>Skapa</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Skapa en ny användare</value>
-  </data>
-  <data name="Create a password for the new user" xml:space="preserve">
-    <value>Skapa ett lösenord för den nya användaren</value>
-  </data>
   <data name="Create New User" xml:space="preserve">
     <value>Skapa ny användare</value>
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Skapa användare</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>Skapa en ny användare</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Skapa ett lösenord för den nya användaren</value>
   </data>
   <data name="Display Name" xml:space="preserve">
     <value>Visningsnamn</value>

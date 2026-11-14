@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>確認密碼</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>建立帳戶</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>建立新帳戶。</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>建立密碼</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>建立帳戶</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>電郵地址</value>

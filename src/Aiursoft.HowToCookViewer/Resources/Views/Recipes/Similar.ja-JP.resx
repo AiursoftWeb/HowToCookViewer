@@ -21,9 +21,6 @@
       <data name="All Recipes" xml:space="preserve">
     <value>すべてのレシピ</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>パンくずリスト</value>
-  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>難易度</value>
   </data>
@@ -35,6 +32,9 @@
   </data>
   <data name="Source Recipe" xml:space="preserve">
     <value>元レシピ</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>パンくずリスト</value>
   </data>
 
 </root>

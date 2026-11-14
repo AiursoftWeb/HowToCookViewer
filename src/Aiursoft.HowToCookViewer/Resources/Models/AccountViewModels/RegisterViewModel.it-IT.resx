@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>La password e la password di conferma non corrispondono.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>Il {0} non è un indirizzo email valido.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>Il {0} deve essere lungo almeno {2} e al massimo {1} caratteri.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>La password e la password di conferma non corrispondono.</value>
   </data>
 
 </root>

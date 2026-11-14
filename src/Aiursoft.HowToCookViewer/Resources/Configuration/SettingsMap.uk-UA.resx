@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Назва моделі ШІ, яку слід використовувати для перекладу рецептів, наприклад, qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>Токен Bearer для автентифікації з точкою входу Ollama для вбудовування. Заповнюється значенням Ollama API Token, коли порожній.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>Токен носія для автентифікації з екземпляром Ollama для вбудовування, наприклад, 5a0fbdefa19f.... За заповнення поля використовується токен API OpenAI.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>Токен Bearer для автентифікації на ендпоінті Ollama/OpenAI.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>Токен носія для автентифікації з кінцевою точкою чату OpenAI, наприклад, sk-abc123... або 5a0fbdefa19f.... Залиште порожнім, якщо кінцева точка не вимагає автентифікації.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>Назва бренду, що відображається в підвалі.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>Назва моделі вбудовування для векторного пошуку, наприклад, bge-m3. Потрібно налаштувати кінцеву точку Ollama.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>Назва моделі вбудовування, наприклад, bge-m3:latest. Має бути доступна в екземплярі Ollama для вбудовування. Використовується лише для пошуку за векторами, а не для перекладу.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL-адреса сховища Git для синхронізації рецептів HowToCook.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Назва моделі LLM, що використовується для перекладу рецептів та виділення інгредієнтів, наприклад qwen3.5:27b-q8_0. Має бути доступна за адресою вищезазначеного OpenAI Chat Endpoint. Не стосується вбудовування/пошуку за векторами.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>Логотип проекту, який відображається в навбарі та футері. Підтримується jpg, png, svg.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>Максимальна кількість коментарів, які користувач може опублікувати протягом дня.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>Назва проекту, що відображається на фронтенді.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>Базовий URL API Ollama, який використовується спеціально для генерації ембедінгів рецептів та запитів (пошук за векторами). Використовується лише хост — /api/embed додається автоматично. За замовчуванням повертається до кінцевої точки OpenAI Chat Endpoint, якщо порожньо. Наприклад, https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Кінцевий пункт для чат-завершень, сумісний з OpenAI, який використовується для перекладу рецептів, виділення інгредієнтів та інших завдань LLM. Наприклад, https://ollama.example.com/v1/chat/completions. Не пов&apos;язаний з вбудовуванням/пошуком за векторами.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Токен носія для автентифікації з екземпляром Ollama для вбудовування, наприклад, 5a0fbdefa19f.... За заповнення поля використовується токен API OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Токен Bearer для автентифікації на ендпоінті Ollama/OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Токен носія для автентифікації з кінцевою точкою чату OpenAI, наприклад, sk-abc123... або 5a0fbdefa19f.... Залиште порожнім, якщо кінцева точка не вимагає автентифікації.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Токен Bearer для автентифікації з точкою входу Ollama для вбудовування. Заповнюється значенням Ollama API Token, коли порожній.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Назва бренду, що відображається в підвалі.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Назва моделі вбудовування для векторного пошуку, наприклад, bge-m3. Потрібно налаштувати кінцеву точку Ollama.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Назва моделі вбудовування, наприклад, bge-m3:latest. Має бути доступна в екземплярі Ollama для вбудовування. Використовується лише для пошуку за векторами, а не для перекладу.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Логотип проекту, який відображається в навбарі та футері. Підтримується jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Максимальна кількість коментарів, які користувач може опублікувати протягом дня.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Назва проекту, що відображається на фронтенді.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Використовувати пошук ШІ</value>

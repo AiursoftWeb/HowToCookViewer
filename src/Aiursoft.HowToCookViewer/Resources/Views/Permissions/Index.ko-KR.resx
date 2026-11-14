@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>권한은 애플리케이션에서 정의되며 수정하거나 삭제할 수 없습니다. 권한을 클릭하여 해당 권한을 가진 역할 및 사용자를 확인하세요.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>권한이 있는 사용자</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>역할</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>사용자</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>권한이 있는 사용자</value>
   </data>
 
 </root>

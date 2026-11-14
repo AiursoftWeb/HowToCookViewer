@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Käyttöoikeudet määritellään sovelluksessa, eikä niitä voi muokata tai poistaa. Klikkaa käyttöoikeutta nähdäksesi, mitkä roolit ja käyttäjät sitä käyttävät.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Käyttäjät, joilla on käyttöoikeus</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>rooli(a)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>käyttäjä(ä)</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Käyttäjät, joilla on käyttöoikeus</value>
   </data>
 
 </root>

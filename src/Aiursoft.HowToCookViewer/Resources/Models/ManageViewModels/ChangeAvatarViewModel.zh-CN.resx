@@ -24,12 +24,6 @@
   <data name="Name" xml:space="preserve">
     <value>姓名</value>
   </data>
-  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
-    <value>{0} 的长度必须至少为 {1} 个字符。</value>
-  </data>
-  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
-    <value>{0} 的长度最多为 {1} 个字符。</value>
-  </data>
   <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
     <value>头像文件无效，请重新上传。</value>
   </data>
@@ -38,6 +32,12 @@
   </data>
   <data name="The name is required." xml:space="preserve">
     <value>名称是必填项。</value>
+  </data>
+  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
+    <value>{0} 的长度必须至少为 {1} 个字符。</value>
+  </data>
+  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
+    <value>{0} 的长度最多为 {1} 个字符。</value>
   </data>
 
 </root>

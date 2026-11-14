@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>パスワードの確認</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>アカウント作成</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>新しいアカウントを作成</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>パスワードを作成</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>アカウント作成</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>メールアドレス</value>

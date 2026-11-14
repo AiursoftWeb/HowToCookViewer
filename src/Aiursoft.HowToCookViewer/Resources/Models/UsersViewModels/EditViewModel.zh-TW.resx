@@ -36,6 +36,12 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>重設密碼（留空以保持原密碼）</value>
   </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>頭像檔案無效。請重新上傳。</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>必須提供頭像檔案。</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} 不是有效的電子郵件地址。</value>
   </data>
@@ -47,12 +53,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>{0} 長度不得超過 {1} 個字元。</value>
-  </data>
-  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
-    <value>頭像檔案無效。請重新上傳。</value>
-  </data>
-  <data name="The avatar file is required." xml:space="preserve">
-    <value>必須提供頭像檔案。</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>使用者名稱</value>

@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>खाता प्रबंधन</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>प्रमाणीकरण प्रदाता</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>अवतार सेटिंग्स</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>आप अपना पासवर्ड नहीं बदल सकते क्योंकि स्थानीय प्रमाणीकरण अक्षम है। कृपया अपना प्रोफ़ाइल ऑथ प्रदाता से संपादित करें।</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>प्रमाणीकरण प्रदाता</value>
   </data>
 
 </root>

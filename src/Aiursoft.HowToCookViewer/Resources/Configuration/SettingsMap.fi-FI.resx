@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Tehtävän kuvailu: Käytettävän tekoälymallin nimi reseptien kääntämiseen, esim. qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>Kantatokeni Ollama-embedding-päätepisteen todentamiseen. Käyttää oletuksena Ollama API -tokenia, jos tyhjä.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>Kantatunnus Embedding Ollama -instanssin todentamiseen, esim. 5a0fbdefa19f.... Tyhjänä käytetään OpenAI API -tunnusta.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>Kantatunnus Ollama/OpenAI-päätepisteen todentamiseen.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>Bearer-tokenin todentautumiseen OpenAI Chat Endpointin kanssa, esim. sk-abc123... tai 5a0fbdefa19f.... Jätä tyhjäksi, jos päätepiste ei vaadi todentamista.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>Brändin nimi, joka näytetään alatunnisteessa.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>Vektorihakupäässä käytettävän upotusmallin nimi, esim. bge-m3. Vaatii Ollama-päätepisteen määrittämisen.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>Sulautusmallin nimi, esim. bge-m3:latest. Oltava saatavilla sulautusollama-instanssissa. Käytetään vain vektorihakuun, ei käännökseen.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>Git-varaston URL-osoite, josta HowToCook-reseptit synkronoidaan.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>LLM-mallin nimi, jota käytetään reseptien kääntämiseen ja ainesosien erottamiseen, esim. qwen3.5:27b-q8_0. Tämän on oltava saatavilla yllä olevassa OpenAI Chat Endpointissa. Ei liity upotuksiin/viitehakuun.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>Projektin logo näytetään navigointipalkissa ja alatunnisteessa. Tuki jpg, png, svg.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>Käyttäjän päivittäinen kommenttien enimmäismäärä.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>Projektin nimi, joka näytetään käyttöliittymässä.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>Ollama API:n perus-URL-osoite, jota käytetään nimenomaan resepti- ja kyselyembeddingien (vektorihaku) luomiseen. Vain isäntäosa otetaan käyttöön — /api/embed liitetään automaattisesti. Tyhjänä käytetään OpenAI Chat Endpointia. Esim. https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>OpenAI-yhteensopiva keskustelulopetuspäätepiste, jota käytetään reseptien kääntämiseen, ainesosien erottamiseen ja muihin LLM-tehtäviin. Esim. https://ollama.example.com/v1/chat/completions. Ei liity upotuksiin/vietyhakuun.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Kantatunnus Embedding Ollama -instanssin todentamiseen, esim. 5a0fbdefa19f.... Tyhjänä käytetään OpenAI API -tunnusta.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Kantatunnus Ollama/OpenAI-päätepisteen todentamiseen.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Bearer-tokenin todentautumiseen OpenAI Chat Endpointin kanssa, esim. sk-abc123... tai 5a0fbdefa19f.... Jätä tyhjäksi, jos päätepiste ei vaadi todentamista.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Kantatokeni Ollama-embedding-päätepisteen todentamiseen. Käyttää oletuksena Ollama API -tokenia, jos tyhjä.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Brändin nimi, joka näytetään alatunnisteessa.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Vektorihakupäässä käytettävän upotusmallin nimi, esim. bge-m3. Vaatii Ollama-päätepisteen määrittämisen.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Sulautusmallin nimi, esim. bge-m3:latest. Oltava saatavilla sulautusollama-instanssissa. Käytetään vain vektorihakuun, ei käännökseen.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Projektin logo näytetään navigointipalkissa ja alatunnisteessa. Tuki jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Käyttäjän päivittäinen kommenttien enimmäismäärä.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Projektin nimi, joka näytetään käyttöliittymässä.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Käytä tekoälyhakua</value>

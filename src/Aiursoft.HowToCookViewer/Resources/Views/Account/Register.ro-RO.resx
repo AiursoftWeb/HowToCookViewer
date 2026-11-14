@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Confirmă parola</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Creează cont</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Creează un cont nou.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Creează o parolă</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Creează cont</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>Adresă de email</value>

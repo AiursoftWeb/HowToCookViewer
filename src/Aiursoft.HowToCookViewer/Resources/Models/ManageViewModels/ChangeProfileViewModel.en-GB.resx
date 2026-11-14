@@ -21,6 +21,9 @@
       <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="The name is required." xml:space="preserve">
+    <value>The name is required.</value>
+  </data>
   <data name="The {0} is required." xml:space="preserve">
     <value>The {0} is required.</value>
   </data>
@@ -29,9 +32,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>The {0} must be at most {1} characters long.</value>
-  </data>
-  <data name="The name is required." xml:space="preserve">
-    <value>The name is required.</value>
   </data>
 
 </root>

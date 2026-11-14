@@ -45,9 +45,6 @@
   <data name="Job Name" xml:space="preserve">
     <value>Имя задания</value>
   </data>
-  <data name="last hour" xml:space="preserve">
-    <value>последний час</value>
-  </data>
   <data name="Last run" xml:space="preserve">
     <value>Последний запуск</value>
   </data>
@@ -104,6 +101,9 @@
   </data>
   <data name="Trigger Now" xml:space="preserve">
     <value>Запустить сейчас</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>последний час</value>
   </data>
 
 </root>

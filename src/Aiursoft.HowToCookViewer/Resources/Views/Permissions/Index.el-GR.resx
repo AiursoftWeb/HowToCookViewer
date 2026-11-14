@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Οι άδειες ορίζονται από την εφαρμογή και δεν μπορούν να επεξεργαστούν ή να διαγραφούν. Κάντε κλικ σε μια άδεια για να δείτε ποιοι ρόλοι και χρήστες την έχουν.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Χρήστες με Άδεια</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>ρόλο(ος)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>χρήστη(ες)</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Χρήστες με Άδεια</value>
   </data>
 
 </root>

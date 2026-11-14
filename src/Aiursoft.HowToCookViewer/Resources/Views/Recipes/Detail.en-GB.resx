@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>Beginner</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>Calculating...</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Comments</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>commits</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Community Content</value>
@@ -98,9 +92,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Intermediate</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>kcal</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Last updated:</value>
@@ -155,6 +146,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Write your comment…</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commits</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>kcal</value>
   </data>
 
 </root>

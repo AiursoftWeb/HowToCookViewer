@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>ยืนยันรหัสผ่านของคุณ</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>สร้างบัญชี</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>สร้างบัญชีใหม่</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>สร้างรหัสผ่าน</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>สร้างบัญชี</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>ที่อยู่อีเมล</value>

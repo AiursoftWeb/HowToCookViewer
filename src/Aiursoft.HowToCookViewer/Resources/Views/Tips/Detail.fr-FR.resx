@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
-  <data name="Click here to view the legal information." xml:space="preserve">
+      <data name="Click here to view the legal information." xml:space="preserve">
     <value>Cliquez ici pour afficher les informations légales.</value>
   </data>
   <data name="Close" xml:space="preserve">
@@ -41,6 +38,9 @@
   </data>
   <data name="The copyright of this tip belongs to the community and is released into the public domain under The Unlicense — free to use for any purpose without any restrictions." xml:space="preserve">
     <value>Les droits d&apos;auteur de cette astuce appartiennent à la communauté et sont placés dans le domaine public sous la licence The Unlicense — libre d&apos;utilisation à toute fin et sans aucune restriction.</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
   </data>
 
 </root>

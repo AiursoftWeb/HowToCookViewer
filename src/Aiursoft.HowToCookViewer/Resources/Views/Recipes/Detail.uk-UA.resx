@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>Новачок</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>Обчислення...</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>Коментарі</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>commit</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>Вміст спільноти</value>
@@ -95,9 +89,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>Середній</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>ккал</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>Останнє оновлення:</value>
@@ -143,6 +134,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>Напишіть свій коментар…</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>commit</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>ккал</value>
   </data>
 
 </root>
