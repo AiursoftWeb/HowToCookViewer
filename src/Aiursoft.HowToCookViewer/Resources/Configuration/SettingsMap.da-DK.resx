@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>Navnet på AI-modellen, der skal bruges til opskriftsoversættelse, f.eks. qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>Bearer-tokenen til autentificering med Ollama-endepunktet til indlejring. Fallback til Ollama API-token, når den er tom.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>Bearer-tokenen til autentificering med Embedding Ollama-instansen, f.eks. 5a0fbdefa19f.... Faller tilbage til OpenAI API-token, når den er tom.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>Bearer-tokenet til autentificering med Ollama/OpenAI-endepunktet.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>Bearer-tokenen til autentificering af OpenAI Chat Endpoint, f.eks. sk-abc123... eller 5a0fbdefa19f.... Efterlad tom, hvis endpointet ikke kræver autentificering.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>Det brands navn, der vises i foden.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>Navnet på indlejringsmodellen til vektorsøgning, f.eks. bge-m3. Kræver, at Ollama-endepunktet er konfigureret.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>Navnet på indlejringmodellen, f.eks. bge-m3:latest. Skal være tilgængelig på Embedding Ollama Instance. Bruges kun til vektorsøgning, ikke til oversættelse.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>URL&apos;en til Git-arkivet, som HowToCook-opskrifterne synkroniseres fra.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Navnet på LLM-modellen, der bruges til opskriftsoversættelse og udtrækning af ingredienser, f.eks. qwen3.5:27b-q8_0. Skal være tilgængelig på ovenstående OpenAI Chat Endpoint. Ikke relateret til indlejring/vektorsøgning.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>Det projektlogo, der vises i navigationen og foden. Støtter jpg, png, svg.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>Det maksimale antal kommentarer, en bruger kan indsende per dag.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>Navnet på projektet, der vises i brugergrænsefladen.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>Ollama API&apos;s base-URL, der specifikt bruges til at generere indlejringer af opskrifter og forespørgsler (vektorsøgning). Kun værten bruges — /api/embed tilføjes automatisk. Faller tilbage til OpenAI Chat Endpoint, hvis den er tom. F.eks. https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>Endpointet til chat-afslutninger, der er OpenAI-kompatibelt, bruges til opskriftsoversættelse, ingrediensudtrækning og andre LLM-opgaver. F.eks. https://ollama.example.com/v1/chat/completions. Ikke relateret til indlejring/vektorsøgning.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering med Embedding Ollama-instansen, f.eks. 5a0fbdefa19f.... Faller tilbage til OpenAI API-token, når den er tom.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>Bearer-tokenet til autentificering med Ollama/OpenAI-endepunktet.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering af OpenAI Chat Endpoint, f.eks. sk-abc123... eller 5a0fbdefa19f.... Efterlad tom, hvis endpointet ikke kræver autentificering.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>Bearer-tokenen til autentificering med Ollama-endepunktet til indlejring. Fallback til Ollama API-token, når den er tom.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Det brands navn, der vises i foden.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>Navnet på indlejringsmodellen til vektorsøgning, f.eks. bge-m3. Kræver, at Ollama-endepunktet er konfigureret.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Navnet på indlejringmodellen, f.eks. bge-m3:latest. Skal være tilgængelig på Embedding Ollama Instance. Bruges kun til vektorsøgning, ikke til oversættelse.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Det projektlogo, der vises i navigationen og foden. Støtter jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Det maksimale antal kommentarer, en bruger kan indsende per dag.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Navnet på projektet, der vises i brugergrænsefladen.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>Brug AI-søgning</value>

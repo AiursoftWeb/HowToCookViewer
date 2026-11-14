@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Дозволи визначаються програмою та не можуть бути відредаговані або видалені. Натисніть на дозвіл, щоб побачити, які ролі та користувачі його мають.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Користувачі з дозволом</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>роль(і)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>користувач(ів)</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Користувачі з дозволом</value>
   </data>
 
 </root>

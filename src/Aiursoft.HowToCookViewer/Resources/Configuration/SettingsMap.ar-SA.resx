@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>اسم نموذج الذكاء الاصطناعي المستخدم لترجمة الوصفات، على سبيل المثال: qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>رمز الحامل للمصادقة مع نقطة نهاية Ollama للتضمين. يعود إلى رمز واجهة برمجة تطبيقات Ollama عند فراغه.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>رمز الوصول المميز للمصادقة مع مثيل Ollama للتضمين، على سبيل المثال 5a0fbdefa19f.... عند تركه فارغًا، سيتم الرجوع إلى رمز واجهة برمجة تطبيقات OpenAI.</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>رمز البearer المميز للمصادقة مع نقطة نهاية Ollama/OpenAI.</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>رمز البearer المستخدم للمصادقة مع نقطة نهاية دردشة OpenAI، مثل sk-abc123... أو 5a0fbdefa19f.... اتركه فارغاً إذا لم تتطلب نقطة النهاية مصادقة.</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>اسم العلامة التجارية المُعرض في التذييل.</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>اسم نموذج التضمين لبحث المتجهات، على سبيل المثال bge-m3. يتطلب تكوين نقطة نهاية Ollama.</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>اسم نموذج التضمين، مثل bge-m3:latest. يجب أن يكون متوفراً في مثيل Ollama الخاص بالتضمين. يُستخدم فقط للبحث المتجهي، وليس للترجمة.</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>عنوان المستودع الخاص بـ Git لمزامنة وصفات HowToCook منه.</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>اسم نموذج الذكاء الاصطناعي الكبير المستخدم في ترجمة الوصفات واستخراج المكونات، على سبيل المثال qwen3.5:27b-q8_0. يجب أن يكون متاحًا في نقطة نهاية الدردشة الخاصة بـ OpenAI المذكورة أعلاه. لا علاقة له بالبحث المتجهي/التضمين.</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>الشعار الخاص بالمشروع يتم عرضه في شريط التنقل والقدم. يدعم jpg، png، svg.</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>الحد الأقصى لعدد التعليقات التي يمكن للمستخدم نشرها يوميًا.</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>اسم المشروع المُعرض في الواجهة الأمامية.</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>عنوان URL الأساسي لواجهة برمجة تطبيقات Ollama المستخدم خصيصًا لتوليد تضمينات الوصفات والاستعلامات (البحث المتجهي). يتم استخدام المضيف فقط — يتم إضافة /api/embed تلقائيًا. يعود إلى نقطة نهاية الدردشة الخاصة بـ OpenAI عند تركه فارغًا. مثال: https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>واجهة إنهاء المكالمات المتوافقة مع OpenAI المستخدمة لترجمة الوصفات، واستخراج المكونات، ومهام الذكاء الاصطناعي التوليدية الأخرى. على سبيل المثال: https://ollama.example.com/v1/chat/completions. لا علاقة له بتضمين/البحث المتجهي.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>رمز الوصول المميز للمصادقة مع مثيل Ollama للتضمين، على سبيل المثال 5a0fbdefa19f.... عند تركه فارغًا، سيتم الرجوع إلى رمز واجهة برمجة تطبيقات OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>رمز البearer المميز للمصادقة مع نقطة نهاية Ollama/OpenAI.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>رمز البearer المستخدم للمصادقة مع نقطة نهاية دردشة OpenAI، مثل sk-abc123... أو 5a0fbdefa19f.... اتركه فارغاً إذا لم تتطلب نقطة النهاية مصادقة.</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>رمز الحامل للمصادقة مع نقطة نهاية Ollama للتضمين. يعود إلى رمز واجهة برمجة تطبيقات Ollama عند فراغه.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>اسم العلامة التجارية المُعرض في التذييل.</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>اسم نموذج التضمين لبحث المتجهات، على سبيل المثال bge-m3. يتطلب تكوين نقطة نهاية Ollama.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>اسم نموذج التضمين، مثل bge-m3:latest. يجب أن يكون متوفراً في مثيل Ollama الخاص بالتضمين. يُستخدم فقط للبحث المتجهي، وليس للترجمة.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>الشعار الخاص بالمشروع يتم عرضه في شريط التنقل والقدم. يدعم jpg، png، svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>الحد الأقصى لعدد التعليقات التي يمكن للمستخدم نشرها يوميًا.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>اسم المشروع المُعرض في الواجهة الأمامية.</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>استخدام بحث الذكاء الاصطناعي</value>

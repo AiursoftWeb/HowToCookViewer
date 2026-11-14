@@ -141,27 +141,6 @@
   <data name="The AI model name to use for recipe translation, e.g. qwen3.5:27b-q8_0" xml:space="preserve">
     <value>用於食譜翻譯的 AI 模型名稱，例如 qwen3.5:27b-q8_0</value>
   </data>
-  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
-    <value>用於與嵌入 Ollama 端點進行身份驗證的載入權杖。當為空時，會回退至 Ollama API 權杖。</value>
-  </data>
-  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
-    <value>用於驗證 Embedding Ollama Instance 的 Bearer Token，例如 5a0fbdefa19f.... 若留空則會退而使用 OpenAI API Token。</value>
-  </data>
-  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
-    <value>用於與 Ollama/OpenAI 端點進行身份驗證的載入者權杖。</value>
-  </data>
-  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
-    <value>用於向 OpenAI 聊天端點進行驗證的 Bearer Token，例如 sk-abc123... 或 5a0fbdefa19f.... 若該端點無需驗證，請留空。</value>
-  </data>
-  <data name="The brand name displayed in the footer." xml:space="preserve">
-    <value>頁尾顯示的品牌名稱</value>
-  </data>
-  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
-    <value>向量搜尋的嵌入模型名稱，例如 bge-m3。需要配置 Ollama 端點。</value>
-  </data>
-  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
-    <value>嵌入模型名稱，例如 bge-m3:latest。必須在「嵌入 Ollama 實例」中可用。僅用於向量搜尋，不用於翻譯。</value>
-  </data>
   <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
     <value>用於同步 HowToCook 食譜的 Git 儲存庫 URL。</value>
   </data>
@@ -170,15 +149,6 @@
   </data>
   <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
     <value>用於食譜翻譯與食材擷取的 LLM 模型名稱，例如 qwen3.5:27b-q8_0。必須為上方 OpenAI Chat Endpoint 所支援的模型。與嵌入/向量搜尋無關。</value>
-  </data>
-  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
-    <value>專案的標誌顯示於導覽列與頁尾。支援 jpg、png、svg 格式。</value>
-  </data>
-  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
-    <value>使用者每日可發布的留言數量上限。</value>
-  </data>
-  <data name="The name of the project displayed in the frontend." xml:space="preserve">
-    <value>專案在前端顯示的名稱。</value>
   </data>
   <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
     <value>專用於產生食譜與查詢嵌入向量（向量搜尋）的 Ollama API 基礎網址。僅使用主機位址，`/api/embed` 會自動附加。若留空則會回退至 OpenAI 聊天端點。例如：https://ollama.example.com</value>
@@ -191,6 +161,36 @@
   </data>
   <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
     <value>與 OpenAI 相容的對話完成端點，用於食譜翻譯、食材擷取及其他 LLM 任務。例如：https://ollama.example.com/v1/chat/completions。與嵌入/向量搜尋無關。</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>用於驗證 Embedding Ollama Instance 的 Bearer Token，例如 5a0fbdefa19f.... 若留空則會退而使用 OpenAI API Token。</value>
+  </data>
+  <data name="The bearer token for authenticating with the Ollama/OpenAI endpoint." xml:space="preserve">
+    <value>用於與 Ollama/OpenAI 端點進行身份驗證的載入者權杖。</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>用於向 OpenAI 聊天端點進行驗證的 Bearer Token，例如 sk-abc123... 或 5a0fbdefa19f.... 若該端點無需驗證，請留空。</value>
+  </data>
+  <data name="The bearer token for authenticating with the embedding Ollama endpoint. Falls back to Ollama API Token when empty." xml:space="preserve">
+    <value>用於與嵌入 Ollama 端點進行身份驗證的載入權杖。當為空時，會回退至 Ollama API 權杖。</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>頁尾顯示的品牌名稱</value>
+  </data>
+  <data name="The embedding model name for vector search, e.g. bge-m3. Requires Ollama endpoint to be configured." xml:space="preserve">
+    <value>向量搜尋的嵌入模型名稱，例如 bge-m3。需要配置 Ollama 端點。</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>嵌入模型名稱，例如 bge-m3:latest。必須在「嵌入 Ollama 實例」中可用。僅用於向量搜尋，不用於翻譯。</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>專案的標誌顯示於導覽列與頁尾。支援 jpg、png、svg 格式。</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>使用者每日可發布的留言數量上限。</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>專案在前端顯示的名稱。</value>
   </data>
   <data name="Use AI Search" xml:space="preserve">
     <value>使用 AI 搜尋</value>

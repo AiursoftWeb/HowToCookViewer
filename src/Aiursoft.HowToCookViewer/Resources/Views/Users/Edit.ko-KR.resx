@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>사용자 세부 정보를 수정하거나 아래에서 할당된 역할을 관리하세요.</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>새 아바타 파일</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>새 비밀번호</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>새 아바타 파일</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>역할 할당 저장</value>

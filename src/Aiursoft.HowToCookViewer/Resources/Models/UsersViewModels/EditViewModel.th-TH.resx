@@ -36,6 +36,12 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>รีเซ็ตรหัสผ่าน (ปล่อยว่างไว้เพื่อใช้รหัสผ่านเดิม)</value>
   </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>ไฟล์รูปภาพประจำตัวไม่ถูกต้อง กรุณาอัปโหลดใหม่อีกครั้ง</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>ไฟล์รูปโปรไฟล์จำเป็นต้องมี</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} ไม่ใช่ที่อยู่อีเมลที่ถูกต้อง</value>
   </data>
@@ -47,12 +53,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>{0} ต้องมีความยาวสูงสุด {1} ตัวอักษร</value>
-  </data>
-  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
-    <value>ไฟล์รูปภาพประจำตัวไม่ถูกต้อง กรุณาอัปโหลดใหม่อีกครั้ง</value>
-  </data>
-  <data name="The avatar file is required." xml:space="preserve">
-    <value>ไฟล์รูปโปรไฟล์จำเป็นต้องมี</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>ชื่อผู้ใช้</value>

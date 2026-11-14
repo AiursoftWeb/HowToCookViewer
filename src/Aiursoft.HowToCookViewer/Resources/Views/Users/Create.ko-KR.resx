@@ -27,17 +27,17 @@
   <data name="Create" xml:space="preserve">
     <value>생성</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>새 사용자 생성</value>
-  </data>
-  <data name="Create a password for the new user" xml:space="preserve">
-    <value>새 사용자용 비밀번호 생성</value>
-  </data>
   <data name="Create New User" xml:space="preserve">
     <value>새 사용자 생성</value>
   </data>
   <data name="Create User" xml:space="preserve">
     <value>사용자 생성</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>새 사용자 생성</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>새 사용자용 비밀번호 생성</value>
   </data>
   <data name="Display Name" xml:space="preserve">
     <value>표시 이름</value>

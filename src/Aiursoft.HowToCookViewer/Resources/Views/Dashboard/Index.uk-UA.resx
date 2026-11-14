@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ Попередня</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Підтримка «відстрілюй і забудь» для довготривалих завдань (наприклад, електронних листів або штучного інтелекту), із графічним інтерфейсом для управління чергою, паралельною обробкою та скасуванням.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Усі залежності автоматично реєструються та завжди доступні через ін&apos;єкцію в конструктор.</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>та відкрийте для себе щось нове, що можна приготувати сьогодні.</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Автоматичний темний режим</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>Адаптивний дизайн</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Надійне тестування інтеграції</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>Пошук</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Пошук рецептів</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>Пошук на основі ШІ (Векторна база даних)</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>Пошук рецептів</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>Шукати рецепти (напр., помідори, яйця, тофу…)</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Чому варто використовувати шаблон Aiursoft?</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>та відкрийте для себе щось нове, що можна приготувати сьогодні.</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Попередня</value>
   </data>
 
 </root>

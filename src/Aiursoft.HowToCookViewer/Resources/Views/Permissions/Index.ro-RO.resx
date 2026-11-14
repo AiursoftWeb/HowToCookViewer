@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Permisiunile sunt definite de aplicație și nu pot fi editate sau șterse. Faceți clic pe o permisiune pentru a vedea ce roluri și utilizatori o au.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Utilizatori cu Permisiune</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>rol(uri)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>utilizator(i)</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Utilizatori cu Permisiune</value>
   </data>
 
 </root>

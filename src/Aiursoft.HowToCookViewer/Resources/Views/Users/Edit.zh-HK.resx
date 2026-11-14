@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>修改用戶詳細資料或管理其分配嘅角色如下。</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>新頭像檔案</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>新密碼</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>新頭像檔案</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>儲存角色分配</value>

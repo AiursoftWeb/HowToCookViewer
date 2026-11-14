@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>İzinler uygulama tarafından tanımlanır ve düzenlenemez veya silinemez. Hangi rollerin ve kullanıcıların bu izne sahip olduğunu görmek için bir izne tıklayın.</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Bu İzinle Kullanıcılar</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>rol(ler)</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>kullanıcı(lar)</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Bu İzinle Kullanıcılar</value>
   </data>
 
 </root>

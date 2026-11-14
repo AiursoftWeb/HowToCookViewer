@@ -18,14 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name=".NET Version" xml:space="preserve">
-    <value>Версия .NET</value>
-  </data>
-  <data name="(32-bit)" xml:space="preserve">
+      <data name="(32-bit)" xml:space="preserve">
     <value>(32-bit)</value>
   </data>
   <data name="(64-bit)" xml:space="preserve">
     <value>(64-bit)</value>
+  </data>
+  <data name=".NET Version" xml:space="preserve">
+    <value>Версия .NET</value>
   </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>Обзор серверного окружения приложения, его процессов и текущего контекста запроса.</value>
@@ -36,6 +36,12 @@
   <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
     <value>Вы уверены, что хотите перезапустить приложение? Это действие необратимо и завершит все активные подключения.</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Архитектура процессора</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Ядра ЦП</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
@@ -44,12 +50,6 @@
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Подтвердите перезапуск приложения</value>
-  </data>
-  <data name="CPU Architecture" xml:space="preserve">
-    <value>Архитектура процессора</value>
-  </data>
-  <data name="CPU Cores" xml:space="preserve">
-    <value>Ядра ЦП</value>
   </data>
   <data name="Created" xml:space="preserve">
     <value>Создано</value>

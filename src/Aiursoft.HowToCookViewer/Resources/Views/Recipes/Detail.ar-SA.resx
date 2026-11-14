@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>مبتدئ</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>breadcrumb</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>جارٍ الحساب...</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>التعليقات</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>التزامات</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>محتوى المجتمع</value>
@@ -95,9 +89,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>متوسط</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>سعرة حرارية</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>آخر تحديث:</value>
@@ -143,6 +134,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>اكتب تعليقك...</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>breadcrumb</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>التزامات</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>سعرة حرارية</value>
   </data>
 
 </root>

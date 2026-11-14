@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>Lösenord</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Lösenordet och bekräftelselösenordet matchar inte.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} är inte en giltig e-postadress.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0} måste vara minst {2} och högst {1} tecken långt.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>Lösenordet och bekräftelselösenordet matchar inte.</value>
   </data>
 
 </root>

@@ -21,9 +21,6 @@
       <data name="All Recipes" xml:space="preserve">
     <value>جميع الوصفات</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>مسار التنقل</value>
-  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>الصعوبة</value>
   </data>
@@ -35,6 +32,9 @@
   </data>
   <data name="Source Recipe" xml:space="preserve">
     <value>الوصفة المصدر</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>مسار التنقل</value>
   </data>
 
 </root>

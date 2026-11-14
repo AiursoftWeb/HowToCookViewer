@@ -27,17 +27,17 @@
   <data name="Create" xml:space="preserve">
     <value>Створити</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Створити нового користувача</value>
-  </data>
-  <data name="Create a password for the new user" xml:space="preserve">
-    <value>Створіть пароль для нового користувача</value>
-  </data>
   <data name="Create New User" xml:space="preserve">
     <value>Створити нового користувача</value>
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Створити користувача</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>Створити нового користувача</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Створіть пароль для нового користувача</value>
   </data>
   <data name="Display Name" xml:space="preserve">
     <value>Відображуване ім&apos;я</value>

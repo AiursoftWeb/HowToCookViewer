@@ -45,9 +45,6 @@
   <data name="Job Name" xml:space="preserve">
     <value>Tehtävän nimi</value>
   </data>
-  <data name="last hour" xml:space="preserve">
-    <value>viimeisen tunnin</value>
-  </data>
   <data name="Last run" xml:space="preserve">
     <value>Viimeksi suoritettu:</value>
   </data>
@@ -104,6 +101,9 @@
   </data>
   <data name="Trigger Now" xml:space="preserve">
     <value>Käynnistä nyt</value>
+  </data>
+  <data name="last hour" xml:space="preserve">
+    <value>viimeisen tunnin</value>
   </data>
 
 </root>

@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Chỉnh sửa thông tin người dùng hoặc quản lý các vai trò đã được gán của họ bên dưới.</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>Tập tin ảnh đại diện mới</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>Mật khẩu mới</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Tập tin ảnh đại diện mới</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>Lưu Phân Quyền</value>

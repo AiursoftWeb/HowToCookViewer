@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Modificați detaliile utilizatorului sau gestionați rolurile atribuite mai jos.</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>Fișier avatar nou</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>Parolă Nouă</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Fișier avatar nou</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>Salvează Atribuirile de Roluri</value>

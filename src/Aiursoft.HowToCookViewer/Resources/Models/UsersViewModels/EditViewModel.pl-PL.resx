@@ -36,6 +36,12 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Zresetuj hasło (pozostaw puste, aby zachować obecne hasło)</value>
   </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>Plik awatara jest nieprawidłowy. Prześlij go ponownie.</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>Plik awatara jest wymagany.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>Pole {0} nie zawiera prawidłowego adresu e-mail.</value>
   </data>
@@ -47,12 +53,6 @@
   </data>
   <data name="The {0} must be at max {1} characters long." xml:space="preserve">
     <value>{0} może mieć maksymalnie {1} znaków.</value>
-  </data>
-  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
-    <value>Plik awatara jest nieprawidłowy. Prześlij go ponownie.</value>
-  </data>
-  <data name="The avatar file is required." xml:space="preserve">
-    <value>Plik awatara jest wymagany.</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>Nazwa użytkownika</value>

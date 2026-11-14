@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Xác nhận mật khẩu của bạn</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Tạo Tài Khoản</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Tạo một tài khoản mới.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Tạo mật khẩu</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Tạo Tài Khoản</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>Địa chỉ Email</value>

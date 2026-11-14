@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>アカウント管理</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>認証プロバイダー</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>アバター設定</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>ローカル認証が無効になっているため、パスワードを変更できません。認証プロバイダーからプロフィールを編集してください。</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>認証プロバイダー</value>
   </data>
 
 </root>

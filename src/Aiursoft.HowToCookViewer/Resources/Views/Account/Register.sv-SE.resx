@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>Bekräfta ditt lösenord</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>Skapa konto</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>Skapa ett nytt konto.</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>Skapa ett lösenord</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>Skapa konto</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>E-postadress</value>

@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>비밀번호</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>비밀번호와 확인 비밀번호가 일치하지 않습니다.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0}은(는) 유효한 이메일 주소가 아닙니다.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0}은(는) 최소 {2}자 이상, 최대 {1}자 이하여야 합니다.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>비밀번호와 확인 비밀번호가 일치하지 않습니다.</value>
   </data>
 
 </root>

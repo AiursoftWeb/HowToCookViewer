@@ -51,9 +51,6 @@
   <data name="Licence" xml:space="preserve">
     <value>라이선스</value>
   </data>
-  <data name="logo" xml:space="preserve">
-    <value>logo</value>
-  </data>
   <data name="Project" xml:space="preserve">
     <value>프로젝트</value>
   </data>
@@ -71,6 +68,9 @@
   </data>
   <data name="Source Code" xml:space="preserve">
     <value>소스 코드</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
   </data>
 
 </root>

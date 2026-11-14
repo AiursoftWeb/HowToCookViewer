@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>帳戶管理</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>驗證提供者</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>頭像設定</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>由於本地驗證已停用，您無法變更密碼。請從驗證提供者編輯您的個人資料。</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>驗證提供者</value>
   </data>
 
 </root>

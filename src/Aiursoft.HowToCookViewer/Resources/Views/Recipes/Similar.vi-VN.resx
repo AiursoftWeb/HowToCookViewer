@@ -21,9 +21,6 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Tất cả công thức</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>thanh điều hướng</value>
-  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>Độ khó</value>
   </data>
@@ -35,6 +32,9 @@
   </data>
   <data name="Source Recipe" xml:space="preserve">
     <value>Công thức gốc</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>thanh điều hướng</value>
   </data>
 
 </root>

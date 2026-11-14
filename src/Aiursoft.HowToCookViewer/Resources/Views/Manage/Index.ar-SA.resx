@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>إدارة الحساب</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>مزود المصادقة</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>إعدادات الصورة الرمزية</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>لا يمكنك تغيير كلمة المرور لأن المصادقة المحلية معطلة. يرجى تعديل ملفك الشخصي من مزود المصادقة.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>مزود المصادقة</value>
   </data>
 
 </root>

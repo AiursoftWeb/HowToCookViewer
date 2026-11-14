@@ -18,14 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name=".NET Version" xml:space="preserve">
-    <value>Phiên bản .NET</value>
-  </data>
-  <data name="(32-bit)" xml:space="preserve">
+      <data name="(32-bit)" xml:space="preserve">
     <value>(32-bit)</value>
   </data>
   <data name="(64-bit)" xml:space="preserve">
     <value>(64-bit)</value>
+  </data>
+  <data name=".NET Version" xml:space="preserve">
+    <value>Phiên bản .NET</value>
   </data>
   <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
     <value>Tổng quan về môi trường máy chủ, quy trình và ngữ cảnh yêu cầu hiện tại của ứng dụng.</value>
@@ -36,6 +36,12 @@
   <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
     <value>Bạn có chắc chắn muốn khởi động lại ứng dụng không? Hành động này không thể hoàn tác và sẽ chấm dứt tất cả các kết nối đang hoạt động.</value>
   </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Kiến trúc CPU</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>Nhân CPU</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
@@ -44,12 +50,6 @@
   </data>
   <data name="Confirm Application Restart" xml:space="preserve">
     <value>Xác nhận Khởi động lại Ứng dụng</value>
-  </data>
-  <data name="CPU Architecture" xml:space="preserve">
-    <value>Kiến trúc CPU</value>
-  </data>
-  <data name="CPU Cores" xml:space="preserve">
-    <value>Nhân CPU</value>
   </data>
   <data name="Created" xml:space="preserve">
     <value>Được tạo</value>

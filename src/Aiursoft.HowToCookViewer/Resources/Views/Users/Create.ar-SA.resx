@@ -27,17 +27,17 @@
   <data name="Create" xml:space="preserve">
     <value>إنشاء</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>إنشاء مستخدم جديد</value>
-  </data>
-  <data name="Create a password for the new user" xml:space="preserve">
-    <value>أنشئ كلمة مرور للمستخدم الجديد</value>
-  </data>
   <data name="Create New User" xml:space="preserve">
     <value>إنشاء مستخدم جديد</value>
   </data>
   <data name="Create User" xml:space="preserve">
     <value>إنشاء مستخدم</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>إنشاء مستخدم جديد</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>أنشئ كلمة مرور للمستخدم الجديد</value>
   </data>
   <data name="Display Name" xml:space="preserve">
     <value>الاسم المعروض</value>

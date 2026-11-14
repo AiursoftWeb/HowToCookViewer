@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>รหัสผ่าน</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>รหัสผ่านและรหัสผ่านยืนยันไม่ตรงกัน</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} ไม่ใช่ที่อยู่อีเมลที่ถูกต้อง</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0} ต้องมีความยาวอย่างน้อย {2} ตัวอักษร และไม่เกิน {1} ตัวอักษร</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>รหัสผ่านและรหัสผ่านยืนยันไม่ตรงกัน</value>
   </data>
 
 </root>

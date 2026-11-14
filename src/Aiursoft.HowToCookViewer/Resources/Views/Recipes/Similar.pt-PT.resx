@@ -21,9 +21,6 @@
       <data name="All Recipes" xml:space="preserve">
     <value>Todas as Receitas</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>migas de pão</value>
-  </data>
   <data name="Difficulty" xml:space="preserve">
     <value>Dificuldade</value>
   </data>
@@ -35,6 +32,9 @@
   </data>
   <data name="Source Recipe" xml:space="preserve">
     <value>Receita de Origem</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>migas de pão</value>
   </data>
 
 </root>

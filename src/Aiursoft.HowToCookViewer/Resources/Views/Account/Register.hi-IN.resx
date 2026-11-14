@@ -27,14 +27,14 @@
   <data name="Confirm your password" xml:space="preserve">
     <value>अपना पासवर्ड पुष्टि करें</value>
   </data>
+  <data name="Create Account" xml:space="preserve">
+    <value>खाता बनाएं</value>
+  </data>
   <data name="Create a new account." xml:space="preserve">
     <value>नया खाता बनाएँ।</value>
   </data>
   <data name="Create a password" xml:space="preserve">
     <value>एक पासवर्ड बनाएं</value>
-  </data>
-  <data name="Create Account" xml:space="preserve">
-    <value>खाता बनाएं</value>
   </data>
   <data name="Email Address" xml:space="preserve">
     <value>ईमेल पता</value>

@@ -39,9 +39,6 @@
   <data name="Beginner" xml:space="preserve">
     <value>入门</value>
   </data>
-  <data name="breadcrumb" xml:space="preserve">
-    <value>面包屑导航</value>
-  </data>
   <data name="Calculating..." xml:space="preserve">
     <value>计算中…</value>
   </data>
@@ -56,9 +53,6 @@
   </data>
   <data name="Comments" xml:space="preserve">
     <value>评论</value>
-  </data>
-  <data name="commits" xml:space="preserve">
-    <value>次提交</value>
   </data>
   <data name="Community Content" xml:space="preserve">
     <value>社区内容</value>
@@ -98,9 +92,6 @@
   </data>
   <data name="Intermediate" xml:space="preserve">
     <value>中等</value>
-  </data>
-  <data name="kcal" xml:space="preserve">
-    <value>千卡</value>
   </data>
   <data name="Last updated:" xml:space="preserve">
     <value>最后更新：</value>
@@ -155,6 +146,15 @@
   </data>
   <data name="Write your comment…" xml:space="preserve">
     <value>写下您的评论…</value>
+  </data>
+  <data name="breadcrumb" xml:space="preserve">
+    <value>面包屑导航</value>
+  </data>
+  <data name="commits" xml:space="preserve">
+    <value>次提交</value>
+  </data>
+  <data name="kcal" xml:space="preserve">
+    <value>千卡</value>
   </data>
 
 </root>

@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>Κωδικός πρόσβασης</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Ο κωδικός πρόσβασης και ο κωδικός επιβεβαίωσης δεν ταιριάζουν.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>Το {0} δεν είναι έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>Το {0} πρέπει να έχει τουλάχιστον {2} και το πολύ {1} χαρακτήρες.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>Ο κωδικός πρόσβασης και ο κωδικός επιβεβαίωσης δεν ταιριάζουν.</value>
   </data>
 
 </root>

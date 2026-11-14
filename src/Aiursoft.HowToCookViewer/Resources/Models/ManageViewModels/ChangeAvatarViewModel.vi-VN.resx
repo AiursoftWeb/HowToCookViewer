@@ -24,12 +24,6 @@
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
-  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
-    <value>{0} phải có ít nhất {1} ký tự.</value>
-  </data>
-  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
-    <value>{0} không được dài quá {1} ký tự.</value>
-  </data>
   <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
     <value>Tập tin avatar không hợp lệ. Vui lòng tải lên lại.</value>
   </data>
@@ -38,6 +32,12 @@
   </data>
   <data name="The name is required." xml:space="preserve">
     <value>Tên là bắt buộc.</value>
+  </data>
+  <data name="The {0} must be at least {1} characters long." xml:space="preserve">
+    <value>{0} phải có ít nhất {1} ký tự.</value>
+  </data>
+  <data name="The {0} must be at max {1} characters long." xml:space="preserve">
+    <value>{0} không được dài quá {1} ký tự.</value>
   </data>
 
 </root>

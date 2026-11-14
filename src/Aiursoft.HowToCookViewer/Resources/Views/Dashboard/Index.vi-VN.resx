@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ Trước</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Hỗ trợ &quot;Fire-and-forget&quot; cho các tác vụ dài hạn (như email hoặc AI), đi kèm giao diện người dùng (GUI) để quản lý hàng đợi, xử lý song song và hủy bỏ.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tất cả các dependency đều được tự động đăng ký và luôn sẵn sàng để sử dụng thông qua constructor injection.</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>và khám phá điều mới mẻ để nấu ăn hôm nay.</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Chế độ Tối Tự động</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>Thiết kế đáp ứng</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Kiểm thử tích hợp mạnh mẽ</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>Tìm kiếm</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Tìm kiếm công thức</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>Tìm kiếm dựa trên AI (Cơ sở dữ liệu Vector)</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>Tìm kiếm công thức</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>Tìm công thức nấu ăn (ví dụ: cà chua, trứng, đậu phụ…)</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Tại sao nên sử dụng Mẫu Aiursoft?</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>và khám phá điều mới mẻ để nấu ăn hôm nay.</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Trước</value>
   </data>
 
 </root>

@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>Управление учётной записью</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>поставщик аутентификации</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>Настройки аватара</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Вы не можете изменить свой пароль, так как локальная аутентификация отключена. Пожалуйста, отредактируйте свой профиль у поставщика аутентификации.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>поставщик аутентификации</value>
   </data>
 
 </root>

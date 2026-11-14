@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ ก่อน</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>การสนับสนุนแบบ &quot;Fire-and-forget&quot; สำหรับงานที่ใช้เวลานาน (เช่น อีเมลหรือปัญญาประดิษฐ์) พร้อมด้วยอินเทอร์เฟซกราฟิกสำหรับการจัดการคิว การประมวลผลแบบขนาน และการยกเลิก</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>การอ้างอิงทั้งหมดจะถูกลงทะเบียนโดยอัตโนมัติและพร้อมใช้งานเสมอผ่านการฉีดคอนสตรัคเตอร์</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>และค้นพบสิ่งใหม่ ๆ ในการทำอาหารในวันนี้</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>โหมดมืดอัตโนมัติ</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>การออกแบบที่ตอบสนอง</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>การทดสอบการผสานรวมที่มั่นคง</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>ค้นหา</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>ค้นหาสูตรอาหาร</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>ค้นหาด้วย AI (ฐานข้อมูลเวกเตอร์)</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>ค้นหาสูตรอาหาร</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>ค้นหาสูตรอาหาร (เช่น มะเขือเทศ, ไข่, เต้าหู้…)</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>ทำไมต้องใช้ Aiursoft Template?</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>และค้นพบสิ่งใหม่ ๆ ในการทำอาหารในวันนี้</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ ก่อน</value>
   </data>
 
 </root>

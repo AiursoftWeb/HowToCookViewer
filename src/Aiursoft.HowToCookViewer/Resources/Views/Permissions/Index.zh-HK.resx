@@ -42,14 +42,14 @@
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>權限由應用程式定義，且不能編輯或刪除。點擊權限以查看哪些角色和用戶擁有它。</value>
   </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>擁有權限的用戶</value>
+  </data>
   <data name="role(s)" xml:space="preserve">
     <value>角色</value>
   </data>
   <data name="user(s)" xml:space="preserve">
     <value>用戶</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>擁有權限的用戶</value>
   </data>
 
 </root>

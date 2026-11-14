@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>Kata Sandi</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Kata sandi dan kata sandi konfirmasi tidak cocok.</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} bukan alamat email yang valid.</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0} harus memiliki panjang setidaknya {2} dan maksimal {1} karakter.</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>Kata sandi dan kata sandi konfirmasi tidak cocok.</value>
   </data>
 
 </root>

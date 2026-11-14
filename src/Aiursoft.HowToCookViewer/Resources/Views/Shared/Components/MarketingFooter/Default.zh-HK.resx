@@ -51,9 +51,6 @@
   <data name="Licence" xml:space="preserve">
     <value>許可證</value>
   </data>
-  <data name="logo" xml:space="preserve">
-    <value>Logo</value>
-  </data>
   <data name="Project" xml:space="preserve">
     <value>專案</value>
   </data>
@@ -71,6 +68,9 @@
   </data>
   <data name="Source Code" xml:space="preserve">
     <value>源代碼</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Logo</value>
   </data>
 
 </root>

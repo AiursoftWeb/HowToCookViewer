@@ -51,11 +51,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Τροποποιήστε τα στοιχεία του χρήστη ή διαχειριστείτε τους ανατεθειμένους ρόλους παρακάτω.</value>
   </data>
-  <data name="New avatar file" xml:space="preserve">
-    <value>Νέο αρχείο avatar</value>
-  </data>
   <data name="New Password" xml:space="preserve">
     <value>Νέος Κωδικός Πρόσβασης</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Νέο αρχείο avatar</value>
   </data>
   <data name="Save Role Assignments" xml:space="preserve">
     <value>Αποθήκευση Ανάθεσης Ρόλων</value>

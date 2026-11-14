@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>Tilin hallinta</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>tunnistuspalvelu</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>Avatar-asetukset</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Et voi vaihtaa salasanaasi, koska paikallinen tunnistautuminen on poistettu käytöstä. Muokkaa profiiliasi tunnistautumispalvelun kautta.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>tunnistuspalvelu</value>
   </data>
 
 </root>

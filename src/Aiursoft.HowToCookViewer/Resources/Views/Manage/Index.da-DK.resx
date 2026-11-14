@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>Kontohåndtering</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>godkendelsesudbyder</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>Avatar-indstillinger</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Du kan ikke ændre din adgangskode, fordi lokal godkendelse er deaktiveret. Rediger venligst din profil fra godkendelsesudbyderen.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>godkendelsesudbyder</value>
   </data>
 
 </root>

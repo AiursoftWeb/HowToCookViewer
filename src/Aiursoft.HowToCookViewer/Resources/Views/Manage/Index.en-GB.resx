@@ -21,9 +21,6 @@
       <data name="Account Management" xml:space="preserve">
     <value>Account Management</value>
   </data>
-  <data name="auth provider" xml:space="preserve">
-    <value>authentication provider</value>
-  </data>
   <data name="Avatar settings" xml:space="preserve">
     <value>Avatar settings</value>
   </data>
@@ -65,6 +62,9 @@
   </data>
   <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>You cannot change your password because local authentication is disabled. Please edit your profile from the auth provider.</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>authentication provider</value>
   </data>
 
 </root>

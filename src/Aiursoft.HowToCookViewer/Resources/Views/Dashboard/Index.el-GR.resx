@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="‹ Prev" xml:space="preserve">
-    <value>‹ Προηγ.</value>
-  </data>
-  <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Υποστήριξη &quot;Fire-and-forget&quot; για μακροχρόνιες εργασίες (όπως email ή ΤΝ), με GUI για διαχείριση ουράς, παράλληλη επεξεργασία και ακύρωση.</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
@@ -44,9 +41,6 @@
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Όλες οι εξαρτήσεις καταχωρούνται αυτόματα και είναι πάντα διαθέσιμες μέσω της εισαγωγής στον κατασκευαστή.</value>
-  </data>
-  <data name="and discover something new to cook today." xml:space="preserve">
-    <value>και ανακαλύψτε κάτι νέο για μαγειρέψετε σήμερα.</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Αυτόματη Λειτουργία Σκούρου Θέματος</value>
@@ -168,12 +162,6 @@
   <data name="Responsive Design" xml:space="preserve">
     <value>Αποκρισιμό Σχεδιασμό</value>
   </data>
-  <data name="result for" xml:space="preserve">
-    <value>result for</value>
-  </data>
-  <data name="results for" xml:space="preserve">
-    <value>results for</value>
-  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Ανθεκτικός Έλεγχος Ενοποίησης</value>
   </data>
@@ -186,14 +174,14 @@
   <data name="Search" xml:space="preserve">
     <value>Αναζήτηση</value>
   </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Αναζήτηση Συνταγών</value>
+  </data>
   <data name="Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook" xml:space="preserve">
     <value>Search across &lt;strong class=&quot;text-white&quot;&gt;{0}&lt;/strong&gt; recipes from HowToCook</value>
   </data>
   <data name="Search based on AI (Vector Database)" xml:space="preserve">
     <value>Αναζήτηση με βάση την Τεχνητή Νοημοσύνη (Βάση Δεδομένων Διανυσμάτων)</value>
-  </data>
-  <data name="Search Recipes" xml:space="preserve">
-    <value>Αναζήτηση Συνταγών</value>
   </data>
   <data name="Search recipes placeholder" xml:space="preserve">
     <value>Αναζήτηση συνταγών (π.χ. ντομάτα, αυγό, τόφου…)</value>
@@ -239,6 +227,18 @@
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Γιατί να χρησιμοποιήσετε το Πρότυπο Aiursoft;</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>και ανακαλύψτε κάτι νέο για μαγειρέψετε σήμερα.</value>
+  </data>
+  <data name="result for" xml:space="preserve">
+    <value>result for</value>
+  </data>
+  <data name="results for" xml:space="preserve">
+    <value>results for</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Προηγ.</value>
   </data>
 
 </root>

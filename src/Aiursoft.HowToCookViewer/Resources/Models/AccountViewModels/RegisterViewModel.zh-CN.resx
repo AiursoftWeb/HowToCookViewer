@@ -27,6 +27,9 @@
   <data name="Password" xml:space="preserve">
     <value>密码</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>密码和确认密码不匹配。</value>
+  </data>
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} 不是有效的电子邮件地址。</value>
   </data>
@@ -35,9 +38,6 @@
   </data>
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0}的长度至少为{2}个字符，最多为{1}个字符。</value>
-  </data>
-  <data name="The password and confirmation password do not match." xml:space="preserve">
-    <value>密码和确认密码不匹配。</value>
   </data>
 
 </root>
