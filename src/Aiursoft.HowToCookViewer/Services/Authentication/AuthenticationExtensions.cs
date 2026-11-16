@@ -157,11 +157,10 @@ public static class AuthenticationExtensions
 
         if (
             string.IsNullOrEmpty(username) ||
-            string.IsNullOrEmpty(displayName) ||
             string.IsNullOrEmpty(email) ||
             string.IsNullOrEmpty(providerKey))
         {
-            context.Fail(new InvalidOperationException("Could not find the required username, displayName, email, or sub claim in the OIDC token."));
+            context.Fail(new InvalidOperationException("Could not find the required username, email, or sub claim in the OIDC token."));
             return;
         }
 
@@ -176,7 +175,7 @@ public static class AuthenticationExtensions
             LoginProvider: context.Scheme.Name,
             ProviderKey: providerKey,
             UserName: username,
-            DisplayName: displayName,
+            DisplayName: string.IsNullOrWhiteSpace(displayName) ? username : displayName,
             Email: email,
             Roles: oidcRoles));
         if (!syncResult.Succeeded)
