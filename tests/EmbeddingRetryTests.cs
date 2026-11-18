@@ -59,7 +59,7 @@ public class EmbeddingRetryTests
     [DataRow(HttpStatusCode.RequestEntityTooLarge)]
     public async Task QueryShrinksContextErrorsAndCachesOnlyTheSuccessfulVector(HttpStatusCode status)
     {
-        using var handler = new EmbeddingHandler { ErrorStatus = status };
+        using var handler = new EmbeddingHandler { ErrorStatus = status, ContextLimit = 512 };
         _service = new RecipeVectorSearchService(_db, _cache, _settings, handler, NullLogger<RecipeVectorSearchService>.Instance);
         var query = "Introduction " + new string('a', 10000) + " Conclusion";
 
@@ -67,11 +67,16 @@ public class EmbeddingRetryTests
 
         Assert.IsTrue(result.UsedAi);
         Assert.AreEqual(1, result.TotalCount);
-        CollectionAssert.AreEqual(new[] { 8000, 4000, 2000 }, handler.Inputs.Select(input => input.Length).ToArray());
-        foreach (var input in handler.Inputs) Assert.AreEqual(query[..input.Length], input);
+        CollectionAssert.AreEqual(new[] { 8192, 4096, 2048, 1024, 512 }, handler.Inputs.Select(input => input.Length).ToArray());
+        foreach (var input in handler.Inputs)
+        {
+            StringAssert.StartsWith(input, "Introduction ");
+            StringAssert.EndsWith(input, " Conclusion");
+            StringAssert.Contains(input, "\n...\n");
+        }
         Assert.AreEqual(1, await _db.SearchEmbeddings.CountAsync());
         await _service.SearchAsync(_db.Recipes.AsNoTracking(), query, 1, 10);
-        Assert.AreEqual(3, handler.Inputs.Count, "Successful query embeddings must be reused.");
+        Assert.AreEqual(5, handler.Inputs.Count, "Successful query embeddings must be reused.");
     }
 
     [TestMethod]
@@ -89,7 +94,7 @@ public class EmbeddingRetryTests
 
         Assert.IsFalse(result.UsedAi);
         Assert.AreEqual(1, handler.Inputs.Count);
-        Assert.AreEqual(8000, handler.Inputs[0].Length);
+        Assert.AreEqual(8192, handler.Inputs[0].Length);
         Assert.AreEqual(0, await _db.SearchEmbeddings.CountAsync());
     }
 
@@ -103,7 +108,7 @@ public class EmbeddingRetryTests
         var result = await _service.SearchAsync(_db.Recipes.AsNoTracking(), query, 1, 10);
 
         Assert.IsFalse(result.UsedAi);
-        CollectionAssert.AreEqual(new[] { 8000, 4000, 2000, 1000, 500 }, handler.Inputs.Select(input => input.Length).ToArray());
+        CollectionAssert.AreEqual(new[] { 8192, 4096, 2048, 1024, 512 }, handler.Inputs.Select(input => input.Length).ToArray());
         Assert.AreEqual(0, await _db.SearchEmbeddings.CountAsync());
     }
 
@@ -122,8 +127,25 @@ public class EmbeddingRetryTests
         await job.ExecuteAsync();
 
         Assert.IsTrue(handler.Inputs.Count > 0);
-        Assert.IsTrue(handler.Inputs.All(input => input.Length == 8000), "Transient job retries must not shrink unrelated failures.");
+        Assert.IsTrue(handler.Inputs.All(input => input.Length == 8192), "Transient job retries must not shrink unrelated failures.");
         Assert.IsNull(_item.Embedding);
+    }
+
+    [TestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public void LongInputsPreserveBothEndsWithoutSplittingSurrogatePairs(bool unicodeBoundaries)
+    {
+        var text = unicodeBoundaries
+            ? new string('a', 6548) + "😀" + new string('m', 10000) + "😀" + new string('z', 1637)
+            : new string('a', 6549) + new string('m', 10000) + new string('z', 1638);
+        var input = GenerateEmbeddingsJob.TruncateForEmbedding(text, 8192);
+        Assert.IsTrue(input.Length <= 8192);
+        Assert.IsFalse(input.Contains('m'));
+        Assert.IsFalse(input.Contains('\uFFFD'));
+        StringAssert.StartsWith(input, new string('a', unicodeBoundaries ? 6548 : 6549));
+        StringAssert.EndsWith(input, new string('z', unicodeBoundaries ? 1637 : 1638));
+        StringAssert.Contains(input, "\n...\n");
     }
 
     private sealed class EmbeddingHandler : HttpMessageHandler, IHttpClientFactory
@@ -140,6 +162,7 @@ public class EmbeddingRetryTests
             Assert.AreEqual("/api/embed", request.RequestUri!.AbsolutePath);
             using var body = JsonDocument.Parse(await request.Content!.ReadAsStringAsync(cancellationToken));
             Assert.AreEqual("test-embedding-model", body.RootElement.GetProperty("model").GetString());
+            Assert.IsFalse(body.RootElement.GetProperty("truncate").GetBoolean());
             var input = body.RootElement.GetProperty("input").GetString()!;
             Inputs.Add(input);
             return input.Length > ContextLimit
