@@ -143,6 +143,7 @@ public class EmbeddingRetryTests
         Assert.IsTrue(input.Length <= 8192);
         Assert.IsFalse(input.Contains('m'));
         Assert.IsFalse(input.Contains('\uFFFD'));
+        Assert.IsTrue(new System.Text.UTF8Encoding(false, true).GetByteCount(input) > 0);
         StringAssert.StartsWith(input, new string('a', unicodeBoundaries ? 6548 : 6549));
         StringAssert.EndsWith(input, new string('z', unicodeBoundaries ? 1637 : 1638));
         StringAssert.Contains(input, "\n...\n");
