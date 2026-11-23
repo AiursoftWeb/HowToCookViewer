@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -5,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Aiursoft.HowToCookViewer.MySql.Migrations
 {
     /// <inheritdoc />
+    [ExcludeFromCodeCoverage]
     public partial class ResetIngredientCache : Migration
     {
         /// <inheritdoc />
