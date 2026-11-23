@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Aiursoft.HowToCookViewer.Sqlite.Migrations
 {
     /// <inheritdoc />
+    [ExcludeFromCodeCoverage]
     public partial class AddSearchEmbeddingLRU : Migration
     {
         /// <inheritdoc />
