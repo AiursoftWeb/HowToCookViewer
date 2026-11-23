@@ -1,10 +1,5 @@
 @model Aiursoft.HowToCookViewer.Views.Shared.Components.MarketingFooter.MarketingFooterViewModel
 @using Microsoft.AspNetCore.Localization
-@using Aiursoft.WebTools.OfficialPlugins
-@{
-    var cultureOptions = Context.RequestServices.GetKeyedService<IReadOnlyDictionary<string, string>>(typeof(LocalizationPlugin))
-        ?? LocalizationPlugin.SupportedCultures;
-}
 <footer class="py-5 bg-dark">
     <div class="container">
         <div class="row mb-4">
@@ -23,7 +18,7 @@
                     }
                     <form asp-controller="Culture" asp-action="Set" method="post" class="d-inline" asp-route-returnUrl="@(Context.Request.Path + Context.Request.QueryString)">
                         <select name="culture" onchange="this.form.submit()" class="form-select form-select-sm w-auto">
-                            @foreach (var culture in cultureOptions)
+                            @foreach (var culture in Aiursoft.WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures)
                             {
                                 <option value="@culture.Key"
                                         selected="@(culture.Key == currentCulture ? "selected" : null)">
