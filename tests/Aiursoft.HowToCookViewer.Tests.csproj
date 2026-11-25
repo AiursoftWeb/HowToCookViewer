@@ -21,4 +21,8 @@
   <ItemGroup>
     <ProjectReference Include="..\src\Aiursoft.HowToCookViewer\Aiursoft.HowToCookViewer.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../src/Aiursoft.HowToCookViewer/wwwroot/scripts/uploader.js" TargetPath="wwwroot/scripts/uploader.js" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../src/Aiursoft.HowToCookViewer/wwwroot/styles/uploader.css" TargetPath="wwwroot/styles/uploader.css" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
