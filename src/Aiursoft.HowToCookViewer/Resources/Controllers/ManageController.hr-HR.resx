@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Adjusting nickname is disabled by administrator." xml:space="preserve">
+    <value>Podesavanje nadimka onemogućeno je od strane administratora.</value>
+  </data>
+  <data name="An error has occurred." xml:space="preserve">
+    <value>Došlo je do pogreške.</value>
+  </data>
+  <data name="Local password is disabled when OIDC authentication is enabled." xml:space="preserve">
+    <value>Lokalna lozinka je onemogućena kada je OIDC autentifikacija omogućena.</value>
+  </data>
+  <data name="The file is not a valid image." xml:space="preserve">
+    <value>Datoteka nije valjana slika.</value>
+  </data>
+  <data name="Your avatar has been saved." xml:space="preserve">
+    <value>Vaš avatar je spremljen.</value>
+  </data>
+  <data name="Your password has been changed." xml:space="preserve">
+    <value>Vaša lozinka je promijenjena.</value>
+  </data>
+  <data name="Your profile has been saved." xml:space="preserve">
+    <value>Vaš profil je spremljen.</value>
+  </data>
+
+</root>

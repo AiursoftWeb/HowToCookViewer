@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=" The link to the brand&apos;s home page." xml:space="preserve">
+    <value>Poveznica na početnu stranicu brenda.</value>
+  </data>
+  <data name="Allow User Adjust Nickname" xml:space="preserve">
+    <value>Dozvoli korisniku prilagodbu nadimka</value>
+  </data>
+  <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
+    <value>Dozvolite korisnicima da prilagode svoje nadimke na stranici za upravljanje profilom.</value>
+  </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>URL početne stranice brenda</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>Naziv brenda</value>
+  </data>
+  <data name="Comma-separated BCP-47 language codes to translate recipes into, e.g. en-US,ja-JP,ko-KR,fr-FR" xml:space="preserve">
+    <value>Kodovi jezika BCP-47 odvojeni zarezom za prijevod recepata, npr. en-US,ja-JP,ko-KR,fr-FR</value>
+  </data>
+  <data name="Cosine similarity threshold (0-100) for merging similar ingredient names into groups. 100 means only identical vectors match, lower values merge more aggressively. Default 83." xml:space="preserve">
+    <value>Prag kosinusne sličnosti (0-100) za spajanje sličnih naziva sastojaka u grupe. 100 znači da se podudaraju samo identični vektori, niže vrijednosti agresivnije spajaju. Zadano 83.</value>
+  </data>
+  <data name="Display the Vultr promotion banner on the home page." xml:space="preserve">
+    <value>Prikaži Vultr promotivni baner na početnoj stranici.</value>
+  </data>
+  <data name="Embedding API Token" xml:space="preserve">
+    <value>API token za embedding</value>
+  </data>
+  <data name="Embedding Model" xml:space="preserve">
+    <value>Model za ugradnju</value>
+  </data>
+  <data name="Embedding Ollama Instance" xml:space="preserve">
+    <value>Instanca Ollama za ugrađivanje</value>
+  </data>
+  <data name="Embedding Query Cache Limit" xml:space="preserve">
+    <value>Ograničenje predmemorije upita za ugrađivanje</value>
+  </data>
+  <data name="Enable Embedding-Based Search" xml:space="preserve">
+    <value>Omogući pretraživanje temeljeno na ugrađivanju</value>
+  </data>
+  <data name="Fallback Git repository URL used when the primary URL times out." xml:space="preserve">
+    <value>Rezervna URL adresa Git repozitorija koja se koristi kada primarna URL adresa istekne.</value>
+  </data>
+  <data name="HowToCook Repo Backup URL" xml:space="preserve">
+    <value>HowToCook URL rezervne repozitorije</value>
+  </data>
+  <data name="HowToCook Repo URL" xml:space="preserve">
+    <value>URL HowToCook repozitorija</value>
+  </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>ICP broj</value>
+  </data>
+  <data name="Ingredient Similarity Threshold" xml:space="preserve">
+    <value>Prag sličnosti sastojaka</value>
+  </data>
+  <data name="Localization Languages" xml:space="preserve">
+    <value>Jezici lokalizacije</value>
+  </data>
+  <data name="Localization Model" xml:space="preserve">
+    <value>Model lokalizacije</value>
+  </data>
+  <data name="Master switch for semantic (vector-based) recipe search. When enabled and all dependencies are configured, search results display a green \&quot;Search based on AI (Vector Database)\&quot; badge and use cosine similarity ranking via the embedding model. When disabled, or when dependencies are missing, search silently falls back to keyword matching without the badge. Requires Embedding Ollama Instance (or OpenAI Chat Endpoint as fallback) and Embedding Model." xml:space="preserve">
+    <value>Glavni prekidač za semantičko (vektorsku) pretragu recepata. Kada je omogućen i sve ovisnosti su konfigurirane, rezultati pretrage prikazuju zeleni natpis &quot;Pretraga na temelju AI (vektorska baza podataka)&quot; i koriste rangiranje kosinusne sličnosti putem modela ugrađivanja. Kada je onemogućen ili kada nedostaju ovisnosti, pretraga tiho prelazi na podudaranje ključnih riječi bez natpisa. Zahtijeva Embedding Ollama Instance (ili OpenAI Chat Endpoint kao rezervu) i Embedding Model.</value>
+  </data>
+  <data name="Max Comments Per Day Per User" xml:space="preserve">
+    <value>Maksimalan broj komentara po dnevno po korisniku</value>
+  </data>
+  <data name="Maximum number of cached query embeddings in the database. When exceeded, the least recently accessed entries are evicted (LRU). Default 2000. Adjust based on your database capacity and expected query diversity." xml:space="preserve">
+    <value>Maksimalan broj predmemorisanih embeddinga upita u bazi podataka. Kada se prekorači, najmanje nedavno pristupljene stavke se uklanjaju (LRU). Zadano 2000. Podesite prema kapacitetu vaše baze podataka i očekivanoj raznolikosti upita.</value>
+  </data>
+  <data name="OpenAI API Token" xml:space="preserve">
+    <value>OpenAI API token</value>
+  </data>
+  <data name="OpenAI Chat Endpoint" xml:space="preserve">
+    <value>OpenAI Chat Endpoint</value>
+  </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>Logotip projekta</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>Naziv projekta</value>
+  </data>
+  <data name="Show Vultr Promotion" xml:space="preserve">
+    <value>Prikaži Vultr promociju</value>
+  </data>
+  <data name="The Git repository URL to sync HowToCook recipes from." xml:space="preserve">
+    <value>URL Git repozitorija za sinkronizaciju HowToCook recepata.</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>Broj ICP licence za korisnike u kontinentalnoj Kini. Ostavite prazno za sakrivanje.</value>
+  </data>
+  <data name="The LLM model name used for recipe translation and ingredient extraction, e.g. qwen3.5:27b-q8_0. Must be available at the OpenAI Chat Endpoint above. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>Naziv LLM modela koji se koristi za prijevod recepata i ekstrakciju sastojaka, npr. qwen3.5:27b-q8_0. Mora biti dostupan na gornjoj OpenAI Chat Endpoint adresi. Nije povezano s embedding/vektorskim pretragom.</value>
+  </data>
+  <data name="The Ollama API base URL used specifically for generating recipe and query embeddings (vector search). Only the host is used — /api/embed is appended automatically. Falls back to OpenAI Chat Endpoint when empty. E.g. https://ollama.example.com" xml:space="preserve">
+    <value>Osnovna URL Ollama API-ja koja se koristi isključivo za generiranje ugrađenih (embedding) predstava recepata i upita (vektorsko pretraživanje). Koristi se samo domaćin — /api/embed se dodaje automatski. Ako je prazno, koristi se OpenAI Chat Endpoint. Primjer: https://ollama.example.com</value>
+  </data>
+  <data name="The OpenAI-compatible chat completions endpoint used for recipe translation, ingredient extraction, and other LLM tasks. E.g. https://ollama.example.com/v1/chat/completions. Unrelated to embedding/vector search." xml:space="preserve">
+    <value>OpenAI-kompatibilna točka za chat completions koja se koristi za prijevod recepata, izdvajanje sastojaka i druge LLM zadatke. Primjer: https://ollama.example.com/v1/chat/completions. Nije povezano s embedding/vector pretragom.</value>
+  </data>
+  <data name="The bearer token for authenticating with the Embedding Ollama Instance, e.g. 5a0fbdefa19f.... Falls back to OpenAI API Token when empty." xml:space="preserve">
+    <value>Bearer token za autenticaciju s Embedding Ollama Instancijom, npr. 5a0fbdefa19f.... Ako je prazno, koristi se OpenAI API Token.</value>
+  </data>
+  <data name="The bearer token for authenticating with the OpenAI Chat Endpoint, e.g. sk-abc123... or 5a0fbdefa19f.... Leave empty if the endpoint does not require authentication." xml:space="preserve">
+    <value>Bearer token za autenticiranje s OpenAI Chat Endpointom, npr. sk-abc123... ili 5a0fbdefa19f.... Ostavite prazno ako endpoint ne zahtijeva autenticiranje.</value>
+  </data>
+  <data name="The brand name displayed in the footer." xml:space="preserve">
+    <value>Naziv brend prikazan u podnožju.</value>
+  </data>
+  <data name="The embedding model name, e.g. bge-m3:latest. Must be available at the Embedding Ollama Instance. Only used for vector search, not for translation." xml:space="preserve">
+    <value>Naziv modela za ugrađivanje, npr. bge-m3:latest. Mora biti dostupan na Embedding Ollama Instanci. Koristi se samo za vektorsko pretraživanje, a ne za prijevod.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Logo projekta prikazan u navigacijskoj traci i podnožju. Podržava jpg, png, svg.</value>
+  </data>
+  <data name="The maximum number of comments a user can post per day." xml:space="preserve">
+    <value>Maksimalan broj komentara koje korisnik može objaviti dnevno.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>Naziv projekta prikazan u prednjoj strani.</value>
+  </data>
+
+</root>
