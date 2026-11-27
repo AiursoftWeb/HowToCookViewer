@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Additional Notes" xml:space="preserve">
+    <value>Dodatne napomene</value>
+  </data>
+  <data name="All Recipes" xml:space="preserve">
+    <value>Sve recepte</value>
+  </data>
+  <data name="Aquatic" xml:space="preserve">
+    <value>Vodeni</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Doručak</value>
+  </data>
+  <data name="By Calories" xml:space="preserve">
+    <value>Prema kalorijama</value>
+  </data>
+  <data name="Calculation" xml:space="preserve">
+    <value>Izračun</value>
+  </data>
+  <data name="Condiments" xml:space="preserve">
+    <value>Začini</value>
+  </data>
+  <data name="Desserts" xml:space="preserve">
+    <value>Deserti</value>
+  </data>
+  <data name="Difficulty {0} Stars" xml:space="preserve">
+    <value>Težina {0} zvjezdica</value>
+  </data>
+  <data name="Drinks" xml:space="preserve">
+    <value>Pića</value>
+  </data>
+  <data name="Estimated Calories" xml:space="preserve">
+    <value>Procijenjene kalorije</value>
+  </data>
+  <data name="Highest Calories" xml:space="preserve">
+    <value>Najviše kalorija</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Slike</value>
+  </data>
+  <data name="Ingredients and Tools" xml:space="preserve">
+    <value>Sastojci i alati</value>
+  </data>
+  <data name="Least Commented" xml:space="preserve">
+    <value>Najmanje komentirano</value>
+  </data>
+  <data name="Least Favorited" xml:space="preserve">
+    <value>Najmanje omiljeni</value>
+  </data>
+  <data name="Least Liked" xml:space="preserve">
+    <value>Najmanje voljeno</value>
+  </data>
+  <data name="Lowest Calories" xml:space="preserve">
+    <value>Najmanje kalorija</value>
+  </data>
+  <data name="Meat Dishes" xml:space="preserve">
+    <value>Meso jela</value>
+  </data>
+  <data name="Most Commented" xml:space="preserve">
+    <value>Najviše komentirano</value>
+  </data>
+  <data name="Most Favorited" xml:space="preserve">
+    <value>Najviše omiljeno</value>
+  </data>
+  <data name="Most Liked" xml:space="preserve">
+    <value>Najviše voljeno</value>
+  </data>
+  <data name="Semi-finished" xml:space="preserve">
+    <value>Poluproizvodi</value>
+  </data>
+  <data name="Soups" xml:space="preserve">
+    <value>Supe</value>
+  </data>
+  <data name="Staple Food" xml:space="preserve">
+    <value>Glavna hrana</value>
+  </data>
+  <data name="Steps" xml:space="preserve">
+    <value>Koraci</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Predlošci</value>
+  </data>
+  <data name="Vegetable Dishes" xml:space="preserve">
+    <value>Povrtna jela</value>
+  </data>
+
+</root>
