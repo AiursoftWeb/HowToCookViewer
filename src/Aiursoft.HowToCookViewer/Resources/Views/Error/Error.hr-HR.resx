@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to Home" xml:space="preserve">
+    <value>Natrag na početnu</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Ako smatrate da biste trebali imati pristup, obratite se svom sustavnom administratoru. Ili pokušajte odjaviti se i ponovno se prijaviti.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Provjerite URL i pokušajte ponovno. Ako smatrate da je u pitanju greška poslužitelja, kontaktirajte podršku.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Provjerite svoj zahtjev i pokušajte ponovno. Ako smatrate da je došlo do greške na poslužitelju, obratite se podršci.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Pokušajte ponovno kasnije ili kontaktirajte podršku ako se problem nastavi.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>ID zahtjeva:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Nažalost, nemate potrebna dopuštenja za pristup ovoj stranici.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Stranica koju tražite možda je uklonjena, promijenjeno joj je ime ili je privremeno nedostupna.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Pokušaj ponovno</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Oprostite, došlo je do greške tijekom obrade vašeg zahtjeva.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Vaš preglednik poslao je zahtjev koji ovaj poslužitelj nije mogao razumjeti.</value>
+  </data>
+
+</root>

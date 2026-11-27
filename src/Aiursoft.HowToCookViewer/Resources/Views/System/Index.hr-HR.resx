@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name=".NET Version" xml:space="preserve">
+    <value>.NET verzija</value>
+  </data>
+  <data name="An overview of the application&apos;s server environment, process, and current request context." xml:space="preserve">
+    <value>Pregled servernog okruženja, procesa i trenutnog konteksta zahtjeva aplikacije.</value>
+  </data>
+  <data name="Applied / Defined" xml:space="preserve">
+    <value>Primijenjeno / Definirano</value>
+  </data>
+  <data name="Are you sure you want to restart the application? This action is irreversible and will terminate all active connections." xml:space="preserve">
+    <value>Jeste li sigurni da želite ponovno pokrenuti aplikaciju? Ova radnja je nepovratna i prekinut će sve aktivne veze.</value>
+  </data>
+  <data name="CPU Architecture" xml:space="preserve">
+    <value>Arhitektura procesora</value>
+  </data>
+  <data name="CPU Cores" xml:space="preserve">
+    <value>CPU jezgre</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Odustani</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="Confirm Application Restart" xml:space="preserve">
+    <value>Potvrdite ponovno pokretanje aplikacije</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Kreirano</value>
+  </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Zona opasnosti</value>
+  </data>
+  <data name="Database Migrations" xml:space="preserve">
+    <value>Migracije baze podataka</value>
+  </data>
+  <data name="Database Table Counts" xml:space="preserve">
+    <value>Broj zapisa u tablicama baze podataka</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Direktorij</value>
+  </data>
+  <data name="Docker Container" xml:space="preserve">
+    <value>Docker spremnik</value>
+  </data>
+  <data name="Environment" xml:space="preserve">
+    <value>Environment</value>
+  </data>
+  <data name="GC Memory" xml:space="preserve">
+    <value>GC memorija</value>
+  </data>
+  <data name="GC Mode" xml:space="preserve">
+    <value>Način GC</value>
+  </data>
+  <data name="Handle Count" xml:space="preserve">
+    <value>Broj ručki</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Zaglavlje</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Domaćin</value>
+  </data>
+  <data name="Is HTTPS" xml:space="preserve">
+    <value>Je HTTPS</value>
+  </data>
+  <data name="Local Port" xml:space="preserve">
+    <value>Lokalni port</value>
+  </data>
+  <data name="Machine Name" xml:space="preserve">
+    <value>Ime stroja</value>
+  </data>
+  <data name="Memory Usage" xml:space="preserve">
+    <value>Korištenje memorije</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Metoda</value>
+  </data>
+  <data name="Migration" xml:space="preserve">
+    <value>Migracija</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Putanja</value>
+  </data>
+  <data name="Process Architecture" xml:space="preserve">
+    <value>Arhitektura procesa</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Svojstvo</value>
+  </data>
+  <data name="Protocol" xml:space="preserve">
+    <value>Protokol</value>
+  </data>
+  <data name="Reloading page..." xml:space="preserve">
+    <value>Ponovno učitavanje stranice...</value>
+  </data>
+  <data name="Remote IP" xml:space="preserve">
+    <value>Udaljena IP adresa</value>
+  </data>
+  <data name="Remote Port" xml:space="preserve">
+    <value>Udaljeni port</value>
+  </data>
+  <data name="Request HTTP Headers" xml:space="preserve">
+    <value>HTTP zaglavlja zahtjeva</value>
+  </data>
+  <data name="Request Properties" xml:space="preserve">
+    <value>Svojstva zahtjeva</value>
+  </data>
+  <data name="Request Restart" xml:space="preserve">
+    <value>Zatraži ponovno pokretanje</value>
+  </data>
+  <data name="Restart Application" xml:space="preserve">
+    <value>Ponovno pokreni aplikaciju</value>
+  </data>
+  <data name="Restarting..." xml:space="preserve">
+    <value>Ponovno pokretanje...</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Retci</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Shema</value>
+  </data>
+  <data name="Server &amp; Process Information" xml:space="preserve">
+    <value>Informacije o poslužitelju i procesu</value>
+  </data>
+  <data name="Server Time" xml:space="preserve">
+    <value>Vrijeme poslužitelja</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>Vrijeme pokretanja</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sustav</value>
+  </data>
+  <data name="System Information" xml:space="preserve">
+    <value>Informacije o sustavu</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Tablica</value>
+  </data>
+  <data name="This will gracefully shut down the application. A process manager is expected to restart it." xml:space="preserve">
+    <value>Ovo će ispravno zatvoriti aplikaciju. Upravitelj procesa trebao bi je ponovno pokrenuti.</value>
+  </data>
+  <data name="Thread Count" xml:space="preserve">
+    <value>Broj niti</value>
+  </data>
+  <data name="Uptime" xml:space="preserve">
+    <value>Vrijeme rada</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Ime korisnika</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Vrijednost</value>
+  </data>
+  <data name="Worker Process" xml:space="preserve">
+    <value>Radni proces</value>
+  </data>
+  <data name="Yes, Restart Now" xml:space="preserve">
+    <value>Da, pokreni odmah</value>
+  </data>
+
+</root>
