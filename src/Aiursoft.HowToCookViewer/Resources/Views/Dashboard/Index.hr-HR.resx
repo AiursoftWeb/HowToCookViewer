@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Browse by Category" xml:space="preserve">
+    <value>Pregled po kategoriji</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Očisti</value>
+  </data>
+  <data name="Feeling Lucky?" xml:space="preserve">
+    <value>Imate sreće?</value>
+  </data>
+  <data name="Loading…" xml:space="preserve">
+    <value>Učitavanje…</value>
+  </data>
+  <data name="Most Liked Recipes" xml:space="preserve">
+    <value>Najdraženije recepti</value>
+  </data>
+  <data name="Next ›" xml:space="preserve">
+    <value>Dalje ›</value>
+  </data>
+  <data name="No recipes found matching" xml:space="preserve">
+    <value>Nema pronađenih recepata koji odgovaraju</value>
+  </data>
+  <data name="Page navigation" xml:space="preserve">
+    <value>Navigacija po stranicama</value>
+  </data>
+  <data name="Recipe Search" xml:space="preserve">
+    <value>Pretraga recepata</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraži</value>
+  </data>
+  <data name="Search Recipes" xml:space="preserve">
+    <value>Pretraži recepte</value>
+  </data>
+  <data name="Search based on AI (Vector Database)" xml:space="preserve">
+    <value>Pretraga na temelju AI-ja (vektorska baza podataka)</value>
+  </data>
+  <data name="Search recipes placeholder" xml:space="preserve">
+    <value>Pretraži recepte</value>
+  </data>
+  <data name="Try a random recipe" xml:space="preserve">
+    <value>Probajte nasumični recept</value>
+  </data>
+  <data name="Try a shorter name or check spelling." xml:space="preserve">
+    <value>Pokušajte s kraćim nazivom ili provjerite ispravno pisanje.</value>
+  </data>
+  <data name="Type a recipe name above to search across all recipes with intelligent relevance ranking." xml:space="preserve">
+    <value>Unesite naziv recepta iznad za pretraživanje svih recepata s pametnim rangiranjem relevantnosti.</value>
+  </data>
+  <data name="Use the sidebar to browse recipes by category or difficulty level." xml:space="preserve">
+    <value>Koristite bočnu traku za pregled recepata po kategoriji ili razini težine.</value>
+  </data>
+  <data name="and discover something new to cook today." xml:space="preserve">
+    <value>i otkrijte nešto novo za kuhanje danas.</value>
+  </data>
+  <data name="‹ Prev" xml:space="preserve">
+    <value>‹ Prethodna</value>
+  </data>
+
+</root>

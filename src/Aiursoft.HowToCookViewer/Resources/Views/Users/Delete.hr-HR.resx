@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Are you sure?" xml:space="preserve">
+    <value>Jeste li sigurni?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Odustani</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Vrijeme kreiranja</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Brisanje korisnika</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-pošta</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Ova radnja je nepovratna. Upravo ćete trajno izbrisati navedenog korisnika i sve njegove povezane podatke:</value>
+  </data>
+  <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>Ovaj korisnički račun upravlja OpenID Connect (OIDC) pružatelj. Brisanje korisnika ovdje uklonit će samo njegov pristup i podatke iz ove aplikacije. Račun će i dalje postojati na vašem OIDC pružatelju i može se ponovno pojaviti nakon sljedeće sinkronizacije ili ako se korisnik ponovno prijavi. Da biste trajno obrisali ovog korisnika, morate ga ukloniti s vašeg OIDC pružatelja.</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Upozorenje!</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Da, izbriši ovog korisnika</value>
+  </data>
+
+</root>

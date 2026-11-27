@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Community" xml:space="preserve">
+    <value>Zajednica</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Suradnici</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Dokumentacija</value>
+  </data>
+  <data name="Github" xml:space="preserve">
+    <value>Github</value>
+  </data>
+  <data name="HowToCook Viewer - A modern, feature-rich, and highly extensible web viewer for the HowToCook open-source project." xml:space="preserve">
+    <value>HowToCook Viewer – moderni, bogato opremljen i visoko proširiv web preglednik za open-source projekt HowToCook.</value>
+  </data>
+  <data name="Legal" xml:space="preserve">
+    <value>Pravno</value>
+  </data>
+  <data name="Licence" xml:space="preserve">
+    <value>Licenca</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Projekt</value>
+  </data>
+  <data name="Report an Issue" xml:space="preserve">
+    <value>Prijavi problem</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Resursi</value>
+  </data>
+  <data name="Revolt Forum" xml:space="preserve">
+    <value>Revolt Forum</value>
+  </data>
+  <data name="Social" xml:space="preserve">
+    <value>Društvene mreže</value>
+  </data>
+  <data name="Source Code" xml:space="preserve">
+    <value>Izvorni kod</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>logo</value>
+  </data>
+
+</root>

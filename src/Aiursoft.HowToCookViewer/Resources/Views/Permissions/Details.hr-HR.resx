@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to Permissions" xml:space="preserve">
+    <value>Natrag na dopuštenja</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Prikazno ime</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-pošta</value>
+  </data>
+  <data name="No roles have this permission." xml:space="preserve">
+    <value>Nijedna uloga nema ovu dozvolu.</value>
+  </data>
+  <data name="No users have this permission." xml:space="preserve">
+    <value>Nijedan korisnik nema ovu dozvolu.</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detalji dopuštenja</value>
+  </data>
+  <data name="Permission Information" xml:space="preserve">
+    <value>Informacije o dopuštenju</value>
+  </data>
+  <data name="Permission Key" xml:space="preserve">
+    <value>Ključ dozvole</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>Naziv dozvole</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Naziv uloge</value>
+  </data>
+  <data name="Roles with this Permission" xml:space="preserve">
+    <value>Uloge s ovom dozvolom</value>
+  </data>
+  <data name="The following roles have been granted this permission." xml:space="preserve">
+    <value>Sljedećim ulogama je dodijeljena ova dopuštenja.</value>
+  </data>
+  <data name="The following users have this permission through their role memberships." xml:space="preserve">
+    <value>Sljedeći korisnici imaju ovu dopuštenja putem svojih članstava u ulogama.</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="Users with this Permission" xml:space="preserve">
+    <value>Korisnici s ovom dozvolom</value>
+  </data>
+
+</root>
