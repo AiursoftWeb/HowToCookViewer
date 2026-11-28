@@ -227,6 +227,7 @@ deploy_docker_all:
     retry:
         max: 2
     environment: production
+    resource_group: docker-latest
     needs:
         - job: pack
           artifacts: false
@@ -243,7 +244,8 @@ deploy_docker_all:
         - docker buildx use aiur-global-builder
         # Both required destinations must succeed. China replication is handled
         # asynchronously by puller_cn after the home-registry push completes.
-        - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ --tag "$LOCAL_TARGET_COM" --tag "$PUBLIC_TARGET" --push
+        - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ --tag "$LOCAL_TARGET_COM" --push
+        - docker buildx imagetools create --tag "$PUBLIC_TARGET" "$LOCAL_TARGET_COM"
 
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
